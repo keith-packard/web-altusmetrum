@@ -38,6 +38,7 @@ on this site!
 ----
 
 This site is powered by [ikiwiki](http://ikiwiki.info), 
-running on [Debian GNU/Linux](http://www.debian.org) 
+and hosted by [Garbee and Garbee](http://www.gag.com 
+using [Debian GNU/Linux](http://www.debian.org) 
 and [Apache](http://www.apache.org).
 
