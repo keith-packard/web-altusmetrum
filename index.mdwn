@@ -1,0 +1,43 @@
+# AltusMetrum
+
+<p>
+A quick update as of 24 November 2008.  
+The existing ARM7-based design has been shelved indefinitely.
+Working with Keith Packard, I recently embarked on a complete redesign based on the TI cc1111.
+We got there by deciding we need a low-power RF beacon for post-landing direction finding, learning
+of the existence of this part, then realizing that we could radically simplify things by using it
+as the basis for a completely new avionics design.
+The cc1111 integrates a full 70cm transceiver, 8051 processing core, and peripherals on one chip.
+We add to that a barometric sensor, temperature sensor, accelerometer, eeprom memory, and full LiPo
+battery support powered by a USB interface also used for configuration and post-flight data extraction.
+It looks like we can get all the features we want on a single board for less than the price of most
+commercial altimeter boards, with the only downside being dramatically reduced processing power.
+The schematic is under design review now, PCB layout will begin soon, and we hope
+to be turning on boards and writing firmware over the Christmas / New Years holiday season.
+Stay tuned!
+</p>
+<hr>
+<p>
+Welcome LCA, SCALE, and OLS 2008 attendees!  
+Thanks for looking, but there's not much here yet...
+</p>
+
+<p>
+Information on the OpenAlt model rocketry avionics system coming very soon!
+</p>
+
+<p>
+Here are photos of the version 0.1 PCB, which has enough issues to not be 
+worth duplicating.  Version 0.2 is coming soon, and will be fully documented
+on this site!
+</p>
+
+<a href="hpim2581.jpg"> <img src="hpim2581-thumb.jpg"></a>
+<a href="hpim2582.jpg"> <img src="hpim2582-thumb.jpg"></a>
+
+----
+
+This site is powered by [ikiwiki](http://ikiwiki.info), 
+running on [Debian GNU/Linux](http://www.debian.org) 
+and [Apache](http://www.apache.org).
+
