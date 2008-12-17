@@ -2,8 +2,8 @@ This is the site where
 <a href="http://www.gag.com/~bdale">Bdale Garbee </a>
 and friends are documenting work on a
 series of open hardware and software designs of avionics solutions for high
-powered model rocketry.  Everything here should be considered a work in 
-process!
+powered model rocketry.  Everything here should be considered work 
+perpetually in process!
 
 # TeleMetrum
 
