@@ -21,6 +21,13 @@ It looks like we can get all the features we want on a single board for less tha
 commercial altimeter boards, with the only downside being dramatically reduced processing power.
 We have a complete schematic and a first pass PCB layout that is currently
 under review and improvement prior to sending out for raw boards.
+</p>
+<p>
+See the hw/telemetrum tree in our
+<a href="http://git.gag.com">public git repository</a> 
+for the current state of the gEDA design files.
+</p>
+<p>
 We hope to be turning on boards and writing firmware over the 
 Christmas / New Years holiday season.
 Stay tuned!
