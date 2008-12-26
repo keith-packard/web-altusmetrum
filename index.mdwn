@@ -8,6 +8,10 @@ in process!
 # TeleMetrum
 
 <p>
+A quick update as of 25 December 2008.  
+The circuit board artwork is out for fab!
+</p>
+<p>
 A quick update as of 16 December 2008.  
 The ARM7-based 'AltusMetrum' design has been shelved indefinitely.
 Working with Keith Packard, I recently embarked on a complete redesign based on the TI cc1111.
