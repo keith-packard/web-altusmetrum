@@ -1,0 +1,19 @@
+# AltusMetrum
+<p>
+Welcome LCA, SCALE, and OLS 2008 attendees!  
+Thanks for looking, but there's not much here yet...
+</p>
+
+<p>
+Information on the OpenAlt model rocketry avionics system coming very soon!
+</p>
+
+<p>
+Here are photos of the version 0.1 PCB, which has enough issues to not be 
+worth duplicating.  Version 0.2 is coming soon, and will be fully documented
+on this site!
+</p>
+
+<a href="hpim2581.jpg"> <img src="hpim2581-thumb.jpg"></a>
+<a href="hpim2582.jpg"> <img src="hpim2582-thumb.jpg"></a>
+
