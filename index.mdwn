@@ -1,9 +1,15 @@
 This is the site where 
 <a href="http://www.gag.com/~bdale">Bdale Garbee </a>
-and friends are documenting work on a
-series of open hardware and software designs of avionics solutions for high
+and friends document work on a series of open hardware and software designs of avionics solutions for high
 powered model rocketry.  Please consider everything here work perpetually 
 in process!
+<p>
+All hardware designs on this site are licensed under the 
+[TAPR](http://www.tapr.org/)
+[Open Hardware License](http://www.tapr.org/OHL), 
+and all the software is under the 
+[GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+or compatible licenses.
 
 # Projects #
 
