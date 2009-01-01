@@ -12,6 +12,13 @@ and all the software is under the
 [General Public License, version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 or compatible licenses.
 
+# Hobby Rocketry #
+
+John Coker has published an excellent 
+[overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
+on his web site.  To find more information about Bdale's rockets, see
+[Garbee Rockets](http://www.gag.com/rockets).
+
 # Projects #
 
 * [TeleMetrum](TeleMetrum/) 
