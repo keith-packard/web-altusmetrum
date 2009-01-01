@@ -1,7 +1,7 @@
 # TeleMetrum
 
-This is a recording altimeter for high power model rocketry with integrated
-telemetry link.
+This is a recording dual-deploy altimeter for high power model rocketry 
+with integrated telemetry link.
 
 ## Motivation ##
 
