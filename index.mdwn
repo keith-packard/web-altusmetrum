@@ -6,7 +6,14 @@ powered model rocketry.  Please consider everything here work perpetually
 in process!
 
 # [TeleMetrum](TeleMetrum/)
+
+This is our latest project, a rocketry altimeter with RF link.
+
 # [AltusMetrum](AltusMetrum/)
+
+This was our original project, a rocketry altimeter.
+
+<hr>
 
 This site is powered by [ikiwiki](http://ikiwiki.info), 
 and hosted by [Garbee and Garbee](http://www.gag.com)
