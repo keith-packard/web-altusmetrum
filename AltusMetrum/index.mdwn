@@ -29,6 +29,25 @@ Here are photos of the front and back sides of the version 0.1 prototype PCB.
 * NXP LPC-2148 Processor (ARM7TDMI-S)
 	* 512k Flash memory, 32k RAM
 	* USB plus lots of analog, digital, and serial I/O
+* Microchip 24FC1025 CMOS serial EEPROM
+	* 128k x 8
+	* I2C interface
+* Various Sensors
+	* Freescale MP3H6115A pressure sensor
+	* Freescale MMA7260QT 3-axis accelerometer
+	* Microchip MCP9700A temperature sensor
+	* (Honeywell 2-axis magnetic sensor left out of v0.1)
+* Software Features
+	* Written mostly in C with some ARM assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
+		serial EEPROM chip
+	* USB serial emulation for "console" interface
+	* Uses GCC, newlib, FreeRTOS, LPCUSB
+	* Based on a demo package written for the Olimex LPC-P2148 eval board
+		by J C Wren
+* Licenses
+	* The hardware is licensed under the TAPR OHL
+	* The software is licensed GPL version 2
 
 ## Problems ##
 
