@@ -14,9 +14,12 @@ or compatible licenses.
 
 # Hobby Rocketry #
 
-John Coker has published an excellent 
+Rather than try to introduce the hobby to you here, we note that John Coker 
+has published an excellent 
 [overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
-on his web site.  To find more information about Bdale's rockets, see
+on his web site.  
+<p>
+To find more information about the rockets Bdale and his son have built, see
 [Garbee Rockets](http://www.gag.com/rockets).
 
 # Projects #
