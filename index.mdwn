@@ -5,14 +5,15 @@ series of open hardware and software designs of avionics solutions for high
 powered model rocketry.  Please consider everything here work perpetually 
 in process!
 
-# [TeleMetrum](TeleMetrum/)
+We're working on several projects:
+<ul>
+<li> [TeleMetrum](TeleMetrum/) 
+	is our latest project, a rocketry altimeter with RF telemetry link.
 
-This is our latest project, a rocketry altimeter with RF link.
+<li> [AltusMetrum](AltusMetrum/)
+	was our original project, a rocketry altimeter.
 
-# [AltusMetrum](AltusMetrum/)
-
-This was our original project, a rocketry altimeter.
-
+</ul>
 <hr>
 
 This site is powered by [ikiwiki](http://ikiwiki.info), 
