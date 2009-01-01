@@ -1,8 +1,8 @@
 This is the site where 
 <a href="http://www.gag.com/~bdale">Bdale Garbee </a>
-and friends document work on a series of open hardware and software designs of avionics solutions for high
-powered model rocketry.  Please consider everything here work perpetually 
-in process!
+and friends document work on open hardware and software designs for
+high powered model rocketry avionics solutions.
+Please consider everything here work perpetually in process!
 <p>
 All hardware designs on this site are licensed under the 
 [TAPR](http://www.tapr.org/)
@@ -14,6 +14,8 @@ or compatible licenses.
 
 # Hobby Rocketry #
 
+The motivation for the circuits and software you will find on this site is
+our loosely-knit group's shared interest in hobby rocketry.  
 Rather than try to introduce the hobby to you here, we note that John Coker 
 has published an excellent 
 [overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
@@ -21,14 +23,22 @@ on his web site.
 <p>
 To find more information about the rockets Bdale and his son have built, see
 [Garbee Rockets](http://www.gag.com/rockets).
+<p>
+As Bdale and Robert became more experienced in the hobby and started to build
+and fly more sophisticated projects, we started to feel limited by the 
+existing electronics products available.  AltusMetrum was Bdale's first 
+attempt to address this situation with a completely open hardware and software
+design... other project have since followed!
 
 # Projects #
 
-* [TeleMetrum](TeleMetrum/) 
-	is our latest project, a rocketry altimeter with RF telemetry link.
-
 * [AltusMetrum](AltusMetrum/)
-	was our original project, a rocketry altimeter.
+was our original project, a dual-deploy rocketry altimeter.  One prototype was
+built, but never flown.  This project is now indefinitely on hold.
+
+* [TeleMetrum](TeleMetrum/) 
+is our current project, a dual-deploy rocketry altimeter with improved sensor 
+complement and bidirectional RF telemetry link.
 
 <hr>
 
