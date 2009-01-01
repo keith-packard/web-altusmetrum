@@ -27,8 +27,8 @@ Here are photos of the front and back sides of the version 0.1 prototype PCB.
 ### Developer View ###
 
 * NXP LPC-2148 Processor (ARM7TDMI-S)
-** 512k Flash memory, 32k RAM
-** USB plus lots of analog, digital, and serial I/O
+	* 512k Flash memory, 32k RAM
+	* USB plus lots of analog, digital, and serial I/O
 
 ## Problems ##
 
