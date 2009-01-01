@@ -80,7 +80,7 @@ simplify things by building a new altimeter with integrated RF link!
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com).
 
-As of 1 January 2009, the parts and stencil for the v0.1 have arrived, and
+As of 1 January 2009, the parts and stencil for v0.1 have arrived, and
 we're waiting for the raw PC boards!  Stay tuned for updates, and note that
 Bdale will be giving an update in his session at Linux Conference Australia 
 in late January...
