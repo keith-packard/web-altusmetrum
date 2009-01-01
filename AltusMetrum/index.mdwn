@@ -1,19 +1,49 @@
 # AltusMetrum
 <p>
-Welcome LCA, SCALE, and OLS 2008 attendees!  
-Thanks for looking, but there's not much here yet...
+This is the design that started it all!  Bdale got frustrated with existing
+commercial altimeters and decided to build his own.  This project was 
+presented in talks at LCA, SCALE, OLS, and Debconf in 2008.
 </p>
-
 <p>
-Information on the OpenAlt model rocketry avionics system coming very soon!
+Here are photos of the front and back sides of the version 0.1 prototype PCB.
 </p>
-
-<p>
-Here are photos of the version 0.1 PCB, which has enough issues to not be 
-worth duplicating.  Version 0.2 is coming soon, and will be fully documented
-on this site!
-</p>
-
 <a href="hpim2581.jpg"> <img src="hpim2581-thumb.jpg"></a>
 <a href="hpim2582.jpg"> <img src="hpim2582-thumb.jpg"></a>
 
+## Features ##
+
+### User View ###
+
+* Recording altimeter for model rocketry
+* Supports dual deployment (can fire 2 ejection charges)
+* Primary operations based on pressure sensor
+* 3-axis accelerometer
+* Temperature sensor
+* 2 serial ports for attachment of GPS and RF link modules
+* USB for data recovery and post-flight power source
+* Flexible battery choices
+* Designed to fit 24mm airframe tube
+
+## Problems ##
+
+In addition to the various "oopses" that were found and fixed during initial
+turn-on of this board, several issues contributed to the decision to shelve
+the design for now:
+
+* lots of work went in to trying to make the board fit in a 24mm airframe,
+  but the resulting design with battery is really too heavy for such a small
+  rocket.
+
+* the 3-axis accelerometer has a max scale of +/- 6g.  This is insufficient
+  for characterizing the kinds of motors that we're playing with now.
+
+* while using a gcc-based toolchain to cross-develop for the ARM7 core works
+  reasonably well, it's a heavy toolchain to build and maintain, and the
+  processor really is serious overkill for the task at hand.
+
+## Artifacts ##
+
+The version 0.1 design had enough issues that Bdale decided not to publish
+it.  Work on an 0.2 revision is mostly complete at the schematic level, and
+some printed circuit board artwork updates were made, but a second run of
+boards was never attempted.  This design is now mostly of historical interest.
