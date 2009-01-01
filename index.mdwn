@@ -5,7 +5,7 @@ series of open hardware and software designs of avionics solutions for high
 powered model rocketry.  Please consider everything here work perpetually 
 in process!
 
-## Projects ##
+# Projects #
 
 * [TeleMetrum](TeleMetrum/) 
 	is our latest project, a rocketry altimeter with RF telemetry link.
