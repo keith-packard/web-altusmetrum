@@ -1,0 +1,1 @@
+[[!map pages="AltusMetrum/* and ! AltusMetrum/*/*"]]
