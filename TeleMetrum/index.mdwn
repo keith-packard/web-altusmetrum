@@ -9,7 +9,7 @@ Bdale and Keith both own
 [BeeLine](http://www.bigredbee.com/BeeLine.htm)
 trackers from 
 [Big Red Bee](http://www.bigredbee.com), and are pretty happy with them.
-They use a PIC processor and a TI Chipcon cc1050 transmitter chip, and
+They use a PIC processor and a TI CC1050 transmitter chip, and
 operate in the ham radio 70cm band.
 
 One weekend while attending a conference together, We got to wondering if 
@@ -77,7 +77,7 @@ simplify things by building a new altimeter with integrated RF link!
 ## Artifacts ##
 
 The hardware design current gEDA files are available from 
-[git.gag.com](git.gag.com).
+[git.gag.com](http://git.gag.com).
 
 As of 1 January 2009, the parts and stencil for the v0.1 have arrived, and
 we're waiting for the raw PC boards!  Stay tuned for updates, and note that
