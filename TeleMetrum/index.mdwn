@@ -24,6 +24,9 @@ and CPU on the same chip.
 It didn't take us long to realize that with such a part we could combine and
 simplify things by building a new altimeter with integrated RF link!
 
+<a href="hpim1256.jpg"> <img src="hpim1256-thumb.jpg"></a>
+<a href="hpim1257.jpg"> <img src="hpim1257-thumb.jpg"></a>
+
 ## Features ##
 
 ### User View ###
