@@ -12,6 +12,8 @@ and all the software is under the
 [General Public License, version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 or compatible licenses.
 
+# [Latest News](News) #
+
 # Hobby Rocketry #
 
 The motivation for the circuits and software you will find on this site is
