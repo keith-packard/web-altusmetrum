@@ -46,7 +46,8 @@ complement and bidirectional RF telemetry link.
 
 * [Bdale Garbee](http://gag.com/~bdale)
 * [Keith Packard](http://keithp.com/keithp)
-<hr>
+
+---
 
 This site is powered by [ikiwiki](http://ikiwiki.info), 
 and hosted by [Garbee and Garbee](http://www.gag.com)
