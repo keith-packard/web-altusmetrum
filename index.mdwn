@@ -42,6 +42,10 @@ built, but never flown.  This project is now indefinitely on hold.
 is our current project, a dual-deploy rocketry altimeter with improved sensor 
 complement and bidirectional RF telemetry link.
 
+# Participants #
+
+* [Bdale Garbee](http://gag.com/~bdale)
+* [Keith Packard](http://keithp.com/keithp)
 <hr>
 
 This site is powered by [ikiwiki](http://ikiwiki.info), 
