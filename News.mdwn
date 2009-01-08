@@ -1,0 +1,10 @@
+[[!aggregate name="bdale rocket blog" dir="blog/bdale"
+feedurl="http://www.gag.com/bdale/blog/tags/rockets.rss"
+url="http://www.gag.com/bdale/blog/tags/rockets.html" updateinterval="15"]]
+
+[[!aggregate name="keithp rocket blog" dir="blog/keithp"
+feedurl="http://keithp.com/blogs/tags/rockets/index.rss"
+url="http://keithp.com/blogs/tags/rockets/" updateinterval="15"]]
+
+[[!inline pages="internal(blog/*/*)"]]
+
