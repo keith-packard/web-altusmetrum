@@ -41,24 +41,24 @@ simplify things by building a new altimeter with integrated RF link!
 * Serial port for attachment of GPS module
 * USB for power, configuration, and data recovery
 * Integrated support for LiPo rechargeable batteries
-* Designed to fit 29mm airframe tube
+* Designed to fit 29mm airframe coupler tube
 
 ### Developer View ###
 
-* TI CC1111F32 Low Power RF System-on-Chip
+* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
 	* Sub-1Ghz transceiver
 	* 8051 MCU
 	* 32k Flash
 	* 4k RAM
 	* USB 2.0
 	* analog, digital, and serial I/O
-* Microchip 25LC1024 CMOS serial EEPROM
+* [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM
 	* 128k x 8
 	* SPI interface
 * Various Sensors
-	* Freescale MP3H6115A pressure sensor
-	* Freescale MMA2202EG 50g accelerometer.  Can use 40-200g variants!
-	* Microchip MCP9700A temperature sensor
+	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6T1) pressure sensor
+	* [Freescale MMA2202EG](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MMA2202EG) 50g accelerometer.  Can use 40-200g variants!
+	* [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) temperature sensor
 * Software Features (planned)
 	* Written mostly in C with some 8051 assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
@@ -67,7 +67,7 @@ simplify things by building a new altimeter with integrated RF link!
 	* USB mass storate emulation for data recovery
 * Tools Used
 	* [gEDA](http://geda.seul.org/) for schematic capture and PCB layout
-	* [SDCC](http://sdcc.sourceforge.net/) compiler
+	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
 	* [FreeRTOS](http://www.freertos.org/) kernel
 * Licenses
 	* The hardware is licensed under the TAPR OHL
