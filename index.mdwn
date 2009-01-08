@@ -35,9 +35,8 @@ design... other project have since followed!
 # Projects #
 
 * [AltusMetrum](AltusMetrum/)
-was Bdale's original project here, a dual-deploy rocketry altimeter.  
-One prototype was built, but never flown.  
-This project is now indefinitely on hold.
+was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
+prototype was built, but never flown.  This project is now indefinitely on hold.
 
 * [TeleMetrum](TeleMetrum/) 
 is our current project, a dual-deploy rocketry altimeter with improved sensor 
