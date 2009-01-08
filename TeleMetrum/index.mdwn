@@ -56,7 +56,7 @@ simplify things by building a new altimeter with integrated RF link!
 	* 128k x 8
 	* SPI interface
 * Various Sensors
-	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6T1) pressure sensor
+	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
 	* [Freescale MMA2202EG](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MMA2202EG) 50g accelerometer.  Can use 40-200g variants!
 	* [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) temperature sensor
 * Software Features (planned)
