@@ -64,7 +64,7 @@ simplify things by building a new altimeter with integrated RF link!
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
 		serial EEPROM chip
 	* USB serial emulation for "console" interface
-	* USB mass storate emulation for data recovery
+	* USB mass storage emulation for data recovery
 * Tools Used
 	* [gEDA](http://geda.seul.org/) for schematic capture and PCB layout
 	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
