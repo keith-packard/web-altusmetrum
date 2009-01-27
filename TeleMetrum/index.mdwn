@@ -87,7 +87,4 @@ The hardware design current gEDA files are available from
 [git.gag.com](http://git.gag.com).
 
 As of 6 January 2009, the raw boards are here, so we're nearly ready to try
-building our first prototype!  Stay tuned for updates, and note that
-Bdale will be giving an update in his session at Linux Conference Australia 
-in late January...
-
+building our first prototype!  
