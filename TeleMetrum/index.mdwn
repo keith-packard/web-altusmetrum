@@ -70,7 +70,7 @@ simplify things by building a new altimeter with integrated RF link!
 	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
 	* [FreeRTOS](http://www.freertos.org/) kernel
 * Licenses
-	* The hardware is licensed under the TAPR [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 ## Problems ##
