@@ -54,7 +54,7 @@ start.  Finding a local [NAR Section](http://nar.org/NARsect.html) or
 [Tripoli](http://tripoli.org) Prefecture is a good idea, since you can
 learn a lot and see some great flights by showing up at a club launch.
 
-As we make progress, you can read about it in our [News](News/) feed.
+As we make progress, you can read about it in our [News](News) feed.
 We also have an IRC channel #altusmetrum on irc.oftc.net if you have
 questions that aren't answered here.
 
