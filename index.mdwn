@@ -17,8 +17,8 @@ or compatible licenses.
 # Hobby Rocketry #
 
 The motivation for the circuits and software you will find on this site is
-our loosely-knit group's shared interest in hobby rocketry.  
-Rather than try to introduce the hobby to you here, we note that John Coker 
+our loosely-knit group's shared interest in hobby rocketry.  Rather than 
+try to introduce the hobby to you here, we note that John Coker 
 has published an excellent 
 [overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
 on his web site.  
@@ -30,7 +30,8 @@ As Bdale and Robert became more experienced in the hobby and started to build
 and fly more sophisticated projects, we started to feel limited by the 
 existing electronics products available.  AltusMetrum was Bdale's first 
 attempt to address this situation with a completely open hardware and software
-design... other project have since followed!
+design... other project have since followed, and it's cool to have help from
+various friends!
 
 # Projects #
 
