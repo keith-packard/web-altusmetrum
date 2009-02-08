@@ -6,7 +6,7 @@ presented in talks at LCA, SCALE, OLS, and Debconf in 2008.
 
 Here are photos of the front and back sides of the version 0.1 prototype PCB,
 which was 100% auto-routed on 2 layers using the 
-[gEDA](http://www.geda.seul.org) 
+[gEDA](http://www.gpleda.org) 
 schematic and pcb tools.
 
 <a href="hpim2581.jpg"> <img src="hpim2581-thumb.jpg"></a>
