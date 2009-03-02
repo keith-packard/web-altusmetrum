@@ -90,8 +90,7 @@ fixing bugs found in the turn-on of the initial boards.
   2-pin battery connector.
 
 * The [SparkFun](http://www.sparkfun.com) folks have produced 
-  a [USB bootloader for the LPC2148]
-  (http://www.sparkfun.com/commerce/tutorial_info.php?tutorials_id=94).  It 
+  a [USB bootloader for the LPC2148](http://www.sparkfun.com/commerce/tutorial_info.php?tutorials_id=94).  It 
   requires an SD card for temporary storage of code to be
   flashed.  Replacing the current external SPI memory chip with a microSD 
   socket could make sense.  The socket size is under a cm square, and ones 
