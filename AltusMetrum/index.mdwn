@@ -78,3 +78,29 @@ The version 0.1 design had enough issues that Bdale decided not to publish
 it.  Work on an 0.2 revision is mostly complete at the schematic level, and
 some printed circuit board artwork updates were made, but a second run of
 boards was never attempted.  This design is now mostly of historical interest.
+
+## Futures ##
+
+If we decide to do further work on this design, a number of changes seem
+potentially appropriate for the next board revision, in addition to just
+fixing bugs found in the turn-on of the initial boards.
+
+* The LiPo battery support from [TeleMetrum](../TeleMetrum) should be copied
+  into this design, replacing the battery screw terminals with a standard LiPo
+  2-pin battery connector.
+
+* The [SparkFun](http://www.sparkfun.com) folks have produced 
+  a [USB bootloader for the LPC2148]
+  (http://www.sparkfun.com/commerce/tutorial_info.php?tutorials_id=94).  It 
+  requires an SD card for temporary storage of code to be
+  flashed.  Replacing the current external SPI memory chip with a microSD 
+  socket could make sense.  The socket size is under a cm square, and ones 
+  that have a fold-up locking top are about $2, vs over $6 for the current
+  memory chip.  The cards themselves are getting very cheap, too, and can
+  store much more data than the current 128k memory chip.  This would require 
+  moving ADC_Vbat to a different ADC input so that pins 27, 29, 30, and 31 
+  would be available for the microSD socket.
+
+* Consideration should be given to changing the accelerometer for a higher-G
+  single axis unit as in [TeleMetrum](../TeleMetrum) if we want to be able to
+  use it for motor characterization.
