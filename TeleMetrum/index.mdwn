@@ -35,7 +35,7 @@ simplify things by building a new altimeter with integrated RF link!
 * Recording altimeter for model rocketry
 * Supports dual deployment (can fire 2 ejection charges)
 * 70cm ham-band transceiver for telemetry downlink
-* Primary operations based on pressure sensor
+* Barometric pressure sensor good to 45k feet MSL
 * Temperature sensor
 * 1-axis high-g accelerometer for motor characterization
 * On-board non-volatile memory for flight data storage
