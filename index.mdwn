@@ -43,6 +43,12 @@ prototype was built, but never flown.  This project is now indefinitely on hold.
 is our current project, a dual-deploy rocketry altimeter with improved sensor 
 complement and bidirectional RF telemetry link.
 
+* [TelePyro](TelePyro/) is an 8-channel pyro expansion board for 
+[TeleMetrum](TeleMetrum/).
+
+* [TeleTerra](TeleTerra) is a hand-held ground station for use with 
+[TeleMetrum](TeleMetrum/).
+
 # Participants #
 
 * [Bdale Garbee](http://gag.com/~bdale)

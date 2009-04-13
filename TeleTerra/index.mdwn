@@ -1,0 +1,61 @@
+# TeleTerra
+
+This is a hand-held ground station for [TeleMetrum](../TeleMetrum/).
+
+## Motivation ##
+
+While it is possible to use a partially (or fully!) loaded 
+[TeleMetrum](../TeleMetrum/) board as a USB to RF interface, we think 
+it would be cool to have a nice hand-held ground station we can use in
+full sunlight on the flight line.  If it can help locate the rocket and is
+easy to carry during recovery operations, so much the better!
+
+## Features ##
+
+### User View ###
+
+* Hand-held until about the size of a calculator
+* Antenna for the telemetry stream from [TeleMetrum](../TeleMetrum/)
+* Integrated GPS receiver core to allow display of current user position,
+and relative position of GPS-equipped rockets
+* Integrated rechargable battery
+* USB interface for configuration and power 
+
+### Developer View ###
+
+* Partially populated [TeleMetrum](../TeleMetrum/) board
+	* Serial connector used to attach user interface board
+	* LiPo charge management
+	* Beeper for audible indications
+	* RF section with SMA for external antenna
+	* USB interface
+* New user interface board
+	* [Microchip 16F882](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en530146) Microcontroller
+		* 3.5k Flash
+		* 128 bytes RAM
+		* I2C target interface
+		* In-circuit programming interface
+		* Serial port
+	* 4 line, 20 character transreflective text LCD display
+	* Switches for scrolling, safe/arm, etc
+	* LEDs to indicate current flight mode, etc
+* LiPo battery
+* GPS receiver core attached to serial port on new user interface board
+	
+* Software Features (planned)
+	* Written in PIC assembler
+	* Runs from on-chip flash, uses on-chip RAM
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Problems ##
+
+None yet!
+
+## Artifacts ##
+
+As of 11 April 2009, an incomplete schematic exists, but nothing is 
+published yet.
