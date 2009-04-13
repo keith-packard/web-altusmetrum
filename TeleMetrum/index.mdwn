@@ -52,7 +52,7 @@ simplify things by building a new altimeter with integrated RF link!
 	* 32k Flash
 	* 4k RAM
 	* USB 2.0
-	* 12-bit analog input (11 bits available due to single-ended sensors)
+	* 12-bit analog input (11 bits with single-ended sensors)
 	* digital I/O
 	* async serial I/O
 * [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM
