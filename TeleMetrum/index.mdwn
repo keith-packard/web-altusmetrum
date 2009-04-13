@@ -83,6 +83,10 @@ simplify things by building a new altimeter with integrated RF link!
   place parts!  Without an inspection microscope, loading and testing these
   boards might be impossible.
 
+* The v0.1 artwork has the USB connector footprint placed wrong, so that the
+  connector hangs out over the edge of the board instead of being flush with
+  the edge.
+
 * The v0.1 artwork has two issues that require cuts and jumps.  The first is
   that we need chip select on the SPI memory.  To fix that, we give up the 
   ability to put the accelerometer into self-test mode and use that GPIO line
