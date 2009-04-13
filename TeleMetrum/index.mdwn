@@ -76,16 +76,33 @@ simplify things by building a new altimeter with integrated RF link!
 
 ## Problems ##
 
-* The CC1111F32 is a 36-pin QFN package, which necessitates reflow soldering.
+* The CC1111F32 is a 36-pin QFN package, which necessitates reflow 
+  soldering.  Since we needed to reflow solder anyway, and because TI used 
+  them in their reference design, we went a little crazy and used 0402 
+  passive parts everywhere.  That means working under a microscope to 
+  place parts!  Without an inspection microscope, loading and testing these
+  boards might be impossible.
 
-* Since we needed to reflow solder anyway, and because TI used them in their
-  reference design, we went a little crazy and used 0402 passive parts 
-  everywhere.  That means working under a microscope to place parts!
+* The v0.1 artwork has two issues that require cuts and jumps.  The first is
+  that we need chip select on the SPI memory.  To fix that, we give up the 
+  ability to put the accelerometer into self-test mode and use that GPIO line
+  to pull chip select on the memory.  The second is that the igniter sense
+  circuits each need a second resistor to complete the voltage divider so our
+  3.3V CPU ADC can read the 5V ejection voltage.  This is fixed by changing
+  two resistor values, and tacking two additional resistors onto the board
+  with jumpers to ground.
 
 ## Artifacts ##
 
 The hardware design current gEDA files are available from 
-[git.gag.com](http://git.gag.com).
+[git.gag.com](http://git.gag.com).  
 
-As of 6 March 2009, the first two boards are loaded, and we're about to start
-turning them on and testing things!
+Keith has working data collection firmware, however the firmware is under a 
+massive, rapid rewrite to eliminate FreeRTOS which is much more generalized 
+and capable than we need... and consuming more system resources than we 
+can tolerate.  As soon as we're over this transition, the sourcecode to the
+firmware and related tools will also be made available.
+
+As of 11 April 2009, the first two boards are fully checked out, we have some
+initial firmware capable of data logging ready, and as soon as we get a good
+day to fly we hope to log our first flight data!
