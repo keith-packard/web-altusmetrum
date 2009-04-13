@@ -95,7 +95,13 @@ simplify things by building a new altimeter with integrated RF link!
 ## Artifacts ##
 
 The hardware design current gEDA files are available from 
-[git.gag.com](http://git.gag.com).  
+[git.gag.com](http://git.gag.com).  The 'fab' tag on the master branch reflects
+the artwork as sent out for PCB fab.  The 'loaded' tag on the master branch
+indicates the parts Bdale loads for a functional board, but the schematic
+does not reflect the cuts and jumps or added resistors.  The 'nextcut' branch 
+is work towards our next PCB revision.  The 'ground' branch has a cut-down
+schematic used to generate the BOM for partially loading boards to use in
+the matching TeleTerra ground station design.
 
 Keith has working data collection firmware, however the firmware is under a 
 massive, rapid rewrite to eliminate FreeRTOS which is much more generalized 
