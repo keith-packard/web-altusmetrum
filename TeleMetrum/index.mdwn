@@ -42,7 +42,7 @@ simplify things by building a new altimeter with integrated RF link!
 * Serial port for attachment of GPS module
 * USB for power, configuration, and data recovery
 * Integrated support for LiPo rechargeable batteries
-* Designed to fit 29mm airframe coupler tube
+* 2.5 x 1 inch board designed to fit inside 29mm airframe coupler tube
 
 ### Developer View ###
 
