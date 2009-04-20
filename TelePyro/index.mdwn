@@ -22,7 +22,7 @@ I2C protocol.
 
 ### Developer View ###
 
-* [Microchip 16F882](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en530146) Microcontroller
+* [Microchip 16F886](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en530146) Microcontroller
 	* 3.5k Flash
 	* 128 bytes RAM
 	* I2C target interface
