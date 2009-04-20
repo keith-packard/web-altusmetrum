@@ -109,10 +109,8 @@ indicates the parts Bdale loads for a functional board, but the schematic
 does not reflect the cuts and jumps or added resistors.  The 'nextcut' branch 
 is work towards our next PCB revision.  The 'ground' branch has a cut-down
 schematic used to generate the BOM for partially loading boards to use in
-the matching TeleTerra ground station design.
+the matching [TeleTerra](../TeleTerra) ground station design.
 
-Keith has working data collection firmware, however the firmware is under a 
-massive, rapid rewrite to eliminate FreeRTOS which is much more generalized 
-and capable than we need... and consuming more system resources than we 
-can tolerate.  As soon as we're over this transition, the sourcecode to the
-firmware and related tools will also be made available.
+Keith has working firmware that has now been flown once and successfully 
+collected flight data to apogee.  We'll publish a link to the git 
+repository here soon!
