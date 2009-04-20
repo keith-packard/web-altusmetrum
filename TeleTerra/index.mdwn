@@ -31,8 +31,8 @@ and relative position of GPS-equipped rockets
 	* USB interface
 * New user interface board
 	* [Microchip 16F886](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en530146) Microcontroller
-		* 3.5k Flash
-		* 128 bytes RAM
+        	* 8k Flash
+        	* 386 bytes RAM
 		* I2C target interface
 		* In-circuit programming interface
 		* Serial port
