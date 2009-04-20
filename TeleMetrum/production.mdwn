@@ -1,0 +1,21 @@
+# TeleMetrum Units
+
+This page contains Bdale's notes about each unit of [TeleMetrum](..) 
+assembled to date.
+
+## sn 1 ##
+
+Full load of v0.1 PCB, two cuts and jumps to rewire P1_2 to be SPI memory 
+chip select, R14 and R15 loaded with 56k, 10k tacked from each to 
+ground.  R17 replaced with short circuit, R18 removed.
+
+First unit to be flown on 19 April 2009 by Bdale Garbee.
+
+## sn 2 ##
+
+Full load of v0.1 PCB, two cuts and jumps to rewire P1_2 to be SPI memory 
+chip select, R14 and R15 loaded with 56k, 10k tacked from each to 
+ground.
+
+Delivered to Keith Packard for firmware development and use.
+

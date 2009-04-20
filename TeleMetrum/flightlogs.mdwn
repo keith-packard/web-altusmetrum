@@ -1,0 +1,17 @@
+# TeleMetrum Flights
+
+This page contains Bdale's notes about each flight of [TeleMetrum](..) 
+to date.
+
+## 2009.04.19 ##
+
+Flew sn 1 in Vertical Assault on J335 at Tripoli Colorado launch site near
+Hartsel, Colorado.  Good flight data collected through apogee.  Data record
+ends apparently coincident with firing of apogee charge by adjacent MAWD.
+One mounting screw found missing later (the one that goes between the screw
+terminals and the LiPo battery connector), so it's entirely possible the power
+was short-circuited briefly when the screw worked loose.
+
+[Raw flight data](flights/sn1-flight1.log), 
+[processed data](flights/sn1-flight1.parsed),
+[plot](flights/sn1-flight1.plot.ps).
