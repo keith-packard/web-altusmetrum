@@ -116,7 +116,3 @@ massive, rapid rewrite to eliminate FreeRTOS which is much more generalized
 and capable than we need... and consuming more system resources than we 
 can tolerate.  As soon as we're over this transition, the sourcecode to the
 firmware and related tools will also be made available.
-
-As of 11 April 2009, the first two boards are fully checked out, we have some
-initial firmware capable of data logging ready, and as soon as we get a good
-day to fly we hope to log our first flight data!
