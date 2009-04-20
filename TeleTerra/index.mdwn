@@ -41,7 +41,6 @@ and relative position of GPS-equipped rockets
 	* LEDs to indicate current flight mode, etc
 * LiPo battery
 * GPS receiver core attached to serial port on new user interface board
-	
 * Software Features (planned)
 	* Written in PIC assembler
 	* Runs from on-chip flash, uses on-chip RAM
