@@ -12,6 +12,6 @@ One mounting screw found missing later (the one that goes between the screw
 terminals and the LiPo battery connector), so it's entirely possible the power
 was short-circuited briefly when the screw worked loose.
 
-[Raw flight data](flights/sn1-flight1.log), 
+[Raw flight data](flights/sn1-flight1.txt), 
 [processed data](flights/sn1-flight1.parsed),
 [plot](flights/sn1-flight1.plot.ps).
