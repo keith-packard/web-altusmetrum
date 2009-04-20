@@ -14,7 +14,7 @@ easy to carry during recovery operations, so much the better!
 
 ### User View ###
 
-* Hand-held until about the size of a calculator
+* Hand-held unit about the size of a calculator
 * Antenna for the telemetry stream from [TeleMetrum](../TeleMetrum/)
 * Integrated GPS receiver core to allow display of current user position,
 and relative position of GPS-equipped rockets
