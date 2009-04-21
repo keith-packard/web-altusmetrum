@@ -115,9 +115,9 @@ For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of files in more easily readable form.  The schematic and BOM are from the 
 'nextcut' branch as of 20 April 2009, the artwork is of the v0.1 boards:
 
-	* [schematic](telemetrum.pdf)
-	* [pcb artwork](telemetrum.pcb.pdf)
-	* [bill of materials](telemetrum.bom)
+* [schematic](telemetrum.pdf)
+* [pcb artwork](telemetrum.pcb.pdf)
+* [bill of materials](telemetrum.bom)
 
 Keith has working firmware that has now been flown once and successfully 
 collected flight data to apogee.  We'll publish a link to the git 
