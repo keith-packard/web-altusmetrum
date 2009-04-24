@@ -19,3 +19,24 @@ ground.
 
 Delivered to Keith Packard for firmware development and use.
 
+## sn 3 ##
+
+Full load of v0.1 PCB on 2009.04.22, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
+## sn 4 ##
+
+Full load of v0.1 PCB on 2009.04.22, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
+## sn 5 ##
+
+Partial "ground" load of v0.1 PCB on 2009.04.23 plus beeper and serial 
+connector for use as TeleDongle or for TeleTerra prototype.
+
+## sn 6 ##
+
+Partial "ground" load of v0.1 PCB on 2009.04.23 for use as TeleDongle.
+
