@@ -58,5 +58,4 @@ None yet!
 
 As of 26 April 2009, an incomplete schematic exists at
 [git.gag.com](http://git.gag.com) in the project
-[hw/teleterra](http://git.gag.com/?p=hw/teleterra;a=summary).  Caveat emptor!
-published yet.
+[hw/teleterra](http://git.gag.com/?p=hw/teleterra;a=summary).
