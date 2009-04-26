@@ -103,7 +103,8 @@ simplify things by building a new altimeter with integrated RF link!
 ## Artifacts ##
 
 The hardware design current gEDA files are available from 
-[git.gag.com](http://git.gag.com).  The 'fab' tag on the master branch reflects
+[git.gag.com](http://git.gag.com) in the project hw/telemetrum.  The 'fab' 
+tag on the master branch reflects
 the artwork as sent out for PCB fab.  The 'loaded' tag on the master branch
 indicates the parts Bdale loads for a functional board, but the schematic
 does not reflect the cuts and jumps or added resistors.  The 'nextcut' branch 
@@ -119,6 +120,10 @@ of files in more easily readable form.  The schematic and BOM are from the
 * [pcb artwork](telemetrum.pcb.pdf)
 * [bill of materials](telemetrum.bom)
 
+
 Keith has working firmware that has now been flown once and successfully 
-collected flight data to apogee.  We'll publish a link to the git 
-repository here soon!
+collected flight data to apogee.  The source is also available from 
+[git.gag.com](http://git.gag.com) in the project fw/altos.  Not that actually
+building these sources requires a modifified version of sdcc and a set of
+helper utilities that we're not publishing since we hope to have the important
+bits accepted upstream shortly.  Watch this space for more details soon.
