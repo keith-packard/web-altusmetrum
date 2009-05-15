@@ -1,4 +1,4 @@
-![Altus Metrum Logo](logo.png)
+[Altus Metrum Logo](logo.png)
 
 This is the site where 
 <a href="http://www.gag.com/~bdale">Bdale Garbee </a>
