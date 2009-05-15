@@ -1,3 +1,5 @@
+<img src="logo.png">
+
 This is the site where 
 <a href="http://www.gag.com/~bdale">Bdale Garbee </a>
 and friends document work on open hardware and software designs for
