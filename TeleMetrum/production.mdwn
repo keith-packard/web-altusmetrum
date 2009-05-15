@@ -9,7 +9,8 @@ Full load of v0.1 PCB, two cuts and jumps to rewire P1_2 to be SPI memory
 chip select, R14 and R15 loaded with 56k, 10k tacked from each to 
 ground.  R17 replaced with short circuit, R18 removed.
 
-First unit to be flown on 19 April 2009 by Bdale Garbee.
+Installed in Bdale's Vertical Assault.  First unit to be flown on 
+19 April 2009, on a Cesaroni J335.
 
 ## sn 2 ##
 
@@ -17,7 +18,8 @@ Full load of v0.1 PCB, two cuts and jumps to rewire P1_2 to be SPI memory
 chip select, R14 and R15 loaded with 56k, 10k tacked from each to 
 ground.
 
-Delivered to Keith Packard for firmware development and use.
+Delivered to Keith Packard for firmware development and use.  Flown twice
+on 10 May 2008 in Keith's Grappler to about 45m on Estes D12-3 motors.
 
 ## sn 3 ##
 
@@ -25,11 +27,15 @@ Full load of v0.1 PCB on 2009.04.22, two cuts and jumps to rewire P1_2
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
 
+Installed in Bdale's Horizon rebuild.
+
 ## sn 4 ##
 
 Full load of v0.1 PCB on 2009.04.22, two cuts and jumps to rewire P1_2 
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
+
+Installed in Robert's Lil Nuke.
 
 ## sn 5 ##
 
@@ -40,3 +46,4 @@ connector for use as TeleDongle or for TeleTerra prototype.
 
 Partial "ground" load of v0.1 PCB on 2009.04.23 for use as TeleDongle.
 
+Delivered to Keith Packard for firmware development and use.
