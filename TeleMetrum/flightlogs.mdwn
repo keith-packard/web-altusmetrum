@@ -15,3 +15,23 @@ was short-circuited briefly when the screw worked loose.
 [Raw flight data](flights/sn1-flight1.txt), 
 [processed data](flights/sn1-flight1.parsed),
 [plot](flights/sn1-flight1.plot.ps).
+
+## 2009.05.16 ##
+
+SCORE launch at Hudson Ranch, two flights of sn 4 in Robert's Lil Nuke.  In
+neither case did we turn on the HT, all RF reception was via TeleDongle.
+
+First flight used an Aerotech G54W-M.  Telemetry logged using TeleDongle sn 5
+and aoview on the pad and throughout the flight, then flight log dumped 
+after recovery.  Rocket was beeping out 390 when recovered after flight, and
+we continued to get telemetry even after rocket was on the ground.
+
+[Raw flight data](flights/sn4-flight1.txt) 
+
+Second flight used an Aerotech G79W-L, with the delay chosen to intentionally
+put ejection well past apogee.  Telemetry logged using TeleDongle sn 5 and 
+aoview on the pad and throughout the flight, then flight log dumped after 
+recovery.  No beeping when recovered, and last telemetry frame captured was 
+at 15m AGL just before touch-down.
+
+[Raw flight data](flights/sn4-flight2.txt)

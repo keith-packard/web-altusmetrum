@@ -1,0 +1,3216 @@
+Script started on Sat 16 May 2009 11:51:23 AM MDT
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1[Kaov[K[K[K./aoview 
+CALL KB0G-4 SERIAL   4 RSSI -47 STATUS aa STATE     pad  1001 a: 16020 p: 21756 t:  6156 v: 26644 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0m/s²
+Velocity: 0m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -51 STATUS a9 STATE     pad  1222 a: 16000 p: 21756 t:  6160 v: 26668 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.370342m/s²
+Velocity: -0.409228m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad  1323 a: 16016 p: 21760 t:  6160 v: 26676 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: -0.148137m/s²
+Velocity: -0.112214m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ac STATE     pad  1544 a: 16012 p: 21752 t:  6168 v: 26668 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0m/s²
+Velocity: 0.163691m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -42 STATUS ad STATE     pad  1645 a: 16004 p: 21756 t:  6160 v: 26660 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.222205m/s²
+Velocity: -0.112214m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad  1866 a: 16012 p: 21764 t:  6176 v: 26668 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: -0.0740684m/s²
+Velocity: -0.163691m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ad STATE     pad  1967 a: 16000 p: 21748 t:  6172 v: 26652 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: -0.130916m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS a9 STATE     pad  2188 a: 16012 p: 21760 t:  6180 v: 26660 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: -0.111103m/s²
+Velocity: -0.245537m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS aa STATE     pad  2289 a: 16028 p: 21756 t:  6176 v: 26660 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.629581m/s²
+Velocity: 0.374045m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ac STATE     pad  2510 a: 16024 p: 21764 t:  6188 v: 26656 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: -0.44441m/s²
+Velocity: 1.18676m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS af STATE     pad  2611 a: 16012 p: 21760 t:  6188 v: 26648 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: 0m/s²
+Velocity: 0.224427m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ab STATE     pad  2832 a: 16036 p: 21760 t:  6188 v: 26648 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: -0.814752m/s²
+Velocity: 0.900301m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad  2933 a: 16024 p: 21752 t:  6188 v: 26644 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.333308m/s²
+Velocity: 0.57977m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ac STATE     pad  3154 a: 16028 p: 21756 t:  6200 v: 26640 d:   152 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.44441m/s²
+Velocity: 0.859378m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ad STATE     pad  3255 a: 16028 p: 21756 t:  6192 v: 26640 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 0.430152m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -42 STATUS ab STATE     pad  3476 a: 16048 p: 21748 t:  6204 v: 26628 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -1.07399m/s²
+Velocity: 1.63691m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ae STATE     pad  3577 a: 16020 p: 21756 t:  6204 v: 26632 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.0370342m/s²
+Velocity: 0.561068m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -43 STATUS b0 STATE     pad  3798 a: 16028 p: 21756 t:  6204 v: 26636 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.333308m/s²
+Velocity: 0.409228m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -46 STATUS ae STATE     pad  3899 a: 16008 p: 21748 t:  6204 v: 26620 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.370342m/s²
+Velocity: -0.0187023m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -43 STATUS ad STATE     pad  4120 a: 16032 p: 21752 t:  6216 v: 26624 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.481444m/s²
+Velocity: 0.122768m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -44 STATUS ac STATE     pad  4221 a: 16048 p: 21756 t:  6216 v: 26628 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -1.03696m/s²
+Velocity: 0.766793m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ac STATE     pad  4442 a: 16028 p: 21752 t:  6220 v: 26624 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 1.4323m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ac STATE     pad  4543 a: 16020 p: 21756 t:  6216 v: 26624 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 0.112214m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ae STATE     pad  4764 a: 16016 p: 21756 t:  6224 v: 26620 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -0.245537m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ab STATE     pad  4865 a: 16016 p: 21760 t:  6228 v: 26616 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: 0.148137m/s²
+Velocity: -0.16832m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS aa STATE     pad  5086 a: 16016 p: 21756 t:  6228 v: 26608 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.148137m/s²
+Velocity: -0.327382m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad  5187 a: 16004 p: 21756 t:  6228 v: 26616 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.592547m/s²
+Velocity: -0.374045m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS aa STATE     pad  5408 a: 16032 p: 21748 t:  6232 v: 26596 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.44441m/s²
+Velocity: -0.163691m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ad STATE     pad  5509 a: 16044 p: 21752 t:  6232 v: 26612 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: 0.654579m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad  5730 a: 16024 p: 21756 t:  6236 v: 26612 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 1.06399m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -31 STATUS ab STATE     pad  5831 a: 16004 p: 21748 t:  6236 v: 26600 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.592547m/s²
+Velocity: -0.243129m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad  6052 a: 16028 p: 21756 t:  6236 v: 26604 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: -0.368305m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ae STATE     pad  6153 a: 16036 p: 21748 t:  6240 v: 26600 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 0.41145m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ae STATE     pad  6374 a: 16008 p: 21752 t:  6244 v: 26604 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.481444m/s²
+Velocity: 0.0818455m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad  6475 a: 16024 p: 21756 t:  6244 v: 26596 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: -0.187023m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -42 STATUS ac STATE     pad  6696 a: 16028 p: 21756 t:  6252 v: 26592 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 0.409228m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ac STATE     pad  6797 a: 16016 p: 21752 t:  6248 v: 26596 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 0.0374045m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ae STATE     pad  7018 a: 16024 p: 21760 t:  6252 v: 26588 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: -6m
+Acceleration: -0.111103m/s²
+Velocity: -0.0818455m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad  7119 a: 16024 p: 21752 t:  6256 v: 26596 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 0.112214m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS b0 STATE     pad  7340 a: 16040 p: 21748 t:  6256 v: 26580 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: 0.900301m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ae STATE     pad  7441 a: 16044 p: 21756 t:  6264 v: 26592 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.814752m/s²
+Velocity: 0.766793m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad  7662 a: 16012 p: 21748 t:  6264 v: 26588 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.370342m/s²
+Velocity: 0.491073m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ad STATE     pad  7763 a: 16008 p: 21752 t:  6264 v: 26580 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.481444m/s²
+Velocity: -0.430152m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ac STATE     pad  7984 a: 16016 p: 21756 t:  6268 v: 26584 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -0.73661m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad  8085 a: 16016 p: 21748 t:  6272 v: 26580 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -0.187023m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ab STATE     pad  8306 a: 16032 p: 21752 t:  6268 v: 26580 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 0.245537m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ad STATE     pad  8407 a: 16020 p: 21756 t:  6268 v: 26584 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 0.187023m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ab STATE     pad  8628 a: 16012 p: 21752 t:  6276 v: 26580 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: -0.409228m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ad STATE     pad  8729 a: 16032 p: 21748 t:  6276 v: 26576 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 0.0374045m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ab STATE     pad  8950 a: 16020 p: 21752 t:  6280 v: 26572 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 0.409228m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ab STATE     pad  9051 a: 16016 p: 21756 t:  6276 v: 26580 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 0.297014m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS aa STATE     pad  9272 a: 16004 p: 21748 t:  6280 v: 26560 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.629581m/s²
+Velocity: -0.603287m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad  9373 a: 16028 p: 21756 t:  6284 v: 26576 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: -0.790309m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ac STATE     pad  9594 a: 16028 p: 21744 t:  6284 v: 26560 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: -0.217391m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad  9695 a: 16020 p: 21752 t:  6288 v: 26564 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: -0.105177m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -42 STATUS ab STATE     pad  9916 a: 16024 p: 21752 t:  6288 v: 26572 d:   160 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: -0.0233315m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ae STATE     pad 10017 a: 16000 p: 21748 t:  6288 v: 26560 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: -0.359972m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad 10238 a: 16008 p: 21752 t:  6288 v: 26564 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.481444m/s²
+Velocity: -1.75135m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ab STATE     pad 10339 a: 16016 p: 21752 t:  6288 v: 26568 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -2.08799m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS af STATE     pad 10560 a: 16012 p: 21748 t:  6292 v: 26564 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: -2.66091m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -35 STATUS ab STATE     pad 10661 a: 16024 p: 21748 t:  6296 v: 26560 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: -2.77312m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ab STATE     pad 10882 a: 16028 p: 21752 t:  6300 v: 26564 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: -2.36389m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad 10983 a: 16024 p: 21748 t:  6296 v: 26560 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: -2.17687m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ae STATE     pad 11204 a: 16032 p: 21748 t:  6300 v: 26548 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: -1.60395m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -35 STATUS ad STATE     pad 11305 a: 16016 p: 21748 t:  6304 v: 26556 d:   152 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -1.49174m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -35 STATUS ac STATE     pad 11526 a: 16004 p: 21748 t:  6300 v: 26552 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.629581m/s²
+Velocity: -2.39204m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -35 STATUS ac STATE     pad 11627 a: 16020 p: 21752 t:  6304 v: 26556 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: -2.72868m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 11848 a: 16032 p: 21756 t:  6304 v: 26560 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: -2.31945m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad 11949 a: 16024 p: 21740 t:  6308 v: 26544 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.111103m/s²
+Velocity: -2.05762m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad 12170 a: 16020 p: 21756 t:  6312 v: 26548 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: -1.97577m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad 12271 a: 16016 p: 21752 t:  6316 v: 26556 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -2.08799m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ac STATE     pad 12492 a: 16000 p: 21756 t:  6308 v: 26552 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: -3.15198m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad 12593 a: 16012 p: 21752 t:  6312 v: 26544 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: -3.71305m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ae STATE     pad 12814 a: 16024 p: 21756 t:  6316 v: 26552 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: -3.95858m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ab STATE     pad 12915 a: 16000 p: 21748 t:  6316 v: 26548 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: -4.29522m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ab STATE     pad 13136 a: 16004 p: 21752 t:  6320 v: 26540 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.629581m/s²
+Velocity: -5.85029m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ae STATE     pad 13237 a: 16016 p: 21752 t:  6320 v: 26544 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: -6.26174m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS a9 STATE     pad 13458 a: 16000 p: 21744 t:  6316 v: 26540 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: -7.32573m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 13559 a: 16040 p: 21756 t:  6324 v: 26548 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: -7.36314m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ac STATE     pad 13780 a: 16036 p: 21752 t:  6324 v: 26544 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: -5.97176m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ab STATE     pad 13881 a: 16028 p: 21740 t:  6324 v: 26532 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.259239m/s²
+Velocity: -5.56031m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad 14102 a: 16040 p: 21744 t:  6332 v: 26536 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: -4.49632m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ad STATE     pad 14203 a: 16012 p: 21744 t:  6332 v: 26544 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: -4.3093m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS a9 STATE     pad 14424 a: 16036 p: 21748 t:  6324 v: 26540 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: -4.06376m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS af STATE     pad 14525 a: 16036 p: 21752 t:  6328 v: 26532 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: -3.50269m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad 14746 a: 16036 p: 21748 t:  6328 v: 26536 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: -2.27501m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ad STATE     pad 14847 a: 16036 p: 21748 t:  6328 v: 26532 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: -1.71394m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ac STATE     pad 15068 a: 16032 p: 21752 t:  6336 v: 26528 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: -0.64995m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -35 STATUS ae STATE     pad 15169 a: 16020 p: 21756 t:  6332 v: 26536 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: -0.462927m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 15390 a: 16020 p: 21744 t:  6336 v: 26520 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: -0.544773m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS b0 STATE     pad 15491 a: 16008 p: 21752 t:  6340 v: 26532 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.481444m/s²
+Velocity: -0.806604m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS a9 STATE     pad 15712 a: 16028 p: 21748 t:  6344 v: 26540 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: -1.05214m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS aa STATE     pad 15813 a: 16000 p: 21744 t:  6340 v: 26520 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: -1.31397m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ac STATE     pad 16034 a: 16032 p: 21752 t:  6344 v: 26528 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: -1.7232m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ab STATE     pad 16135 a: 16020 p: 21740 t:  6344 v: 26520 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: 0.0370342m/s²
+Velocity: -1.53618m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad 16356 a: 16044 p: 21748 t:  6348 v: 26528 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: -0.635877m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS aa STATE     pad 16457 a: 16044 p: 21756 t:  6344 v: 26524 d:   160 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: 0.224427m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS a9 STATE     pad 16678 a: 16032 p: 21756 t:  6348 v: 26524 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 1.6158m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ae STATE     pad 16779 a: 16020 p: 21752 t:  6348 v: 26524 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 1.80282m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ab STATE     pad 17000 a: 16048 p: 21756 t:  6356 v: 26520 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.999923m/s²
+Velocity: 2.86682m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ab STATE     pad 17101 a: 16020 p: 21748 t:  6356 v: 26524 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 3.35307m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS aa STATE     pad 17322 a: 16016 p: 21744 t:  6356 v: 26508 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 3.10754m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad 17423 a: 16028 p: 21752 t:  6360 v: 26520 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 3.14494m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS af STATE     pad 17644 a: 16012 p: 21748 t:  6360 v: 26524 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: 3.0631m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad 17745 a: 16028 p: 21744 t:  6352 v: 26516 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 3.02569m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad 17966 a: 16032 p: 21752 t:  6356 v: 26516 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 3.7623m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad 18067 a: 16028 p: 21740 t:  6356 v: 26508 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.259239m/s²
+Velocity: 4.09894m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS aa STATE     pad 18288 a: 16028 p: 21748 t:  6360 v: 26512 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 4.67186m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ae STATE     pad 18389 a: 16032 p: 21752 t:  6364 v: 26516 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 5.0085m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS aa STATE     pad 18610 a: 16032 p: 21752 t:  6360 v: 26520 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 5.9088m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ae STATE     pad 18711 a: 16020 p: 21748 t:  6360 v: 26508 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 6.09583m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS a9 STATE     pad 18932 a: 16024 p: 21748 t:  6364 v: 26516 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 6.17767m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ab STATE     pad 19033 a: 16032 p: 21756 t:  6364 v: 26516 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 6.4395m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS a9 STATE     pad 19254 a: 16020 p: 21744 t:  6372 v: 26500 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 6.84873m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ae STATE     pad 19355 a: 16028 p: 21756 t:  6368 v: 26512 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 6.96094m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ad STATE     pad 19576 a: 16048 p: 21740 t:  6376 v: 26508 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.999923m/s²
+Velocity: 8.35232m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ab STATE     pad 19677 a: 16036 p: 21748 t:  6372 v: 26508 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 9.13781m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ac STATE     pad 19898 a: 16032 p: 21752 t:  6376 v: 26508 d:   160 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 10.2018m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad 19999 a: 16024 p: 21740 t:  6376 v: 26500 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.111103m/s²
+Velocity: 10.4636m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ae STATE     pad 20220 a: 16020 p: 21744 t:  6372 v: 26508 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 10.5455m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS aa STATE     pad 20321 a: 16040 p: 21744 t:  6372 v: 26512 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: 10.8821m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ae STATE     pad 20542 a: 16048 p: 21752 t:  6376 v: 26512 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.999923m/s²
+Velocity: 12.7646m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS aa STATE     pad 20643 a: 16036 p: 21748 t:  6376 v: 26504 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 13.5501m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ac STATE     pad 20864 a: 16032 p: 21752 t:  6380 v: 26500 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 14.6141m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ae STATE     pad 20965 a: 16020 p: 21752 t:  6380 v: 26500 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 14.8011m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ad STATE     pad 21186 a: 16028 p: 21748 t:  6380 v: 26492 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 15.0466m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad 21287 a: 16044 p: 21748 t:  6380 v: 26500 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: 15.6077m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ab STATE     pad 21508 a: 16004 p: 21740 t:  6384 v: 26492 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: 0.629581m/s²
+Velocity: 15.8532m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ad STATE     pad 21609 a: 16012 p: 21748 t:  6384 v: 26496 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: 15.367m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ab STATE     pad 21830 a: 16036 p: 21752 t:  6380 v: 26500 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 15.6125m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ad STATE     pad 21931 a: 16036 p: 21740 t:  6388 v: 26488 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.555513m/s²
+Velocity: 16.1736m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ad STATE     pad 22152 a: 16040 p: 21748 t:  6384 v: 26492 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: 17.5649m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ac STATE     pad 22253 a: 16024 p: 21744 t:  6388 v: 26500 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 17.9764m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -31 STATUS ae STATE     pad 22474 a: 16024 p: 21756 t:  6392 v: 26504 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 18.2219m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ae STATE     pad 22575 a: 16008 p: 21752 t:  6392 v: 26496 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.481444m/s²
+Velocity: 18.0349m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -42 STATUS ad STATE     pad 22796 a: 16044 p: 21752 t:  6396 v: 26496 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: 18.4441m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -47 STATUS ad STATE     pad 22897 a: 16012 p: 21748 t:  6396 v: 26496 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: 18.706m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -43 STATUS ae STATE     pad 23118 a: 16036 p: 21752 t:  6392 v: 26488 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 18.9515m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -49 STATUS ad STATE     pad 23219 a: 16028 p: 21748 t:  6392 v: 26492 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 19.3629m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -44 STATUS ad STATE     pad 23440 a: 16024 p: 21740 t:  6396 v: 26484 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.111103m/s²
+Velocity: 19.7722m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -45 STATUS ac STATE     pad 23541 a: 16028 p: 21752 t:  6396 v: 26492 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 19.9592m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad 23762 a: 16024 p: 21744 t:  6396 v: 26492 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 20.3684m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ac STATE     pad 23863 a: 16032 p: 21740 t:  6396 v: 26476 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.407376m/s²
+Velocity: 20.6303m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -32 STATUS ab STATE     pad 24084 a: 16028 p: 21744 t:  6400 v: 26484 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 21.3669m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -33 STATUS ae STATE     pad 24185 a: 16016 p: 21744 t:  6404 v: 26492 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 21.4043m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ad STATE     pad 24406 a: 16020 p: 21748 t:  6400 v: 26488 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 21.1587m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -34 STATUS ac STATE     pad 24507 a: 16040 p: 21748 t:  6404 v: 26488 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: 21.4954m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ad STATE     pad 24728 a: 16000 p: 21748 t:  6404 v: 26488 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: 21.4135m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -35 STATUS ac STATE     pad 24829 a: 16040 p: 21744 t:  6400 v: 26484 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: 21.3761m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS a9 STATE     pad 25050 a: 16040 p: 21752 t:  6408 v: 26484 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.703649m/s²
+Velocity: 22.9312m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ae STATE     pad 25151 a: 16028 p: 21752 t:  6404 v: 26480 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 23.4175m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ac STATE     pad 25372 a: 16036 p: 21736 t:  6408 v: 26476 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.555513m/s²
+Velocity: 24.3178m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ae STATE     pad 25473 a: 16052 p: 21748 t:  6412 v: 26488 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -1.14806m/s²
+Velocity: 25.1781m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -36 STATUS ad STATE     pad 25694 a: 16028 p: 21748 t:  6408 v: 26488 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 26.7331m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS aa STATE     pad 25795 a: 16036 p: 21744 t:  6408 v: 26464 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 27.1446m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ab STATE     pad 26016 a: 16036 p: 21748 t:  6412 v: 26480 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 28.3723m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS a9 STATE     pad 26117 a: 16056 p: 21736 t:  6412 v: 26484 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -1.2962m/s²
+Velocity: 29.3074m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS a8 STATE     pad 26338 a: 16048 p: 21744 t:  6416 v: 26476 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.999923m/s²
+Velocity: 31.8446m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ac STATE     pad 26439 a: 16036 p: 21752 t:  6412 v: 26476 d:   160 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 32.6301m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -37 STATUS ad STATE     pad 26660 a: 16016 p: 21748 t:  6420 v: 26476 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 33.0393m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 26761 a: 16044 p: 21744 t:  6412 v: 26476 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: 33.3759m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ab STATE     pad 26982 a: 16032 p: 21756 t:  6424 v: 26476 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 34.7673m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ac STATE     pad 27083 a: 16024 p: 21748 t:  6420 v: 26472 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 35.0291m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ab STATE     pad 27304 a: 16032 p: 21740 t:  6424 v: 26464 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.407376m/s²
+Velocity: 35.6021m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -42 STATUS ac STATE     pad 27405 a: 16044 p: 21748 t:  6420 v: 26476 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.851786m/s²
+Velocity: 36.2379m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ad STATE     pad 27626 a: 16032 p: 21752 t:  6428 v: 26476 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 37.6293m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 27727 a: 16020 p: 21744 t:  6424 v: 26456 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 37.8163m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS aa STATE     pad 27948 a: 16048 p: 21752 t:  6424 v: 26468 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.999923m/s²
+Velocity: 38.8803m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ab STATE     pad 28049 a: 16024 p: 21740 t:  6424 v: 26468 d:   152 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.111103m/s²
+Velocity: 39.4414m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ab STATE     pad 28270 a: 16020 p: 21744 t:  6428 v: 26468 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 39.5232m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ac STATE     pad 28371 a: 16016 p: 21752 t:  6428 v: 26472 d:   156 m:  2148 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 39.411m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS a9 STATE     pad 28592 a: 16008 p: 21748 t:  6428 v: 26468 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.481444m/s²
+Velocity: 38.6744m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ae STATE     pad 28693 a: 16036 p: 21744 t:  6428 v: 26468 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 38.7118m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 28914 a: 16036 p: 21752 t:  6428 v: 26468 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.555513m/s²
+Velocity: 39.9395m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ac STATE     pad 29015 a: 16012 p: 21752 t:  6432 v: 26468 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: 40.0517m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ad STATE     pad 29236 a: 16016 p: 21744 t:  6432 v: 26448 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.185171m/s²
+Velocity: 39.4788m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad 29337 a: 16032 p: 21752 t:  6432 v: 26468 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 39.591m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ac STATE     pad 29558 a: 16032 p: 21736 t:  6432 v: 26464 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.407376m/s²
+Velocity: 40.4913m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 29659 a: 16028 p: 21744 t:  6440 v: 26456 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.259239m/s²
+Velocity: 40.828m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -40 STATUS ad STATE     pad 29880 a: 16024 p: 21748 t:  6436 v: 26464 d:   160 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.111103m/s²
+Velocity: 41.2372m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS ac STATE     pad 29981 a: 16024 p: 21740 t:  6440 v: 26456 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 5m
+Acceleration: -0.111103m/s²
+Velocity: 41.3494m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -41 STATUS aa STATE     pad 30202 a: 16012 p: 21744 t:  6440 v: 26460 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: 41.1039m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -39 STATUS ab STATE     pad 30303 a: 16012 p: 21748 t:  6432 v: 26464 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.333308m/s²
+Velocity: 40.7672m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ad STATE     pad 30524 a: 16000 p: 21744 t:  6440 v: 26460 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.777718m/s²
+Velocity: 39.5395m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ac STATE     pad 30625 a: 16032 p: 21744 t:  6440 v: 26460 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: -0.407376m/s²
+Velocity: 39.3525m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS aa STATE     pad 30846 a: 16020 p: 21748 t:  6444 v: 26460 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 39.7617m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -38 STATUS ab STATE     pad 30947 a: 16020 p: 21748 t:  6440 v: 26456 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 0m
+Acceleration: 0.0370342m/s²
+Velocity: 39.7243m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -52 STATUS ac STATE   boost 31048 a: 13492 p: 21640 t:  6444 v: 26460 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 36m
+Acceleration: 93.6594m/s²
+Velocity: -7.59238m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -55 STATUS ab STATE   boost 31054 a: 13528 p: 21616 t:  6444 v: 26444 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 42m
+Acceleration: 92.3262m/s²
+Velocity: -13.1719m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -61 STATUS ac STATE   boost 31060 a: 13580 p: 21596 t:  6444 v: 26456 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 52m
+Acceleration: 90.4004m/s²
+Velocity: -18.6537m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -63 STATUS ab STATE   boost 31067 a: 13604 p: 21580 t:  6444 v: 26460 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 57m
+Acceleration: 89.5116m/s²
+Velocity: -24.9507m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -64 STATUS aa STATE   boost 31072 a: 13708 p: 21560 t:  6444 v: 26452 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 63m
+Acceleration: 85.6601m/s²
+Velocity: -29.33m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -68 STATUS ae STATE   boost 31078 a: 13832 p: 21540 t:  6440 v: 26452 d:   152 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 68m
+Acceleration: 81.0678m/s²
+Velocity: -34.3318m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -69 STATUS b2 STATE   boost 31084 a: 13944 p: 21528 t:  6444 v: 26460 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 73m
+Acceleration: 76.92m/s²
+Velocity: -39.0714m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -73 STATUS b1 STATE   boost 31090 a: 14000 p: 21488 t:  6440 v: 26456 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 84m
+Acceleration: 74.8461m/s²
+Velocity: -43.6244m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -76 STATUS b4 STATE   boost 31096 a: 14176 p: 21464 t:  6440 v: 26444 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 94m
+Acceleration: 68.3281m/s²
+Velocity: -47.9196m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -78 STATUS b5 STATE   boost 31102 a: 15072 p: 21440 t:  6444 v: 26452 d:   156 m:  2132 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 100m
+Acceleration: 35.1454m/s²
+Velocity: -51.0238m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -75 STATUS bc STATE   boost 31109 a: 16204 p: 21408 t:  6448 v: 26452 d:   156 m:  2156 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 110m
+Acceleration: -6.77725m/s²
+Velocity: -52.0167m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -80 STATUS b3 STATE   boost 31114 a: 16508 p: 21384 t:  6440 v: 26456 d:   156 m:  2112 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 121m
+Acceleration: -18.0356m/s²
+Velocity: -51.3964m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -81 STATUS be STATE   boost 31120 a: 16596 p: 21368 t:  6440 v: 26452 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 126m
+Acceleration: -21.2947m/s²
+Velocity: -50.2165m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -83 STATUS b5 STATE   boost 31126 a: 16592 p: 21344 t:  6444 v: 26444 d:   156 m:  2128 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 132m
+Acceleration: -21.1465m/s²
+Velocity: -48.9433m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -111 STATUS ad STATE    main 31252 a: 16464 p: 20976 t:  6444 v: 26452 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 254m
+Acceleration: -16.4061m/s²
+Velocity: -25.2851m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -117 STATUS b0 STATE    main 31572 a: 16352 p: 20332 t:  6440 v: 26456 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 477m
+Acceleration: -12.2583m/s²
+Velocity: 20.578m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -96 STATUS af STATE    main 31892 a: 16288 p: 20036 t:  6444 v: 26460 d:   156 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 577m
+Acceleration: -9.88813m/s²
+Velocity: 56.0123m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -94 STATUS b3 STATE    main 31992 a: 16292 p: 20004 t:  6448 v: 26452 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 588m
+Acceleration: -10.0363m/s²
+Velocity: 65.9745m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -89 STATUS b3 STATE    main 32212 a: 16284 p: 20036 t:  6444 v: 26444 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 577m
+Acceleration: -9.73999m/s²
+Velocity: 87.7284m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -92 STATUS af STATE    main 32312 a: 19116 p: 20040 t:  6448 v: 26448 d:   160 m:  1320 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 577m
+Acceleration: -114.621m/s²
+Velocity: 149.909m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -88 STATUS b4 STATE    main 32532 a: 16380 p: 20144 t:  6448 v: 26444 d:   152 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 538m
+Acceleration: -13.2953m/s²
+Velocity: 290.616m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -93 STATUS bc STATE    main 32632 a: 16452 p: 20200 t:  6448 v: 26440 d:   156 m:  2148 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 522m
+Acceleration: -15.9617m/s²
+Velocity: 305.245m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -111 STATUS b1 STATE    main 32862 a: 16420 p: 20264 t:  6448 v: 26452 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 499m
+Acceleration: -14.7766m/s²
+Velocity: 340.594m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -96 STATUS ae STATE    main 32962 a: 16496 p: 20296 t:  6452 v: 26456 d:   156 m:  2156 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 488m
+Acceleration: -17.5912m/s²
+Velocity: 356.778m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -96 STATUS b0 STATE    main 33182 a: 16444 p: 20380 t:  6444 v: 26452 d:   160 m:  2124 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 461m
+Acceleration: -15.6655m/s²
+Velocity: 393.36m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -94 STATUS a9 STATE    main 33282 a: 16368 p: 20436 t:  6444 v: 26452 d:   160 m:  2156 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 439m
+Acceleration: -12.8509m/s²
+Velocity: 407.619m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -92 STATUS b3 STATE    main 33502 a: 16480 p: 20480 t:  6444 v: 26440 d:   156 m:  2164 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 423m
+Acceleration: -16.9987m/s²
+Velocity: 440.453m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -89 STATUS b5 STATE    main 33602 a: 16456 p: 20536 t:  6448 v: 26452 d:   156 m:  2148 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 406m
+Acceleration: -16.1099m/s²
+Velocity: 457.007m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -89 STATUS b5 STATE    main 33822 a: 16508 p: 20616 t:  6444 v: 26448 d:   156 m:  2132 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 379m
+Acceleration: -18.0356m/s²
+Velocity: 494.567m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -88 STATUS b3 STATE    main 33922 a: 16452 p: 20624 t:  6444 v: 26448 d:   156 m:  2152 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 373m
+Acceleration: -15.9617m/s²
+Velocity: 511.566m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -86 STATUS ac STATE    main 34142 a: 16316 p: 20724 t:  6440 v: 26448 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 341m
+Acceleration: -10.9251m/s²
+Velocity: 541.142m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -84 STATUS b3 STATE    main 34472 a: 16456 p: 20820 t:  6440 v: 26452 d:   160 m:  2136 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 308m
+Acceleration: -16.1099m/s²
+Velocity: 585.749m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -97 STATUS b1 STATE    main 34572 a: 16536 p: 20860 t:  6440 v: 26440 d:   156 m:  2148 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 298m
+Acceleration: -19.0726m/s²
+Velocity: 603.34m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -82 STATUS b9 STATE    main 34792 a: 16492 p: 20936 t:  6436 v: 26444 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 271m
+Acceleration: -17.4431m/s²
+Velocity: 643.508m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -78 STATUS c2 STATE    main 34892 a: 16504 p: 20972 t:  6444 v: 26440 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 260m
+Acceleration: -17.8875m/s²
+Velocity: 661.173m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -89 STATUS ae STATE    main 35112 a: 16420 p: 21056 t:  6440 v: 26432 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 228m
+Acceleration: -14.7766m/s²
+Velocity: 697.104m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -89 STATUS aa STATE    main 35212 a: 16328 p: 21080 t:  6436 v: 26428 d:   160 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 222m
+Acceleration: -11.3695m/s²
+Velocity: 710.177m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -63 STATUS af STATE    main 35432 a: 16484 p: 21140 t:  6440 v: 26424 d:   156 m:  2140 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 201m
+Acceleration: -17.1468m/s²
+Velocity: 741.545m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -65 STATUS ac STATE    main 35532 a: 16436 p: 21204 t:  6440 v: 26428 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 179m
+Acceleration: -15.3692m/s²
+Velocity: 757.803m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -69 STATUS b0 STATE    main 35752 a: 16500 p: 21240 t:  6436 v: 26444 d:   156 m:  2148 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 169m
+Acceleration: -17.7394m/s²
+Velocity: 794.222m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -70 STATUS af STATE    main 35852 a: 16428 p: 21316 t:  6440 v: 26440 d:   160 m:  2152 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 142m
+Acceleration: -15.0729m/s²
+Velocity: 810.628m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -91 STATUS b3 STATE    main 36082 a: 16392 p: 21396 t:  6436 v: 26436 d:   156 m:  2156 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 116m
+Acceleration: -13.7397m/s²
+Velocity: 843.763m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -72 STATUS ae STATE    main 36182 a: 16324 p: 21444 t:  6436 v: 26440 d:   156 m:  2172 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 100m
+Acceleration: -11.2214m/s²
+Velocity: 856.243m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -88 STATUS ac STATE    main 36402 a: 16408 p: 21520 t:  6432 v: 26436 d:   156 m:  2168 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 73m
+Acceleration: -14.3322m/s²
+Velocity: 884.352m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -82 STATUS ba STATE    main 36502 a: 16464 p: 21548 t:  6428 v: 26432 d:   156 m:  2148 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 68m
+Acceleration: -16.4061m/s²
+Velocity: 899.721m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -84 STATUS ae STATE    main 36722 a: 16340 p: 21632 t:  6428 v: 26432 d:   156 m:  2084 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 36m
+Acceleration: -11.8139m/s²
+Velocity: 930.763m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -84 STATUS ae STATE    main 36822 a: 16396 p: 21656 t:  6424 v: 26436 d:   160 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 31m
+Acceleration: -13.8878m/s²
+Velocity: 943.614m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+CALL KB0G-4 SERIAL   4 RSSI -80 STATUS b9 STATE    main 37042 a: 16536 p: 21708 t:  6424 v: 26436 d:   156 m:  2144 GPS  0 sat unlocked
+Pad altitude: 1523m
+AGL: 15m
+Acceleration: -19.0726m/s²
+Velocity: 979.871m/s
+Lat: 0
+Lon: 0
+GPS alt: 0
+Course: 0km nan°
+^C
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ ./aoview cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+cu: open (/dev/ttyACM1): No such file or directory
+cu: /dev/ttyACM1: Line in use
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ cu -l /dev/ttyACM1
+Connected.
+
+> l
+F 793a 3e88    3
+A 7901 3610 54f4
+T 7901 192c 6758
+D 7901   9c  858
+A 7902 3554 54f4
+A 7903 34a8 54f4
+A 7904 3474 54f8
+A 7905 343c 54f8
+A 7906 3488 54f8
+A 7907 34fc 54e4
+A 7908 3604 54e8
+A 7909 34fc 54ec
+A 790a 347c 54ec
+A 790b 3488 54ec
+A 790c 3438 54ec
+A 790d 3408 54e4
+A 790e 3400 54f0
+A 790f 33f0 54e8
+A 7910 3408 54ec
+A 7911 3418 54e0
+A 7912 33f8 54e0
+A 7913 33a8 54e4
+A 7914 33dc 54ec
+A 7915 33c4 54e8
+A 7916 33bc 54e8
+A 7917 33b0 54e4
+A 7918 3378 54e0
+A 7919 336c 54e4
+A 791a 3324 54e4
+A 791b 334c 54dc
+A 791c 3350 54d4
+A 791d 335c 54e0
+A 791e 3368 54e0
+A 791f 3334 54e0
+A 7920 333c 54d4
+A 7921 3358 54d8
+T 7921 1928 675c
+D 7921   9c  85c
+A 7922 3368 54d4
+A 7923 335c 54d8
+A 7924 3338 54d8
+A 7925 32f8 54cc
+A 7926 3314 54cc
+A 7927 3370 54c8
+A 7928 3308 54d0
+A 7929 33b4 54d0
+A 792a 33b8 54cc
+A 792b 33c8 54c0
+A 792c 33c4 54cc
+A 792d 33c0 54bc
+A 792e 33a4 54d0
+A 792f 33ec 54c4
+A 7930 33dc 54b8
+A 7931 33d0 54b8
+A 7932 33d0 54c0
+A 7933 3440 54b4
+A 7934 345c 54b4
+A 7935 344c 54b4
+A 7936 33f8 54bc
+A 7937 3460 54b0
+A 7938 3490 54b0
+A 7939 3490 54ac
+A 793a 348c 54a4
+A 793b 3478 54a0
+A 793c 348c 54a4
+A 793d 3474 54a4
+S 793d    3    0
+A 793e 3498 54a0
+A 793f 348c 5498
+A 7940 349c 54a0
+A 7941 345c 549c
+T 7941 192c 6758
+D 7941   a0  854
+A 7942 3450 5498
+A 7943 3488 5490
+A 7944 3490 5490
+A 7945 34b8 5480
+A 7946 34a0 5488
+A 7947 3498 547c
+A 7948 34b4 5488
+A 7949 34c8 5480
+A 794a 34b8 5484
+A 794b 34a0 547c
+A 794c 34bc 547c
+A 794d 34b0 5478
+A 794e 34d8 5470
+A 794f 34ec 546c
+A 7950 34f0 5468
+A 7951 34e0 5468
+A 7952 34d8 5464
+A 7953 34f8 5464
+A 7954 350c 545c
+A 7955 351c 5464
+A 7956 3520 5454
+A 7957 352c 545c
+A 7958 3528 5454
+A 7959 3538 544c
+A 795a 352c 543c
+A 795b 3524 544c
+A 795c 352c 543c
+A 795d 3584 5444
+A 795e 35bc 5438
+A 795f 3594 543c
+A 7960 358c 5438
+A 7961 35ac 5434
+T 7961 1928 6754
+D 7961   9c  860
+A 7962 35a8 5434
+A 7963 35b8 5424
+A 7964 35b8 5424
+A 7965 35f4 5420
+A 7966 3608 5424
+A 7967 3614 5418
+A 7968 3614 5420
+A 7969 3634 5414
+A 796a 3654 541c
+A 796b 3660 540c
+A 796c 3678 5418
+A 796d 3654 5408
+A 796e 3694 5404
+A 796f 3684 53f4
+A 7970 36b4 5400
+A 7971 36c0 53f0
+A 7972 36b0 53f0
+A 7973 36b4 53e8
+A 7974 36e4 53e8
+A 7975 36fc 53e4
+A 7976 36ec 53e0
+A 7977 3714 53e0
+A 7978 3760 53d8
+A 7979 3770 53c8
+A 797a 37f4 53cc
+A 797b 3894 53d0
+A 797c 3938 53cc
+A 797d 3a04 53c8
+A 797e 3ae0 53c0
+A 797f 3bdc 53bc
+A 7980 3ca8 53b8
+A 7981 3d78 53b0
+T 7981 198c 66e8
+D 7981   9c  864
+A 7982 3dfc 53a8
+A 7983 3e90 539c
+A 7984 3f04 539c
+A 7985 3f4c 53a0
+A 7986 3fb8 539c
+A 7987 3fe4 5398
+A 7988 4024 5394
+A 7989 405c 5390
+A 798a 407c 5388
+A 798b 4080 5390
+A 798c 40a8 5388
+A 798d 40a0 537c
+A 798e 40a4 5378
+A 798f 40c8 5384
+A 7990 40d4 5378
+A 7991 40d0 537c
+A 7992 40cc 5370
+A 7993 40cc 5374
+A 7994 40b8 5368
+A 7995 40c4 5370
+A 7996 40d0 5360
+A 7997 40c8 5360
+A 7998 40c4 535c
+A 7999 40bc 5360
+A 799a 40c4 5358
+A 799b 40c4 5354
+A 799c 40c8 5348
+S 799c    6    0
+A 79a6 40c4 5330
+S 79a6    7    0
+A 79b0 40a4 5314
+A 79ba 40b0 52f4
+A 79c4 40c0 52d0
+A 79ce 40bc 52b0
+T 79ce 1928 6744
+D 79ce   a0  854
+A 79d8 4098 528c
+A 79e2 408c 5278
+A 79ec 40a4 525c
+A 79f6 4088 5244
+A 7a00 4090 5224
+A 7a0a 4074 520c
+A 7a14 4050 51f0
+A 7a1e 4068 51d0
+A 7a28 4064 51b8
+A 7a32 4054 5198
+A 7a3c 404c 5178
+A 7a46 404c 5170
+A 7a50 404c 5158
+A 7a5a 403c 513c
+A 7a64 4038 511c
+A 7a6e 4044 5114
+A 7a78 4030 50fc
+A 7a82 4030 50f0
+A 7a8c 4024 50d4
+A 7a96 401c 50b8
+A 7aa0 4008 50a0
+A 7aaa 4008 5090
+A 7ab4 4000 5080
+A 7abe 4000 5070
+A 7ac8 3ff4 5058
+A 7ad2 3ffc 5044
+A 7adc 3fe8 5030
+A 7ae6 3ff4 5024
+A 7af0 3ff8 500c
+A 7afa 3ff8 5000
+A 7b04 3ff0 4fe4
+A 7b0e 3fd8 4fd4
+T 7b0e 1928 6750
+D 7b0e   a0  860
+A 7b18 3fd8 4fc8
+A 7b22 3fec 4fc0
+A 7b2c 3fe0 4fa8
+A 7b36 3fcc 4f94
+A 7b40 3fc0 4f8c
+A 7b4a 3fcc 4f78
+A 7b54 3fe0 4f6c
+A 7b5e 3fcc 4f64
+A 7b68 3fc8 4f58
+A 7b72 3fc0 4f3c
+A 7b7c 3fc4 4f30
+A 7b86 3fc0 4f2c
+A 7b90 3fbc 4f20
+A 7b9a 3fc0 4f10
+A 7ba4 3fc4 4f04
+A 7bae 3fdc 4f00
+A 7bb8 3fd0 4ef0
+A 7bc2 3fcc 4eec
+A 7bcc 3fbc 4edc
+A 7bd6 3fa4 4ecc
+A 7be0 3fbc 4ec0
+A 7bea 3fbc 4ebc
+A 7bf4 3fc0 4eb8
+A 7bfe 3fac 4ea8
+A 7c08 3fa0 4e9c
+A 7c12 3fac 4e94
+A 7c1c 3fb8 4e94
+A 7c26 3fb0 4e88
+A 7c30 3fa8 4e84
+A 7c3a 3fb8 4e78
+A 7c44 3fac 4e68
+A 7c4e 3fb0 4e68
+T 7c4e 192c 6754
+D 7c4e   a0  85c
+A 7c58 3fa8 4e68
+A 7c62 3fb8 4e60
+A 7c6c 3fac 4e58
+A 7c76 3f98 4e50
+A 7c80 3f94 4e50
+A 7c8a 3fa8 4e4c
+A 7c94 3fa0 4e44
+A 7c9e 3fa8 4e40
+A 7ca8 3fa8 4e38
+A 7cb2 3fa0 4e30
+A 7cbc 3fc0 4e38
+A 7cc6 3fb8 4e38
+A 7cd0 3fa8 4e2c
+A 7cda 3fa0 4e28
+A 7ce4 3f94 4e28
+A 7cee 3fb0 4e24
+A 7cf8 3fa4 4e24
+A 7d02 3fb0 4e20
+A 7d0c 3fa4 4e1c
+A 7d16 3f9c 4e18
+A 7d20 3f90 4e1c
+A 7d2a 3fa4 4e24
+A 7d34 3f8c 4e1c
+A 7d3e 3fa4 4e20
+A 7d48 3fb8 4e1c
+A 7d52 3f8c 4e1c
+A 7d5c 3f9c 4e1c
+A 7d66 3fa4 4e1c
+A 7d70 3fb0 4e24
+A 7d7a 3fa4 4e1c
+A 7d84 3fb0 4e24
+A 7d8e 3fb4 4e2c
+T 7d8e 1930 6758
+D 7d8e   9c  858
+A 7d98 3f9c 4e2c
+A 7da2 3fa8 4e28
+A 7dac 3f94 4e30
+A 7db6 3fa4 4e34
+A 7dc0 3fb0 4e30
+A 7dca 3fa4 4e3c
+A 7dd4 3f9c 4e44
+A 7dde 3f98 4e3c
+A 7de8 3fa8 4e3c
+A 7df2 3f98 4e48
+A 7dfc 3fb0 4e50
+A 7e06 3fb0 4e58
+A 7e10 3f90 4e54
+A 7e1a 3fa8 4e60
+A 7e24 3fa0 4e68
+A 7e2e 3fdc 4e68
+A 7e38 4aac 4e48
+A 7e42 3fa8 4e78
+A 7e4c 433c 4e64
+A 7e56 41b0 4e70
+A 7e60 40b8 4e78
+A 7e6a 3f6c 4e84
+A 7e74 3f6c 4e90
+A 7e7e 3f84 4ea4
+A 7e88 3e60 4e88
+A 7e92 3e38 4e8c
+A 7e9c 3df4 4e94
+A 7ea6 3d4c 4ea8
+A 7eb0 3e84 4eb0
+A 7eba 3fac 4e98
+A 7ec4 40ac 4e94
+A 7ece 3ee4 4e9c
+T 7ece 1934 6754
+D 7ece   9c  864
+A 7ed8 3fc4 4eac
+A 7ee2 405c 4eb0
+A 7eec 4060 4eb0
+A 7ef6 40ac 4eb4
+A 7f00 3fc8 4eb8
+A 7f0a 3fa8 4ebc
+A 7f14 3ffc 4eb0
+A 7f1e 3ffc 4eb4
+A 7f28 4054 4ec4
+A 7f32 4068 4ec0
+A 7f3c 400c 4ed8
+A 7f46 3fbc 4eec
+A 7f50 3fb0 4edc
+A 7f5a 40bc 4edc
+A 7f64 409c 4ee4
+A 7f6e 4088 4ee0
+A 7f78 4044 4ee8
+A 7f82 3ffc 4ef4
+A 7f8c 4030 4ee8
+A 7f96 4080 4ee0
+A 7fa0 406c 4ee8
+A 7faa 4058 4ee8
+A 7fb4 3fd8 4ee8
+A 7fbe 3fcc 4ef4
+A 7fc8 3fac 4ef8
+A 7fd2 4048 4f08
+A 7fdc 4058 4f24
+A 7fe6 4008 4f0c
+A 7ff0 3fc0 4f00
+A 7ffa 402c 4f04
+A 8004 4050 4efc
+A 800e 4088 4f14
+T 800e 1930 6750
+D 800e   9c  860
+A 8018 4014 4f14
+A 8022 3f9c 4f2c
+A 802c 3fe4 4f14
+A 8036 404c 4f18
+A 8040 406c 4f1c
+A 804a 3fdc 4f18
+A 8054 3fdc 4f34
+A 805e 4024 4f28
+A 8068 40cc 4f30
+A 8072 4094 4f40
+A 807c 3fd8 4f4c
+A 8086 3ff4 4f34
+A 8090 40c0 4f34
+A 809a 40ec 4f3c
+A 80a4 4024 4f40
+A 80ae 3f48 4f48
+A 80b8 4008 4f40
+A 80c2 4070 4f48
+A 80cc 4050 4f50
+A 80d6 4000 4f48
+A 80e0 3ff8 4f58
+A 80ea 3de4 4f50
+A 80f4 40cc 4f54
+A 80fe 4078 4f5c
+A 8108 405c 4f74
+A 8112 403c 4f88
+A 811c 403c 4f88
+A 8126 4090 4f88
+A 8130 4054 4f98
+A 813a 4054 4f94
+A 8144 4030 4f90
+A 814e 4044 4f98
+T 814e 1930 6750
+D 814e   a0  844
+A 8158 405c 4f8c
+A 8162 4058 4f80
+A 816c 402c 4f90
+A 8176 4060 4f8c
+A 8180 40c8 4f84
+A 818a 40ac 4f84
+A 8194 406c 4f94
+A 819e 403c 4f9c
+A 81a8 4044 4f98
+A 81b2 4084 4f9c
+A 81bc 4080 4fa8
+A 81c6 400c 4fa4
+A 81d0 3fac 4fac
+A 81da 4044 4fcc
+A 81e4 40ac 4fd4
+A 81ee 4078 4fd4
+A 81f8 4048 4fd4
+A 8202 3ff0 4fd4
+A 820c 407c 4fd8
+A 8216 4098 4fe0
+A 8220 407c 4fe4
+A 822a 4028 4fdc
+A 8234 407c 4fe8
+A 823e 406c 4fd8
+A 8248 4050 4fcc
+A 8252 4004 4fcc
+A 825c 4018 4fd8
+A 8266 4048 4fd8
+A 8270 407c 4fe0
+A 827a 400c 4fe0
+A 8284 3f90 4fe8
+A 828e 3fe8 5000
+T 828e 1928 6750
+D 828e   9c  84c
+A 8298 4078 4ffc
+A 82a2 409c 5008
+A 82ac 4064 5010
+A 82b6 4000 500c
+A 82c0 4018 500c
+A 82ca 404c 5020
+A 82d4 40ac 501c
+A 82de 4060 5000
+A 82e8 4038 5008
+A 82f2 4000 500c
+A 82fc 4078 500c
+A 8306 4078 5018
+A 8310 400c 500c
+A 831a 3ff4 5018
+A 8324 4034 500c
+A 832e 40c4 5020
+A 8338 40a8 5028
+A 8342 4048 5038
+A 834c 404c 5044
+A 8356 40a4 5044
+A 8360 4028 5048
+A 836a 4064 5054
+A 8374 4030 5058
+A 837e 4010 5050
+A 8388 4050 5050
+A 8392 408c 5044
+A 839c 4074 5048
+A 83a6 40e4 5044
+A 83b0 4040 5048
+A 83ba 4098 5048
+A 83c4 40d8 5050
+A 83ce 4090 504c
+T 83ce 192c 6750
+D 83ce   9c  86c
+A 83d8 4070 5058
+A 83e2 4248 505c
+A 83ec 40b8 505c
+A 83f6 40a4 5058
+A 8400 4058 5068
+A 840a 400c 507c
+A 8414 406c 5088
+A 841e 407c 5088
+A 8428 4088 5094
+A 8432 4044 5094
+A 843c 3fdc 5094
+A 8446 408c 5098
+A 8450 40b0 5094
+A 845a 4054 507c
+A 8464 4008 507c
+A 846e 3ff4 508c
+A 8478 403c 5088
+A 8482 4044 5090
+A 848c 4000 508c
+A 8496 3fe8 5098
+A 84a0 4018 50a4
+A 84aa 4040 50ac
+A 84b4 4044 50b0
+A 84be 4028 50b0
+A 84c8 3fec 50b0
+A 84d2 3fe0 50c0
+A 84dc 4014 50cc
+A 84e6 4060 50d0
+A 84f0 4034 50cc
+A 84fa 3fd8 50c4
+A 8504 3ffc 50d0
+A 850e 3fdc 50cc
+T 850e 1928 6750
+D 850e   9c  860
+A 8518 4074 50c8
+A 8522 4050 50bc
+A 852c 4004 50c4
+A 8536 3fcc 50d8
+A 8540 403c 50d8
+A 854a 40a0 50dc
+A 8554 4004 50e0
+A 855e 3fbc 50f4
+A 8568 3ff0 5100
+A 8572 4050 510c
+A 857c 4010 5108
+A 8586 3fa8 510c
+A 8590 3fa0 5104
+A 859a 4044 5100
+A 85a4 407c 5120
+A 85ae 4044 5120
+A 85b8 3fec 5110
+A 85c2 4028 5110
+A 85cc 3fb0 5114
+A 85d6 3fdc 510c
+A 85e0 3fc0 5114
+A 85ea 3f90 5118
+A 85f4 3f98 510c
+A 85fe 4048 5110
+A 8608 40cc 5124
+A 8612 4124 5124
+A 861c 40d0 5128
+A 8626 4090 512c
+A 8630 4098 512c
+A 863a 4020 5130
+A 8644 4040 5138
+A 864e 4064 5134
+T 864e 1924 6740
+D 864e   9c  86c
+A 8658 4030 5134
+A 8662 4048 5128
+A 866c 4070 5144
+A 8676 4070 5148
+A 8680 4040 5148
+A 868a 4048 5144
+A 8694 4070 5148
+A 869e 40c4 514c
+A 86a8 4048 5154
+A 86b2 4054 5160
+A 86bc 40a8 515c
+A 86c6 4050 515c
+A 86d0 4074 5168
+A 86da 40c0 5174
+A 86e4 40a8 5174
+A 86ee 4084 5178
+A 86f8 4080 5174
+A 8702 408c 5178
+A 870c 4098 517c
+A 8716 40bc 5188
+A 8720 40c8 5188
+A 872a 40b0 5188
+A 8734 40b0 518c
+A 873e 40a4 518c
+A 8748 40a8 5194
+A 8752 4058 519c
+A 875c 406c 519c
+A 8766 408c 51a4
+A 8770 4090 51a8
+A 877a 4088 51ac
+A 8784 4070 51a4
+A 878e 409c 51a0
+T 878e 1928 6740
+D 878e   9c  860
+A 8798 40b4 51ac
+A 87a2 4078 51b4
+A 87ac 4090 51b4
+A 87b6 409c 51b4
+A 87c0 4084 51b0
+A 87ca 4060 51b8
+A 87d4 4058 51bc
+A 87de 408c 51c0
+A 87e8 406c 51c8
+A 87f2 405c 51c0
+A 87fc 4070 51c0
+A 8806 4088 51c8
+A 8810 4068 51d4
+A 881a 4098 51d4
+A 8824 4090 51cc
+A 882e 4084 51d8
+A 8838 407c 51dc
+A 8842 4064 51dc
+A 884c 4078 51ec
+A 8856 405c 51ec
+A 8860 4074 51e4
+A 886a 403c 51f0
+A 8874 402c 51f8
+A 887e 40bc 51fc
+A 8888 4044 51f8
+A 8892 4024 51f8
+A 889c 4098 5200
+A 88a6 4024 5204
+A 88b0 4070 520c
+A 88ba 40cc 5210
+A 88c4 40b0 520c
+A 88ce 4068 520c
+T 88ce 1928 6740
+D 88ce   9c  858
+A 88d8 4064 5218
+A 88e2 406c 521c
+A 88ec 403c 5220
+A 88f6 4044 5224
+A 8900 409c 5218
+A 890a 40f0 5230
+A 8914 40d4 5244
+A 891e 4080 5248
+A 8928 4024 5240
+A 8932 406c 5238
+A 893c 4098 523c
+A 8946 408c 523c
+A 8950 408c 523c
+A 895a 4050 5240
+A 8964 4018 5248
+A 896e 3ff0 5248
+A 8978 3fb4 5250
+A 8982 3fa8 5250
+A 898c 3fc8 5258
+A 8996 401c 5264
+A 89a0 409c 5264
+A 89aa 40c4 5264
+A 89b4 4064 5268
+A 89be 4064 526c
+A 89c8 4080 5278
+A 89d2 40a8 5280
+A 89dc 40c0 527c
+A 89e6 404c 5280
+A 89f0 4030 5278
+A 89fa 4058 5280
+A 8a04 408c 528c
+A 8a0e 40a8 529c
+T 8a0e 1928 6740
+D 8a0e   9c  860
+A 8a18 40b4 5290
+A 8a22 4090 5284
+A 8a2c 404c 528c
+A 8a36 407c 5284
+A 8a40 4098 5290
+A 8a4a 40c8 5290
+A 8a54 4124 528c
+A 8a5e 4064 5290
+A 8a68 4064 5294
+A 8a72 4088 52bc
+A 8a7c 40e4 52b4
+A 8a86 40c0 52a4
+A 8a90 4074 52a0
+A 8a9a 403c 52a4
+A 8aa4 4008 52a4
+A 8aae 4054 52b4
+A 8ab8 40c4 52b4
+A 8ac2 3e7c 52e0
+A 8acc 4034 52d4
+A 8ad6 3fc4 52d8
+A 8ae0 3fd0 52dc
+A 8aea 403c 52dc
+A 8af4 407c 52ec
+A 8afe 4054 52f0
+A 8b08 403c 52f0
+A 8b12 4058 52e8
+A 8b1c 4044 52d8
+A 8b26 4030 52c4
+A 8b30 4034 52d0
+A 8b3a 4014 52dc
+A 8b44 4028 52e0
+A 8b4e 4030 52f0
+T 8b4e 1928 6728
+D 8b4e   a0  85c
+A 8b58 4034 52ec
+A 8b62 4044 52ec
+A 8b6c 4048 52f4
+A 8b76 4040 52f8
+A 8b80 3ff4 5304
+A 8b8a 4008 5304
+A 8b94 4018 52f4
+A 8b9e 4068 52fc
+A 8ba8 4074 52f8
+A 8bb2 406c 5310
+A 8bbc 4014 530c
+A 8bc6 4030 530c
+A 8bd0 4044 5310
+A 8bda 4078 531c
+A 8be4 4080 5318
+A 8bee 4048 5324
+A 8bf8 4028 533c
+A 8c02 4004 533c
+A 8c0c 402c 5344
+A 8c16 4010 5350
+A 8c20 4018 5350
+A 8c2a 403c 534c
+A 8c34 4050 5350
+A 8c3e 4060 5358
+A 8c48 4038 5354
+A 8c52 4008 5348
+A 8c5c 4030 5350
+A 8c66 404c 533c
+A 8c70 4054 5344
+A 8c7a 405c 5358
+A 8c84 4024 5360
+A 8c8e 4000 5370
+T 8c8e 19d8 6658
+D 8c8e   a0  874
+A 8c98 3fe4 5374
+A 8ca2 4000 5384
+A 8cac 3ff0 5384
+A 8cb6 3fe0 5388
+A 8cc0 3fc0 5390
+A 8cca 3fc4 5384
+A 8cd4 4044 5380
+A 8cde 4034 539c
+A 8ce8 4074 53a0
+A 8cf2 4008 5394
+A 8cfc 3fac 5398
+A 8d06 407c 539c
+A 8d10 4098 53ac
+A 8d1a 40d8 53b0
+A 8d24 4070 53ac
+A 8d2e 3ff4 53a0
+A 8d38 4004 5398
+A 8d42 4010 53a8
+A 8d4c 3fe0 53c0
+A 8d56 3fc4 53c4
+A 8d60 3fc8 53c0
+A 8d6a 3fec 53c0
+A 8d74 3fec 53d0
+A 8d7e 3fe8 53d4
+A 8d88 3fb4 53cc
+A 8d92 4034 53c8
+A 8d9c 4090 53c0
+A 8da6 4070 53c0
+A 8db0 4080 53cc
+A 8dba 4024 53e0
+A 8dc4 3fe8 53e4
+A 8dce 3ff4 53e4
+T 8dce 19d4 6658
+D 8dce   9c  830
+A 8dd8 4050 53e4
+A 8de2 4044 53e4
+A 8dec 405c 53e4
+A 8df6 4044 53e4
+A 8e00 403c 53e8
+A 8e0a 4034 53e4
+A 8e14 4044 53f8
+A 8e1e 4054 5410
+A 8e28 401c 5410
+A 8e32 4018 5410
+A 8e3c 4040 540c
+A 8e46 4044 5408
+A 8e50 4070 5404
+A 8e5a 4074 5400
+A 8e64 4024 5408
+A 8e6e 41b4 5408
+A 8e78 4088 541c
+A 8e82 4084 5434
+A 8e8c 408c 543c
+A 8e96 4050 542c
+A 8ea0 4054 5424
+A 8eaa 404c 5420
+A 8eb4 4064 5418
+A 8ebe 406c 542c
+A 8ec8 4030 5424
+A 8ed2 3f90 5428
+A 8edc 4010 5428
+A 8ee6 4060 5424
+A 8ef0 409c 5434
+A 8efa 4054 5434
+A 8f04 3fd8 5434
+A 8f0e 3fa4 5444
+T 8f0e 19c8 665c
+D 8f0e   9c  834
+A 8f18 4020 543c
+A 8f22 4084 5450
+A 8f2c 4044 5448
+A 8f36 3f94 5458
+A 8f40 3fcc 5460
+A 8f4a 401c 5474
+A 8f54 4058 5478
+A 8f5e 4010 5470
+A 8f68 3fbc 5474
+A 8f72 3fd4 5480
+A 8f7c 3fe0 547c
+A 8f86 4018 5470
+A 8f90 3f98 5468
+A 8f9a 3f34 5474
+A 8fa4 3f4c 5480
+A 8fae 3fc4 5490
+A 8fb8 4000 54a0
+A 8fc2 3fa0 5498
+A 8fcc 3fc0 5498
+A 8fd6 400c 5498
+A 8fe0 4004 54a4
+A 8fea 408c 54b8
+A 8ff4 4044 54c4
+A 8ffe 3f9c 54c4
+A 9008 3ea4 54b4
+A 9012 3f70 54b4
+A 901c 4018 54c4
+A 9026 4054 54c8
+A 9030 4044 54bc
+A 903a 3fec 54c8
+A 9044 3f20 54cc
+A 904e 3f90 54d8
+T 904e 19d0 6654
+D 904e   9c  82c
+A 9058 3fd4 54dc
+A 9062 3fd4 54e0
+A 906c 402c 54d4
+A 9076 4038 54b8
+A 9080 3ffc 54a8
+A 908a 4020 54d8
+A 9094 4014 54d0
+A 909e 4024 54d8
+A 90a8 4084 54d4
+A 90b2 4098 54cc
+A 90bc 4058 54d8
+A 5845 3fb4 550c
+A 584f 3fa0 5508
+A 5859 3fb0 550c
+A 5863 3fb0 550c
+A 586d 3fb8 550c
+A 5877 3fc8 550c
+A 5881 3fa8 5510
+A 588b 3fa0 550c
+A 5895 3fa4 5510
+A 589f 3fb0 5510
+A 58a9 3fb0 5510
+A 58b3 3f9c 5508
+A 58bd 3fb4 5504
+A 58c7 3fa0 5510
+A 58d1 3f90 5514
+A 58db 3fb8 5510
+A 58e5 3fac 550c
+A 58ef 3fa4 5508
+A 58f9 3f94 550c
+A 5903 3fac 5510
+A 590d 3fa8 5514
+T 590d 17e0 66a4
+D 590d   9c   98
+A 5917 3f98 550c
+A 5921 3fa4 5508
+A 592b 3fa0 5508
+A 5935 3fac 5510
+A 593f 3fa0 550c
+A 5949 3fa0 5510
+A 5953 3fa8 5510
+A 595d 3fa4 5510
+A 5967 3fa4 550c
+A 5971 3fac 5510
+A 597b 3fb8 550c
+A 5985 3fa4 5504
+A 598f 3fa8 5508
+A 5999 3fa4 5510
+A 59a3 3fb0 5510
+A 59ad 3fa4 550c
+A 59b7 3fb8 550c
+A 59c1 3f98 550c
+A 59cb 3fa4 5510
+A 59d5 3fa4 5510
+A 59df 3fac 5510
+A 59e9 3fb0 5508
+A 59f3 3fa8 5504
+A 59fd 3fa8 550c
+A 5a07 3f9c 5514
+A 5a11 3fac 5510
+A 5a1b 3fa0 550c
+A 5a25 3f9c 550c
+A 5a2f 3fac 5508
+A 5a39 3fb4 5510
+A 5a43 3fa8 550c
+A 5a4d 3f98 5510
+T 5a4d 17e0 66a0
+D 5a4d   9c   98
+A 5a57 3fa8 5508
+A 5a61 3f94 5508
+A 5a6b 3f98 550c
+A 5a75 3f98 5508
+A 5a7f 3f9c 5510
+A 5a89 3fa8 550c
+A 5a93 3f94 5510
+A 5a9d 3f98 5510
+A 5aa7 3fa4 550c
+A 5ab1 3fa8 550c
+A 5abb 3fa0 5508
+A 5ac5 3f9c 5508
+A 5acf 3f98 550c
+A 5ad9 3fac 5510
+A 5ae3 3f98 550c
+A 5aed 3fa8 550c
+A 5af7 3f9c 5510
+A 5b01 3fa0 5510
+A 5b0b 3fa8 5514
+A 5b15 3fa4 5510
+A 5b1f 3f8c 550c
+A 5b29 3fac 5500
+A 5b33 3fb8 5510
+A 5b3d 3fa0 5514
+A 5b47 3fb4 5514
+A 5b51 3f8c 550c
+A 5b5b 3fa0 550c
+A 5b65 3fa0 5508
+A 5b6f 3fa0 5510
+A 5b79 3fb0 5510
+A 5b83 3fa0 550c
+A 5b8d 3fa8 5508
+T 5b8d 17e0 6698
+D 5b8d   9c   98
+A 5b97 3fb8 5508
+A 5ba1 3fb0 550c
+A 5bab 3fb4 550c
+A 5bb5 3fa0 5514
+A 5bbf 3fa8 5510
+A 5bc9 3f94 5510
+A 5bd3 3fa0 550c
+A 5bdd 3fb0 5514
+A 5be7 3fa8 5508
+A 5bf1 3fa4 5504
+A 5bfb 3fac 550c
+A 5c05 3fb4 5514
+A 5c0f 3fac 5514
+A 5c19 3fa8 550c
+A 5c23 3f9c 5510
+A 5c2d 3f9c 5510
+A 5c37 3fb0 5510
+A 5c41 3fc0 5510
+A 5c4b 3fb8 5514
+A 5c55 3f98 5508
+A 5c5f 3fa4 5504
+A 5c69 3fb0 5510
+A 5c73 3fb4 5514
+A 5c7d 3fb0 5510
+A 5c87 3f9c 550c
+A 5c91 3fac 5510
+A 5c9b 3fa4 550c
+A 5ca5 3fa4 550c
+A 5caf 3fc0 5510
+A 5cb9 3fa4 550c
+A 5cc3 3fb4 5508
+A 5ccd 3fb0 5504
+T 5ccd 17e4 66a4
+D 5ccd   9c   98
+A 5cd7 3fac 550c
+A 5ce1 3fb0 550c
+A 5ceb 3fa8 550c
+A 5cf5 3fb4 550c
+A 5cff 3f9c 550c
+A 5d09 3fb4 550c
+A 5d13 3fb4 550c
+A 5d1d 3fb0 5508
+A 5d27 3fb0 5504
+A 5d31 3fa8 5508
+A 5d3b 3fac 550c
+A 5d45 3fb4 550c
+A 5d4f 3f98 550c
+A 5d59 3fa8 550c
+A 5d63 3fa4 5510
+A 5d6d 3fa8 5510
+A 5d77 3fc0 5510
+A 5d81 3f94 5510
+A 5d8b 3fb8 5508
+A 5d95 3fb4 5504
+A 5d9f 3f98 5510
+A 5da9 3fa4 5514
+A 5db3 3fac 5510
+A 5dbd 3fa8 550c
+A 5dc7 3fa0 5510
+A 5dd1 3fac 5508
+A 5ddb 3fb0 550c
+A 5de5 3fb8 5514
+A 5def 3fa0 550c
+A 5df9 3fa0 5508
+A 5e03 3fa8 550c
+A 5e0d 3fa4 550c
+T 5e0d 17dc 66a4
+D 5e0d   9c   98
+A 5e17 3fa8 550c
+A 5e21 3fa4 550c
+A 5e2b 3fac 5510
+A 5e35 3fa4 5510
+A 5e3f 3fa4 550c
+A 5e49 3fa8 550c
+A 5e53 3f90 5510
+A 5e5d 3fb4 5508
+A 5e67 3fb4 5508
+A 5e71 3fac 5508
+A 5e7b 3fb0 550c
+A 5e85 3fa8 550c
+A 5e8f 3f94 550c
+A 5e99 3f90 5510
+A 5ea3 3f9c 5514
+A 5ead 3fa4 5510
+A 5eb7 3f9c 5510
+A 5ec1 3fa0 5504
+A 5ecb 3f9c 5504
+A 5ed5 3fa0 550c
+A 5edf 3f98 5514
+A 5ee9 3fa4 5510
+A 5ef3 3fa0 5508
+A 5efd 3fa4 5508
+A 5f07 3fa4 550c
+A 5f11 3fac 5510
+A 5f1b 3f98 5514
+A 5f25 3f9c 550c
+A 5f2f 3fc0 550c
+A 5f39 3fb4 5504
+A 5f43 3fa4 550c
+A 5f4d 3fb8 550c
+T 5f4d 17e4 669c
+D 5f4d   9c   98
+A 5f57 3fa8 5514
+A 5f61 3fac 5508
+A 5f6b 3fa8 550c
+A 5f75 3fa0 550c
+A 5f7f 3fb4 5510
+A 5f89 3fa8 5510
+A 5f93 3fa8 5508
+A 5f9d 3fc0 550c
+A 5fa7 3fa4 550c
+A 5fb1 3fa4 550c
+A 5fbb 3f9c 5508
+A 5fc5 3f98 550c
+A 5fcf 3f94 550c
+A 5fd9 3fac 5514
+A 5fe3 3fa4 5510
+A 5fed 3f9c 550c
+A 5ff7 3fa4 5508
+A 6001 3f98 5504
+A 600b 3fb0 550c
+A 6015 3fb0 5510
+S 6015    8    0
+> h
+Syntax error
+> ?
+All numbers are in hex
+a                                  Display current ADC values
+?                                  Print this message
+T                                  Show task states
+E <0 off, 1 on>                    Set command echo mode
+d <start> <end>                    Dump memory
+v                                  Show version
+e <block>                          Dump a block of EEPROM data
+w <block> <start> <len> <data> ... Write data to EEPROM
+f                                  Display current flight state
+l                                  Dump last flight log
+S <data>                           Send data to serial line
+g                                  Display current GPS values
+i <key> {main|drogue}              Fire igniter. <key> is doit with D&I
+t                                  Test igniter continuity
+D                                  Enable debug mode
+G <count>                          Get data from debug port
+I <count> <addr>                   Input <count> bytes to target at <addr>
+O <count> <addr>                   Output <count> bytes to target at <addr>
+P <byte> ...                       Put data to debug port
+R                                  Reset target
+c <var> <value>                    Set config variable (? for help, s to show)
+> s c s
+Main deploy set to 250 meters (820 feet)
+Accel zero g point set to 16250
+Radio channel: 0 (434.550MHz)
+Callsign: "KB0G-4"
+> 
+> ~.
+
+Disconnected.
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ 
+]0;bdale@rover: ~/src/keithp/altos/aoviewbdale@rover:~/src/keithp/altos/aoview$ exit
+
+Script done on Sat 16 May 2009 12:13:17 PM MDT
