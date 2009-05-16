@@ -16,6 +16,11 @@ was short-circuited briefly when the screw worked loose.
 [processed data](flights/sn1-flight1.parsed),
 [plot](flights/sn1-flight1.plot.ps).
 
+## 2009.05.10 ##
+
+Keith flew sn 2 twice in his Grappler at a local launch in Portland on D12-3
+motors.
+
 ## 2009.05.16 ##
 
 SCORE launch at Hudson Ranch, two flights of sn 4 in Robert's Lil Nuke.  In
