@@ -125,7 +125,8 @@ of files in more easily readable form.  The schematic and BOM are from the
 Keith has working firmware that has now been flown once and successfully 
 collected flight data to apogee.  The source is also available from 
 [git.gag.com](http://git.gag.com) in the project 
-[fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  Note that actually
-building these sources requires a modifified version of sdcc and a set of
-helper utilities that we're not publishing since we hope to have the important
-bits accepted upstream shortly.  Watch this space for more details soon.
+[fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  This repository includes
+sources for the firmware, ground station program, and related utilities. Note 
+that actually building these sources requires a modifified version of sdcc,
+for which we have not published diffs since they are in the process of being
+accepted upstream.  Watch this space for more details.
