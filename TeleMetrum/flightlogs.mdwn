@@ -1,7 +1,9 @@
 # TeleMetrum Flights
 
 This page contains Bdale's notes about each flight of [TeleMetrum](..) 
-to date.
+to date.  Actually, not so much, we've started filing flight logs and the
+associated analysis results in git 
+respository [tmflights](http://git.gag.com/?p=fw/tmflights).
 
 ## 2009.04.19 ##
 
