@@ -12,8 +12,6 @@ ground.  R17 replaced with short circuit, R18 removed.
 Installed in Bdale's Vertical Assault.  First unit to be flown on 
 19 April 2009, on a Cesaroni J335.
 
-Moved to Horizon rebuild.
-
 ## sn 2 ##
 
 Full load of v0.1 PCB, two cuts and jumps to rewire P1_2 to be SPI memory 
@@ -28,7 +26,7 @@ ascent was pretty but the rocket failed to deploy and lawn-darted.  The battery
 and screw terminal block connectors got more or less torn off, but the rest
 of the board survived and good data was recovered from the flight.
 
-In Bdale's possession for repair.
+Repaired by Bdale, sent back to Keith on 7 July 2009.
 
 ## sn 3 ##
 
@@ -40,6 +38,8 @@ Installed in Bdale's Vertical Assault after sn 1 moved to Horizon, but never
 flown there.
 
 Pulled and given to Keith to take home from Mayhem.
+
+Flown in Keith's Nike at Brothers, Oregon, in June 2009, and not recovered.
 
 ## sn 4 ##
 
@@ -53,6 +53,8 @@ Installed in Robert's Lil Nuke.
 
 Partial "ground" load of v0.1 PCB on 2009.04.23 plus beeper and serial 
 connector for use as TeleDongle or for TeleTerra prototype.
+
+Bdale's TeleDongle.
 
 ## sn 6 ##
 
