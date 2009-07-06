@@ -130,3 +130,21 @@ sources for the firmware, ground station program, and related utilities. Note
 that actually building these sources requires a modifified version of sdcc,
 for which we have not published diffs since they are in the process of being
 accepted upstream.  Watch this space for more details.
+
+## Future Plans ##
+
+Work is underway on a second revision of TeleMetrum with the following changes:
+
+* stretch board length by 0.25 inches
+* eliminate beeper
+* eliminate temperature sensor, since baro sensor is already compensated
+* eliminate serial port connector
+* integrate MN5010HS GPS receiver and chip antenna on-board
+* change debug connector to 4 pin 1.25mm connector as was used for serial port
+* add 7 pin 1.25mm connector for companion board interface
+* use v_lipo as pyro power, eliminating the huge 1000uF capacitor and instead
+  adding ballast capacitors on the 3.3V rail to prevent brownouts
+
+We hope to build and fly prototypes of this version in late 2009.  If it works
+out as well as we hope, this version may be made available in assembled and 
+tested form to others in the rocketry hobby who have expressed interest.
