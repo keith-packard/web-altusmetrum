@@ -136,6 +136,7 @@ accepted upstream.  Watch this space for more details.
 Work is underway on a second revision of TeleMetrum with the following changes:
 
 * stretch board length by 0.25 inches
+* adjust USB connector position to be flush with edge of board
 * eliminate beeper
 * eliminate temperature sensor, since baro sensor is already compensated
 * eliminate serial port connector
@@ -144,6 +145,7 @@ Work is underway on a second revision of TeleMetrum with the following changes:
 * add 7 pin 1.25mm connector for companion board interface
 * use v_lipo as pyro power, eliminating the huge 1000uF capacitor and instead
   adding ballast capacitors on the 3.3V rail to prevent brownouts
+* add a rectangle of silk screen material for improved serial number labeling
 
 We hope to build and fly prototypes of this version in late 2009.  If it works
 out as well as we hope, this version may be made available in assembled and 
