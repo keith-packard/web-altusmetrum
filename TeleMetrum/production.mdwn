@@ -39,7 +39,8 @@ flown there.
 
 Pulled and given to Keith to take home from Mayhem.
 
-Flown in Keith's Nike at Brothers, Oregon, in June 2009, and not recovered.
+Flown in Keith's Nike at Brothers, Oregon, in June 2009, and not 
+recovered.  Now presumed lost.
 
 ## sn 4 ##
 
@@ -60,4 +61,6 @@ Bdale's TeleDongle.
 
 Partial "ground" load of v0.1 PCB on 2009.04.23 for use as TeleDongle.
 
-Delivered to Keith Packard for firmware development and use.
+Keith's TeleDongle.
+
+Keith added acrylic LED light pipes and a LiPo for use in RDF after flgith.
