@@ -108,11 +108,10 @@ The hardware design current gEDA files are available from
 The 'working-v0.1' tag on the master branch indicates what we're actually
 flying right now.  The v0.1 PCB artwork, and schematic updated to include
 the parts Bdale loads for a functional board including the two cuts and jumps 
-and two added resistors plus ground leads required as rework.  
-The 'nextcut' branch 
-is work towards our next PCB revision.  The 'ground' branch has a cut-down
-schematic used to generate the BOM for partially loading boards to use in
-the matching [TeleTerra](../TeleTerra) ground station design.
+and two added resistors plus ground leads required as rework.  The 'nextcut' 
+branch is work towards our next PCB revision.  The 'ground' branch has a 
+cut-down schematic used to generate the BOM for partially loading boards 
+to use in the matching [TeleTerra](../TeleTerra) ground station design.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of files in more easily readable form.  These are all as of the working-v0.1
