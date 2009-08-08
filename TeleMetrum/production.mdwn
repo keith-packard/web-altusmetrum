@@ -12,6 +12,10 @@ ground.  R17 replaced with short circuit, R18 removed.
 Installed in Bdale's Vertical Assault.  First unit to be flown on 
 19 April 2009, on a Cesaroni J335.
 
+Successfully flew Bdale's rebuilt Horizon dual-deploy at Hudson Ranch on
+2009.07.18 with a MAWD as backup.  The first dual-deploy flight with a TM
+board in control of ejection charges!
+
 ## sn 2 ##
 
 Full load of v0.1 PCB, two cuts and jumps to rewire P1_2 to be SPI memory 
@@ -26,7 +30,8 @@ ascent was pretty but the rocket failed to deploy and lawn-darted.  The battery
 and screw terminal block connectors got more or less torn off, but the rest
 of the board survived and good data was recovered from the flight.
 
-Repaired by Bdale, sent back to Keith on 7 July 2009.
+Repaired by Bdale, sent back to Keith on 7 July 2009.  Keith reports the
+baro sensor (which is still original) is flakey and needs to be replaced.
 
 ## sn 3 ##
 
@@ -39,8 +44,8 @@ flown there.
 
 Pulled and given to Keith to take home from Mayhem.
 
-Flown in Keith's Nike at Brothers, Oregon, in June 2009, and not 
-recovered.  Now presumed lost.
+Lost in Keith's Nike which was never found after an apparently nominal flight 
+in June 2009 at Brothers, Oregon.
 
 ## sn 4 ##
 
@@ -49,6 +54,9 @@ to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked
 from each to ground.
 
 Installed in Robert's Lil Nuke.
+
+Lost at Hudson Ranch 2009.07.18 when we forgot to tape the nose cone on and
+both it and the electronics sled came out at apogee and were not recovered.
 
 ## sn 5 ##
 
@@ -64,3 +72,16 @@ Partial "ground" load of v0.1 PCB on 2009.04.23 for use as TeleDongle.
 Keith's TeleDongle.
 
 Keith added acrylic LED light pipes and a LiPo for use in RDF after flgith.
+
+## sn 7 ##
+
+Full load of v0.1 PCB on 2009.08.08, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
+## sn 8 ##
+
+Full load of v0.1 PCB on 2009.08.08, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
