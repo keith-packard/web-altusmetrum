@@ -105,6 +105,7 @@ simplify things by building a new altimeter with integrated RF link!
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telemetrum](http://git.gag.com/?p=hw/telemetrum;a=summary).  
+
 The 'working-v0.1' tag on the master branch indicates what we're actually
 flying right now.  The v0.1 PCB artwork, and schematic updated to include
 the parts Bdale loads for a functional board including the two cuts and jumps 
