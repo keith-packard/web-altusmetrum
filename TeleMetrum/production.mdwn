@@ -85,3 +85,21 @@ Full load of v0.1 PCB on 2009.08.08, two cuts and jumps to rewire P1_2
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
 
+## sn 9 ##
+
+Full load of v0.1 PCB on 2009.08.15, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
+## sn 10 ##
+
+Full load of v0.1 PCB on 2009.08.15, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
+## sn 11 ##
+
+Full load of v0.1 PCB on 2009.08.15, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.  Accelerometer loaded is MMA2204EG 100G unit!
+
