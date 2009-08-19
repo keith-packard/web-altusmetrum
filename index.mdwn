@@ -23,7 +23,9 @@ our loosely-knit group's shared interest in hobby rocketry.  Rather than
 try to introduce the hobby to you here, we note that John Coker 
 has published an excellent 
 [overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
-on his web site.  
+on his web site.  Keith has also put together some useful notes about the 
+process of [certification](http://keithp.com/rockets/certification/) to
+fly high power rockets.
 <p>
 To find more information about the rockets Bdale and his son have built, see
 [Garbee Rockets](http://www.gag.com/rockets).
@@ -50,6 +52,10 @@ complement and bidirectional RF telemetry link.
 
 * [TeleTerra](TeleTerra) is a hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/).
+
+* [AltOS](AltOS/) 
+is the name of the firmware and related utilities that Keith maintains for
+the set of hardware projects here.
 
 # Participants #
 
