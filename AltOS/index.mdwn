@@ -26,9 +26,6 @@ The source available from [git.gag.com](http://git.gag.com) in the project
 
 Debian packages are also available:
 
-* Install our key in your packaging system:
 	wget -O - http://altusmetrum.org/apt/altusmetrum.key | apt-key add -
-* Install our sources.list content:
 	wget -O /etc/apt/sources.list.d/altos.list http://altusmetrum.org/apt/altos.list
-* Install the package:
 	apt-get install altos
