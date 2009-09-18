@@ -74,6 +74,10 @@ As we make progress, you can read about it in our [News](News) feed.
 We also have an IRC channel #altusmetrum on irc.oftc.net if you have
 questions that aren't answered here.
 
+And if you just can't wait to show your support for our efforts, visit
+our [Logo Shop](http://cafepress.com/altusmetrum) and buy a t-shirt or
+sticker!
+
 ---
 
 This site is powered by [ikiwiki](http://ikiwiki.info), 
