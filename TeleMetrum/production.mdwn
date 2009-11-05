@@ -65,19 +65,24 @@ connector for use as TeleDongle or for TeleTerra prototype.
 
 Bdale's TeleDongle.
 
+Keith added acrylic LED light pipes and a LiPo for use in RDF after fligth.
+
 ## sn 6 ##
 
 Partial "ground" load of v0.1 PCB on 2009.04.23 for use as TeleDongle.
 
 Keith's TeleDongle.
 
-Keith added acrylic LED light pipes and a LiPo for use in RDF after flgith.
+Keith added acrylic LED light pipes and a LiPo for use in RDF after fligth.
 
 ## sn 7 ##
 
 Full load of v0.1 PCB on 2009.08.08, two cuts and jumps to rewire P1_2 
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
+
+Pulled from Vertical Assault (never flew there) and taken to Keith in Japan
+in October 2009 as replacement.
 
 ## sn 8 ##
 
@@ -91,15 +96,40 @@ Full load of v0.1 PCB on 2009.08.15, two cuts and jumps to rewire P1_2
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
 
+Installed in Bdale's Trick-o-Treat 98mm airframe.
+
 ## sn 10 ##
 
 Full load of v0.1 PCB on 2009.08.15, two cuts and jumps to rewire P1_2 
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
 
+Installed in Robert's Lil Nuke.
+
 ## sn 11 ##
 
 Full load of v0.1 PCB on 2009.08.15, two cuts and jumps to rewire P1_2 
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.  Accelerometer loaded is MMA2204EG 100G unit!
+
+In G-Spot, this accelerometer recorded 52.8 gee acceleration on a
+Cesaroni pro29 H399 reload at NCR Oktoberfest 2009!
+
+## sn 12 ##
+
+Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.  Accelerometer loaded is MMA2204EG 100G unit!
+
+## sn 13 ##
+
+Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
+
+## sn 14 ##
+
+Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2 
+to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
+from each to ground.
 
