@@ -65,7 +65,7 @@ connector for use as TeleDongle or for TeleTerra prototype.
 
 Bdale's TeleDongle.
 
-Keith added acrylic LED light pipes and a LiPo for use in RDF after fligth.
+Keith added acrylic LED light pipes and a LiPo for use in RDF after flight.
 
 ## sn 6 ##
 
@@ -73,7 +73,7 @@ Partial "ground" load of v0.1 PCB on 2009.04.23 for use as TeleDongle.
 
 Keith's TeleDongle.
 
-Keith added acrylic LED light pipes and a LiPo for use in RDF after fligth.
+Keith added acrylic LED light pipes and a LiPo for use in RDF after flight.
 
 ## sn 7 ##
 
@@ -89,6 +89,8 @@ in October 2009 as replacement.
 Full load of v0.1 PCB on 2009.08.08, two cuts and jumps to rewire P1_2 
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
+
+Delivered to Keith in early November 2009.
 
 ## sn 9 ##
 
@@ -132,4 +134,12 @@ from each to ground.
 Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2 
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
+
+## sn 15 ##
+
+Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
+
+## sn 16 ##
+
+Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 
