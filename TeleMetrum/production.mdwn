@@ -130,6 +130,7 @@ to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked
 from each to ground.
 
 Modified 2009.11.20 to:
+
 * use TC1055-3.3VCT713 100ma regulator proposed for v0.2
 
 ## sn 14 ##
