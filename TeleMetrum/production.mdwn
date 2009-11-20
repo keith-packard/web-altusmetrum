@@ -132,6 +132,7 @@ from each to ground.
 Modified 2009.11.20 to:
 
 * use TC1055-3.3VCT713 100ma regulator proposed for v0.2
+* route 3.3V instead of v_lipo to the serial connector for SkyTraq GPS
 
 ## sn 14 ##
 
