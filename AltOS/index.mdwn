@@ -30,3 +30,13 @@ Debian packages are also available:
 	wget -O /etc/apt/sources.list.d/altos.list http://altusmetrum.org/apt/altos.list
 	apt-get update
 	apt-get install altos
+
+Bdale has also created a theme for the 
+[Simple Login Manager](http://slim.berlios.de/) that he uses on all of his
+machines and is ideally suited for machines dedicated to AltOS ground station
+use.  This theme is available in the same repository, to install it and the
+slim login manager (packaged in Debian already), just do:
+
+	apt-get install slim slim-altusmetrum
+
+
