@@ -39,23 +39,23 @@ various friends!
 
 # Projects #
 
-* [AltusMetrum](AltusMetrum/)
-was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
-prototype was built, but never flown.  This project is now indefinitely on hold.
-
 * [TeleMetrum](TeleMetrum/) 
 is our current project, a dual-deploy rocketry altimeter with improved sensor 
 complement and bidirectional RF telemetry link.
 
-* [TelePyro](TelePyro/) is an 8-channel pyro expansion board for 
-[TeleMetrum](TeleMetrum/).
-
-* [TeleTerra](TeleTerra) is a hand-held ground station for use with 
-[TeleMetrum](TeleMetrum/).
-
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
+
+* [TelePyro](TelePyro/) is a planned 8-channel pyro expansion board for 
+[TeleMetrum](TeleMetrum/).
+
+* [TeleTerra](TeleTerra) is a  planned hand-held ground station for use with 
+[TeleMetrum](TeleMetrum/).
+
+* [AltusMetrum](AltusMetrum/)
+was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
+prototype was built, but never flown.  This project is now indefinitely on hold.
 
 # Participants #
 
@@ -70,7 +70,7 @@ start.  Finding a local [NAR Section](http://nar.org/NARsect.html) or
 learn a lot and see some great flights by showing up at a club launch.
 
 As we make progress, you can read about it in our [News](News) feed.
-We also have an IRC channel #altusmetrum on irc.oftc.net if you have
+We also hang out on IRC channel #altusmetrum on irc.oftc.net if you have
 questions that aren't answered here.
 
 And if you just can't wait to show your support for our efforts, visit
