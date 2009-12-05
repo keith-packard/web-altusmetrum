@@ -34,8 +34,11 @@ Debian packages are also available:
 Bdale has also created a theme for the 
 [Simple Login Manager](http://slim.berlios.de/) that he uses on all of his
 machines and is ideally suited for machines dedicated to AltOS ground station
-use.  This theme is available in the same repository, to install it and the
-slim login manager (packaged in Debian already), just do:
+use.  It includes a photo of a drag-race between nearly-identical rockets
+built by Keith and Bdale, that was the first time either of us gave TeleMetrum
+complete control of a rocket flight without some other backup!  This theme is 
+available in the same repository, to install it and the slim login manager 
+(packaged in Debian already), just do:
 
 	apt-get install slim slim-altusmetrum
 
