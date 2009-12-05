@@ -61,7 +61,6 @@ the set of hardware projects here.
 
 * [Bdale Garbee](http://gag.com/~bdale)
 * [Keith Packard](http://keithp.com/keithp)
-* [Carl Worth](http://cworth.org)
 
 # Getting Involved #
 
