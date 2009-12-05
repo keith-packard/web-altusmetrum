@@ -106,13 +106,12 @@ The hardware design current gEDA files are available from
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telemetrum](http://git.gag.com/?p=hw/telemetrum;a=summary).  
 
-The 'working-v0.1' tag on the master branch indicates what we're actually
-flying right now.  The v0.1 PCB artwork, and schematic updated to include
-the parts Bdale loads for a functional board including the two cuts and jumps 
-and two added resistors plus ground leads required as rework.  The 'nextcut' 
-branch is work towards our next PCB revision.  The 'ground' branch has a 
-cut-down schematic used to generate the BOM for partially loading boards 
-to use in the matching [TeleTerra](../TeleTerra) ground station design.
+Work on the next version proceeds on the master branch, with occasional
+temporary branches created when Bdale is making some major / speculative
+change.  The 'v0.1' branch and particularly the 'working-v0.1' tag document 
+what we're actually flying right now.  The 'ground' branch has a cut-down 
+schematic used to generate the BOM for partially loading boards to use on 
+the ground.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of files in more easily readable form.  These are all as of the working-v0.1
@@ -122,18 +121,17 @@ tag:
 * [pcb artwork](telemetrum.pcb.pdf)
 * [bill of materials](telemetrum.bom)
 
-
-We have firmware that is working well enough that we're starting to allow
-TeleMetrum to fire ejection charges.  Keith has also written a ground station
-program called aoview that logs telemetry to disk, displays current and max
+We have firmware that works well enough that we now routinely allow TeleMetrum 
+to control flights by firing ejection charges.  We've flown boards in rockets 
+exceeding 50g acceleration, above Mach 1, and to altitudes greater than 12k 
+feet AGL with great results.  Keith wrote a ground station program called 
+ao-view that logs telemetry to disk, displays current and max
 values for key parameters during flight, and even includes voice synthesis 
-during the flight so that our eyes can stay on the rockets!  The source to all
-this is available from [git.gag.com](http://git.gag.com) in the project 
-[fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  This repository includes
-sources for the firmware, ground station program, and related utilities. Note 
-that actually building these sources requires a modifified version of sdcc,
-for which we have not published diffs since they are in the process of being
-accepted upstream.  Watch this space for more details.
+during the flight so that our eyes can stay on the rockets!  We have post
+flight analysis software that makes it easy to extract data from the board,
+analyze it, and even generate KML files for viewing flights in GoogleEarth!
+More details on the software, including full source code and pre-built packages
+can be found on the [AltOS](../AltOS) page on this site.
 
 ## Future Plans ##
 
@@ -141,16 +139,19 @@ Work is underway on a second revision of TeleMetrum with the following changes:
 
 * stretch board length by 0.25 inches
 * adjust USB connector position to be flush with edge of board
-* eliminate beeper
 * eliminate temperature sensor, since baro sensor is already compensated and there's a sensor on the cc1111
 * eliminate serial port connector
-* integrate MN5010HS GPS receiver and chip antenna on-board
-* change debug connector to 4 pin 1.25mm connector as was used for serial port
-* add 7 pin 1.25mm connector for companion board interface
+* integrate SkyTraq Venus GPS receiver and patch antenna on-board
+* change debug connector to 4 pin Tyco MicroMaTch
+* add 8 pin Tyco MicroMaTch connector for companion board interface
 * use v_lipo as pyro power, eliminating the huge 1000uF capacitor and instead
-  adding ballast capacitors on the 3.3V rail to prevent brownouts
+  adding ballast capacitance on the 3.3V rail to prevent brownouts
+* move all connectors, beeper, and GPS patch antenna to the "other side" of the board from the surface mount parts
 * add a rectangle of silk screen material for improved serial number labeling
 
-We hope to build and fly prototypes of this version in late 2009.  If it works
-out as well as we hope, this version may be made available in assembled and 
-tested form to others in the rocketry hobby who have expressed interest.
+As of early December 2009, the layout work for v0.2 is done and we're busy
+verifying it and deciding exactly how we're going to build them.  We hope to
+have first prototypes to test in time to show the new version at LCA in late
+January 2010.  If it works out as well as we hope, v0.2 may be made available 
+in assembled and tested form to others in the rocketry hobby who have 
+expressed interest sometime in 2010.
