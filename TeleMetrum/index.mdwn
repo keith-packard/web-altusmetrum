@@ -3,6 +3,8 @@
 This is a recording dual-deploy altimeter for high power model rocketry 
 with integrated telemetry link.
 
+<a href="v0.2 SMT side"> <img src="v0.2/cimg5164-cropped.jpg"></a>
+<a href="v0.2 connector side"> <img src="v0.2/cimg5171-cropped.jpg"></a>
 <a href="loadedpair.jpg"> <img src="loadedpair-thumb.jpg"></a>
 <a href="rawfront.jpg"> <img src="rawfront-thumb.jpg"></a>
 <a href="rawback.jpg"> <img src="rawback-thumb.jpg"></a>
@@ -26,7 +28,9 @@ Another friend at the same conference showed us a board he was working on
 using a different part in the same TI series, that integrated a transceiver
 and CPU on the same chip.
 It didn't take us long to realize that with such a part we could combine and
-simplify things by building a new altimeter with integrated RF link!
+simplify things by building a new altimeter with integrated RF link!  And
+after gaining some experience in 2009 with a first version, we realized we
+always want GPS on board, which lead to our current second generation boards.
 
 ## Features ##
 
