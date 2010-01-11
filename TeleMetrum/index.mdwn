@@ -9,12 +9,12 @@ which includes an integrated GPS receiver and patch antenna:
 <a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
 <a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
 
-And these are photos of our original board with serial port for off-board GPS,
+And this is a photo of our original board with serial port for off-board GPS,
 without the big off-board 1000uF cap from the original ejection circuit:
 
 <a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
-<a href="v0.1/rawfront.jpg"> <img src="v0.1/rawfront-thumb.jpg"></a>
-<a href="v0.1/rawback.jpg"> <img src="v0.1/rawback-thumb.jpg"></a>
+<!- <a href="v0.1/rawfront.jpg"> <img src="v0.1/rawfront-thumb.jpg"></a> ->
+<!- <a href="v0.1/rawback.jpg"> <img src="v0.1/rawback-thumb.jpg"></a> ->
 
 ## Motivation ##
 
