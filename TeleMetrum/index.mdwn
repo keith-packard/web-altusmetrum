@@ -117,16 +117,13 @@ For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of files in more easily readable form.  
 
 * These are from the v0.2 branch:
-
-** [schematic](v0.2/telemetrum.pdf)
-** [pcb artwork](v0.2/telemetrum.pcb.pdf)
-** [bill of materials](v0.2/partslist.csv)
-
+ * [schematic](v0.2/telemetrum.pdf)
+ * [pcb artwork](v0.2/telemetrum.pcb.pdf)
+ * [bill of materials](v0.2/partslist.csv)
 * These are as of the working-v0.1 tag:  
-
-** [schematic](v0.1/telemetrum.pdf)
-** [pcb artwork](v0.1/telemetrum.pcb.pdf)
-** [bill of materials](v0.1/telemetrum.bom)
+ * [schematic](v0.1/telemetrum.pdf)
+ * [pcb artwork](v0.1/telemetrum.pcb.pdf)
+ * [bill of materials](v0.1/telemetrum.bom)
 
 We have firmware that works well enough that we now routinely allow TeleMetrum 
 to control flights by firing ejection charges.  We've flown v0.1 boards in 
