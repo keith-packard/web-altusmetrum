@@ -108,23 +108,31 @@ The hardware design current gEDA files are available from
 
 Work on the next version proceeds on the master branch, with occasional
 temporary branches created when Bdale is making some major / speculative
-change.  The 'v0.1' branch and particularly the 'working-v0.1' tag document 
-what we're actually flying right now.  The 'ground' branch has a cut-down 
-schematic used to generate the BOM for partially loading boards to use on 
-the ground.
+change.  The 'v0.2' and 'v0.1' branches document what we're actually flying 
+right now on the two respective PCB revisions.  The 'ground' branch has a 
+cut-down schematic used to generate the BOM for partially loading v0.1 boards 
+to used on the ground.  We call the on-the-ground version 'TeleDongle'.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of files in more easily readable form.  These are all as of the working-v0.1
-tag:  
+of files in more easily readable form.  
 
-* [schematic](v0.1/telemetrum.pdf)
-* [pcb artwork](v0.1/telemetrum.pcb.pdf)
-* [bill of materials](v0.1/telemetrum.bom)
+* These are from the v0.2 branch:
+
+** [schematic](v0.2/telemetrum.pdf)
+** [pcb artwork](v0.2/telemetrum.pcb.pdf)
+** [bill of materials](v0.2/partslist.csv)
+
+* These are as of the working-v0.1 tag:  
+
+** [schematic](v0.1/telemetrum.pdf)
+** [pcb artwork](v0.1/telemetrum.pcb.pdf)
+** [bill of materials](v0.1/telemetrum.bom)
 
 We have firmware that works well enough that we now routinely allow TeleMetrum 
-to control flights by firing ejection charges.  We've flown boards in rockets 
-exceeding 50g acceleration, above Mach 1, and to altitudes greater than 12k 
-feet AGL with great results.  Keith wrote a ground station program called 
+to control flights by firing ejection charges.  We've flown v0.1 boards in 
+rockets exceeding 50g acceleration, above Mach 1, and to altitudes greater 
+than 12k feet AGL with great results.  Keith wrote a ground station program 
+called 
 ao-view that logs telemetry to disk, displays current and max
 values for key parameters during flight, and even includes voice synthesis 
 during the flight so that our eyes can stay on the rockets!  We have post
