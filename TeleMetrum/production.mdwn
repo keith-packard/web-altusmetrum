@@ -10,7 +10,7 @@ chip select, R14 and R15 loaded with 56k, 10k tacked from each to
 ground.  R17 replaced with short circuit, R18 removed.
 
 Installed in Bdale's Vertical Assault.  First unit to be flown on 
-19 April 2009, on a Cesaroni J335.
+2009.04.19, on a Cesaroni J335.
 
 Successfully flew Bdale's rebuilt Horizon dual-deploy at Hudson Ranch on
 2009.07.18 with a MAWD as backup.  The first dual-deploy flight with a TM
@@ -30,8 +30,9 @@ ascent was pretty but the rocket failed to deploy and lawn-darted.  The battery
 and screw terminal block connectors got more or less torn off, but the rest
 of the board survived and good data was recovered from the flight.
 
-Repaired by Bdale, sent back to Keith on 7 July 2009.  Keith reports the
-baro sensor (which is still original) is flakey and needs to be replaced.
+Repaired by Bdale, sent back to Keith on 7 July 2009.  Keith reported the
+baro sensor as flakey, it was replaced in October 2009 prior to 
+NCR Octoberfest.
 
 ## sn 3 ##
 
@@ -44,8 +45,9 @@ flown there.
 
 Pulled and given to Keith to take home from Mayhem.
 
-Lost in Keith's Nike which was never found after an apparently nominal flight 
-in June 2009 at Brothers, Oregon.
+Lost in Keith's Nike which was lost for a while after an apparently nominal 
+flight in June 2009 at Brothers, Oregon.  Rocket was later found and this unit
+is reportedly still in good condition.
 
 ## sn 4 ##
 
@@ -133,6 +135,11 @@ Modified 2009.11.20 to:
 
 * use TC1055-3.3VCT713 100ma regulator proposed for v0.2
 * route 3.3V instead of v_lipo to the serial connector for SkyTraq GPS
+* use v_lipo for pyro voltage instead of 5V with 1000uF capacitor
+* added 100uF 1206 capacitor on 3.3V rail
+
+In this configuration, flew two textbook perfect flights on 2009.11.21 at
+Hudson Ranch in Trick-O-Treat on J motors.
 
 ## sn 14 ##
 
@@ -147,4 +154,16 @@ Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 ## sn 16 ##
 
 Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
+
+## sn 51 ##
+
+Full load of v0.2 PCB on 2010.01.09, with 100g accel and Tyco header.
+
+## sn 52 ##
+
+Full load of v0.2 PCB on 2010.01.09, with 50g accel and Tyco header.
+
+## sn 53 ##
+
+Full load of v0.2 PCB on 2010.01.09, with 40g accel and screw terminals.
 
