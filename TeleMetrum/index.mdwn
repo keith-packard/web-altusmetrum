@@ -13,8 +13,6 @@ And this is a photo of our original board with serial port for off-board GPS,
 without the big off-board 1000uF cap from the original ejection circuit:
 
 <a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
-<!- <a href="v0.1/rawfront.jpg"> <img src="v0.1/rawfront-thumb.jpg"></a> ->
-<!- <a href="v0.1/rawback.jpg"> <img src="v0.1/rawback-thumb.jpg"></a> ->
 
 ## Motivation ##
 
