@@ -1,0 +1,73 @@
+TeleMetrum Low-level Access
+	CC1111 4-wire debug interface:
+		debug data, debug clock, reset, ground
+	CP2103 -- 4 GPIOs controlled from USB
+		One USB packet per half clock
+	Beagle USB hardware monitor
+	CC1111-based debug link
+		emulates serial on USB
+		provides high-level commands
+
+TeleMetrum Software Development Environment
+	Small Device C Compiler, targeting 8051 CPU
+	Source Debugger for SDCC
+	Hex debugger using either CP2103 or CC1111 link
+		Emulates mcs51 emulator
+		Except talks to real hardware
+		Hooks up to sdcdb
+
+AltOS architecture
+	Multi-threaded
+		Avoids the 'one big loop'
+	Non pre-emptive
+		Limits where pre-emption can occur
+	sleep/wakeup rendezvous
+		Good enough for Linux
+	Timers, mutexes
+		Basic OS services
+
+Flight software architecture
+	Flight progress tracked through discrete states
+		Pad - Sitting vertically
+		Boost
+			Acceleration > 2g and Speed > 5m/s
+			or
+			Height > +20m
+		Fast
+			Acceleration < -1/4g
+			or
+			Boost period > 15s
+		Coast
+			Speed < 200m/s
+			or
+			Height < Max_height - 500m
+		Apogee
+			Height < Max Height - 10m
+		Main
+			Height < Main Height
+		Land
+			Acceleration stable for 5 seconds
+			Height stable for 5 seconds
+			Height < Launch height + 1000m
+	
+Calibration
+	Radio calibrated by adjusting PLL against freq counter
+		48MHz crystal good to 20ppm
+		20ppm at 434MHz is 9Khz
+	Accelerometer calibrated by rotating board on bench
+		Accelerometer output runs through 5V->3.3V divider
+		Uses 1% resistors
+		Also automatically adjusts for 100G/50G/40G devices
+
+GPS adventures
+	Problem: GPS looses satellites during boost phase
+	GPS receivers track sats by synthesizing expected signal
+		frequency based on relative velociy
+		phase based on distance
+	Change in actual signal means changing synthetic signal
+		High acceleration means allowing faster changes
+	Change rate limited by 'loop filter' bandwidth.
+
+Drag race plots
+
+Standard flight plot set
