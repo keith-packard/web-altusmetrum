@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+  <Placemark>
+    <name>gps</name>
+    <Style id="khStyle690">
+      <LineStyle id="khLineStyle694">
+        <color>ff00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      </Style>
+    <MultiGeometry id="khMultiGeometry697">
+      <LineString id="khLineString698">
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>
+</coordinates>
+    </LineString>
+  </MultiGeometry>
+</Placemark>
+</kml>
