@@ -40,8 +40,13 @@ various friends!
 # Projects #
 
 * [TeleMetrum](TeleMetrum/) 
-is our current project, a dual-deploy rocketry altimeter with improved sensor 
+is our primary project, a dual-deploy rocketry altimeter with improved sensor 
 complement and bidirectional RF telemetry link.
+
+* [TeleDongle](TeleDongle/) 
+is a simple RF interface for use in ground stations interacting with rockets
+using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
+interface for other microcontroller systems.
 
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
