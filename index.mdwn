@@ -67,6 +67,8 @@ prototype was built, but never flown.  This project is now indefinitely on hold.
 * [Bdale Garbee](http://gag.com/~bdale)
 * [Keith Packard](http://keithp.com/keithp)
 
+# [Presentations](talks) #
+
 # Getting Involved #
 
 If you aren't already playing with model rockets, that's a good place to 
