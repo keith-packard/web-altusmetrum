@@ -1,19 +1,37 @@
 # Altus Metrum Presentations
 
-These are the presentations we've made at various conferences.  Not everything
-is linked in here yet...
+These are presentations we've made at various conferences.  Not everything
+is linked in here yet...  Be warned, the OpenOffice presentation files tend 
+to be HUGE, since we include lots of high-resolution photos!
 
 ## LCA 2010 ##
 
 Bdale and Keith presenting on [TeleMetrum](../TeleMetrum) v0.2 at LCA 2010 in
-Wellington, New Zealand in January 2010.
+Wellington, New Zealand in January 2010.  Includes details of various notable
+flights with v0.1 during the 2009 flying season.
 
 * [Slides](./TM-v0.2-LCA2010.odp)
+* The very funny [woot.com video](http://vimeo.com/7467353) we showed at the
+  end of the talk, featuring Bdale's big 
+  [Goblin](http://www.gag.com/rockets/projects/goblin10/) airframe and a 
+  few, brave, [woot.com](http://woot.com) screaming flying monkey dolls!
+
+## LCA 2009 ##
+
+Bdale's second LCA presentation on rocketry, this time covering a broad range
+of related activites and the application of open hardware and open source
+philosophy in each.  At the time of this talk, [TeleMetrum](../TeleMetrum) v0.1
+bare boards had just arrived, but nothing had been populated yet!
+
+* [Slides](./TeleMetrum.odp)
 
 ## LCA 2008 ##
 
 Bdale's first public presentation on rocket avionics, at LCA 2008 in Melbourne,
-Australia in January 2008.
+Australia in January 2008.  This talk includes huge amounts of background
+material on the rocketry hobby, and was the first public discussion of Bdale's
+original, [ARM-based altimeter design](../AltusMetrum).
 
+* [Slides](./AltusMetrum.odp)
 * [Video](http://mirror.linux.org.au/pub/linux.conf.au/2008/Wed/mel8-201.ogg)
 
