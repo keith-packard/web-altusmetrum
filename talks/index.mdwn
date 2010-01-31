@@ -1,0 +1,19 @@
+# Altus Metrum Presentations
+
+These are the presentations we've made at various conferences.  Not everything
+is linked in here yet...
+
+## LCA 2010 ##
+
+Bdale and Keith presenting on [TeleMetrum](../TeleMetrum) v0.2 at LCA 2010 in
+Wellington, New Zealand in January 2010.
+
+* [Slides](./TM-v0.2-LCA2010.odp)
+
+## LCA 2008 ##
+
+Bdale's first public presentation on rocket avionics, at LCA 2008 in Melbourne,
+Australia in January 2008.
+
+* [Video](http://mirror.linux.org.au/pub/linux.conf.au/2008/Wed/mel8-201.ogg)
+
