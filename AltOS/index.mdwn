@@ -31,15 +31,18 @@ Debian packages are also available:
 	apt-get update
 	apt-get install altos
 
-Bdale has also created a theme for the 
+Bdale has also created a theme for 
+[GDM](http://projects.gnome.org/gdm/) that he uses on his primary notebook,
+and the 
 [Simple Login Manager](http://slim.berlios.de/) that he uses on all of his
-machines and is ideally suited for machines dedicated to AltOS ground station
-use.  It includes a photo of a drag-race between nearly-identical rockets
+other machines and which is ideally suited for machines dedicated to AltOS 
+ground station use.  It includes a photo of a drag-race between 
+nearly-identical rockets
 built by Keith and Bdale, that was the first time either of us gave TeleMetrum
 complete control of a rocket flight without some other backup!  This theme is 
-available in the same repository, to install it and the slim login manager 
-(packaged in Debian already), just do:
+available in the same repository, to install it just install either gdm or
+slim (both already available in Debian), and then do:
 
-	apt-get install slim slim-altusmetrum
+	apt-get install altusmetrum-themes
 
 
