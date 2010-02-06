@@ -17,7 +17,7 @@ optimized digital radio transceiver at very low power.
 It is not clear to us that all of the approaches people have taken over
 the years to put off the shelf radios in rockets are actually legal.  To 
 legally operate a radio transmitter, we need to understand and adhere 
-to the rules that regulate use of the radio frequency spectrum.  But when 
+to the rules that regulate use of the radio frequency spectrum.  When 
 commercial radio components are used in ways the original designer did not 
 envision, the rules against which they were designed and certified may not 
 still apply.  But because rocket flights are short and often happen in 
