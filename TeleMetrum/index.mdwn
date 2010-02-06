@@ -120,14 +120,14 @@ always want GPS on board, which lead to our current second generation boards.
 * The v0.1 artwork had three issues, two of which required physical rework
   on each board.  All of these issues were fixed in v0.2.
 
-	* the USB connector footprint was placed wrong, so that the
+	* The USB connector footprint was placed wrong, so that the
   	  connector hung out over the edge of the board instead of being 
 	  flush.
-	* we needed chip select on the SPI memory.  To fix that, we gave up the 
+	* We needed chip select on the SPI memory.  To fix that, we gave up the 
   	  ability to put the accelerometer into self-test mode and used that 
 	  GPIO line to pull chip select on the memory, which required two
 	  cuts and two jumpers.  
-	* the igniter sense circuits each needed a second resistor to 
+	* The igniter sense circuits each needed a second resistor to 
 	  complete the voltage divider so our 3.3V CPU ADC could read the 
 	  5V ejection voltage.  This was fixed by changing two resistor 
 	  values, and tacking two additional resistors onto the board
