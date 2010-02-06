@@ -46,7 +46,7 @@ always want GPS on board, which lead to our current second generation boards.
 * 70cm ham-band transceiver for telemetry downlink
 * Barometric pressure sensor good to 45k feet MSL
 * 1-axis high-g accelerometer for motor characterization
-* on-board GPS
+* On-board, integrated GPS receiver
 * On-board non-volatile memory for flight data storage
 * USB for power, configuration, and data recovery
 * Integrated support for LiPo rechargeable batteries
