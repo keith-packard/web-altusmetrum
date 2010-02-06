@@ -99,10 +99,11 @@ always want GPS on board, which lead to our current second generation boards.
 	* 128k x 8
 	* SPI interface
 * [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) discrete temperature sensor
-	* eliminated in v0.2 to free GPIO line for companion interface
 * used 1000uF electrolytic capacitor charged to 5V for pyro supply
 * two LEDs instead of one attached to CPU
-	* eliminated second LED to free GPIO line for companion interface
+
+The elimination of the discrete temperature sensor and second LED were
+necessary to support the companion board interface added in v0.2.
 
 ## [Production History](production) ##
 
