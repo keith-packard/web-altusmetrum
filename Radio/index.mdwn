@@ -15,8 +15,8 @@ optimized digital radio transceiver at very low power.
 ## Legal Context ##
 
 It is not clear to us that all of the approaches people have taken over
-the years to put off the shelf radios in rockets are actually legal.  
-To legally operate a radio transmitter, we need to understand and adhere 
+the years to put off the shelf radios in rockets are actually legal.  To 
+legally operate a radio transmitter, we need to understand and adhere 
 to the rules that regulate use of the radio frequency spectrum.  But when 
 commercial radio components are used in ways the original designer did not 
 envision, the rules against which they were designed and certified may not 
@@ -49,8 +49,8 @@ the written teste for a Level 2 high power rocketry certification, taking a ham
 radio license exam is a similar kind of experience.  The test is multiple
 choice with questions taken from a pool that is completely published ahead
 of time, and there are some great online resources for learning the material
-and taking practice exams until you're ready to take the real test.
-This [ARRL page](http://www.arrl.org/FandES/ead/classes.html) is a good place
+and taking practice exams until you're ready to take the real test.  This 
+[ARRL page](http://www.arrl.org/FandES/ead/classes.html) is a good place
 to start.  
 
 ## Related Equipment ##
@@ -65,11 +65,13 @@ we find them useful too.
 
 A popular class of commercially available ham radio transceiver is commonly
 known as an "HT".  These are hand-held, cover one or more frequency bands,
-and usually are meant to operate primarily using narrow-bandwidth FM voice.  
-Various companies make and sell them, and they have multiple uses at a rocket
+and usually are meant to operate primarily using narrow-bandwidth FM 
+voice.  Various companies make and sell them, and they have multiple 
+uses at a rocket
 launch.  Like walkie talkies or FRS radios (but better!), they can be used to
-talk to others on the flight line, coordinate search activities, and so forth.
-Choosing a "dual band" or "multi band" model that covers both the "2 meter" 
+talk to others on the flight line, coordinate search activities, and so 
+forth.  Choosing a "dual band" or "multi band" model that covers both 
+the "2 meter" 
 and "70 centimeter" bands is a good idea, since 2m is a good band for local 
 voice conversations and the audio tones put out by [TeleMetrum](../TeleMetrum)
 for direction finding are in the 70cm band.  
