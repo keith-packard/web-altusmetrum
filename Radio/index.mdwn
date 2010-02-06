@@ -54,7 +54,8 @@ to start.
 
 ## Related Equipment ##
 
-It's entirely possible to use just a TeleMetrum in a rocket and a TeleDongle
+It's entirely possible to use just a [TeleMetrum](../TeleMetrum/) 
+in a rocket and a [TeleDongle](../TeleDongle/)
 on the ground with simple wire whip antennas and nothing else.  But there are 
 other pieces of amateur radio gear that we think are worth mentioning because 
 we find them useful too.
