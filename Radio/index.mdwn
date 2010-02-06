@@ -43,11 +43,13 @@ telemetry links and remote controls such as what we want for our rockets!
 ## Getting an Amateur Radio License ##
 
 To legally operate a [TeleMetrum](../TeleMetrum) system as designed 
-in the USA, you need at
-least a "Technician Class" amateur radio license.  This is the entry level
-license, and getting one is actually pretty easy.  If you've been through
-the written teste for a Level 2 high power rocketry certification, taking a ham
-radio license exam is a similar kind of experience.  The test is multiple
+in the USA, you need at least a "Technician Class" amateur radio 
+license.  This is the entry level license, and getting one is actually 
+pretty easy.  The exam fee is low, and the license is good for 10 years and 
+renewable for life.  Anyone who has been through
+the written test for a Level 2 high power rocketry certification will find
+taking a ham radio license exam a similar sort of experience.  The test is 
+multiple
 choice with questions taken from a pool that is completely published ahead
 of time, and there are some great online resources for learning the material
 and taking practice exams until you're ready to take the real test.  This 
