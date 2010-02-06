@@ -98,8 +98,11 @@ always want GPS on board, which lead to our current second generation boards.
 * [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM instead of DataFlash
 	* 128k x 8
 	* SPI interface
-* [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) temperature sensor instead of using cc1111 on-chip sensor
-* used 1000uF electrolytic capacitor charged to 5V for pyro charges
+* [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) discrete temperature sensor
+	* eliminated in v0.2 to free GPIO line for companion interface
+* used 1000uF electrolytic capacitor charged to 5V for pyro supply
+* two LEDs instead of one attached to CPU
+	* eliminated second LED to free GPIO line for companion interface
 
 ## [Production History](production) ##
 
@@ -114,18 +117,21 @@ always want GPS on board, which lead to our current second generation boards.
   place parts!  Without an inspection microscope, loading and testing these
   boards might be impossible.
 
-* The v0.1 artwork has the USB connector footprint placed wrong, so that the
-  connector hangs out over the edge of the board instead of being flush with
-  the edge.
+* The v0.1 artwork had three issues, two of which required physical rework
+  on each board.  All of these issues were fixed in v0.2.
 
-* The v0.1 artwork has two issues that require cuts and jumps.  The first is
-  that we need chip select on the SPI memory.  To fix that, we give up the 
-  ability to put the accelerometer into self-test mode and use that GPIO line
-  to pull chip select on the memory.  The second is that the igniter sense
-  circuits each need a second resistor to complete the voltage divider so our
-  3.3V CPU ADC can read the 5V ejection voltage.  This is fixed by changing
-  two resistor values, and tacking two additional resistors onto the board
-  with jumpers to ground.
+	* the USB connector footprint was placed wrong, so that the
+  	  connector hung out over the edge of the board instead of being 
+	  flush.
+	* we needed chip select on the SPI memory.  To fix that, we gave up the 
+  	  ability to put the accelerometer into self-test mode and used that 
+	  GPIO line to pull chip select on the memory, which required two
+	  cuts and two jumpers.  
+	* the igniter sense circuits each needed a second resistor to 
+	  complete the voltage divider so our 3.3V CPU ADC could read the 
+	  5V ejection voltage.  This was fixed by changing two resistor 
+	  values, and tacking two additional resistors onto the board
+  	  with jumpers to ground.
 
 ## Artifacts ##
 
