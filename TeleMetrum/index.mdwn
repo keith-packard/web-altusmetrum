@@ -73,6 +73,7 @@ always want GPS on board, which lead to our current second generation boards.
 	* [SkyTraq](http://www.skytraq.com.tw/) Venus634FLPx GPS receiver
 		* on-board passive patch antenna
 		* U.FL connector with 3.3V DC for optional external amplified antenna
+		* async serial interface
 	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
 	* [Freescale MMA2202EG](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MMA2202EG) 50g accelerometer.  Can use 40-200g variants!
 * Software Features
