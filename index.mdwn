@@ -80,6 +80,9 @@ As we make progress, you can read about it in our [News](News) feed.
 We also hang out on IRC channel #altusmetrum on irc.oftc.net if you have
 questions that aren't answered here.
 
+Our main projects include radio links.  If you don't already have one, 
+getting an [Amateur Radio](./Radio) license would be a good thing to do!
+
 And if you just can't wait to show your support for our efforts, visit
 our [Cafe Press Logo Shop](http://cafepress.com/altusmetrum) or our
 [Printfection Logo Shop](http://printfection.com/altusmetrum) (we're trying
