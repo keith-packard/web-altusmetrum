@@ -1,0 +1,97 @@
+# Amateur Radio and Rockets
+
+## Why Radio? ##
+
+There are at least two strong motivations for putting radios in rockets.  The
+first is to help locate the rocket after flight, either by using radio 
+direction finding techniques, or by having the rocket report its position as
+determined by on-board GPS over a radio link.  The second is to record data
+about the flight for later analysis in case the rocket itself isn't recovered.
+
+One of the main features of [TeleMetrum](../TeleMetrum/) is the fully
+integrated radio link.  The chip at the heart of our designs includes a highly
+optimized digital radio transceiver at very low power.
+
+## Legal Context ##
+
+It is not clear to us that all of the approaches people have taken over
+the years to put off the shelf radios in rockets are actually legal.  
+To legally operate a radio transmitter, we need to understand and adhere 
+to the rules that regulate use of the radio frequency spectrum.  But when 
+commercial radio components are used in ways the original designer did not 
+envision, the rules against which they were designed and certified may not 
+still apply.  But because rocket flights are short and often happen in 
+remote places, and the chance of harmful interference to other radio users is
+therefore pretty small, we're never heard of anyone being fined or 
+prosecuted over this.
+
+In the United States, the rules that matter to us are published by the 
+Federal Communications Commission, or [FCC](http://fcc.gov/).  Under Part 15 
+of the FCC rules, it is possible to design and build radios that can be used 
+without each user needing to hold an FCC license.  However, complying with 
+those regulations isn't trivial and isn't cheap.
+
+But all hope is not lost!  There's an alternative, unambiguously legal 
+approach to operating our radio links.  FCC Part 97 and its equivalent in 
+other countries define an "amateur radio" (sometimes called "ham radio") 
+service.  Holders of amateur radio licenses can transmit on many different 
+frequency bands in many different operating modes, using equipment that does 
+not have to be specifically certified.  This includes permission to operate
+telemetry links and remote controls such as what we want for our rockets!
+
+## Getting an Amateur Radio License ##
+
+To legally operate a TeleMetrum system as designed in the USA, you need at
+least a "Technician Class" amateur radio license.  This is the entry level
+license, and getting one is actually pretty easy.  If you've been through
+the written teste for a Level 2 high power rocketry certification, taking a ham
+radio license exam is a similar kind of experience.  The test is multiple
+choice with questions taken from a pool that is completely published ahead
+of time, and there are some great online resources for learning the material
+and taking practice exams until you're ready to take the real test.
+This [ARRL page](http://www.arrl.org/FandES/ead/classes.html) is a good place
+to start.  
+
+## Related Equipment ##
+
+It's entirely possible to use just a TeleMetrum in a rocket and a TeleDongle
+on the ground with simple wire whip antennas and nothing else.  But there are 
+other pieces of amateur radio gear that we think are worth mentioning because 
+we find them useful too.
+
+### Transceivers ###
+
+A popular class of commercially available ham radio transceiver is commonly
+known as an "HT".  These are hand-held, cover one or more frequency bands,
+and usually are meant to operate primarily using narrow-bandwidth FM voice.  
+Various companies make and sell them, and they have multiple uses at a rocket
+launch.  Like walkie talkies or FRS radios (but better!), they can be used to
+talk to others on the flight line, coordinate search activities, and so forth.
+Choosing a "dual band" or "multi band" model that covers both the "2 meter" 
+and "70 centimeter" bands is a good idea, since 2m is a good band for local 
+voice conversations and the audio tones put out by TeleMetrum for direction 
+finding are in the 70cm band.  
+
+Keith and Bdale both currently own and use the 
+[Yaesu VX-6R](http://yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=111&encProdID=4C6F204F6FEBB5BAFA58BCC1C131EAC0&DivisionID=65&isArchived=0) 
+at launches.
+
+### Antennas ###
+
+Almost any antenna that covers 435 Mhz can be used for receiving signals 
+from TeleMetrum.
+
+The best hand-held commercial directional antennas we've found for radio 
+direction finding rockets are from 
+[Arrow Antennas](http://www.arrowantennas.com/).  The 440-3 and 440-5 are 
+both good choices for finding a TeleMetrum-equipped rocket when used with 
+a suitable 70cm HT.  
+
+The best home-made directional antennas for this purpose that we're aware of
+are based on the ["cheap yagi"](http://www.wa5vjb.com/yagi-pdf/cheapyagi.pdf)
+designs by Kent Britain WA5VJB.  Bdale makes his using lengths of pine
+1x2, 1/8 inch brazing rod for the parasitic elements, and work-hardened 12 
+gauge copper wire for the driven element.  The longer versions are great 
+for roving in radio contests, and the 6-element 432 Mhz design works fine 
+for chasing TeleMetrum-equipped rockets.  
+
