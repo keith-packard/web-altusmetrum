@@ -41,7 +41,8 @@ telemetry links and remote controls such as what we want for our rockets!
 
 ## Getting an Amateur Radio License ##
 
-To legally operate a TeleMetrum system as designed in the USA, you need at
+To legally operate a [TeleMetrum](../TeleMetrum) system as designed 
+in the USA, you need at
 least a "Technician Class" amateur radio license.  This is the entry level
 license, and getting one is actually pretty easy.  If you've been through
 the written teste for a Level 2 high power rocketry certification, taking a ham
@@ -70,8 +71,8 @@ launch.  Like walkie talkies or FRS radios (but better!), they can be used to
 talk to others on the flight line, coordinate search activities, and so forth.
 Choosing a "dual band" or "multi band" model that covers both the "2 meter" 
 and "70 centimeter" bands is a good idea, since 2m is a good band for local 
-voice conversations and the audio tones put out by TeleMetrum for direction 
-finding are in the 70cm band.  
+voice conversations and the audio tones put out by [TeleMetrum](../TeleMetrum)
+for direction finding are in the 70cm band.  
 
 Keith and Bdale both currently own and use the 
 [Yaesu VX-6R](http://yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=111&encProdID=4C6F204F6FEBB5BAFA58BCC1C131EAC0&DivisionID=65&isArchived=0) 
@@ -80,7 +81,7 @@ at launches.
 ### Antennas ###
 
 Almost any antenna that covers 435 Mhz can be used for receiving signals 
-from TeleMetrum.
+from [TeleMetrum](../TeleMetrum).
 
 The best hand-held commercial directional antennas we've found for radio 
 direction finding rockets are from 
@@ -94,5 +95,5 @@ designs by Kent Britain WA5VJB.  Bdale makes his using lengths of pine
 1x2, 1/8 inch brazing rod for the parasitic elements, and work-hardened 12 
 gauge copper wire for the driven element.  The longer versions are great 
 for roving in radio contests, and the 6-element 432 Mhz design works fine 
-for chasing TeleMetrum-equipped rockets.  
+for chasing [TeleMetrum](../TeleMetrum)-equipped rockets.  
 
