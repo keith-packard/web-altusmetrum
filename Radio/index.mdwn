@@ -14,24 +14,15 @@ optimized digital radio transceiver at very low power.
 
 ## Legal Context ##
 
-It is not clear to us that all of the approaches people have taken over
-the years to put off the shelf radios in rockets are actually legal.  To 
-legally operate a radio transmitter, we need to understand and adhere 
-to the rules that regulate use of the radio frequency spectrum.  When 
-commercial radio components are used in ways the original designer did not 
-envision, the rules against which they were designed and certified may not 
-still apply.  But because rocket flights are short and often happen in 
-remote places, and the chance of harmful interference to other radio users is
-therefore pretty small, we're never heard of anyone being fined or 
-prosecuted over this.
-
-In the United States, the rules that matter to us are published by the 
-Federal Communications Commission, or [FCC](http://fcc.gov/).  Under Part 15 
-of the FCC rules, it is possible to design and build radios that can be used 
-without each user needing to hold an FCC license.  However, complying with 
-those regulations isn't trivial and isn't cheap.  But all hope is not 
-lost!  There's an alternative, unambiguously legal 
-approach to operating our radio links.  
+To legally operate a radio transmitter, we need to understand and adhere 
+to the rules that regulate use of the radio frequency spectrum.  In the 
+United States, the rules that matter to us are published by the 
+Federal Communications Commission, or [FCC](http://fcc.gov/).  Under various
+sections of the FCC rules, particularly Part 15, it is possible to design 
+and build radios that can be used 
+without each user needing to hold an FCC license.  Complying with those 
+regulations isn't trivial and isn't cheap.  Forunately, there is an 
+alternative.
 
 FCC Part 97 and its equivalent in 
 other countries define an "amateur radio" (sometimes called "ham radio") 

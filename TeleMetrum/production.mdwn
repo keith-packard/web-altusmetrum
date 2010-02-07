@@ -119,6 +119,8 @@ from each to ground.  Accelerometer loaded is MMA2204EG 100G unit!
 In G-Spot, this accelerometer recorded 52.8 gee acceleration on a
 Cesaroni pro29 H399 reload at NCR Oktoberfest 2009!
 
+Beeper failed after a hard landing, replaced 2010.02.06.
+
 ## sn 12 ##
 
 Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2 
@@ -157,11 +159,15 @@ Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 
 ## sn 51 ##
 
-Full load of v0.2 PCB on 2010.01.09, with 100g accel and Tyco header.
+Full load of v0.2 PCB on 2010.01.09, with 100g accel and screw terminals.
+
+Installed in G-Spot on 2010.02.06.
 
 ## sn 52 ##
 
 Full load of v0.2 PCB on 2010.01.09, with 50g accel and Tyco header.
+
+Went home with Keith from LCA 2010 in Wellington.
 
 ## sn 53 ##
 
