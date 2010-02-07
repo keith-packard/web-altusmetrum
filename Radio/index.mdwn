@@ -21,8 +21,8 @@ Federal Communications Commission, or [FCC](http://fcc.gov/).  Under various
 sections of the FCC rules, particularly Part 15, it is possible to design 
 and build radios that can be used 
 without each user needing to hold an FCC license.  Complying with those 
-regulations isn't trivial and isn't cheap.  Forunately, there is an 
-alternative.
+regulations isn't trivial and can get expensive.  Fortunately, there is 
+an alternative.
 
 FCC Part 97 and its equivalent in 
 other countries define an "amateur radio" (sometimes called "ham radio") 
