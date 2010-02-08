@@ -19,10 +19,9 @@ or compatible licenses.
 # Hobby Rocketry #
 
 The motivation for the circuits and software you will find on this site is
-our loosely-knit group's shared interest in hobby rocketry.  Rather than 
-try to introduce the hobby to you here, here's a very brief 
+our loosely-knit group's shared interest in hobby rocketry.  This very brief
 [Ted presentation by Steve Jurvetson](http://www.ted.com/talks/steve_jurvetson_on_model_rocketry.html)
-that will give you a quick flavor of what the point is.  John Coker 
+quickly conveys at least part of why we do this.  John Coker 
 has published an excellent 
 [overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
 on his web site.  Keith has also put together some useful notes about the 
