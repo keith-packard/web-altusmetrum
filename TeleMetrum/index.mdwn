@@ -118,6 +118,12 @@ necessary to support the companion board interface added in v0.2.
   place parts!  Without an inspection microscope, loading and testing these
   boards might be impossible.
 
+* The addition of on-board GPS in v0.2 means that the total power consumption
+  can exceed the rate at which we draw power from the USB interface, 
+  particularly when the GPS is in cold start mode.  This means a battery must 
+  be attached during operation, and also that the battery will only charge 
+  effectively from USB when the board is turned off.
+
 * The v0.1 artwork had three issues, two of which required physical rework
   on each board.  All of these issues were fixed in v0.2.
 
