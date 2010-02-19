@@ -59,7 +59,5 @@ source code and pre-built packages can be found on the
 
 ## Future Plans ##
 
-We hope to fabricate an initial batch of TeleDongle v0.2 boards in
-February 2010, and intend to make both loaded circuit boards and complete
-packaged units available for sale soon.
-
+An initial batch of TeleDongle v0.2 boards are currently at our assembler.  If
+they work as expected, we hope to have them for sale in early March 2010.
