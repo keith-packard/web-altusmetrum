@@ -28,7 +28,11 @@ support other frequency ranges.
 	* 6 12-bit analog inputs (11 bits with single-ended sensors)
 	* 2 channels of serial I/O
 	* digital I/O
-* Software Features (planned)
+* 100mA 3.3V LDO regulator
+	* takes input from USB interface by default
+	* output appears on 8-pin companion connector
+	* can take input from 8-pin companion connector in non-USB applications
+* Software Features
 	* Written mostly in C with some 8051 assembler
 	* Runs from on-chip flash, uses on-chip RAM
 	* USB serial emulation for data interface
@@ -60,4 +64,4 @@ source code and pre-built packages can be found on the
 ## Future Plans ##
 
 An initial batch of TeleDongle v0.2 boards are currently at our assembler.  If
-they work as expected, we hope to have them for sale in early March 2010.
+they work as expected, we hope to have TeleDongle for sale in early March 2010.
