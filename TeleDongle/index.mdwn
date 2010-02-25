@@ -68,5 +68,6 @@ source code and pre-built packages can be found on the
 
 ## Future Plans ##
 
-An initial batch of TeleDongle v0.2 boards are currently at our assembler.  If
-they work as expected, we hope to have TeleDongle for sale in early March 2010.
+We have received the initial batch of 108 TeleDongle v0.2 boards from our
+assembler, and initial testing looks good.  We expect to have these boards
+for sale by early March 2010.
