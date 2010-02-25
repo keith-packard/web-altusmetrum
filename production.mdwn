@@ -1,7 +1,7 @@
-# TeleMetrum Units
+# Altus Metrum Units Constructed
 
-This page contains Bdale's notes about each unit of [TeleMetrum](..) 
-assembled to date.
+This page contains Bdale's notes about each unit of [TeleMetrum](TeleMetrum/) 
+and [TeleDongle](TeleDongle/) assembled to date.
 
 ## sn 1 ##
 
