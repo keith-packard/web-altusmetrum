@@ -14,6 +14,7 @@ support other frequency ranges.
 ### User View ###
 
 * 70cm ham-band transceiver for interaction with [TeleMetrum](../TeleMetrum/)
+* programmed for 38k4 GFSK data rate with forward error correction
 * USB interface for power, configuration, and data interface
 * 4 pin Tyco MicroMaTch connector for debug and flash programming
 * 8 pin Tyco MicroMaTch connector supports serial or SPI interface
