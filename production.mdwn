@@ -173,3 +173,8 @@ Went home with Keith from LCA 2010 in Wellington.
 
 Full load of v0.2 PCB on 2010.01.09, with 40g accel and screw terminals.
 
+## sn 100-207 ##
+
+First production run of 108 pieces of TeleDongle v0.2 by 
+[Advanced Circuits](http://4pcb.com), received 2010.02.25.
+

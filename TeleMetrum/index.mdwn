@@ -105,7 +105,7 @@ always want GPS on board, which lead to our current second generation boards.
 The elimination of the discrete temperature sensor and second LED were
 necessary to support the companion board interface added in v0.2.
 
-## [Production History](production) ##
+## [Production History](../production) ##
 
 ## [Flight Logs](flightlogs) ##
 

@@ -7,6 +7,8 @@ and SPI are also available as alternatives.  The RF filter components are
 by default set for use in the vicinity of 435 Mhz, but can be altered to
 support other frequency ranges.
 
+[[!img http://gag.com/bdale/blog/images/cimg5556-small.jpg]]
+
 ## Features ##
 
 ### User View ###
@@ -42,6 +44,8 @@ support other frequency ranges.
 * Licenses
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## [Production History](../production) ##
 
 ## Artifacts ##
 
