@@ -47,6 +47,12 @@ and taking practice exams until you're ready to take the real test.  This
 [ARRL page](http://www.arrl.org/FandES/ead/classes.html) is a good place
 to start.  
 
+## Operation in Other Countries ##
+
+In Australia, we have learned that operation may be legal without a license 
+in the range 433.05-434.79 Mhz under the LIPD provisions.  However, please be
+mindful of ham radio users in that band.
+
 ## Related Equipment ##
 
 It's entirely possible to use just a [TeleMetrum](../TeleMetrum/) 
