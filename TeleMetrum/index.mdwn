@@ -179,12 +179,11 @@ can be found on the [AltOS](../AltOS) page on this site.
 
 ## Future Plans ##
 
-As of early February 2010, three prototypes of v0.2 are done and working on 
-the bench.  We hope to flight test them shortly, then arrange a production
-run in time to make TeleMetrum available in assembled and tested form to 
-others in the rocketry hobby who have expressed interest in time for the 
-2010 flying season.
+As of early March 2010, three prototypes of v0.2 exist and have flown with 
+great success.  We will initiate a production run shortly with the goal of 
+making TeleMetrum available in assembled and tested form to others in the 
+rocketry hobby in time for the 2010 flying season.
 
-Because we understand that not everyone uses Linux, we've started discussing 
+Because we understand that not everyone uses Linux, we are investigating
 the best way to make a cross-platform ground station program for use with 
 [AltOS](../AltOS), perhaps in Java...
