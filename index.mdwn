@@ -79,7 +79,9 @@ learn a lot and see some great flights by showing up at a club launch.
 
 As we make progress, you can read about it in our [News](News) feed.
 We also hang out on IRC channel #altusmetrum on irc.oftc.net if you have
-questions that aren't answered here.
+questions that aren't answered here.  And if you're a Facebook user, you
+can join the [Altus Metrum](http://www.facebook.com/group.php?gid=341167482968)
+Facebook group.
 
 Our main projects include radio links.  If you don't already have one, 
 getting an [Amateur Radio](./Radio) license would be a good thing to do!
