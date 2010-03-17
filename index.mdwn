@@ -63,7 +63,7 @@ the set of hardware projects here.
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
 
-# [Using Altus Metrum Products](Using) #
+# [Using Altus Metrum Products](Uses) #
 
 # Participants #
 
