@@ -76,10 +76,12 @@ Our software makes it easy to log the data from each flight, both the
 telemetry received over the RF link during the flight itself, and the more
 complete data log recorded in the DataFlash memory on the TeleMetrum 
 board.  Once this data is on your computer, our postflight tools make it
-easy to view a standard set of plots showing the altitude, acceleration, and
-velocity of the rocket during flight.  You can also export a data file useable
-with Google Maps and Google Earth for visualizing the flight path in two or
-three dimensions.
+easy to quickly get to the numbers everyone wants, like apogee altitude, 
+max acceleration, and max velocity.  You can also generate and view a 
+standard set of plots showing the altitude, acceleration, and
+velocity of the rocket during flight.  And you can even export a data file 
+useable with Google Maps and Google Earth for visualizing the flight path 
+in two or three dimensions!
 
 Our ultimate goal is to emit a set of files for each flight that can be
 published as a web page per flight, or just viewed on your local disk with 
@@ -98,3 +100,7 @@ logging data after flight without the need for a notebook computer on the
 flight line.  Particularly since it is so difficult to read most notebook
 screens in direct sunlight, we think this will be a great thing to have.
 
+Because all of our work is open, both the hardware designs and the software,
+if you have some great idea for an addition to the current Altus Metrum family,
+feel free to dive in and help!  Or let us know what you'd like to see that 
+we aren't already working on, and maybe we'll get excited about it too... 
