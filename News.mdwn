@@ -13,7 +13,3 @@ url="http://www.gag.com/bdale/blog/tags/rockets.html" updateinterval="15"]]
 feedurl="http://keithp.com/blogs/tags/rockets/index.rss"
 url="http://keithp.com/blogs/tags/rockets/" updateinterval="15"]]
 
-[[!aggregate name="cworth's rocket blog" dir="blog/cworth"
-feedurl="http://cworth.org/tag/rockets/index.rss"
-url="http://cworth.org/tag/rockets/" updateinterval="15"]]
-
