@@ -77,7 +77,7 @@ voice conversations and the audio tones put out by [TeleMetrum](../TeleMetrum)
 for direction finding are in the 70cm band.  
 
 Keith and Bdale both currently own and use the 
-[Yaesu VX-6R](http://yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=111&encProdID=4C6F204F6FEBB5BAFA58BCC1C131EAC0&DivisionID=65&isArchived=0) 
+[Yaesu VX-7R](http://www.yaesu.com/indexVS.cfm?cmd=DisplayProducts&ProdCatID=111&encProdID=8D3254BFC69FB172D78647DC56EFB0E9&DivisionID=65&isArchived=0)
 at launches.
 
 ### Antennas ###
