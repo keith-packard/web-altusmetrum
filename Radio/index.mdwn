@@ -36,8 +36,8 @@ telemetry links and remote controls such as what we want for our rockets!
 To legally operate a [TeleMetrum](../TeleMetrum) system as designed 
 in the USA, you need at least a "Technician Class" amateur radio 
 license.  This is the entry level license, and getting one is actually 
-pretty easy.  The exam fee is low, and the license is good for 10 years and 
-renewable for life.  Anyone who has been through
+pretty easy.  The exam fee is low ($15?), and the license is good for 10 
+years and renewable for life.  Anyone who has been through
 the written test for a Level 2 high power rocketry certification will find
 taking a ham radio license exam a similar sort of experience.  The test is 
 multiple
@@ -99,3 +99,11 @@ gauge copper wire for the driven element.  The longer versions are great
 for roving in radio contests, and the 6-element 432 Mhz design works fine 
 for chasing [TeleMetrum](../TeleMetrum)-equipped rockets.  
 
+### Other Uses for an Amateur Radio License ###
+
+The [ARRL](http://www.arrl.org/) web site is full of information about other
+things that people do with amateur radio.  
+
+How about a Doppler radar system for tracking rockets at a launch site?  Yes,
+someone has actually done it!  See [this page translated from Russian](http://translate.google.com/translate?js=y&prev=_t&hl=en&ie=UTF-8&layout=1&eotf=1&u=http%3A%2F%2Fserge77.rocketworkshop.net%2Findex.htm&sl=ru&tl=en)
+for the details!
