@@ -105,5 +105,5 @@ The [ARRL](http://www.arrl.org/) web site is full of information about other
 things that people do with amateur radio.  
 
 How about a Doppler radar system for tracking rockets at a launch site?  Yes,
-someone has actually done it!  See [this page translated from Russian](http://translate.google.com/translate?js=y&prev=_t&hl=en&ie=UTF-8&layout=1&eotf=1&u=http%3A%2F%2Fserge77.rocketworkshop.net%2Findex.htm&sl=ru&tl=en)
+someone has actually done it!  See [this page translated from Russian](http://translate.googleusercontent.com/translate_c?hl=en&ie=UTF-8&sl=ru&tl=en&u=http://serge77.rocketworkshop.net/radar/radar.htm&prev=_t&rurl=translate.google.com&twu=1&usg=ALkJrhi33e0TGe5WOcXr1HpoZBgzjDLy7g)
 for the details!
