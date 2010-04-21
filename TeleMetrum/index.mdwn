@@ -3,6 +3,9 @@
 This is a recording dual-deploy altimeter for high power model rocketry 
 with integrated GPS and telemetry link.  
 
+Production units will be available soon from the 
+[Garbee and Garbee](http://auric.gag.com) web store.
+
 These are photos of our current version,
 which includes an integrated GPS receiver and patch antenna:
 

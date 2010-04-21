@@ -7,6 +7,9 @@ and SPI are also available as alternatives.  The RF filter components are
 by default set for use in the vicinity of 435 Mhz, but can be altered to
 support other frequency ranges.
 
+Production units are available now from the 
+[Garbee and Garbee](http://auric.gag.com) web store.
+
 <img src="v0.2/cimg5556-small.jpg">
 
 ## Features ##

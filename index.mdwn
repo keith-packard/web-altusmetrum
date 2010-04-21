@@ -63,6 +63,10 @@ the set of hardware projects here.
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
 
+# Where to Buy #
+
+Altus Metrum products are available from the [Garbee and Garbee](http://auric.gag.com) web store.
+
 # [Using Altus Metrum Products](Uses) #
 
 # Participants #

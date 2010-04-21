@@ -1,5 +1,10 @@
 # Using Altus Metrum Products
 
+## Where to Buy ##
+
+Altus Metrum products are available from the 
+[Garbee and Garbee](http://auric.gag.com) web store.
+
 ## Being Legal ##
 
 First off, in the US, you need an [amateur radio license](../Radio) or 
