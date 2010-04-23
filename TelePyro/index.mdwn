@@ -16,8 +16,8 @@ just continuity.
 ### User View ###
 
 * Small circuit board mounted near [TeleMetrum](../TeleMetrum/)
-* Requires [TeleMetrum](../TeleMetrum/) v0.2, as v0.1 does not have the 
-  required companion board interface
+* Requires [TeleMetrum](../TeleMetrum/) v0.2 or later, as v0.1 does not 
+  have the required companion board interface
 * Connections for 8 distinct igniter firing channels provided
 * Supports use of separate battery for ejection charges
 
