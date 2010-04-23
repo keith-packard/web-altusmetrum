@@ -23,27 +23,14 @@ and relative position of GPS-equipped rockets
 
 ### Developer View ###
 
-* Partially populated [TeleMetrum](../TeleMetrum/) board
-	* Serial connector used to attach user interface board
-	* LiPo charge management
-	* Beeper for audible indications
-	* RF section with SMA for external antenna
-	* USB interface
-* New user interface board
-	* [Microchip 16F886](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en530146) Microcontroller
-		* 8k Flash
-		* 386 bytes RAM
-		* I2C target interface
-		* In-circuit programming interface
-		* Serial port
+* Single circuit board
+	* equivalent of a [TeleMetrum](../TeleMetrum/) less the sensors
+	* [Atmel ATtiny48](http://www.atmel.com/dyn/products/product_card_v2.asp?PN=ATtiny48) used as an I/O expander
 	* 4 line, 20 character transreflective text LCD display
-	* Switches for scrolling, safe/arm, etc
-	* LEDs to indicate current flight mode, etc
+	* "joystick" switch for user inputs
 * LiPo battery
-* GPS receiver core attached to serial port on new user interface board
 * Software Features (planned)
-	* Written in PIC assembler
-	* Runs from on-chip flash, uses on-chip RAM
+	* [AltOS](../AltOS) for the cc1111 and simple C for the AVR
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 * Licenses
@@ -56,6 +43,6 @@ None yet!
 
 ## Artifacts ##
 
-As of 26 April 2009, an incomplete schematic exists at
+A tentative schematic exists at
 [git.gag.com](http://git.gag.com) in the project
 [hw/teleterra](http://git.gag.com/?p=hw/teleterra;a=summary).

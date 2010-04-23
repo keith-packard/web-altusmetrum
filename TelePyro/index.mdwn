@@ -23,13 +23,14 @@ just continuity.
 
 ### Developer View ###
 
-* [Microchip 16F886](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en530146) Microcontroller
-	* 8k Flash
-	* 386 bytes RAM
+* [Atmel ATmega328](http://www.atmel.com/dyn/products/product_card_v2.asp?PN=ATmega328) Microcontroller
+	* 32k Flash
+	* 2048 bytes SRAM
+	* 1024 bytes EEPROM
 	* SPI target interface
 	* In-circuit programming interface
 * Software Features (planned)
-	* Written in PIC assembler
+	* [Arduino](http://arduino.cc/) compatible programming
 	* Runs from on-chip flash, uses on-chip RAM
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
