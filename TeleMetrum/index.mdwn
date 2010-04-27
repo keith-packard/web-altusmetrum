@@ -3,7 +3,7 @@
 This is a recording dual-deploy altimeter for high power model rocketry 
 with integrated GPS and telemetry link.  
 
-Production units are availablefrom the 
+Production units are available from the 
 [Garbee and Garbee](http://auric.gag.com) web store.
 
 These are photos of our current production version, which includes an 
