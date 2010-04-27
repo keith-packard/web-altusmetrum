@@ -1,0 +1,1 @@
+[[!map pages="TeleMetrum/v1.0/* and ! TeleMetrum/v1.0/*/*"]]
