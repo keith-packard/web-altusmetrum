@@ -14,7 +14,9 @@ integrated GPS receiver with active patch antenna:
 
 These are photos of our second version, which included the integrated Venus
 GPS receiver, but with a passive patch antenna that turned out to have 
-disappointing performance due to our many PCB geometry constraints:
+disappointing performance due to our many PCB geometry constraints.  It also
+used a voltage regulator with less capacity which we felt was marginal for
+supporting the companion boards we have planned:
 
 <a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
 <a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
