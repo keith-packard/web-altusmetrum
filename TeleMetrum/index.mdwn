@@ -101,6 +101,12 @@ always want GPS on board, which lead to our current second generation boards.
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
+### v0.2 Differences  ###
+
+* 100ma LDO regulator instead of the current 150ma part
+* no C38 footprint
+* different value for C36 reset capacitor
+
 ### v0.1 Differences  ###
 
 * 2.5 x 1 inch board with all parts mounted on one side
@@ -108,6 +114,7 @@ always want GPS on board, which lead to our current second generation boards.
 * USB connector projected approximately 3mm over the edge of the board
 * Debug connector used 4 IC socket pins on 100 mil centers
 * no companion board interface
+* 50ma LDO regulator on early boards, later boards used a 100ma part
 * [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM instead of DataFlash
 	* 128k x 8
 	* SPI interface
@@ -169,6 +176,10 @@ to used on the ground.  We call the on-the-ground version 'TeleDongle'.
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of files in more easily readable form.  
 
+* Production PCB version v1.0:
+ * [schematic](v1.0/telemetrum.pdf)
+ * [pcb artwork](v1.0/telemetrum.pcb.pdf)
+ * [bill of materials](v1.0/partslist.csv)
 * These are from the v0.2 branch:
  * [schematic](v0.2/telemetrum.pdf)
  * [pcb artwork](v0.2/telemetrum.pcb.pdf)
@@ -192,11 +203,9 @@ can be found on the [AltOS](../AltOS) page on this site.
 
 ## Future Plans ##
 
-As of early March 2010, three prototypes of v0.2 exist and have flown with 
-great success.  We will initiate a production run shortly with the goal of 
-making TeleMetrum available in assembled and tested form to others in the 
-rocketry hobby in time for the 2010 flying season.
+As of May 2010, version v1.0 is available for sale from the
+[Garbee and Garbee](http://auric.gag.com) web store.
 
-Because we understand that not everyone uses Linux, we are investigating
-the best way to make a cross-platform ground station program for use with 
-[AltOS](../AltOS), perhaps in Java...
+Because we understand that not everyone uses Linux, development of a new
+cross-platform ground station program written in Java is underway for use with 
+[AltOS](../AltOS).
