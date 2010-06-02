@@ -4,10 +4,10 @@ This is a hand-held ground station for [TeleMetrum](../TeleMetrum/).
 
 ## Motivation ##
 
-While it is possible to use a partially (or fully!) loaded 
-[TeleMetrum](../TeleMetrum/) board as a USB to RF interface, we think 
-it would be cool to have a nice hand-held ground station we can use in
-full sunlight on the flight line.  If it can help locate the rocket and is
+While using a [TeleDongle](../TeleDongle/) board as a USB to RF interface to 
+a notebook computer works splendidly, we think it would be cool to have a 
+nice hand-held ground station we can use in full sunlight on the flight line.
+If it can help locate the rocket and is
 easy to carry during recovery operations, so much the better!
 
 ## Features ##
