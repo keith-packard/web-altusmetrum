@@ -71,6 +71,6 @@ source code and pre-built packages can be found on the
 
 ## Future Plans ##
 
-We have received the initial batch of 108 TeleDongle v0.2 boards from our
-assembler, and initial testing looks good.  We expect to have these boards
-for sale by early March 2010.
+As of May 2010, version v1.0 is available for sale from the
+[Garbee and Garbee](http://auric.gag.com) web store.
+
