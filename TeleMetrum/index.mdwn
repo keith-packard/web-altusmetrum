@@ -83,7 +83,7 @@ always want GPS on board, which lead to our current second generation boards.
 		* SPI interface
 		* other parts in this Atmel DataFlash series can optionally be used
 	* [SkyTraq](http://www.skytraq.com.tw/) Venus634FLPx GPS receiver
-		* on-board [Taoglas AP.17A.01[(http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
+		* on-board [Taoglas AP.17A.01](http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
 		  single-stage active patch antenna
 		* U.FL connector with 3.3V DC can be re-purposed for optional external amplified antennas
 		* async serial interface
