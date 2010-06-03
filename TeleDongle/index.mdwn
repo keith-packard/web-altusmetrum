@@ -71,6 +71,11 @@ source code and pre-built packages can be found on the
 
 ## Future Plans ##
 
-As of May 2010, version v1.0 is available for sale from the
-[Garbee and Garbee](http://auric.gag.com) web store.
+The current version 0.2 boards "just work", and are available for sale from the
+[Garbee and Garbee](http://auric.gag.com) web store in either board-only or 
+packaged form.
+
+Several people are working on firmware changes to use these boards as general
+purpose RF interfaces for [Arduino](http://arduino.cc) and other 
+microcontroller systems.
 
