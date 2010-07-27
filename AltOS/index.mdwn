@@ -8,6 +8,14 @@ This is Keith's "operating system" for [TeleMetrum](../TeleMetrum/).
 Keith started over from scratch and wrote something that does just what we 
 needed.
 
+In addition to the firmware for [TeleMetrum](../TeleMetrum) and 
+[TeleDongle](../TeleDongle) boards, the AltOS source tree also includes a
+number of utilities useful for monitoring and logging telemetry during flight,
+post-processing flight data for analysis, and utilities for updating firmware,
+and developing and debugging new functionality.  The first generation of these
+utilities were Linux-only, but we are gradually evolving the code to work
+across multiple platforms, including Mac and Windows systems.
+
 ## Features ##
 
 ### User View ###
