@@ -31,6 +31,10 @@ Debian packages are also available:
 	apt-get update
 	apt-get install altos
 
+A preliminary [Mac OS X package](mac/AltosUI.pkg) that is compatible with 
+versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is now 
+available for testing.  
+
 Bdale has also created a theme for 
 [GDM](http://projects.gnome.org/gdm/) that he uses on his primary notebook,
 and the 
