@@ -12,20 +12,6 @@ integrated GPS receiver with active patch antenna:
 <a href="v1.0/cimg5972-crop.jpg"> <img src="v1.0/cimg5972-thumb.jpg"></a>
 <a href="v1.0/cimg5974-crop.jpg"> <img src="v1.0/cimg5974-thumb.jpg"></a>
 
-These are photos of our second version, which included the integrated Venus
-GPS receiver, but with a passive patch antenna that turned out to have 
-disappointing performance due to our many PCB geometry constraints.  It also
-used a voltage regulator with less capacity which we felt was marginal for
-supporting the companion boards we have planned:
-
-<a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
-<a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
-
-And this is a photo of our original board with serial port for off-board GPS,
-without the big off-board 1000uF cap from the original ejection circuit:
-
-<a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
-
 ## Motivation ##
 
 Bdale and Keith both own 
@@ -100,12 +86,6 @@ always want GPS on board, which lead to our current second generation boards.
 * Licenses
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-
-### v0.2 Differences  ###
-
-* 100ma LDO regulator instead of the current 150ma part
-* no C38 footprint
-* different value for C36 reset capacitor
 
 ### v0.1 Differences  ###
 
@@ -184,14 +164,6 @@ of files in more easily readable form.
  * [schematic](v1.0/telemetrum.pdf)
  * [pcb artwork](v1.0/telemetrum.pcb.pdf)
  * [bill of materials](v1.0/partslist.csv)
-* These are from the v0.2 branch:
- * [schematic](v0.2/telemetrum.pdf)
- * [pcb artwork](v0.2/telemetrum.pcb.pdf)
- * [bill of materials](v0.2/partslist.csv)
-* These are as of the working-v0.1 tag:  
- * [schematic](v0.1/telemetrum.pdf)
- * [pcb artwork](v0.1/telemetrum.pcb.pdf)
- * [bill of materials](v0.1/telemetrum.bom)
 
 Our [AltOS](../AltOS) firmware works well enough that we now routinely fly 
 TeleMetrum with no backup.  Rockets with v0.1 boards have exceeded 50g 
@@ -213,3 +185,66 @@ As of May 2010, version v1.0 is available for sale from the
 Because we understand that not everyone uses Linux, development of a new
 cross-platform ground station program written in Java is underway for use with 
 [AltOS](../AltOS).
+
+## History ##
+
+### v0.2 ###
+
+* 100ma LDO regulator instead of the current 150ma part
+* no C38 footprint
+* different value for C36 reset capacitor
+
+These are photos of our second version, which included the integrated Venus
+GPS receiver, but with a passive patch antenna that turned out to have 
+disappointing performance due to our many PCB geometry constraints.  It also
+used a voltage regulator with less capacity which we felt was marginal for
+supporting the companion boards we have planned:
+
+<a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
+<a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
+
+Other than cleaning up the silkscreen, the differences between v0.2 and our
+current v1.0 boards were really quite small:
+
+* 100ma LDO regulator instead of the current 150ma part
+* no C38 footprint
+* different value for C36 reset capacitor
+
+The schematics and PCB artwork for this version are on the v0.2 branch in
+our git repository, here are pdf copies for easy reference:
+
+ * [schematic](v0.2/telemetrum.pdf)
+ * [pcb artwork](v0.2/telemetrum.pcb.pdf)
+ * [bill of materials](v0.2/partslist.csv)
+
+### v0.1 ###
+
+And this is a photo of our original board with serial port for off-board GPS,
+without the big off-board 1000uF cap from the original ejection circuit:
+
+<a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
+
+The differences between v0.1 and later boards were more substantial:
+
+* 2.5 x 1 inch board with all parts mounted on one side
+* 4-pin PicoBlade serial port connector for attachment of external GPS module 
+* USB connector projected approximately 3mm over the edge of the board
+* Debug connector used 4 IC socket pins on 100 mil centers
+* no companion board interface
+* 50ma LDO regulator on early boards, later boards used a 100ma part
+* [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM instead of DataFlash
+	* 128k x 8
+	* SPI interface
+* [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) discrete temperature sensor
+* used 1000uF electrolytic capacitor charged to 5V for pyro supply
+* two LEDs instead of one attached to CPU
+
+The elimination of the discrete temperature sensor and second LED were
+necessary to support the companion board interface added in v0.2.
+
+The schematics and PCB artwork for this version as of the working-v0.1 tag
+are available here are pdf copies for easy reference:
+
+ * [schematic](v0.1/telemetrum.pdf)
+ * [pcb artwork](v0.1/telemetrum.pcb.pdf)
+ * [bill of materials](v0.1/telemetrum.bom)
