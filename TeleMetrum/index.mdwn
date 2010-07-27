@@ -155,10 +155,6 @@ cross-platform ground station program written in Java is underway for use with
 
 ### v0.2 ###
 
-* 100ma LDO regulator instead of the current 150ma part
-* no C38 footprint
-* different value for C36 reset capacitor
-
 These are photos of our second version, which included the integrated Venus
 GPS receiver, but with a passive patch antenna that turned out to have 
 disappointing performance due to our many PCB geometry constraints.  It also
@@ -189,7 +185,7 @@ without the big off-board 1000uF cap from the original ejection circuit:
 
 <a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
 
-The differences between v0.1 and later boards were more substantial:
+The differences between v0.1 and later boards were substantial:
 
 * 2.5 x 1 inch board with all parts mounted on one side
 * 4-pin PicoBlade serial port connector for attachment of external GPS module 
