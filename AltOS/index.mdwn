@@ -21,17 +21,22 @@ needed.
 
 ## Artifacts ##
 
-The source available from [git.gag.com](http://git.gag.com) in the project 
+The source is available from [git.gag.com](http://git.gag.com) in the project 
 [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
 
 ### Linux ###
 
-Debian packages for 32-bit x86 are available:
+[Debian](http://www.debian.org) packages for 32-bit x86 are available:
 
 	wget -O - http://altusmetrum.org/apt/altusmetrum.key | apt-key add -
 	wget -O /etc/apt/sources.list.d/altos.list http://altusmetrum.org/apt/altos.list
 	apt-get update
 	apt-get install altos
+
+The source tree includes documentation on how to build packages for other
+Linux systems such as [Arch Linux](http://www.archlinux.org), and the control
+files for building the Debian packages on other architectures or derivatives
+such as [Ubuntu](http://ubuntu.com).
 
 Bdale has also created a theme for 
 [GDM](http://projects.gnome.org/gdm/) that he uses on his primary notebook,
