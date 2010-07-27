@@ -70,9 +70,9 @@ the design for now:
 
 ## Artifacts ##
 
-The latest (best?) version of Bdale's [Peace Love and Rockets](AltusMetrum.odp) 
-presentation was given at the Ohio LinuxFest 2008.  Note that there are many
-photos included, so this is a HUGE file!
+The best version of Bdale's [Peace Love and Rockets](AltusMetrum.odp) 
+presentation about this hardware generation was given at the Ohio LinuxFest 
+2008.  Note that there are many photos included, so this is a HUGE file!
 
 The version 0.1 design had enough issues that Bdale decided not to publish
 it.  Work on an 0.2 revision is mostly complete at the schematic level, and
