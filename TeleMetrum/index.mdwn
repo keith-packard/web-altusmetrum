@@ -91,37 +91,6 @@ always want GPS on board, which lead to our current second generation boards.
 
 ## [Flight Logs](flightlogs) ##
 
-## Problems ##
-
-* The CC1111F32 is a 36-pin QFN package, which necessitates reflow 
-  soldering.  Since we needed to reflow solder anyway, and because TI used 
-  them in their reference design, we went a little crazy and used 0402 
-  passive parts everywhere.  That means working under a microscope to 
-  place parts!  Without an inspection microscope, loading and testing these
-  boards might be impossible.
-
-* The addition of on-board GPS in v0.2 means that the total power consumption
-  can exceed the rate at which we draw power from the USB interface, 
-  particularly when the GPS is in cold start mode.  This means a battery must 
-  be attached during operation, and also that the battery will only charge 
-  effectively from USB when the board is turned off.
-
-* The v0.1 artwork had three issues, two of which required physical rework
-  on each board.  All of these issues were fixed in v0.2.
-
-	* The USB connector footprint was placed wrong, so that the
-  	  connector hung out over the edge of the board instead of being 
-	  flush.
-	* We needed chip select on the SPI memory.  To fix that, we gave up the 
-  	  ability to put the accelerometer into self-test mode and used that 
-	  GPIO line to pull chip select on the memory, which required two
-	  cuts and two jumpers.  
-	* The igniter sense circuits each needed a second resistor to 
-	  complete the voltage divider so our 3.3V CPU ADC could read the 
-	  5V ejection voltage.  This was fixed by changing two resistor 
-	  values, and tacking two additional resistors onto the board
-  	  with jumpers to ground.
-
 ## Artifacts ##
 
 The user manual for TeleMetrum is available in
@@ -167,6 +136,21 @@ As of May 2010, version v1.0 is available for sale from the
 Because we understand that not everyone uses Linux, development of a new
 cross-platform ground station program written in Java is underway for use with 
 [AltOS](../AltOS).
+
+## Problems ##
+
+* The CC1111F32 is a 36-pin QFN package, which necessitates reflow 
+  soldering.  Since we needed to reflow solder anyway, and because TI used 
+  them in their reference design, we went a little crazy and used 0402 
+  passive parts everywhere.  That means working under a microscope to 
+  place parts!  Without an inspection microscope, loading and testing these
+  boards might be impossible.
+
+* The addition of on-board GPS in v0.2 means that the total power consumption
+  can exceed the rate at which we draw power from the USB interface, 
+  particularly when the GPS is in cold start mode.  This means a battery must 
+  be attached during operation, and also that the battery will only charge 
+  effectively from USB when the board is turned off.
 
 ## History ##
 
@@ -223,6 +207,22 @@ The differences between v0.1 and later boards were more substantial:
 
 The elimination of the discrete temperature sensor and second LED were
 necessary to support the companion board interface added in v0.2.
+
+The v0.1 artwork had three issues, two of which required physical rework
+on each board.  All of these issues were fixed in v0.2.
+
+* The USB connector footprint was placed wrong, so that the
+  connector hung out over the edge of the board instead of being 
+  flush.
+* We needed chip select on the SPI memory.  To fix that, we gave up the 
+  ability to put the accelerometer into self-test mode and used that 
+  GPIO line to pull chip select on the memory, which required two
+  cuts and two jumpers.  
+* The igniter sense circuits each needed a second resistor to 
+  complete the voltage divider so our 3.3V CPU ADC could read the 
+  5V ejection voltage.  This was fixed by changing two resistor 
+  values, and tacking two additional resistors onto the board
+  with jumpers to ground.
 
 The schematics and PCB artwork for this version as of the working-v0.1 tag
 are available here are pdf copies for easy reference:
