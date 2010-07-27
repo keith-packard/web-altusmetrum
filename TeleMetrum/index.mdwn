@@ -109,12 +109,11 @@ cut-down schematic used to generate the BOM for partially loading v0.1 boards
 to used on the ground.  We call the on-the-ground version 'TeleDongle'.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of files in more easily readable form.  
+of the files for Production PCB version 1.0 in more easily readable form.  
 
-* Production PCB version v1.0:
- * [schematic](v1.0/telemetrum.pdf)
- * [pcb artwork](v1.0/telemetrum.pcb.pdf)
- * [bill of materials](v1.0/partslist.csv)
+* [schematic](v1.0/telemetrum.pdf)
+* [pcb artwork](v1.0/telemetrum.pcb.pdf)
+* [bill of materials](v1.0/partslist.csv)
 
 Our [AltOS](../AltOS) firmware works well enough that we now routinely fly 
 TeleMetrum with no backup.  Rockets with v0.1 boards have exceeded 50g 
