@@ -65,7 +65,10 @@ prototype was built, but never flown.  This project is now indefinitely on hold.
 
 # Where to Buy #
 
-Altus Metrum products are available from the [Garbee and Garbee](http://auric.gag.com) web store.
+All Altus Metrum products are available from the 
+[Garbee and Garbee](http://auric.gag.com) web store.  
+[TeleMetrum](TeleMetrum/) starter kits are also now available from 
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp).
 
 # [Using Altus Metrum Products](Uses) #
 
