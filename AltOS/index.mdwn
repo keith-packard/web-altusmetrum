@@ -34,15 +34,22 @@ The source is available from [git.gag.com](http://git.gag.com) in the project
 
 ### Linux ###
 
-[Debian](http://www.debian.org) packages for 32-bit x86 are available:
+If you use [Debian](http://www.debian.org), then a pre-built package for 
+32-bit x86 is currently available here:
 
 	wget -O - http://altusmetrum.org/apt/altusmetrum.key | apt-key add -
 	wget -O /etc/apt/sources.list.d/altos.list http://altusmetrum.org/apt/altos.list
 	apt-get update
 	apt-get install altos
 
-The source tree includes documentation on how to build packages for other
-Linux systems such as [Arch Linux](http://www.archlinux.org), and the control
+If you use some other distribution of Linux, then 
+a [Linux package](Altos-Linux.tgz) of our second-generation Java bits that 
+should run on any distribution with a modern Java version is also available.
+
+If you'd rather build from source, our source tree includes documentation on 
+how to build packages for various
+Linux systems such as [Arch Linux](http://www.archlinux.org), and the 
+debian/ directory contains all the control
 files for building the Debian packages on other architectures or derivatives
 such as [Ubuntu](http://ubuntu.com).
 
@@ -62,11 +69,11 @@ slim (both already available in Debian), and then do:
 
 ### Mac ###
 
-A preliminary [Mac OS X package](mac/AltosUI.pkg) that is compatible with 
+A [Mac OS X package](Altos-Mac.zip) that is compatible with 
 versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is now 
-available for testing.  
+available.  
 
 ### Windows ###
 
-Coming soon!
+A [Windows package](Altos-Windows.zip) is now available.
 

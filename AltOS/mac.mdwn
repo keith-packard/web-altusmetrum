@@ -1,1 +1,0 @@
-[[!map pages="AltOS/mac/* and ! AltOS/mac/*/*"]]
