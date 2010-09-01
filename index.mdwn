@@ -1,10 +1,10 @@
 ![Altus Metrum Logo](logo.png)
 
 This is the site where 
-<a href="http://www.gag.com/~bdale">Bdale Garbee </a>
-and friends document work on open hardware and software designs for
+[Bdale Garbee](http://gag.com/~bdale) and 
+[Keith Packard](http://keithp.com/keithp)
+document our work on open hardware and software designs for
 high powered model rocketry avionics solutions.
-Please consider everything here work perpetually in process!
 <p>
 All hardware designs on this site are licensed under the 
 [TAPR](http://www.tapr.org/)
@@ -15,6 +15,13 @@ and all the software is under the
 or compatible licenses.
 
 # [Latest News](News) #
+
+# Where to Buy #
+
+All Altus Metrum products are available from the 
+[Garbee and Garbee](http://auric.gag.com) web 
+store.  [TeleMetrum](TeleMetrum/) starter kits are also now available from 
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp).
 
 # Hobby Rocketry #
 
@@ -63,19 +70,7 @@ the set of hardware projects here.
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
 
-# Where to Buy #
-
-All Altus Metrum products are available from the 
-[Garbee and Garbee](http://auric.gag.com) web 
-store.  [TeleMetrum](TeleMetrum/) starter kits are also now available from 
-[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp).
-
 # [Using Altus Metrum Products](Uses) #
-
-# Participants #
-
-* [Bdale Garbee](http://gag.com/~bdale)
-* [Keith Packard](http://keithp.com/keithp)
 
 # [Presentations](talks) #
 
