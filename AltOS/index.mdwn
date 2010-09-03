@@ -73,7 +73,7 @@ versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is now
 available.  The Mac operating system includes Java, and all Altus Metrum
 products show up as simple USB serial ports, so this should just work
 with no additional drivers or other dependency issues.  Older versions of 
-the Mac operating system come with Java version that are too old for use 
+the Mac operating system come with Java versions that are too old for use 
 with Altus Metrum software, and we know of no way to update the Java version
 other than upgrading to a newer operating system.
 
