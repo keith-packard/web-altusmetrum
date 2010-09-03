@@ -13,8 +13,10 @@ In addition to the firmware for [TeleMetrum](../TeleMetrum) and
 number of utilities useful for monitoring and logging telemetry during flight,
 post-processing flight data for analysis, and utilities for updating firmware,
 and developing and debugging new functionality.  The first generation of these
-utilities were Linux-only, but we are gradually evolving the code to work
-across multiple platforms, including Mac and Windows systems.
+utilities were Linux-only, but our current second-generation software written
+largely in [Java](http://java.com) with a small platform-specific library on 
+each supported operating system works absolutely identically on Windows, Mac, 
+and Linux systems!
 
 ## Features ##
 
@@ -44,7 +46,13 @@ If you use [Debian](http://www.debian.org), then a pre-built package for
 
 If you use some other distribution of Linux, then 
 a [Linux package](Altos-Linux.tgz) of our second-generation Java bits that 
-should run on any distribution with a modern Java version is also available.
+should run on any distribution with a modern Java version is also 
+available.  Unlike the Debian pacakge, which depends on various libraries
+already part of the Debian distribution, this package includes a "fat" jar
+file with all of the Java libraries that aren't part of the basic Java runtime
+environment included, so it should "just work" on any system with Java 6.  
+Development and testing is done with OpenJDK 6, but current downloads from 
+[java.com](http://java.com) should be fine too.
 
 If you'd rather build from source, our source tree includes documentation on 
 how to build packages for various
@@ -71,9 +79,24 @@ slim (both already available in Debian), and then do:
 
 A [Mac OS X package](Altos-Mac.zip) that is compatible with 
 versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is now 
-available.  
+available.  The Mac operating system includes Java, and all Altus Metrum
+products show up as simple USB serial ports, so this should just work
+with no additional drivers or other dependency issues.  Older versions of 
+the Mac operating system come with Java version that are too old for use 
+with Altus Metrum software, and we know of no way to update the Java version
+other than upgrading to a newer operating system.
 
 ### Windows ###
 
-A [Windows package](Altos-Windows.zip) is now available.
+Our [Windows package](Altos-Windows.zip) is known to work on XP and 
+32-bit Windows 7 Enterprise.  If you don't already have Java installed, 
+download and install a current Java 6 version from [java.com](http://java.com)
+first.  Then download our zip and extract the files.  Windows already has 
+the required USB serial device driver, but you will probably need to manually
+point to the telemetrum.inf file included in the download when you first plug 
+in an Altus Metrum device to "train" Windows to know that it's ok to use the 
+existing driver to support our products.  Once that's taken care of, just
+clicking on the 'altosui' program should work to launch the user interface.
+Reports of success or failure with other versions of Windows would be 
+appreciated!
 
