@@ -44,9 +44,9 @@ should run on any distribution with a modern Java version is also
 available.  Unlike the Debian pacakge, which depends on various libraries
 already part of the Debian distribution, this package includes a "fat" jar
 file with all of the Java libraries that aren't part of the basic Java runtime
-environment included, so it should "just work" on any system with Java 6.  
-Development and testing is done with OpenJDK 6, but current downloads from 
-[java.com](http://java.com) should be fine too.
+environment included, so it should "just work" on any system with 
+Java 6.  Development and testing is done with OpenJDK 6, but current 
+downloads from [java.com](http://java.com) should be fine too.
 
 If you'd rather build from source, our source tree includes documentation on 
 how to build packages for various
@@ -63,11 +63,8 @@ other machines and which is ideally suited for machines dedicated to AltOS
 ground station use.  It includes a photo of a drag-race between 
 nearly-identical rockets
 built by Keith and Bdale, that was the first time either of us gave TeleMetrum
-complete control of a rocket flight without some other backup!  This theme is 
-available in the same repository, to install it just install either gdm or
-slim (both already available in Debian), and then do:
-
-	apt-get install altusmetrum-themes
+complete control of a rocket flight without some other backup!  See the theme/
+directory in the source tree (the themes are included in the Debian package).
 
 ### Mac ###
 
