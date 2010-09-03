@@ -63,7 +63,7 @@ other machines and which is ideally suited for machines dedicated to AltOS
 ground station use.  It includes a photo of a drag-race between 
 nearly-identical rockets
 built by Keith and Bdale, that was the first time either of us gave TeleMetrum
-complete control of a rocket flight without some other backup!  See the theme/
+complete control of a rocket flight without some other backup!  See the themes/
 directory in the source tree (the themes are included in the Debian package).
 
 ### Mac ###
