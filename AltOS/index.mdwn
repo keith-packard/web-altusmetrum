@@ -21,8 +21,7 @@ most operations in the second-generation GUI are pretty easy to figure out.
 
 ### Developer View ###
 
-* Licenses
-	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+* The firmware and associated software are licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 ## Artifacts ##
 
