@@ -101,7 +101,8 @@ appreciated!
 	- [Windows Installer](releases/0.7.1/Altos-Windows.exe)
 	- [Mac OS X Package](releases/0.7.1/Altos-Mac.zip)
 	- [Linux](releases/0.7.1/Altos-Linux.tgz)
-	- [Source Tag](http://git.gag.com/?p=fw/altos;a=tree;h=refs/tags/0.7.1)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.7.1;sf=tgz)
+
 - old
 	- [Windows Installer](releases/old/Altos-Windows.exe)
 	- [Mac OS X Package](releases/old/Altos-Mac.zip)
