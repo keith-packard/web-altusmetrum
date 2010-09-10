@@ -16,7 +16,7 @@ works identically on Windows, Mac, and Linux systems!
 
 ### User View ###
 
-Documentation is coming soon, but in the meantime, 
+More documentation is coming soon, but in the meantime, 
 most operations in the second-generation GUI are pretty easy to figure out.
 
 ### Developer View ###
@@ -28,7 +28,9 @@ most operations in the second-generation GUI are pretty easy to figure out.
 The source is available from [git.gag.com](http://git.gag.com) in the project 
 [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
 
-### Linux ###
+### Pre-Built Binary Packages by Platform ###
+
+#### Linux ####
 
 If you use [Debian](http://www.debian.org), then a pre-built package for 
 32-bit x86 is currently available here:
@@ -39,7 +41,8 @@ If you use [Debian](http://www.debian.org), then a pre-built package for
 	apt-get install altos
 
 If you use some other distribution of Linux, then 
-a [Linux package](Altos-Linux.tgz) of our second-generation Java bits that 
+a [Linux package](releases/current/Altos-Linux.tgz) of our 
+second-generation Java bits that 
 should run on any distribution with a modern Java version is also 
 available.  Unlike the Debian pacakge, which depends on various libraries
 already part of the Debian distribution, this package includes a "fat" jar
@@ -68,7 +71,7 @@ directory in the source tree (the themes are included in the Debian package).
 
 ### Mac ###
 
-A [Mac OS X package](Altos-Mac.zip) that is compatible with 
+A [Mac OS X package](releases/current/Altos-Mac.zip) that is compatible with 
 versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is now 
 available.  The Mac operating system includes Java, and all Altus Metrum
 products show up as simple USB serial ports, so this should just work
@@ -79,7 +82,8 @@ other than upgrading to a newer operating system.
 
 ### Windows ###
 
-Our [Windows package](Altos-Windows.zip) is known to work on XP and 
+Our [Windows package](releases/current/Altos-Windows.zip) is 
+known to work on XP and 
 32-bit Windows 7 Enterprise.  If you don't already have Java installed, 
 download and install a current Java 6 version from [java.com](http://java.com)
 first.  Then download our zip and extract the files.  Windows already has 
@@ -91,3 +95,4 @@ clicking on the 'altosui' program should work to launch the user interface.
 Reports of success or failure with other versions of Windows would be 
 appreciated!
 
+### [All Pre-Built Binary Packages](releases/) ###
