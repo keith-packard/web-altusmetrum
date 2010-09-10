@@ -14,7 +14,7 @@ works identically on Windows, Mac, and Linux systems!
 
 The firmware and associated software are licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
-### Available Versions ###
+## Available Versions ##
 
 - 0.7.1, released 9 Sep 2010
 	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
