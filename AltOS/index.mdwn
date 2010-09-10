@@ -98,10 +98,10 @@ appreciated!
 ### Pre-Built Binary Packages ###
 
 - 0.7.1
-	- [Windows Installer](release/0.7.1/Altos-Windows.exe)
-	- [Mac OS X Package](release/0.7.1/Altos-Mac.zip)
-	- [Linux](release/0.7.1/Altos-Linux.tgz)
+	- [Windows Installer](releases/0.7.1/Altos-Windows.exe)
+	- [Mac OS X Package](releases/0.7.1/Altos-Mac.zip)
+	- [Linux](releases/0.7.1/Altos-Linux.tgz)
 - old
-	- [Windows Installer](release/old/Altos-Windows.exe)
-	- [Mac OS X Package](release/old/Altos-Mac.zip)
-	- [Linux](release/old/Altos-Linux.tgz)
+	- [Windows Installer](releases/old/Altos-Windows.exe)
+	- [Mac OS X Package](releases/old/Altos-Mac.zip)
+	- [Linux](releases/old/Altos-Linux.tgz)
