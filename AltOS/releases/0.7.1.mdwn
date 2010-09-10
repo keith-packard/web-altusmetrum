@@ -1,1 +1,5 @@
-[[!map pages="AltOS/releases/0.7.1/* and ! AltOS/releases/0.7.1/*/*"]]
+- 0.7.1, released 9 Sep 2010
+	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
+	- [Mac OS X Package](releases/0.7.1/Altos-Mac-0.7.1.zip)
+	- [Linux](releases/0.7.1/Altos-Linux-0.7.1.tar.bz2)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.7.1;sf=tgz)

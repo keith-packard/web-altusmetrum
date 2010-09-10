@@ -16,11 +16,7 @@ The firmware and associated software are licensed [GPL version 2](http://www.gnu
 
 ## Available Versions ##
 
-- 0.7.1, released 9 Sep 2010
-	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
-	- [Mac OS X Package](releases/0.7.1/Altos-Mac-0.7.1.zip)
-	- [Linux](releases/0.7.1/Altos-Linux-0.7.1.tar.bz2)
-	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.7.1;sf=tgz)
+[[!inline pages="releases/*.mdwn"]]
 
 The latest source is always available from [git.gag.com](http://git.gag.com) 
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
