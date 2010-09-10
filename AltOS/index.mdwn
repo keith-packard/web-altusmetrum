@@ -95,4 +95,13 @@ clicking on the 'altosui' program should work to launch the user interface.
 Reports of success or failure with other versions of Windows would be 
 appreciated!
 
-### [All Pre-Built Binary Packages](releases/) ###
+### Pre-Built Binary Packages ###
+
+- 0.7.1
+	- [Windows Installer](release/0.7.1/Altos-Windows.exe)
+	- [Mac OS X Package](release/0.7.1/Altos-Mac.zip)
+	- [Linux](release/0.7.1/Altos-Linux.tgz)
+- old
+	- [Windows Installer](release/old/Altos-Windows.exe)
+	- [Mac OS X Package](release/old/Altos-Mac.zip)
+	- [Linux](release/old/Altos-Linux.tgz)
