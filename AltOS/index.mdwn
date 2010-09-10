@@ -6,7 +6,7 @@ AltOS is the name of Keith's firmware "operating system" for
 In addition to the firmware for [TeleMetrum](../TeleMetrum) and 
 [TeleDongle](../TeleDongle) boards, the AltOS source tree also includes a
 number of utilities useful for monitoring and logging telemetry during flight,
-post-processing flight data for analysis, and utilities for updating firmware,
+post-processing flight data for analysis, plus utilities for updating firmware,
 and developing and debugging new functionality.  The first generation of these
 utilities were Linux-only, but our current second-generation software written
 largely in [Java](http://java.com) with a small platform-specific library 
