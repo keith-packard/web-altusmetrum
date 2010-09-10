@@ -16,7 +16,7 @@ The firmware and associated software are licensed [GPL version 2](http://www.gnu
 
 ## Available Versions ##
 
-[[!inline pages="./releases/*.mdwn and !*/Discussion" show="10"
+[[!inline pages="./releases/* and !*/Discussion and !*.bz2 and !*.zip and !*.exe" show="10"
 actions=no ]]
 
 The latest source is always available from [git.gag.com](http://git.gag.com) 
