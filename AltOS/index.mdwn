@@ -16,7 +16,7 @@ The firmware and associated software are licensed [GPL version 2](http://www.gnu
 
 ## Available Versions ##
 
-[[!inline pages="releases/*" show=10 raw="yes"]]
+[[!inline pages="./releases/*" show=10 raw="yes"]]
 
 The latest source is always available from [git.gag.com](http://git.gag.com) 
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
