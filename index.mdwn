@@ -63,7 +63,7 @@ the set of hardware projects here.
 * [TelePyro](TelePyro/) is a planned 8-channel pyro expansion board for 
 [TeleMetrum](TeleMetrum/).
 
-* [TeleTerra](TeleTerra) is a  planned hand-held ground station for use with 
+* [TeleTerra](TeleTerra) is a planned hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/).
 
 * [AltusMetrum](AltusMetrum/)
