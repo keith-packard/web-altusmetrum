@@ -86,11 +86,9 @@ other than upgrading to a newer operating system.
 Our Windows package is known to work on at least some flavors of XP, Vista, and 
 Windows 7 Enterprise. If you don't already have Java installed, 
 download and install a current Java 6 version from [java.com](http://java.com)
-first.  Then download our zip and extract the files.  Windows already has 
-the required USB serial device driver, but you will probably need to manually
-point to the telemetrum.inf file included in the download when you first plug 
-in an Altus Metrum device to "train" Windows to know that it's ok to use the 
-existing driver to support our products.  Once that's taken care of, just
-clicking on the 'altosui' program should work to launch the user interface.
-Reports of success or failure with other versions of Windows would be 
-appreciated!
+first.  Then download our installer and run it.  Windows already has 
+the required USB serial device driver, and our package should do the right
+things to bind it to our devices, but if you get a complaint about the device
+being unrecognized, try pointing to the copy of the telemetrum.inf file 
+included in the package directory manually.  Reports of success or failure 
+with other versions of Windows would be appreciated!
