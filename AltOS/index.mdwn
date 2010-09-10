@@ -41,10 +41,9 @@ If you use [Debian](http://www.debian.org), then a pre-built package for
 	apt-get install altos
 
 If you use some other distribution of Linux, then 
-a [Linux package](releases/current/Altos-Linux.tgz) of our 
-second-generation Java bits that 
+a Linux package of our second-generation Java bits that 
 should run on any distribution with a modern Java version is also 
-available.  Unlike the Debian pacakge, which depends on various libraries
+available below.  Unlike the Debian pacakge, which depends on various libraries
 already part of the Debian distribution, this package includes a "fat" jar
 file with all of the Java libraries that aren't part of the basic Java runtime
 environment included, so it should "just work" on any system with 
@@ -71,9 +70,9 @@ directory in the source tree (the themes are included in the Debian package).
 
 ### Mac ###
 
-A [Mac OS X package](releases/current/Altos-Mac.zip) that is compatible with 
-versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is now 
-available.  The Mac operating system includes Java, and all Altus Metrum
+A Mac OS X package that is compatible with 
+versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is 
+available below.  The Mac operating system includes Java, and all Altus Metrum
 products show up as simple USB serial ports, so this should just work
 with no additional drivers or other dependency issues.  Older versions of 
 the Mac operating system come with Java versions that are too old for use 
@@ -82,9 +81,8 @@ other than upgrading to a newer operating system.
 
 ### Windows ###
 
-Our [Windows package](releases/current/Altos-Windows.zip) is 
-known to work on XP and 
-32-bit Windows 7 Enterprise.  If you don't already have Java installed, 
+Our Windows package is known to work on at least some flavors of XP, Vista, and 
+Windows 7 Enterprise. If you don't already have Java installed, 
 download and install a current Java 6 version from [java.com](http://java.com)
 first.  Then download our zip and extract the files.  Windows already has 
 the required USB serial device driver, but you will probably need to manually
@@ -98,12 +96,7 @@ appreciated!
 ### Available Versions ###
 
 - 0.7.1
-	- [Windows Installer](releases/0.7.1/Altos-Windows.exe)
-	- [Mac OS X Package](releases/0.7.1/Altos-Mac.zip)
-	- [Linux](releases/0.7.1/Altos-Linux.tgz)
+	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
+	- [Mac OS X Package](releases/0.7.1/Altos-Mac-0.7.1.zip)
+	- [Linux](releases/0.7.1/Altos-Linux-0.7.1.tar.bz2)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.7.1;sf=tgz)
-
-- old
-	- [Windows Installer](releases/old/Altos-Windows.exe)
-	- [Mac OS X Package](releases/old/Altos-Mac.zip)
-	- [Linux](releases/old/Altos-Linux.tgz)
