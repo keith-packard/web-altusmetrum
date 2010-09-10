@@ -12,25 +12,27 @@ utilities were Linux-only, but our current second-generation software written
 largely in [Java](http://java.com) with a small platform-specific library 
 works identically on Windows, Mac, and Linux systems!
 
-## Features ##
+The firmware and associated software are licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
-### User View ###
+### Available Versions ###
 
-More documentation is coming soon, but in the meantime, 
-most operations in the second-generation GUI are pretty easy to figure out.
-
-### Developer View ###
-
-* The firmware and associated software are licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-
-## Artifacts ##
+- 0.7.1, released 9 Sep 2010
+	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
+	- [Mac OS X Package](releases/0.7.1/Altos-Mac-0.7.1.zip)
+	- [Linux](releases/0.7.1/Altos-Linux-0.7.1.tar.bz2)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.7.1;sf=tgz)
 
 The source is available from [git.gag.com](http://git.gag.com) in the project 
 [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
 
-### Pre-Built Binary Packages by Platform ###
+## Features ##
 
-#### Linux ####
+More documentation is coming soon, but in the meantime, 
+most operations in the second-generation GUI are pretty easy to figure out.
+
+## Platform Specific Notes ##
+
+### Linux ###
 
 If you use [Debian](http://www.debian.org), then a pre-built package for 
 32-bit x86 is currently available here:
@@ -92,11 +94,3 @@ existing driver to support our products.  Once that's taken care of, just
 clicking on the 'altosui' program should work to launch the user interface.
 Reports of success or failure with other versions of Windows would be 
 appreciated!
-
-### Available Versions ###
-
-- 0.7.1, released 9 Sep 2010
-	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
-	- [Mac OS X Package](releases/0.7.1/Altos-Mac-0.7.1.zip)
-	- [Linux](releases/0.7.1/Altos-Linux-0.7.1.tar.bz2)
-	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.7.1;sf=tgz)
