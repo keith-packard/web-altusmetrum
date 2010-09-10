@@ -45,7 +45,7 @@ If you use [Debian](http://www.debian.org), then a pre-built package for
 If you use some other distribution of Linux, then 
 a Linux package of our second-generation Java bits that 
 should run on any distribution with a modern Java version is also 
-available below.  Unlike the Debian pacakge, which depends on various libraries
+available.  Unlike the Debian pacakge, which depends on various libraries
 already part of the Debian distribution, this package includes a "fat" jar
 file with all of the Java libraries that aren't part of the basic Java runtime
 environment included, so it should "just work" on any system with 
@@ -74,7 +74,7 @@ directory in the source tree (the themes are included in the Debian package).
 
 A Mac OS X package that is compatible with 
 versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is 
-available below.  The Mac operating system includes Java, and all Altus Metrum
+available.  The Mac operating system includes Java, and all Altus Metrum
 products show up as simple USB serial ports, so this should just work
 with no additional drivers or other dependency issues.  Older versions of 
 the Mac operating system come with Java versions that are too old for use 
