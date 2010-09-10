@@ -1,4 +1,3 @@
-# testing #
 - 0.7.1, released 9 Sep 2010
 	- [Windows Installer](releases/0.7.1/Altos-Windows-0-7-1.exe)
 	- [Mac OS X Package](releases/0.7.1/Altos-Mac-0.7.1.zip)
