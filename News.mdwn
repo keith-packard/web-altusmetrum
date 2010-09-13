@@ -1,4 +1,4 @@
-[[!inline pages="internal(blog/*/*)"]]
+[[!inline pages="internal(blog/*)"]]
 
 ---
 
