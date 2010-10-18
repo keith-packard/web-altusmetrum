@@ -119,26 +119,28 @@ of the files for Production PCB version 1.0 in more easily readable form.
 * [pcb artwork](v1.0/telemetrum.pcb.pdf)
 * [bill of materials](v1.0/partslist.csv)
 
-Our [AltOS](../AltOS) firmware works well enough that we now routinely fly 
-TeleMetrum with no backup.  Rockets with v0.1 boards have exceeded 50g 
-acceleration, been above Mach 1, and reached altitudes greater 
-than 12k feet AGL with great results.  Keith's ground station program 
-called ao-view logs telemetry to disk, displays current and max values for 
-key parameters during flight, and even includes voice synthesis 
-during the flight so that our eyes can stay on the rockets!  We have post
-flight analysis software that makes it easy to extract data from the board,
-analyze it, and even generate KML files for viewing flights in GoogleEarth!
-More details on the software, including full source code and pre-built packages
+We now consider our [AltOS](../AltOS) firmware completely reliable, and we 
+now routinely fly TeleMetrum with no backup.  Rockets with TeleMetrum boards 
+have exceeded 50g acceleration, been well above Mach 1, and reached altitudes 
+greater than 25k feet AGL with great results.  Keith's second generation 
+ground station program called altosui works on Windows, Mac, and Linux systems
+and logs telemetry to disk, displays current and max values for key parameters 
+during flight, and even includes voice synthesis during the flight so that 
+our eyes can stay on the rockets!  After flight, altosui can extract the 
+complete flight log from TeleMetrum, can display plots of the data from either
+the telemetry received by radio or the onboard flight log, can output a kml 
+file for use with [Google Earth](http://earth.google.com), and can also 
+output all the flight data as a csv file for easy import to spreadsheet 
+programs or other analysis tools allowing you to perform whatever
+custom analysis you can envision!  More details on the software, 
+including full source code and pre-built packages
 can be found on the [AltOS](../AltOS) page on this site.
 
 ## Future Plans ##
 
-As of May 2010, version v1.0 is available for sale from the
-[Garbee and Garbee](http://auric.gag.com) web store.
-
-Because we understand that not everyone uses Linux, development of a new
-cross-platform ground station program written in Java is underway for use with 
-[AltOS](../AltOS).
+TeleMetrum v1.0 meets all of our expectations.  We anticipate another
+production run of boards soon, which will include minor design tweeks mostly
+to work around component availability issues.
 
 ## Problems ##
 
