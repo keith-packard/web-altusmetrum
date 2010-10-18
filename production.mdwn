@@ -149,6 +149,13 @@ Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2
 to be SPI memory chip select, R14 and R15 loaded with 100k, 27k tacked 
 from each to ground.
 
+Modified 2010.10.18:
+
+* R10 changed to 27k to allow keithp to test use of 1.25V ADC internal 
+  reference with the accelerometer
+
+Delivered to keithp on 2010.10.19.
+
 ## sn 15 ##
 
 Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
