@@ -119,8 +119,8 @@ of the files for Production PCB version 1.0 in more easily readable form.
 * [pcb artwork](v1.0/telemetrum.pcb.pdf)
 * [bill of materials](v1.0/partslist.csv)
 
-We now consider our [AltOS](../AltOS) firmware completely reliable, and we 
-now routinely fly TeleMetrum with no backup.  Rockets with TeleMetrum boards 
+We consider our [AltOS](../AltOS) firmware completely reliable, and routinely 
+fly TeleMetrum with no backup.  Rockets with TeleMetrum boards 
 have exceeded 50g acceleration, been well above Mach 1, and reached altitudes 
 greater than 25k feet AGL with great results.  Keith's second generation 
 ground station program called altosui works on Windows, Mac, and Linux systems
