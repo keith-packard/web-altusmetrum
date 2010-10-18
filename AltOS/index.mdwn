@@ -23,8 +23,85 @@ in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).
 
 ## Features ##
 
-More documentation is coming soon, but in the meantime, 
-most operations in the second-generation GUI are pretty easy to figure out.
+Version 0.7.1 is the first release containing our new cross-platform Java-based user interface. AltosUI can:
+
+* Receive and log telemetry from a connected TeleDongle device. All data 
+  received is saved to log files named with the current date and the connected 
+  rocket serial and flight numbers. There is no mode in which telemetry data 
+  will not be saved.
+
+* Download logged data from TeleMetrum devices, either through a direct USB 
+  connection or over the air through a TeleDongle device.
+
+* Configure a TeleMetrum device, setting the radio channel, callsign, apogee 
+  delay and main deploy height. This can be done through either a USB 
+  connection or over a radio link via a TeleDongle device.
+
+* Replay a flight in real-time. This takes a saved telemetry log or eeprom 
+  download and replays it through the user interface so you can relive your 
+  favorite rocket flights.
+
+* Reprogram Altus Metrum devices. Using an Altus Metrum device connected via 
+  USB, another Altus Metrum device can be reprogrammed using the supplied 
+  programming cable between the two devices.
+
+* Export Flight data to a comma-separated-values file. This takes either 
+  telemetry or on-board flight data and generates data suitable for use in 
+  external applications. All data is exported using standard units so that no 
+  device-specific knowledge is needed to handle the data.
+
+* Speak to you during the flight. Instead of spending the flight hunched over 
+  your laptop looking at the screen, enjoy the view while the computer tells 
+  you what’s going on up there. During ascent, you hear the current flight 
+  state and altitude information. During descent, you get azimuth, elevation 
+  and range information to try and help you find your rocket in the air. Once 
+  on the ground, the direction and distance are reported.
+
+AltosUI provides all of these features on the three target operating systems, 
+Linux, Mac OS X (version 10.5 or newer) and Windows (XP, Vista or 7). The bulk 
+of the software is written in Java and is built once and tested and delivered 
+on all three target platforms. A tiny ‘shim’ library is built on each system 
+to provide access to the Altus Metrum devices connected over the USB link.
+
+## Future Plans ##
+
+A number of features are implemented or in process in the sources available
+in our publicly visible repository that are not part of the current stable
+release.  Some of these features are already available in our C utilities, 
+but not yet part of our second-generation Java user interface altosui.
+
+* [Google Earth](http://earth.google.com) "KML" file export.  The 
+  first-generation C program ao-postflight can do this, the implementation 
+  in altosui has improvements.
+
+* Data plotting.  The first-generation C program ao-postflight can output a
+  set of standard plots as an svg file.  The plotting code we're integrating 
+  into altosui supports direct interaction with the data and is much more fun!
+
+* State-dependent display. When the rocket is on the pad, you mostly want to 
+  know if it’s ready to fly. When the rocket is descending on a chute, you 
+  want to know where it is in the sky and how fast its falling. Presenting a 
+  limited amount of information that represents what is most interesting to 
+  the user at any given time should make the display easier to read.
+
+* Ejection charge testing. The TeleMetrum firmware has the ability to be
+  commanded to fire ejection charges over the USB or radio links. Safely 
+  hooking this up to the user interface will allow for wireless ejection 
+  system testing.  It is possible to do this today with a terminal program,
+  but we want this to be a feature in altosui.  The key here is “safely”, of 
+  course, which means figuring out a ‘fool proof’ user interface.
+
+* A Kalman-filter based approach to apogee detection using more than just the
+  baro sensor, so that we can safely control apogee ejection on flights to
+  altitudes beyond the range of our baro sensor alone.  Unlike the other items
+  on the list, this will be a significant change to the in-rocket TeleMetrum
+  firmware.  It may therefore be a while before this becomes part of a stable 
+  firmware release.
+
+There are any number of additions that could be made to this list; feel free 
+to send along ideas that you’ve got. Of course, all of this software is 
+licensed under the GNU General Public License, so you can get the source and 
+hack on it in the comfort of your own home.
 
 ## Platform Specific Notes ##
 
