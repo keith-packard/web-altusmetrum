@@ -2,6 +2,8 @@
 
 This is a hand-held ground station for [TeleMetrum](../TeleMetrum/).
 
+<img src="v0.1/teleterra.jpg">
+
 ## Motivation ##
 
 While using a [TeleDongle](../TeleDongle/) board as a USB to RF interface to 
@@ -14,12 +16,15 @@ easy to carry during recovery operations, so much the better!
 
 ### User View ###
 
-* Hand-held unit about the size of a calculator with 4 line 20 character LCD
-* Antenna for the telemetry stream from [TeleMetrum](../TeleMetrum/)
-* Integrated GPS receiver core to allow display of current user position,
-and relative position of GPS-equipped rockets
+* Hand-held unit about the size of a calculator 
+* 4 line by 20 character text LCD
+* "joyswitch" for user input (up, down, left, right, push)
+* Antenna connector for the telemetry stream from [TeleMetrum](../TeleMetrum/)
+* Integrated GPS receiver and antenna to allow display of current user 
+  position, and relative position of GPS-equipped rockets
+* Audio amplifier and speaker for voice status updates
 * Integrated rechargable battery
-* USB interface for configuration and power 
+* USB interface for configuration, power, and flight log extraction
 
 ### Developer View ###
 
@@ -27,8 +32,8 @@ and relative position of GPS-equipped rockets
 	* equivalent of a [TeleMetrum](../TeleMetrum/) less the sensors
 	* [Atmel ATtiny48](http://www.atmel.com/dyn/products/product_card_v2.asp?PN=ATtiny48) used as an I/O expander
 	* 4 line, 20 character transreflective text LCD display
-	* "joystick" switch for user inputs
-* LiPo battery
+	* multi-directional switch for user inputs
+* 2Ah LiPo battery for all-day use
 * Software Features (planned)
 	* [AltOS](../AltOS) for the cc1111 and simple C for the AVR
 * Tools Used
@@ -43,6 +48,13 @@ None yet!
 
 ## Artifacts ##
 
-A tentative schematic exists at
+Schematics and PCB artwork exist at
 [git.gag.com](http://git.gag.com) in the project
-[hw/teleterra](http://git.gag.com/?p=hw/teleterra;a=summary).
+[hw/teleterra](http://git.gag.com/?p=hw/teleterra;a=summary).  
+
+## Future Plans ##
+
+As of 23 October 2010, v0.1 circuit boards and a matching paste mask are 
+out for fab.  With any luck, we hope to have a couple prototypes working by
+the end of calendar 2010.
+
