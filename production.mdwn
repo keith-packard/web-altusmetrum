@@ -164,6 +164,10 @@ Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 
 Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 
+## sn 25-26 ##
+
+Full load of TeleTerra v0.1 PCBs on 2010.10.31
+
 ## sn 51 ##
 
 Full load of TeleMetrum v0.2 PCB on 2010.01.09, with 100g accel and screw 
