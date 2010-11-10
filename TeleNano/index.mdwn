@@ -1,0 +1,56 @@
+# TeleNano
+
+This is an extremely small, baro-only recording altimeter for 
+high power model rocketry with integrated telemetry link.  
+
+## Motivation ##
+
+We hope with TeleNano to deliver an interesting "introductory" product 
+in a different price category than our flagship products like 
+[TeleMetrum](../TeleMetrum).  The combination of a baro altimeter and
+radio direction finding ability in a super-tiny package seems like it
+might be fun even for [Estes](http://www.estesrockets.com/) sized rockets!
+
+## Features ##
+
+### User View ###
+
+* Recording altimeter for model rocketry
+* 70cm ham-band transceiver for telemetry downlink
+* Barometric pressure sensor good to 45k feet MSL
+* Designed to use a single LiPo rechargeable battery
+* 1.0 x 0.5 inch board designed to fit inside 18mm airframe coupler tube
+
+### Developer View ###
+
+* Hardware Features
+	* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
+		* Sub-1Ghz transceiver
+		* 8051 MCU
+		* 32k Flash
+		* 4k RAM
+		* USB 2.0
+		* 6 12-bit analog inputs (11 bits with single-ended sensors)
+		* 2 channels of serial I/O
+		* digital I/O
+	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
+* Software Features
+	* Written mostly in C with some 8051 assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
+		upper blocks of on-chip flash
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+The design files can be found on [git.gag.com](http://git.gag.com) in the 
+project [hw/telenano](http://git.gag.com/?p=hw/telenano;a=summary).  
+
+## Future Plans ##
+
+We need to build and evaluate some prototypes, and review costing, before 
+deciding whether this design will go into production.
