@@ -21,6 +21,12 @@ The firmware and associated software are licensed [GPL version 2](http://www.gnu
 The latest source is always available from [git.gag.com](http://git.gag.com) 
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
 
+If you need to debug code on an Altus Metrum product, you may want the special
+version of SDCC containing a highly modified sdcdb with support for the cc1111
+debugging interface, which you can find on [git.gag.com](http://git.gag.com) 
+in the project [fw/sdcc](http://git.gag.com/?p=fw/sdcc;a=summary).  This is
+not necessary if you just want to rebuild AltOS and use it.
+
 ## Features ##
 
 Version 0.7.1 is the first release containing our new cross-platform Java-based user interface. AltosUI can:
