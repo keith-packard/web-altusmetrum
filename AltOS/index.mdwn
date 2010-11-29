@@ -25,10 +25,11 @@ in [html](doc/altusmetrum.html) and [pdf](doc/altusmetrum.pdf) formats.
 
 [[!inline pages="./releases/* and !*/Discussion and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
-The latest source is always available from [git.gag.com](http://git.gag.com) 
+The latest source, which may include unreleased work in progress, is always 
+available from [git.gag.com](http://git.gag.com) 
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
 
-If you need to debug code on an Altus Metrum product, you may want the special
+If you need to debug code on an Altus Metrum product, you may want our special
 version of SDCC containing a highly modified sdcdb with support for the cc1111
 debugging interface, which you can find on [git.gag.com](http://git.gag.com) 
 in the project [fw/sdcc](http://git.gag.com/?p=fw/sdcc;a=summary).  This is
