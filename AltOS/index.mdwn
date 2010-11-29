@@ -3,16 +3,20 @@
 AltOS is the name of Keith's firmware "operating system" for 
 [TeleMetrum](../TeleMetrum/) and [TeleDongle](../TeleDongle/).
 
-In addition to the firmware for [TeleMetrum](../TeleMetrum) and 
-[TeleDongle](../TeleDongle) boards, the AltOS source tree also includes a
-number of utilities useful for monitoring and logging telemetry during flight,
-post-processing flight data for analysis, plus utilities for updating firmware,
-and developing and debugging new functionality.  The first generation of these
-utilities were Linux-only, but our current second-generation software written
-largely in [Java](http://java.com) with a small platform-specific library 
-works identically on Windows, Mac, and Linux systems!
+In addition to the firmware for [TeleMetrum](../TeleMetrum) and
+[TeleDongle](../TeleDongle) boards, the AltOS source tree also
+includes AltosUI, which provides for flight monitoring, post-flight
+analysis, device configuration and firmware updating. AltosUI runs on
+Linux, Mac OS X and Windows. It's written in [Java](http://java.com)
+and offers the same functionality and interface on all three
+platforms. A small platform-specific library communicates with the USB
+interface on the Altus Metrum devices.
 
-The firmware and associated software are licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+There are also Linux-specific tools that provide lower level access to
+the devices which are useful for developing firmware for the devices.
+
+The firmware and associated software are licensed [GPL version
+2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 ## Available Versions ##
 
@@ -30,7 +34,49 @@ debugging interface, which you can find on [git.gag.com](http://git.gag.com)
 in the project [fw/sdcc](http://git.gag.com/?p=fw/sdcc;a=summary).  This is
 not necessary if you just want to rebuild AltOS and use it.
 
-## Features ##
+### Version 0.8 Features ###
+
+Version 0.8 offers a major upgrade in the AltosUI
+interface. Significant new features include:
+
+* Post-flight graphing tool. This lets you explore the behaviour of
+  your rocket after flight with a scroll-able and zoom-able chart
+  showing the altitude, speed and acceleration of the airframe along
+  with events recorded by the flight computer. You can export graphs
+  to PNG files, or print them directly.
+
+* Real-time moving map which overlays the in-progress flight on
+  satellite imagery fetched from
+  [Google Maps](http://maps.google.com). This lets you see in pictures
+  where your rocket has landed, allowing you to plan recovery
+  activities more accurately.
+
+* Wireless recovery system testing. Prep your rocket for flight and test
+  fire the deployment charges to make sure things work as
+  expected. All without threading wires through holes in your
+  airframe.
+
+* Optimized flight status displays. Each flight state now has it's own
+  custom 'tab' in the flight monitoring window so you can focus on the
+  most important details. Pre-flight, the system shows a set of
+  red/green status indicators for battery voltage, apogee/main igniter
+  continutity and GPS reception. Wait until they're all green and your
+  rocket is ready for flight. There are also tabs for ascent, descent,
+  landing and 
+
+* Monitor multiple flights simultaneously. If you have more than one
+  TeleDongle, you can monitor a flight with each one on the same
+  computer.
+
+* Automatic flight monitoring at startup. Plug TeleDongle into the
+  machine before starting AltosUI and it will automatically connect to
+  it and prepare to monitor a flight.
+
+* Exports Google Earth flight tracks. Using the Keyhole Markup
+  Language (.kml) file format, this provides a 3D view of your rocket
+  flight through the Google Earth program.
+
+### Version 0.7.1 Features ###
 
 Version 0.7.1 is the first release containing our new cross-platform Java-based user interface. AltosUI can:
 
@@ -76,29 +122,7 @@ to provide access to the Altus Metrum devices connected over the USB link.
 
 A number of features are implemented or in process in the sources available
 in our publicly visible repository that are not part of the current stable
-release.  Some of these features are already available in our C utilities, 
-but not yet part of our second-generation Java user interface altosui.
-
-* [Google Earth](http://earth.google.com) "KML" file export.  The 
-  first-generation C program ao-postflight can do this, the implementation 
-  in altosui has improvements.
-
-* Data plotting.  The first-generation C program ao-postflight can output a
-  set of standard plots as an svg file.  The plotting code we're integrating 
-  into altosui supports direct interaction with the data and is much more fun!
-
-* State-dependent display. When the rocket is on the pad, you mostly want to 
-  know if it’s ready to fly. When the rocket is descending on a chute, you 
-  want to know where it is in the sky and how fast its falling. Presenting a 
-  limited amount of information that represents what is most interesting to 
-  the user at any given time should make the display easier to read.
-
-* Ejection charge testing. The TeleMetrum firmware has the ability to be
-  commanded to fire ejection charges over the USB or radio links. Safely 
-  hooking this up to the user interface will allow for wireless ejection 
-  system testing.  It is possible to do this today with a terminal program,
-  but we want this to be a feature in altosui.  The key here is “safely”, of 
-  course, which means figuring out a ‘fool proof’ user interface.
+release.
 
 * A Kalman-filter based approach to apogee detection using more than just the
   baro sensor, so that we can safely control apogee ejection on flights to
@@ -106,6 +130,20 @@ but not yet part of our second-generation Java user interface altosui.
   on the list, this will be a significant change to the in-rocket TeleMetrum
   firmware.  It may therefore be a while before this becomes part of a stable 
   firmware release.
+
+* Motor characterization. Because TeleMetrum contains a
+  high-resolution, high-frequency accelerometer, it is possible to
+  take the data from that and compute an accurate thrust curve for
+  the motor.
+
+* Comprehensive PDF and/or HTML -based flight report. Construct a
+  complete report of the flight suitable for publication on the web
+  that includes graphs of the flight and details about motor
+  performance etc.
+   
+* Publish flight data to the Altus Metrum web site. This will allow
+  you to share your flight data with others, and let you download
+  flights published by others.
 
 There are any number of additions that could be made to this list; feel free 
 to send along ideas that you’ve got. Of course, all of this software is 
@@ -154,14 +192,16 @@ directory in the source tree (the themes are included in the Debian package).
 
 ### Mac ###
 
-A Mac OS X package that is compatible with 
-versions 10.5 "Leopard" and later (including 10.6 "Snow Leopard") is 
-available.  The Mac operating system includes Java, and all Altus Metrum
-products show up as simple USB serial ports, so this should just work
-with no additional drivers or other dependency issues.  Older versions of 
-the Mac operating system come with Java versions that are too old for use 
-with Altus Metrum software, and we know of no way to update the Java version
-other than upgrading to a newer operating system.
+A Mac OS X package that is compatible with versions 10.5 "Leopard" and
+later (including 10.6 "Snow Leopard") is available.  The Mac operating
+system includes Java, and all Altus Metrum products show up as simple
+USB serial ports, so this should just work with no additional drivers
+or other dependency issues.  Older versions of the Mac operating
+system, and even newer versions for PowerPC-based machines, come with
+Java version 5 or older, which is too old for use with Altus Metrum
+software. We know of no way to update the Java version other than
+upgrading to a newer operating system (for Intel based macs) or
+purchasing new hardware (for PowerPC based macs).
 
 ### Windows ###
 
@@ -172,5 +212,4 @@ first.  Then download our installer and run it.  Windows already has
 the required USB serial device driver, and our package should do the right
 things to bind it to our devices, but if you get a complaint about the device
 being unrecognized, try pointing to the copy of the telemetrum.inf file 
-included in the package directory manually.  Reports of success or failure 
-with other versions of Windows would be appreciated!
+included in the package directory manually.
