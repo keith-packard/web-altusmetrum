@@ -1,0 +1,1 @@
+[[!map pages="AltOS/releases/0.8/* and ! AltOS/releases/0.8/*/*"]]
