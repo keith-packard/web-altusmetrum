@@ -62,7 +62,7 @@ interface. Significant new features include:
   red/green status indicators for battery voltage, apogee/main igniter
   continutity and GPS reception. Wait until they're all green and your
   rocket is ready for flight. There are also tabs for ascent, descent,
-  landing and 
+  landing along with the original tabular view of the data.
 
 * Monitor multiple flights simultaneously. If you have more than one
   TeleDongle, you can monitor a flight with each one on the same
