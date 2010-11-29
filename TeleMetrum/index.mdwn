@@ -8,6 +8,9 @@ Production units are available from the
 store.  TeleMetrum starter kits are also now available from 
 [Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp).
 
+For the latest TeleMetrum firmware and related ground station software, please
+visit the [AltOS](../AltOS) page on this site.
+
 These are photos of our current production version, which includes an 
 integrated GPS receiver with active patch antenna:
 
