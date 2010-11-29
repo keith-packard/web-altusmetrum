@@ -95,9 +95,9 @@ always want GPS on board, which lead to our current second generation boards.
 
 ## Artifacts ##
 
-The user manual for TeleMetrum is available in
-[html](doc/telemetrum-doc.html) and [pdf](doc/telemetrum-doc.pdf)
-formats.
+There is a single manual for TeleMetrum and all other Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com) in the project 

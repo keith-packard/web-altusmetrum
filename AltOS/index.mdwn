@@ -16,6 +16,9 @@ The firmware and associated software are licensed [GPL version 2](http://www.gnu
 
 ## Available Versions ##
 
+There is a single manual for all Altus Metrum products, which is available 
+in [html](doc/altusmetrum.html) and [pdf](doc/altusmetrum.pdf) formats.
+
 [[!inline pages="./releases/* and !*/Discussion and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
 The latest source is always available from [git.gag.com](http://git.gag.com) 
