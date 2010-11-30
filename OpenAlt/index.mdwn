@@ -1,8 +1,8 @@
-# AltusMetrum
+# OpenAlt
 
 This is the design that started it all!  Bdale got frustrated with existing
 commercial altimeters and decided to build his own.  This project was 
-presented in talks at LCA, SCALE, OLS, and Debconf in 2008.
+presented in talks at LCA, SCALE, OLS, and Debconf in 2008.  
 
 Here are photos of the front and back sides of the version 0.1 prototype PCB,
 which was 100% auto-routed on 2 layers using the 

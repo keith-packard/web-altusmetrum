@@ -20,7 +20,7 @@ or compatible licenses.
 
 All Altus Metrum products are available from the 
 [Garbee and Garbee](http://auric.gag.com) web 
-store.  [TeleMetrum](TeleMetrum/) starter kits are also now available from 
+store.  [TeleMetrum](TeleMetrum/) starter kits are also available from 
 [Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp).
 
 # Hobby Rocketry #
@@ -43,7 +43,7 @@ and fly more sophisticated projects, we started to feel limited by the
 existing electronics products available.  OpenAlt was Bdale's first 
 attempt to address this situation with a completely open hardware and software
 design... other project have since followed, and it's cool to have help from
-various friends!
+Keith and other friends!
 
 # Projects #
 
