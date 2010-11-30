@@ -40,7 +40,7 @@ To find more information about the rockets Bdale and his son have built, see
 <p>
 As Bdale and Robert became more experienced in the hobby and started to build
 and fly more sophisticated projects, we started to feel limited by the 
-existing electronics products available.  AltusMetrum was Bdale's first 
+existing electronics products available.  OpenAlt was Bdale's first 
 attempt to address this situation with a completely open hardware and software
 design... other project have since followed, and it's cool to have help from
 various friends!
@@ -66,7 +66,7 @@ the set of hardware projects here.
 * [TeleTerra](TeleTerra) is a planned hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/).
 
-* [AltusMetrum](AltusMetrum/)
+* [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
 
@@ -96,6 +96,12 @@ And if you just can't wait to show your support for our efforts, visit
 our [Cafe Press Logo Shop](http://cafepress.com/altusmetrum) or our
 [Printfection Logo Shop](http://printfection.com/altusmetrum) (we're trying
 to decide which is better, comments welcome!) and buy a t-shirt or sticker!
+
+---
+
+![United States flag](jp_draws_US_Flag.png)
+Altus Metrum products are proudly designed and manufactured in the United 
+States of America.
 
 ---
 
