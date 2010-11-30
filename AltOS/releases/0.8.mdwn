@@ -1,5 +1,0 @@
-- 0.8, released 28 Nov 2010
-	- [Windows Installer](releases/0.8/Altos-Windows-0-8.exe)
-	- [Mac OS X Package](releases/0.8/Altos-Mac-0.8.zip)
-	- [Linux](releases/0.8/Altos-Linux-0.8.tar.bz2)
-	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.8;sf=tgz)
