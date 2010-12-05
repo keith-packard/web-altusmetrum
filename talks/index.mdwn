@@ -14,7 +14,10 @@ flights with v0.1 during the 2009 flying season.
 * The very funny [woot.com video](http://vimeo.com/7467353) we showed at the
   end of the talk, featuring Bdale's big 
   [Goblin](http://www.gag.com/rockets/projects/goblin10/) airframe and a 
-  few, brave, [woot.com](http://woot.com) screaming flying monkey dolls!
+  few, brave, [woot.com](http://woot.com) screaming flying monkey dolls!  Much
+  later, the Woot gang put out a 
+  [video update](http://www.youtube.com/watch?v=-_6sLheu3_U)
+  celebrating the successful recovery of two of the monkeys...
 
 ## LCA 2009 ##
 
