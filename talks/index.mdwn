@@ -11,6 +11,7 @@ Wellington, New Zealand in January 2010.  Includes details of various notable
 flights with v0.1 during the 2009 flying season.
 
 * [Slides](./TM-v0.2-LCA2010.odp)
+* [Video](http://2009.r2.co.nz/20100118/50182.htm)
 * The very funny [woot.com video](http://vimeo.com/7467353) we showed at the
   end of the talk, featuring Bdale's big 
   [Goblin](http://www.gag.com/rockets/projects/goblin10/) airframe and a 
