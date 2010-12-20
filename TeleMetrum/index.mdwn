@@ -28,7 +28,7 @@ operate in the ham radio 70cm band.
 
 One weekend while attending a conference together, we got to wondering if 
 we couldn't adapt one to use as a downlink for the
-[AltusMetrum](../AltusMetrum/) altimeter board in addition to direction
+[OpenAlt](../OpenAlt/) altimeter board in addition to direction
 finding after flight.  That caused us to start thinking about other things
 in the design we might want to tweak, and before long we were working on the
 design of a new tracker board derived from the BeeLine design.
