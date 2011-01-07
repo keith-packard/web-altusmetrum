@@ -186,6 +186,12 @@ Went home with Keith from LCA 2010 in Wellington.
 Full load of TeleMetrum v0.2 PCB on 2010.01.09, with 40g accel and screw 
 terminals.
 
+## sn 54-56 ##
+
+Prototypes of TeleMetrum v1.1 loaded with the newer Venus 638 chips for 
+evalutation, loaded as part of the production v1.1 run by 
+[Advanced Circuits](http://4pcb.com), received 2011.01.06.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 
@@ -195,4 +201,9 @@ First production run of 108 pieces of TeleDongle v0.2 by
 
 First production run of 54 pieces of TeleMetrum v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2010.04.08.
+
+## sn 262-366 ##
+
+Production run of 105 pieces of TeleMetrum v1.1 by
+[Advanced Circuits](http://4pcb.com), received 2011.01.06.
 
