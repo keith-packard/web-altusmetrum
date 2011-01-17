@@ -53,7 +53,7 @@ always want GPS on board, which lead to our current second generation boards.
 * On-board non-volatile memory for flight data storage
 * USB for power, configuration, and data recovery
 * Integrated support for LiPo rechargeable batteries
-* Uses LiPo to fire e-matches, optional support for separate pyro battery
+* Uses LiPo to fire e-matches, can be modified to support separate pyro battery
 * 2.75 x 1 inch board designed to fit inside 29mm airframe coupler tube
 
 ### Developer View ###
