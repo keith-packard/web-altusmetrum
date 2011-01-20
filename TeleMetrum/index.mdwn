@@ -17,29 +17,6 @@ integrated GPS receiver with active patch antenna:
 <a href="v1.0/cimg5972-crop.jpg"> <img src="v1.0/cimg5972-thumb.jpg"></a>
 <a href="v1.0/cimg5974-crop.jpg"> <img src="v1.0/cimg5974-thumb.jpg"></a>
 
-## Motivation ##
-
-Bdale and Keith both own 
-[BeeLine](http://www.bigredbee.com/BeeLine.htm)
-trackers from 
-[Big Red Bee](http://www.bigredbee.com), and are pretty happy with them.
-They use a PIC processor and a TI CC1050 transmitter chip, and
-operate in the ham radio 70cm band.
-
-One weekend while attending a conference together, we got to wondering if 
-we couldn't adapt one to use as a downlink for the
-[OpenAlt](../OpenAlt/) altimeter board in addition to direction
-finding after flight.  That caused us to start thinking about other things
-in the design we might want to tweak, and before long we were working on the
-design of a new tracker board derived from the BeeLine design.
-Another friend at the same conference showed us a board he was working on 
-using a different part in the same TI series, that integrated a transceiver
-and CPU on the same chip.
-It didn't take us long to realize that with such a part we could combine and
-simplify things by building a new altimeter with integrated RF link!  And
-after gaining some experience in 2009 with a first version, we realized we
-always want GPS on board, which lead to our current second generation boards.
-
 ## Features ##
 
 ### User View ###
@@ -53,7 +30,7 @@ always want GPS on board, which lead to our current second generation boards.
 * On-board non-volatile memory for flight data storage
 * USB for power, configuration, and data recovery
 * Integrated support for LiPo rechargeable batteries
-* Uses LiPo to fire e-matches, can be modified to support separate pyro battery
+* Uses LiPo to fire e-matches, can be factory modified to support separate pyro battery
 * 2.75 x 1 inch board designed to fit inside 29mm airframe coupler tube
 
 ### Developer View ###
@@ -68,11 +45,9 @@ always want GPS on board, which lead to our current second generation boards.
 		* 6 12-bit analog inputs (11 bits with single-ended sensors)
 		* 2 channels of serial I/O
 		* digital I/O
-	* [Atmel AT45DB081D](http://www.atmel.com/dyn/products/product_card.asp?part_id=3819) DataFlash memory
-		* 1M x 8
-		* 256 byte page size
+	* [Winbond W25Q16](http://www.winbond.com/NR/exeres/A3D21C82-A0B6-4586-A770-2F0883A805FF.htm) serial flash memory
+		* 2M x 8
 		* SPI interface
-		* other parts in this Atmel DataFlash series can optionally be used
 	* [SkyTraq](http://www.skytraq.com.tw/) Venus634FLPx GPS receiver
 		* on-board [Taoglas AP.17A.01](http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
 		  single-stage active patch antenna
@@ -108,28 +83,27 @@ The hardware design current gEDA files are available from
 
 Work on the next version proceeds on the master branch, with occasional
 temporary branches created when Bdale is making some major / speculative
-change.  The 'v0.2' and 'v0.1' branches document what we're actually flying 
-right now on the two respective PCB revisions.  The 'ground' branch has a 
-cut-down schematic used to generate the BOM for partially loading v0.1 boards 
-to used on the ground.  We call the on-the-ground 
-version '[TeleDongle](../TeleDongle)', and newer versions have their own PCB
-design.
+change.  Branched with names like 'v0.2' document what we're actually flying 
+on the respective PCB revisions.  The 'ground' branch has a cut-down schematic 
+used to generate the BOM for partially loading v0.1 boards to used on the 
+ground.  We call the on-the-ground version '[TeleDongle](../TeleDongle)', and 
+newer versions have their own PCB design.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of the files for Production PCB version 1.0 in more easily readable form.  
 
-* [schematic](v1.0/telemetrum.pdf)
-* [pcb artwork](v1.0/telemetrum.pcb.pdf)
-* [bill of materials](v1.0/partslist.csv)
+* [schematic](v1.1/telemetrum.pdf)
+* [pcb artwork](v1.1/telemetrum.pcb.pdf)
+* [bill of materials](v1.1/partslist.csv)
 
-We consider our [AltOS](../AltOS) firmware completely reliable, and routinely 
-fly TeleMetrum with no backup.  Rockets with TeleMetrum boards 
-have exceeded 50g acceleration, been well above Mach 1, and reached altitudes 
+Rockets we know of flying with TeleMetrum boards have exceeded 50g acceleration, 
+been well above Mach 1, and reached altitudes 
 greater than 25k feet AGL with great results.  Keith's second generation 
 ground station program called altosui works on Windows, Mac, and Linux systems
 and logs telemetry to disk, displays current and max values for key parameters 
-during flight, and even includes voice synthesis during the flight so that 
-our eyes can stay on the rockets!  After flight, altosui can extract the 
+during flight, includes voice synthesis during the flight so that 
+our eyes can stay on the rockets, and even includes live display of rocket
+position over moving maps!  After flight, altosui can extract the 
 complete flight log from TeleMetrum, can display plots of the data from either
 the telemetry received by radio or the onboard flight log, can output a kml 
 file for use with [Google Earth](http://earth.google.com), and can also 
@@ -141,9 +115,9 @@ can be found on the [AltOS](../AltOS) page on this site.
 
 ## Future Plans ##
 
-TeleMetrum v1.0 meets all of our expectations.  We anticipate another
-production run of boards soon, which will include minor design tweeks mostly
-to work around component availability issues.
+TeleMetrum v1.1 meets all of our expectations, except for one mis-placed 
+trace also present in v1.0.  The error makes use of a separate pyro battery 
+less trivial than intended.  We'll fix that for a future production run.
 
 ## Problems ##
 
@@ -162,6 +136,31 @@ to work around component availability issues.
 
 ## History ##
 
+### v1.0 ###
+
+These are photos of our third version, which was the basis of our first
+production build.  These were sold between April and December 2010, and
+performed very well.
+
+<a href="v1.0/cimg5972-crop.jpg"> <img src="v1.0/cimg5972-thumb.jpg"></a>
+<a href="v1.0/cimg5974-crop.jpg"> <img src="v1.0/cimg5974-thumb.jpg"></a>
+
+The differences between v1.0 and v1.1 were small:
+
+* different flash memory part due to supplier availability problems
+* changed the GPS antenna footprint to eliminate the large through-hole 
+  originally intended for use with a passive patch
+* irq line eliminated from the companion port
+* an additional resistor divider added to allow sampling the 5V supply
+
+The schematics and PCB artwork for this version are on the v1.0 branch in
+our git repository, here are pdf copies for easy reference:
+
+* [schematic](v1.0/telemetrum.pdf)
+* [pcb artwork](v1.0/telemetrum.pcb.pdf)
+* [bill of materials](v1.0/partslist.csv)
+
+
 ### v0.2 ###
 
 These are photos of our second version, which included the integrated Venus
@@ -173,8 +172,8 @@ supporting the companion boards we have planned:
 <a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
 <a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
 
-Other than cleaning up the silkscreen, the differences between v0.2 and our
-current v1.0 boards were really quite small:
+Other than cleaning up the silkscreen, the differences between v0.2 and
+v1.0 boards were really quite small:
 
 * 100ma LDO regulator instead of the current 150ma part
 * no C38 footprint
