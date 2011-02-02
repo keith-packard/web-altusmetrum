@@ -1,1 +1,0 @@
-[[!map pages="events/lca2011/* and ! events/lca2011/*/*"]]

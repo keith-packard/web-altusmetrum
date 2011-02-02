@@ -9,3 +9,4 @@ in time.  Thanks to help from the
 [Queensland Rocketry Society](http://www.qldrocketry.com/), we made it happen
 in 2011!
 
+[[!inline pages="events/* and ! events/*/*"]]
