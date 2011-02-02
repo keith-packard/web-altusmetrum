@@ -1,1 +1,7 @@
-[[!map pages="events/* and ! events/*/*"]]
+# Events
+
+These are events that we've organized or participated in to help spread
+knowledge and enthusiasm about high power rocketry:
+
+[[!inline pages="events/* and ! events/*/*" show="10" rss="no" raw="yes" ]]
+
