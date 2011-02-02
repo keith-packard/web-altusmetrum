@@ -1,3 +1,0 @@
-# Events #
-
-[[!inline pages="./*/index"]]
