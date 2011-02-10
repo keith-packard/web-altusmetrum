@@ -14,8 +14,8 @@ visit the [AltOS](../AltOS) page on this site.
 These are photos of our current production version, which includes an 
 integrated GPS receiver with active patch antenna:
 
-<a href="v1.0/cimg5972-crop.jpg"> <img src="v1.0/cimg5972-thumb.jpg"></a>
-<a href="v1.0/cimg5974-crop.jpg"> <img src="v1.0/cimg5974-thumb.jpg"></a>
+<a href="v1.1/telemetrum-v1.1-thside.jpg"> <img src="v1.1/telemetrum-v1.1-thside-thumb.jpg"></a>
+<a href="v1.1/telemetrum-v1.1-smtside.jpg"> <img src="v1.1/telemetrum-v1.1-smtside-thumb.jpg"></a>
 
 ## Features ##
 
