@@ -1,8 +1,11 @@
 # TeleTerra
 
-This is a hand-held ground station for [TeleMetrum](../TeleMetrum/).
+TeleTerra is a hand-held ground station for [TeleMetrum](../TeleMetrum/).  
 
-<img src="v0.1/teleterra.jpg">
+These are photos of our current, first cut prototype hardware:
+
+<a href="v0.1/teleterra-v0.1-uiside.jpg"> <img src="v0.1/teleterra-v0.1-uiside-thumb.jpg"></a>
+<a href="v0.1/teleterra-v0.1-smtside.jpg"> <img src="v0.1/teleterra-v0.1-smtside-thumb.jpg"></a>
 
 ## Motivation ##
 
@@ -54,7 +57,7 @@ Schematics and PCB artwork exist at
 
 ## Future Plans ##
 
-As of 23 October 2010, v0.1 circuit boards and a matching paste mask are 
-out for fab.  With any luck, we hope to have a couple prototypes working by
-the end of calendar 2010.
-
+As of late 2010, two prototypes built using the v0.1 circuit boards 
+are assembled, and the hardware is mostly tested.  Software development
+is underway, but we're not yet sure when or even if this design will 
+enter production.
