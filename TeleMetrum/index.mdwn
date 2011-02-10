@@ -89,7 +89,7 @@ ground.  We call the on-the-ground version '[TeleDongle](../TeleDongle)', and
 newer versions have their own PCB design.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 1.0 in more easily readable form.  
+of the files for Production PCB version 1.1 in more easily readable form.  
 
 * [schematic](v1.1/telemetrum.pdf)
 * [pcb artwork](v1.1/telemetrum.pcb.pdf)
@@ -98,7 +98,7 @@ of the files for Production PCB version 1.0 in more easily readable form.
 Rockets we know of flying with TeleMetrum boards have exceeded 50g acceleration, 
 been well above Mach 1, and reached altitudes 
 greater than 25k feet AGL with great results.  Keith's second generation 
-ground station program called altosui works on Windows, Mac, and Linux systems
+ground station program called AltosUI works on Windows, Mac, and Linux systems
 and logs telemetry to disk, displays current and max values for key parameters 
 during flight, includes voice synthesis during the flight so that 
 our eyes can stay on the rockets, and even includes live display of rocket
@@ -110,13 +110,14 @@ output all the flight data as a csv file for easy import to spreadsheet
 programs or other analysis tools allowing you to perform whatever
 custom analysis you can envision!  More details on the software, 
 including full source code and pre-built packages
-can be found on the [AltOS](../AltOS) page on this site.
+can be found on the [AltOS](../AltOS) page on this site.  Feel free to 
+download the software and try it before purchasing our hardware!
 
 ## Future Plans ##
 
 TeleMetrum v1.1 meets all of our expectations, except for one mis-placed 
 trace also present in v1.0.  The error makes use of a separate pyro battery 
-less trivial than intended.  We'll fix that for a future production run.
+less trivial than intended.  We'll fix that for a future production run.  
 
 ## Problems ##
 
@@ -127,7 +128,8 @@ less trivial than intended.  We'll fix that for a future production run.
   place parts!  Without an inspection microscope, loading and testing these
   boards might be impossible.
 
-* The addition of on-board GPS in v0.2 means that the total power consumption
+* The addition of on-board GPS in v0.2 and later boards means that the total 
+  power consumption
   can exceed the rate at which we draw power from the USB interface, 
   particularly when the GPS is in cold start mode.  This means a battery must 
   be attached during operation, and also that the battery will only charge 
