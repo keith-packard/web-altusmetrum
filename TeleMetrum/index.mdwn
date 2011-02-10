@@ -148,6 +148,7 @@ performed very well.
 The differences between v1.0 and v1.1 were small:
 
 * different flash memory part due to supplier availability problems
+* updated reset circuit to improve reliability at temperature extremes
 * changed the GPS antenna footprint to eliminate the large through-hole 
   originally intended for use with a passive patch
 * irq line eliminated from the companion port
