@@ -11,8 +11,7 @@ store.  TeleMetrum starter kits are also now available from
 For the latest TeleMetrum firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of our current production version, which includes an 
-integrated GPS receiver with active patch antenna:
+These are photos of our current production version: 
 
 <a href="v1.1/telemetrum-v1.1-thside.jpg"> <img src="v1.1/telemetrum-v1.1-thside-thumb.jpg"></a>
 <a href="v1.1/telemetrum-v1.1-smtside.jpg"> <img src="v1.1/telemetrum-v1.1-smtside-thumb.jpg"></a>
