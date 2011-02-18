@@ -31,10 +31,9 @@ TeleDongle in turn plugs directly into the USB port on a notebook
 computer.  Because TeleDongle looks like a simple serial port, your computer
 does not require special device drivers... just plug it in.
 
-Right now, all of our application software is written for Linux.  However, 
-because we understand that many people run Windows or MacOS, we are working 
-on a new ground station program written in Java that should work on all
-operating systems.
+All of our application software is written in Java, and supports Linux,
+Windows, and MacOS systems equivalently.  See our [AltOS](/AltOS) page
+for more details and to download a copy.
 
 After the flight, you can use the RF link to extract the more detailed data 
 logged in the rocket, or you can use a mini USB cable to plug into the 
@@ -80,13 +79,11 @@ on our [Radio](../Radio) page.
 Our software makes it easy to log the data from each flight, both the 
 telemetry received over the RF link during the flight itself, and the more
 complete data log recorded in the DataFlash memory on the TeleMetrum 
-board.  Once this data is on your computer, our postflight tools make it
-easy to quickly get to the numbers everyone wants, like apogee altitude, 
-max acceleration, and max velocity.  You can also generate and view a 
-standard set of plots showing the altitude, acceleration, and
-velocity of the rocket during flight.  And you can even export a data file 
-useable with Google Maps and Google Earth for visualizing the flight path 
-in two or three dimensions!
+board.  Once this data is on your computer, you can replay the flight in 
+real time, get plots and summary information from your data, 
+export a CSV file for further manipulation in your favorite spreadsheet, 
+or export a KML file so that you can visualize the flight path in three
+dimensions with [Google Earth](http://www.google.com/earth)!
 
 Our ultimate goal is to emit a set of files for each flight that can be
 published as a web page per flight, or just viewed on your local disk with 
@@ -104,6 +101,10 @@ allow monitoring the rocket's status, collecting data during flight, and
 logging data after flight without the need for a notebook computer on the
 flight line.  Particularly since it is so difficult to read most notebook
 screens in direct sunlight, we think this will be a great thing to have.
+
+We're also contemplating other altimeter designs with either more or less
+features than TeleMetrum aimed at different needs within and beyond the rocket
+community.  
 
 Because all of our work is open, both the hardware designs and the software,
 if you have some great idea for an addition to the current Altus Metrum family,
