@@ -6,7 +6,8 @@ with integrated GPS and telemetry link.
 Production units are available from the 
 [Garbee and Garbee](http://auric.gag.com) web 
 store.  TeleMetrum starter kits are also now available from 
-[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp).
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp)
+and [Australian Rocketry](http://ausrocketry.com.au/).
 
 For the latest TeleMetrum firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
