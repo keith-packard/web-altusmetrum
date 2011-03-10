@@ -23,12 +23,13 @@ just continuity.
 
 ### Developer View ###
 
-* [Atmel ATtiny48](http://www.atmel.com/dyn/products/product_card_v2.asp?PN=ATtiny48) Microcontroller
-	* 4k Flash
-	* 256 bytes SRAM
-	* 64 bytes EEPROM
-	* 8-channel 10-bit ADC
+* [Atmel ATmega32U4](http://www.atmel.com/dyn/products/product_card.asp?category_id=163&family_id=607&subfamily_id=760&part_id=4317) Microcontroller
+	* 32k Flash
+	* 2.5k + 832 bytes SRAM
+	* 1k EEPROM
+	* 12-channel 10-bit ADC
 	* SPI target interface
+	* USB interface which can be used for programming
 	* In-system programming interface
 * Software Features (planned)
 	* programmed in C using gcc-avr
@@ -44,3 +45,8 @@ just continuity.
 A schematic exists on [git.gag.com](http://git.gag.com) in the project 
 [hw/telepyro](http://git.gag.com/?p=hw/telepyro;a=summary), 
 but no prototypes have been built yet.
+
+## Future Plans ##
+
+We currently plan to build prototypes of TelePyro in Spring 2011.
+

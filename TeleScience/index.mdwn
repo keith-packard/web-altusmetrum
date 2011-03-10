@@ -1,0 +1,63 @@
+# TeleScience
+
+This is an expansion board for [TeleMetrum](../TeleMetrum/) intended to 
+support science projects.  It provides 12 analog inputs with selectable
+thermistor support, and 5 general purpose I/O pins.  This board can also
+be used standalone as a USB I/O device.
+
+## Motivation ##
+
+Bdale's son Robert is interested in mapping the temperatures experienced
+by nose cones and fins in flights beyond Mach 1, and we're working with 
+our good friend Jeff Lane from 
+[Shockwave Rocketry](http://www.shockwaverocketry.com/) 
+to instrument one or more of his nose cones in pursuit of that goal.  And
+it's easy for us to imagine other experiments that would be facilitated by 
+having generic analog data inputs and a few control lines.
+
+## Features ##
+
+### User View ###
+
+* Small circuit board mounted near [TeleMetrum](../TeleMetrum/)
+* Requires [TeleMetrum](../TeleMetrum/) v0.2 or later, as v0.1 does not 
+  have the required companion board interface
+* 12 analog input channels, each of which can independently be configured
+  for an NTC thermistor or generic 0-3.3 volt analog input.
+* 5 general purpose I/O lines
+* On-board flash memory for data logging.
+* USB interface for programming and development
+
+### Developer View ###
+
+* Hardware Features
+	* [Atmel ATmega32U4](http://www.atmel.com/dyn/products/product_card.asp?category_id=163&family_id=607&subfamily_id=760&part_id=4317) Microcontroller
+		* 32k Flash
+		* 2.5k + 832 bytes SRAM
+		* 1k EEPROM
+		* 12-channel 10-bit ADC
+		* SPI target interface
+		* USB interface which can be used for programming
+		* In-system programming interface
+	* [Winbond W25Q16](http://www.winbond.com/NR/exeres/A3D21C82-A0B6-4586-A770-2F0883A805FF.htm) serial flash memory
+		* 2M x 8
+		* SPI interface
+* Software Features (planned)
+	* programmed in C using gcc-avr
+	* Runs from on-chip flash, uses on-chip RAM
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+A schematic exists on [git.gag.com](http://git.gag.com) in the project 
+[hw/telescience](http://git.gag.com/?p=hw/telescience;a=summary), 
+but no prototypes have been built yet.
+
+## Future Plans ##
+
+We currently plan to build prototypes of TeleScience in Spring 2011.
+

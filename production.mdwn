@@ -164,9 +164,22 @@ Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 
 Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
 
+## sn 17-21 ##
+
+Full load of TeleMini v0.1 PCBs on 2011.03.07.  Minor variations due to 
+parts availability, as follows:
+
+* sn 17-18 have TXC oscillators, sn 19-21 have Abracom
+* sn 21 is missing the dual LED 
+
 ## sn 25-26 ##
 
 Full load of TeleTerra v0.1 PCBs on 2010.10.31
+
+## sn 27-31 **
+
+Full load of TeleNano v0.1 PCBs on 201103.09.  sn 27 has TXC oscillator, all
+others have Abracom, no other significant variations.
 
 ## sn 51 ##
 

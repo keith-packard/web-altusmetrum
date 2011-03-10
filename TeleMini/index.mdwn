@@ -51,5 +51,6 @@ project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).
 
 ## Future Plans ##
 
-We need to build and evaluate some prototypes, and review costing, before 
-deciding whether this design will go into production.
+Initial hardware prototypes are assembled and working.  Firmware is under
+development.  We do not yet know what these will cost or when they might go
+into production.

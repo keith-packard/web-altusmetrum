@@ -57,12 +57,24 @@ is a simple RF interface for use in ground stations interacting with rockets
 using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
 interface for other microcontroller systems.
 
+* [TeleMini](TeleMini/)
+is a smaller dual-deploy rocketry altimeter with telemetry using only a 
+barometric pressure sensor
+
+* [TeleNano](TeleNano/)
+is a tiny rocketry altimeter with telemetry using only a barometric 
+pressure sensor
+
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
 * [TelePyro](TelePyro/) is a planned 8-channel pyro expansion board for 
 [TeleMetrum](TeleMetrum/).
+
+* [TeleScience](TeleScience/) is a planned expansion board for 
+[TeleMetrum](TeleMetrum/) providing 12 channels of thermistor or generic
+analog sensor input, and 5 general purpose I/O lines.
 
 * [TeleTerra](TeleTerra) is a planned hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/).

@@ -52,5 +52,6 @@ project [hw/telenano](http://git.gag.com/?p=hw/telenano;a=summary).
 
 ## Future Plans ##
 
-We need to build and evaluate some prototypes, and review costing, before 
-deciding whether this design will go into production.
+Initial hardware prototypes are assembled and working.  Work proceeds on 
+suitable firmware.  We do not have a target production date or retail 
+price for TeleNano yet.
