@@ -53,7 +53,8 @@ having generic analog data inputs and a few control lines.
 
 ## Artifacts ##
 
-A schematic exists on [git.gag.com](http://git.gag.com) in the project 
+A schematic and PC board design exist on [git.gag.com](http://git.gag.com) 
+in the project 
 [hw/telescience](http://git.gag.com/?p=hw/telescience;a=summary), 
 but no prototypes have been built yet.
 
