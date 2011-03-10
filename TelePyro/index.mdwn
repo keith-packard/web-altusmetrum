@@ -23,14 +23,16 @@ just continuity.
 
 ### Developer View ###
 
-* [Atmel ATmega32U4](http://www.atmel.com/dyn/products/product_card.asp?category_id=163&family_id=607&subfamily_id=760&part_id=4317) Microcontroller
-	* 32k Flash
-	* 2.5k + 832 bytes SRAM
-	* 1k EEPROM
-	* 12-channel 10-bit ADC
-	* SPI target interface
-	* USB interface which can be used for programming
-	* In-system programming interface
+* Hardware Features
+	* [Atmel ATmega32U4](http://www.atmel.com/dyn/products/product_card.asp?category_id=163&family_id=607&subfamily_id=760&part_id=4317) Microcontroller
+		* 32k Flash
+		* 2.5k + 832 bytes SRAM
+		* 1k EEPROM
+		* 12-channel 10-bit ADC
+		* SPI target interface
+		* USB interface which can be used for programming
+		* In-system programming interface
+	* Honeywell HMC5843 3-axis magnetic flux sensor
 * Software Features (planned)
 	* programmed in C using gcc-avr
 	* Runs from on-chip flash, uses on-chip RAM
