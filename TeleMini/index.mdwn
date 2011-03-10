@@ -1,7 +1,7 @@
 # TeleMini
 
 This is a very small, baro-only recording dual-deploy altimeter for 
-high power model rocketry with integrated telemetry link.  
+model rocketry with integrated telemetry link.  
 
 ## Motivation ##
 

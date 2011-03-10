@@ -1,7 +1,7 @@
 # TeleNano
 
-This is an extremely small, baro-only recording altimeter for 
-high power model rocketry with integrated telemetry link.  
+This is a tiny, baro-only recording altimeter for 
+model rocketry with integrated telemetry link.  
 
 ## Motivation ##
 
