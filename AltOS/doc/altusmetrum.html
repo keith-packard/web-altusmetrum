@@ -1,14 +1,19 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>The Altus Metrum System</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="The Altus Metrum System"><div class="titlepage"><div><div><h1 class="title"><a name="id2360926"></a>The Altus Metrum System</h1></div><div><h2 class="subtitle">An Owner's Manual for TeleMetrum and TeleDongle Devices</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Bdale</span> <span class="surname">Garbee</span></h3></div></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><div class="author"><h3 class="author"><span class="firstname">Bob</span> <span class="surname">Finch</span></h3></div></div><div><div class="author"><h3 class="author"><span class="firstname">Anthony</span> <span class="surname">Towns</span></h3></div></div><div><p class="copyright">Copyright © 2011 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="id2636425"></a><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>The Altus Metrum System</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="The Altus Metrum System"><div class="titlepage"><div><div><h1 class="title"><a name="id2285355"></a>The Altus Metrum System</h1></div><div><h2 class="subtitle">An Owner's Manual for TeleMetrum and TeleDongle Devices</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Bdale</span> <span class="surname">Garbee</span></h3></div></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><div class="author"><h3 class="author"><span class="firstname">Bob</span> <span class="surname">Finch</span></h3></div></div><div><div class="author"><h3 class="author"><span class="firstname">Anthony</span> <span class="surname">Towns</span></h3></div></div><div><p class="copyright">Copyright © 2011 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="id2560854"></a><p>
         This document is released under the terms of the
         <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
           Creative Commons ShareAlike 3.0
         </a>
         license.
-      </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.9</td><td align="left">18 January 2011</td></tr><tr><td align="left" colspan="2">
+      </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.9.2</td><td align="left">19 March 2011</td></tr><tr><td align="left" colspan="2">
+	  Updated for software version 0.9.2.  This version has minor
+	  updates to the AltosUI code to fix graphing on Mac OS X and
+	  make flight data download more reliable. It is otherwise
+	  completely compatible with version 0.9.
+	</td></tr><tr><td align="left">Revision 0.9</td><td align="left">18 January 2011</td></tr><tr><td align="left" colspan="2">
 	  Updated for software version 0.9.  Note that 0.9 represents a
 	  telemetry format change, meaning both ends of a link (TeleMetrum and
 	  TeleDongle) must be updated or communications will fail.
-	</td></tr></table></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.8</td><td align="left">24 November 2010</td></tr><tr><td align="left" colspan="2">Updated for software version 0.8 </td></tr></table></div></div></div><hr></div><div class="acknowledgements" title="Acknowledgements"><div class="titlepage"><div><div><h2 class="title"><a name="id2628351"></a>Acknowledgements</h2></div></div></div>
+	</td></tr></table></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.8</td><td align="left">24 November 2010</td></tr><tr><td align="left" colspan="2">Updated for software version 0.8 </td></tr></table></div></div></div><hr></div><div class="acknowledgements" title="Acknowledgements"><div class="titlepage"><div><div><h2 class="title"><a name="id2561425"></a>Acknowledgements</h2></div></div></div>
     <p>
       Thanks to Bob Finch, W9YA, NAR 12965, TRA 12350 for writing "The
       Mere-Mortals Quick Start/Usage Guide to the Altus Metrum Starter
@@ -35,7 +40,7 @@ Keith Packard, KD7SQG<br>
 NAR #88757, TRA #12200<br>
       </p></div><p>
     </p>
-  </div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#id2605461">1. Introduction and Overview</a></span></dt><dt><span class="chapter"><a href="#id2605503">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#id2644514">FAQ</a></span></dt></dl></dd><dt><span class="chapter"><a href="#id2631620">3. Specifications</a></span></dt><dt><span class="chapter"><a href="#id2659474">4. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#id2631852">5. Hardware Overview</a></span></dt><dt><span class="chapter"><a href="#id2637717">6. System Operation</a></span></dt><dd><dl><dt><span class="section"><a href="#id2640865">Firmware Modes </a></span></dt><dt><span class="section"><a href="#id2642576">GPS </a></span></dt><dt><span class="section"><a href="#id2656980">Ground Testing </a></span></dt><dt><span class="section"><a href="#id2656978">Radio Link </a></span></dt><dt><span class="section"><a href="#id2627699">Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#id2647970">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2638884">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2656690">Main Deployment Altitude</a></span></dt></dl></dd><dt><span class="section"><a href="#id2635319">Calibration</a></span></dt><dd><dl><dt><span class="section"><a href="#id2659041">Radio Frequency</a></span></dt><dt><span class="section"><a href="#id2649152">Accelerometer</a></span></dt></dl></dd><dt><span class="section"><a href="#id2657390">Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#id2630289">Updating TeleMetrum Firmware</a></span></dt><dt><span class="section"><a href="#id2639681">Updating TeleDongle Firmware</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#id2637633">7. AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#id2654003">Packet Command Mode</a></span></dt><dt><span class="section"><a href="#id2647872">Monitor Flight</a></span></dt><dd><dl><dt><span class="section"><a href="#id2630489">Launch Pad</a></span></dt><dt><span class="section"><a href="#id2650566">Ascent</a></span></dt><dt><span class="section"><a href="#id2651780">Descent</a></span></dt><dt><span class="section"><a href="#id2637083">Landed</a></span></dt><dt><span class="section"><a href="#id2662597">Site Map</a></span></dt></dl></dd><dt><span class="section"><a href="#id2652017">Save Flight Data</a></span></dt><dt><span class="section"><a href="#id2662100">Replay Flight</a></span></dt><dt><span class="section"><a href="#id2648922">Graph Data</a></span></dt><dt><span class="section"><a href="#id2643923">Export Data</a></span></dt><dd><dl><dt><span class="section"><a href="#id2651125">Comma Separated Value Format</a></span></dt><dt><span class="section"><a href="#id2654686">Keyhole Markup Language (for Google Earth)</a></span></dt></dl></dd><dt><span class="section"><a href="#id2645946">Configure TeleMetrum</a></span></dt><dd><dl><dt><span class="section"><a href="#id2634804">Main Deploy Altitude</a></span></dt><dt><span class="section"><a href="#id2628486">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2657936">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2639511">Radio Calibration</a></span></dt><dt><span class="section"><a href="#id2637390">Callsign</a></span></dt><dt><span class="section"><a href="#id2648042">Maximum Flight Log Size</a></span></dt></dl></dd><dt><span class="section"><a href="#id2639748">Configure AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#id2651032">Voice Settings</a></span></dt><dt><span class="section"><a href="#id2649086">Log Directory</a></span></dt><dt><span class="section"><a href="#id2640668">Callsign</a></span></dt><dt><span class="section"><a href="#id2621966">Serial Debug</a></span></dt></dl></dd><dt><span class="section"><a href="#id2651293">Flash Image</a></span></dt><dt><span class="section"><a href="#id2651858">Fire Igniter</a></span></dt></dl></dd><dt><span class="chapter"><a href="#id2646109">8. Using Altus Metrum Products</a></span></dt><dd><dl><dt><span class="section"><a href="#id2651706">Being Legal</a></span></dt><dt><span class="section"><a href="#id2649421">In the Rocket</a></span></dt><dt><span class="section"><a href="#id2648265">On the Ground</a></span></dt><dt><span class="section"><a href="#id2654896">Data Analysis</a></span></dt><dt><span class="section"><a href="#id2661470">Future Plans</a></span></dt></dl></dd></dl></div><div class="chapter" title="Chapter 1. Introduction and Overview"><div class="titlepage"><div><div><h2 class="title"><a name="id2605461"></a>Chapter 1. Introduction and Overview</h2></div></div></div><p>
+  </div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#id2529908">1. Introduction and Overview</a></span></dt><dt><span class="chapter"><a href="#id2529949">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#id2568943">FAQ</a></span></dt></dl></dd><dt><span class="chapter"><a href="#id2556049">3. Specifications</a></span></dt><dt><span class="chapter"><a href="#id2583902">4. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#id2556280">5. Hardware Overview</a></span></dt><dt><span class="chapter"><a href="#id2562146">6. System Operation</a></span></dt><dd><dl><dt><span class="section"><a href="#id2565293">Firmware Modes </a></span></dt><dt><span class="section"><a href="#id2567005">GPS </a></span></dt><dt><span class="section"><a href="#id2581409">Ground Testing </a></span></dt><dt><span class="section"><a href="#id2581407">Radio Link </a></span></dt><dt><span class="section"><a href="#id2552127">Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#id2572399">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2563312">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2581119">Main Deployment Altitude</a></span></dt></dl></dd><dt><span class="section"><a href="#id2559748">Calibration</a></span></dt><dd><dl><dt><span class="section"><a href="#id2583470">Radio Frequency</a></span></dt><dt><span class="section"><a href="#id2573580">Accelerometer</a></span></dt></dl></dd><dt><span class="section"><a href="#id2581818">Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#id2554717">Updating TeleMetrum Firmware</a></span></dt><dt><span class="section"><a href="#id2564109">Updating TeleDongle Firmware</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#id2562062">7. AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#id2578432">Packet Command Mode</a></span></dt><dt><span class="section"><a href="#id2572301">Monitor Flight</a></span></dt><dd><dl><dt><span class="section"><a href="#id2554918">Launch Pad</a></span></dt><dt><span class="section"><a href="#id2574995">Ascent</a></span></dt><dt><span class="section"><a href="#id2576209">Descent</a></span></dt><dt><span class="section"><a href="#id2561512">Landed</a></span></dt><dt><span class="section"><a href="#id2587026">Site Map</a></span></dt></dl></dd><dt><span class="section"><a href="#id2576446">Save Flight Data</a></span></dt><dt><span class="section"><a href="#id2586529">Replay Flight</a></span></dt><dt><span class="section"><a href="#id2573351">Graph Data</a></span></dt><dt><span class="section"><a href="#id2568352">Export Data</a></span></dt><dd><dl><dt><span class="section"><a href="#id2575553">Comma Separated Value Format</a></span></dt><dt><span class="section"><a href="#id2579115">Keyhole Markup Language (for Google Earth)</a></span></dt></dl></dd><dt><span class="section"><a href="#id2570375">Configure TeleMetrum</a></span></dt><dd><dl><dt><span class="section"><a href="#id2559233">Main Deploy Altitude</a></span></dt><dt><span class="section"><a href="#id2552914">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2582365">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2563940">Radio Calibration</a></span></dt><dt><span class="section"><a href="#id2561819">Callsign</a></span></dt><dt><span class="section"><a href="#id2572471">Maximum Flight Log Size</a></span></dt></dl></dd><dt><span class="section"><a href="#id2564177">Configure AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#id2575461">Voice Settings</a></span></dt><dt><span class="section"><a href="#id2573515">Log Directory</a></span></dt><dt><span class="section"><a href="#id2565097">Callsign</a></span></dt><dt><span class="section"><a href="#id2546395">Serial Debug</a></span></dt></dl></dd><dt><span class="section"><a href="#id2575721">Flash Image</a></span></dt><dt><span class="section"><a href="#id2576287">Fire Igniter</a></span></dt></dl></dd><dt><span class="chapter"><a href="#id2570538">8. Using Altus Metrum Products</a></span></dt><dd><dl><dt><span class="section"><a href="#id2576134">Being Legal</a></span></dt><dt><span class="section"><a href="#id2573850">In the Rocket</a></span></dt><dt><span class="section"><a href="#id2572694">On the Ground</a></span></dt><dt><span class="section"><a href="#id2579324">Data Analysis</a></span></dt><dt><span class="section"><a href="#id2585899">Future Plans</a></span></dt></dl></dd></dl></div><div class="chapter" title="Chapter 1. Introduction and Overview"><div class="titlepage"><div><div><h2 class="title"><a name="id2529908"></a>Chapter 1. Introduction and Overview</h2></div></div></div><p>
       Welcome to the Altus Metrum community!  Our circuits and software reflect
       our passion for both hobby rocketry and Free Software.  We hope their
       capabilities and performance will delight you in every way, but by
@@ -58,7 +63,7 @@ NAR #88757, TRA #12200<br>
       More products will be added to the Altus Metrum family over time, and
       we currently envision that this will be a single, comprehensive manual
       for the entire product family.
-    </p></div><div class="chapter" title="Chapter 2. Getting Started"><div class="titlepage"><div><div><h2 class="title"><a name="id2605503"></a>Chapter 2. Getting Started</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2644514">FAQ</a></span></dt></dl></div><p>
+    </p></div><div class="chapter" title="Chapter 2. Getting Started"><div class="titlepage"><div><div><h2 class="title"><a name="id2529949"></a>Chapter 2. Getting Started</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2568943">FAQ</a></span></dt></dl></div><p>
       The first thing to do after you check the inventory of parts in your
       "starter kit" is to charge the battery by plugging it into the
       corresponding socket of the TeleMetrum and then using the USB A to
@@ -207,7 +212,7 @@ NAR #88757, TRA #12200<br>
       the Log and Device menus.  It has a wonderful display of the incoming
       flight data and I am sure you will enjoy what it has to say to you
       once you enable the voice output!
-    </p><div class="section" title="FAQ"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2644514"></a>FAQ</h2></div></div></div><p>
+    </p><div class="section" title="FAQ"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2568943"></a>FAQ</h2></div></div></div><p>
         The altimeter (TeleMetrum) seems to shut off when disconnected from the
         computer.  Make sure the battery is adequately charged.  Remember the
         unit will pull more power than the USB port can deliver before the
@@ -252,7 +257,7 @@ NAR #88757, TRA #12200<br>
         data after physically retrieving your TeleMetrum.  Make sure to save
         the on-board data after each flight, as the current firmware will
         over-write any previous flight data during a new flight.
-      </p></div></div><div class="chapter" title="Chapter 3. Specifications"><div class="titlepage"><div><div><h2 class="title"><a name="id2631620"></a>Chapter 3. Specifications</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+      </p></div></div><div class="chapter" title="Chapter 3. Specifications"><div class="titlepage"><div><div><h2 class="title"><a name="id2556049"></a>Chapter 3. Specifications</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
           Recording altimeter for model rocketry.
         </p></li><li class="listitem"><p>
           Supports dual deployment (can fire 2 ejection charges).
@@ -276,7 +281,7 @@ NAR #88757, TRA #12200<br>
   	  optional separate pyro battery if needed.
         </p></li><li class="listitem"><p>
           2.75 x 1 inch board designed to fit inside 29mm airframe coupler tube.
-        </p></li></ul></div></div><div class="chapter" title="Chapter 4. Handling Precautions"><div class="titlepage"><div><div><h2 class="title"><a name="id2659474"></a>Chapter 4. Handling Precautions</h2></div></div></div><p>
+        </p></li></ul></div></div><div class="chapter" title="Chapter 4. Handling Precautions"><div class="titlepage"><div><div><h2 class="title"><a name="id2583902"></a>Chapter 4. Handling Precautions</h2></div></div></div><p>
       TeleMetrum is a sophisticated electronic device.  When handled gently and
       properly installed in an airframe, it will deliver impressive results.
       However, like all electronic devices, there are some precautions you
@@ -308,7 +313,7 @@ NAR #88757, TRA #12200<br>
     </p><p>
       As with all other rocketry electronics, TeleMetrum must be protected
       from exposure to corrosive motor exhaust and ejection charge gasses.
-    </p></div><div class="chapter" title="Chapter 5. Hardware Overview"><div class="titlepage"><div><div><h2 class="title"><a name="id2631852"></a>Chapter 5. Hardware Overview</h2></div></div></div><p>
+    </p></div><div class="chapter" title="Chapter 5. Hardware Overview"><div class="titlepage"><div><div><h2 class="title"><a name="id2556280"></a>Chapter 5. Hardware Overview</h2></div></div></div><p>
       TeleMetrum is a 1 inch by 2.75 inch circuit board.  It was designed to
       fit inside coupler for 29mm airframe tubing, but using it in a tube that
       small in diameter may require some creativity in mounting and wiring
@@ -359,7 +364,7 @@ NAR #88757, TRA #12200<br>
       TeleMetrum with an SMA connector for the UHF antenna connection, and
       you can unplug the integrated GPS antenna and select an appropriate
       off-board GPS antenna with cable terminating in a U.FL connector.
-    </p></div><div class="chapter" title="Chapter 6. System Operation"><div class="titlepage"><div><div><h2 class="title"><a name="id2637717"></a>Chapter 6. System Operation</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2640865">Firmware Modes </a></span></dt><dt><span class="section"><a href="#id2642576">GPS </a></span></dt><dt><span class="section"><a href="#id2656980">Ground Testing </a></span></dt><dt><span class="section"><a href="#id2656978">Radio Link </a></span></dt><dt><span class="section"><a href="#id2627699">Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#id2647970">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2638884">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2656690">Main Deployment Altitude</a></span></dt></dl></dd><dt><span class="section"><a href="#id2635319">Calibration</a></span></dt><dd><dl><dt><span class="section"><a href="#id2659041">Radio Frequency</a></span></dt><dt><span class="section"><a href="#id2649152">Accelerometer</a></span></dt></dl></dd><dt><span class="section"><a href="#id2657390">Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#id2630289">Updating TeleMetrum Firmware</a></span></dt><dt><span class="section"><a href="#id2639681">Updating TeleDongle Firmware</a></span></dt></dl></dd></dl></div><div class="section" title="Firmware Modes"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2640865"></a>Firmware Modes </h2></div></div></div><p>
+    </p></div><div class="chapter" title="Chapter 6. System Operation"><div class="titlepage"><div><div><h2 class="title"><a name="id2562146"></a>Chapter 6. System Operation</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2565293">Firmware Modes </a></span></dt><dt><span class="section"><a href="#id2567005">GPS </a></span></dt><dt><span class="section"><a href="#id2581409">Ground Testing </a></span></dt><dt><span class="section"><a href="#id2581407">Radio Link </a></span></dt><dt><span class="section"><a href="#id2552127">Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#id2572399">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2563312">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2581119">Main Deployment Altitude</a></span></dt></dl></dd><dt><span class="section"><a href="#id2559748">Calibration</a></span></dt><dd><dl><dt><span class="section"><a href="#id2583470">Radio Frequency</a></span></dt><dt><span class="section"><a href="#id2573580">Accelerometer</a></span></dt></dl></dd><dt><span class="section"><a href="#id2581818">Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#id2554717">Updating TeleMetrum Firmware</a></span></dt><dt><span class="section"><a href="#id2564109">Updating TeleDongle Firmware</a></span></dt></dl></dd></dl></div><div class="section" title="Firmware Modes"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2565293"></a>Firmware Modes </h2></div></div></div><p>
         The AltOS firmware build for TeleMetrum has two fundamental modes,
         "idle" and "flight".  Which of these modes the firmware operates in
         is determined by the orientation of the rocket (well, actually the
@@ -407,7 +412,7 @@ NAR #88757, TRA #12200<br>
         rickety step-ladder or hanging off the side of a launch tower with
         a screw-driver trying to turn on your avionics before installing
         igniters!
-      </p></div><div class="section" title="GPS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2642576"></a>GPS </h2></div></div></div><p>
+      </p></div><div class="section" title="GPS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2567005"></a>GPS </h2></div></div></div><p>
         TeleMetrum includes a complete GPS receiver.  See a later section for
         a brief explanation of how GPS works that will help you understand
         the information in the telemetry stream.  The bottom line is that
@@ -426,7 +431,7 @@ NAR #88757, TRA #12200<br>
         is turned back on, the GPS system should lock very quickly, typically
         long before igniter installation and return to the flight line are
         complete.
-      </p></div><div class="section" title="Ground Testing"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2656980"></a>Ground Testing </h2></div></div></div><p>
+      </p></div><div class="section" title="Ground Testing"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2581409"></a>Ground Testing </h2></div></div></div><p>
         An important aspect of preparing a rocket using electronic deployment
         for flight is ground testing the recovery system.  Thanks
         to the bi-directional RF link central to the Altus Metrum system,
@@ -449,7 +454,7 @@ NAR #88757, TRA #12200<br>
         the board from firing a charge.  The command to fire the apogee
         drogue charge is 'i DoIt drogue' and the command to fire the main
         charge is 'i DoIt main'.
-      </p></div><div class="section" title="Radio Link"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2656978"></a>Radio Link </h2></div></div></div><p>
+      </p></div><div class="section" title="Radio Link"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2581407"></a>Radio Link </h2></div></div></div><p>
         The chip our boards are based on incorporates an RF transceiver, but
         it's not a full duplex system... each end can only be transmitting or
         receiving at any given moment.  So we had to decide how to manage the
@@ -480,13 +485,13 @@ NAR #88757, TRA #12200<br>
         the ground.  We hope to fly boards to higher altitudes soon, and would
         of course appreciate customer feedback on performance in higher
         altitude flights!
-      </p></div><div class="section" title="Configurable Parameters"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2627699"></a>Configurable Parameters</h2></div></div></div><p>
+      </p></div><div class="section" title="Configurable Parameters"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2552127"></a>Configurable Parameters</h2></div></div></div><p>
         Configuring a TeleMetrum board for flight is very simple.  Because we
         have both acceleration and pressure sensors, there is no need to set
         a "mach delay", for example.  The few configurable parameters can all
         be set using a simple terminal program over the USB port or RF link
         via TeleDongle.
-      </p><div class="section" title="Radio Channel"><div class="titlepage"><div><div><h3 class="title"><a name="id2647970"></a>Radio Channel</h3></div></div></div><p>
+      </p><div class="section" title="Radio Channel"><div class="titlepage"><div><div><h3 class="title"><a name="id2572399"></a>Radio Channel</h3></div></div></div><p>
           Our firmware supports 10 channels.  The default channel 0 corresponds
           to a center frequency of 434.550 Mhz, and channels are spaced every
           100 khz.  Thus, channel 1 is 434.650 Mhz, and channel 9 is 435.550 Mhz.
@@ -500,7 +505,7 @@ NAR #88757, TRA #12200<br>
           As with all 'c' sub-commands, follow this with a 'c w' to write the
           change to the parameter block in the on-board DataFlash chip on
           your TeleMetrum board if you want the change to stay in place across reboots.
-        </p></div><div class="section" title="Apogee Delay"><div class="titlepage"><div><div><h3 class="title"><a name="id2638884"></a>Apogee Delay</h3></div></div></div><p>
+        </p></div><div class="section" title="Apogee Delay"><div class="titlepage"><div><div><h3 class="title"><a name="id2563312"></a>Apogee Delay</h3></div></div></div><p>
           Apogee delay is the number of seconds after TeleMetrum detects flight
           apogee that the drogue charge should be fired.  In most cases, this
           should be left at the default of 0.  However, if you are flying
@@ -520,7 +525,7 @@ NAR #88757, TRA #12200<br>
           seconds later to avoid any chance of both charges firing
           simultaneously.  We've flown several airframes this way quite happily,
           including Keith's successful L3 cert.
-        </p></div><div class="section" title="Main Deployment Altitude"><div class="titlepage"><div><div><h3 class="title"><a name="id2656690"></a>Main Deployment Altitude</h3></div></div></div><p>
+        </p></div><div class="section" title="Main Deployment Altitude"><div class="titlepage"><div><div><h3 class="title"><a name="id2581119"></a>Main Deployment Altitude</h3></div></div></div><p>
           By default, TeleMetrum will fire the main deployment charge at an
           elevation of 250 meters (about 820 feet) above ground.  We think this
           is a good elevation for most airframes, but feel free to change this
@@ -533,10 +538,10 @@ NAR #88757, TRA #12200<br>
           To set the main deployment altitude, use the 'c m' command.
           As with all 'c' sub-commands, follow this with a 'c w' to write the
           change to the parameter block in the on-board DataFlash chip.
-        </p></div></div><div class="section" title="Calibration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2635319"></a>Calibration</h2></div></div></div><p>
+        </p></div></div><div class="section" title="Calibration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2559748"></a>Calibration</h2></div></div></div><p>
         There are only two calibrations required for a TeleMetrum board, and
         only one for TeleDongle.
-      </p><div class="section" title="Radio Frequency"><div class="titlepage"><div><div><h3 class="title"><a name="id2659041"></a>Radio Frequency</h3></div></div></div><p>
+      </p><div class="section" title="Radio Frequency"><div class="titlepage"><div><div><h3 class="title"><a name="id2583470"></a>Radio Frequency</h3></div></div></div><p>
           The radio frequency is synthesized from a clock based on the 48 Mhz
           crystal on the board.  The actual frequency of this oscillator must be
           measured to generate a calibration constant.  While our GFSK modulation
@@ -560,7 +565,7 @@ NAR #88757, TRA #12200<br>
           within a few tens of Hertz of the intended frequency.
           As with all 'c' sub-commands, follow this with a 'c w' to write the
           change to the parameter block in the on-board DataFlash chip.
-        </p></div><div class="section" title="Accelerometer"><div class="titlepage"><div><div><h3 class="title"><a name="id2649152"></a>Accelerometer</h3></div></div></div><p>
+        </p></div><div class="section" title="Accelerometer"><div class="titlepage"><div><div><h3 class="title"><a name="id2573580"></a>Accelerometer</h3></div></div></div><p>
           The accelerometer we use has its own 5 volt power supply and
           the output must be passed through a resistive voltage divider to match
           the input of our 3.3 volt ADC.  This means that unlike the barometric
@@ -599,7 +604,7 @@ NAR #88757, TRA #12200<br>
          and use a small screwdriver or similar to short the two pins closest
          to the index post on the 4-pin end of the programming cable, and
          power up the board.  It should come up in 'idle mode' (two beeps).
-        </p></div></div><div class="section" title="Updating Device Firmware"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2657390"></a>Updating Device Firmware</h2></div></div></div><p>
+        </p></div></div><div class="section" title="Updating Device Firmware"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2581818"></a>Updating Device Firmware</h2></div></div></div><p>
       The big conceptual thing to realize is that you have to use a
       TeleDongle as a programmer to update a TeleMetrum, and vice versa.
       Due to limited memory resources in the cc1111, we don't support
@@ -614,7 +619,7 @@ NAR #88757, TRA #12200<br>
       version from <a class="ulink" href="http://www.altusmetrum.org/AltOS/" target="_top">http://www.altusmetrum.org/AltOS/</a>.
     </p><p>
       We recommend updating TeleMetrum first, before updating TeleDongle.
-    </p><div class="section" title="Updating TeleMetrum Firmware"><div class="titlepage"><div><div><h3 class="title"><a name="id2630289"></a>Updating TeleMetrum Firmware</h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+    </p><div class="section" title="Updating TeleMetrum Firmware"><div class="titlepage"><div><div><h3 class="title"><a name="id2554717"></a>Updating TeleMetrum Firmware</h3></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
           Find the 'programming cable' that you got as part of the starter
           kit, that has a red 8-pin MicroMaTch connector on one end and a
           red 4-pin MicroMaTch connector on the other end.
@@ -657,7 +662,7 @@ NAR #88757, TRA #12200<br>
           the version, etc.
         </li><li class="listitem">
           If something goes wrong, give it another try.
-        </li></ol></div></div><div class="section" title="Updating TeleDongle Firmware"><div class="titlepage"><div><div><h3 class="title"><a name="id2639681"></a>Updating TeleDongle Firmware</h3></div></div></div><p>
+        </li></ol></div></div><div class="section" title="Updating TeleDongle Firmware"><div class="titlepage"><div><div><h3 class="title"><a name="id2564109"></a>Updating TeleDongle Firmware</h3></div></div></div><p>
         Updating TeleDongle's firmware is just like updating TeleMetrum
 	firmware, but you switch which board is the programmer and which
 	is the programming target.
@@ -718,7 +723,7 @@ NAR #88757, TRA #12200<br>
         slightly to extract the connector.  We used a locking connector on
         TeleMetrum to help ensure that the cabling to companion boards
         used in a rocket don't ever come loose accidentally in flight.
-      </p></div></div></div><div class="chapter" title="Chapter 7. AltosUI"><div class="titlepage"><div><div><h2 class="title"><a name="id2637633"></a>Chapter 7. AltosUI</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2654003">Packet Command Mode</a></span></dt><dt><span class="section"><a href="#id2647872">Monitor Flight</a></span></dt><dd><dl><dt><span class="section"><a href="#id2630489">Launch Pad</a></span></dt><dt><span class="section"><a href="#id2650566">Ascent</a></span></dt><dt><span class="section"><a href="#id2651780">Descent</a></span></dt><dt><span class="section"><a href="#id2637083">Landed</a></span></dt><dt><span class="section"><a href="#id2662597">Site Map</a></span></dt></dl></dd><dt><span class="section"><a href="#id2652017">Save Flight Data</a></span></dt><dt><span class="section"><a href="#id2662100">Replay Flight</a></span></dt><dt><span class="section"><a href="#id2648922">Graph Data</a></span></dt><dt><span class="section"><a href="#id2643923">Export Data</a></span></dt><dd><dl><dt><span class="section"><a href="#id2651125">Comma Separated Value Format</a></span></dt><dt><span class="section"><a href="#id2654686">Keyhole Markup Language (for Google Earth)</a></span></dt></dl></dd><dt><span class="section"><a href="#id2645946">Configure TeleMetrum</a></span></dt><dd><dl><dt><span class="section"><a href="#id2634804">Main Deploy Altitude</a></span></dt><dt><span class="section"><a href="#id2628486">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2657936">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2639511">Radio Calibration</a></span></dt><dt><span class="section"><a href="#id2637390">Callsign</a></span></dt><dt><span class="section"><a href="#id2648042">Maximum Flight Log Size</a></span></dt></dl></dd><dt><span class="section"><a href="#id2639748">Configure AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#id2651032">Voice Settings</a></span></dt><dt><span class="section"><a href="#id2649086">Log Directory</a></span></dt><dt><span class="section"><a href="#id2640668">Callsign</a></span></dt><dt><span class="section"><a href="#id2621966">Serial Debug</a></span></dt></dl></dd><dt><span class="section"><a href="#id2651293">Flash Image</a></span></dt><dt><span class="section"><a href="#id2651858">Fire Igniter</a></span></dt></dl></div><p>
+      </p></div></div></div><div class="chapter" title="Chapter 7. AltosUI"><div class="titlepage"><div><div><h2 class="title"><a name="id2562062"></a>Chapter 7. AltosUI</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2578432">Packet Command Mode</a></span></dt><dt><span class="section"><a href="#id2572301">Monitor Flight</a></span></dt><dd><dl><dt><span class="section"><a href="#id2554918">Launch Pad</a></span></dt><dt><span class="section"><a href="#id2574995">Ascent</a></span></dt><dt><span class="section"><a href="#id2576209">Descent</a></span></dt><dt><span class="section"><a href="#id2561512">Landed</a></span></dt><dt><span class="section"><a href="#id2587026">Site Map</a></span></dt></dl></dd><dt><span class="section"><a href="#id2576446">Save Flight Data</a></span></dt><dt><span class="section"><a href="#id2586529">Replay Flight</a></span></dt><dt><span class="section"><a href="#id2573351">Graph Data</a></span></dt><dt><span class="section"><a href="#id2568352">Export Data</a></span></dt><dd><dl><dt><span class="section"><a href="#id2575553">Comma Separated Value Format</a></span></dt><dt><span class="section"><a href="#id2579115">Keyhole Markup Language (for Google Earth)</a></span></dt></dl></dd><dt><span class="section"><a href="#id2570375">Configure TeleMetrum</a></span></dt><dd><dl><dt><span class="section"><a href="#id2559233">Main Deploy Altitude</a></span></dt><dt><span class="section"><a href="#id2552914">Apogee Delay</a></span></dt><dt><span class="section"><a href="#id2582365">Radio Channel</a></span></dt><dt><span class="section"><a href="#id2563940">Radio Calibration</a></span></dt><dt><span class="section"><a href="#id2561819">Callsign</a></span></dt><dt><span class="section"><a href="#id2572471">Maximum Flight Log Size</a></span></dt></dl></dd><dt><span class="section"><a href="#id2564177">Configure AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#id2575461">Voice Settings</a></span></dt><dt><span class="section"><a href="#id2573515">Log Directory</a></span></dt><dt><span class="section"><a href="#id2565097">Callsign</a></span></dt><dt><span class="section"><a href="#id2546395">Serial Debug</a></span></dt></dl></dd><dt><span class="section"><a href="#id2575721">Flash Image</a></span></dt><dt><span class="section"><a href="#id2576287">Fire Igniter</a></span></dt></dl></div><p>
       The AltosUI program provides a graphical user interface for
       interacting with the Altus Metrum product family, including
       TeleMetrum and TeleDongle. AltosUI can monitor telemetry data,
@@ -727,7 +732,7 @@ NAR #88757, TRA #12200<br>
       buttons, one for each major activity in the system.  This manual
       is split into chapters, each of which documents one of the tasks
       provided from the top-level toolbar.
-    </p><div class="section" title="Packet Command Mode"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2654003"></a>Packet Command Mode</h2></div><div><h3 class="subtitle">Controlling TeleMetrum Over The Radio Link</h3></div></div></div><p>
+    </p><div class="section" title="Packet Command Mode"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2578432"></a>Packet Command Mode</h2></div><div><h3 class="subtitle">Controlling TeleMetrum Over The Radio Link</h3></div></div></div><p>
         One of the unique features of the Altus Metrum environment is
         the ability to create a two way command link between TeleDongle
         and TeleMetrum using the digital radio transceivers built into
@@ -786,7 +791,7 @@ NAR #88757, TRA #12200<br>
         TeleMetrum transmit a packet while the green LED will light up
         on TeleDongle while it is waiting to receive a packet from
         TeleMetrum.
-      </p></div><div class="section" title="Monitor Flight"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2647872"></a>Monitor Flight</h2></div><div><h3 class="subtitle">Receive, Record and Display Telemetry Data</h3></div></div></div><p>
+      </p></div><div class="section" title="Monitor Flight"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2572301"></a>Monitor Flight</h2></div><div><h3 class="subtitle">Receive, Record and Display Telemetry Data</h3></div></div></div><p>
         Selecting this item brings up a dialog box listing all of the
         connected TeleDongle devices. When you choose one of these,
         AltosUI will create a window to display telemetry data as
@@ -827,7 +832,7 @@ NAR #88757, TRA #12200<br>
         data relevant to the current state of the flight. You can select
         other tabs at any time. The final 'table' tab contains all of
         the telemetry data in one place.
-      </p><div class="section" title="Launch Pad"><div class="titlepage"><div><div><h3 class="title"><a name="id2630489"></a>Launch Pad</h3></div></div></div><p>
+      </p><div class="section" title="Launch Pad"><div class="titlepage"><div><div><h3 class="title"><a name="id2554918"></a>Launch Pad</h3></div></div></div><p>
           The 'Launch Pad' tab shows information used to decide when the
           rocket is ready for flight. The first elements include red/green
           indicators, if any of these is red, you'll want to evaluate
@@ -864,7 +869,7 @@ NAR #88757, TRA #12200<br>
             and altitude, averaging many reported positions to improve the
             accuracy of the fix.
           </p><p>
-        </p></div><div class="section" title="Ascent"><div class="titlepage"><div><div><h3 class="title"><a name="id2650566"></a>Ascent</h3></div></div></div><p>
+        </p></div><div class="section" title="Ascent"><div class="titlepage"><div><div><h3 class="title"><a name="id2574995"></a>Ascent</h3></div></div></div><p>
           This tab is shown during Boost, Fast and Coast
           phases. The information displayed here helps monitor the
           rocket as it heads towards apogee.
@@ -883,7 +888,7 @@ NAR #88757, TRA #12200<br>
           Finally, the current igniter voltages are reported as in the
           Launch Pad tab. This can help diagnose deployment failures
           caused by wiring which comes loose under high acceleration.
-        </p></div><div class="section" title="Descent"><div class="titlepage"><div><div><h3 class="title"><a name="id2651780"></a>Descent</h3></div></div></div><p>
+        </p></div><div class="section" title="Descent"><div class="titlepage"><div><div><h3 class="title"><a name="id2576209"></a>Descent</h3></div></div></div><p>
           Once the rocket has reached apogee and (we hope) activated the
           apogee charge, attention switches to tracking the rocket on
           the way back to the ground, and for dual-deploy flights,
@@ -904,7 +909,7 @@ NAR #88757, TRA #12200<br>
           Finally, the igniter voltages are reported in this tab as
           well, both to monitor the main charge as well as to see what
           the status of the apogee charge is.
-        </p></div><div class="section" title="Landed"><div class="titlepage"><div><div><h3 class="title"><a name="id2637083"></a>Landed</h3></div></div></div><p>
+        </p></div><div class="section" title="Landed"><div class="titlepage"><div><div><h3 class="title"><a name="id2561512"></a>Landed</h3></div></div></div><p>
           Once the rocket is on the ground, attention switches to
           recovery. While the radio signal is generally lost once the
           rocket is on the ground, the last reported GPS position is
@@ -919,7 +924,7 @@ NAR #88757, TRA #12200<br>
         </p><p>
           Finally, the maximum height, speed and acceleration reported
           during the flight are displayed for your admiring observers.
-        </p></div><div class="section" title="Site Map"><div class="titlepage"><div><div><h3 class="title"><a name="id2662597"></a>Site Map</h3></div></div></div><p>
+        </p></div><div class="section" title="Site Map"><div class="titlepage"><div><div><h3 class="title"><a name="id2587026"></a>Site Map</h3></div></div></div><p>
           When the rocket gets a GPS fix, the Site Map tab will map
           the rocket's position to make it easier for you to locate the
           rocket, both while it is in the air, and when it has landed. The
@@ -935,7 +940,7 @@ NAR #88757, TRA #12200<br>
           and are cached for reuse. If map images cannot be downloaded,
           the rocket's path will be traced on a dark grey background
           instead.
-        </p></div></div><div class="section" title="Save Flight Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2652017"></a>Save Flight Data</h2></div></div></div><p>
+        </p></div></div><div class="section" title="Save Flight Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2576446"></a>Save Flight Data</h2></div></div></div><p>
         TeleMetrum records flight data to its internal flash memory.
         This data is recorded at a much higher rate than the telemetry
         system can handle, and is not subject to radio drop-outs. As
@@ -964,7 +969,7 @@ NAR #88757, TRA #12200<br>
         The filename for each flight log is computed automatically
         from the recorded flight date, TeleMetrum serial number and
         flight number information.
-      </p></div><div class="section" title="Replay Flight"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2662100"></a>Replay Flight</h2></div></div></div><p>
+      </p></div><div class="section" title="Replay Flight"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2586529"></a>Replay Flight</h2></div></div></div><p>
         Select this button and you are prompted to select a flight
         record file, either a .telem file recording telemetry data or a
         .eeprom file containing flight data saved from the TeleMetrum
@@ -973,7 +978,7 @@ NAR #88757, TRA #12200<br>
         Once a flight record is selected, the flight monitor interface
         is displayed and the flight is re-enacted in real time. Check
         the Monitor Flight chapter above to learn how this window operates.
-      </p></div><div class="section" title="Graph Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2648922"></a>Graph Data</h2></div></div></div><p>
+      </p></div><div class="section" title="Graph Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2573351"></a>Graph Data</h2></div></div></div><p>
         Select this button and you are prompted to select a flight
         record file, either a .telem file recording telemetry data or a
         .eeprom file containing flight data saved from the TeleMetrum
@@ -995,7 +1000,7 @@ NAR #88757, TRA #12200<br>
         and will also often have significant amounts of data received
         while the rocket was waiting on the pad. Use saved flight data
         for graphing where possible.
-      </p></div><div class="section" title="Export Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2643923"></a>Export Data</h2></div></div></div><p>
+      </p></div><div class="section" title="Export Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2568352"></a>Export Data</h2></div></div></div><p>
         This tool takes the raw data files and makes them available for
         external analysis. When you select this button, you are prompted to select a flight
         data file (either .eeprom or .telem will do, remember that
@@ -1003,7 +1008,7 @@ NAR #88757, TRA #12200<br>
         data). Next, a second dialog appears which is used to select
         where to write the resulting file. It has a selector to choose
         between CSV and KML file formats.
-      </p><div class="section" title="Comma Separated Value Format"><div class="titlepage"><div><div><h3 class="title"><a name="id2651125"></a>Comma Separated Value Format</h3></div></div></div><p>
+      </p><div class="section" title="Comma Separated Value Format"><div class="titlepage"><div><div><h3 class="title"><a name="id2575553"></a>Comma Separated Value Format</h3></div></div></div><p>
           This is a text file containing the data in a form suitable for
           import into a spreadsheet or other external data analysis
           tool. The first few lines of the file contain the version and
@@ -1017,12 +1022,12 @@ NAR #88757, TRA #12200<br>
           the sensor values are converted to standard units, with the
           barometric data reported in both pressure, altitude and
           height above pad units.
-        </p></div><div class="section" title="Keyhole Markup Language (for Google Earth)"><div class="titlepage"><div><div><h3 class="title"><a name="id2654686"></a>Keyhole Markup Language (for Google Earth)</h3></div></div></div><p>
+        </p></div><div class="section" title="Keyhole Markup Language (for Google Earth)"><div class="titlepage"><div><div><h3 class="title"><a name="id2579115"></a>Keyhole Markup Language (for Google Earth)</h3></div></div></div><p>
           This is the format used by
           Googleearth to provide an overlay within that
           application. With this, you can use Googleearth to see the
           whole flight path in 3D.
-        </p></div></div><div class="section" title="Configure TeleMetrum"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2645946"></a>Configure TeleMetrum</h2></div></div></div><p>
+        </p></div></div><div class="section" title="Configure TeleMetrum"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2570375"></a>Configure TeleMetrum</h2></div></div></div><p>
         Select this button and then select either a TeleMetrum or
         TeleDongle Device from the list provided. Selecting a TeleDongle
         device will use Packet Comamnd Mode to configure remote
@@ -1051,14 +1056,14 @@ NAR #88757, TRA #12200<br>
             lost.
           </p></li></ul></div><p>
         The rest of the dialog contains the parameters to be configured.
-      </p><div class="section" title="Main Deploy Altitude"><div class="titlepage"><div><div><h3 class="title"><a name="id2634804"></a>Main Deploy Altitude</h3></div></div></div><p>
+      </p><div class="section" title="Main Deploy Altitude"><div class="titlepage"><div><div><h3 class="title"><a name="id2559233"></a>Main Deploy Altitude</h3></div></div></div><p>
           This sets the altitude (above the recorded pad altitude) at
           which the 'main' igniter will fire. The drop-down menu shows
           some common values, but you can edit the text directly and
           choose whatever you like. If the apogee charge fires below
           this altitude, then the main charge will fire two seconds
           after the apogee charge fires.
-        </p></div><div class="section" title="Apogee Delay"><div class="titlepage"><div><div><h3 class="title"><a name="id2628486"></a>Apogee Delay</h3></div></div></div><p>
+        </p></div><div class="section" title="Apogee Delay"><div class="titlepage"><div><div><h3 class="title"><a name="id2552914"></a>Apogee Delay</h3></div></div></div><p>
           When flying redundant electronics, it's often important to
           ensure that multiple apogee charges don't fire at precisely
           the same time as that can overpressurize the apogee deployment
@@ -1066,22 +1071,22 @@ NAR #88757, TRA #12200<br>
           Delay parameter tells the flight computer to fire the apogee
           charge a certain number of seconds after apogee has been
           detected.
-        </p></div><div class="section" title="Radio Channel"><div class="titlepage"><div><div><h3 class="title"><a name="id2657936"></a>Radio Channel</h3></div></div></div><p>
+        </p></div><div class="section" title="Radio Channel"><div class="titlepage"><div><div><h3 class="title"><a name="id2582365"></a>Radio Channel</h3></div></div></div><p>
           This configures which of the 10 radio channels to use for both
           telemetry and packet command mode. Note that if you set this
           value via packet command mode, you will have to reconfigure
           the TeleDongle channel before you will be able to use packet
           command mode again.
-        </p></div><div class="section" title="Radio Calibration"><div class="titlepage"><div><div><h3 class="title"><a name="id2639511"></a>Radio Calibration</h3></div></div></div><p>
+        </p></div><div class="section" title="Radio Calibration"><div class="titlepage"><div><div><h3 class="title"><a name="id2563940"></a>Radio Calibration</h3></div></div></div><p>
           The radios in every Altus Metrum device are calibrated at the
           factory to ensure that they transmit and receive on the
           specified frequency for each channel. You can adjust that
           calibration by changing this value. To change the TeleDongle's
           calibration, you must reprogram the unit completely.
-        </p></div><div class="section" title="Callsign"><div class="titlepage"><div><div><h3 class="title"><a name="id2637390"></a>Callsign</h3></div></div></div><p>
+        </p></div><div class="section" title="Callsign"><div class="titlepage"><div><div><h3 class="title"><a name="id2561819"></a>Callsign</h3></div></div></div><p>
           This sets the callsign included in each telemetry packet. Set this
           as needed to conform to your local radio regulations.
-        </p></div><div class="section" title="Maximum Flight Log Size"><div class="titlepage"><div><div><h3 class="title"><a name="id2648042"></a>Maximum Flight Log Size</h3></div></div></div><p>
+        </p></div><div class="section" title="Maximum Flight Log Size"><div class="titlepage"><div><div><h3 class="title"><a name="id2572471"></a>Maximum Flight Log Size</h3></div></div></div><p>
           This sets the space (in kilobytes) allocated for each flight
           log. The available space will be divided into chunks of this
           size. A smaller value will allow more flights to be stored,
@@ -1103,9 +1108,9 @@ NAR #88757, TRA #12200<br>
 	  The configuration block takes the last available block of
 	  memory, on v1.0 boards that's just 256 bytes. However, the
 	  flash part on the v1.1 boards uses 64kB for each block.
-        </p></div></div><div class="section" title="Configure AltosUI"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2639748"></a>Configure AltosUI</h2></div></div></div><p>
+        </p></div></div><div class="section" title="Configure AltosUI"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2564177"></a>Configure AltosUI</h2></div></div></div><p>
         This button presents a dialog so that you can configure the AltosUI global settings.
-      </p><div class="section" title="Voice Settings"><div class="titlepage"><div><div><h3 class="title"><a name="id2651032"></a>Voice Settings</h3></div></div></div><p>
+      </p><div class="section" title="Voice Settings"><div class="titlepage"><div><div><h3 class="title"><a name="id2575461"></a>Voice Settings</h3></div></div></div><p>
           AltosUI provides voice annoucements during flight so that you
           can keep your eyes on the sky and still get information about
           the current flight status. However, sometimes you don't want
@@ -1114,7 +1119,7 @@ NAR #88757, TRA #12200<br>
               Test Voice&#8212;Plays a short message allowing you to verify
               that the audio systme is working and the volume settings
               are reasonable
-            </p></li></ul></div></div><div class="section" title="Log Directory"><div class="titlepage"><div><div><h3 class="title"><a name="id2649086"></a>Log Directory</h3></div></div></div><p>
+            </p></li></ul></div></div><div class="section" title="Log Directory"><div class="titlepage"><div><div><h3 class="title"><a name="id2573515"></a>Log Directory</h3></div></div></div><p>
           AltosUI logs all telemetry data and saves all TeleMetrum flash
           data to this directory. This directory is also used as the
           staring point when selecting data files for display or export.
@@ -1122,20 +1127,20 @@ NAR #88757, TRA #12200<br>
           Click on the directory name to bring up a directory choosing
           dialog, select a new directory and click 'Select Directory' to
           change where AltosUI reads and writes data files.
-        </p></div><div class="section" title="Callsign"><div class="titlepage"><div><div><h3 class="title"><a name="id2640668"></a>Callsign</h3></div></div></div><p>
+        </p></div><div class="section" title="Callsign"><div class="titlepage"><div><div><h3 class="title"><a name="id2565097"></a>Callsign</h3></div></div></div><p>
           This value is used in command packet mode and is transmitted
           in each packet sent from TeleDongle and received from
           TeleMetrum. It is not used in telemetry mode as that transmits
           packets only from TeleMetrum to TeleDongle. Configure this
           with the AltosUI operators callsign as needed to comply with
           your local radio regulations.
-        </p></div><div class="section" title="Serial Debug"><div class="titlepage"><div><div><h3 class="title"><a name="id2621966"></a>Serial Debug</h3></div></div></div><p>
+        </p></div><div class="section" title="Serial Debug"><div class="titlepage"><div><div><h3 class="title"><a name="id2546395"></a>Serial Debug</h3></div></div></div><p>
           This causes all communication with a connected device to be
           dumped to the console from which AltosUI was started. If
           you've started it from an icon or menu entry, the output
           will simply be discarded. This mode can be useful to debug
           various serial communication issues.
-        </p></div></div><div class="section" title="Flash Image"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2651293"></a>Flash Image</h2></div></div></div><p>
+        </p></div></div><div class="section" title="Flash Image"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2575721"></a>Flash Image</h2></div></div></div><p>
         This reprograms any Altus Metrum device by using a TeleMetrum or
         TeleDongle as a programming dongle. Please read the directions
         for connecting the programming cable in the main TeleMetrum
@@ -1165,7 +1170,7 @@ NAR #88757, TRA #12200<br>
         will have to unplug it and then plug it back in for the USB
         connection to reset so that you can communicate with the device
         again.
-      </p></div><div class="section" title="Fire Igniter"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2651858"></a>Fire Igniter</h2></div></div></div><p>
+      </p></div><div class="section" title="Fire Igniter"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2576287"></a>Fire Igniter</h2></div></div></div><p>
 	This activates the igniter circuits in TeleMetrum to help test
 	recovery systems deployment. Because this command can operate
 	over the Packet Command Link, you can prepare the rocket as
@@ -1185,11 +1190,11 @@ NAR #88757, TRA #12200<br>
 	you have 10 seconds to press the 'Fire' button or the system
 	will deactivate, at which point you start over again at
 	selecting the desired igniter.
-      </p></div></div><div class="chapter" title="Chapter 8. Using Altus Metrum Products"><div class="titlepage"><div><div><h2 class="title"><a name="id2646109"></a>Chapter 8. Using Altus Metrum Products</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2651706">Being Legal</a></span></dt><dt><span class="section"><a href="#id2649421">In the Rocket</a></span></dt><dt><span class="section"><a href="#id2648265">On the Ground</a></span></dt><dt><span class="section"><a href="#id2654896">Data Analysis</a></span></dt><dt><span class="section"><a href="#id2661470">Future Plans</a></span></dt></dl></div><div class="section" title="Being Legal"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2651706"></a>Being Legal</h2></div></div></div><p>
+      </p></div></div><div class="chapter" title="Chapter 8. Using Altus Metrum Products"><div class="titlepage"><div><div><h2 class="title"><a name="id2570538"></a>Chapter 8. Using Altus Metrum Products</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#id2576134">Being Legal</a></span></dt><dt><span class="section"><a href="#id2573850">In the Rocket</a></span></dt><dt><span class="section"><a href="#id2572694">On the Ground</a></span></dt><dt><span class="section"><a href="#id2579324">Data Analysis</a></span></dt><dt><span class="section"><a href="#id2585899">Future Plans</a></span></dt></dl></div><div class="section" title="Being Legal"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2576134"></a>Being Legal</h2></div></div></div><p>
         First off, in the US, you need an <a class="ulink" href="http://www.altusmetrum.org/Radio/" target="_top">amateur radio license</a> or
         other authorization to legally operate the radio transmitters that are part
         of our products.
-      </p></div><div class="section" title="In the Rocket"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2649421"></a>In the Rocket</h2></div></div></div><p>
+      </p></div><div class="section" title="In the Rocket"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2573850"></a>In the Rocket</h2></div></div></div><p>
           In the rocket itself, you just need a <a class="ulink" href="http://www.altusmetrum.org/TeleMetrum/" target="_top">TeleMetrum</a> board and
           a LiPo rechargeable battery.  An 860mAh battery weighs less than a 9V
           alkaline battery, and will run a <a class="ulink" href="http://www.altusmetrum.org/TeleMetrum/" target="_top">TeleMetrum</a> for hours.
@@ -1199,7 +1204,7 @@ NAR #88757, TRA #12200<br>
           which is opaque to RF signals, you may choose to have an SMA connector
           installed so that you can run a coaxial cable to an antenna mounted
           elsewhere in the rocket.
-        </p></div><div class="section" title="On the Ground"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2648265"></a>On the Ground</h2></div></div></div><p>
+        </p></div><div class="section" title="On the Ground"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2572694"></a>On the Ground</h2></div></div></div><p>
           To receive the data stream from the rocket, you need an antenna and short
           feedline connected to one of our <a class="ulink" href="http://www.altusmetrum.org/TeleDongle/" target="_top">TeleDongle</a> units.  The
           TeleDongle in turn plugs directly into the USB port on a notebook
@@ -1250,7 +1255,7 @@ NAR #88757, TRA #12200<br>
           </a>
           The 440-3 and 440-5 are both good choices for finding a
           TeleMetrum-equipped rocket when used with a suitable 70cm HT.
-        </p></div><div class="section" title="Data Analysis"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2654896"></a>Data Analysis</h2></div></div></div><p>
+        </p></div><div class="section" title="Data Analysis"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2579324"></a>Data Analysis</h2></div></div></div><p>
           Our software makes it easy to log the data from each flight, both the
           telemetry received over the RF link during the flight itself, and the more
           complete data log recorded in the DataFlash memory on the TeleMetrum
@@ -1265,7 +1270,7 @@ NAR #88757, TRA #12200<br>
           Our ultimate goal is to emit a set of files for each flight that can be
           published as a web page per flight, or just viewed on your local disk with
           a web browser.
-        </p></div><div class="section" title="Future Plans"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2661470"></a>Future Plans</h2></div></div></div><p>
+        </p></div><div class="section" title="Future Plans"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id2585899"></a>Future Plans</h2></div></div></div><p>
           In the future, we intend to offer "companion boards" for the rocket that will
           plug in to TeleMetrum to collect additional data, provide more pyro channels,
           and so forth.  A reference design for a companion board will be documented
