@@ -2,24 +2,27 @@
 
 ## Where to Buy ##
 
-Altus Metrum products are available from the 
-[Garbee and Garbee](http://auric.gag.com) web store.
+All Altus Metrum products are available from the 
+[Garbee and Garbee](http://auric.gag.com) web 
+store.  [TeleMetrum](TeleMetrum/) starter kits are also available from 
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp)
+and [Australian Rocketry](http://ausrocketry.com.au/).
 
 ## Being Legal ##
 
-First off, in the US, you need an [amateur radio license](../Radio) or 
-other authorization to legally operate the radio transmitters that are part
-of our products.
+In the US, you need an [amateur radio license](../Radio) or other 
+authorization to legally operate the radio transmitters that are part
+of our products.  Rules vary in other countries.
 
 ## In the Rocket ##
 
 In the rocket itself, you just need a [TeleMetrum](../TeleMetrum) board and 
-a LiPo rechargeable battery.  An 860mAh battery weighs less than a 9V 
+a LiPo rechargeable battery.  An 900mAh battery weighs less than a 9V 
 alkaline battery, and will run a [TeleMetrum](../TeleMetrum) for hours.
 
 By default, we ship TeleMetrum with a simple wire antenna.  If your 
 electronics bay or the airframe it resides within is made of carbon fiber, 
-which is opaque to RF signals, you may choose to have an SMA connector 
+which is nearly opaque to RF signals, you may choose to have an SMA connector 
 installed so that you can run a coaxial cable to an antenna mounted 
 elsewhere in the rocket.
 
