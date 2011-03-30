@@ -156,6 +156,8 @@ Modified 2010.10.18:
 
 Delivered to keithp on 2010.10.19.
 
+Modifed by keithp on 2011.03.30 to have 3.3V on the serial connector power pin.
+
 ## sn 15 ##
 
 Partial "ground" load of v0.1 PCB on 2009.11.18 for use as TeleDongle.
