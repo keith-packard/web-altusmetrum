@@ -178,10 +178,22 @@ parts availability, as follows:
 
 Full load of TeleTerra v0.1 PCBs on 2010.10.31
 
-## sn 27-31 **
+## sn 27-31 ##
 
 Full load of TeleNano v0.1 PCBs on 201103.09.  sn 27 has TXC oscillator, all
 others have Abracom, no other significant variations.
+
+## sn 32-33 ##
+
+Full load of TeleMini v0.2 PCBs on 2011.05.04.
+
+## sn 34-36 ##
+
+Full load of TeleScience v0.1 PCBs on 2011.05.05.
+
+## sn 37-38 ##
+
+Full load of TeleBT v0.1 PCBs on 2011.05.06.
 
 ## sn 51 ##
 
