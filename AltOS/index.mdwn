@@ -152,6 +152,9 @@ to provide access to the Altus Metrum devices connected over the USB link.
 
 ## Future Plans ##
 
+Bug reports, feature requests, and planning for AltOS releases happens
+on the [Altus Metrum Trac Site](http://trac.gag.com/altusmetrum).
+
 A number of features are implemented or in process in the sources available
 in our publicly visible repository that are not part of the current stable
 release.
