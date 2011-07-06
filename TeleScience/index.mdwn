@@ -60,5 +60,10 @@ but no prototypes have been built yet.
 
 ## Future Plans ##
 
-We currently plan to build prototypes of TeleScience in Spring 2011.
+3 prototypes have been built, of which 2 are installed in 
+[2YikStik](http://www.gag.com/rockets/airframes/2YikStik/) 
+which we hope to fly at LDRS 30 in early September 2011.
 
+The thermistor conditioning circuits in the current design are very tightly
+coupled to the particular model of EPCOS thermistor that we chose for 2YikStik.
+Before we could sell TeleScience, that needs to be addressed somehow.
