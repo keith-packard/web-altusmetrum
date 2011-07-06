@@ -50,5 +50,5 @@ but no prototypes have been built yet.
 
 ## Future Plans ##
 
-We currently plan to build prototypes of TelePyro in Spring 2011.
-
+Prototype circuit boards are in hand, and we hope to build some up and test
+them during the summer of 2011.
