@@ -51,6 +51,12 @@ project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).
 
 ## Future Plans ##
 
-Initial hardware prototypes are assembled and working.  Firmware is under
-development.  We do not yet know what these will cost or when they might go
-into production.
+Initial hardware prototypes are assembled and working.  We've flown a number 
+flights now, with great results.  Work remains to stabilize the firmware and
+associated ground software updates, particularly because we've made a major
+update to the telemetry protocol to more easily handle multiple products.
+
+The first production hardware build is underway, and we expect to have 
+TeleMini for sale sometime in August 2011, with plenty on hand to sell at
+[LDRS 30](http://ldrs30.org/) in early September!
+
