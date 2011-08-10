@@ -18,13 +18,13 @@ the devices which are useful for developing firmware for the devices.
 The firmware and associated software are licensed [GPL version
 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
+We maintain a list of [launch site GPS coordinates](launch-sites.txt).  If 
+your favorite launch site isn't included, please let us know!
+
 ## Available Versions ##
 
 There is a single manual for all Altus Metrum products, which is available 
 in [html](doc/altusmetrum.html) and [pdf](doc/altusmetrum.pdf) formats.
-
-We maintain a list of [launch site GPS coordinates](launch-sites.txt).  If 
-your favorite launch site isn't included, please let us know!
 
 [[!inline pages="./releases/* and !*/Discussion and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
