@@ -1,4 +1,4 @@
-[[!inline pages="./0.9.2/ReleaseNotes-0.9.2.html" rss="no" raw="yes" ]]
+[[!inline pages="./0.9.2/release-notes-0.9.2.html" rss="no" raw="yes" ]]
 
 - Available Files:
 	- [Windows Installer](/AltOS/releases/0.9.2/Altos-Windows-0-9-2.exe)
