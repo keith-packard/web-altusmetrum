@@ -1,5 +1,6 @@
 [[!inline pages="./0.9.2/ReleaseNotes-0.9.2.html" rss="no" raw="yes" ]]
 
+- Downloadables
 	- [Windows Installer](/AltOS/releases/0.9.2/Altos-Windows-0-9-2.exe)
 	- [Mac OS X Package](/AltOS/releases/0.9.2/Altos-Mac-0.9.2.zip)
 	- [Linux](/AltOS/releases/0.9.2/Altos-Linux-0.9.2.tar.bz2)
