@@ -1,5 +1,8 @@
-- 0.9, released 18 Jan 2011
+[[!inline pages="./0.9/release-notes-0.9.html" rss="no" raw="yes" ]]
+
+- Available Files:
 	- [Windows Installer](/AltOS/releases/0.9/Altos-Windows-0-9.exe)
 	- [Mac OS X Package](/AltOS/releases/0.9/Altos-Mac-0.9.zip)
 	- [Linux](/AltOS/releases/0.9/Altos-Linux-0.9.tar.bz2)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/0.9;sf=tgz)
+
