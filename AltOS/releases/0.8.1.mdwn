@@ -1,4 +1,6 @@
-- 0.8.1, released 29 Nov 2010
+[[!inline pages="./0.8.1/release-notes-0.8.html" rss="no" raw="yes" ]]
+
+- Available Files:
 	- [Windows Installer](/AltOS/releases/0.8.1/Altos-Windows-0-8-1.exe)
 	- [Mac OS X Package](/AltOS/releases/0.8.1/Altos-Mac-0.8.1.zip)
 	- [Linux](/AltOS/releases/0.8.1/Altos-Linux-0.8.1.tar.bz2)
