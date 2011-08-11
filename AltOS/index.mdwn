@@ -15,9 +15,6 @@ interface on the Altus Metrum devices.
 There are also Linux-specific tools that provide lower level access to
 the devices which are useful for developing firmware for the devices.
 
-The firmware and associated software are licensed [GPL version
-2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-
 We maintain a list of [launch site GPS coordinates](launch-sites.txt).  If 
 your favorite launch site isn't included, please let us know!
 
@@ -251,3 +248,8 @@ the required USB serial device driver, and our package should do the right
 things to bind it to our devices, but if you get a complaint about the device
 being unrecognized, try pointing to the copy of the telemetrum.inf file 
 included in the package directory manually.
+
+## License ##
+
+The firmware and associated software are licensed [GPL version
+2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
