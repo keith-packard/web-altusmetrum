@@ -25,6 +25,8 @@ in [html](doc/altusmetrum.html) and [pdf](doc/altusmetrum.pdf) formats.
 
 [[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
+## Source Code ##
+
 The latest source, which may include unreleased work in progress, is always 
 available from [git.gag.com](http://git.gag.com) 
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
