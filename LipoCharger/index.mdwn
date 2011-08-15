@@ -37,6 +37,6 @@ project [hw/lipocharger](http://git.gag.com/?p=hw/lipocharger;a=summary).
 
 ## Future Plans ##
 
-After some iteration, we have settled on a design that meets our needs.  
-Boards will be available for sale soon.
+After some iteration, we have settled on a design that meets our 
+needs.  Boards will be available for sale soon.
 
