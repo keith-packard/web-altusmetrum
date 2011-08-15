@@ -1,23 +1,29 @@
 # LipoCharger
 
-This is a simple but effective charger for LiPo batteries.  It has a higher
-charge rate than the on-board charger on [TeleMetrum](../TeleMetrum), and
-will be necessary for charging the batteries used with projects like
-[TeleNano](../TeleNano) and [TeleMini](../TeleMini), which do not have 
-on-board charging capability.
+This is a simple but effective, dual-rate, standalone charger for Lithium
+Polymer batteries.  It supports who different charge rates, approximately 
+100mA and 500mA.  The higher rate is good for batteries of 400 mAh and higher
+including the 900mAh cells sold with [TeleMetrum](../TeleMetrum) starter kits,
+while the lower rate is more appropriate for the 110mAh cells often used with
+[TeleMini](../TeleMini).  A standalone charger is essential for use with
+TeleMini since it does not have on-board charging capability.
 
 ## Features ##
 
 ### User View ###
 
-* Wall-wart power supply to our standard 2mm LiPo battery connector
+* Micro USB connector for power input
+* 2mm JST-style connector for battery
+* dual-color LED
+	* red when charging
+	* green when charge complete
+	* both on, or "yellow", when battery is disconnected or bad
 * 1.0 x 0.4 inch board 
 
 ### Developer View ###
 
 * Hardware Features
-	* [Microchip MCP73837](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en531507) Li-ion battery charger chip
-	* Strain-relief holes for soldering to wall-wart leads
+	* [Microchip MCP73831](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en024903) Li-ion battery charger chip
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 * Licenses
@@ -30,5 +36,6 @@ project [hw/lipocharger](http://git.gag.com/?p=hw/lipocharger;a=summary).
 
 ## Future Plans ##
 
-We need to build and evaluate some prototypes, and review costing, before 
-deciding whether this design will go into production.
+After some iteration, we have settled on a design that meets our needs.  
+Boards will be available for sale soon.
+

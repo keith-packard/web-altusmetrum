@@ -69,6 +69,10 @@ pressure sensor
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
+* [LipoCharger](LipoCharger/) 
+is a standalone battery charger for the Lithium Polymer batteries used in
+Altus Metrum products.
+
 * [TelePyro](TelePyro/) is a planned 8-channel pyro expansion board for 
 [TeleMetrum](TeleMetrum/).
 
