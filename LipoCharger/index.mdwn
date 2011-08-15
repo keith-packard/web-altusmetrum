@@ -1,7 +1,7 @@
 # LipoCharger
 
 This is a simple but effective, dual-rate, standalone charger for Lithium
-Polymer batteries.  It supports tho different charge rates selectable with
+Polymer batteries.  It supports two different charge rates selectable with
 a swtich, of approximately 100mA and 500mA.  The 500mA rate is good for 
 batteries of 400 mAh and higher including the 900mAh cells sold with 
 [TeleMetrum](../TeleMetrum) starter kits, while the 100mA rate is more 
