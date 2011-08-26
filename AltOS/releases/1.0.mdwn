@@ -1,8 +1,0 @@
-[[!inline pages="./1.0/release-notes-1.0.html" rss="no" raw="yes" ]]
-
-- Available Files:
-	- [Windows Installer](/AltOS/releases/1.0/Altos-Windows-1-0.exe)
-	- [Mac OS X Package](/AltOS/releases/1.0/Altos-Mac-1.0.zip)
-	- [Linux](/AltOS/releases/1.0/Altos-Linux-1.0.tar.bz2)
-	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.0;sf=tgz)
-
