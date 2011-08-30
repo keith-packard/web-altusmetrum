@@ -3,11 +3,12 @@
 This is a very small, baro-only recording dual-deploy altimeter for 
 model rocketry with integrated telemetry link.  
 
-## Motivation ##
+Production units are available from the 
+[Garbee and Garbee](http://auric.gag.com) web 
+store.
 
-We'd like to fly smaller rockets really high, which motivates an interest
-in both electronic deployment and radio direction finding for post-flight
-rocket recovery.
+For the latest TeleMini firmware and related ground station software, please
+visit the [AltOS](../AltOS) page on this site.
 
 ## Features ##
 
@@ -46,17 +47,10 @@ rocket recovery.
 
 ## Artifacts ##
 
-The design files can be found on [git.gag.com](http://git.gag.com) in the 
-project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
+There is a single manual for TeleMini and all other Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
-## Future Plans ##
-
-Initial hardware prototypes are assembled and working.  We've flown a number 
-flights now, with great results.  Work remains to stabilize the firmware and
-associated ground software updates, particularly because we've made a major
-update to the telemetry protocol to more easily handle multiple products.
-
-The first production hardware build is underway, and we expect to have 
-TeleMini for sale sometime in August 2011, with plenty on hand to sell at
-[LDRS 30](http://ldrs30.org/) in early September!
+The hardware design files can be found on [git.gag.com](http://git.gag.com) 
+in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
 
