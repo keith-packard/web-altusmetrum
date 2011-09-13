@@ -1,10 +1,9 @@
 ![Altus Metrum Logo](logo.png)
 
-This is the site where 
+Open hardware and software designs by
 [Bdale Garbee](http://gag.com/~bdale) and 
 [Keith Packard](http://keithp.com/keithp)
-document our work on open hardware and software designs for
-high powered model rocketry avionics solutions.
+for high powered model rocketry.
 <p>
 All hardware designs on this site are licensed under the 
 [TAPR](http://www.tapr.org/)
