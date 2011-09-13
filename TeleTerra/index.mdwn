@@ -57,7 +57,7 @@ Schematics and PCB artwork exist at
 
 ## Future Plans ##
 
-As of late 2010, two prototypes built using the v0.1 circuit boards 
-are assembled, and the hardware is mostly tested.  Software development
-is underway, but we're not yet sure when or even if this design will 
-enter production.
+In 2010, two v0.1 prototypes were assembled, and the hardware was tested.  
+Unfortunately, this design turned out to be too expensive to manufacture and
+sell.  Work is underway on a cost-reduced v0.2 design, more details will be
+presented here eventually.
