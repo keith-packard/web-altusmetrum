@@ -10,6 +10,11 @@ store.
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
+These are photos of our current production version: 
+
+<a href="v1.0/telemini_top.jpg"> <img src="v1.0/telemini_top_thumb.jpg"></a>
+<a href="v1.0/telemini_bottom.jpg"> <img src="v1.0/telemini_bottom_thumb.jpg"></a>
+
 ## Features ##
 
 ### User View ###

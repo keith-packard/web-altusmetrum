@@ -73,11 +73,11 @@ the set of hardware projects here.
 is a standalone battery charger for the Lithium Polymer batteries used in
 Altus Metrum products.
 
-* [TelePyro](TelePyro/) is a planned 8-channel pyro expansion board for 
-[TeleMetrum](TeleMetrum/).
+* [TelePyro](TelePyro/) is a companion board for [TeleMetrum](TeleMetrum/)
+that adds 8 additional pyro channels.
 
-* [TeleScience](TeleScience/) is a planned expansion board for 
-[TeleMetrum](TeleMetrum/) providing 12 channels of thermistor or generic
+* [TeleScience](TeleScience/) is a companion board for 
+[TeleMetrum](TeleMetrum/) that adds 12 channels of thermistor or generic
 analog sensor input, and 5 general purpose I/O lines.
 
 * [TeleTerra](TeleTerra) is a planned hand-held ground station for use with 
