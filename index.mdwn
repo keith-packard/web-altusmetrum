@@ -26,7 +26,7 @@ and [Australian Rocketry](http://www.ausrocketry.com/shop/index.php?main_page=pr
 # Projects #
 
 * [TeleMetrum](TeleMetrum/) 
-is our primary project, a dual-deploy rocketry altimeter with
+is our flagship product, a dual-deploy rocketry altimeter with
 GPS and bidirectional RF telemetry link.
 
 * [TeleDongle](TeleDongle/) 
