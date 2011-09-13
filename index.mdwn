@@ -23,28 +23,6 @@ store.  [TeleMetrum](TeleMetrum/) starter kits are also available from
 [Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp)
 and [Australian Rocketry](http://www.ausrocketry.com/shop/index.php?main_page=product_info&cPath=111&products_id=4302).
 
-# Hobby Rocketry #
-
-The motivation for the circuits and software you will find on this site is
-our loosely-knit group's shared interest in hobby rocketry.  This very brief
-[Ted presentation by Steve Jurvetson](http://www.ted.com/talks/steve_jurvetson_on_model_rocketry.html)
-quickly conveys at least part of why we do this.  John Coker 
-has published an excellent 
-[overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
-on his web site.  Keith has also put together some useful notes about the 
-process of [certification](http://keithp.com/rockets/certification/) to
-fly high power rockets.
-<p>
-To find more information about the rockets Bdale and his son have built, see
-[Garbee Rockets](http://www.gag.com/rockets).
-<p>
-As Bdale and Robert became more experienced in the hobby and started to build
-and fly more sophisticated projects, we started to feel limited by the 
-existing electronics products available.  OpenAlt was Bdale's first 
-attempt to address this situation with a completely open hardware and software
-design... other project have since followed, and it's cool to have help from
-Keith and other friends!
-
 # Projects #
 
 * [TeleMetrum](TeleMetrum/) 
@@ -85,6 +63,28 @@ analog sensor input, and 5 general purpose I/O lines.
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
+
+# Hobby Rocketry #
+
+The motivation for the circuits and software you will find on this site is
+our loosely-knit group's shared interest in hobby rocketry.  This very brief
+[Ted presentation by Steve Jurvetson](http://www.ted.com/talks/steve_jurvetson_on_model_rocketry.html)
+quickly conveys at least part of why we do this.  John Coker 
+has published an excellent 
+[overview of hobby rocketry](http://www.jcrocket.com/welcome.shtml) 
+on his web site.  Keith has also put together some useful notes about the 
+process of [certification](http://keithp.com/rockets/certification/) to
+fly high power rockets.
+<p>
+To find more information about the rockets Bdale and his son have built, see
+[Garbee Rockets](http://www.gag.com/rockets).
+<p>
+As Bdale and Robert became more experienced in the hobby and started to build
+and fly more sophisticated projects, we started to feel limited by the 
+existing electronics products available.  OpenAlt was Bdale's first 
+attempt to address this situation with a completely open hardware and software
+design... other project have since followed, and it's cool to have help from
+Keith and other friends!
 
 # [Using Altus Metrum Products](Uses) #
 
