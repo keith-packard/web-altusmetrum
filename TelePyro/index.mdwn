@@ -10,9 +10,7 @@ This is an 8-channel pyro expansion board for [TeleMetrum](../TeleMetrum/).
 It would be nice to support more than the 2 channels of igniter control
 included in the stock [TeleMetrum](../TeleMetrum/) design, so that we can
 fly more complex projects involving staging, air starts, and backup ejection
-charges.  We also want to experiment with better circuits for testing igniter
-continuity, with the hope of being able to measure actual resistance and not
-just continuity.
+charges.
 
 ## Features ##
 
@@ -53,5 +51,5 @@ but no prototypes have been built yet.
 
 ## Future Plans ##
 
-Prototype circuit boards are in hand, and we hope to build some up and test
-them during the summer of 2011.
+As of late September 2011, v0.1 prototype boards are loaded and under test.
+
