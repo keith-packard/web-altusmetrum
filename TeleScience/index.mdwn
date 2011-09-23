@@ -5,6 +5,9 @@ support science projects.  It provides 12 analog inputs with selectable
 thermistor support, and 5 general purpose I/O pins.  This board can also
 be used standalone as a USB I/O device.
 
+<a href="v0.1/telescience-top.jpg"> <img src="v0.1/telescience-top-thumb.jpg"></a>
+<a href="v0.1/telescience-bottom.jpg"> <img src="v0.1/telescience-bottom-thumb.jpg"></a>
+
 ## Motivation ##
 
 Bdale's son Robert is interested in mapping the temperatures experienced
