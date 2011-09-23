@@ -2,6 +2,9 @@
 
 This is an 8-channel pyro expansion board for [TeleMetrum](../TeleMetrum/).
 
+<a href="v1.1/telepyro-v0.1-top.jpg"> <img src="v0.1/telepyro-v0.1-top-thumb.jpg"></a>
+<a href="v1.1/telepyro-v0.1-bottom.jpg"> <img src="v0.1/telepyro-v0.1-bottom-thumb.jpg"></a>
+
 ## Motivation ##
 
 It would be nice to support more than the 2 channels of igniter control
