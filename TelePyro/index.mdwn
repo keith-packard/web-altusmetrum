@@ -2,8 +2,8 @@
 
 This is an 8-channel pyro expansion board for [TeleMetrum](../TeleMetrum/).
 
-<a href="v1.1/telepyro-v0.1-top.jpg"> <img src="v0.1/telepyro-v0.1-top-thumb.jpg"></a>
-<a href="v1.1/telepyro-v0.1-bottom.jpg"> <img src="v0.1/telepyro-v0.1-bottom-thumb.jpg"></a>
+<a href="v0.1/telepyro-top.jpg"> <img src="v0.1/telepyro-top-thumb.jpg"></a>
+<a href="v0.1/telepyro-bottom.jpg"> <img src="v0.1/telepyro-bottom-thumb.jpg"></a>
 
 ## Motivation ##
 
