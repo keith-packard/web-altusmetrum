@@ -10,6 +10,9 @@ support other frequency ranges.
 Production units are available now from the 
 [Garbee and Garbee](http://auric.gag.com) web store.
 
+For the latest TeleDongle firmware and related software, please
+visit the [AltOS](../AltOS) page on this site.
+
 <img src="v0.2/cimg5556-small.jpg">
 
 ## Features ##
@@ -52,6 +55,10 @@ Production units are available now from the
 ## [Production History](../production) ##
 
 ## Artifacts ##
+
+There is a single manual for all Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com) in the project 
