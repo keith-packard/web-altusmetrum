@@ -76,12 +76,9 @@ hack on it in the comfort of your own home.
 
 ### Linux ###
 
-If you use [Debian](http://www.debian.org), then a pre-built package for 
-32-bit x86 is currently available here:
+If you use [Debian](http://www.debian.org), you can simply install the 'altos'
+package from any Debian mirror, like so:
 
-	wget -O - http://altusmetrum.org/apt/altusmetrum.key | apt-key add -
-	wget -O /etc/apt/sources.list.d/altos.list http://altusmetrum.org/apt/altos.list
-	apt-get update
 	apt-get install altos
 
 If you use some other distribution of Linux, then 
