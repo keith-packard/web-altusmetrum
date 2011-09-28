@@ -46,13 +46,6 @@ A number of features are implemented or in process in the sources available
 in our publicly visible repository that are not part of the current stable
 release.
 
-* A Kalman-filter based approach to apogee detection using more than just the
-  baro sensor, so that we can safely control apogee ejection on flights to
-  altitudes beyond the range of our baro sensor alone.  Unlike the other items
-  on the list, this will be a significant change to the in-rocket TeleMetrum
-  firmware.  It may therefore be a while before this becomes part of a stable 
-  firmware release.
-
 * Motor characterization. Because TeleMetrum contains a
   high-resolution, high-frequency accelerometer, it is possible to
   take the data from that and compute an accurate thrust curve for
@@ -79,6 +72,7 @@ hack on it in the comfort of your own home.
 If you use [Debian](http://www.debian.org), you can simply install the 'altos'
 package from any Debian mirror, like so:
 
+	apt-get update
 	apt-get install altos
 
 If you use some other distribution of Linux, then 
