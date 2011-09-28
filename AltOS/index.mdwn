@@ -72,8 +72,8 @@ hack on it in the comfort of your own home.
 If you use [Debian](http://www.debian.org), you can simply install the 'altos'
 package from any Debian mirror, like so:
 
-	apt-get update
-	apt-get install altos
+		apt-get update
+		apt-get install altos
 
 If you use some other distribution of Linux, then 
 a Linux package of our second-generation Java bits that 
