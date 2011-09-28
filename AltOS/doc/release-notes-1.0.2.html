@@ -1,0 +1,16 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
+    Version 1.0.2 is a bugfix release, addressing a minor issue
+    found in version 1.0.1
+  </p><p>
+    AltOS Firmware Changes
+    </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+	On TeleMetrum, wait to enable the radio link for remote command operations
+	until the device enters either idle or invalid mode. Ticket #26.
+      </li><li class="listitem">
+	On TeleMini, delay during reboot for one second to give the
+	TeleDongle time to leave radio link mode. Otherwise, the
+	TeleDongle would send another radio link packet out while the
+	TeleMini was rebooting, sending TeleMini right back to idle
+	mode. Ticket #27.
+      </li></ul></div><p>
+  </p></div></body></html>
