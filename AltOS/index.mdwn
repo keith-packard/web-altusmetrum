@@ -75,6 +75,10 @@ package from any Debian mirror, like so:
 		apt-get update
 		apt-get install altos
 
+If you use [Ubuntu](http://ubuntulinux.org), pre-built packages are available
+from [this PPA](https://launchpad.net/~sconklin/+archive/altos/) 
+maintained by Steve Conklin and friends.
+
 If you use some other distribution of Linux, then 
 a Linux package of our second-generation Java bits that 
 should run on any distribution with a modern Java version is also 
