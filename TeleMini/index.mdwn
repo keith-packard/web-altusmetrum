@@ -5,7 +5,8 @@ model rocketry with integrated telemetry link.
 
 Production units are available from the 
 [Garbee and Garbee](http://auric.gag.com) web 
-store.
+store.  TeleMini starter kits are also available from 
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_telemini.asp).
 
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
