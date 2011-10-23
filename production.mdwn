@@ -204,6 +204,10 @@ have magnetic sensors since I only have two samples of the now-obsolete part.
 
 Full load of TeleScience v0.1 PCBs on 2011.09.22.
 
+## sn 46-48 ##
+
+Full load of TeleTerra v0.2 PCBs on 2011.10.23.
+
 ## sn 51 ##
 
 Full load of TeleMetrum v0.2 PCB on 2010.01.09, with 100g accel and screw 
