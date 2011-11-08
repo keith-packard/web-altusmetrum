@@ -1,5 +1,7 @@
 ![Altus Metrum Logo](logo.png)
 
+<link href="https://plus.google.com/109995815990298399569/" rel="publisher" />
+
 Open hardware and software designs 
 for high powered model rocketry by
 [Bdale Garbee](http://gag.com/~bdale) and 
@@ -102,9 +104,10 @@ As we make progress, you can read about it in our [News](News) feed.  Feel
 free to subscribe to our 
 [mailing list](http://lists.gag.com/mailman/listinfo/altusmetrum).  We also 
 hang out on IRC channel #altusmetrum on irc.oftc.net if you have
-questions that aren't answered here.  And if you're a Facebook user, you
-can join the [Altus Metrum](http://www.facebook.com/group.php?gid=341167482968)
-Facebook group.
+questions that aren't answered here.  You can also find us on 
+[Facebook](http://www.facebook.com/group.php?gid=341167482968)
+and on
+[Google+](https://plus.google.com/109995815990298399569).
 
 Our main projects include radio links.  If you don't already have one, 
 getting an [Amateur Radio](./Radio) license would be a good thing to do!
