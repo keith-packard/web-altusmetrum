@@ -6,6 +6,7 @@ COSROCS Challenger:38.99624:-104.773979:http://cosrocs.org/
 COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org/
 HARA Bragg Farms:34.895875:-86.616211;http://www.hararocketry.org/HARA/Main.html
 KLOUDBusters Rocket Pasture:37.167833333:-97.73975:http://kloudbusters.org/
+MDRA Higgs Farm:39.07854:-75.87634:http://www.mdrocketry.org/
 METRA Pine Island:41.31939:-74.47077:http://metrarocketclub.org/
 NCR Atlas Site:40.65:-104.38333:http://ncrocketry.org/
 NCR Pawnee North Site:40.885955:-104.63793:http://ncrocketry.org/

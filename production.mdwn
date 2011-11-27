@@ -143,6 +143,11 @@ Modified 2009.11.20 to:
 In this configuration, flew two textbook perfect flights on 2009.11.21 at
 Hudson Ranch in Trick-O-Treat on J motors.
 
+Modified 2011.11.13 to:
+
+* test ADXL78 accelerometer functionality for v1.2 build
+* use 3.3k instead of 10k for R2 and R3, to eliminate power-on pyro glitching
+
 ## sn 14 ##
 
 Full load of v0.1 PCB on 2009.11.05, two cuts and jumps to rewire P1_2 
