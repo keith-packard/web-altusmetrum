@@ -116,9 +116,12 @@ download the software and try it before purchasing our hardware!
 
 ## Future Plans ##
 
-TeleMetrum v1.1 meets all of our expectations, except for one mis-placed 
-trace also present in v1.0.  The error makes use of a separate pyro battery 
-less trivial than intended.  We'll fix that for a future production run.  
+TeleMetrum v1.2 is now out for production.  The significant user-visible
+change is that we've moved to a 70g accelerometer by default, due to poor
+availability of the part we previously used due to damage to the Freescale
+facility in Sendai caused by the Japan earthquake / tsunami.  Boards should
+be in stock again shortly before Christmas 2011, and full details will be 
+posted here at that time.
 
 ## Problems ##
 
