@@ -261,3 +261,9 @@ Production run of 324 pieces of TeleDongle v0.2 by
 
 Production run of 144 pieces of TeleMini v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2011.07.25.
+
+## sn 835-941 ##
+
+Production run of 107 pieces of TeleMetrum v1.2 by
+[Advanced Circuits](http://4pcb.com), received 2011.12.15.
+

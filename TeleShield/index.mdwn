@@ -1,0 +1,68 @@
+# TeleShield
+
+This is an RF interface board for use with [Arduino](http://arduino.cc)
+systems.  It provides the equivalent of a [TeleDongle](../TeleDongle) 
+plus [Bluetooth](http://www.bluetooth.com), plus a microSD socket for 
+data storage.
+
+The RF filter components are set for use in the vicinity of 435 Mhz.
+
+For the latest TeleShield firmware and related software, please
+visit the [AltOS](../AltOS) page on this site.
+
+## Features ##
+
+### User View ###
+
+* can be used as an 
+  [Arduino shield](http://www.arduino.cc/en/Main/arduinoShields) 
+  or as a USB peripheral
+* 70cm ham-band transceiver compatible with [Altus Metrum](../) products,
+  programmed for 38k4 GFSK data rate with forward error correction
+* micro USB interface
+* 4 pin Tyco MicroMaTch connector for debug and flash programming
+* 8 pin Tyco MicroMaTch connector supports serial or SPI interface
+* micro SD socket for Arduino data storage (not connected to CC1111!)
+
+### Developer View ###
+
+* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
+	* Sub-1Ghz transceiver
+	* 8051 MCU
+	* 32k Flash
+	* 4k RAM
+	* USB 2.0
+	* 6 12-bit analog inputs (11 bits with single-ended sensors)
+	* 2 channels of serial I/O
+	* digital I/O
+	* interfaced to Arduino via async serial plus two handshake pins
+* Raycom Bluetooth module interfaced to the CC1111 via async serial
+* micro SD card socket interfaced to the Arduino via SPI
+* 150mA 3.3V LDO regulator
+	* can take input from either USB or the unregulated Arduino input
+	* input and output appear on 8-pin companion connector
+* Software Features
+	* Written mostly in C with some 8051 assembler
+	* Runs from on-chip flash, uses on-chip RAM
+	* USB serial emulation for data interface
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+There is a single manual for all Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+
+The hardware design current gEDA files are available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/teleshield](http://git.gag.com/?p=hw/teleshield;a=summary).  
+
+## Future Plans ##
+
+Prototype v0.1 boards will hopefully be working in time to show at the 
+Arduino mini-conference at LCA 2012 in mid-January.
