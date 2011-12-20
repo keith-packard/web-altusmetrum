@@ -52,6 +52,7 @@ project [hw/telenano](http://git.gag.com/?p=hw/telenano;a=summary).
 
 ## Future Plans ##
 
-Initial hardware prototypes are assembled and working.  Work proceeds on 
-suitable firmware.  We do not have a target production date or retail 
-price for TeleNano yet.
+Two generations of hardware prototypes have been built and work, but we don't
+know if or when TeleNano will move into production.  [TeleMini](../TeleMini/) 
+is basically TeleNano plus dual deployment, and the additional cost of the
+deployment parts is low enough to make TeleMini a more compelling product.  

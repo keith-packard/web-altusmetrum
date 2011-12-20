@@ -116,12 +116,12 @@ download the software and try it before purchasing our hardware!
 
 ## Future Plans ##
 
-TeleMetrum v1.2 is now out for production.  The significant user-visible
+TeleMetrum v1.2 is back from our assembler and the first batch are being 
+prepared for sale, hopefully by Christmas day.  The significant user-visible
 change is that we've moved to a 70g accelerometer by default, due to poor
 availability of the part we previously used due to damage to the Freescale
-facility in Sendai caused by the Japan earthquake / tsunami.  Boards should
-be in stock again shortly before Christmas 2011, and full details will be 
-posted here at that time.
+facility in Sendai caused by the Japan earthquake / tsunami.  Full details 
+will be posted here when they're available to order.
 
 ## Problems ##
 

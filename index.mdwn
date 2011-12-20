@@ -45,6 +45,9 @@ barometric pressure sensor
 is a tiny rocketry altimeter with telemetry using only a barometric 
 pressure sensor
 
+* [TeleShield](TeleShield/)
+is an RF interface board for use with [Arduino](http://arduino.cc) systems
+
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
