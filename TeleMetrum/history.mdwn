@@ -1,0 +1,115 @@
+# TeleMetrum History
+
+## v0.1 ##
+
+This is a photo of our original board with serial port for off-board GPS,
+without the big off-board 1000uF cap from the original ejection circuit:
+
+<a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
+
+The differences between v0.1 and later boards were substantial:
+
+* 2.5 x 1 inch board with all parts mounted on one side
+* 4-pin PicoBlade serial port connector for attachment of external GPS module 
+* USB connector projected approximately 3mm over the edge of the board
+* Debug connector used 4 IC socket pins on 100 mil centers
+* no companion board interface
+* 50ma LDO regulator on early boards, later boards used a 100ma part
+* [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM instead of DataFlash
+	* 128k x 8
+	* SPI interface
+* [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) discrete temperature sensor
+* used 1000uF electrolytic capacitor charged to 5V for pyro supply
+* two LEDs instead of one attached to CPU
+
+The elimination of the discrete temperature sensor and second LED were
+necessary to support the companion board interface added in v0.2.
+
+The v0.1 artwork had three issues, two of which required physical rework
+on each board.  All of these issues were fixed in v0.2.
+
+* The USB connector footprint was placed wrong, so that the
+  connector hung out over the edge of the board instead of being 
+  flush.
+* We needed chip select on the SPI memory.  To fix that, we gave up the 
+  ability to put the accelerometer into self-test mode and used that 
+  GPIO line to pull chip select on the memory, which required two
+  cuts and two jumpers.  
+* The igniter sense circuits each needed a second resistor to 
+  complete the voltage divider so our 3.3V CPU ADC could read the 
+  5V ejection voltage.  This was fixed by changing two resistor 
+  values, and tacking two additional resistors onto the board
+  with jumpers to ground.
+
+The schematics and PCB artwork for this version as of the working-v0.1 tag
+are available here are pdf copies for easy reference:
+
+ * [schematic](v0.1/telemetrum.pdf)
+ * [pcb artwork](v0.1/telemetrum.pcb.pdf)
+ * [bill of materials](v0.1/telemetrum.bom)
+
+## v0.2 ##
+
+These are photos of our second version, which included the integrated Venus
+GPS receiver, but with a passive patch antenna that turned out to have 
+disappointing performance due to our many PCB geometry constraints.  It also
+used a voltage regulator with less capacity which we felt was marginal for
+supporting the companion boards we have planned:
+
+<a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
+<a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
+
+Other than cleaning up the silkscreen, the differences between v0.2 and
+v1.0 boards were really quite small:
+
+* 100ma LDO regulator instead of the current 150ma part
+* no C38 footprint
+* different value for C36 reset capacitor
+
+The schematics and PCB artwork for this version are on the v0.2 branch in
+our git repository, here are pdf copies for easy reference:
+
+ * [schematic](v0.2/telemetrum.pdf)
+ * [pcb artwork](v0.2/telemetrum.pcb.pdf)
+ * [bill of materials](v0.2/partslist.csv)
+
+## v1.0 ##
+
+These are photos of our third version, which was the basis of our first
+production build.  These were sold between April and December 2010, and
+performed very well.
+
+<a href="v1.0/cimg5972-crop.jpg"> <img src="v1.0/cimg5972-thumb.jpg"></a>
+<a href="v1.0/cimg5974-crop.jpg"> <img src="v1.0/cimg5974-thumb.jpg"></a>
+
+The differences between v1.0 and v1.1 were small:
+
+* different flash memory part due to supplier availability problems
+* updated reset circuit to improve reliability at temperature extremes
+* changed the GPS antenna footprint to eliminate the large through-hole 
+  originally intended for use with a passive patch
+* irq line eliminated from the companion port
+* an additional resistor divider added to allow sampling the 5V supply
+
+The schematics and PCB artwork for this version are on the v1.0 branch in
+our git repository, here are pdf copies for easy reference:
+
+* [schematic](v1.0/telemetrum.pdf)
+* [pcb artwork](v1.0/telemetrum.pcb.pdf)
+* [bill of materials](v1.0/partslist.csv)
+
+## v1.1 ##
+
+<a href="v1.1/telemetrum-v1.1-thside.jpg"> <img src="v1.1/telemetrum-v1.1-thside-thumb.jpg"></a>
+<a href="v1.1/telemetrum-v1.1-smtside.jpg"> <img src="v1.1/telemetrum-v1.1-smtside-thumb.jpg"></a>
+
+For those who don't have ready access to the gEDA suite, here are pdf snapshots
+of the files for Production PCB version 1.1 in more easily readable form.  
+
+* [schematic](v1.1/telemetrum.pdf)
+* [pcb artwork](v1.1/telemetrum.pcb.pdf)
+* [bill of materials](v1.1/partslist.csv)
+
+## v1.2 ##
+
+Our current production version.
