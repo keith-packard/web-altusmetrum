@@ -4,7 +4,12 @@
 
 This is a photo of our original board with serial port for off-board GPS,
 without the big off-board 1000uF cap from the original ejection circuit.  All
-v0.2 boards were hand-assembled by Bdale.
+v0.1 boards were hand-assembled by Bdale.  This is more significant than it
+sounds... the CC1111F32 is a 36-pin QFN package, which necessitates reflow 
+soldering. Since we needed to reflow solder anyway, and because TI used them 
+in their reference design, we went a little crazy and used 0402 passive parts 
+everywhere. That means working under a microscope to place parts!  Without an 
+inspection microscope, hand loading and testing might be impossible.
 
 <a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
 
@@ -50,7 +55,9 @@ are available here as pdf copies for easy reference:
 ## v0.2 ##
 
 These are photos of our second version.  All v0.2 boards were hand assembled
-by Bdale:
+by Bdale.  The board featured in these photos also used the Tyco header for
+pyro connections that we used to offer as an option.  Nobody ever bought a
+board with anything but screw terminals, so we no longer offer this option.
 
 <a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
 <a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
@@ -78,7 +85,12 @@ Issues with the v0.2 boards included:
   to our many PCB geometry constraints.
 * The initial voltage regulator on v0.2 boards was a 100mA part.  Once we 
   realized how much power the GPS receiver needed to achieve initial lock, 
-  we switched to a 150mA part.
+  we switched to a 150mA part.  
+* With the LiPo battery charging rate from USB set at approximately 100mA, 
+  total power consumption can exceed the rate at which we draw power from 
+  the USB interface, particularly when the GPS is in cold start mode. This 
+  means a battery must be attached during operation, and also that the 
+  battery will only charge effectively from USB when the board is turned off.
 * The reset circuit worked well for the cc1111 but was marginal for the GPS
   chip .. sometimes the board would have to be power cycled several times
   to get the GPS to come up correctly.
