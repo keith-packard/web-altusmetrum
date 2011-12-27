@@ -3,30 +3,29 @@
 ## v0.1 ##
 
 This is a photo of our original board with serial port for off-board GPS,
-without the big off-board 1000uF cap from the original ejection circuit:
+without the big off-board 1000uF cap from the original ejection circuit.  All
+v0.2 boards were hand-assembled by Bdale.
 
 <a href="v0.1/loadedpair.jpg"> <img src="v0.1/loadedpair-thumb.jpg"></a>
 
-The differences between v0.1 and later boards were substantial:
+The v0.1 board was 
+significantly different than later versions, in both mechanical and 
+circuit terms.
 
 * 2.5 x 1 inch board with all parts mounted on one side
 * 4-pin PicoBlade serial port connector for attachment of external GPS module 
 * USB connector projected approximately 3mm over the edge of the board
 * Debug connector used 4 IC socket pins on 100 mil centers
-* no companion board interface
 * 50ma LDO regulator on early boards, later boards used a 100ma part
 * [Microchip 25LC1024](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en520389) CMOS serial EEPROM instead of DataFlash
 	* 128k x 8
 	* SPI interface
 * [Microchip MCP9700A](http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en027103) discrete temperature sensor
 * used 1000uF electrolytic capacitor charged to 5V for pyro supply
-* two LEDs instead of one attached to CPU
-
-The elimination of the discrete temperature sensor and second LED were
-necessary to support the companion board interface added in v0.2.
+* a dual LED instead of just one attached to the CPU
 
 The v0.1 artwork had three issues, two of which required physical rework
-on each board.  All of these issues were fixed in v0.2.
+on each board, all of which were fixed in v0.2.
 
 * The USB connector footprint was placed wrong, so that the
   connector hung out over the edge of the board instead of being 
@@ -42,7 +41,7 @@ on each board.  All of these issues were fixed in v0.2.
   with jumpers to ground.
 
 The schematics and PCB artwork for this version as of the working-v0.1 tag
-are available here are pdf copies for easy reference:
+are available here as pdf copies for easy reference:
 
  * [schematic](v0.1/telemetrum.pdf)
  * [pcb artwork](v0.1/telemetrum.pcb.pdf)
@@ -50,21 +49,39 @@ are available here are pdf copies for easy reference:
 
 ## v0.2 ##
 
-These are photos of our second version, which included the integrated Venus
-GPS receiver, but with a passive patch antenna that turned out to have 
-disappointing performance due to our many PCB geometry constraints.  It also
-used a voltage regulator with less capacity which we felt was marginal for
-supporting the companion boards we have planned:
+These are photos of our second version.  All v0.2 boards were hand assembled
+by Bdale:
 
 <a href="v0.2/cimg5164-cropped.jpg"> <img src="v0.2/cimg5164-thumb.jpg"></a>
 <a href="v0.2/cimg5171-cropped.jpg"> <img src="v0.2/cimg5171-thumb.jpg"></a>
 
-Other than cleaning up the silkscreen, the differences between v0.2 and
-v1.0 boards were really quite small:
+Lots of things were different from v0.1.  Perhaps the biggest change was 
+integrating a Venus GPS receiver and a passive patch GPS antenna.  This 
+required stretching the board length to 2.75 inches, and changing the layout 
+to put through-hole parts on the opposite side from
+the surface mount parts.  While we were at it, things were rearranged to put 
+tall parts near the center and not on the board edges so that boards could 
+be mounted in smaller diameter tubes.
 
-* 100ma LDO regulator instead of the current 150ma part
-* no C38 footprint
-* different value for C36 reset capacitor
+Another significant change was adding a "companion" port, intended to support
+expansion boards but also possible to use as a programming interface.  With
+a suitable cable, the presence of the companion port allowed any TeleMetrum
+board to be used to re-program any other TeleMetrum or TeleDongle 
+board.  Elimination of the discrete temperature sensor and second LED were
+necessary to free up the pins needed for the companion interface.
+
+We also changed to a different flash memory chip with 1 megabyte of storage.
+
+Issues with the v0.2 boards included:
+
+* The passive GPS antenna turned out to have disappointing performance due 
+  to our many PCB geometry constraints.
+* The initial voltage regulator on v0.2 boards was a 100mA part.  Once we 
+  realized how much power the GPS receiver needed to achieve initial lock, 
+  we switched to a 150mA part.
+* The reset circuit worked well for the cc1111 but was marginal for the GPS
+  chip .. sometimes the board would have to be power cycled several times
+  to get the GPS to come up correctly.
 
 The schematics and PCB artwork for this version are on the v0.2 branch in
 our git repository, here are pdf copies for easy reference:
@@ -75,21 +92,28 @@ our git repository, here are pdf copies for easy reference:
 
 ## v1.0 ##
 
-These are photos of our third version, which was the basis of our first
-production build.  These were sold between April and December 2010, and
-performed very well.
+These are photos of our third version, which was our first production 
+build.  By the time we understood what we wanted to change in v0.2, things 
+worked
+well enough that every time we went to a launch someone would ask about
+buying boards from us.  So in January 2010, Keith and Bdale made the decision
+to produce enough boards to sell some to others.  These were sold between April 
+and December 2010, and performed very well.
 
 <a href="v1.0/cimg5972-crop.jpg"> <img src="v1.0/cimg5972-thumb.jpg"></a>
 <a href="v1.0/cimg5974-crop.jpg"> <img src="v1.0/cimg5974-thumb.jpg"></a>
 
-The differences between v1.0 and v1.1 were small:
+The changes from v0.2 were fairly small.  The value of the reset capacitor 
+changed to increase the probability of the GPS chip coming up correctly, and
+we moved to using a Taoglas amplified patch antenna attached to the U.FL
+connector instead of the passive GPS patch antennas.
 
-* different flash memory part due to supplier availability problems
-* updated reset circuit to improve reliability at temperature extremes
-* changed the GPS antenna footprint to eliminate the large through-hole 
-  originally intended for use with a passive patch
-* irq line eliminated from the companion port
-* an additional resistor divider added to allow sampling the 5V supply
+There were really only two issues with the v1.0 boards that annoyed us.  The 
+first was
+that the reset circuit still wasn't satisfying.  The GPS chip would sometimes
+fail to initialize, particularly in hot weather.  The second was that 
+fluctuation of the 3.3 volt power rail correlated with radio transmission
+induced noise patterns in the accelerometer data.
 
 The schematics and PCB artwork for this version are on the v1.0 branch in
 our git repository, here are pdf copies for easy reference:
@@ -100,8 +124,30 @@ our git repository, here are pdf copies for easy reference:
 
 ## v1.1 ##
 
+These are photos of v1.1, which rightfully looks very similar to v1.0.  These
+boards were sold through most of 2011.
+
 <a href="v1.1/telemetrum-v1.1-thside.jpg"> <img src="v1.1/telemetrum-v1.1-thside-thumb.jpg"></a>
 <a href="v1.1/telemetrum-v1.1-smtside.jpg"> <img src="v1.1/telemetrum-v1.1-smtside-thumb.jpg"></a>
+
+There were several changes in v1.1:
+
+* different flash memory part due to supplier availability problems.  It turned
+  out that 2 megabyte chips were cheaper than 1 megabyte, so the size doubled.
+* updated reset circuit to improve reliability at temperature extremes
+* changed the GPS antenna footprint to eliminate the large through-hole 
+  originally intended for use with a passive patch
+* irq line eliminated from the companion port
+* an additional resistor divider added to allow sampling the 5V supply
+
+With an associated software change, being able to sample the 5V and 3.3V rails
+made it possible to factor out almost all of the coherent noise from the 
+accelerometer data seen with v1.0 boards.
+
+The one big problem with v1.1 boards turned out to be that they would 
+sometimes reset during flight, usually when firing pyro charges.  Bdale
+wrote a [blog entry](http://www.gag.com/bdale/blog/posts/RF_Immunity.html)
+that explains in some detail what we finally learned was causing this.
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of the files for Production PCB version 1.1 in more easily readable form.  
@@ -112,4 +158,16 @@ of the files for Production PCB version 1.1 in more easily readable form.
 
 ## v1.2 ##
 
-Our current production version.
+This is our current production version, first made available for sale on
+Christmas day 2011.
+
+Changes from v1.1 include:
+
+* changed to 70g accelerometer from Analog Devices since Freescale MEMS parts
+  are still unavailable following the Japanese earthquake and tsunami.
+* reset controller changed from 3.15 to 3.00 volt trip point
+* bypass cap added to LDO input
+* pyro circuit resistor values tweaked to eliminate a glitch that at least in
+  theory made it possible for pyro charges to fire at power on.  We never saw
+  a problem, but the change was easy and obvious.
+
