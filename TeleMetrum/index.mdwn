@@ -84,11 +84,8 @@ The hardware design current gEDA files are available from
 
 Work on the next version proceeds on the master branch, with occasional
 temporary branches created when Bdale is making some major / speculative
-change.  Branched with names like 'v0.2' document what we're actually flying 
-on the respective PCB revisions.  The 'ground' branch has a cut-down schematic 
-used to generate the BOM for partially loading v0.1 boards to used on the 
-ground.  We call the on-the-ground version '[TeleDongle](../TeleDongle)', and 
-newer versions have their own PCB design.
+change.  Branched with names like 'v1.2' document what we're actually flying 
+on the respective PCB revisions.  
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of the files for Production PCB version 1.2 in more easily readable form.  
