@@ -32,18 +32,14 @@ kits.  [Australian Rocketry](http://www.ausrocketry.com) carries [TeleMetrum](ht
 is our flagship product, a dual-deploy rocketry altimeter with
 GPS and bidirectional RF telemetry link.
 
-* [TeleDongle](TeleDongle/) 
-is a simple RF interface for use in ground stations interacting with rockets
-using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
-interface for other microcontroller systems.
-
 * [TeleMini](TeleMini/)
 is a smaller dual-deploy rocketry altimeter with telemetry using only a 
 barometric pressure sensor
 
-* [TeleNano](TeleNano/)
-is a tiny rocketry altimeter with telemetry using only a barometric 
-pressure sensor
+* [TeleDongle](TeleDongle/) 
+is a simple RF interface for use in ground stations interacting with rockets
+using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
+interface for other microcontroller systems.
 
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
@@ -60,8 +56,14 @@ that adds 8 additional pyro channels.
 [TeleMetrum](TeleMetrum/) that adds 12 channels of thermistor or generic
 analog sensor input, and 5 general purpose I/O lines.
 
-* [TeleTerra](TeleTerra) is a planned hand-held ground station for use with 
-[TeleMetrum](TeleMetrum/).
+* [TeleTerra](TeleTerra) is a hand-held ground station for use with 
+[TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
+
+* [TeleShield](TeleShield/) is an [Arduino](http://arduino.cc) radio shield.
+
+* [TeleNano](TeleNano/)
+is a tiny rocketry altimeter with telemetry using only a barometric 
+pressure sensor
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
