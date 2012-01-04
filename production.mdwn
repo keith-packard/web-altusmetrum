@@ -213,6 +213,11 @@ Full load of TeleScience v0.1 PCBs on 2011.09.22.
 
 Full load of TeleTerra v0.2 PCBs on 2011.10.23.
 
+## sn 49-50 ##
+
+Full load of TeleShield v0.1 PCBs on 2012.01.03, using 3.15V reset controller
+and the less-good crystals.
+
 ## sn 51 ##
 
 Full load of TeleMetrum v0.2 PCB on 2010.01.09, with 100g accel and screw 

@@ -7,6 +7,11 @@ data storage.
 
 The RF filter components are set for use in the vicinity of 435 Mhz.
 
+These are photos of the first prototype:
+
+<a href="v0.1/teleshield-top.jpg"> <img src="v0.1/teleshield-top-thumb.jpg"></a>
+<a href="v0.1/teleshield-bottom.jpg"> <img src="v0.1/teleshield-bottom-thumb.jpg"></a>
+
 For the latest TeleShield firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
 
