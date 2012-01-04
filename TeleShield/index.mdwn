@@ -24,6 +24,7 @@ visit the [AltOS](../AltOS) page on this site.
   or as a USB peripheral
 * 70cm ham-band transceiver compatible with [Altus Metrum](../) products,
   programmed for 38k4 GFSK data rate with forward error correction
+* Bluetooth
 * micro USB interface
 * 4 pin Tyco MicroMaTch connector for debug and flash programming
 * 8 pin Tyco MicroMaTch connector supports serial or SPI interface
