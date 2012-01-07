@@ -6,6 +6,11 @@ USB for connection to the ground station computer.
 
 The RF filter components are set for use in the vicinity of 435 Mhz.
 
+These are photos of prototype version 0.2:
+
+<a href="v0.2/telebt-v0.2-top.jpg"> <img src="v0.2/telebt-v0.2-top-thumb.jpg"></a>
+<a href="v0.2/telebt-v0.2-bottom.jpg"> <img src="v0.2/telebt-v0.2-bottom-thumb.jpg"></a>
+
 For the latest TeleBT firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
 

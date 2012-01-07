@@ -242,6 +242,10 @@ Prototypes of TeleMetrum v1.1 loaded with the newer Venus 638 chips for
 evalutation, loaded as part of the production v1.1 run by 
 [Advanced Circuits](http://4pcb.com), received 2011.01.06.
 
+## sn 57-60 ##
+
+Full load of TeleBT v0.2 PCBs on 2012.01.07.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 
