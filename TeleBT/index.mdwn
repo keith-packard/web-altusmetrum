@@ -63,5 +63,8 @@ The hardware design current gEDA files are available from
 
 ## Future Plans ##
 
-Two prototype versions have been built with different physical form factors,
-v0.2 could be put into production at any time.
+Two prototype versions have been built with different physical form factors.
+We have working firmware, and a prototype of support in AltosUI.  Work is
+also underway on an [Android](http://www.android.com) version of AltosUI.  
+
+No firm schedule for production and sale of TeleBT has been set yet.
