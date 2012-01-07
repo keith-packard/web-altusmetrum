@@ -49,9 +49,11 @@ to start.
 
 ## Operation in Other Countries ##
 
-In Australia, we have learned that operation may be legal without a license 
-in the range 433.05-434.79 Mhz under the LIPD provisions.  However, please be
-mindful of ham radio users in that band.
+In Australia, we have learned that operation of our products is legal 
+without a license in the range 433.05-434.79 Mhz under the 
+[LIPD](http://www.comlaw.gov.au/Details/F2011C00543) provisions.  However, 
+please be mindful of ham radio and other possible licensed users in that 
+band as licensed users have priority.
 
 ## Related Equipment ##
 
