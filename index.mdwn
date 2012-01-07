@@ -59,6 +59,9 @@ analog sensor input, and 5 general purpose I/O lines.
 * [TeleTerra](TeleTerra) is a hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
 
+* [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
+[Bluetooth](http://www.bluetooth.com) as an alternative to USB.
+
 * [TeleShield](TeleShield/) is an [Arduino](http://arduino.cc) radio shield.
 
 * [TeleNano](TeleNano/)
