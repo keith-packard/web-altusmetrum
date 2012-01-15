@@ -23,6 +23,11 @@ your favorite launch site isn't included, please let us know!
 There is a single manual for all Altus Metrum products, which is available 
 in [html](doc/altusmetrum.html) and [pdf](doc/altusmetrum.pdf) formats.
 
+We also have an AltOS internals document for programmers 
+in [html](doc/altos.html) and [pdf](doc/altos.pdf) formats, and a
+document describing the AltOS over the radio protocol 
+in [html](doc/telemetry.html) and [pdf](doc/telemetry.pdf) formats.
+
 [[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
 ## Source Code ##
