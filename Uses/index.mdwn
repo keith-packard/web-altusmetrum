@@ -20,7 +20,7 @@ In the rocket itself, you just need a [TeleMetrum](../TeleMetrum) board and
 a LiPo rechargeable battery.  An 900mAh battery weighs less than a 9V 
 alkaline battery, and will run a [TeleMetrum](../TeleMetrum) for hours.
 
-[ThisA document](InsertSheet.pdf) contains notes about how to install a 
+[This document](InsertSheet.pdf) contains notes about how to install a 
 flight computer such as TeleMetrum in a rocket.
 
 By default, we ship TeleMetrum with a simple wire antenna.  If your 
