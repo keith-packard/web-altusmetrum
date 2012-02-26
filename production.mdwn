@@ -246,6 +246,10 @@ evalutation, loaded as part of the production v1.1 run by
 
 Full load of TeleBT v0.2 PCBs on 2012.01.07.
 
+## sn 61-63 ##
+
+Full load of TeleShield v0.1 PCBs on 2012.01.13.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 
