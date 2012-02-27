@@ -63,9 +63,13 @@ but no prototypes have been built yet.
 
 ## Future Plans ##
 
-3 prototypes have been built, of which 2 are installed in 
+6 prototypes have been built, of which 2 were installed in 
 [2YikStik](http://www.gag.com/rockets/airframes/2YikStik/) 
-which we hope to fly at LDRS 30 in early September 2011.
+and flown at LDRS 30 in early September 2011.  Unfortunately, we experienced a 
+mechanical failure in the airframe before going fast enough to get exciting
+data, but post-flight analysis suggested the TeleScience boards were working
+fine up until "the incident".  A replacement airframe is under construction
+that we hope to fly at NCR's 2012 edition of Mile High Mayhem.
 
 The thermistor conditioning circuits in the current design are very tightly
 coupled to the particular model of EPCOS thermistor that we chose for 2YikStik.
