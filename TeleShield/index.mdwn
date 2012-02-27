@@ -70,7 +70,10 @@ The hardware design current gEDA files are available from
 
 ## Future Plans ##
 
-The prototype v0.1 boards are working well, and will be shown at the 
-Arduino mini-conference at LCA 2012 on the afternoon of Monday the 16th 
-of January.  If there is sufficient interest, we will produce some.  Exactly
+The prototype v0.1 boards work fine.  Feedback from showing them at the
+Arduino mini-conference at LCA 2012 resulted in elimination of the Bluetooth
+interface.  Updated boards have not been built yet, but 
+[schematic and artwork files](v0.2/) are available for review and comment.
+
+If there is sufficient interest, we will produce some.  Exactly
 when that will happen and what they might cost are not known yet.
