@@ -16,6 +16,7 @@ OROC Brothers:43.79949786336483:-120.6485810681392:http://www.oregonrocketry.com
 OROC Sheridan:45.044176:-123.314323:http://www.oregonrocketry.com/
 OROC Wilsonville:45.297186:-122.759067:http://www.oregonrocketry.com/
 QRS Cedar Grove:-27.8512283:152.9624000:http://qldrocketry.com/
+Rainbow Valley:33.24:-112.399166667:
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net/
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
 Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org/
