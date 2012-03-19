@@ -1,6 +1,7 @@
 Advanced Rocketry Queensland:-27.82533:151.48001:http://advrocketry.com
 AARC South Australia:-35.092063:140.014786:http://www.australianrocketryclub.com.au/forum/index.php/board,28.0.html
-AHPRA BALLS:40.808333333333333:-119.15:http://www.ahpra.org/
+AHPRA BALLS:40.808:-119.15:http://www.ahpra.org/
+AHPRA Rainbow Valley:33.25:-112.4:http://www.ahpra.org
 ARS Rio Rancho:35.33475:-106.75361:http://arsabq.org/
 COSROCS Challenger:38.99624:-104.773979:http://cosrocs.org/
 COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org/
@@ -16,7 +17,6 @@ OROC Brothers:43.79949786336483:-120.6485810681392:http://www.oregonrocketry.com
 OROC Sheridan:45.044176:-123.314323:http://www.oregonrocketry.com/
 OROC Wilsonville:45.297186:-122.759067:http://www.oregonrocketry.com/
 QRS Cedar Grove:-27.8512283:152.9624000:http://qldrocketry.com/
-Rainbow Valley:33.24:-112.399166667:
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net/
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
 Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org/
