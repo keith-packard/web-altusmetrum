@@ -250,6 +250,11 @@ Full load of TeleBT v0.2 PCBs on 2012.01.07.
 
 Full load of TeleShield v0.1 PCBs on 2012.01.13.
 
+## sn 64-65 ##
+
+MegaMetrum v0.1 PCBs on 2012.03.31, with 2 megabyte flash parts and no 
+high-g accel.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 

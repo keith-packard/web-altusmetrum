@@ -21,10 +21,10 @@ or compatible licenses.
 
 All Altus Metrum products are available from the 
 [Garbee and Garbee](http://auric.gag.com) web 
-store.  [Apogee Components](http://www.apogeerockets.com) carries both
-[TeleMetrum](http://www.apogeerockets.com/Altus_Metrum_GPS.asp) and
-[TeleMini](http://www.apogeerockets.com/Altus_Metrum_telemini.asp) starter
-kits.  [Australian Rocketry](http://www.ausrocketry.com) carries [TeleMetrum](http://www.ausrocketry.com/shop/index.php?main_page=product_info&cPath=111&products_id=4302) starter kits.
+store.  Additionally, starter kits are available from our distributors, 
+including [Apogee Components](http://www.apogeerockets.com),
+[Australian Rocketry](http://www.ausrocketry.com), and 
+[Aerospace Education](http://www.rockets.co.nz) in New Zealand.
 
 # Projects #
 
