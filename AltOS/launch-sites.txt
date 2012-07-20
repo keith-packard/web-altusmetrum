@@ -5,12 +5,12 @@ AHPRA Rainbow Valley:33.25:-112.4:http://www.ahpra.org
 ARS Rio Rancho:35.33475:-106.75361:http://arsabq.org/
 COSROCS Challenger:38.99624:-104.773979:http://cosrocs.org/
 COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org/
-HARA Bragg Farms:34.895875:-86.616211;http://www.hararocketry.org/HARA/Main.html
+HARA Bragg Farms:34.895875:-86.616211:http://www.hararocketry.org/HARA/Main.html
+HARA Manchester:35.489537:-85.962438:http://www.hararocketry.org/HARA/Main.html
 KLOUDBusters Rocket Pasture:37.167833333:-97.73975:http://kloudbusters.org/
 LRA Roc Lake:49.4456194:-112.0118083:http://www.lethbridgerocketry.com/roclake/
 MDRA Higgs Farm:39.07854167:-75.87634583:http://www.mdrocketry.org/
 METRA Pine Island:41.31939:-74.47077:http://metrarocketclub.org/
-NAR HARA Manchester:35.489537:-85.962438:http://www.hararocketry.org/
 NCR Atlas Site:40.65:-104.38333:http://ncrocketry.org/
 NCR Pawnee North Site:40.885955:-104.63793:http://ncrocketry.org/
 OPROC Discovery Bay:47.97808,-122.896383:http://4hrockets.blogspot.com/
@@ -20,6 +20,6 @@ OROC Wilsonville:45.297186:-122.759067:http://www.oregonrocketry.com/
 QRS Cedar Grove:-27.8512283:152.9624000:http://qldrocketry.com/
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net/
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
-TRA Central VA Battlefield:38.3980:-78.065:http://www.battlepark.org/
+Tripoli Central Virginia Battle Park:38.398055:-78.065:http://www.battlepark.org/
 Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org/
 WAC Sportsman Club:47.815327777777778:-119.427186111111111:http://www.washingtonaerospace.org/
