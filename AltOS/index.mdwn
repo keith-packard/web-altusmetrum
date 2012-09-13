@@ -136,6 +136,11 @@ things to bind it to our devices, but if you get a complaint about the device
 being unrecognized, try pointing to the copy of the telemetrum.inf file 
 included in the package directory manually.
 
+Note that on some Windows 7 systems, it may be necessary to install AltOS using
+'compatibility mode'.  You can set this mode by 
+[changing the properties](http://www.sevenforums.com/tutorials/316-compatibility-mode.html)
+of the installer .exe.
+
 ## License ##
 
 The firmware and associated software are licensed [GPL version

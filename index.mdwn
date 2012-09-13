@@ -26,6 +26,8 @@ including [Apogee Components](http://www.apogeerockets.com),
 [Australian Rocketry](http://www.ausrocketry.com), and 
 [Aerospace Education](http://www.rockets.co.nz) in New Zealand.
 
+# Download the latest [AltOS](AltOS/) software version #
+
 # Projects #
 
 * [TeleMetrum](TeleMetrum/) 
