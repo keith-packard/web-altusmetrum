@@ -1,0 +1,116 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>AltOS Companion Port</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" title="AltOS Companion Port"><div class="titlepage"><div><div><h2 class="title"><a name="idm14830200"></a>AltOS Companion Port</h2></div><div><h3 class="subtitle"><i>Protocol Definitions</i></h3></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2012 Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="idp109320"></a><p>
+	This document is released under the terms of the
+	<a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
+	  Creative Commons ShareAlike 3.0
+	</a>
+	license.
+      </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.1</td><td align="left">13 January 2012</td></tr><tr><td align="left" colspan="2">Initial content</td></tr></table></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp111344">1. Companion Port</a></span></dt><dt><span class="section"><a href="#idp79160">2. Companion SPI Protocol</a></span></dt><dt><span class="section"><a href="#idp2471632">3. SPI Message Formats</a></span></dt><dd><dl><dt><span class="section"><a href="#idp950968">3.1. Command Message</a></span></dt><dt><span class="section"><a href="#idp781248">3.2. SETUP reply message</a></span></dt><dt><span class="section"><a href="#idp188256">3.3. FETCH reply message</a></span></dt></dl></dd><dt><span class="section"><a href="#idp196800">4. History and Motivation</a></span></dt></dl></div><div class="section" title="1. Companion Port"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp111344"></a>1. Companion Port</h2></div></div></div><p>
+      Many Altus Metrum products come with an eight pin Micro MaTch
+      connector, called the Companion Port. This is often used to
+      program devices using a programming cable. However, it can also
+      be used to connect TeleMetrum to external companion boards
+      (hence the name).
+    </p><p>
+      The Companion Port provides two different functions:
+      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+	  Power. Both battery-level and 3.3V regulated power are
+	  available. Note that the amount of regulated power is not
+	  huge; TeleMetrum contains a 150mA regulator and uses, at
+	  peak, about 120mA or so. For applications needing more than
+	  a few dozen mA, placing a separate regulator on them and
+	  using the battery for power is probably a good idea.
+	</li><li class="listitem">
+	  SPI. The flight computer operates as a SPI master, using
+	  a protocol defined in this document. Companion boards
+	  provide a matching SPI slave implementation which supplies
+	  telemetry information for the radio downlink during flight
+	</li></ul></div><p>
+    </p></div><div class="section" title="2. Companion SPI Protocol"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp79160"></a>2. Companion SPI Protocol</h2></div></div></div><p>
+      The flight computer implements a SPI master communications
+      channel over the companion port, and uses this to get
+      information about a connected companion board and then to get
+      telemetry data for transmission during flight.
+    </p><p>
+      At startup time, the flight computer sends a setup request
+      packet, and the companion board returns a board identifier, the
+      desired telemetry update period and the number of data channels
+      provided. The flight computer doesn't interpret the telemetry
+      data at all, simply packing it up and sending it over the link.
+      Telemetry packets are 32 bytes long, and companion packets use 8
+      bytes as a header leaving room for a maximum of 12 16-bit data
+      values.
+    </p><p>
+      Because of the limits of the AVR processors used in the first
+      two companion boards, the SPI data rate is set to 187.5kbaud.
+    </p></div><div class="section" title="3. SPI Message Formats"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp2471632"></a>3. SPI Message Formats</h2></div></div></div>
+    This section first defines the command message format sent from
+    the flight computer to the companion board, and then the various
+    reply message formats for each type of command message.
+    <div class="section" title="3.1. Command Message"><div class="titlepage"><div><div><h3 class="title"><a name="idp950968"></a>3.1. Command Message</h3></div></div></div><div class="table"><a name="idp2057040"></a><p class="title"><b>Table 1. Companion Command Message</b></p><div class="table-contents"><table summary="Companion Command Message" border="1"><colgroup><col align="center" class="Offset"><col align="center" class="Data Type"><col align="left" class="Name"><col align="left" class="Description"></colgroup><thead><tr><th align="center">Offset</th><th align="center">Data Type</th><th align="center">Name</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">uint8_t</td><td align="left">command</td><td align="left">Command identifier</td></tr><tr><td align="center">1</td><td align="center">uint8_t</td><td align="left">flight_state</td><td align="left">Current flight computer state</td></tr><tr><td align="center">2</td><td align="center">uint16_t</td><td align="left">tick</td><td align="left">Flight computer clock (100 ticks/second)</td></tr><tr><td align="center">4</td><td align="center">uint16_t</td><td align="left">serial</td><td align="left">Flight computer serial number</td></tr><tr><td align="center">6</td><td align="center">uint16_t</td><td align="left">flight</td><td align="left">Flight number</td></tr><tr><td align="center">8</td><td class="auto-generated"> </td><td class="auto-generated"> </td><td class="auto-generated"> </td></tr></tbody></table></div></div><br class="table-break"><div class="table"><a name="idp83880"></a><p class="title"><b>Table 2. Companion Command Identifiers</b></p><div class="table-contents"><table summary="Companion Command Identifiers" border="1"><colgroup><col align="center" class="Value"><col align="left" class="Name"><col align="left" class="Description"></colgroup><thead><tr><th align="center">Value</th><th align="left">Name</th><th align="left">Description</th></tr></thead><tbody><tr><td align="center">1</td><td align="left">SETUP</td><td align="left">Supply the flight computer with companion
+	      information</td></tr><tr><td align="center">2</td><td align="left">FETCH</td><td align="left">Return telemetry information</td></tr><tr><td align="center">3</td><td align="left">NOTIFY</td><td align="left">Tell companion board when flight state
+	      changes</td></tr></tbody></table></div></div><br class="table-break"><p>
+	The flight computer will send a SETUP message shortly after
+	power-up and will then send FETCH messages no more often than
+	the rate specified in the SETUP reply. NOTIFY messages will be
+	sent whenever the flight state changes.
+      </p><p>
+	'flight_state' records the current state of the flight,
+	whether on the pad, under power, coasting to apogee or
+	descending on the drogue or main chute.
+      </p><p>
+	'tick' provides the current flight computer clock, which 
+	be used to synchronize data recorded on the flight computer
+	with that recorded on the companion board in post-flight analysis.
+      </p><p>
+	'serial' is the product serial number of the flight computer,
+	'flight' is the flight sequence number. Together, these two
+	uniquely identify the flight and can be recorded with any
+	companion board data logging to associate the companion data
+	with the proper flight.
+      </p><p>
+	NOTIFY commands require no reply at all, they are used solely
+	to inform the companion board when the state of the flight, as
+	computed by the flight computer, changes. Companion boards can
+	use this to change data collection parameters, disabling data
+	logging until the flight starts and terminating it when the
+	flight ends.
+      </p></div><div class="section" title="3.2. SETUP reply message"><div class="titlepage"><div><div><h3 class="title"><a name="idp781248"></a>3.2. SETUP reply message</h3></div></div></div><div class="table"><a name="idp781592"></a><p class="title"><b>Table 3. SETUP reply contents</b></p><div class="table-contents"><table summary="SETUP reply contents" border="1"><colgroup><col align="center" class="Offset"><col align="center" class="Data Type"><col align="left" class="Name"><col align="left" class="Description"></colgroup><thead><tr><th align="center">Offset</th><th align="center">Data Type</th><th align="center">Name</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">uint16_t</td><td align="left">board_id</td><td align="left">Board identifier</td></tr><tr><td align="center">2</td><td align="center">uint16_t</td><td align="left">board_id_inverse</td><td align="left">~board_id&#8212;used to tell if a board is present</td></tr><tr><td align="center">4</td><td align="center">uint8_t</td><td align="left">update_period</td><td align="left">Minimum time (in 100Hz ticks) between FETCH commands</td></tr><tr><td align="center">5</td><td align="center">uint8_t</td><td align="left">channels</td><td align="left">Number of data channels to retrieve in FETCH command</td></tr><tr><td align="center">6</td><td class="auto-generated"> </td><td class="auto-generated"> </td><td class="auto-generated"> </td></tr></tbody></table></div></div><br class="table-break"><p>
+	The SETUP reply contains enough information to uniquely
+	identify the companion board to the end user as well as for
+	the flight computer to know how many data values to expect in
+	reply to a FETCH command, and how often to fetch that data.
+      </p><p>
+	To detect the presence of a companion board, the flight
+	computer checks to make sure that board_id_inverse is the
+	bit-wise inverse of board_id. Current companion boards use
+	USB product ID as the board_id, but the flight computer does
+	not interpret this data and so it can be any value.
+      </p></div><div class="section" title="3.3. FETCH reply message"><div class="titlepage"><div><div><h3 class="title"><a name="idp188256"></a>3.3. FETCH reply message</h3></div></div></div><div class="table"><a name="idp188600"></a><p class="title"><b>Table 4. FETCH reply contents</b></p><div class="table-contents"><table summary="FETCH reply contents" border="1"><colgroup><col align="center" class="Offset"><col align="center" class="Data Type"><col align="left" class="Name"><col align="left" class="Description"></colgroup><thead><tr><th align="center">Offset</th><th align="center">Data Type</th><th align="center">Name</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">uint16_t</td><td align="left">data0</td><td align="left">0th data item</td></tr><tr><td align="center">2</td><td align="center">uint16_t</td><td align="left">data1</td><td align="left">1st data item</td></tr><tr><td align="center">...</td><td class="auto-generated"> </td><td class="auto-generated"> </td><td class="auto-generated"> </td></tr></tbody></table></div></div><br class="table-break"><p>
+	The FETCH reply contains arbitrary data to be reported over
+	the flight computer telemetry link. The number of 16-bit data items
+	must match the 'channels' value provided in the SETUP reply
+	message.
+      </p></div></div><div class="section" title="4. History and Motivation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp196800"></a>4. History and Motivation</h2></div></div></div><p>
+      To allow cross-programming, the original TeleMetrum and
+      TeleDongle designs needed to include some kind of
+      connector. With that in place, adding the ability to connect
+      external cards to TeleMetrum was fairly simple. We set the
+      software piece of this puzzle aside until we had a companion
+      board to use.
+    </p><p>
+      The first companion board was TeleScience. Designed to collect
+      temperature data from the nose and fin of the airframe, the main
+      requirement for the companion port was that it be able to report
+      telemetry data during flight as a back-up in case the
+      TeleScience on-board data was lost.
+    </p><p>
+      The second companion board, TelePyro, provides 8 additional
+      channels for deployment, staging or other activities. To avoid
+      re-programming the TeleMetrum to use TelePyro, we decided to
+      provide enough information over the companion link for it to
+      independently control those channels.
+    </p><p>
+      Providing a standard, constant interface between the flight
+      computer and companion boards allows for the base flight
+      computer firmware to include support for companion boards.
+    </p></div></div></body></html>
