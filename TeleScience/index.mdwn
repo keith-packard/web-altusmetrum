@@ -68,9 +68,13 @@ but no prototypes have been built yet.
 and flown at LDRS 30 in early September 2011.  Unfortunately, we experienced a 
 mechanical failure in the airframe before going fast enough to get exciting
 data, but post-flight analysis suggested the TeleScience boards were working
-fine up until "the incident".  A replacement airframe is under construction
-that we hope to fly at NCR's 2012 edition of Mile High Mayhem.
+fine up until "the incident".  A replacement airframe 
+[YikStik3](http://www.gag.com/rockets/airframes/YikStik3/) 
+flew successfully at Airfest 18 in September 2012.  We appear to have good data
+from the fin can, but not from the nose cone... more details once the data
+analysis is complete.
 
-The thermistor conditioning circuits in the current design are very tightly
-coupled to the particular model of EPCOS thermistor that we chose for 2YikStik.
-Before we could sell TeleScience, that needs to be addressed somehow.
+The thermistor conditioning circuits in the v0.1 design are too tightly coupled 
+to the particular model of EPCOS thermistor that we chose for 2YikStik and
+YikStik3.  A major revision of the board is nearing prototype stage in Septmeber
+2012, and will be further documented here soon.
