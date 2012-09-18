@@ -115,15 +115,22 @@ directory in the source tree (the themes are included in the Debian package).
 ### Mac ###
 
 A Mac OS X package that is compatible with versions 10.5 "Leopard" and
-later (including 10.6 "Snow Leopard") is available.  The Mac operating
-system includes Java, and all Altus Metrum products show up as simple
-USB serial ports, so this should just work with no additional drivers
-or other dependency issues.  Older versions of the Mac operating
+later.  The Mac operating system includes Java, and all Altus Metrum products 
+show up as simple USB serial ports, so this should just work with no 
+additional drivers or other dependency issues.  Older versions of the Mac 
+operating
 system, and even newer versions for PowerPC-based machines, come with
 Java version 5 or older, which is too old for use with Altus Metrum
 software. We know of no way to update the Java version other than
 upgrading to a newer operating system (for Intel based macs) or
 purchasing new hardware (for PowerPC based macs).
+
+If you have trouble installing on a Mac, and are getting errors about the
+package being corrupt, you may not be configured to allow installation of
+software from arbitrary sources.  One customer running 10.8.1 reported that
+he was able to work around this by going to "System Preferences", "Security
+& Privacy", "General", and then clicking the "Anywhere" radio button where
+it askes "Allow applications downloaded from:".
 
 ### Windows ###
 
