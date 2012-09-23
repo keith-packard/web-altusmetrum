@@ -21,6 +21,7 @@ PMW Talladega, AL:33.3158:-86.1711:http://www.phoenixmissileworks.com/
 POTROCS Keyes, OK:36.707778:-101.169389:http://www.potrocks.org/
 POTROCS Sunray, TX:36.0063:-101.7089639:http://www.potrocs.org/
 QRS Cedar Grove:-27.8512283:152.9624000:http://qldrocketry.com/
+SAROS Fall Fire:53.435056:-110.299417:http://www.saskatoonrocketry.org
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net/
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
 Tripoli Central Virginia Battle Park:38.398055:-78.065:http://www.battlepark.org/
