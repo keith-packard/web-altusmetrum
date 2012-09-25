@@ -1,0 +1,91 @@
+#!/usr/bin/nickle
+typedef struct {
+	real	x, y;
+} coord_t;
+
+coord_t[] poly1 = {
+	{ .x = 76.137, .y = 101.89 },
+	{ .x = 96.043, .y = 128.436 },
+	{ .x = 129.34, .y =  21.37 },
+	{ .x = 152.27, .y = -0.001 },
+	{ .x = 110.637, .y = -0.001 },
+	{ .x = 89.016, .y = 20.976 },
+	{ .x = 89.016, .y = 103.624 },
+	{ .x = 76.137, .y = 95.089 },
+	{ .x = 63.258, .y = 103.624 },
+	{ .x = 63.258, .y = 20.976 },
+	{ .x = 41.633, .y = -0.001 },
+	{ .x = 0, .y = -0.001 },
+	{ .x = 22.934, .y = 21.37 },
+	{ .x = 56.227, .y = 128.436 }
+};
+
+coord_t[] poly2 = {
+	{ .x = 76.137, .y = 192.843 },
+	{ .x = 94.059, .y = 135.206 },
+	{ .x = 88.992, .y = 129.124 },
+	{ .x = 76.137, .y = 156.151 },
+	{ .x = 63.281, .y = 129.124 },
+	{ .x = 58.211, .y = 135.206 },
+};
+
+real	scale = 40.3333385646353521 * 3.5;
+real	scale_x = 1;
+real	scale_y = 1;
+real	x_off = 0, y_off = -192.843;
+real	x_off_out = 1240;
+real	y_off_out = 990;
+
+int round(real r) = floor (r + 0.5);
+
+void head() {
+	printf ("\tPolygon(\"\")\n");
+	printf ("\t(\n");
+}
+
+void tail() {
+	printf ("\t)\n");
+}
+
+void do_poly(coord_t[] p) {
+	head();
+	for (int i = 0; i < dim(p) + 1; i++) {
+		int	j = i % dim(p);
+		real	x = (p[j].x + x_off) * scale * scale_x;
+		real	y = (p[j].y + y_off) * scale * scale_y;
+		printf ("\t\t[%d %d]\n",
+			round(x), -round(y));
+	}
+	tail();
+}
+
+void origin(coord_t[] p) {
+	real	max_x, min_x;
+	real	max_y, min_y;
+
+	max_x = min_x = p[0].x;
+	max_y = min_y = -p[0].y;
+
+	for (int i = 1; i < dim(p); i++) {
+		if (p[i].x < min_x)
+			min_x = p[i].x;
+		if (p[i].x > max_x)
+			max_x = p[i].x;
+		if (-p[i].y < min_y)
+			min_y = -p[i].y;
+		if (-p[i].y > max_y)
+			max_y = -p[i].y;
+	}
+	printf ("min_x = %f\n", min_x);
+	printf ("min_y = %f\n", min_y);
+	printf ("max_x = %f\n", max_x);
+	printf ("max_y = %f\n", max_y);
+	printf ("width = %f\n", max_x - min_x);
+	printf ("height = %f\n", max_y - min_y);
+}
+
+origin(poly1);
+origin(poly2);
+do_poly(poly1);
+do_poly(poly2);
+#do_poly(poly3);
