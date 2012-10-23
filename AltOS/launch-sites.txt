@@ -27,5 +27,5 @@ TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
 Tripoli Central Virginia Battle Park:38.398055:-78.065:http://www.battlepark.org/
 Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org/
 Tripoli Louisiana Goldmine Plantation:32.2073:-91.8567:http://www.tra-la.org/
-UROC Frank Hunt Field:40:21879:112.24618:http://www.uroc.org/
+UROC Frank Hunt Field:40.21879:112.24618:http://www.uroc.org/
 WAC Sportsman Club:47.815327777777778:-119.427186111111111:http://www.washingtonaerospace.org/
