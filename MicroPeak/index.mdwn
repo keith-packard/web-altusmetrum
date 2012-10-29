@@ -20,7 +20,7 @@ store.
 The CR1025 battery holder is mounted on the back side of the board, so there are no external wires or batteries to manage.
 Here's a close-up view:
 
-<a href="v0.1/micropeak.jpg"><img src="v0.1/micropeak-640.jpg"</a>
+<a href="v0.1/micropeak.jpg"><img src="v0.1/micropeak-640.jpg"></a>
 
 ### Software features ###
 
