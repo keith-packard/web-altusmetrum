@@ -297,3 +297,8 @@ Production run of 144 pieces of TeleMini v1.0 by
 Production run of 107 pieces of TeleMetrum v1.2 by
 [Advanced Circuits](http://4pcb.com), received 2011.12.15.
 
+## sn 942-1049 ##
+
+Production run of 108 pieces of TeleMetrum v1.2b by
+[Advanced Circuits](http://4pcb.com), received 2012.10.29.
+
