@@ -21,7 +21,7 @@ your favorite launch site isn't included, please let us know!
 
 ## Available Versions ##
 
-There is a single manual for all Altus Metrum products, which is available 
+There is a single manual for most Altus Metrum products, which is available 
 in [html](doc/altusmetrum.html) and [pdf](doc/altusmetrum.pdf) formats.
 
 We also have an AltOS internals document for programmers 
