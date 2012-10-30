@@ -64,6 +64,17 @@ is a higher-performance alternative to [TeleDongle](TeleDongle/).
 is a rocket altimeter that is both precise and tiny, designed to be the 
 ideal altimeter for model rocket contests.
 
+* [OpenAlt](OpenAlt/)
+was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
+prototype was built, but never flown.  This project is now indefinitely on hold.
+
+* [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
+[Bluetooth](http://www.bluetooth.com) as an alternative to USB.
+
+* [TeleNano](TeleNano/)
+is a tiny rocketry altimeter with telemetry using only a barometric 
+pressure sensor
+
 * [TelePyro](TelePyro/) is a companion board for [TeleMetrum](TeleMetrum/)
 that adds 8 additional pyro channels.
 
@@ -71,21 +82,10 @@ that adds 8 additional pyro channels.
 [TeleMetrum](TeleMetrum/) that adds 12 channels of thermistor or generic
 analog sensor input, and 5 general purpose I/O lines.
 
-* [TeleTerra](TeleTerra) is a hand-held ground station for use with 
-[TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
-
-* [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
-[Bluetooth](http://www.bluetooth.com) as an alternative to USB.
-
 * [TeleShield](TeleShield/) is an [Arduino](http://arduino.cc) radio shield.
 
-* [TeleNano](TeleNano/)
-is a tiny rocketry altimeter with telemetry using only a barometric 
-pressure sensor
-
-* [OpenAlt](OpenAlt/)
-was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
-prototype was built, but never flown.  This project is now indefinitely on hold.
+* [TeleTerra](TeleTerra) is a hand-held ground station for use with 
+[TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
 
 # Hobby Rocketry #
 
