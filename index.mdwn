@@ -28,7 +28,9 @@ including [Apogee Components](http://www.apogeerockets.com),
 
 # Download the latest [AltOS](AltOS/) software version #
 
-# Projects #
+# Products #
+
+These are the products you can buy from us and our network of distributors:
 
 * [TeleMetrum](TeleMetrum/) 
 is our flagship product, a dual-deploy rocketry altimeter with
@@ -43,13 +45,17 @@ is a simple RF interface for use in ground stations interacting with rockets
 using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
 interface for other microcontroller systems.
 
-* [AltOS](AltOS/) 
-is the name of the firmware and related utilities that Keith maintains for
-the set of hardware projects here.
-
 * [LipoCharger](LipoCharger/) 
 is a standalone battery charger for the Lithium Polymer batteries used in
 Altus Metrum products.
+
+# Projects #
+
+These are projects we're working on that may become products someday:
+
+* [AltOS](AltOS/) 
+is the name of the firmware and related utilities that Keith maintains for
+the set of hardware projects here.
 
 * [TelePyro](TelePyro/) is a companion board for [TeleMetrum](TeleMetrum/)
 that adds 8 additional pyro channels.
