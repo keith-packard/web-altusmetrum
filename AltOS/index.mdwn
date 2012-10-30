@@ -1,10 +1,11 @@
 # AltOS
 
 AltOS is the name of Keith's firmware "operating system" for 
-[TeleMetrum](../TeleMetrum/) and [TeleDongle](../TeleDongle/).
+Altus Metrum products.
 
-In addition to the firmware for [TeleMetrum](../TeleMetrum) and
-[TeleDongle](../TeleDongle) boards, the AltOS source tree also
+In addition to the firmware for hardware products like
+[TeleMetrum](../TeleMetrum), [TeleMini](../TeleMini), and
+[TeleDongle](../TeleDongle), the AltOS source tree also
 includes AltosUI, which provides for flight monitoring, post-flight
 analysis, device configuration and firmware updating. AltosUI runs on
 Linux, Mac OS X and Windows. It's written in [Java](http://java.com)
