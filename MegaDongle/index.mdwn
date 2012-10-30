@@ -32,10 +32,10 @@ There are no MegaDongle photos to share yet.
 * Hardware Features
 	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
 	* TI [CC1125](http://www.ti.com/product/cc1125) Ultra-High Performance RF Narrowband Transceiver 
-* 150mA 3.3V LDO regulator
-	* takes input from USB interface by default
-	* output appears on 8-pin companion connector
-	* can take input from 8-pin companion connector in non-USB applications
+	* 150mA 3.3V LDO regulator
+		* takes input from USB interface by default
+		* output appears on 8-pin companion connector
+		* can take input from 8-pin companion connector in non-USB applications
 * Software Features
 	* Written mostly in C with some ARM assembler
 	* Runs from on-chip flash, uses on-chip RAM
