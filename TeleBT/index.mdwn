@@ -71,4 +71,5 @@ Prototype version 0.3 is underway, resolving mechanical fit issues in the box
 we've chosen and updating the circuit to use our now-preferred LiPo charger
 chip.  We hope this version will be one we're willing to put in to production.
 
-No firm schedule for production and sale of TeleBT has been set yet.
+No firm schedule for production and sale of TeleBT has been set yet, but we
+hope to have this product in product before the end of 2012.

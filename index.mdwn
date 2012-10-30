@@ -60,6 +60,10 @@ the set of hardware projects here.
 * [MegaDongle](MegaDongle/)
 is a higher-performance alternative to [TeleDongle](TeleDongle/).
 
+* [MegaMetrum](MegaMetrum/)
+is a high-end flight computer with 6 pyro channels, more and better sensors,
+GPS, and a high performance bidirectional RF telemetry link.
+
 * [MicroPeak](MicroPeak/)
 is a rocket altimeter that is both precise and tiny, designed to be the 
 ideal altimeter for model rocket contests.

@@ -68,4 +68,5 @@ by the CC1111 we used in [TeleDongle](../TeleDongle).
 
 Version 0.2 prototypes are underway.  
 
-No firm schedule for production and sale of MegaDongle has been set yet.
+No firm schedule for production and sale of MegaDongle has been set yet, but
+we hope to have this product in production for the 2013 flying season.
