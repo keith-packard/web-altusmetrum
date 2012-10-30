@@ -1,6 +1,13 @@
-<center><img src="micropeak-nofont.svg" width="320"/></center>
+[[!meta title="MicroPeak"]]
+<center><img src="../logos/altusmetrum-oneline.svg" width="320"/></center>
 
-MicroPeak is a peak-recording barometric altimeter for precision model
+- - -
+<img src="../logos/micropeak-oneline.svg" height="100"/>
+
+
+# Introducing MicroPeak by AltusMetrum #
+
+Micropeak is a peak-recording barometric altimeter for precision model
 rocketry altitude measurements.
 
 <a href="v0.1/micropeak-dime.jpg"><img
