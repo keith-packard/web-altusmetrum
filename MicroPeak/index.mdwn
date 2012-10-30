@@ -10,7 +10,13 @@ Production units will be available from the
 [Garbee and Garbee](http://auric.gag.com) web
 store.
 
-## Features ##
+## Documentation ##
+
+The MicroPeak manual is available in
+[html](../AltOS/doc/micropeak.html) and
+[pdf](../AltOS/doc/micropeak.pdf) formats.
+
+## Hardware Features ##
 
  * Measure ground pressure and peak altitude pressure.
  * Blue LED blinks out maximum height in decimeters.
@@ -18,17 +24,26 @@ store.
  * Power switch.
 
 The CR1025 battery holder is mounted on the back side of the board, so there are no external wires or batteries to manage.
-Here's a close-up view:
 
-<a href="v0.1/micropeak.jpg"><img src="v0.1/micropeak-640.jpg"></a>
-
-### Software features ###
+## Software features ##
 
  * Saves last flight data to non-volatile memory.
  * Reports previous flight on power-on.
  * Automatically shuts down on landing to preserve battery.
 
-### Developer View ###
+## Battery Holder ##
+
+MicroPeak includes an integrated battery holder on the back side of
+the circuit board.
+
+<a href="v0.1/micro-peak-back.jpg"><img
+src="v0.1/micro-peak-back-640.jpg"></a>
+
+## Developer View ##
+
+Here's a close-up view of the hardware
+
+<a href="v0.1/micropeak.jpg"><img src="v0.1/micropeak-640.jpg"></a>
 
  * Hardware Features
 	* [ATMEL ATtiny85](http://www.atmel.com/devices/attiny85.aspx) Microcontroller
