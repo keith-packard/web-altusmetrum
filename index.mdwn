@@ -57,6 +57,10 @@ These are projects we're working on that may become products someday:
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
+* [MicroPeak](MicroPeak/)
+is a rocket altimeter that is both precise and tiny, designed to be the 
+ideal altimeter for model rocket contests.
+
 * [TelePyro](TelePyro/) is a companion board for [TeleMetrum](TeleMetrum/)
 that adds 8 additional pyro channels.
 
