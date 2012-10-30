@@ -57,6 +57,9 @@ These are projects we're working on that may become products someday:
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
+* [MegaDongle](MegaDongle/)
+is a higher-performance alternative to [TeleDongle](TeleDongle/).
+
 * [MicroPeak](MicroPeak/)
 is a rocket altimeter that is both precise and tiny, designed to be the 
 ideal altimeter for model rocket contests.

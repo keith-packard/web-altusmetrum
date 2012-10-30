@@ -1,0 +1,71 @@
+# MegaDongle
+
+This is an RF interface designed primarily for use as a ground station
+interacting with Altus Metrum altimeters on board high power model 
+rockets.  Think of it as a USB to RF interface.  The RF filter components 
+are set for use in the vicinity of 435 Mhz.
+
+MegaDongle is intended to supplement and perhaps eventually replace 
+[TeleDongle](../TeleDongle) with a product that provides on the order of 
+6dB better transmit and receive RF performance, at a modest increase in
+manufacturing cost.
+
+For the latest MegaDongle firmware and related software, please
+visit the [AltOS](../AltOS) page on this site.
+
+There are no MegaDongle photos to share yet.
+
+## Features ##
+
+### User View ###
+
+* 70cm ham-band transceiver for interaction with Altus Metrum flight compuaters
+  like [TeleMetrum](../TeleMetrum/)
+* programmed for 38k4 GFSK data rate with forward error correction
+* USB interface for power, configuration, and data interface
+* 4 pin Tyco MicroMaTch connector for debug and flash programming
+* 8 pin Tyco MicroMaTch connector supports serial or SPI interface
+* 1.1 x 1.1 inch 4-layer board, fits inexpensive Hammond 1551 plastic enclosure
+
+### Developer View ###
+
+* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) 
+  ARM Cortex M3 based Microcontroller
+* TI [CC1125](http://www.ti.com/product/cc1125) Ultra-High Performance RF Narrowband Transceiver 
+* 150mA 3.3V LDO regulator
+	* takes input from USB interface by default
+	* output appears on 8-pin companion connector
+	* can take input from 8-pin companion connector in non-USB applications
+* Software Features
+	* Written mostly in C with some ARM assembler
+	* Runs from on-chip flash, uses on-chip RAM
+	* USB serial emulation for data interface
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## [Production History](../production) ##
+
+## Artifacts ##
+
+There is a single manual for most Altus Metrum products including MegaDongle,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+
+The hardware design current gEDA files are available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/megadongle](http://git.gag.com/?p=hw/megadongle;a=summary).  
+
+The firmware can be found on the [AltOS](../AltOS) page on this site.
+
+## Future Plans ##
+
+Our version 0.1 design was abandoned after we discovered the need for more
+processing power to implement in software the same FEC approach provided
+by the CC1111 we used in [TeleDongle](../TeleDongle).
+
+Version 0.2 prototypes are underway.  
+
+No firm schedule for production and sale of MegaDongle has been set yet.
