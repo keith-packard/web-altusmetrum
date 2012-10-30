@@ -1,0 +1,77 @@
+# TeleScience History
+
+## v0.1 ##
+
+This is a photo of our original TeleScience board with 12 analog inputs, 
+all of which could be used for thermistors... and 5 general-purpose I/O 
+pins.  This board could also be used standalone as a USB I/O device.
+
+<a href="v0.1/telescience-top.jpg"> <img src="v0.1/telescience-top-thumb.jpg"></a>
+<a href="v0.1/telescience-bottom.jpg"> <img src="v0.1/telescience-bottom-thumb.jpg"></a>
+
+### Motivation ###
+
+Bdale's son Robert got interested in mapping the temperatures experienced
+by nose cones and fins in flights beyond Mach 1, and we started working with 
+our good friend Jeff Lane from 
+[Shockwave Rocketry](http://www.shockwaverocketry.com/) 
+to instrument one or more of his nose cones in pursuit of that goal.  
+
+6 v0.1 prototypes were built, of which 2 were installed in
+[2YikStik](http://www.gag.com/rockets/airframes/2YikStik/)
+and flown at LDRS 30 in early September 2011.  Unfortunately, we experienced a
+mechanical failure in the airframe before going fast enough to get exciting
+data, but post-flight analysis suggested the TeleScience boards were working
+fine up until "the incident".  A replacement airframe
+[YikStik3](http://www.gag.com/rockets/airframes/YikStik3/)
+flew successfully at Airfest 18 in September 2012. 
+
+From the beginning, it was easy for us to imagine other experiments that 
+would be facilitated by 
+having generic analog data inputs and a few control lines.  But experience
+using the v0.1 boards made it clear that we'd designed something that was
+"too specific" to the primary objective of measuring temperature rises on
+a high-speed airframe.  This is why v0.1 has been abandoned in favor of a
+significantly re-designed v0.2.
+
+### Features ###
+
+#### User View ####
+
+* Small circuit board mounted near [TeleMetrum](../TeleMetrum/)
+* Requires [TeleMetrum](../TeleMetrum/) v0.2 or later, as v0.1 does not 
+  have the required companion board interface
+* 12 analog input channels, each of which can independently be configured
+  for an NTC thermistor or generic 0-3.3 volt analog input.
+* 5 general purpose I/O lines
+* On-board flash memory for data logging.
+* USB interface for programming and development
+
+#### Developer View ####
+
+* Hardware Features
+	* [Atmel ATmega32U4](http://www.atmel.com/dyn/products/product_card.asp?category_id=163&family_id=607&subfamily_id=760&part_id=4317) Microcontroller
+		* 32k Flash
+		* 2.5k + 832 bytes SRAM
+		* 1k EEPROM
+		* 12-channel 10-bit ADC
+		* SPI target interface
+		* USB interface which can be used for programming
+		* In-system programming interface
+	* [Winbond W25Q16](http://www.winbond.com/NR/exeres/A3D21C82-A0B6-4586-A770-2F0883A805FF.htm) serial flash memory
+		* 2M x 8
+		* SPI interface
+* Software Features (planned)
+	* programmed in C using gcc-avr
+	* Runs from on-chip flash, uses on-chip RAM
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+### Artifacts ###
+
+The schematic and PC board design for v0.1 exist on 
+[git.gag.com](http://git.gag.com) in the v0.1 branch of project 
+[hw/telescience](http://git.gag.com/?p=hw/telescience;a=shortlog;h=refs/heads/v0.1).

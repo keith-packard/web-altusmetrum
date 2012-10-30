@@ -1,22 +1,33 @@
 # TeleScience
 
 This is an expansion board for [TeleMetrum](../TeleMetrum/) intended to 
-support science projects.  It provides 12 analog inputs with selectable
-thermistor support, and 5 general purpose I/O pins.  This board can also
-be used standalone as a USB I/O device.
+support science projects.  It includes an ARM Cortex M3 processing 
+platform with 8 megabytes of on-board flash memory for storing collected
+science data, plus support for 8 NTC thermistors in two banks of 4, 3 
+solid-state relays, and a large number of analog and digital I/O pins.
 
-<a href="v0.1/telescience-top.jpg"> <img src="v0.1/telescience-top-thumb.jpg"></a>
-<a href="v0.1/telescience-bottom.jpg"> <img src="v0.1/telescience-bottom-thumb.jpg"></a>
+There are no photos of the current prototype version yet, see the history
+linked at the bottom of this page for photos of the original boards.
 
 ## Motivation ##
 
-Bdale's son Robert is interested in mapping the temperatures experienced
-by nose cones and fins in flights beyond Mach 1, and we're working with 
+Bdale's son Robert got interested in mapping the temperatures experienced
+by nose cones and fins in flights beyond Mach 1, which led us to work with 
 our good friend Jeff Lane from 
 [Shockwave Rocketry](http://www.shockwaverocketry.com/) 
-to instrument one or more of his nose cones in pursuit of that goal.  And
-it's easy for us to imagine other experiments that would be facilitated by 
-having generic analog data inputs and a few control lines.
+to instrument some of his nose cones, and to work out how to create 
+composite fins with sensors embedded for airframe projects
+[2YikStik](http://www.gag.com/rockets/airframes/2YikStik) and 
+[YikStik3](http://www.gag.com/rockets/airframes/YikStik3) 
+in pursuit of that goal.  
+
+It was easy for us to imagine other experiments that would be facilitated 
+by having the ability to control a few outputs and log sensor data in
+syncronization with flight state information logged by TeleMetrum.  We
+went one step further and created a "companion board protocol" in
+TeleMetrum that allows data being collected by TeleScience to be included
+in the radio telemetry stream for live observation of pre-flight and
+in-flight science data.
 
 ## Features ##
 
@@ -25,28 +36,27 @@ having generic analog data inputs and a few control lines.
 * Small circuit board mounted near [TeleMetrum](../TeleMetrum/)
 * Requires [TeleMetrum](../TeleMetrum/) v0.2 or later, as v0.1 does not 
   have the required companion board interface
-* 12 analog input channels, each of which can independently be configured
-  for an NTC thermistor or generic 0-3.3 volt analog input.
-* 5 general purpose I/O lines
-* On-board flash memory for data logging.
-* USB interface for programming and development
+* 8 NTC thermistor inputs, in 2 banks of 4.  A single through-hole
+  resistor is used to configure each bank for a given thermistor type.
+* 3 solid-state relays, ideal for things like pushing camera buttons 
+  under program control
+* all available pins on the processor brought out to headers for 
+  maximum flexibility interfacing additional sensors
+* On-board 8-megabyte flash memory for data logging.
+* LiPo battery connector and on-board charger for standalone use
+* USB interface for programming, development, and flash memory download
 
 ### Developer View ###
 
 * Hardware Features
-	* [Atmel ATmega32U4](http://www.atmel.com/dyn/products/product_card.asp?category_id=163&family_id=607&subfamily_id=760&part_id=4317) Microcontroller
-		* 32k Flash
-		* 2.5k + 832 bytes SRAM
-		* 1k EEPROM
-		* 12-channel 10-bit ADC
-		* SPI target interface
-		* USB interface which can be used for programming
-		* In-system programming interface
-	* [Winbond W25Q16](http://www.winbond.com/NR/exeres/A3D21C82-A0B6-4586-A770-2F0883A805FF.htm) serial flash memory
-		* 2M x 8
-		* SPI interface
-* Software Features (planned)
-	* programmed in C using gcc-avr
+	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) 
+	  ARM Cortex M3 based Microcontroller
+	* [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/ProductLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
+	* IXYS [CPC1014](http://www.ixys.com/PartSearchResults.aspx?searchStr=cpc1014&SearchSubmit=Go) OptoMOS Solid State Relays
+	* Maxim Integrated [MAX6691](http://www.maximintegrated.com/datasheet/index.mvp/id/3256) Thermistor Temperature to Pulse Width Converters
+* Software Features 
+	* based on the ARM port of [AltOS](http://altusmetrum.org/AltOS)
+	* programmed in C using gcc
 	* Runs from on-chip flash, uses on-chip RAM
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
@@ -58,23 +68,17 @@ having generic analog data inputs and a few control lines.
 
 A schematic and PC board design exist on [git.gag.com](http://git.gag.com) 
 in the project 
-[hw/telescience](http://git.gag.com/?p=hw/telescience;a=summary), 
-but no prototypes have been built yet.
+[hw/telescience](http://git.gag.com/?p=hw/telescience;a=summary).
 
 ## Future Plans ##
 
-6 prototypes have been built, of which 2 were installed in 
-[2YikStik](http://www.gag.com/rockets/airframes/2YikStik/) 
-and flown at LDRS 30 in early September 2011.  Unfortunately, we experienced a 
-mechanical failure in the airframe before going fast enough to get exciting
-data, but post-flight analysis suggested the TeleScience boards were working
-fine up until "the incident".  A replacement airframe 
-[YikStik3](http://www.gag.com/rockets/airframes/YikStik3/) 
-flew successfully at Airfest 18 in September 2012.  We appear to have good data
-from the fin can, but not from the nose cone... more details once the data
-analysis is complete.
+The thermistor conditioning circuits in the v0.1 design were too tightly coupled 
+to the particular model of EPCOS thermistor that we chose for 
+[2YikStik](http://www.gag.com/rockets/airframes/2YikStik/) and
+[YikStik3](http://www.gag.com/rockets/airframes/YikStik3/).  A major revision of 
+the board led to v0.2 which is in the process of being turned on and evaluated.
 
-The thermistor conditioning circuits in the v0.1 design are too tightly coupled 
-to the particular model of EPCOS thermistor that we chose for 2YikStik and
-YikStik3.  A major revision of the board is nearing prototype stage in Septmeber
-2012, and will be further documented here soon.
+No firm schedule for production and sale of TeleScience has been set yet.
+
+## [History of TeleScience](history) ##
+
