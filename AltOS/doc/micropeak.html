@@ -1,0 +1,180 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>MicroPeak Owner's Manual</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="MicroPeak Owner's Manual"><div class="titlepage"><div><div><h1 class="title"><a name="idm14762280"></a>MicroPeak Owner's Manual</h1></div><div><h2 class="subtitle">A peak-recording altimeter for hobby rocketry</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2012 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="idp172816"></a><p>
+        This document is released under the terms of the
+        <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
+          Creative Commons ShareAlike 3.0
+        </a>
+        license.
+      </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.1</td><td align="left">29 October 2012</td></tr><tr><td align="left" colspan="2">
+	  Initial release with preliminary hardware.
+	</td></tr></table></div></div></div><hr></div><div class="acknowledgements" title="Acknowledgements"><div class="titlepage"><div><div><h2 class="title"><a name="idp174776"></a>Acknowledgements</h2></div></div></div>
+    <p>
+      Thanks to John Lyngdal for suggesting that we build something like this.
+    </p>
+    <p>
+      Have fun using these products, and we hope to meet all of you
+      out on the rocket flight line somewhere.
+      </p><div class="literallayout"><p><br>
+Bdale Garbee, KB0G<br>
+NAR #87103, TRA #12201<br>
+<br>
+Keith Packard, KD7SQG<br>
+NAR #88757, TRA #12200<br>
+      </p></div><p>
+    </p>
+  </div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#idp176024">1. Quick Start Guide</a></span></dt><dt><span class="chapter"><a href="#idp1555544">2. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#idp1561440">3. Technical Information</a></span></dt><dd><dl><dt><span class="section"><a href="#idp3211240">1. Barometric Sensor</a></span></dt><dt><span class="section"><a href="#idp1961960">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp2901888">3. Lithium Battery</a></span></dt><dt><span class="section"><a href="#idp1674792">4. Atmospheric Model</a></span></dt><dt><span class="section"><a href="#idp1421872">5. Mechanical Considerations</a></span></dt></dl></dd></dl></div><div class="chapter" title="Chapter 1. Quick Start Guide"><div class="titlepage"><div><div><h2 class="title"><a name="idp176024"></a>Chapter 1. Quick Start Guide</h2></div></div></div><p>
+      MicroPeak is designed to be easy to use. Requiring no external
+      components, flying takes just a few steps
+    </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+	  Install the battery. Fit a CR1025 battery into the plastic
+	  carrier. The positive (+) terminal should be towards the more
+	  open side of the carrier. Slip the carrier into the battery
+	  holder with the positive (+) terminal facing away from the
+	  circuit board.
+	</p></li><li class="listitem"><p>
+	  Install MicroPeak in your rocket. This can be as simple as
+	  preparing a soft cushion of wadding inside a vented model payload
+	  bay. Wherever you mount it, make sure you protect the
+	  barometric sensor from corrosive ejection gasses as those
+	  will damage the sensor.
+	</p></li><li class="listitem"><p>
+	  Turn MicroPeak on. Slide the switch so that the actuator
+	  covers the '1' printed on the board. MicroPeak will report
+	  the maximum height of the last flight in decimeters using a
+	  sequence of flashes on the LED. A sequence of short flashes
+	  indicates one digit. A single long flash indicates zero. The
+	  height is reported in decimeters, so the last digit will be
+	  tenths of a meter. For example, if MicroPeak reports 5 4 4
+	  3, then the maximum height of the last flight was 544.3m, or
+	  1786 feet.
+	</p></li><li class="listitem"><p>
+	  Finish preparing the rocket for flight. After the
+	  previous flight data have been reported, MicroPeak waits for
+	  30 seconds before starting to check for launch. This gives
+	  you time to finish assembling the rocket. As those
+	  activities might cause pressure changes inside the airframe,
+	  MicroPeak might accidentally detect boost. If you need to do
+	  anything to the airframe after the 30 second window passes,
+	  make sure to be careful not to disturb the altimeter. The
+	  LED will remain dark during the 30 second delay, but after
+	  that, it will start blinking once every 3 seconds.
+	</p></li><li class="listitem"><p>
+	  Fly the rocket. Once the rocket passes about 10m in height
+	  (32 feet), the micro-controller will record the ground
+	  pressure and track the pressure seen during the flight. In
+	  this mode, the LED flickers rapidly. When the rocket lands,
+	  and the pressure stabilizes, the micro-controller will record
+	  the minimum pressure pressure experienced during the flight,
+	  compute the height represented by the difference in air
+	  pressure and blink that value out on the LED. After that,
+	  MicroPeak powers down to conserve battery power.
+	</p></li><li class="listitem"><p>
+	  Recover the data. Turn MicroPeak off for a couple of seconds
+	  (to discharge the capacitors) and then back on. MicroPeak
+	  will blink out the maximum height for the last flight. Turn
+	  MicroPeak back off to conserve battery power.
+	</p></li></ul></div></div><div class="chapter" title="Chapter 2. Handling Precautions"><div class="titlepage"><div><div><h2 class="title"><a name="idp1555544"></a>Chapter 2. Handling Precautions</h2></div></div></div><p>
+      All Altus Metrum products are sophisticated electronic devices.  
+      When handled gently and properly installed in an air-frame, they
+      will deliver impressive results.  However, as with all electronic 
+      devices, there are some precautions you must take.
+    </p><p>
+      The CR1025 Lithium batteries have an
+      extraordinary power density.  This is great because we can fly with
+      much less battery mass... but if they are punctured
+      or their contacts are allowed to short, they can and will release their
+      energy very rapidly!
+      Thus we recommend that you take some care when handling MicroPeak
+      to keep conductive material from coming in contact with the exposed metal elements.
+    </p><p>
+      The barometric sensors used in MicroPeak is
+      sensitive to sunlight. Please consider this when
+      designing an installation, for example, in an air-frame with a
+      see-through plastic payload bay. Many model rockets with payload bays
+      use clear plastic for the payload bay. Replacing these with an opaque
+      cardboard tube, painting them, or wrapping them with a layer of masking
+      tape are all reasonable approaches to keep the sensor out of direct
+      sunlight.
+    </p><p>
+      The barometric sensor sampling ports must be able to "breathe",
+      both by not being covered by foam or tape or other materials that might
+      directly block the hole on the top of the sensor, and also by having a
+      suitable static vent to outside air.
+    </p><p>
+      As with all other rocketry electronics, Altus Metrum altimeters must 
+      be protected from exposure to corrosive motor exhaust and ejection 
+      charge gasses.
+    </p></div><div class="chapter" title="Chapter 3. Technical Information"><div class="titlepage"><div><div><h2 class="title"><a name="idp1561440"></a>Chapter 3. Technical Information</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp3211240">1. Barometric Sensor</a></span></dt><dt><span class="section"><a href="#idp1961960">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp2901888">3. Lithium Battery</a></span></dt><dt><span class="section"><a href="#idp1674792">4. Atmospheric Model</a></span></dt><dt><span class="section"><a href="#idp1421872">5. Mechanical Considerations</a></span></dt></dl></div><div class="section" title="1. Barometric Sensor"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3211240"></a>1. Barometric Sensor</h2></div></div></div><p>
+	MicroPeak uses the Measurement Specialties MS5607 sensor. This
+	has a range of 120kPa to 1kPa with an absolute accuracy of
+	150Pa and a resolution of 2.4Pa.
+      </p><p>
+	The pressure range corresponds roughly to an altitude range of
+	-1500m (-4900 feet) to 31000m (102000 feet), while the
+	resolution is approximately 20cm (8 inches) near sea level and
+	60cm (24in) at 10000m (33000 feet).
+      </p><p>
+	Ground pressure is computed from an average of 16 samples,
+	taken while the altimeter is at rest. Flight pressure is
+	computed from an exponential IIR filter designed to smooth out
+	transients caused by mechanical stress on the barometer.
+      </p></div><div class="section" title="2. Micro-controller"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1961960"></a>2. Micro-controller</h2></div></div></div><p>
+	MicroPeak uses an Atmel ATtiny85 micro-controller. This tiny
+	CPU contains 8kB of flash for the application, 512B of RAM for
+	temporary data storage and 512B of EEPROM for non-volatile
+	storage of previous flight data.
+      </p><p>
+	The ATtiny85 has a low-power mode which turns off all of the
+	clocks and powers down most of the internal components. In
+	this mode, the chip consumes only .1&#956;A of power. MicroPeak
+	uses this mode once the flight has ended to preserve battery
+	power.
+      </p></div><div class="section" title="3. Lithium Battery"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp2901888"></a>3. Lithium Battery</h2></div></div></div><p>
+	The CR1025 battery used by MicroPeak holes 30mAh of power,
+	which is sufficient to run for over 15 hours. Because
+	MicroPeak powers down on landing, run time includes only time
+	sitting on the launch pad or during flight.
+      </p><p>
+	The large positive terminal (+) is usually marked, while the
+	smaller negative terminal is not. Make sure you install the
+	battery with the positive terminal facing away from the
+	circuit board where it will be in contact with the metal
+	battery holder. A small pad on the circuit board makes contact
+	with the negative battery terminal.
+      </p><p>
+	Shipping restrictions prevent us from including a CR1025
+	battery with MicroPeak. Many stores carry CR1025 batteries as
+	they are commonly used in small electronic devices such as
+	flash lights.
+      </p></div><div class="section" title="4. Atmospheric Model"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1674792"></a>4. Atmospheric Model</h2></div></div></div><p>
+	MicroPeak contains a fixed atmospheric model which is used to
+	convert barometric pressure into altitude. The model was
+	converted into a 469-element piece wise linear approximation
+	which is then used to compute the altitude of the ground and
+	apogee. The difference between these represents the maximum
+	height of the flight.
+      </p><p>
+	The model assumes a particular set of atmospheric conditions,
+	which while a reasonable average cannot represent the changing
+	nature of the real atmosphere. Fortunately, for flights
+	reasonably close to the ground, the effect of this global
+	inaccuracy are largely canceled out when the computed ground
+	altitude is subtracted from the computed apogee altitude, so
+	the resulting height is more accurate than either the ground
+	or apogee altitudes.
+      </p></div><div class="section" title="5. Mechanical Considerations"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1421872"></a>5. Mechanical Considerations</h2></div></div></div><p>
+	MicroPeak is designed to be rugged enough for typical rocketry
+	applications. It contains two moving parts, the battery holder
+	and the power switch, which were selected for their
+	ruggedness.
+      </p><p>
+	The MicroPeak battery holder is designed to withstand impact
+	up to 150g without breaking contact (or, worse yet, causing
+	the battery to fall out). That means it should stand up to
+	almost any launch you care to try, and should withstand fairly
+	rough landings.
+      </p><p>
+	The power switch is designed to withstand up to 50g forces in
+	any direction. Because it is a sliding switch, orienting the
+	switch perpendicular to the direction of rocket travel will
+	serve to further protect the switch from launch forces.
+      </p></div></div></div></body></html>
