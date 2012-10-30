@@ -30,7 +30,7 @@ including [Apogee Components](http://www.apogeerockets.com),
 
 # Products #
 
-These are the products you can buy from us and our network of distributors:
+These products are all available for purchase:
 
 * [TeleMetrum](TeleMetrum/) 
 is our flagship product, a dual-deploy rocketry altimeter with
