@@ -1,9 +1,5 @@
 [[!meta title="MicroPeak"]]
-<center><img src="../logos/altusmetrum-oneline.svg" width="320"/></center>
-
-- - -
 <img src="../logos/micropeak-oneline.svg" height="100"/>
-
 
 # Introducing MicroPeak by AltusMetrum #
 
@@ -63,13 +59,14 @@ Here's a close-up view of the hardware
 		* High precision — 2.4Pa resolution (approximately 20cm at sea level)
 		* Factory calibrated.
 	* CR1025 Lithium Battery
-		* 30mAh. Runs MicroPeak for 15 hours on the pad or in flight
+		* 30mAh. Runs MicroPeak for 10 hours on the pad or in flight
 	* Standard 6-pin AVR programming interface.
 
  * Software Features
 	* Written in C
 	* Samples pressure every 96ms
-	* Detect boost with 4m altitude change
+	* Delay 30s after power-on to finish airframe prep
+	* Detect boost with 10m altitude change
 	* Exponential averaging filter to minimize transient effects.
 
  * Tools Used
@@ -80,5 +77,4 @@ Here's a close-up view of the hardware
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
-
-<center><img src="../logo.svg" width="100"/></center>
+<center><img src="../logos/micropeak.svg" height="64"/>
