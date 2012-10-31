@@ -34,7 +34,7 @@ bare boards had just arrived, but nothing had been populated yet!
 Bdale's first public presentation on rocket avionics, at LCA 2008 in Melbourne,
 Australia in January 2008.  This talk includes huge amounts of background
 material on the rocketry hobby, and was the first public discussion of Bdale's
-original, [ARM-based altimeter design](../AltusMetrum).
+original, [ARM-based altimeter design](../OpenAlt).
 
 * [Slides](./AltusMetrum.odp)
 * [Video](http://mirror.linux.org.au/pub/linux.conf.au/2008/Wed/mel8-201.ogg)
