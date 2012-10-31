@@ -6,9 +6,36 @@ body { background: #e7e7e7; }
 
 #content { background: #ffffff; margin: 10px 0px; border: 2px solid #c0c0c0; padding: 10px; font-family: sans-serif;}
 
-.header { background: #4b6983; border: 2px solid #7590ae; padding: 10px; color: #ffffff; font-family: sans-serif;}
-.header a { margin-right: 1ex; color: #ffffff; font-family: sans-serif;}
+.header {
+    border: 0px;
+    padding: 10px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 24px;
+    background: #888888;
+    background-image: url(../logos/altusmetrum-oneline.svg);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+    border: 0px;
+    height: 64px;
+    line-height: 64px
+}
 
-.actions ul { border: none; padding-bottom: 0px; font-family: sans-serif;}
-#footer { border: none; font-family: sans-serif;}
+.header a {
+    margin-right: 1ex;
+    color: #ffffff;
+    font-family: sans-serif;
+}
 
+.actions { display:none; }
+
+.pagedate {
+    border: none;
+    font-family: sans-serif;
+    background: #888888;
+    background-image: url(../logos/altusmetrum-64.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 72px;
+    line-height: 50px;
+}
