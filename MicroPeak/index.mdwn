@@ -9,9 +9,9 @@ rocketry altitude measurements.
 <a href="v0.1/micropeak-dime.jpg"><img
 src="v0.1/micropeak-dime-640.jpg"></a>
 
-Production units will be available from the
-[Garbee and Garbee](http://auric.gag.com) web
-store.
+Production units are available from the
+[Garbee and Garbee](http://auric.gag.com/index.php?route=product/product&product_id=80) 
+web store 
 
 ## Documentation ##
 
@@ -22,7 +22,7 @@ The MicroPeak manual is available in
 ## Hardware Features ##
 
  * Measure ground pressure and peak altitude pressure.
- * Blue LED blinks out maximum height in decimeters.
+ * Orange LED blinks out maximum height in decimeters.
  * 18mm x 14mm. 1.9g including battery.
  * Power switch.
 
@@ -59,14 +59,14 @@ Here's a close-up view of the hardware
 		* High precision — 2.4Pa resolution (approximately 20cm at sea level)
 		* Factory calibrated.
 	* CR1025 Lithium Battery
-		* 30mAh. Runs MicroPeak for 10 hours on the pad or in flight
+		* 30mAh. Runs MicroPeak for more than 40 hours on the pad or in flight
 	* Standard 6-pin AVR programming interface.
 
  * Software Features
 	* Written in C
 	* Samples pressure every 96ms
 	* Delay 30s after power-on to finish airframe prep
-	* Detect boost with 10m altitude change
+	* Detect boost with 20m altitude change
 	* Exponential averaging filter to minimize transient effects.
 
  * Tools Used
