@@ -37,7 +37,7 @@ visit the [AltOS](../AltOS) page on this site.
 	* 2 channels of serial I/O
 	* digital I/O
 	* interfaced to Arduino via async serial plus two handshake pins
-* Raycom Bluetooth module interfaced to the CC1111 via async serial
+* Rayson BTM-182 (Bluetooth SPP module) with async interface to CC1111
 * 150mA 3.3V LDO regulator
 	* input and output appear on 8-pin companion connector
 * Software Features
@@ -72,4 +72,4 @@ we've chosen and updating the circuit to use our now-preferred LiPo charger
 chip.  We hope this version will be one we're willing to put in to production.
 
 No firm schedule for production and sale of TeleBT has been set yet, but we
-hope to have this product in product before the end of 2012.
+hope to have this product for sale by the end of 2012.
