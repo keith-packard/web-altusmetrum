@@ -42,7 +42,7 @@ visit the [AltOS](../AltOS) page on this site.
 	* 2 channels of serial I/O
 	* digital I/O
 	* interfaced to Arduino via async serial plus two handshake pins
-* Raycom Bluetooth module interfaced to the CC1111 via async serial
+* Rayson BTM-182 (Bluetooth SPP module) using async to CC1111
 * micro SD card socket interfaced to the Arduino via SPI
 * 150mA 3.3V LDO regulator
 	* can take input from either USB or the unregulated Arduino input
@@ -75,5 +75,5 @@ Arduino mini-conference at LCA 2012 resulted in elimination of the Bluetooth
 interface.  Updated boards have not been built yet, but 
 [schematic and artwork files](v0.2/) are available for review and comment.
 
-If there is sufficient interest, we will produce some.  Exactly
+If there is sufficient interest, we will produce some.  Exactly if or
 when that will happen and what they might cost are not known yet.
