@@ -1,0 +1,1 @@
+[[!map pages="MicroPeak/v1.0/* and ! MicroPeak/v1.0/*/*"]]
