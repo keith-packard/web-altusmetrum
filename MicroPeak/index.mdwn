@@ -6,8 +6,8 @@
 Micropeak is a peak-recording barometric altimeter for precision model
 rocketry altitude measurements.
 
-<a href="v0.1/micropeak-dime.jpg"><img
-src="v0.1/micropeak-dime-640.jpg"></a>
+<a href="v1.0/micropeak-dime.jpg"><img
+src="v1.0/micropeak-dime-640.jpg"></a>
 
 Production units are available from the
 [Garbee and Garbee](http://auric.gag.com/index.php?route=product/product&product_id=80) 
@@ -39,14 +39,14 @@ The CR1025 battery holder is mounted on the back side of the board, so there are
 MicroPeak includes an integrated battery holder on the back side of
 the circuit board.
 
-<a href="v0.1/micro-peak-back.jpg"><img
-src="v0.1/micro-peak-back-640.jpg"></a>
+<a href="v1.0/micropeak-back.jpg"><img
+src="v1.0/micropeak-back-640.jpg"></a>
 
 ## Developer View ##
 
 Here's a close-up view of the hardware
 
-<a href="v0.1/micropeak.jpg"><img src="v0.1/micropeak-640.jpg"></a>
+<a href="v1.0/micropeak.jpg"><img src="v1.0/micropeak-640.jpg"></a>
 
  * Hardware Features
 	* [ATMEL ATtiny85](http://www.atmel.com/devices/attiny85.aspx) Microcontroller
@@ -60,6 +60,7 @@ Here's a close-up view of the hardware
 		* Factory calibrated.
 	* CR1025 Lithium Battery
 		* 30mAh. Runs MicroPeak for more than 40 hours on the pad or in flight
+	* [OSRAM LO T67K](http://catalog.osram-os.com/catalogue/catalogue.do?favOid=000000000002269f00090023&act=showBookmark) orange LED
 	* Standard 6-pin AVR programming interface.
 
  * Software Features
