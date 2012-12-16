@@ -9,6 +9,9 @@ appropriate for the 110mAh cells often used with [TeleMini](../TeleMini).  A
 standalone charger is essential for use with TeleMini since it does not 
 have on-board charging capability.
 
+Production units are available from the 
+[Garbee and Garbee](http://auric.gag.com) web store.
+
 ## Features ##
 
 ### User View ###
@@ -34,9 +37,4 @@ have on-board charging capability.
 
 The design files can be found on [git.gag.com](http://git.gag.com) in the 
 project [hw/lipocharger](http://git.gag.com/?p=hw/lipocharger;a=summary).  
-
-## Future Plans ##
-
-After some iteration, we have settled on a design that meets our 
-needs.  Boards will be available for sale soon.
 
