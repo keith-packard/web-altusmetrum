@@ -1,0 +1,47 @@
+[[!meta title="MPSerial"]]
+<img src="../logos/micropeak-oneline.svg" height="100"/>
+
+# MicroPeak Serial Interface (MPSerial) #
+
+The MicroPeak Serial Interface board provides a way to capture flight
+logs over a USB connection to a computer running Linux, Mac OS or
+Windows.
+
+## MicroPeak Data ##
+
+ * Stored in on-chip 512B eeprom
+ * Records raw barometer readings every 192ms
+ * Enough storage for 48 seconds
+
+No changes are needed to the MicroPeak hardware, but new firmware that
+includes the data download feature is necessary to use the MicroPeak
+Serial Interface.
+
+## MicroPeak Interface ##
+
+MicroPeak transmits the entire flight log via the LED just after
+reporting the last flight altitude at power up. The data are
+transmitted in regular serial format at 9600 baud.
+
+The MicroPeak Serial Interface board contains a phototransistor,
+op-amp and serial-to-USB interface chip.
+
+## Developer View ##
+
+Here's a close-up view of the hardware
+
+ * Hardware Features
+	* ROHM RPM-075PT Phototransistor
+		* Peak sensitivity matches MicroPeak LED color
+	* [ST Micro TSV521](http://www.st.com/internet/analog/product/251123.jsp) CMOS op-amp
+		* Low power
+	* [FTDI FT230](http://www.ftdichip.com/Products/ICs/FT230X.html) Serial to USB adapter
+		* Drivers available for Linux, Mac OS X and Windows.
+
+ * Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+
+ * Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+
+<center><img src="../logos/micropeak.svg" height="64"/>
