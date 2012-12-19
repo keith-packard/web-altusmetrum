@@ -11,7 +11,7 @@ src="v1.0/micropeak-dime-640.jpg"></a>
 
 Production units are available from the
 [Garbee and Garbee](http://auric.gag.com/index.php?route=product/product&product_id=80) 
-web store 
+web store and [Apogee Components](http://www.apogeerockets.com/Electronics_Payloads/Altimeters/MicroPeak_Altimeter)
 
 ## Documentation ##
 
