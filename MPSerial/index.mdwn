@@ -7,7 +7,12 @@ The MicroPeak Serial Interface board provides a way to capture flight
 logs over a USB connection to a computer running Linux, Mac OS or
 Windows.
 
+Here's a picture of the prototype.
+
 <a href="v0.1/mpserial.jpg"><img src="v0.1/mpserial-640.jpg"></a>
+
+The final board will have an LED to help check alignment between the
+MicroPeak LED and the MicroPeak Serial phototransistor.
 
 ## MicroPeak Data ##
 
