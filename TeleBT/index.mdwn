@@ -67,9 +67,5 @@ Two prototype versions have been built with different physical form factors.
 We have working firmware, and a prototype of support in AltosUI.  Work is
 also underway on an [Android](http://www.android.com) version of AltosUI.  
 
-Prototype version 0.3 is underway, resolving mechanical fit issues in the box
-we've chosen and updating the circuit to use our now-preferred LiPo charger
-chip.  We hope this version will be one we're willing to put in to production.
-
-No firm schedule for production and sale of TeleBT has been set yet, but we
-hope to have this product for sale by the end of 2012.
+Prototype version 0.3 is working, and we hope to move TeleBT to production
+soon.
