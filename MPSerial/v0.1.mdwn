@@ -1,0 +1,1 @@
+[[!map pages="MPSerial/v0.1/* and ! MPSerial/v0.1/*/*"]]
