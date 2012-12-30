@@ -13,7 +13,10 @@ manufacturing cost.
 For the latest MegaDongle firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
 
-There are no MegaDongle photos to share yet.
+These are photos of the current MegaDongle prototypes:
+
+<a href="v0.2/megadongle-top.jpg"> <img src="v0.2/megadongle-top-thumb.jpg"></a>
+<a href="v0.2/megadongle-bottom.jpg"> <img src="v0.2/megadongle-bottom-thumb.jpg"></a>
 
 ## Features ##
 
