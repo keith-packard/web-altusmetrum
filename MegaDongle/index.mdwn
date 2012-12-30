@@ -22,7 +22,7 @@ These are photos of the current MegaDongle prototypes:
 
 ### User View ###
 
-* 70cm ham-band transceiver for interaction with Altus Metrum flight compuaters
+* 70cm ham-band transceiver for interaction with Altus Metrum flight computers
   like [TeleMetrum](../TeleMetrum/)
 * programmed for 38k4 GFSK data rate with forward error correction
 * USB interface for power, configuration, and data interface
