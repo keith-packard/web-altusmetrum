@@ -7,6 +7,8 @@ The MicroPeak Serial Interface board provides a way to capture flight
 logs over a USB connection to a computer running Linux, Mac OS or
 Windows.
 
+<a href="v0.1/mpserial.jpg"><img src="v0.1/mpserial-640.jpg"></a>
+
 ## MicroPeak Data ##
 
  * Stored in on-chip 512B eeprom
