@@ -69,7 +69,9 @@ Our version 0.1 design was abandoned after we discovered the need for more
 processing power to implement in software the same FEC approach provided
 by the CC1111 we used in [TeleDongle](../TeleDongle).
 
-Version 0.2 prototypes are underway.  
+Three units of version 0.2 prototypes are assembled and seem to work just 
+fine, more work remains to fully characterize their performance and complete
+their firmware.
 
 No firm schedule for production and sale of MegaDongle has been set yet, but
 we hope to have this product in production for the 2013 flying season.
