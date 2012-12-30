@@ -1,0 +1,1 @@
+[[!map pages="MegaDongle/v0.2/* and ! MegaDongle/v0.2/*/*"]]
