@@ -8,7 +8,10 @@ on multi-stage projects.
 For the latest MegaMetrum firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are no photos of MegaMetrum to share yet.
+These are photos of the first v0.1 prototype:
+
+<a href="v0.1/megametrum-v0.1-top.jpg"> <img src="v0.1/megametrum-v0.1-top-thumb.jpg"></a>
+<a href="v0.1/megametrum-v0.1-bottom.jpg"> <img src="v0.1/megametrum-v0.1-bottom-thumb.jpg"></a>
 
 ## Features ##
 
@@ -55,7 +58,6 @@ These are no photos of MegaMetrum to share yet.
 		* tri-axis angular rate sensor up to 2000 degrees/second
 		* tri-axis accelerometer with +- 16g range
 		* three on-chip ADCs for true simultaneous sampling of all axes
-	* Honeywell [HMC5883L](http://www.magneticsensors.com/three-axis-digital-compass.php) 3-Axis Digital Compass IC
 * Software Features
 	* Written mostly in C with some ARM assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to serial flash
@@ -78,11 +80,12 @@ The hardware design current gEDA files are available from
 
 ## Future Plans ##
 
-MegaMetrum v0.1 prototypes are working and flight testing is underway.
+MegaMetrum v0.1 prototypes are working and flight testing is underway.  
 
-There will be at least one more prototype version to try out a different
-GPS receiver and improve various design details... most likely at least
-2 more prototype versions before we go to production.
+We're making several changes to the hardware to improve performance and
+reliability.  As of early Jan 2013 we're waiting for the v0.2 raw boards
+to come back from fab.
 
 No firm schedule for production and sale of MegaMetrum has been set yet, 
-but we hope to offer this product in time for the 2013 flying season.
+but we hope to offer this product in time for the North American 2013 
+flying season.
