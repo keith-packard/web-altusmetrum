@@ -44,9 +44,7 @@ size.  As a result, we maintain a fork of SDCC we call 'cc1111' that is based
 on the last upstream version of SDCC 2.X, plus a highly modified sdcdb with 
 support for the cc1111 debugging interface.  This is avilable as a package in
 Debian, or you can find the sources on [git.gag.com](http://git.gag.com) 
-in the project 
-[debian/cc1111](http://git.gag.com/?p=debian/cc1111;a=summary).  This is
-not necessary if you just want to rebuild AltOS and use it.
+in the project [debian/cc1111](http://git.gag.com/?p=debian/cc1111;a=summary). 
 
 ## Future Plans ##
 
