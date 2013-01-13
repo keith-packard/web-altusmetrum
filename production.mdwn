@@ -275,6 +275,10 @@ TeleBT v0.3 2012.12.19.
 
 MegaDongle v0.2 2012.12.27.
 
+## sn 77-79 ##
+
+TeleScience v0.2 2013.01.12.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 
