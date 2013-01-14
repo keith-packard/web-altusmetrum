@@ -34,13 +34,10 @@ These are photos of the first v0.1 prototype:
 
 ### Developer View ###
 
-* Hardware Features
+* Hardware Features of v0.1
 	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
 	* TI [CC1120](http://www.ti.com/product/cc1120) High Performance RF Transceiver for Narrowband Systems 
 	* 150mA 3.3V LDO regulator
-		* takes input from USB interface by default
-		* output appears on 8-pin companion connector
-		* can take input from 8-pin companion connector in non-USB applications
 	* [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/ProductLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
 	* [SkyTraq](http://www.skytraq.com.tw/) Venus634FLPx GPS receiver
 		* on-board [Taoglas AP.17A.01](http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
