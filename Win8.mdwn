@@ -1,0 +1,24 @@
+# Installing AltosUI on Windows 8
+
+Windows 8 places additional barriers to installing software beyond
+those present in Windows 7. In particular, trying to use the standard
+Windows USB modem driver on new hardware now requires 'driver signing'
+for the text file that tells Windows to use the driver that it already
+has installed.
+
+Until we figure out what is necessary to make this work the 'right'
+way, here are a couple of pointers to sites that should help you
+install the current AltosUI bits on your Windows 8 machine.
+
+## The official Microsoft link
+
+Here's a link to an official [Microsoft answer](http://answers.microsoft.com/en-us/windows/forum/windows_8-hardware/how-to-install-a-driver-that-does-not-contain/7c3f299b-3483-4c96-8c44-87c7451af222)
+for how you are supposed to get Windows 8 to install Windows 7 drivers.
+
+## An unofficial video link
+
+And here's a (more helpful in my opinion) [video](http://firstpost.com/topic/product/windows-8-how-to-fix-the-third-party-inf-does-not-contain-digital-sign-video-dlYGfJM2BJ0-91565-1.html)
+which will lead you through the necessary steps.
+
+Our friend, Bob Brown from the Kloudbusters used the video
+instructions and reports that things are working just fine now!
