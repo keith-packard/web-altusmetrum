@@ -45,7 +45,9 @@ choice with questions taken from a pool that is completely published ahead
 of time, and there are some great online resources for learning the material
 and taking practice exams until you're ready to take the real test.  This 
 [ARRL page](http://www.arrl.org/FandES/ead/classes.html) is a good place
-to start.  
+to start.  We also have it on good authority that the book and iOS app 
+available from [Ham Radio School.com](http://hamradioschool.com) are pretty
+good.
 
 ## Operation in Other Countries ##
 
