@@ -1,18 +1,13 @@
-[[!meta title="MPSerial"]]
-<img src="../logos/micropeak-oneline.svg" height="100"/>
+[[!meta title="MicroPeakUSB"]]
+<img src="../logos/micropeak-usb-oneline.svg" height="100"/>
 
-# MicroPeak Serial Interface (MPSerial) #
+# MicroPeak USB Interface #
 
-The MicroPeak Serial Interface board provides a way to capture flight
+The MicroPeak USB Interface board provides a way to capture flight
 logs over a USB connection to a computer running Linux, Mac OS or
 Windows.
 
-Here's a picture of the prototype.
-
-<a href="v0.1/mpserial.jpg"><img src="v0.1/mpserial-640.jpg"></a>
-
-The final board will have an LED to help check alignment between the
-MicroPeak LED and the MicroPeak Serial phototransistor.
+<a href="v1.0/MicroPeakUSB.jpg"><img src="v1.0/MicroPeakUSB-640.jpg"></a>
 
 ## MicroPeak Data ##
 
@@ -22,7 +17,7 @@ MicroPeak LED and the MicroPeak Serial phototransistor.
 
 No changes are needed to the MicroPeak hardware, but new firmware that
 includes the data download feature is necessary to use the MicroPeak
-Serial Interface.
+USB Interface.
 
 ## MicroPeak Interface ##
 
@@ -30,8 +25,17 @@ MicroPeak transmits the entire flight log via the LED just after
 reporting the last flight altitude at power up. The data are
 transmitted in regular serial format at 9600 baud.
 
-The MicroPeak Serial Interface board contains a phototransistor,
-op-amp and serial-to-USB interface chip.
+The MicroPeak USB Interface board contains a phototransistor,
+op-amp and serial-to-USB interface chip. It also includes a blue LED
+which blinks in time with the MicroPeak orange LED. This makes
+aligning the two boards by hand quite easy.
+
+## MicroPeak Application ##
+
+Java application that runs on Windows, Mac OS X and Windows.
+Captures and saves data, provides plots and statistics.
+
+<img src="micropeak-graph.png>
 
 ## Developer View ##
 
@@ -51,4 +55,4 @@ Here's a close-up view of the hardware
  * Licenses
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 
-<center><img src="../logos/micropeak.svg" height="64"/>
+<center><img src="../logos/micropeak-usb.svg" height="64"/>
