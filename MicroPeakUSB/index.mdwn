@@ -3,9 +3,9 @@
 
 # MicroPeak USB Interface #
 
-The MicroPeak USB Interface board provides a way to capture flight
-logs over a USB connection to a computer running Linux, Mac OS or
-Windows.
+The MicroPeak USB Interface board provides a way to capture
+[MicroPeak](../MicroPeak/) flight logs over a USB connection to a
+computer running Linux, Mac OS or Windows.
 
 <a href="v1.0/MicroPeakUSB.jpg"><img src="v1.0/MicroPeakUSB-640.jpg"></a>
 
@@ -15,25 +15,27 @@ Windows.
  * Records raw barometer readings every 192ms
  * Enough storage for 48 seconds
 
-No changes are needed to the MicroPeak hardware, but new firmware that
+No changes are needed to the [MicroPeak](../MicroPeak/) hardware, but new firmware that
 includes the data download feature is necessary to use the MicroPeak
 USB Interface.
 
 ## MicroPeak Interface ##
 
-MicroPeak transmits the entire flight log via the LED just after
+[MicroPeak](../MicroPeak/) transmits the entire flight log via the LED just after
 reporting the last flight altitude at power up. The data are
 transmitted in regular serial format at 9600 baud.
 
 The MicroPeak USB Interface board contains a phototransistor,
 op-amp and serial-to-USB interface chip. It also includes a blue LED
-which blinks in time with the MicroPeak orange LED. This makes
+which blinks in time with the [MicroPeak](../MicroPeak/) orange LED. This makes
 aligning the two boards by hand quite easy.
 
 ## MicroPeak Application ##
 
-Java application that runs on Windows, Mac OS X and Windows.
-Captures and saves data, provides plots and statistics.
+The MicroPeak application is written in Java application and runs on
+Windows, Mac OS X and Windows. Captures and saves data, provides
+plots and statistics. More information is available on the main
+[MicroPeak](../MicroPeak/) page.
 
 <img src="micropeak-graph.png"/>
 
