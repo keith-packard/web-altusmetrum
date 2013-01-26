@@ -35,7 +35,7 @@ aligning the two boards by hand quite easy.
 Java application that runs on Windows, Mac OS X and Windows.
 Captures and saves data, provides plots and statistics.
 
-<img src="micropeak-graph.png>
+<img src="micropeak-graph.png"/>
 
 ## Developer View ##
 
