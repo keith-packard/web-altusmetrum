@@ -13,6 +13,8 @@ Production units are available from the
 [Garbee and Garbee](http://auric.gag.com/index.php?route=product/product&product_id=80) 
 web store and [Apogee Components](http://www.apogeerockets.com/Electronics_Payloads/Altimeters/MicroPeak_Altimeter)
 
+Data download is available using the [MicroPeak USB adapter](../MicroPeakUSB).
+
 ## Documentation ##
 
 The MicroPeak manual is available in
@@ -22,7 +24,7 @@ The MicroPeak manual is available in
 ## Software ##
 
 The MicroPeak application runs on Linux, Mac OS X and Windows. It
-communicates with the MicroPeak USB adapter to download and analyze
+communicates with the [MicroPeak USB adapter](../MicroPeakUSB) to download and analyze
 flight data. It's written in [Java](http://java.com) and offers the
 same functionality and interface on all three platforms. It uses the
 FTDI USB Serial drivers to communicate with the hardware. If you're
