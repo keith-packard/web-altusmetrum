@@ -53,6 +53,10 @@ Altus Metrum products.
 is a rocket altimeter that is both precise and tiny, designed to be the 
 ideal altimeter for model rocket contests.
 
+* [MicroPeak USB Interface](MicroPeakUSB/)
+provides an interface between [MicroPeak](MicroPeak/) and USB to
+download flight log data.
+
 # Projects #
 
 These are projects we're working on that may become products someday:
@@ -67,10 +71,6 @@ is a higher-performance alternative to [TeleDongle](TeleDongle/).
 * [MegaMetrum](MegaMetrum/)
 is a high-end flight computer with 6 pyro channels, more and better sensors,
 GPS, and a high performance bidirectional RF telemetry link.
-
-* [MicroPeak Serial Interface](MPSerial/)
-provides an interface between [MicroPeak](MicroPeak/) and USB to
-download flight log data.
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 

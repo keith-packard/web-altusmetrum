@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>MicroPeak Owner's Manual</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="MicroPeak Owner's Manual"><div class="titlepage"><div><div><h1 class="title"><a name="idm14762280"></a>MicroPeak Owner's Manual</h1></div><div><h2 class="subtitle">A peak-recording altimeter for hobby rocketry</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2012 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="idp172816"></a><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>MicroPeak Owner's Manual</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="MicroPeak Owner's Manual"><div class="titlepage"><div><div><h1 class="title"><a name="idm14841928"></a>MicroPeak Owner's Manual</h1></div><div><h2 class="subtitle">A recording altimeter for hobby rocketry</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2012 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="idp108880"></a><p>
         This document is released under the terms of the
         <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
           Creative Commons ShareAlike 3.0
@@ -6,7 +6,15 @@
         license.
       </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.1</td><td align="left">29 October 2012</td></tr><tr><td align="left" colspan="2">
 	  Initial release with preliminary hardware.
-	</td></tr></table></div></div></div><hr></div><div class="acknowledgements" title="Acknowledgements"><div class="titlepage"><div><div><h2 class="title"><a name="idp174776"></a>Acknowledgements</h2></div></div></div>
+	</td></tr><tr><td align="left">Revision 1.0</td><td align="left">18 November 2012</td></tr><tr><td align="left" colspan="2">
+	  Updates for version 1.0 release.
+	</td></tr><tr><td align="left">Revision 1.1</td><td align="left">12 December 2012</td></tr><tr><td align="left" colspan="2">
+	  Add comments about EEPROM storage format and programming jig.
+	</td></tr><tr><td align="left">Revision 1.2</td><td align="left">20 January 2013</td></tr><tr><td align="left" colspan="2">
+	  Add documentation for the MicroPeak USB adapter board. Note
+	  the switch to a Kalman filter for peak altitude
+	  determination.
+	</td></tr></table></div></div></div><hr></div><div class="acknowledgements" title="Acknowledgements"><div class="titlepage"><div><div><h2 class="title"><a name="idp772792"></a>Acknowledgements</h2></div></div></div>
     <p>
       Thanks to John Lyngdal for suggesting that we build something like this.
     </p>
@@ -21,7 +29,7 @@ Keith Packard, KD7SQG<br>
 NAR #88757, TRA #12200<br>
       </p></div><p>
     </p>
-  </div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#idp176024">1. Quick Start Guide</a></span></dt><dt><span class="chapter"><a href="#idp1555544">2. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#idp1561440">3. Technical Information</a></span></dt><dd><dl><dt><span class="section"><a href="#idp3211240">1. Barometric Sensor</a></span></dt><dt><span class="section"><a href="#idp1961960">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp2901888">3. Lithium Battery</a></span></dt><dt><span class="section"><a href="#idp1674792">4. Atmospheric Model</a></span></dt><dt><span class="section"><a href="#idp1421872">5. Mechanical Considerations</a></span></dt></dl></dd></dl></div><div class="chapter" title="Chapter 1. Quick Start Guide"><div class="titlepage"><div><div><h2 class="title"><a name="idp176024"></a>Chapter 1. Quick Start Guide</h2></div></div></div><p>
+  </div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#idp774040">1. Quick Start Guide</a></span></dt><dt><span class="chapter"><a href="#idp3062232">2. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#idp2529968">3. The MicroPeak USB adapter</a></span></dt><dd><dl><dt><span class="section"><a href="#idp2069328">1. Installing the MicroPeak software</a></span></dt><dt><span class="section"><a href="#idp1986896">2. Downloading Micro Peak data</a></span></dt><dt><span class="section"><a href="#idp3318344">3. Analyzing MicroPeak Data</a></span></dt><dt><span class="section"><a href="#idp785616">4. Configuring the MicroPeak application</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp3018560">4. Technical Information</a></span></dt><dd><dl><dt><span class="section"><a href="#idp3018880">1. Barometric Sensor</a></span></dt><dt><span class="section"><a href="#idp3020504">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp3022056">3. Lithium Battery</a></span></dt><dt><span class="section"><a href="#idp3023856">4. Atmospheric Model</a></span></dt><dt><span class="section"><a href="#idp3025920">5. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#idp3027624">6. On-board data storage</a></span></dt><dt><span class="section"><a href="#idp52184">7. MicroPeak Programming Interface</a></span></dt></dl></dd></dl></div><div class="list-of-tables"><p><b>List of Tables</b></p><dl><dt>4.1. <a href="#idp3028936">MicroPeak EEPROM Data Storage</a></dt></dl></div><div class="chapter" title="Chapter 1. Quick Start Guide"><div class="titlepage"><div><div><h2 class="title"><a name="idp774040"></a>Chapter 1. Quick Start Guide</h2></div></div></div><p>
       MicroPeak is designed to be easy to use. Requiring no external
       components, flying takes just a few steps
     </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
@@ -35,7 +43,8 @@ NAR #88757, TRA #12200<br>
 	  preparing a soft cushion of wadding inside a vented model payload
 	  bay. Wherever you mount it, make sure you protect the
 	  barometric sensor from corrosive ejection gasses as those
-	  will damage the sensor.
+	  will damage the sensor, and shield it from light as that can
+	  cause incorrect sensor readings.
 	</p></li><li class="listitem"><p>
 	  Turn MicroPeak on. Slide the switch so that the actuator
 	  covers the '1' printed on the board. MicroPeak will report
@@ -68,11 +77,10 @@ NAR #88757, TRA #12200<br>
 	  pressure and blink that value out on the LED. After that,
 	  MicroPeak powers down to conserve battery power.
 	</p></li><li class="listitem"><p>
-	  Recover the data. Turn MicroPeak off for a couple of seconds
-	  (to discharge the capacitors) and then back on. MicroPeak
+	  Recover the data. Turn MicroPeak off and then back on. MicroPeak
 	  will blink out the maximum height for the last flight. Turn
 	  MicroPeak back off to conserve battery power.
-	</p></li></ul></div></div><div class="chapter" title="Chapter 2. Handling Precautions"><div class="titlepage"><div><div><h2 class="title"><a name="idp1555544"></a>Chapter 2. Handling Precautions</h2></div></div></div><p>
+	</p></li></ul></div></div><div class="chapter" title="Chapter 2. Handling Precautions"><div class="titlepage"><div><div><h2 class="title"><a name="idp3062232"></a>Chapter 2. Handling Precautions</h2></div></div></div><p>
       All Altus Metrum products are sophisticated electronic devices.  
       When handled gently and properly installed in an air-frame, they
       will deliver impressive results.  However, as with all electronic 
@@ -86,14 +94,13 @@ NAR #88757, TRA #12200<br>
       Thus we recommend that you take some care when handling MicroPeak
       to keep conductive material from coming in contact with the exposed metal elements.
     </p><p>
-      The barometric sensors used in MicroPeak is
-      sensitive to sunlight. Please consider this when
-      designing an installation, for example, in an air-frame with a
-      see-through plastic payload bay. Many model rockets with payload bays
-      use clear plastic for the payload bay. Replacing these with an opaque
-      cardboard tube, painting them, or wrapping them with a layer of masking
-      tape are all reasonable approaches to keep the sensor out of direct
-      sunlight.
+      The barometric sensor used in MicroPeak is sensitive to
+      sunlight. Please consider this when designing an
+      installation. Many model rockets with payload bays use clear
+      plastic for the payload bay. Replacing these with an opaque
+      cardboard tube, painting them, or wrapping them with a layer of
+      masking tape are all reasonable approaches to keep the sensor
+      out of direct sunlight.
     </p><p>
       The barometric sensor sampling ports must be able to "breathe",
       both by not being covered by foam or tape or other materials that might
@@ -103,7 +110,119 @@ NAR #88757, TRA #12200<br>
       As with all other rocketry electronics, Altus Metrum altimeters must 
       be protected from exposure to corrosive motor exhaust and ejection 
       charge gasses.
-    </p></div><div class="chapter" title="Chapter 3. Technical Information"><div class="titlepage"><div><div><h2 class="title"><a name="idp1561440"></a>Chapter 3. Technical Information</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp3211240">1. Barometric Sensor</a></span></dt><dt><span class="section"><a href="#idp1961960">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp2901888">3. Lithium Battery</a></span></dt><dt><span class="section"><a href="#idp1674792">4. Atmospheric Model</a></span></dt><dt><span class="section"><a href="#idp1421872">5. Mechanical Considerations</a></span></dt></dl></div><div class="section" title="1. Barometric Sensor"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3211240"></a>1. Barometric Sensor</h2></div></div></div><p>
+    </p></div><div class="chapter" title="Chapter 3. The MicroPeak USB adapter"><div class="titlepage"><div><div><h2 class="title"><a name="idp2529968"></a>Chapter 3. The MicroPeak USB adapter</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp2069328">1. Installing the MicroPeak software</a></span></dt><dt><span class="section"><a href="#idp1986896">2. Downloading Micro Peak data</a></span></dt><dt><span class="section"><a href="#idp3318344">3. Analyzing MicroPeak Data</a></span></dt><dt><span class="section"><a href="#idp785616">4. Configuring the MicroPeak application</a></span></dt></dl></div><p>
+      MicroPeak stores barometric pressure information for the first
+      48 seconds of the flight in on-board non-volatile memory. The
+      contents of this memory can be downloaded to a computer using
+      the MicroPeak USB adapter.
+    </p><div class="section" title="1. Installing the MicroPeak software"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp2069328"></a>1. Installing the MicroPeak software</h2></div></div></div><p>
+	The MicroPeak application runs on Linux, Mac OS X and
+	Windows. You can download the latest version from
+	<a class="ulink" href="http://altusmetrum.org/AltOS" target="_top">http://altusmetrum.org/AltOS</a>.
+      </p><p>
+	On Mac OS X and Windows, the FTDI USB device driver needs to
+	be installed. A compatible version of this driver is included
+	with the MicroPeak application, but you may want to download a
+	newer version from <a class="ulink" href="http://www.ftdichip.com/FTDrivers.htm" target="_top">http://www.ftdichip.com/FTDrivers.htm</a>.
+      </p></div><div class="section" title="2. Downloading Micro Peak data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1986896"></a>2. Downloading Micro Peak data</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+	    Connect the MicroPeak USB adapter to a USB cable and plug it
+	    in to your computer.
+	  </p></li><li class="listitem"><p>
+	    Start the MicroPeak application, locate the File menu and
+	    select the Download entry.
+	  </p></li><li class="listitem"><p>
+	    The MicroPeak USB adapter has a small phototransistor on the 
+	    end of the board furthest from the USB connector. Locate
+	    this and place the LED on the MicroPeak right over
+	    it. Turn on the MicroPeak board and adjust the position
+	    until the blue LED on the MicroPeak USB adapter blinks in
+	    time with the orange LED on the MicroPeak board.
+	  </p></li><li class="listitem"><p>
+	    After the maximum flight height is reported, MicroPeak will
+	    pause for a few seconds, blink the LED four times rapidly
+	    and then send the data in one long blur on the LED. The
+	    MicroPeak application should receive the data. When it does,
+	    it will present the data in a graph and offer to save the
+	    data to a file. If not, you can power cycle the MicroPeak
+	    board and try again.
+	  </p></li></ul></div></div><div class="section" title="3. Analyzing MicroPeak Data"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3318344"></a>3. Analyzing MicroPeak Data</h2></div></div></div><p>
+	The MicroPeak application can present flight data in the form
+	of a graph, a collection of computed statistics or in tabular
+	form.
+      </p><p>
+	MicroPeak collects raw barometric pressure data which is
+	then used to compute the remaining data. Altitude is computed
+	through a standard atmospheric model. Absolute error in this
+	data will be affected by local atmospheric
+	conditions. Fortunately, these errors tend to mostly cancel
+	out, so the error in the height computation is much smaller
+	than the error in altitude would be.
+      </p><p>
+	Speed and acceleration are computed by first smoothing the
+	height data with a Gaussian window averaging filter. For speed
+	data, this average uses seven samples. For acceleration data,
+	eleven samples are used. These were chosen to provide
+	reasonably smooth speed and acceleration data, which would
+	otherwise be swamped with noise.
+      </p><p>
+	Under the Graph tab, the height, speed and acceleration values
+	are displayed together. You can zoom in on the graph by
+	clicking and dragging to sweep out an area of
+	interest. Right-click on the plot to bring up a menu that will
+	let you save, copy or print the graph.
+      </p><p>
+	The Statistics tab presents overall data from the flight. Note
+	that the Maximum height value is taken from the minumum
+	pressure captured in flight, and may be different from the
+	apparant apogee value as the on-board data are sampled twice
+	as fast as the recorded values, or because the true apogee
+	occurred after the on-board memory was full. Each value is
+	presented in several units as appropriate.
+      </p><p>
+	A table consisting of the both the raw barometric pressure
+	data and values computed from that for each recorded time.
+      </p><p>
+	The File menu has operations to open existing flight logs,
+	Download new data from MicroPeak, Save a copy of the flight
+	log to a new file, Export the tabular data (as seen in the Raw
+	Data tab) to a file, change the application Preferences, Close
+	the current window or close all windows and Exit the
+	application.
+      </p></div><div class="section" title="4. Configuring the MicroPeak application"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp785616"></a>4. Configuring the MicroPeak application</h2></div></div></div><p>
+	The MicroPeak application has a few user settings which are
+	configured through the Preferences dialog, which can be
+	accessed from the File menu.
+      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+	    The Log Directory is where flight data will be saved to
+	    and loaded from by default. Of course, you can always
+	    navigate to other directories in the file chooser windows,
+	    this setting is just the starting point.
+	  </p></li><li class="listitem"><p>
+	    If you prefer to see your graph data in feet and
+	    miles per hour instead of meters and meters per second,
+	    you can select Imperial Units.
+	  </p></li><li class="listitem"><p>
+	    To see what data is actually arriving over the serial
+	    port, start the MicroPeak application from a command
+	    prompt and select the Serial Debug option. This can be
+	    useful in debugging serial communication problems, but
+	    most people need never choose this.
+	  </p></li><li class="listitem"><p>
+	    You can adjust the size of the text in the Statistics tab
+	    by changing the Font size preference. There are three
+	    settings, with luck one will both fit on your screen and
+	    provide readable values.
+	  </p></li><li class="listitem"><p>
+	    The Look &amp; feel menu shows a list of available
+	    application appearance choices. By default, the MicroPeak
+	    application tries to blend in with other applications, but
+	    you may choose some other appearance if you like.
+	  </p></li></ul></div><p>
+      </p><p>
+	Note that MicroPeak shares a subset of the AltosUI
+	preferences, so if you use both of these applications, change
+	in one application will affect the other.
+      </p></div></div><div class="chapter" title="Chapter 4. Technical Information"><div class="titlepage"><div><div><h2 class="title"><a name="idp3018560"></a>Chapter 4. Technical Information</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp3018880">1. Barometric Sensor</a></span></dt><dt><span class="section"><a href="#idp3020504">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp3022056">3. Lithium Battery</a></span></dt><dt><span class="section"><a href="#idp3023856">4. Atmospheric Model</a></span></dt><dt><span class="section"><a href="#idp3025920">5. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#idp3027624">6. On-board data storage</a></span></dt><dt><span class="section"><a href="#idp52184">7. MicroPeak Programming Interface</a></span></dt></dl></div><div class="section" title="1. Barometric Sensor"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3018880"></a>1. Barometric Sensor</h2></div></div></div><p>
 	MicroPeak uses the Measurement Specialties MS5607 sensor. This
 	has a range of 120kPa to 1kPa with an absolute accuracy of
 	150Pa and a resolution of 2.4Pa.
@@ -115,9 +234,9 @@ NAR #88757, TRA #12200<br>
       </p><p>
 	Ground pressure is computed from an average of 16 samples,
 	taken while the altimeter is at rest. Flight pressure is
-	computed from an exponential IIR filter designed to smooth out
-	transients caused by mechanical stress on the barometer.
-      </p></div><div class="section" title="2. Micro-controller"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1961960"></a>2. Micro-controller</h2></div></div></div><p>
+	computed from a Kalman filter designed to smooth out any minor
+	noise in the sensor values. 
+      </p></div><div class="section" title="2. Micro-controller"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3020504"></a>2. Micro-controller</h2></div></div></div><p>
 	MicroPeak uses an Atmel ATtiny85 micro-controller. This tiny
 	CPU contains 8kB of flash for the application, 512B of RAM for
 	temporary data storage and 512B of EEPROM for non-volatile
@@ -128,9 +247,9 @@ NAR #88757, TRA #12200<br>
 	this mode, the chip consumes only .1&#956;A of power. MicroPeak
 	uses this mode once the flight has ended to preserve battery
 	power.
-      </p></div><div class="section" title="3. Lithium Battery"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp2901888"></a>3. Lithium Battery</h2></div></div></div><p>
+      </p></div><div class="section" title="3. Lithium Battery"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3022056"></a>3. Lithium Battery</h2></div></div></div><p>
 	The CR1025 battery used by MicroPeak holes 30mAh of power,
-	which is sufficient to run for over 15 hours. Because
+	which is sufficient to run for over 40 hours. Because
 	MicroPeak powers down on landing, run time includes only time
 	sitting on the launch pad or during flight.
       </p><p>
@@ -141,11 +260,11 @@ NAR #88757, TRA #12200<br>
 	battery holder. A small pad on the circuit board makes contact
 	with the negative battery terminal.
       </p><p>
-	Shipping restrictions prevent us from including a CR1025
-	battery with MicroPeak. Many stores carry CR1025 batteries as
-	they are commonly used in small electronic devices such as
-	flash lights.
-      </p></div><div class="section" title="4. Atmospheric Model"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1674792"></a>4. Atmospheric Model</h2></div></div></div><p>
+	Shipping restrictions may prevent us from including a CR1025
+	battery with MicroPeak. If so, many stores carry CR1025
+	batteries as they are commonly used in small electronic
+	devices such as flash lights.
+      </p></div><div class="section" title="4. Atmospheric Model"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3023856"></a>4. Atmospheric Model</h2></div></div></div><p>
 	MicroPeak contains a fixed atmospheric model which is used to
 	convert barometric pressure into altitude. The model was
 	converted into a 469-element piece wise linear approximation
@@ -161,7 +280,7 @@ NAR #88757, TRA #12200<br>
 	altitude is subtracted from the computed apogee altitude, so
 	the resulting height is more accurate than either the ground
 	or apogee altitudes.
-      </p></div><div class="section" title="5. Mechanical Considerations"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1421872"></a>5. Mechanical Considerations</h2></div></div></div><p>
+      </p></div><div class="section" title="5. Mechanical Considerations"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3025920"></a>5. Mechanical Considerations</h2></div></div></div><p>
 	MicroPeak is designed to be rugged enough for typical rocketry
 	applications. It contains two moving parts, the battery holder
 	and the power switch, which were selected for their
@@ -177,4 +296,65 @@ NAR #88757, TRA #12200<br>
 	any direction. Because it is a sliding switch, orienting the
 	switch perpendicular to the direction of rocket travel will
 	serve to further protect the switch from launch forces.
+      </p></div><div class="section" title="6. On-board data storage"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3027624"></a>6. On-board data storage</h2></div></div></div><p>
+	The ATtiny85 has 512 bytes of non-volatile storage, separate
+	from the code storage memory. The MicroPeak firmware uses this
+	to store information about the last completed
+	flight. Barometric measurements from the ground before launch
+	and at apogee are stored, and used at power-on to compute the
+	height of the last flight.
+      </p><p>
+	In addition to the data used to present the height of the last
+	flight, MicroPeak also stores barometric information sampled
+	at regular intervals during the flight. This information can
+	be extracted from MicroPeak through any AVR programming
+	tool.
+      </p><div class="table"><a name="idp3028936"></a><p class="title"><b>Table 4.1. MicroPeak EEPROM Data Storage</b></p><div class="table-contents"><table summary="MicroPeak EEPROM Data Storage" border="1"><colgroup><col align="center" class="Address"><col align="center" class="Size (bytes)"><col align="left" class="Description"></colgroup><thead><tr><th align="center">Address</th><th align="center">Size (bytes)</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center">0x000</td><td align="center">4</td><td align="left">Average ground pressure (Pa)</td></tr><tr><td align="center">0x004</td><td align="center">4</td><td align="left">Minimum flight pressure (Pa)</td></tr><tr><td align="center">0x008</td><td align="center">2</td><td align="left">Number of in-flight samples</td></tr><tr><td align="center">0x00a &#8230; 0x1fe</td><td align="center">2</td><td align="left">Instantaneous flight pressure (Pa) low 16 bits</td></tr></tbody></table></div></div><br class="table-break"><p>
+	All EEPROM data are stored least-significant byte first. The
+	instantaneous flight pressure data are stored without the
+	upper 16 bits of data. The upper bits can be reconstructed
+	from the previous sample, assuming that pressure doesn't
+	change by more more than 32kPa in a single sample
+	interval. Note that this pressure data is <span class="emphasis"><em>not</em></span>
+	filtered in any way, while both the recorded ground and apogee
+	pressure values are, so you shouldn't expect the minimum
+	instantaneous pressure value to match the recorded minimum
+	pressure value exactly.
+      </p><p>
+	MicroPeak samples pressure every 96ms, but stores only every
+	other sample in the EEPROM. This provides for 251 pressure
+	samples at 192ms intervals, or 48.192s of storage. The clock
+	used for these samples is a factory calibrated RC circuit
+	built into the ATtiny85 and is accurate only to within ±10% at
+	25°C. So, you can count on the pressure data being accurate,
+	but speed or acceleration data computed from this will be
+	limited by the accuracy of this clock.
+      </p></div><div class="section" title="7. MicroPeak Programming Interface"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52184"></a>7. MicroPeak Programming Interface</h2></div></div></div><p>
+	MicroPeak exposes a standard 6-pin AVR programming interface,
+	but not using the usual 2x3 array of pins on 0.1"
+	centers. Instead, there is a single row of tiny 0.60mm ×
+	0.85mm pads on 1.20mm centers exposed near the edge of the
+	circuit board. We couldn't find any connector that was
+	small enough to include on the circuit board.
+      </p><p>
+	In lieu of an actual connector, the easiest way to connect to
+	the bare pads is through a set of Pogo pins. These
+	spring-loaded contacts are designed to connect in precisely
+	this way. We've designed a programming jig, the MicroPeak
+	Pogo Pin board which provides a standard AVR interface on one
+	end and a recessed slot for MicroPeak to align the board with
+	the Pogo Pins.
+      </p><p>
+	The MicroPeak Pogo Pin board is not a complete AVR programmer,
+	it is an interface board that provides a 3.3V regulated power
+	supply to run the MicroPeak via USB and a standard 6-pin AVR
+	programming interface with the usual 2x3 grid of pins on 0.1"
+	centers. This can be connected to any AVR programming
+	dongle.
+      </p><p>
+	The AVR programming interface cannot run faster than ¼ of the
+	AVR CPU clock frequency. Because MicroPeak runs at 250kHz to
+	save power, you must configure your AVR programming system to
+	clock the AVR programming interface at no faster than
+	62.5kHz, or a clock period of 32µS.
       </p></div></div></div></body></html>

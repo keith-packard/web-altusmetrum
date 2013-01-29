@@ -29,6 +29,10 @@ in [html](doc/altos.html) and [pdf](doc/altos.pdf) formats, and a
 document describing the AltOS over the radio protocol 
 in [html](doc/telemetry.html) and [pdf](doc/telemetry.pdf) formats.
 
+If you're running Windows 8, you should take a look at [Installing AltosUI on
+Windows 8](Win8) which will help you install the operating system
+drivers needed to communicate with the USB hardware.
+
 [[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
 ## Source Code ##
