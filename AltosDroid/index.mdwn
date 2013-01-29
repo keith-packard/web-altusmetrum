@@ -1,0 +1,26 @@
+# AltosDroid
+
+AltosDroid is the [Android](http://android.com) port of Altus Metrum's 
+ground station program, designed to work with the [TeleBT](../TeleBT)
+ground statiion hardware product.
+
+## Where to Get It ##
+
+AltosDroid is availaable from the [Google Play](https://play.google.com/store/apps/details?id=org.altusmetrum.AltosDroid) store.
+
+## What It Can Do ##
+
+Current features include telemetry logging to SD card, text to speech 
+announcements of flight state, and downlink frequency selection.
+
+## Source Code ##
+
+The source to AltosDroid is part of the [AltOS](../AltOS) repository, 
+which is always available from [git.gag.com](http://git.gag.com) 
+in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
+
+## Future Plans ##
+
+Future features we plan to add include flight computer configuration support,
+Google Maps integration, and "take me to my rocket" navigation.
+
