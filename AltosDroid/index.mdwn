@@ -12,10 +12,11 @@ The latest released version of AltosDroid is available from
 ## What It Can Do ##
 
 Current features include:
-  * Display of key telemetry values
-  * Telemetry logging to SD card
-  * Text-to-speech announcements of flight state
-  * Downlink frequency selection.
+
+* Display of key telemetry values
+* Telemetry logging to SD card
+* Text-to-speech announcements of flight state
+* Downlink frequency selection.
 
 ## Permissions ##
 
