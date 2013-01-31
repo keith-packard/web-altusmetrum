@@ -24,14 +24,17 @@ AltosDroid requires the following permissions to be installed:
 
  * NETWORK COMMUNICATION
 	* PAIR WITH BLUETOOTH DEVICES
+<br>
 		This permission is needed to access Bluetooth communications,
 		allowing the pairing of and connection to TeleBT units.
  * STORAGE
 	* MODIFY OR DELETE THE CONTENTS OF YOUR USB STORAGE MODIFY OR DELETE THE CONTENTS OF YOUR SD CARD
+<br>
 		This permission is needed so that telemetry logs can be
 		written to the SD card.
  * SYSTEM TOOLS
 	* ACCESS BLUETOOTH SETTINGS
+<br>
 		This permission is used to request the enabling of Bluetooth
 		at startup.
 
@@ -60,6 +63,7 @@ Google Maps integration, and "take me to my rocket" navigation.
 
 
 Android is a trademark of Google Inc.
+<br>
 Google Play is a trademark of Google Inc.
 </center>
 
