@@ -22,8 +22,8 @@ USB Interface.
 ## MicroPeak Interface ##
 
 [MicroPeak](../MicroPeak/) transmits the entire flight log via the LED just after
-reporting the last flight altitude at power up. The data are
-transmitted in regular serial format at 9600 baud.
+reporting the last flight altitude at power up. The data burst is
+transmitted in a simple serial format at 9600 baud.
 
 The MicroPeak USB Interface board contains a phototransistor,
 op-amp and serial-to-USB interface chip. It also includes a blue LED
@@ -32,9 +32,9 @@ aligning the two boards by hand quite easy.
 
 ## MicroPeak Application ##
 
-The MicroPeak application is written in Java application and runs on
-Windows, Mac OS X and Windows. Captures and saves data, provides
-plots and statistics. More information is available on the main
+The MicroPeak application written in Java runs on
+Windows, Mac OS X and Linux.  It captures and saves the flight data, then
+produces plots and statistics. More information is available on the main
 [MicroPeak](../MicroPeak/) page.
 
 <img src="micropeak-graph.png"/>
