@@ -32,11 +32,11 @@ running Mac OS X or Windows, a compatible version of those drivers is
 included with the software. You can also install a different from from
 the [FTDI Driver](http://www.ftdichip.com/FTDrivers.htm) page.
 
-### Latest version ###
+### Latest version (1.2) ###
 
- * [Windows](releases/1.2/MicroPeak-Windows-1-1-9-3.exe)
- * [Linux](releases/1.2/MicroPeak-Linux-1.1.9.3.tar.bz2)
- * [Mac OS X](releases/1.2/MicroPeak-Mac-1.1.9.3.dmg)
+ * [Windows](releases/1.2/MicroPeak-Windows-1-2.exe)
+ * [Linux](releases/1.2/MicroPeak-Linux-1.2.tar.bz2)
+ * [Mac OS X](releases/1.2/MicroPeak-Mac-1.2.dmg)
 
 ## Hardware Features ##
 
