@@ -7,7 +7,7 @@ The MicroPeak USB Interface board provides a way to capture
 [MicroPeak](../MicroPeak/) flight logs over a USB connection to a
 computer running Linux, Mac OS or Windows.
 
-<a href="v1.0/MicroPeakUSB.jpg"><img src="v1.0/MicroPeakUSB-640.jpg"></a>
+<a href="v1.0/mpusb-dime.jpg"><img src="v1.0/mpusb-dime-640.jpg"></a>
 
 ## MicroPeak Data ##
 
@@ -29,6 +29,8 @@ The MicroPeak USB Interface board contains a phototransistor,
 op-amp and serial-to-USB interface chip. It also includes a blue LED
 which blinks in time with the [MicroPeak](../MicroPeak/) orange LED. This makes
 aligning the two boards by hand quite easy.
+
+<a href="v1.0/mpbundle.jpg"><img src="v1.0/mpbundle-640.jpg"></a>
 
 ## MicroPeak Application ##
 
