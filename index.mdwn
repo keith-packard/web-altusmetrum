@@ -17,6 +17,8 @@ or compatible licenses.
 
 # [Latest News](News) #
 
+# Download the latest [AltOS](AltOS/) software version #
+
 # Where to Buy #
 
 All Altus Metrum products are available direct from Bdale's
@@ -33,8 +35,6 @@ store, and many are also available from these distributors:
     * [Rebel Space](http://rebelspace.eu)
   * New Zealand
     * [Aerospace Education](http://www.rockets.co.nz)
-
-# Download the latest [AltOS](AltOS/) software version #
 
 # Products #
 
