@@ -24,13 +24,13 @@ All Altus Metrum products are available from the
 store, and many are also available from our distributors:
 
   * United States
-    * [Apogee Components](http://www.apogeerockets.com),
-    * [Bay Area Rocketry](http://bayarearocketry.com),
-    * [Chris' Rocket Supplies](http://csrocketry.com),
+    * [Apogee Components](http://www.apogeerockets.com)
+    * [Bay Area Rocketry](http://bayarearocketry.com)
+    * [Chris' Rocket Supplies](http://csrocketry.com)
   * Australia
-    * [Australian Rocketry](http://www.ausrocketry.com), and 
+    * [Australian Rocketry](http://www.ausrocketry.com)
   * New Zealand
-    * [Aerospace Education](http://www.rockets.co.nz) in New Zealand.
+    * [Aerospace Education](http://www.rockets.co.nz)
 
 # Download the latest [AltOS](AltOS/) software version #
 
