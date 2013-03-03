@@ -3,12 +3,6 @@
 This is a recording dual-deploy altimeter for high power model rocketry 
 with integrated GPS and telemetry link.  
 
-Production units are available from the 
-[Garbee and Garbee](http://auric.gag.com) web 
-store.  TeleMetrum starter kits are also available from 
-[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_GPS.asp)
-and [Australian Rocketry](http://www.ausrocketry.com/shop/index.php?main_page=product_info&cPath=111&products_id=4302).
-
 For the latest TeleMetrum firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
