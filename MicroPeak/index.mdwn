@@ -3,7 +3,7 @@
 
 # Introducing MicroPeak by AltusMetrum #
 
-Micropeak is a peak-recording barometric altimeter for precision model
+Micropeak is a barometric logging altimeter for precision model
 rocketry altitude measurements.
 
 <a href="v1.0/micropeak-dime.jpg"><img
@@ -41,6 +41,7 @@ the [FTDI Driver](http://www.ftdichip.com/FTDrivers.htm) page.
 ## Hardware Features ##
 
  * Measure ground pressure and peak altitude pressure.
+ * Logs 48 seconds of flight data
  * Orange LED blinks out maximum height in decimeters.
  * 18mm x 14mm. 1.9g including battery.
  * Power switch.
