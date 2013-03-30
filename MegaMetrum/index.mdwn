@@ -29,7 +29,8 @@ These are photos of the first v0.1 prototype:
 * On-board non-volatile memory for flight data storage
 * USB for power, configuration, and data recovery
 * Integrated support for LiPo rechargeable batteries
-* Uses LiPo to fire e-matches, can be factory modified to support separate pyro battery
+* User choice of pyro battery configuration, can use primary LiPo or any
+  customer-chosen separate pyro battery up to 12 volts nominal.
 * 3.25 x 1.25 inch board designed to fit inside 38mm airframe coupler tube
 
 ### Developer View ###
@@ -77,12 +78,16 @@ The hardware design current gEDA files are available from
 
 ## Future Plans ##
 
-MegaMetrum v0.1 prototypes are working and flight testing is underway.  
+MegaMetrum v0.1 prototypes are working and flight testing is underway.  This
+version was shown publicly at NARCON 2013.
 
-We're making several changes to the hardware to improve performance and
-reliability.  As of early Jan 2013 we're waiting for the v0.2 raw boards
-to come back from fab.
+Several changes to the hardware to improve performance and reliability 
+resulted in a v0.2 prototype version, however feedback from conversations at
+NARCON caused us to sort of "skip" doing much with this version.
 
-No firm schedule for production and sale of MegaMetrum has been set yet, 
-but we hope to offer this product in time for the North American 2013 
+As of late March 2013, we're waiting for v0.3 raw circuit boards to come back
+from fab.  These have an improved pyro control circuit and u-blox GPS 
+receiver. 
+
+We hope to offer this product in time for the North American 2013 
 flying season.
