@@ -18,6 +18,7 @@ nearby while performing this work "just in case".
 ## Getting Started ##
 
 This is what our 850mAh and 110mAh cells look like from the factory:
+
 <img src="cimg2912.jpg"/>
 <img src="cimg2913.jpg"/>
 
@@ -30,6 +31,7 @@ just a single wrap of translucent yellow/gold Kapton tape to peel.  On some
 like the 110mAh cell shown next, there is a layer of Kapton tape over a 
 layer of a spongier insulating material.  Preserving the spongy insulating
 material is good, so try not to tear it off as you're peeling it up:
+
 <img src="cimg2914.jpg"/>
 <img src="cimg2915.jpg"/>
 <img src="cimg2916.jpg"/>
@@ -44,23 +46,64 @@ than removing the board entirely... but leaving the board behind doesn't
 really help anything, so we'll take the other option which is to remove it
 entirely.  To do this, just warm up a soldering iron and use tweezers or small
 needle-nose pliers to pull the wires and tabs away from the board while using
-the soldering iron to melt the solder on each of the 4 joints.  Once the
-board is removed, the battery should look something like this:
+the soldering iron to melt the solder on each of the 4 joints.  
+
+Once the circuit board is removed, the battery should look something like this:
+
 <img src="cimg2917.jpg"/>
 <img src="cimg2920.jpg"/>
+
+## Attach the Wires Directly to the Battery ##
 
 Now, use the soldering iron to tack the wires onto the battery 
 terminal tabs.  Since the tabs and the wires are all pre-soldered, you don't
 really need flux here, though if the tabs look dry adding a little solder
-to them before trying to tack the wires on may be helpful.  Note that on the
+to them before trying to tack the wires on may be helpful.  Be careful to
+keep the polarity straight.  As you can see on the 110mAh cell, many LiPo
+batteries have the polarity marked.  But, as you can see on the 850mAh cell,
+not all of them do, so remember which side is plus (red wire) and which side
+is minus (black wire)!
+
+Note that on the
 larger cell, we've soldered the wires on heading towards the center so that
 we can bend them out together.  This will make insulating the terminals 
 easier:
+
 <img src="cimg2918.jpg"/>
 <img src="cimg2921.jpg"/>
 
+## Insulating ##
+
+The final step is literally to "wrap things up".  In this case, we've used
+Kapton tape, but other electrically insulating tape like the more common
+household black vinyl electrical tape should work fine.  On the larger cell,
+note that we're wrapping pieces over the end of the cell on either side of
+the wires before taking a wrap over the "shelf" end of the battery.  On the
+110mAh cell, there isn't really room to do that and the spongy tape already
+provides some protection, so we just take a wrap around the cell to cover 
+the exposed terminals and keep everything in place.  Note that I like to
+mark the batteries that have had this procedure done to them with a
+permanent marker saying something like "protection removed" to keep the cells
+that still have boards and the ones that don't straight:
 
 <img src="cimg2919.jpg"/>
 <img src="cimg2922.jpg"/>
 <img src="cimg2923.jpg"/>
 <img src="cimg2924.jpg"/>
+
+## Testing ##
+
+If all went well, your battery should work just the way it did before, 
+except that you won't ever see the output shut down due to over current.  As
+is always true with Lithium Polymer batteries, please be careful when 
+installing and using them to avoid physically damaging the cells.  We often
+wrap ours with a layer of closed cell foam before strapping them down to a
+sled with wire ties, for example.
+
+## Getting Someone Else to Help ##
+
+If this all seems scary or just beyond your soldering abilities, you can either
+find a friend locally to help you out, or if the battery in question came from
+us or one of our distributors, feel free to contact us by sending
+email to [fixmybattery@altusmetrum.org](<mailto:fixmybattery@altusmetrum.org)
+and we'll do what we can to help!
