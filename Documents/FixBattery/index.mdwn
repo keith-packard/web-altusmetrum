@@ -33,11 +33,34 @@ material is good, so try not to tear it off as you're peeling it up:
 <img src="cimg2914.jpg"/>
 <img src="cimg2915.jpg"/>
 <img src="cimg2916.jpg"/>
+
+## Removing the Protection Board ##
+
+At this point, the wire connections and circuit board are exposed.  There are
+two options at this point.  One is to leave the circuit board installed, but
+move the wires to the circuit board pads that connect to the battery, which
+effectively takes the board out of circuit.  In some cases, this may be easier
+than removing the board entirely... but leaving the board behind doesn't
+really help anything, so we'll take the other option which is to remove it
+entirely.  To do this, just warm up a soldering iron and use tweezers or small
+needle-nose pliers to pull the wires and tabs away from the board while using
+the soldering iron to melt the solder on each of the 4 joints.  Once the
+board is removed, the battery should look something like this:
 <img src="cimg2917.jpg"/>
-<img src="cimg2918.jpg"/>
-<img src="cimg2919.jpg"/>
 <img src="cimg2920.jpg"/>
+
+Now, use the soldering iron to tack the wires onto the battery 
+terminal tabs.  Since the tabs and the wires are all pre-soldered, you don't
+really need flux here, though if the tabs look dry adding a little solder
+to them before trying to tack the wires on may be helpful.  Note that on the
+larger cell, we've soldered the wires on heading towards the center so that
+we can bend them out together.  This will make insulating the terminals 
+easier:
+<img src="cimg2918.jpg"/>
 <img src="cimg2921.jpg"/>
+
+
+<img src="cimg2919.jpg"/>
 <img src="cimg2922.jpg"/>
 <img src="cimg2923.jpg"/>
 <img src="cimg2924.jpg"/>
