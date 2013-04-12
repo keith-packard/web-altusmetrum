@@ -21,6 +21,15 @@ This is what our 850mAh and 110mAh cells look like from the factory:
 <img src="cimg2912.jpg"/>
 <img src="cimg2913.jpg"/>
 
+## Unwrapping ##
+
+The first thing we need to do is remove the tape that covers and protects
+the circuit board and associated connections to the wire leads and battery
+terminal tabs.  On some batteries, like the 850mAh cell shown here, there is
+just a single wrap of translucent yellow/gold Kapton tape to peel.  On some
+like the 110mAh cell shown next, there is a layer of Kapton tape over a 
+layer of a spongier insulating material.  Preserving the spongy insulating
+material is good, so try not to tear it off as you're peeling it up:
 <img src="cimg2914.jpg"/>
 <img src="cimg2915.jpg"/>
 <img src="cimg2916.jpg"/>
