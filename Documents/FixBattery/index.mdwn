@@ -81,13 +81,16 @@ note that we're wrapping pieces over the end of the cell on either side of
 the wires before taking a wrap over the "shelf" end of the battery.  On the
 110mAh cell, there isn't really room to do that and the spongy tape already
 provides some protection, so we just take a wrap around the cell to cover 
-the exposed terminals and keep everything in place.  Note that I like to
+the exposed terminals and keep everything in place.  
+
+<img src="cimg2919.jpg"/>
+<img src="cimg2922.jpg"/>
+
+Note that I like to
 mark the batteries that have had this procedure done to them with a
 permanent marker saying something like "protection removed" to keep the cells
 that still have boards and the ones that don't straight:
 
-<img src="cimg2919.jpg"/>
-<img src="cimg2922.jpg"/>
 <img src="cimg2923.jpg"/>
 <img src="cimg2924.jpg"/>
 
