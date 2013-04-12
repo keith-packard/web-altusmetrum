@@ -15,8 +15,12 @@ don't mean to scare anyone familiar with electronic soldering away from this
 job, but please be careful, wear eye protection, and have a fire extinguisher 
 nearby while performing this work "just in case".
 
+## Getting Started ##
+
+This is what our 850mAh and 110mAh cells look like from the factory:
 <img src="cimg2912.jpg"/>
 <img src="cimg2913.jpg"/>
+
 <img src="cimg2914.jpg"/>
 <img src="cimg2915.jpg"/>
 <img src="cimg2916.jpg"/>
