@@ -1,0 +1,17 @@
+[[!meta title="Documents"]]
+
+# Misc Documents #
+
+These documents are either authored by Altus Metrum but explain things that 
+are outside of the scope of our normal product documentation, or are documents
+we have collected that we think provide useful reference information for our
+friends and customers.  We hope these documents will be of assistance to 
+others, but as in all things related to hobby rocketry, please remember to 
+think before you act!
+
+## How-To Documents ##
+
+ * [Remove the protection circuit board from a LiPo battery](./FixBattery)
+
+## Collected References ##
+

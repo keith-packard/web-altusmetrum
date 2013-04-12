@@ -1,0 +1,30 @@
+[[!meta title="FixBattery"]]
+
+# Removing a LiPo Protection Board #
+
+As we have documented 
+[elsewhere](http://gag.com/bdale/blog/posts/Batteries_and_Pyro_Circuits.html),
+the protection circuit boards included in many LiPo batteries such as the
+ones we sold up until April of 2013 can often do more harm than good in 
+rocket applications.  This document explains how to remove the protection
+circuit board entirely, should you choose to tackle this on your own.
+
+Please note that LiPo batteries have a very low source impedance, which means
+they can deliver massive amounts of current if you short the terminals.  We
+don't mean to scare anyone familiar with electronic soldering away from this
+job, but please be careful, wear eye protection, and have a fire extinguisher 
+nearby while performing this work "just in case".
+
+<img src="cimg2912.jpg"/>
+<img src="cimg2913.jpg"/>
+<img src="cimg2914.jpg"/>
+<img src="cimg2915.jpg"/>
+<img src="cimg2916.jpg"/>
+<img src="cimg2917.jpg"/>
+<img src="cimg2918.jpg"/>
+<img src="cimg2919.jpg"/>
+<img src="cimg2920.jpg"/>
+<img src="cimg2921.jpg"/>
+<img src="cimg2922.jpg"/>
+<img src="cimg2923.jpg"/>
+<img src="cimg2924.jpg"/>
