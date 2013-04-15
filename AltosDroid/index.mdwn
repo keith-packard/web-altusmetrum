@@ -20,7 +20,7 @@ Current features include:
 
 ## Permissions ##
 
-AltosDroid requires the following permissions to be installed:
+AltosDroid requires the following permissions in order to be installed:
 
  * NETWORK COMMUNICATION
 	* PAIR WITH BLUETOOTH DEVICES
