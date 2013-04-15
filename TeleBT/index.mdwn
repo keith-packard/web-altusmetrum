@@ -2,14 +2,14 @@
 
 TeleBT provides the equivalent of a [TeleDongle](../TeleDongle), with
 the addition of [Bluetooth](http://www.bluetooth.com) as an alternative to
-USB for connection to the ground station computer.
+USB for connection to the ground station computer. 
 
 The RF filter components are set for use in the vicinity of 435 Mhz.
 
-These are photos of prototype version 0.3:
+These are photos of the first production version, 1.0:
 
-<a href="v0.3/telebt-top.jpg"> <img src="v0.3/telebt-top-thumb.jpg"></a>
-<a href="v0.3/telebt-bottom.jpg"> <img src="v0.3/telebt-bottom-thumb.jpg"></a>
+<a href="v1.0/telebt-top.jpg"> <img src="v1.0/telebt-top-thumb.jpg"></a>
+<a href="v1.0/telebt-bottom.jpg"> <img src="v1.0/telebt-bottom-thumb.jpg"></a>
 
 For the latest TeleBT firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
@@ -23,7 +23,7 @@ visit the [AltOS](../AltOS) page on this site.
 * micro USB interface
 * 4 pin Tyco MicroMaTch connector for debug and flash programming
 * 8 pin Tyco MicroMaTch connector supports serial or SPI interface
-* 900mAh LiPo battery charged via USB 
+* 850mAh LiPo battery charged via USB 
 
 ### Developer View ###
 
@@ -40,7 +40,7 @@ visit the [AltOS](../AltOS) page on this site.
 * Rayson BTM-182 (Bluetooth SPP module) with async interface to CC1111
 * 150mA 3.3V LDO regulator
 	* input and output appear on 8-pin companion connector
-* Software Features
+* Firmware Features
 	* Written mostly in C with some 8051 assembler
 	* Runs from on-chip flash, uses on-chip RAM
 	* USB serial emulation for data interface
@@ -63,9 +63,8 @@ The hardware design current gEDA files are available from
 
 ## Future Plans ##
 
-Two prototype versions have been built with different physical form factors.
-We have working firmware, and a prototype of support in AltosUI.  Work is
-also underway on an [Android](http://www.android.com) version of AltosUI.  
+Production version 1.0 is back from assembly and works great!  TeleBT works
+with both AltosUI version 1.2 and later (not released yet), and a new
+[Android](http://www.android.com) application called AltosDroid.
 
-Prototype version 0.3 is working, and we hope to move TeleBT to production
-soon.
+TeleBT will be available to purchase very soon.
