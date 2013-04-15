@@ -11,8 +11,8 @@ These are photos of the first production version, 1.0:
 <a href="v1.0/telebt-top.jpg"> <img src="v1.0/telebt-top-thumb.jpg"></a>
 <a href="v1.0/telebt-bottom.jpg"> <img src="v1.0/telebt-bottom-thumb.jpg"></a>
 
-And here's what it looks like attached to an Arrow 3-element yagi, ready 
-for use:
+And here's what it looks like packaged with battery, attached to an Arrow 
+3-element yagi, ready for use:
 
 <a href="v1.0/telebt-onyagi.jpg"> <img src="v1.0/telebt-onyagi-thumb.jpg"></a>
 <a href="v1.0/telebt-inuse.jpg"> <img src="v1.0/telebt-inuse-thumb.jpg"></a>
