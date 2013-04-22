@@ -1,17 +1,17 @@
-# MegaMetrum
+# TeleMega
 
 This is a high-end recording dual-deploy altimeter for high power model 
 rocketry with integrated GPS and telemetry link.  The features included
-make MegaMetrum the ideal choice for complex projects including sustainers
+make TeleMega the ideal choice for complex projects including sustainers
 on multi-stage projects.
 
-For the latest MegaMetrum firmware and related ground station software, please
+For the latest TeleMega firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
 These are photos of the first v0.1 prototype:
 
-<a href="v0.1/megametrum-v0.1-top.jpg"> <img src="v0.1/megametrum-v0.1-top-thumb.jpg"></a>
-<a href="v0.1/megametrum-v0.1-bottom.jpg"> <img src="v0.1/megametrum-v0.1-bottom-thumb.jpg"></a>
+<a href="v0.1/telemega-v0.1-top.jpg"> <img src="v0.1/telemega-v0.1-top-thumb.jpg"></a>
+<a href="v0.1/telemega-v0.1-bottom.jpg"> <img src="v0.1/telemega-v0.1-bottom-thumb.jpg"></a>
 
 ## Features ##
 
@@ -68,17 +68,17 @@ These are photos of the first v0.1 prototype:
 
 ## Artifacts ##
 
-There is a single manual for MegaMetrum and most other Altus Metrum products,
+There is a single manual for TeleMega and most other Altus Metrum products,
 which is available in [html](../AltOS/doc/altusmetrum.html) and 
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com) in the project 
-[hw/megametrum](http://git.gag.com/?p=hw/megametrum;a=summary).  
+[hw/telemega](http://git.gag.com/?p=hw/telemega;a=summary).  
 
 ## Future Plans ##
 
-MegaMetrum v0.1 prototypes are working and flight testing is underway.  This
+TeleMega v0.1 prototypes are working and flight testing is underway.  This
 version was shown publicly at NARCON 2013.
 
 Several changes to the hardware to improve performance and reliability 

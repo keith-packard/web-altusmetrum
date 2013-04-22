@@ -76,7 +76,7 @@ the set of hardware projects here.
 * [MegaDongle](MegaDongle/)
 is a higher-performance alternative to [TeleDongle](TeleDongle/).
 
-* [MegaMetrum](MegaMetrum/)
+* [TeleMega](TeleMega/)
 is a high-end flight computer with 6 pyro channels, more and better sensors,
 GPS, and a high performance bidirectional RF telemetry link.
 
