@@ -66,6 +66,11 @@ pictures of v1.2 yet):
 
 ## [Flight Logs](flightlogs) ##
 
+## Videos ##
+
+There are a number of TeleMetrum customer and other 
+[videos on YouTube](http://www.youtube.com/results?search_query=telemetrum)
+
 ## Artifacts ##
 
 There is a single manual for TeleMetrum and all other Altus Metrum products,
