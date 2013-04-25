@@ -41,14 +41,7 @@ The latest source, which may include unreleased work in progress, is always
 available from [git.gag.com](http://git.gag.com) 
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).  
 
-If you need to debug code on an Altus Metrum product, or want to do custom
-development, you need a 2.X version of SDCC.  Version 3.X adds features that 
-bloat the code generated on 8051 enough to overflow the available flash memory
-size.  As a result, we maintain a fork of SDCC we call 'cc1111' that is based
-on the last upstream version of SDCC 2.X, plus a highly modified sdcdb with 
-support for the cc1111 debugging interface.  This is avilable as a package in
-Debian, or you can find the sources on [git.gag.com](http://git.gag.com) 
-in the project [debian/cc1111](http://git.gag.com/?p=debian/cc1111;a=summary). 
+We've gathered a few notes on [buidling AltOS](building).
 
 ## Future Plans ##
 
