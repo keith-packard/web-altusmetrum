@@ -84,7 +84,8 @@ connect the main LiPo battery to the pyro power rail.
 To use a separate pyro battery, just leave out the jumper and connect the
 pyro battery to the two adjacent screw terminals marked 'gnd' and 'pyro',
 using the 'gnd' terminal for the negative battery lead and the 'pyro'
-terminal for the positive side. 
+terminal for the positive side.  Connect the e-match leads to the pyro screw
+terminals as usual... no off-board connections are required.
 
 Here's a photo showing the a TeleMega board wired this way:
 
