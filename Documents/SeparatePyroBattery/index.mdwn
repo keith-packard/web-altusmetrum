@@ -1,0 +1,91 @@
+[[!meta title="SeparatePyroBattery"]]
+
+# Using a Separate Pyro Battery with Altus Metrum Flight Computers #
+
+As we have discussed
+[elsewhere](http://gag.com/bdale/blog/posts/Batteries_and_Pyro_Circuits.html),
+the most reliable solution for pyro control circuits in large and complex 
+rocket projects is to use a separate battery to provide the current
+used for actually igniting the charges from the one used to power the
+electronics.  This document explains how to do this with various 
+[Altus Metrum](http://altusmetrum.org) flight computer models.
+
+## Pyro Circuit Background ##
+
+All Altus Metrum flight computers use low-side FET switches to control pyro 
+events.  What this means is that the pyro circuit provides the equivalent of
+a switch to ground on one pin of each pyro circuit, and a source of power on
+the other.  The continuity sense circuitry is on the switch side of the pyro
+terminals, and was designed to cope with any pyro voltage through nominal
+12 volts (15 volts DC maximum).  Using a separate pyro battery is therefore
+as simple as just ignoring the terminal that provides a source of voltage and
+only connecting the side that provides the switch to ground.
+
+The negative lead of your pyro battery needs to be connected to ground on 
+the flight computer.  The plating around the mounting screw holes is one 
+good place to find ground.  The negative terminal of the LiPo battery 
+connector is also grounded.  And on TeleMetrum boards there's an explicit 
+ground connection hole you can solder a wire to.
+
+The positive lead of your pyro battery needs to connect to one side of each
+e-match, with the other side of the match connecting to the appropriate
+pyro terminal on the flight computer.  This obviously means you need to make
+connections off-board.  Whether you choose to do this with a screw terminal
+strip, crimp connectors, or by soldering wires together is of course entirely
+up to you!
+
+## TeleMetrum ##
+
+Early [TeleMetrum](http://altusmetrum.org/TeleMetrum) boards had an 
+unpopulated connector footprint on the board
+for a separate pyro battery, but due to a wiring error in the design of the
+board, that connector was never useful.  Just ignore it.
+
+If you look at the bottom of the board where all the surface-mounted components
+are, on the end where the pyro screw terminals are located, you can see a
+fat trace connecting three of the screw terminals together.  This is the 
+source of pyro power, which comes from the LiPo battery through the power
+switch and then to one side of each pyro channel.  The pins that trace 
+connects are therefore the ones you want to ignore.  The others are the 
+switches to ground.
+
+Here's a photo of the pyro end of a TeleMetrum board augmented to show what
+to connect where:
+
+<img src="TeleMetrumSepPyro.jpg"/>
+
+## TeleMini ##
+
+Wiring a [TeleMini](http://altusmetrum.org/TeleMini) board for use with a
+separate pyro battery works the same way.
+
+If you look at the bottom of the board where all the surface-mounted components
+are, on the end where the pyro screw terminals are located, you can see a fat
+trace connecting two of the screws.  This is the 
+source of pyro power, which comes from the LiPo battery through the power
+switch and then to one side of each pyro channel.  The pins that trace 
+connects are therefore the ones you want to ignore.  The others are the 
+switches to ground.
+
+Here's a photo of the pyro end of a TeleMini board augmented to show what
+to connect where:
+
+<img src="TeleMiniSepPyro.jpg"/>
+
+## TeleMega ##
+
+Because [TeleMega](http://altusmetrum.org/TeleMega) was designed to 
+be especially well suited for use in large
+and complex projects, it includes extra screw terminals on board to make use
+of a separate pyro battery easy.  In fact, use of a TeleMega with only one
+battery requires putting a jumper between two adjacent screw terminals to
+connect the main LiPo battery to the pyro power rail.
+
+To use a separate pyro battery, just leave out the jumper and connect the
+pyro battery to the two adjacent screw terminals marked 'gnd' and 'pyro',
+using the 'gnd' terminal for the negative battery lead and the 'pyro'
+terminal for the positive side. 
+
+Here's a photo showing the a TeleMega board wired this way:
+
+<img src="TeleMegaSepPyro.jpg"/>

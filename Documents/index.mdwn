@@ -12,6 +12,7 @@ think before you act!
 ## How-To Documents ##
 
  * [Remove the protection circuit board from a LiPo battery](./FixBattery)
+ * [Use a separate pyro battery](./SeparatePyroBattery)
 
 ## Collected References ##
 
