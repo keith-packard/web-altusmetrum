@@ -64,3 +64,14 @@ toolchain in /opt/cortex:
 
 That's it!  You should now have an ARM toolchain targetting bare metal for
 both Cortex M0 and M3 variants including a minimal C runtime library.
+
+If you're using a debug/programming interface from ST (either an STlinkV2 USB
+dongle or something like a Discovery board) then you may also want to build
+and install tools for that as follows:
+
+* clone our fork of the [stlink](http://git.gag.com/?p=fw/stlink;a=xummary) 
+  reposirtory with `git clone git://git.gag.com/fw/pdclib`
+* cd into the stlink directory, and build using 
+  './configure --prefix=/opt/cortex; make ; make install'.  This will install
+  the stlink library and related utilities in /opt/cortex.
+
