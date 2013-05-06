@@ -70,7 +70,7 @@ dongle or something like a Discovery board) then you may also want to build
 and install tools for that as follows:
 
 * clone our fork of the [stlink](http://git.gag.com/?p=fw/stlink;a=xummary) 
-  reposirtory with `git clone git://git.gag.com/fw/pdclib`
+  reposirtory with `git clone git://git.gag.com/fw/stlink`
 * cd into the stlink directory, and build using 
   './configure --prefix=/opt/cortex; make ; make install'.  This will install
   the stlink library and related utilities in /opt/cortex.
