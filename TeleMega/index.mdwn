@@ -10,8 +10,8 @@ visit the [AltOS](../AltOS) page on this site.
 
 These are photos of the first v0.1 prototype:
 
-<a href="v0.1/telemega-v0.1-top.jpg"> <img src="v0.1/telemega-v0.1-top-thumb.jpg"></a>
-<a href="v0.1/telemega-v0.1-bottom.jpg"> <img src="v0.1/telemega-v0.1-bottom-thumb.jpg"></a>
+<a href="v0.1/megametrum-v0.1-top.jpg"> <img src="v0.1/megametrum-v0.1-top-thumb.jpg"></a>
+<a href="v0.1/megametrum-v0.1-bottom.jpg"> <img src="v0.1/megametrum-v0.1-bottom-thumb.jpg"></a>
 
 ## Features ##
 
