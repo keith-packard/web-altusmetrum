@@ -85,9 +85,8 @@ Several changes to the hardware to improve performance and reliability
 resulted in a v0.2 prototype version, however feedback from conversations at
 NARCON caused us to sort of "skip" doing much with this version.
 
-As of late March 2013, we're waiting for v0.3 raw circuit boards to come back
-from fab.  These have an improved pyro control circuit and u-blox GPS 
+As of early May 2013, we're in the midst of building and testing v0.3 
+prototypes with an improved pyro control circuit and u-blox GPS 
 receiver. 
 
-We hope to offer this product in time for the North American 2013 
-flying season.
+We hope to introduce this product sometime in July, 2013, if all goes well.
