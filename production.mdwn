@@ -279,9 +279,13 @@ MegaDongle v0.2 2012.12.27.
 
 TeleScience v0.2 2013.01.12.
 
-## sn 80-82 **
+## sn 80-82 ##
 
 TeleGPS v0.1 2013.03.20
+
+## sn 83-85 ##
+
+TeleMega v0.3 2013.05.07.  sn 85 has cc1125, the others have cc1120.
 
 ## sn 100-207 ##
 
