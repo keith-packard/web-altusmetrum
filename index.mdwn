@@ -53,6 +53,9 @@ is a simple RF interface for use in ground stations interacting with rockets
 using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
 interface for other microcontroller systems.
 
+* [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
+[Bluetooth](http://www.bluetooth.com) as an alternative to USB.
+
 * [LipoCharger](LipoCharger/) 
 is a standalone battery charger for the Lithium Polymer batteries used in
 Altus Metrum products.
@@ -83,9 +86,6 @@ GPS, and a high performance bidirectional RF telemetry link.
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
-
-* [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
-[Bluetooth](http://www.bluetooth.com) as an alternative to USB.
 
 * [TeleNano](TeleNano/)
 is a tiny rocketry altimeter with telemetry using only a barometric 
