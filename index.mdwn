@@ -54,7 +54,8 @@ using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
 interface for other microcontroller systems.
 
 * [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
-[Bluetooth](http://www.bluetooth.com) as an alternative to USB.
+[Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
+useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for Android devices!
 
 * [LipoCharger](LipoCharger/) 
 is a standalone battery charger for the Lithium Polymer batteries used in
