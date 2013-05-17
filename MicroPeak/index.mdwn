@@ -32,7 +32,6 @@ running Mac OS X or Windows, a compatible version of those drivers is
 included with the software. You can also install a different from from
 the [FTDI Driver](http://www.ftdichip.com/FTDrivers.htm) page.
 
-[[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
 ## Hardware Features ##
 
