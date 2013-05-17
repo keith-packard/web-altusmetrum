@@ -1,4 +1,4 @@
-# [[!inline pages="./1.2/release-notes-1.2.html" rss="no" raw="yes" ]]
+[[!inline pages="./1.2/release-notes-1.2.html" rss="no" raw="yes" ]]
 
 - Available Files:
 	- [Windows](releases/1.2/MicroPeak-Windows-1-2.exe)
