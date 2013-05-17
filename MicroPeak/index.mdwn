@@ -6,7 +6,8 @@
 Micropeak is a barometric logging altimeter for precision model
 rocketry altitude measurements.
 
-<a href="v1.0/micropeak-dime.jpg"><img src="v1.0/micropeak-dime-640.jpg"></a>
+<a href="v1.0/micropeak-dime.jpg"><img
+src="v1.0/micropeak-dime-640.jpg"></a>
 
 Production units are available from the
 [Garbee and Garbee](http://auric.gag.com/index.php?route=product/product&product_id=80) 
@@ -30,6 +31,12 @@ FTDI USB Serial drivers to communicate with the hardware. If you're
 running Mac OS X or Windows, a compatible version of those drivers is
 included with the software. You can also install a different from from
 the [FTDI Driver](http://www.ftdichip.com/FTDrivers.htm) page.
+
+### Latest version (1.2) ###
+
+ * [Windows](releases/1.2/MicroPeak-Windows-1-2.exe)
+ * [Linux](releases/1.2/MicroPeak-Linux-1.2.tar.bz2)
+ * [Mac OS X](releases/1.2/MicroPeak-Mac-1.2.dmg)
 
 ## Hardware Features ##
 
@@ -68,8 +75,8 @@ Here's a close-up view of the hardware
 		* 512B EEPROM
 		* SPI/I2C interface
 	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/t_product.aspx?id=8499) Micro Altimeter Module
-		* Wide range 120kPa to 1kPa (approximately -1500m to 31000m)
-		* High precision 2.4Pa resolution (approximately 20cm at sea level)
+		* Wide range — 120kPa to 1kPa (approximately -1500m to 31000m)
+		* High precision — 2.4Pa resolution (approximately 20cm at sea level)
 		* Factory calibrated.
 	* CR1025 Lithium Battery
 		* 30mAh. Runs MicroPeak for more than 40 hours on the pad or in flight
@@ -92,6 +99,3 @@ Here's a close-up view of the hardware
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 <center><img src="../logos/micropeak.svg" height="64"/>
-
-[[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
-
