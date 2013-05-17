@@ -68,8 +68,8 @@ Here's a close-up view of the hardware
 		* 512B EEPROM
 		* SPI/I2C interface
 	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/t_product.aspx?id=8499) Micro Altimeter Module
-		* Wide range — 120kPa to 1kPa (approximately -1500m to 31000m)
-		* High precision — 2.4Pa resolution (approximately 20cm at sea level)
+		* Wide range 120kPa to 1kPa (approximately -1500m to 31000m)
+		* High precision 2.4Pa resolution (approximately 20cm at sea level)
 		* Factory calibrated.
 	* CR1025 Lithium Battery
 		* 30mAh. Runs MicroPeak for more than 40 hours on the pad or in flight
