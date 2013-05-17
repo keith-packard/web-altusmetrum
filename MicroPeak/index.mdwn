@@ -92,3 +92,6 @@ Here's a close-up view of the hardware
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 <center><img src="../logos/micropeak.svg" height="64"/>
+
+[[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
+
