@@ -1,10 +1,3 @@
-[[!meta title="MicroPeak"]]
-<img src="../logos/micropeak-oneline.svg" height="100"/>
-
-# Introducing MicroPeak by AltusMetrum #
-
-Micropeak is a barometric logging altimeter for precision model
-rocketry altitude measurements.
 
 [[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zip and !*.exe" show="10" rss="no" raw="yes" ]]
 
