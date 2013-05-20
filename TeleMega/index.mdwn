@@ -20,7 +20,7 @@ These are photos of the first v0.1 prototype:
 * Recording altimeter for high power model rocketry
 * Supports dual deployment and additional pyro events.  Pyro events are 
   configurable and can be based on time and various flight events and status,
-  including angle from vertical.
+  including angle from vertical (for safety in staging and air start flights).
 * 70cm ham-band transceiver for telemetry downlink
 * Barometric pressure sensor good to 100k feet MSL
 * 1-axis 105-g accelerometer for motor characterization
@@ -37,7 +37,7 @@ These are photos of the first v0.1 prototype:
 
 ### Developer View ###
 
-* Hardware Features of v0.1
+* Hardware Features of v0.3
 	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
 	* TI [CC1120](http://www.ti.com/product/cc1120) High Performance RF Transceiver for Narrowband Systems 
 	* 150mA 3.3V LDO regulator
