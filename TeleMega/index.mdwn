@@ -3,7 +3,9 @@
 This is a high-end recording dual-deploy altimeter for high power model 
 rocketry with integrated GPS and telemetry link.  The features included
 make TeleMega the ideal choice for complex projects including sustainers
-on multi-stage projects.
+on multi-stage projects.  In particular, pyro events are configurable and 
+can be based on time and various flight events and status, including angle 
+from vertical.
 
 For the latest TeleMega firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
@@ -18,7 +20,8 @@ These are photos of the first v0.1 prototype:
 ### User View ###
 
 * Recording altimeter for high power model rocketry
-* Supports dual deployment and additional pyro events.  Pyro events are 
+* Supports dual deployment and 4 additional pyro events.  
+  Pyro events are 
   configurable and can be based on time and various flight events and status,
   including angle from vertical (for safety in staging and air start flights).
 * 70cm ham-band transceiver for telemetry downlink
