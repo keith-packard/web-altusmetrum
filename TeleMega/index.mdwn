@@ -18,7 +18,9 @@ These are photos of the first v0.1 prototype:
 ### User View ###
 
 * Recording altimeter for high power model rocketry
-* Supports dual deployment and additional pyro events (can fire 6 charges)
+* Supports dual deployment and additional pyro events.  Pyro events are 
+  configurable and can be based on time and various flight events and status,
+  including angle from vertical.
 * 70cm ham-band transceiver for telemetry downlink
 * Barometric pressure sensor good to 100k feet MSL
 * 1-axis 105-g accelerometer for motor characterization
@@ -40,7 +42,7 @@ These are photos of the first v0.1 prototype:
 	* TI [CC1120](http://www.ti.com/product/cc1120) High Performance RF Transceiver for Narrowband Systems 
 	* 150mA 3.3V LDO regulator
 	* [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/ProductLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
-	* [SkyTraq](http://www.skytraq.com.tw/) Venus634FLPx GPS receiver
+	* [u-blox](http://www.u-blox.com/) MAX-6Q GPS receiver
 		* on-board [Taoglas AP.17A.01](http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
 		  single-stage active patch antenna
 		* U.FL connector with 3.3V DC can be re-purposed for optional external amplified antennas
@@ -49,8 +51,8 @@ These are photos of the first v0.1 prototype:
 		* Wide range — 120kPa to 1kPa (approximately -1500m to 31000m)
 		* High precision — 2.4Pa resolution (approximately 20cm at sea level)
 		* Factory calibrated.
-	* Freescale [MMA655x](http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MMA65xx&fsrch=1&sr=1) Single Axis SPI Intertial Sensor
-		* +- 105g or 120g full-scale
+	* Freescale [MMA6555](http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MMA65xx&fsrch=1&sr=1) Single Axis SPI Intertial Sensor
+		* +- 105g full-scale
 		* on-chip 12-bit digitizer
 	* Invensense [MPU-6000](http://invensense.com/mems/gyro/mpu6050.html) Six-Axis MEMS Motion Tracking Device
 		* tri-axis angular rate sensor up to 2000 degrees/second
