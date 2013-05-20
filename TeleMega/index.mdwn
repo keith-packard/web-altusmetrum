@@ -78,15 +78,16 @@ The hardware design current gEDA files are available from
 
 ## Future Plans ##
 
-TeleMega v0.1 prototypes are working and flight testing is underway.  This
-version was shown publicly at NARCON 2013.
+TeleMega v0.1 prototypes worked and were flown on a number of test 
+flights.  This version was shown publicly at NARCON 2013.
 
 Several changes to the hardware to improve performance and reliability 
 resulted in a v0.2 prototype version, however feedback from conversations at
 NARCON caused us to sort of "skip" doing much with this version.
 
-As of early May 2013, we're in the midst of building and testing v0.3 
-prototypes with an improved pyro control circuit and u-blox GPS 
-receiver. 
+Version 0.3 prototypes are built and working, with an improved pyro control 
+circuit and u-blox GPS receiver. 
 
-We hope to introduce this product sometime in July, 2013, if all goes well.
+The first test flight of v0.3 was on 19 May 2013, and the results look 
+great!  We plan more tests at [NSL 2013](http://nsl2013.org), and if all
+continues to go well, we hope to introduce this product in July, 2013.
