@@ -70,7 +70,8 @@ The hardware design current gEDA files are available from
 ## Future Plans ##
 
 Production version 1.0 is available to purchase!  TeleBT works
-with both AltosUI version 1.2 and later (not released yet), and a new
+with both AltosUI version 1.2 and later, and a new
 [Android](http://www.android.com) application 
 called [AltosDroid](../AltosDroid).
 
+We're pretty happy with TeleBT and have no plans to change it at this time.
