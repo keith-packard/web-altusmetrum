@@ -291,6 +291,10 @@ TeleMega v0.3 2013.05.07.  sn 85 has cc1125, the others have cc1120.
 
 EasyMini v0.1 2013.05.19.
 
+## sn 89-91 ##
+
+TeleMini v1.1 2013.05.22.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 
