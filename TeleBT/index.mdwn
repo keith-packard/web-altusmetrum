@@ -67,6 +67,13 @@ The hardware design current gEDA files are available from
 [git.gag.com](http://git.gag.com) in the project 
 [hw/teleshield](http://git.gag.com/?p=hw/telebt;a=summary).  
 
+For those who don't have ready access to the gEDA suite, here are pdf snapshots
+of the files for Production PCB version 1.2 in more easily readable form.  
+
+* [schematic](v1.0/telebt.pdf)
+* [pcb artwork](v1.0/telebt.pcb.pdf)
+* [bill of materials](v1.0/partslist.csv)
+
 ## Future Plans ##
 
 Production version 1.0 is available to purchase!  TeleBT works
