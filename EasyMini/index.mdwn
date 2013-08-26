@@ -14,7 +14,7 @@ visit the [AltOS](../AltOS) page on this site.
 These are photos of our current prototype version: 
 
 <a href="v0.2/easymini-top.jpg"> <img src="v0.2/easymini-top-thumb.jpg"></a>
-<a href="v0.2/easymini-parts.jpg"> <img src="v1.0/easymini-parts-thumb.jpg"></a>
+<a href="v0.2/easymini-parts.jpg"> <img src="v0.2/easymini-parts-thumb.jpg"></a>
 
 ## Features ##
 
