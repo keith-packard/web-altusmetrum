@@ -1,0 +1,61 @@
+# EasyMini
+
+This is a small, baro-only recording dual-deploy altimeter for 
+model rocketry
+
+EasyMini is currently in development, with a handful of prototype
+boards built and flown. Production units will eventually be available from the 
+[Garbee and Garbee](http://auric.gag.com) web 
+store.
+
+For the latest EasyMini firmware and related ground station software, please
+visit the [AltOS](../AltOS) page on this site.
+
+These are photos of our current prototype version: 
+
+<a href="v0.2/easymini-top.jpg"> <img src="v0.2/easymini-top-thumb.jpg"></a>
+<a href="v0.2/easymini-parts.jpg"> <img src="v1.0/easymini-parts-thumb.jpg"></a>
+
+## Features ##
+
+### User View ###
+
+* Recording altimeter for model rocketry
+* Supports dual deployment (can fire 2 ejection charges)
+* Barometric pressure sensor good to 100k feet MSL
+* Designed to use a battery supplying 3.7V-12V.
+* 1.5 x 0.8 inch board designed to fit inside 24mm airframe coupler tube
+* 2MB on-board data logging flash
+
+### Developer View ###
+
+* Hardware Features
+	* [NXP LPC11U14](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/LPC11U14FHI33.html) System-on-Chip
+		* ARM Cortex-M0 MCU
+		* 32k Flash
+		* 6k RAM
+		* USB 2.0
+		* 8 12-bit analog inputs
+		* I2C, SPI, async serial
+		* digital I/O
+	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/pressure/MS5607-02BA03.aspx) pressure sensor
+	* 2MB SPI flash
+* Software Features
+	* Written mostly in C with some ARM assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
+		flash memory part
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+	* [GCC](http://gcc.gnu.org/) compiler and source debugger
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+There is a single manual for EasyMini and all other Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+
+The hardware design files can be found on [git.gag.com](http://git.gag.com) 
+in the project [hw/easymini](http://git.gag.com/?p=hw/easymini;a=summary).  
