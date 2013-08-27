@@ -1,0 +1,1 @@
+[[!map pages="TeleMini/v2.0/* and ! TeleMini/v2.0/*/*"]]
