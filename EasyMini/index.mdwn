@@ -39,7 +39,7 @@ These are photos of our current prototype version:
 		* I2C, SPI, async serial
 		* digital I/O
 	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/pressure/MS5607-02BA03.aspx) pressure sensor
-	* 2MB SPI flash
+	* 1MB SPI flash
 * Software Features
 	* Written mostly in C with some ARM assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
