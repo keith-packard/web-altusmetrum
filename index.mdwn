@@ -93,6 +93,10 @@ is a higher-performance alternative to [TeleDongle](TeleDongle/).
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
 
+* [TeleGPS](TeleGPS/)
+is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
+high dynamic performance and a combination digital/APRS transmitter.
+
 * [TeleMega](TeleMega/)
 is a high-end flight computer with 6 pyro channels, more and better sensors,
 GPS, and a high performance bidirectional RF telemetry link.
