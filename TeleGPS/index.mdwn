@@ -38,7 +38,7 @@ These are photos of our current prototype version:
 		* 8 12-bit analog inputs
 		* I2C, SPI, async serial
 		* digital I/O
-	* [uBlox Max 7Q](http://www.u-blox.com/en/gps-modules/pvt-modules/max-7.html)
+	* [uBlox Max 7Q](http://www.u-blox.com/en/gps-modules/pvt-modules/max-7.html) GPS receiver
 	* 2MB SPI flash
 * Software Features
 	* Written mostly in C with some ARM assembler
