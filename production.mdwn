@@ -303,6 +303,10 @@ TeleMetrum v1.9 2013.08.27
 
 TeleMega v0.4 P 2013.08.28
 
+## sn 96 ##
+
+TeleMini v1.1 2013.08.25. From Phoenix panel.
+
 ## sn 100-207 ##
 
 First production run of 108 pieces of TeleDongle v0.2 by 

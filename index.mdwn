@@ -82,16 +82,24 @@ These are projects we're working on that may become products someday:
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
+* [EasyMini](EasyMini/)
+is a small dual-deploy rocketry altimeter using the MS5607 barometry
+pressure sensor.
+
 * [MegaDongle](MegaDongle/)
 is a higher-performance alternative to [TeleDongle](TeleDongle/).
-
-* [TeleMega](TeleMega/)
-is a high-end flight computer with 6 pyro channels, more and better sensors,
-GPS, and a high performance bidirectional RF telemetry link.
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
+
+* [TeleGPS](TeleGPS/)
+is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
+high dynamic performance and a combination digital/APRS transmitter.
+
+* [TeleMega](TeleMega/)
+is a high-end flight computer with 6 pyro channels, more and better sensors,
+GPS, and a high performance bidirectional RF telemetry link.
 
 * [TeleNano](TeleNano/)
 is a tiny rocketry altimeter with telemetry using only a barometric 
