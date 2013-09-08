@@ -345,9 +345,10 @@ Production run of 108 pieces of TeleMetrum v1.2b by
 ## sn 1050-1169 ##
 
 Production run of 120 pieces of TeleBT v1.0 by
-[Advanced Circuits](http://4pcb.com), received 2013.04.08.
+[Advanced Circuits](http://4pcb.com), received 2013.04.08.  All above 
+approximately sn 1050 were lost in the fire.
 
-## sn 1170-1289 ##
+## sn 1070-1189 ##
 
 Production run of 120 pieces of TeleBT v1.1 by
 [Advanced Circuits](http://4pcb.com), received 2013.08.22.
