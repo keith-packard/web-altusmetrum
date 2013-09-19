@@ -45,10 +45,8 @@ These are photos of the first v0.1 prototype:
 	* TI [CC1120](http://www.ti.com/product/cc1120) High Performance RF Transceiver for Narrowband Systems 
 	* 150mA 3.3V LDO regulator
 	* [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/ProductLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
-	* [u-blox](http://www.u-blox.com/) MAX-6Q GPS receiver
-		* on-board [Taoglas AP.17A.01](http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
-		  single-stage active patch antenna
-		* U.FL connector with 3.3V DC can be re-purposed for optional external amplified antennas
+	* [u-blox](http://www.u-blox.com/) MAX-7Q GPS receiver
+		* on-board TaoGlas passive patch antenna
 		* async serial interface
 	* Measurement Specialties [MS5607](http://www.meas-spec.com/product/t_product.aspx?id=8499) Micro Altimeter Module
 		* Wide range — 120kPa to 1kPa (approximately -1500m to 31000m)
@@ -90,9 +88,11 @@ Several changes to the hardware to improve performance and reliability
 resulted in a v0.2 prototype version, however feedback from conversations at
 NARCON caused us to sort of "skip" doing much with this version.
 
-Version 0.3 prototypes are built and working, with an improved pyro control 
-circuit and u-blox GPS receiver. 
+Version 0.3 prototypes were built and working, with an improved pyro control 
+circuit and u-blox 6-series GPS receiver.  The first test flight of v0.3 was 
+on 19 May 2013, and the results looked great!  Unfortunately, all prototypes
+were then lost in the fire that destroyed Bdale's house.
 
-The first test flight of v0.3 was on 19 May 2013, and the results look 
-great!  We plan more tests at [NSL 2013](http://nsl2013.org), and if all
-continues to go well, we hope to introduce this product in July, 2013.
+Version 0.4 prototypes are built and work great, using the brand-new u-blox
+MAX-7Q GPS receiver.  Flight testing is underway, and we hope to introduce
+TeleMega as a product by the end of October 2013.
