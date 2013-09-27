@@ -59,6 +59,7 @@ These are photos of the first v0.1 prototype:
 		* tri-axis angular rate sensor up to 2000 degrees/second
 		* tri-axis accelerometer with +- 16g range
 		* three on-chip ADCs for true simultaneous sampling of all axes
+	* Honeywell HMC5883L 3-axis magnetic (compass) sensor
 * Software Features
 	* Written mostly in C with some ARM assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to serial flash
