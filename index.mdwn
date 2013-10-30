@@ -62,6 +62,10 @@ interface for other microcontroller systems.
 [Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
 useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for Android devices!
 
+* [EasyMini](EasyMini/)
+is a small dual-deploy rocketry altimeter using the MS5607 barometry
+pressure sensor.
+
 * [LipoCharger](LipoCharger/) 
 is a standalone battery charger for the Lithium Polymer batteries used in
 Altus Metrum products.
@@ -81,10 +85,6 @@ These are projects we're working on that may become products someday:
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
-
-* [EasyMini](EasyMini/)
-is a small dual-deploy rocketry altimeter using the MS5607 barometry
-pressure sensor.
 
 * [MegaDongle](MegaDongle/)
 is a higher-performance alternative to [TeleDongle](TeleDongle/).

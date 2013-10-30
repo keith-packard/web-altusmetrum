@@ -95,5 +95,7 @@ on 19 May 2013, and the results looked great!  Unfortunately, all prototypes
 were then lost in the fire that destroyed Bdale's house.
 
 Version 0.4 prototypes are built and work great, using the brand-new u-blox
-MAX-7Q GPS receiver.  Flight testing is underway, and we hope to introduce
-TeleMega as a product by the end of October 2013.
+MAX-7Q GPS receiver.  
+
+Production orders for v1.0 were placed on 30 October 2013, we hope to have
+product ready to ship in early December!
