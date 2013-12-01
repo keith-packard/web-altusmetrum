@@ -120,7 +120,7 @@ built with entirely new circuitry.  Better sensors, better processor, better
 GPS, better radios, etc.  Prototypes were flown at Airfest and everything
 worked great, except that we're not satisfied with the performance of the 
 GPS antenna chosen.  We hope to resolve that issue in time to have TeleMetrum
-v2.0 boards for sale by the end of November 2013.
+v2.0 boards for sale by the end of 2013.
 
 ## [History of TeleMetrum](history) ##
 

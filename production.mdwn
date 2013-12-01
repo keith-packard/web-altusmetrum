@@ -357,3 +357,7 @@ approximately sn 1050 were lost in the fire.
 Production run of 120 pieces of TeleBT v1.1 by
 [Advanced Circuits](http://4pcb.com), received 2013.08.22.
 
+## sn 1190-1213 ##
+
+Production run of 24 pieces of EasyMini v1.0 by
+keithp. Build started 2013.10.05
