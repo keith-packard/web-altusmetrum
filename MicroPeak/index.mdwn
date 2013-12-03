@@ -10,7 +10,7 @@ rocketry altitude measurements.
 src="v1.0/micropeak-dime-640.jpg"></a>
 
 Production units are available from the
-[Garbee and Garbee](http://auric.gag.com/index.php?route=product/product&product_id=80) 
+[Garbee and Garbee](https://shop.gag.com) 
 web store and [Apogee Components](http://www.apogeerockets.com/Electronics_Payloads/Altimeters/MicroPeak_Altimeter)
 
 Data download is available using the [MicroPeak USB adapter](../MicroPeakUSB).

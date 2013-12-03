@@ -3,15 +3,14 @@
 This is a small, baro-only recording dual-deploy altimeter for 
 model rocketry
 
-EasyMini is currently in development, with a handful of prototype
-boards built and flown. Production units will eventually be available from the 
-[Garbee and Garbee](http://auric.gag.com) web 
-store.
+EasyMini is available from the [Garbee and Garbee](https://shop.gag.com) web 
+store, and should be available from our distributors soon.
 
 For the latest EasyMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of our current prototype version: 
+These are photos of a prototype version, we haven't take photos of the 
+production units yet:
 
 <a href="v0.2/easymini-top.jpg"> <img src="v0.2/easymini-top-thumb.jpg"></a>
 <a href="v0.2/easymini-parts.jpg"> <img src="v0.2/easymini-parts-thumb.jpg"></a>

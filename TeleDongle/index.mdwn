@@ -7,8 +7,7 @@ and SPI are also available as alternatives.  The RF filter components are
 by default set for use in the vicinity of 435 Mhz, but can be altered to
 support other frequency ranges.
 
-Production units are available now from the 
-[Garbee and Garbee](http://auric.gag.com) web store.
+Production units are not currently available, but we hope to make more soon.
 
 For the latest TeleDongle firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
@@ -78,11 +77,5 @@ source code and pre-built packages can be found on the
 
 ## Future Plans ##
 
-The current version 0.2 boards "just work", and are available for sale from the
-[Garbee and Garbee](http://auric.gag.com) web store in either board-only or 
-packaged form.
-
-Several people are working on firmware changes to use these boards as general
-purpose RF interfaces for [Arduino](http://arduino.cc) and other 
-microcontroller systems.
+We hope to return TeleDongle to production soon.
 

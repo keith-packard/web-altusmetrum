@@ -4,7 +4,7 @@ This is a GPS-based position tracker and logger.
 
 TeleGPS is currently in development, with a handful of prototype
 boards built. Production units will eventually be available from the 
-[Garbee and Garbee](http://auric.gag.com) web 
+[Garbee and Garbee](https://shop.gag.com) web 
 store.
 
 For the latest TeleGPS firmware and related ground station software, please

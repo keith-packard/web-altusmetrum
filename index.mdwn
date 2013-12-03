@@ -21,11 +21,8 @@ or compatible licenses.
 
 # Where to Buy #
 
-Virtually all Altus Metrum inventory was destroyed in the fire
-that devastated Black Forest, Colorado, in June of 2013.  More
-details are available on the [gag.com](http://gag.com) site.
-
-Some stock may still be available from these distributors:
+Altus Metrum products are available directly from 
+[Bdale's web store](https://shop.gag.com), and from these distributors:
 
   * United States
     * [Apogee Components](http://www.apogeerockets.com)
@@ -38,25 +35,13 @@ Some stock may still be available from these distributors:
   * New Zealand
     * [Aerospace Education](http://www.rockets.co.nz)
 
-Rest assured, we're working as hard as we can to return Altus Metrum, LLC, to operational
-status with a mixture of new and former products!
-
 # Products #
 
-These products are all available for purchase:
+These products are available for purchase:
 
-* [TeleMetrum](TeleMetrum/) 
-is our flagship product, a dual-deploy rocketry altimeter with
-GPS and bidirectional RF telemetry link.
-
-* [TeleMini](TeleMini/)
-is a smaller dual-deploy rocketry altimeter with telemetry using only a 
-barometric pressure sensor
-
-* [TeleDongle](TeleDongle/) 
-is a simple RF interface for use in ground stations interacting with rockets
-using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
-interface for other microcontroller systems.
+* [TeleMega](TeleMega/)
+is a high-end flight computer with 6 pyro channels, more and better sensors,
+GPS, and a high performance bidirectional RF telemetry link.
 
 * [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
 [Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
@@ -78,6 +63,21 @@ ideal altimeter for model rocket contests.
 provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
+The following products will be available again soon:
+
+* [TeleMetrum](TeleMetrum/) 
+is our flagship product, a dual-deploy rocketry altimeter with
+GPS and bidirectional RF telemetry link.
+
+* [TeleMini](TeleMini/)
+is a smaller dual-deploy rocketry altimeter with telemetry using only a 
+barometric pressure sensor
+
+* [TeleDongle](TeleDongle/) 
+is a simple RF interface for use in ground stations interacting with rockets
+using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
+interface for other microcontroller systems.
+
 # Projects #
 
 These are projects we're working on that may become products someday:
@@ -87,7 +87,7 @@ is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
 * [MegaDongle](MegaDongle/)
-is a higher-performance alternative to [TeleDongle](TeleDongle/).
+is a supposedly-higher-performance alternative to [TeleDongle](TeleDongle/).
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
@@ -96,10 +96,6 @@ prototype was built, but never flown.  This project is now indefinitely on hold.
 * [TeleGPS](TeleGPS/)
 is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
 high dynamic performance and a combination digital/APRS transmitter.
-
-* [TeleMega](TeleMega/)
-is a high-end flight computer with 6 pyro channels, more and better sensors,
-GPS, and a high performance bidirectional RF telemetry link.
 
 * [TeleNano](TeleNano/)
 is a tiny rocketry altimeter with telemetry using only a barometric 

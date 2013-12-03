@@ -10,7 +10,7 @@ standalone charger is essential for use with TeleMini since it does not
 have on-board charging capability.
 
 Production units are available from the 
-[Garbee and Garbee](http://auric.gag.com) web store.
+[Garbee and Garbee](https://shop.gag.com) web store.
 
 ## Features ##
 
