@@ -81,7 +81,7 @@ The hardware design current gEDA files are available from
 [hw/telemega](http://git.gag.com/?p=hw/telemega;a=summary).  
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 1.2 in more easily readable form.
+of the files for Production PCB version 1.0 in more easily readable form:
 
 * [schematic](v1.0/telemega-sch.pdf)
 * [pcb artwork](v1.0/telemega-pcb.pdf)
