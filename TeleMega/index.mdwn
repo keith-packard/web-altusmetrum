@@ -10,10 +10,10 @@ from vertical.
 For the latest TeleMega firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of the first v0.1 prototype:
+These are photos of the current production version 1.0:
 
-<a href="v0.1/megametrum-v0.1-top.jpg"> <img src="v0.1/megametrum-v0.1-top-thumb.jpg"></a>
-<a href="v0.1/megametrum-v0.1-bottom.jpg"> <img src="v0.1/megametrum-v0.1-bottom-thumb.jpg"></a>
+<a href="v1.0/telemega-v1.0-top.jpg"> <img src="v1.0/telemega-v1.0-top-thumb.jpg"></a>
+<a href="v1.0/telemega-v1.0-bottom.jpg"> <img src="v1.0/telemega-v1.0-bottom-thumb.jpg"></a>
 
 ## Features ##
 
@@ -89,20 +89,4 @@ of the files for Production PCB version 1.0 in more easily readable form:
 
 ## Future Plans ##
 
-TeleMega v0.1 prototypes worked and were flown on a number of test 
-flights.  This version was shown publicly at NARCON 2013.
-
-Several changes to the hardware to improve performance and reliability 
-resulted in a v0.2 prototype version, however feedback from conversations at
-NARCON caused us to sort of "skip" doing much with this version.
-
-Version 0.3 prototypes were built and working, with an improved pyro control 
-circuit and u-blox 6-series GPS receiver.  The first test flight of v0.3 was 
-on 19 May 2013, and the results looked great!  Unfortunately, all prototypes
-were then lost in the fire that destroyed Bdale's house.
-
-Version 0.4 prototypes are built and work great, using the brand-new u-blox
-MAX-7Q GPS receiver.  
-
-Production orders for v1.0 were placed on 30 October 2013, we hope to have
-product ready to ship in early December!
+Version 1.0 is now available for purchase.
