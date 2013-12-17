@@ -7,7 +7,8 @@ EasyMini is available from the [Garbee and Garbee](https://shop.gag.com) web
 store, and should be available from our distributors soon.
 
 For the latest EasyMini firmware and related ground station software, please
-visit the [AltOS](../AltOS) page on this site.
+visit the [AltOS](../AltOS) page on this site.  EasyMini requires AltOS
+version 1.3 or later.
 
 These are photos of a prototype version, we haven't take photos of the 
 production units yet:

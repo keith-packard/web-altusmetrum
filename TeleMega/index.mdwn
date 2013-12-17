@@ -8,7 +8,8 @@ can be based on time and various flight events and status, including angle
 from vertical.
 
 For the latest TeleMega firmware and related ground station software, please
-visit the [AltOS](../AltOS) page on this site.
+visit the [AltOS](../AltOS) page on this site.  TeleMega requires AltOS
+version 1.3 or later.
 
 These are photos of the current production version 1.0:
 
