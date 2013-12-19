@@ -1,0 +1,42 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
+    Version 1.3 is a major release. It adds support for TeleMega,
+    TeleMetrum v2.0, TeleMini v2.0 and EasyMini.
+  </p><p>
+    AltOS Firmware Changes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add STM32L processor support. This includes enhancements to
+	  the scheduler to support products with many threads.
+	</p></li><li class="listitem"><p>
+	  Add NXP LPC11U14 processor support.
+	</p></li><li class="listitem"><p>
+	  Support additional pyro channels. These are configurable
+	  through the UI to handle air starts, staging, additional
+	  recovery events and external devices such as cameras.
+	</p></li><li class="listitem"><p>
+	  Add 3-axis gyro support for orientation tracking. This
+	  integrates the gyros to compute the angle from vertical during
+	  flight, allowing the additional pyro events to be controlled
+	  by this value.
+	</p></li><li class="listitem"><p>
+	  Many more device drivers, including u-Blox Max 7Q GPS,
+	  Freescale MMA6555 digital single-axis accelerometer,
+	  Invensense MPU6000 3-axis accelerometer + 3 axis gyro,
+	  Honeywell HMC5883 3-axis magnetic sensor and the TI CC1120 and
+	  CC115L digital FM transceivers
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI changes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Support TeleMega, TeleMetrum v2.0, TeleMini v2.0 and EasyMini telemetry and log formats.
+	</p></li><li class="listitem"><p>
+	  Use preferred units for main deployment height configuration,
+	  instead of always doing configuration in meters.
+	</p></li></ul></div><p>
+  </p><p>
+    MicroPeak UI changes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add 'Download' button to menu bar.
+	</p></li><li class="listitem"><p>
+	  Save the last log directory and offer that as the default for new downloads
+	</p></li></ul></div><p>
+  </p></div></body></html>

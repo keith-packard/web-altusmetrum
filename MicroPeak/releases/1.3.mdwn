@@ -1,0 +1,8 @@
+[[!inline pages="./1.3/release-notes-1.3.html" rss="no" raw="yes" ]]
+
+- Available Files:
+	- [Windows](/MicroPeak/releases/1.3/MicroPeak-Windows-1-3.exe)
+	- [Linux](/MicroPeak/releases/1.3/MicroPeak-Linux-1.3.tar.bz2)
+	- [Mac OS X](/MicroPeak/releases/1.3/MicroPeak-Mac-1.3.dmg)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.3;sf=tgz)
+
