@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
     Version 1.1.1 is a bug-fix release. It fixes a couple of bugs in
     AltosUI and one firmware bug that affects TeleMetrum version 1.0
     boards. Thanks to Bob Brown for help diagnosing the Google Earth
@@ -6,7 +6,7 @@
     Distance value in the Descent tab.
   </p><p>
     AltOS Firmware Changes
-    </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 	TeleMetrum v1.0 boards use the AT45DB081D flash memory part to
 	store flight data, which is different from later TeleMetrum
 	boards. The AltOS v1.1 driver for this chip couldn't erase
@@ -14,20 +14,20 @@
 	configuration values. This bug doesn't affect newer TeleMetrum
 	boards, and it doesn't affect the safety of rockets flying
 	version 1.1 firmware.
-      </li></ul></div><p>
+      </p></li></ul></div><p>
   </p><p>
     AltosUI Changes
-    </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
 	Creating a Google Earth file (KML) from on-board flight data
 	(EEPROM) would generate an empty file. The code responsible
 	for reading the EEPROM file wasn't ever setting the GPS valid
 	bits, and so the KML export code thought there was no GPS data
 	in the file.
-      </li><li class="listitem">
+      </p></li><li class="listitem"><p>
 	The &#8220;Landed&#8221; tab was displaying all values in metric units,
 	even when AltosUI was configured to display imperial
 	units. Somehow I just missed this tab when doing the units stuff.
-      </li><li class="listitem">
+      </p></li><li class="listitem"><p>
 	The &#8220;Descent&#8221; tab displays the range to the rocket, which is a
 	combination of the over-the-ground distance to the rockets
 	current latitude/longitude and the height of the rocket. As
@@ -36,11 +36,11 @@
 	eventually land. A new &#8220;Ground Distance&#8221; field has been added
 	which displays the distance to a spot right underneath the
 	rocket.
-      </li><li class="listitem">
+      </p></li><li class="listitem"><p>
 	Sensor data wasn't being displayed for TeleMini flight
 	computers in Monitor Idle mode, including things like battery
 	voltage. The code that picked which kinds of data to fetch
 	from the flight computer was missing a check for TeleMini when
 	deciding whether to fetch the analog sensor data.
-      </li></ul></div><p>
+      </p></li></ul></div><p>
   </p></div></body></html>

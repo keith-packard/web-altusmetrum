@@ -1,17 +1,41 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>AltOS</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" title="AltOS"><div class="titlepage"><div><div><h1 class="title"><a name="idm14845520"></a>AltOS</h1></div><div><h2 class="subtitle">Altos Metrum Operating System</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2010 Keith Packard</p></div><div><div class="legalnotice" title="Legal Notice"><a name="idp109448"></a><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>AltOS</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book"><div class="titlepage"><div><div><h1 class="title"><a name="idm6244192"></a>AltOS</h1></div><div><h2 class="subtitle">Altos Metrum Operating System</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2010 Keith Packard</p></div><div><div class="legalnotice"><a name="idp48059856"></a><p>
         This document is released under the terms of the
         <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
           Creative Commons ShareAlike 3.0
         </a>
         license.
-      </p></div></div><div><div class="revhistory"><table border="1" width="100%" summary="Revision history"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 0.1</td><td align="left">22 November 2010</td></tr><tr><td align="left" colspan="2">Initial content</td></tr></table></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#idp111432">1. Overview</a></span></dt><dt><span class="chapter"><a href="#idp1427552">2. Programming the 8051 with SDCC</a></span></dt><dd><dl><dt><span class="section"><a href="#idp1932896">1. 8051 memory spaces</a></span></dt><dd><dl><dt><span class="section"><a href="#idp1539448">1.1. __data</a></span></dt><dt><span class="section"><a href="#idp3243048">1.2. __idata</a></span></dt><dt><span class="section"><a href="#idp905104">1.3. __xdata</a></span></dt><dt><span class="section"><a href="#idp2815944">1.4. __pdata</a></span></dt><dt><span class="section"><a href="#idp2085816">1.5. __code</a></span></dt><dt><span class="section"><a href="#idp1611720">1.6. __bit</a></span></dt><dt><span class="section"><a href="#idp2143464">1.7. __sfr, __sfr16, __sfr32, __sbit</a></span></dt></dl></dd><dt><span class="section"><a href="#idp2034368">2. Function calls on the 8051</a></span></dt><dd><dl><dt><span class="section"><a href="#idp2827648">2.1. __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp3350176">2.2. Non __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp1644208">2.3. __interrupt functions</a></span></dt><dt><span class="section"><a href="#idp1931128">2.4. __critical functions and statements</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp2235720">3. Task functions</a></span></dt><dd><dl><dt><span class="section"><a href="#idp2145232">1. ao_add_task</a></span></dt><dt><span class="section"><a href="#idp49456">2. ao_exit</a></span></dt><dt><span class="section"><a href="#idp50328">3. ao_sleep</a></span></dt><dt><span class="section"><a href="#idp52064">4. ao_wakeup</a></span></dt><dt><span class="section"><a href="#idp5464">5. ao_alarm</a></span></dt><dt><span class="section"><a href="#idp7304">6. ao_start_scheduler</a></span></dt><dt><span class="section"><a href="#idp8360">7. ao_clock_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp9632">4. Timer Functions</a></span></dt><dd><dl><dt><span class="section"><a href="#idp10624">1. ao_time</a></span></dt><dt><span class="section"><a href="#idp11688">2. ao_delay</a></span></dt><dt><span class="section"><a href="#idp12688">3. ao_timer_set_adc_interval</a></span></dt><dt><span class="section"><a href="#idp748296">4. ao_timer_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp749488">5. AltOS Mutexes</a></span></dt><dd><dl><dt><span class="section"><a href="#idp750840">1. ao_mutex_get</a></span></dt><dt><span class="section"><a href="#idp751936">2. ao_mutex_put</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp753080">6. CC1111 DMA engine</a></span></dt><dd><dl><dt><span class="section"><a href="#idp754920">1. ao_dma_alloc</a></span></dt><dt><span class="section"><a href="#idp756296">2. ao_dma_set_transfer</a></span></dt><dt><span class="section"><a href="#idp757744">3. ao_dma_start</a></span></dt><dt><span class="section"><a href="#idp758808">4. ao_dma_trigger</a></span></dt><dt><span class="section"><a href="#idp759864">5. ao_dma_abort</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp761032">7. SDCC Stdio interface</a></span></dt><dd><dl><dt><span class="section"><a href="#idp761992">1. putchar</a></span></dt><dt><span class="section"><a href="#idp763040">2. getchar</a></span></dt><dt><span class="section"><a href="#idp54808">3. flush</a></span></dt><dt><span class="section"><a href="#idp55872">4. ao_add_stdio</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp58336">8. Command line interface</a></span></dt><dd><dl><dt><span class="section"><a href="#idp59184">1. ao_cmd_register</a></span></dt><dt><span class="section"><a href="#idp64112">2. ao_cmd_lex</a></span></dt><dt><span class="section"><a href="#idp65264">3. ao_cmd_put16</a></span></dt><dt><span class="section"><a href="#idp66304">4. ao_cmd_put8</a></span></dt><dt><span class="section"><a href="#idp67336">5. ao_cmd_white</a></span></dt><dt><span class="section"><a href="#idp68488">6. ao_cmd_hex</a></span></dt><dt><span class="section"><a href="#idp69616">7. ao_cmd_decimal</a></span></dt><dt><span class="section"><a href="#idp70800">8. ao_match_word</a></span></dt><dt><span class="section"><a href="#idp72032">9. ao_cmd_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp73256">9. CC1111 USB target device</a></span></dt><dd><dl><dt><span class="section"><a href="#idp74736">1. ao_usb_flush</a></span></dt><dt><span class="section"><a href="#idp75960">2. ao_usb_putchar</a></span></dt><dt><span class="section"><a href="#idp77216">3. ao_usb_pollchar</a></span></dt><dt><span class="section"><a href="#idp3450240">4. ao_usb_getchar</a></span></dt><dt><span class="section"><a href="#idp3451248">5. ao_usb_disable</a></span></dt><dt><span class="section"><a href="#idp3452920">6. ao_usb_enable</a></span></dt><dt><span class="section"><a href="#idp3454056">7. ao_usb_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp3455248">10. CC1111 Serial peripheral</a></span></dt><dd><dl><dt><span class="section"><a href="#idp3456504">1. ao_serial_getchar</a></span></dt><dt><span class="section"><a href="#idp3457568">2. ao_serial_putchar</a></span></dt><dt><span class="section"><a href="#idp3458624">3. ao_serial_drain</a></span></dt><dt><span class="section"><a href="#idp3459664">4. ao_serial_set_speed</a></span></dt><dt><span class="section"><a href="#idp3460792">5. ao_serial_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp3461952">11. CC1111 Radio peripheral</a></span></dt><dd><dl><dt><span class="section"><a href="#idp3466304">1. ao_radio_set_telemetry</a></span></dt><dt><span class="section"><a href="#idp3467552">2. ao_radio_set_packet</a></span></dt><dt><span class="section"><a href="#idp3468800">3. ao_radio_set_rdf</a></span></dt><dt><span class="section"><a href="#idp3470080">4. ao_radio_idle</a></span></dt><dt><span class="section"><a href="#idp3471168">5. ao_radio_get</a></span></dt><dt><span class="section"><a href="#idp3472232">6. ao_radio_put</a></span></dt><dt><span class="section"><a href="#idp3473200">7. ao_radio_abort</a></span></dt><dt><span class="section"><a href="#idp3474720">8. ao_radio_send</a></span></dt><dt><span class="section"><a href="#idp3475976">9. ao_radio_recv</a></span></dt><dt><span class="section"><a href="#idp3477624">10. ao_radio_rdf</a></span></dt><dt><span class="section"><a href="#idp3479128">11. ao_packet_putchar</a></span></dt><dt><span class="section"><a href="#idp3480400">12. ao_packet_pollchar</a></span></dt><dt><span class="section"><a href="#idp3481520">13. ao_packet_slave_start</a></span></dt><dt><span class="section"><a href="#idp3482560">14. ao_packet_slave_stop</a></span></dt><dt><span class="section"><a href="#idp3483568">15. ao_packet_slave_init</a></span></dt><dt><span class="section"><a href="#idp3484688">16. ao_packet_master_init</a></span></dt></dl></dd></dl></div><div class="chapter" title="Chapter 1. Overview"><div class="titlepage"><div><div><h2 class="title"><a name="idp111432"></a>Chapter 1. Overview</h2></div></div></div><p>
-      AltOS is a operating system built for the 8051-compatible
-      processor found in the TI cc1111 microcontroller. It's designed
-      to be small and easy to program with. The main features are:
-      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Multi-tasking. While the 8051 doesn't provide separate
-	  address spaces, it's often easier to write code that operates
-	  in separate threads instead of tying everything into one giant
-	  event loop.
+      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 1.1</td><td align="left">05 November 2012</td></tr><tr><td align="left" colspan="2">Portable version</td></tr><tr><td align="left">Revision 0.1</td><td align="left">22 November 2010</td></tr><tr><td align="left" colspan="2">Initial content</td></tr></table></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="chapter"><a href="#idp47884288">1. Overview</a></span></dt><dt><span class="chapter"><a href="#idp48916512">2. AltOS Porting Layer</a></span></dt><dd><dl><dt><span class="section"><a href="#idp48918016">1. Low-level CPU operations</a></span></dt><dd><dl><dt><span class="section"><a href="#idp48919248">1.1. ao_arch_block_interrupts/ao_arch_release_interrupts</a></span></dt><dt><span class="section"><a href="#idp48921296">1.2. ao_arch_save_regs, ao_arch_save_stack,
+	ao_arch_restore_stack</a></span></dt><dt><span class="section"><a href="#idp49830960">1.3. ao_arch_wait_interupt</a></span></dt></dl></dd><dt><span class="section"><a href="#idp49833504">2. GPIO operations</a></span></dt><dd><dl><dt><span class="section"><a href="#idp49834672">2.1. GPIO setup</a></span></dt><dt><span class="section"><a href="#idp49843888">2.2. Reading and writing GPIO pins</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp47890928">3. Programming the 8051 with SDCC</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47893024">1. 8051 memory spaces</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47894960">1.1. __data</a></span></dt><dt><span class="section"><a href="#idp47897136">1.2. __idata</a></span></dt><dt><span class="section"><a href="#idp47898576">1.3. __xdata</a></span></dt><dt><span class="section"><a href="#idp47899984">1.4. __pdata</a></span></dt><dt><span class="section"><a href="#idp47901488">1.5. __code</a></span></dt><dt><span class="section"><a href="#idp47902928">1.6. __bit</a></span></dt><dt><span class="section"><a href="#idp47904432">1.7. __sfr, __sfr16, __sfr32, __sbit</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47905968">2. Function calls on the 8051</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47907440">2.1. __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp47909632">2.2. Non __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp47911776">2.3. __interrupt functions</a></span></dt><dt><span class="section"><a href="#idp47913344">2.4. __critical functions and statements</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp47915408">4. Task functions</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47916464">1. ao_add_task</a></span></dt><dt><span class="section"><a href="#idp47918720">2. ao_exit</a></span></dt><dt><span class="section"><a href="#idp53787440">3. ao_sleep</a></span></dt><dt><span class="section"><a href="#idp53791040">4. ao_wakeup</a></span></dt><dt><span class="section"><a href="#idp53794032">5. ao_alarm</a></span></dt><dt><span class="section"><a href="#idp53797312">6. ao_start_scheduler</a></span></dt><dt><span class="section"><a href="#idp53799280">7. ao_clock_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53801248">5. Timer Functions</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53802752">1. ao_time</a></span></dt><dt><span class="section"><a href="#idp53804736">2. ao_delay</a></span></dt><dt><span class="section"><a href="#idp53806576">3. ao_timer_set_adc_interval</a></span></dt><dt><span class="section"><a href="#idp53808624">4. ao_timer_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53810816">6. AltOS Mutexes</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53812688">1. ao_mutex_get</a></span></dt><dt><span class="section"><a href="#idp53814528">2. ao_mutex_put</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53816496">7. DMA engine</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53819936">1. CC1111 DMA Engine</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53820608">1.1. ao_dma_alloc</a></span></dt><dt><span class="section"><a href="#idp53822784">1.2. ao_dma_set_transfer</a></span></dt><dt><span class="section"><a href="#idp53825056">1.3. ao_dma_start</a></span></dt><dt><span class="section"><a href="#idp53827072">1.4. ao_dma_trigger</a></span></dt><dt><span class="section"><a href="#idp53828912">1.5. ao_dma_abort</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53831056">2. STM32L DMA Engine</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53831728">2.1. ao_dma_alloc</a></span></dt><dt><span class="section"><a href="#idp53833568">2.2. ao_dma_set_transfer</a></span></dt><dt><span class="section"><a href="#idp53835824">2.3. ao_dma_set_isr</a></span></dt><dt><span class="section"><a href="#idp53837904">2.4. ao_dma_start</a></span></dt><dt><span class="section"><a href="#idp53840208">2.5. ao_dma_done_transfer</a></span></dt><dt><span class="section"><a href="#idp53842192">2.6. ao_dma_abort</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp53844464">8. Stdio interface</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53845968">1. putchar</a></span></dt><dt><span class="section"><a href="#idp53847856">2. getchar</a></span></dt><dt><span class="section"><a href="#idp53849952">3. flush</a></span></dt><dt><span class="section"><a href="#idp53851984">4. ao_add_stdio</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53856016">9. Command line interface</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53857424">1. ao_cmd_register</a></span></dt><dt><span class="section"><a href="#idp53866064">2. ao_cmd_lex</a></span></dt><dt><span class="section"><a href="#idp53868144">3. ao_cmd_put16</a></span></dt><dt><span class="section"><a href="#idp53869984">4. ao_cmd_put8</a></span></dt><dt><span class="section"><a href="#idp53871872">5. ao_cmd_white</a></span></dt><dt><span class="section"><a href="#idp53873936">6. ao_cmd_hex</a></span></dt><dt><span class="section"><a href="#idp53875984">7. ao_cmd_decimal</a></span></dt><dt><span class="section"><a href="#idp53878080">8. ao_match_word</a></span></dt><dt><span class="section"><a href="#idp53880160">9. ao_cmd_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53882384">10. USB target device</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53884608">1. ao_usb_flush</a></span></dt><dt><span class="section"><a href="#idp53886752">2. ao_usb_putchar</a></span></dt><dt><span class="section"><a href="#idp53888928">3. ao_usb_pollchar</a></span></dt><dt><span class="section"><a href="#idp53891072">4. ao_usb_getchar</a></span></dt><dt><span class="section"><a href="#idp53893088">5. ao_usb_disable</a></span></dt><dt><span class="section"><a href="#idp53895920">6. ao_usb_enable</a></span></dt><dt><span class="section"><a href="#idp53898032">7. ao_usb_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53900256">11. Serial peripherals</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53902272">1. ao_serial_getchar</a></span></dt><dt><span class="section"><a href="#idp53904304">2. ao_serial_putchar</a></span></dt><dt><span class="section"><a href="#idp53906272">3. ao_serial_drain</a></span></dt><dt><span class="section"><a href="#idp53908272">4. ao_serial_set_speed</a></span></dt><dt><span class="section"><a href="#idp53910304">5. ao_serial_init</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53912496">12. CC1111 Radio peripheral</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53913168">1. Radio Introduction</a></span></dt><dt><span class="section"><a href="#idp53920288">2. ao_radio_set_telemetry</a></span></dt><dt><span class="section"><a href="#idp53922448">3. ao_radio_set_packet</a></span></dt><dt><span class="section"><a href="#idp53924608">4. ao_radio_set_rdf</a></span></dt><dt><span class="section"><a href="#idp53926848">5. ao_radio_idle</a></span></dt><dt><span class="section"><a href="#idp53928896">6. ao_radio_get</a></span></dt><dt><span class="section"><a href="#idp53930928">7. ao_radio_put</a></span></dt><dt><span class="section"><a href="#idp53932864">8. ao_radio_abort</a></span></dt><dt><span class="section"><a href="#idp53934928">9. Radio Telemetry</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53936224">9.1. ao_radio_send</a></span></dt><dt><span class="section"><a href="#idp53938448">9.2. ao_radio_recv</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53940912">10. Radio Direction Finding</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53942064">10.1. ao_radio_rdf</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53944208">11. Radio Packet Mode</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53945520">11.1. ao_packet_putchar</a></span></dt><dt><span class="section"><a href="#idp53947696">11.2. ao_packet_pollchar</a></span></dt><dt><span class="section"><a href="#idp53949776">11.3. ao_packet_slave_start</a></span></dt><dt><span class="section"><a href="#idp53951728">11.4. ao_packet_slave_stop</a></span></dt><dt><span class="section"><a href="#idp53953648">11.5. ao_packet_slave_init</a></span></dt><dt><span class="section"><a href="#idp53955680">11.6. ao_packet_master_init</a></span></dt></dl></dd></dl></dd></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp47884288"></a>Chapter 1. Overview</h1></div></div></div><p>
+      AltOS is a operating system built for a variety of
+      microcontrollers used in Altus Metrum devices. It has a simple
+      porting layer for each CPU while providing a convenient
+      operating enviroment for the developer. AltOS currently
+      supports three different CPUs:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	    STM32L series from ST Microelectronics. This ARM Cortex-M3
+	    based microcontroller offers low power consumption and a
+	    wide variety of built-in peripherals. Altus Metrum uses
+	    this in the TeleMega, MegaDongle and TeleLCO projects.
+	  </p></li><li class="listitem"><p>
+	    CC1111 from Texas Instruments. This device includes a
+	    fabulous 10mW digital RF transceiver along with an
+	    8051-compatible processor core and a range of
+	    peripherals. This is used in the TeleMetrum, TeleMini,
+	    TeleDongle and TeleFire projects which share the need for
+	    a small microcontroller and an RF interface.
+	  </p></li><li class="listitem"><p>
+	    ATmega32U4 from Atmel. This 8-bit AVR microcontroller is
+	    one of the many used to create Arduino boards. The 32U4
+	    includes a USB interface, making it easy to connect to
+	    other computers. Altus Metrum used this in prototypes of
+	    the TeleScience and TelePyro boards; those have been
+	    switched to the STM32L which is more capable and cheaper.
+	  </p></li></ul></div><p>
+      Among the features of AltOS are:
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Multi-tasking. While microcontrollers often don't
+	  provide separate address spaces, it's often easier to write
+	  code that operates in separate threads instead of tying
+	  everything into one giant event loop.
 	  </p></li><li class="listitem"><p>Non-preemptive. This increases latency for thread
 	  switching but reduces the number of places where context
 	  switching can occur. It also simplifies the operating system
@@ -61,7 +85,109 @@
       </pre><p>
       As you can see, a long sequence of subsystems are initialized
       and then the scheduler is started.
-    </p></div><div class="chapter" title="Chapter 2. Programming the 8051 with SDCC"><div class="titlepage"><div><div><h2 class="title"><a name="idp1427552"></a>Chapter 2. Programming the 8051 with SDCC</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp1932896">1. 8051 memory spaces</a></span></dt><dd><dl><dt><span class="section"><a href="#idp1539448">1.1. __data</a></span></dt><dt><span class="section"><a href="#idp3243048">1.2. __idata</a></span></dt><dt><span class="section"><a href="#idp905104">1.3. __xdata</a></span></dt><dt><span class="section"><a href="#idp2815944">1.4. __pdata</a></span></dt><dt><span class="section"><a href="#idp2085816">1.5. __code</a></span></dt><dt><span class="section"><a href="#idp1611720">1.6. __bit</a></span></dt><dt><span class="section"><a href="#idp2143464">1.7. __sfr, __sfr16, __sfr32, __sbit</a></span></dt></dl></dd><dt><span class="section"><a href="#idp2034368">2. Function calls on the 8051</a></span></dt><dd><dl><dt><span class="section"><a href="#idp2827648">2.1. __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp3350176">2.2. Non __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp1644208">2.3. __interrupt functions</a></span></dt><dt><span class="section"><a href="#idp1931128">2.4. __critical functions and statements</a></span></dt></dl></dd></dl></div><p>
+    </p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp48916512"></a>Chapter 2. AltOS Porting Layer</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp48918016">1. Low-level CPU operations</a></span></dt><dd><dl><dt><span class="section"><a href="#idp48919248">1.1. ao_arch_block_interrupts/ao_arch_release_interrupts</a></span></dt><dt><span class="section"><a href="#idp48921296">1.2. ao_arch_save_regs, ao_arch_save_stack,
+	ao_arch_restore_stack</a></span></dt><dt><span class="section"><a href="#idp49830960">1.3. ao_arch_wait_interupt</a></span></dt></dl></dd><dt><span class="section"><a href="#idp49833504">2. GPIO operations</a></span></dt><dd><dl><dt><span class="section"><a href="#idp49834672">2.1. GPIO setup</a></span></dt><dt><span class="section"><a href="#idp49843888">2.2. Reading and writing GPIO pins</a></span></dt></dl></dd></dl></div><p>
+      AltOS provides a CPU-independent interface to various common
+      microcontroller subsystems, including GPIO pins, interrupts,
+      SPI, I2C, USB and asynchronous serial interfaces. By making
+      these CPU-independent, device drivers, generic OS and
+      application code can all be written that work on any supported
+      CPU. Many of the architecture abstraction interfaces are
+      prefixed with ao_arch.
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp48918016"></a>1. Low-level CPU operations</h2></div></div></div><p>
+	These primitive operations provide the abstraction needed to
+	run the multi-tasking framework while providing reliable
+	interrupt delivery.
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp48919248"></a>1.1. ao_arch_block_interrupts/ao_arch_release_interrupts</h3></div></div></div><pre class="programlisting">
+	  static inline void
+	  ao_arch_block_interrupts(void);
+	  
+	  static inline void
+	  ao_arch_release_interrupts(void);
+	</pre><p>
+	  These disable/enable interrupt delivery, they may not
+	  discard any interrupts. Use these for sections of code that
+	  must be atomic with respect to any code run from an
+	  interrupt handler.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp48921296"></a>1.2. ao_arch_save_regs, ao_arch_save_stack,
+	ao_arch_restore_stack</h3></div></div></div><pre class="programlisting">
+	  static inline void
+	  ao_arch_save_regs(void);
+
+	  static inline void
+	  ao_arch_save_stack(void);
+
+	  static inline void
+	  ao_arch_restore_stack(void);
+	</pre><p>
+	  These provide all of the support needed to switch between
+	  tasks.. ao_arch_save_regs must save all CPU registers to the
+	  current stack, including the interrupt enable
+	  state. ao_arch_save_stack records the current stack location
+	  in the current ao_task structure. ao_arch_restore_stack
+	  switches back to the saved stack, restores all registers and
+	  branches to the saved return address.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp49830960"></a>1.3. ao_arch_wait_interupt</h3></div></div></div><pre class="programlisting">
+	  #define ao_arch_wait_interrupt()
+	</pre><p>
+	  This stops the CPU, leaving clocks and interrupts
+	  enabled. When an interrupt is received, this must wake up
+	  and handle the interrupt. ao_arch_wait_interrupt is entered
+	  with interrupts disabled to ensure that there is no gap
+	  between determining that no task wants to run and idling the
+	  CPU. It must sleep the CPU, process interrupts and then
+	  disable interrupts again. If the CPU doesn't have any
+	  reduced power mode, this must at the least allow pending
+	  interrupts to be processed.
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp49833504"></a>2. GPIO operations</h2></div></div></div><p>
+	These functions provide an abstract interface to configure and
+	manipulate GPIO pins.
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp49834672"></a>2.1. GPIO setup</h3></div></div></div><p>
+	  These macros may be invoked at system initialization time to
+	  configure pins as needed for system operation. One tricky
+	  aspect is that some chips provide direct access to specific
+	  GPIO pins while others only provide access to a whole
+	  register full of pins. To support this, the GPIO macros
+	  provide both port+bit and pin arguments. Simply define the
+	  arguments needed for the target platform and leave the
+	  others undefined.
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp48923152"></a>2.1.1. ao_enable_output</h4></div></div></div><pre class="programlisting">
+	    #define ao_enable_output(port, bit, pin, value)
+	  </pre><p>
+	    Set the specified port+bit (also called 'pin') for output,
+	    initializing to the specified value. The macro must avoid
+	    driving the pin with the opposite value if at all
+	    possible.
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp49838448"></a>2.1.2. ao_enable_input</h4></div></div></div><pre class="programlisting">
+	    #define ao_enable_input(port, bit, mode)
+	  </pre><p>
+	    Sets the specified port/bit to be an input pin. 'mode' is
+	    a combination of one or more of the following. Note that
+	    some platforms may not support the desired mode. In that
+	    case, the value will not be defined so that the program
+	    will fail to compile.
+	    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+		AO_EXTI_MODE_PULL_UP. Apply a pull-up to the pin; a
+		disconnected pin will read as 1.
+</p></li><li class="listitem"><p>
+		AO_EXTI_MODE_PULL_DOWN. Apply a pull-down to the pin;
+		a disconnected pin will read as 0.
+</p></li><li class="listitem"><p>
+		0. Don't apply either a pull-up or pull-down. A
+		disconnected pin will read an undetermined value.
+</p></li></ul></div><p>
+	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp49843888"></a>2.2. Reading and writing GPIO pins</h3></div></div></div><p>
+	  These macros read and write individual GPIO pins.
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp49844960"></a>2.2.1. ao_gpio_set</h4></div></div></div><pre class="programlisting">
+	    #define ao_gpio_set(port, bit, pin, value)
+	  </pre><p>
+	    Sets the specified port/bit or pin to the indicated value
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp47888592"></a>2.2.2. ao_gpio_get</h4></div></div></div><pre class="programlisting">
+	    #define ao_gpio_get(port, bit, pin)
+	  </pre><p>
+	    Returns either 1 or 0 depending on whether the input to
+	    the pin is high or low.
+	  </p></div></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp47890928"></a>Chapter 3. Programming the 8051 with SDCC</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp47893024">1. 8051 memory spaces</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47894960">1.1. __data</a></span></dt><dt><span class="section"><a href="#idp47897136">1.2. __idata</a></span></dt><dt><span class="section"><a href="#idp47898576">1.3. __xdata</a></span></dt><dt><span class="section"><a href="#idp47899984">1.4. __pdata</a></span></dt><dt><span class="section"><a href="#idp47901488">1.5. __code</a></span></dt><dt><span class="section"><a href="#idp47902928">1.6. __bit</a></span></dt><dt><span class="section"><a href="#idp47904432">1.7. __sfr, __sfr16, __sfr32, __sbit</a></span></dt></dl></dd><dt><span class="section"><a href="#idp47905968">2. Function calls on the 8051</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47907440">2.1. __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp47909632">2.2. Non __reentrant functions</a></span></dt><dt><span class="section"><a href="#idp47911776">2.3. __interrupt functions</a></span></dt><dt><span class="section"><a href="#idp47913344">2.4. __critical functions and statements</a></span></dt></dl></dd></dl></div><p>
       The 8051 is a primitive 8-bit processor, designed in the mists
       of time in as few transistors as possible. The architecture is
       highly irregular and includes several separate memory
@@ -69,7 +195,10 @@
       stack itself is of limited size. While SDCC papers over the
       instruction set, it is not completely able to hide the memory
       architecture from the application designer.
-    </p><div class="section" title="1. 8051 memory spaces"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp1932896"></a>1. 8051 memory spaces</h2></div></div></div><p>
+    </p><p>
+      When built on other architectures, the various SDCC-specific
+      symbols are #defined as empty strings so they don't affect the compiler.
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47893024"></a>1. 8051 memory spaces</h2></div></div></div><p>
 	The __data/__xdata/__code memory spaces below were completely
 	separate in the original 8051 design. In the cc1111, this
 	isn't true&#8212;they all live in a single unified 64kB address
@@ -83,7 +212,7 @@
 	is decorated with a memory space identifier which clutters the
 	code but makes the resulting code far smaller and more
 	efficient.
-      </p><div class="section" title="1.1. __data"><div class="titlepage"><div><div><h3 class="title"><a name="idp1539448"></a>1.1. __data</h3></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47894960"></a>1.1. __data</h3></div></div></div><p>
 	  The 8051 can directly address these 128 bytes of
 	  memory. This makes them precious so they should be
 	  reserved for frequently addressed values. Oh, just to
@@ -93,42 +222,42 @@
 	  these registers located at 0x00 - 0x1F. AltOS uses only
 	  the first bank at 0x00 - 0x07, leaving the other 24
 	  bytes available for other data.
-	</p></div><div class="section" title="1.2. __idata"><div class="titlepage"><div><div><h3 class="title"><a name="idp3243048"></a>1.2. __idata</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47897136"></a>1.2. __idata</h3></div></div></div><p>
 	  There are an additional 128 bytes of internal memory
 	  that share the same address space as __data but which
 	  cannot be directly addressed. The stack normally
 	  occupies this space and so AltOS doesn't place any
 	  static storage here.
-	</p></div><div class="section" title="1.3. __xdata"><div class="titlepage"><div><div><h3 class="title"><a name="idp905104"></a>1.3. __xdata</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47898576"></a>1.3. __xdata</h3></div></div></div><p>
 	  This is additional general memory accessed through a
 	  single 16-bit address register. The CC1111F32 has 32kB
 	  of memory available here. Most program data should live
 	  in this memory space.
-	</p></div><div class="section" title="1.4. __pdata"><div class="titlepage"><div><div><h3 class="title"><a name="idp2815944"></a>1.4. __pdata</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47899984"></a>1.4. __pdata</h3></div></div></div><p>
 	  This is an alias for the first 256 bytes of __xdata
 	  memory, but uses a shorter addressing mode with
 	  single global 8-bit value for the high 8 bits of the
 	  address and any of several 8-bit registers for the low 8
 	  bits. AltOS uses a few bits of this memory, it should
 	  probably use more.
-	</p></div><div class="section" title="1.5. __code"><div class="titlepage"><div><div><h3 class="title"><a name="idp2085816"></a>1.5. __code</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47901488"></a>1.5. __code</h3></div></div></div><p>
 	  All executable code must live in this address space, but
 	  you can stick read-only data here too. It is addressed
 	  using the 16-bit address register and special 'code'
 	  access opcodes. Anything read-only should live in this space.
-	</p></div><div class="section" title="1.6. __bit"><div class="titlepage"><div><div><h3 class="title"><a name="idp1611720"></a>1.6. __bit</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47902928"></a>1.6. __bit</h3></div></div></div><p>
 	  The 8051 has 128 bits of bit-addressible memory that
 	  lives in the __data segment from 0x20 through
 	  0x2f. Special instructions access these bits
 	  in a single atomic operation. This isn't so much a
 	  separate address space as a special addressing mode for
 	  a few bytes in the __data segment.
-	</p></div><div class="section" title="1.7. __sfr, __sfr16, __sfr32, __sbit"><div class="titlepage"><div><div><h3 class="title"><a name="idp2143464"></a>1.7. __sfr, __sfr16, __sfr32, __sbit</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47904432"></a>1.7. __sfr, __sfr16, __sfr32, __sbit</h3></div></div></div><p>
 	  Access to physical registers in the device use this mode
 	  which declares the variable name, it's type and the
 	  address it lives at. No memory is allocated for these
 	  variables.
-	</p></div></div><div class="section" title="2. Function calls on the 8051"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp2034368"></a>2. Function calls on the 8051</h2></div></div></div><p>
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47905968"></a>2. Function calls on the 8051</h2></div></div></div><p>
 	Because stack addressing is expensive, and stack space
 	limited, the default function call declaration in SDCC
 	allocates all parameters and local variables in static global
@@ -136,7 +265,7 @@
 	non-reentrant, and also consume space for parameters and
 	locals even when they are not running. The benefit is smaller
 	code and faster execution.
-      </p><div class="section" title="2.1. __reentrant functions"><div class="titlepage"><div><div><h3 class="title"><a name="idp2827648"></a>2.1. __reentrant functions</h3></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47907440"></a>2.1. __reentrant functions</h3></div></div></div><p>
 	  All functions which are re-entrant, either due to recursion
 	  or due to a potential context switch while executing, should
 	  be marked as __reentrant so that their parameters and local
@@ -149,7 +278,7 @@
 	  invoked can also be marked as __reentrant. The resulting
 	  code will be larger, but the savings in memory are
 	  frequently worthwhile.
-	</p></div><div class="section" title="2.2. Non __reentrant functions"><div class="titlepage"><div><div><h3 class="title"><a name="idp3350176"></a>2.2. Non __reentrant functions</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47909632"></a>2.2. Non __reentrant functions</h3></div></div></div><p>
 	  All parameters and locals in non-reentrant functions can
 	  have data space decoration so that they are allocated in
 	  __xdata, __pdata or __data space as desired. This can avoid
@@ -161,14 +290,14 @@
 	  non-reentrant. Because of this, interrupt handlers must not
 	  invoke any library functions, including the multiply and
 	  divide code.
-	</p></div><div class="section" title="2.3. __interrupt functions"><div class="titlepage"><div><div><h3 class="title"><a name="idp1644208"></a>2.3. __interrupt functions</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47911776"></a>2.3. __interrupt functions</h3></div></div></div><p>
 	  Interrupt functions are declared with with an __interrupt
 	  decoration that includes the interrupt number. SDCC saves
 	  and restores all of the registers in these functions and
 	  uses the 'reti' instruction at the end so that they operate
 	  as stand-alone interrupt handlers. Interrupt functions may
 	  call the ao_wakeup function to wake AltOS tasks.
-	</p></div><div class="section" title="2.4. __critical functions and statements"><div class="titlepage"><div><div><h3 class="title"><a name="idp1931128"></a>2.4. __critical functions and statements</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp47913344"></a>2.4. __critical functions and statements</h3></div></div></div><p>
 	  SDCC has built-in support for suspending interrupts during
 	  critical code. Functions marked as __critical will have
 	  interrupts suspended for the whole period of
@@ -176,10 +305,12 @@
 	  __critical which blocks interrupts during the execution of
 	  that statement. Keeping critical sections as short as
 	  possible is key to ensuring that interrupts are handled as
-	  quickly as possible.
-	</p></div></div></div><div class="chapter" title="Chapter 3. Task functions"><div class="titlepage"><div><div><h2 class="title"><a name="idp2235720"></a>Chapter 3. Task functions</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp2145232">1. ao_add_task</a></span></dt><dt><span class="section"><a href="#idp49456">2. ao_exit</a></span></dt><dt><span class="section"><a href="#idp50328">3. ao_sleep</a></span></dt><dt><span class="section"><a href="#idp52064">4. ao_wakeup</a></span></dt><dt><span class="section"><a href="#idp5464">5. ao_alarm</a></span></dt><dt><span class="section"><a href="#idp7304">6. ao_start_scheduler</a></span></dt><dt><span class="section"><a href="#idp8360">7. ao_clock_init</a></span></dt></dl></div><p>
+	  quickly as possible. AltOS doesn't use this form in shared
+	  code as other compilers wouldn't know what to do. Use
+	  ao_arch_block_interrupts and ao_arch_release_interrupts instead.
+	</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp47915408"></a>Chapter 4. Task functions</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp47916464">1. ao_add_task</a></span></dt><dt><span class="section"><a href="#idp47918720">2. ao_exit</a></span></dt><dt><span class="section"><a href="#idp53787440">3. ao_sleep</a></span></dt><dt><span class="section"><a href="#idp53791040">4. ao_wakeup</a></span></dt><dt><span class="section"><a href="#idp53794032">5. ao_alarm</a></span></dt><dt><span class="section"><a href="#idp53797312">6. ao_start_scheduler</a></span></dt><dt><span class="section"><a href="#idp53799280">7. ao_clock_init</a></span></dt></dl></div><p>
       This chapter documents how to create, destroy and schedule AltOS tasks.
-    </p><div class="section" title="1. ao_add_task"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp2145232"></a>1. ao_add_task</h2></div></div></div><pre class="programlisting">
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47916464"></a>1. ao_add_task</h2></div></div></div><pre class="programlisting">
 	void
 	ao_add_task(__xdata struct ao_task * task,
 	            void (*start)(void),
@@ -190,12 +321,12 @@
 	display), and the start address. It does not switch to the
 	new task. 'start' must not ever return; there is no place
 	to return to.
-      </p></div><div class="section" title="2. ao_exit"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp49456"></a>2. ao_exit</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47918720"></a>2. ao_exit</h2></div></div></div><pre class="programlisting">
 	void
 	ao_exit(void)
       </pre><p>
 	This terminates the current task.
-      </p></div><div class="section" title="3. ao_sleep"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp50328"></a>3. ao_sleep</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53787440"></a>3. ao_sleep</h2></div></div></div><pre class="programlisting">
 	void
 	ao_sleep(__xdata void *wchan)
       </pre><p>
@@ -205,17 +336,19 @@
 	it returns 1. This is the only way to switch to another task.
       </p><p>
 	Because ao_wakeup wakes every task waiting on a particular
-	location, ao_sleep should be used in a loop that first
-	checks the desired condition, blocks in ao_sleep and then
-	rechecks until the condition is satisfied. If the
-	location may be signaled from an interrupt handler, the
-	code will need to block interrupts by using the __critical
-	label around the block of code. Here's a complete example:
+	location, ao_sleep should be used in a loop that first checks
+	the desired condition, blocks in ao_sleep and then rechecks
+	until the condition is satisfied. If the location may be
+	signaled from an interrupt handler, the code will need to
+	block interrupts around the block of code. Here's a complete
+	example:
 	</p><pre class="programlisting">
-	  __critical while (!ao_radio_done)
+	  ao_arch_block_interrupts();
+	  while (!ao_radio_done)
 	          ao_sleep(&amp;ao_radio_done);
+	  ao_arch_release_interrupts();
 	</pre><p>
-      </p></div><div class="section" title="4. ao_wakeup"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52064"></a>4. ao_wakeup</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53791040"></a>4. ao_wakeup</h2></div></div></div><pre class="programlisting">
 	void
 	ao_wakeup(__xdata void *wchan)
       </pre><p>
@@ -229,100 +362,109 @@
 	          RFIF &amp;= ~RFIF_IM_DONE;
 	  }
 	</pre><p>
-	Note that this need not be enclosed in __critical as the
-	ao_sleep block can only be run from normal mode, and so
-	this sequence can never be interrupted with execution of
-	the other sequence.
-      </p></div><div class="section" title="5. ao_alarm"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp5464"></a>5. ao_alarm</h2></div></div></div><pre class="programlisting">
+	Note that this need not block interrupts as the ao_sleep block
+	can only be run from normal mode, and so this sequence can
+	never be interrupted with execution of the other sequence.
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53794032"></a>5. ao_alarm</h2></div></div></div><pre class="programlisting">
 	void
-	ao_alarm(uint16_t delay)
+	ao_alarm(uint16_t delay);
+
+	void
+	ao_clear_alarm(void);
       </pre><p>
-	Schedules an alarm to fire in at least 'delay' ticks. If
-	the task is asleep when the alarm fires, it will wakeup
-	and ao_sleep will return 1.
+	Schedules an alarm to fire in at least 'delay' ticks. If the
+	task is asleep when the alarm fires, it will wakeup and
+	ao_sleep will return 1. ao_clear_alarm resets any pending
+	alarm so that it doesn't fire at some arbitrary point in the
+	future.
 	</p><pre class="programlisting">
 	  ao_alarm(ao_packet_master_delay);
-	  __critical while (!ao_radio_dma_done)
+	  ao_arch_block_interrupts();
+	  while (!ao_radio_dma_done)
 	          if (ao_sleep(&amp;ao_radio_dma_done) != 0)
 	                  ao_radio_abort();
+	  ao_arch_release_interrupts();
+	  ao_clear_alarm();
 	</pre><p>
 	In this example, a timeout is set before waiting for
 	incoming radio data. If no data is received before the
 	timeout fires, ao_sleep will return 1 and then this code
 	will abort the radio receive operation.
-      </p></div><div class="section" title="6. ao_start_scheduler"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp7304"></a>6. ao_start_scheduler</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53797312"></a>6. ao_start_scheduler</h2></div></div></div><pre class="programlisting">
 	void
-	ao_start_scheduler(void)
+	ao_start_scheduler(void);
       </pre><p>
 	This is called from 'main' when the system is all
 	initialized and ready to run. It will not return.
-      </p></div><div class="section" title="7. ao_clock_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp8360"></a>7. ao_clock_init</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53799280"></a>7. ao_clock_init</h2></div></div></div><pre class="programlisting">
 	void
-	ao_clock_init(void)
+	ao_clock_init(void);
       </pre><p>
-	This turns on the external 48MHz clock then switches the
-	hardware to using it. This is required by many of the
-	internal devices like USB. It should be called by the
-	'main' function first, before initializing any of the
-	other devices in the system.
-      </p></div></div><div class="chapter" title="Chapter 4. Timer Functions"><div class="titlepage"><div><div><h2 class="title"><a name="idp9632"></a>Chapter 4. Timer Functions</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp10624">1. ao_time</a></span></dt><dt><span class="section"><a href="#idp11688">2. ao_delay</a></span></dt><dt><span class="section"><a href="#idp12688">3. ao_timer_set_adc_interval</a></span></dt><dt><span class="section"><a href="#idp748296">4. ao_timer_init</a></span></dt></dl></div><p>
-      AltOS sets up one of the cc1111 timers to run at 100Hz and
+	This initializes the main CPU clock and switches to it.
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53801248"></a>Chapter 5. Timer Functions</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53802752">1. ao_time</a></span></dt><dt><span class="section"><a href="#idp53804736">2. ao_delay</a></span></dt><dt><span class="section"><a href="#idp53806576">3. ao_timer_set_adc_interval</a></span></dt><dt><span class="section"><a href="#idp53808624">4. ao_timer_init</a></span></dt></dl></div><p>
+      AltOS sets up one of the CPU timers to run at 100Hz and
       exposes this tick as the fundemental unit of time. At each
       interrupt, AltOS increments the counter, and schedules any tasks
-      waiting for that time to pass, then fires off the ADC system to
+      waiting for that time to pass, then fires off the sensors to
       collect current data readings. Doing this from the ISR ensures
-      that the ADC values are sampled at a regular rate, independent
+      that the values are sampled at a regular rate, independent
       of any scheduling jitter.
-    </p><div class="section" title="1. ao_time"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp10624"></a>1. ao_time</h2></div></div></div><pre class="programlisting">
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53802752"></a>1. ao_time</h2></div></div></div><pre class="programlisting">
 	uint16_t
 	ao_time(void)
       </pre><p>
 	Returns the current system tick count. Note that this is
 	only a 16 bit value, and so it wraps every 655.36 seconds.
-      </p></div><div class="section" title="2. ao_delay"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp11688"></a>2. ao_delay</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53804736"></a>2. ao_delay</h2></div></div></div><pre class="programlisting">
 	void
 	ao_delay(uint16_t ticks);
       </pre><p>
 	Suspend the current task for at least 'ticks' clock units.
-      </p></div><div class="section" title="3. ao_timer_set_adc_interval"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp12688"></a>3. ao_timer_set_adc_interval</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53806576"></a>3. ao_timer_set_adc_interval</h2></div></div></div><pre class="programlisting">
 	void
 	ao_timer_set_adc_interval(uint8_t interval);
       </pre><p>
 	This sets the number of ticks between ADC samples. If set
 	to 0, no ADC samples are generated. AltOS uses this to
 	slow down the ADC sampling rate to save power.
-      </p></div><div class="section" title="4. ao_timer_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp748296"></a>4. ao_timer_init</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53808624"></a>4. ao_timer_init</h2></div></div></div><pre class="programlisting">
 	void
 	ao_timer_init(void)
       </pre><p>
-	This turns on the 100Hz tick using the CC1111 timer 1. It
-	is required for any of the time-based functions to
-	work. It should be called by 'main' before ao_start_scheduler.
-      </p></div></div><div class="chapter" title="Chapter 5. AltOS Mutexes"><div class="titlepage"><div><div><h2 class="title"><a name="idp749488"></a>Chapter 5. AltOS Mutexes</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp750840">1. ao_mutex_get</a></span></dt><dt><span class="section"><a href="#idp751936">2. ao_mutex_put</a></span></dt></dl></div><p>
+	This turns on the 100Hz tick. It is required for any of the
+	time-based functions to work. It should be called by 'main'
+	before ao_start_scheduler.
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53810816"></a>Chapter 6. AltOS Mutexes</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53812688">1. ao_mutex_get</a></span></dt><dt><span class="section"><a href="#idp53814528">2. ao_mutex_put</a></span></dt></dl></div><p>
       AltOS provides mutexes as a basic synchronization primitive. Each
       mutexes is simply a byte of memory which holds 0 when the mutex
       is free or the task id of the owning task when the mutex is
       owned. Mutex calls are checked&#8212;attempting to acquire a mutex
       already held by the current task or releasing a mutex not held
       by the current task will both cause a panic.
-    </p><div class="section" title="1. ao_mutex_get"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp750840"></a>1. ao_mutex_get</h2></div></div></div><pre class="programlisting">
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53812688"></a>1. ao_mutex_get</h2></div></div></div><pre class="programlisting">
 	void
 	ao_mutex_get(__xdata uint8_t *mutex);
       </pre><p>
 	Acquires the specified mutex, blocking if the mutex is
 	owned by another task.
-      </p></div><div class="section" title="2. ao_mutex_put"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp751936"></a>2. ao_mutex_put</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53814528"></a>2. ao_mutex_put</h2></div></div></div><pre class="programlisting">
 	void
 	ao_mutex_put(__xdata uint8_t *mutex);
       </pre><p>
 	Releases the specified mutex, waking up all tasks waiting
 	for it.
-      </p></div></div><div class="chapter" title="Chapter 6. CC1111 DMA engine"><div class="titlepage"><div><div><h2 class="title"><a name="idp753080"></a>Chapter 6. CC1111 DMA engine</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp754920">1. ao_dma_alloc</a></span></dt><dt><span class="section"><a href="#idp756296">2. ao_dma_set_transfer</a></span></dt><dt><span class="section"><a href="#idp757744">3. ao_dma_start</a></span></dt><dt><span class="section"><a href="#idp758808">4. ao_dma_trigger</a></span></dt><dt><span class="section"><a href="#idp759864">5. ao_dma_abort</a></span></dt></dl></div><p>
-      The CC1111 contains a useful bit of extra hardware in the form
-      of five programmable DMA engines. They can be configured to copy
-      data in memory, or between memory and devices (or even between
-      two devices). AltOS exposes a general interface to this hardware
-      and uses it to handle radio and SPI data.
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53816496"></a>Chapter 7. DMA engine</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53819936">1. CC1111 DMA Engine</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53820608">1.1. ao_dma_alloc</a></span></dt><dt><span class="section"><a href="#idp53822784">1.2. ao_dma_set_transfer</a></span></dt><dt><span class="section"><a href="#idp53825056">1.3. ao_dma_start</a></span></dt><dt><span class="section"><a href="#idp53827072">1.4. ao_dma_trigger</a></span></dt><dt><span class="section"><a href="#idp53828912">1.5. ao_dma_abort</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53831056">2. STM32L DMA Engine</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53831728">2.1. ao_dma_alloc</a></span></dt><dt><span class="section"><a href="#idp53833568">2.2. ao_dma_set_transfer</a></span></dt><dt><span class="section"><a href="#idp53835824">2.3. ao_dma_set_isr</a></span></dt><dt><span class="section"><a href="#idp53837904">2.4. ao_dma_start</a></span></dt><dt><span class="section"><a href="#idp53840208">2.5. ao_dma_done_transfer</a></span></dt><dt><span class="section"><a href="#idp53842192">2.6. ao_dma_abort</a></span></dt></dl></dd></dl></div><p>
+      The CC1111 and STM32L both contain a useful bit of extra
+      hardware in the form of a number of programmable DMA
+      engines. They can be configured to copy data in memory, or
+      between memory and devices (or even between two devices). AltOS
+      exposes a general interface to this hardware and uses it to
+      handle both internal and external devices.
+    </p><p>
+      Because the CC1111 and STM32L DMA engines are different, the
+      interface to them is also different. As the DMA engines are
+      currently used to implement platform-specific drivers, this
+      isn't yet a problem.
     </p><p>
       Code using a DMA engine should allocate one at startup
       time. There is no provision to free them, and if you run out,
@@ -334,63 +476,114 @@
       from hardware to memory, that trigger event is supplied by the
       hardware device. When copying data from memory to hardware, the
       transfer is usually initiated by software.
-    </p><div class="section" title="1. ao_dma_alloc"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp754920"></a>1. ao_dma_alloc</h2></div></div></div><pre class="programlisting">
-	uint8_t
-	ao_dma_alloc(__xdata uint8_t *done)
-      </pre><p>
-	Allocates a DMA engine, returning the identifier. Whenever
-	this DMA engine completes a transfer. 'done' is cleared
-	when the DMA is started, and then receives the
-	AO_DMA_DONE bit on a successful transfer or the
-	AO_DMA_ABORTED bit if ao_dma_abort was called. Note that
-	it is possible to get both bits if the transfer was
-	aborted after it had finished.
-      </p></div><div class="section" title="2. ao_dma_set_transfer"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp756296"></a>2. ao_dma_set_transfer</h2></div></div></div><pre class="programlisting">
-	void
-	ao_dma_set_transfer(uint8_t id,
-	                    void __xdata *srcaddr,
-	                    void __xdata *dstaddr,
-	                    uint16_t count,
-	                    uint8_t cfg0,
-	                    uint8_t cfg1)
-      </pre><p>
-	Initializes the specified dma engine to copy data
-	from 'srcaddr' to 'dstaddr' for 'count' units. cfg0 and
-	cfg1 are values directly out of the CC1111 documentation
-	and tell the DMA engine what the transfer unit size,
-	direction and step are.
-      </p></div><div class="section" title="3. ao_dma_start"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp757744"></a>3. ao_dma_start</h2></div></div></div><pre class="programlisting">
-	void
-	ao_dma_start(uint8_t id);
-      </pre><p>
-	Arm the specified DMA engine and await a signal from
-	either hardware or software to start transferring data.
-      </p></div><div class="section" title="4. ao_dma_trigger"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp758808"></a>4. ao_dma_trigger</h2></div></div></div><pre class="programlisting">
-	void
-	ao_dma_trigger(uint8_t id)
-      </pre><p>
-	Trigger the specified DMA engine to start copying data.
-      </p></div><div class="section" title="5. ao_dma_abort"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp759864"></a>5. ao_dma_abort</h2></div></div></div><pre class="programlisting">
-	void
-	ao_dma_abort(uint8_t id)
-      </pre><p>
-	Terminate any in-progress DMA transation, marking its
-	'done' variable with the AO_DMA_ABORTED bit.
-      </p></div></div><div class="chapter" title="Chapter 7. SDCC Stdio interface"><div class="titlepage"><div><div><h2 class="title"><a name="idp761032"></a>Chapter 7. SDCC Stdio interface</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp761992">1. putchar</a></span></dt><dt><span class="section"><a href="#idp763040">2. getchar</a></span></dt><dt><span class="section"><a href="#idp54808">3. flush</a></span></dt><dt><span class="section"><a href="#idp55872">4. ao_add_stdio</a></span></dt></dl></div><p>
-      AltOS offers a stdio interface over both USB and the RF packet
-      link. This provides for control of the device localy or
-      remotely. This is hooked up to the stdio functions in SDCC by
-      providing the standard putchar/getchar/flush functions. These
-      automatically multiplex the two available communication
-      channels; output is always delivered to the channel which
-      provided the most recent input.
-    </p><div class="section" title="1. putchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp761992"></a>1. putchar</h2></div></div></div><pre class="programlisting">
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53819936"></a>1. CC1111 DMA Engine</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53820608"></a>1.1. ao_dma_alloc</h3></div></div></div><pre class="programlisting">
+	  uint8_t
+	  ao_dma_alloc(__xdata uint8_t *done)
+	</pre><p>
+	  Allocate a DMA engine, returning the identifier.  'done' is
+	  cleared when the DMA is started, and then receives the
+	  AO_DMA_DONE bit on a successful transfer or the
+	  AO_DMA_ABORTED bit if ao_dma_abort was called. Note that it
+	  is possible to get both bits if the transfer was aborted
+	  after it had finished.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53822784"></a>1.2. ao_dma_set_transfer</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_set_transfer(uint8_t id,
+	  void __xdata *srcaddr,
+	  void __xdata *dstaddr,
+	  uint16_t count,
+	  uint8_t cfg0,
+	  uint8_t cfg1)
+	</pre><p>
+	  Initializes the specified dma engine to copy data
+	  from 'srcaddr' to 'dstaddr' for 'count' units. cfg0 and
+	  cfg1 are values directly out of the CC1111 documentation
+	  and tell the DMA engine what the transfer unit size,
+	  direction and step are.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53825056"></a>1.3. ao_dma_start</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_start(uint8_t id);
+	</pre><p>
+	  Arm the specified DMA engine and await a signal from
+	  either hardware or software to start transferring data.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53827072"></a>1.4. ao_dma_trigger</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_trigger(uint8_t id)
+	</pre><p>
+	  Trigger the specified DMA engine to start copying data.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53828912"></a>1.5. ao_dma_abort</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_abort(uint8_t id)
+	</pre><p>
+	  Terminate any in-progress DMA transation, marking its
+	  'done' variable with the AO_DMA_ABORTED bit.
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53831056"></a>2. STM32L DMA Engine</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53831728"></a>2.1. ao_dma_alloc</h3></div></div></div><pre class="programlisting">
+	  uint8_t ao_dma_done[];
+
+	  void
+	  ao_dma_alloc(uint8_t index);
+	</pre><p>
+	  Reserve a DMA engine for exclusive use by one
+	  driver.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53833568"></a>2.2. ao_dma_set_transfer</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_set_transfer(uint8_t id,
+	  void *peripheral,
+	  void *memory,
+	  uint16_t count,
+	  uint32_t ccr);
+	</pre><p>
+	  Initializes the specified dma engine to copy data between
+	  'peripheral' and 'memory' for 'count' units. 'ccr' is a
+	  value directly out of the STM32L documentation and tells the
+	  DMA engine what the transfer unit size, direction and step
+	  are.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53835824"></a>2.3. ao_dma_set_isr</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_set_isr(uint8_t index, void (*isr)(int))
+	</pre><p>
+	  This sets a function to be called when the DMA transfer
+	  completes in lieu of setting the ao_dma_done bits. Use this
+	  when some work needs to be done when the DMA finishes that
+	  cannot wait until user space resumes.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53837904"></a>2.4. ao_dma_start</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_start(uint8_t id);
+	</pre><p>
+	  Arm the specified DMA engine and await a signal from either
+	  hardware or software to start transferring data.
+	  'ao_dma_done[index]' is cleared when the DMA is started, and
+	  then receives the AO_DMA_DONE bit on a successful transfer
+	  or the AO_DMA_ABORTED bit if ao_dma_abort was called. Note
+	  that it is possible to get both bits if the transfer was
+	  aborted after it had finished.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53840208"></a>2.5. ao_dma_done_transfer</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_done_transfer(uint8_t id);
+	</pre><p>
+	  Signals that a specific DMA engine is done being used. This
+	  allows multiple drivers to use the same DMA engine safely.
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53842192"></a>2.6. ao_dma_abort</h3></div></div></div><pre class="programlisting">
+	  void
+	  ao_dma_abort(uint8_t id)
+	</pre><p>
+	  Terminate any in-progress DMA transation, marking its
+	  'done' variable with the AO_DMA_ABORTED bit.
+	</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53844464"></a>Chapter 8. Stdio interface</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53845968">1. putchar</a></span></dt><dt><span class="section"><a href="#idp53847856">2. getchar</a></span></dt><dt><span class="section"><a href="#idp53849952">3. flush</a></span></dt><dt><span class="section"><a href="#idp53851984">4. ao_add_stdio</a></span></dt></dl></div><p>
+      AltOS offers a stdio interface over USB, serial and the RF
+      packet link. This provides for control of the device localy or
+      remotely. This is hooked up to the stdio functions by providing
+      the standard putchar/getchar/flush functions. These
+      automatically multiplex the available communication channels;
+      output is always delivered to the channel which provided the
+      most recent input.
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53845968"></a>1. putchar</h2></div></div></div><pre class="programlisting">
 	void
 	putchar(char c)
       </pre><p>
 	Delivers a single character to the current console
 	device.
-      </p></div><div class="section" title="2. getchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp763040"></a>2. getchar</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53847856"></a>2. getchar</h2></div></div></div><pre class="programlisting">
 	char
 	getchar(void)
       </pre><p>
@@ -398,13 +591,13 @@
 	console devices. The current console device is set to
 	that which delivered this character. This blocks until
 	a character is available.
-      </p></div><div class="section" title="3. flush"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp54808"></a>3. flush</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53849952"></a>3. flush</h2></div></div></div><pre class="programlisting">
 	void
 	flush(void)
       </pre><p>
 	Flushes the current console device output buffer. Any
 	pending characters will be delivered to the target device.
-      xo	  </p></div><div class="section" title="4. ao_add_stdio"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp55872"></a>4. ao_add_stdio</h2></div></div></div><pre class="programlisting">
+      xo	  </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53851984"></a>4. ao_add_stdio</h2></div></div></div><pre class="programlisting">
 	void
 	ao_add_stdio(char (*pollchar)(void),
 	                   void (*putchar)(char),
@@ -426,13 +619,13 @@
 	'flush' forces the output buffer to be flushed. It may
 	block until the buffer is delivered, but it is not
 	required to do so.
-      </p></div></div><div class="chapter" title="Chapter 8. Command line interface"><div class="titlepage"><div><div><h2 class="title"><a name="idp58336"></a>Chapter 8. Command line interface</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp59184">1. ao_cmd_register</a></span></dt><dt><span class="section"><a href="#idp64112">2. ao_cmd_lex</a></span></dt><dt><span class="section"><a href="#idp65264">3. ao_cmd_put16</a></span></dt><dt><span class="section"><a href="#idp66304">4. ao_cmd_put8</a></span></dt><dt><span class="section"><a href="#idp67336">5. ao_cmd_white</a></span></dt><dt><span class="section"><a href="#idp68488">6. ao_cmd_hex</a></span></dt><dt><span class="section"><a href="#idp69616">7. ao_cmd_decimal</a></span></dt><dt><span class="section"><a href="#idp70800">8. ao_match_word</a></span></dt><dt><span class="section"><a href="#idp72032">9. ao_cmd_init</a></span></dt></dl></div><p>
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53856016"></a>Chapter 9. Command line interface</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53857424">1. ao_cmd_register</a></span></dt><dt><span class="section"><a href="#idp53866064">2. ao_cmd_lex</a></span></dt><dt><span class="section"><a href="#idp53868144">3. ao_cmd_put16</a></span></dt><dt><span class="section"><a href="#idp53869984">4. ao_cmd_put8</a></span></dt><dt><span class="section"><a href="#idp53871872">5. ao_cmd_white</a></span></dt><dt><span class="section"><a href="#idp53873936">6. ao_cmd_hex</a></span></dt><dt><span class="section"><a href="#idp53875984">7. ao_cmd_decimal</a></span></dt><dt><span class="section"><a href="#idp53878080">8. ao_match_word</a></span></dt><dt><span class="section"><a href="#idp53880160">9. ao_cmd_init</a></span></dt></dl></div><p>
       AltOS includes a simple command line parser which is hooked up
       to the stdio interfaces permitting remote control of the device
-      over USB or the RF link as desired. Each command uses a single
-      character to invoke it, the remaining characters on the line are
-      available as parameters to the command.
-    </p><div class="section" title="1. ao_cmd_register"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59184"></a>1. ao_cmd_register</h2></div></div></div><pre class="programlisting">
+      over USB, serial or the RF link as desired. Each command uses a
+      single character to invoke it, the remaining characters on the
+      line are available as parameters to the command.
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53857424"></a>1. ao_cmd_register</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_register(__code struct ao_cmds *cmds)
       </pre><p>
@@ -452,49 +645,49 @@
 	'?' command. Syntax errors found while executing 'func'
 	should be indicated by modifying the global ao_cmd_status
 	variable with one of the following values:
-	</p><div class="variablelist"><dl><dt></dt><dd><p>
+	</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">ao_cmd_success</span></dt><dd><p>
 		The command was parsed successfully. There is no
 		need to assign this value, it is the default.
-	      </p></dd><dt></dt><dd><p>
+	      </p></dd><dt><span class="term">ao_cmd_lex_error</span></dt><dd><p>
 		A token in the line was invalid, such as a number
 		containing invalid characters. The low-level
 		lexing functions already assign this value as needed.
-	      </p></dd><dt></dt><dd><p>
+	      </p></dd><dt><span class="term">ao_syntax_error</span></dt><dd><p>
 		The command line is invalid for some reason other
 		than invalid tokens.
 	      </p></dd></dl></div><p>
-      </p></div><div class="section" title="2. ao_cmd_lex"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp64112"></a>2. ao_cmd_lex</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53866064"></a>2. ao_cmd_lex</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_lex(void);
       </pre><p>
 	This gets the next character out of the command line
 	buffer and sticks it into ao_cmd_lex_c. At the end of the
 	line, ao_cmd_lex_c will get a newline ('\n') character.
-      </p></div><div class="section" title="3. ao_cmd_put16"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp65264"></a>3. ao_cmd_put16</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53868144"></a>3. ao_cmd_put16</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_put16(uint16_t v);
       </pre><p>
 	Writes 'v' as four hexadecimal characters.
-      </p></div><div class="section" title="4. ao_cmd_put8"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp66304"></a>4. ao_cmd_put8</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53869984"></a>4. ao_cmd_put8</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_put8(uint8_t v);
       </pre><p>
 	Writes 'v' as two hexadecimal characters.
-      </p></div><div class="section" title="5. ao_cmd_white"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp67336"></a>5. ao_cmd_white</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53871872"></a>5. ao_cmd_white</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_white(void)
       </pre><p>
 	This skips whitespace by calling ao_cmd_lex while
 	ao_cmd_lex_c is either a space or tab. It does not skip
 	any characters if ao_cmd_lex_c already non-white.
-      </p></div><div class="section" title="6. ao_cmd_hex"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp68488"></a>6. ao_cmd_hex</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53873936"></a>6. ao_cmd_hex</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_hex(void)
       </pre><p>
 	This reads a 16-bit hexadecimal value from the command
 	line with optional leading whitespace. The resulting value
 	is stored in ao_cmd_lex_i;
-      </p></div><div class="section" title="7. ao_cmd_decimal"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp69616"></a>7. ao_cmd_decimal</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53875984"></a>7. ao_cmd_decimal</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_decimal(void)
       </pre><p>
@@ -502,7 +695,7 @@
 	line with optional leading whitespace. The resulting value
 	is stored in ao_cmd_lex_u32 and the low 16 bits are stored
 	in ao_cmd_lex_i;
-      </p></div><div class="section" title="8. ao_match_word"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp70800"></a>8. ao_match_word</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53878080"></a>8. ao_match_word</h2></div></div></div><pre class="programlisting">
 	uint8_t
 	ao_match_word(__code char *word)
       </pre><p>
@@ -510,15 +703,15 @@
 	line. It does not skip leading white space. If 'word' is
 	found, then 1 is returned. Otherwise, ao_cmd_status is set to
 	ao_cmd_syntax_error and 0 is returned.
-      </p></div><div class="section" title="9. ao_cmd_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp72032"></a>9. ao_cmd_init</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53880160"></a>9. ao_cmd_init</h2></div></div></div><pre class="programlisting">
 	void
 	ao_cmd_init(void
       </pre><p>
 	Initializes the command system, setting up the built-in
 	commands and adding a task to run the command processing
 	loop. It should be called by 'main' before ao_start_scheduler.
-      </p></div></div><div class="chapter" title="Chapter 9. CC1111 USB target device"><div class="titlepage"><div><div><h2 class="title"><a name="idp73256"></a>Chapter 9. CC1111 USB target device</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp74736">1. ao_usb_flush</a></span></dt><dt><span class="section"><a href="#idp75960">2. ao_usb_putchar</a></span></dt><dt><span class="section"><a href="#idp77216">3. ao_usb_pollchar</a></span></dt><dt><span class="section"><a href="#idp3450240">4. ao_usb_getchar</a></span></dt><dt><span class="section"><a href="#idp3451248">5. ao_usb_disable</a></span></dt><dt><span class="section"><a href="#idp3452920">6. ao_usb_enable</a></span></dt><dt><span class="section"><a href="#idp3454056">7. ao_usb_init</a></span></dt></dl></div><p>
-      The CC1111 contains a full-speed USB target device. It can be
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53882384"></a>Chapter 10. USB target device</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53884608">1. ao_usb_flush</a></span></dt><dt><span class="section"><a href="#idp53886752">2. ao_usb_putchar</a></span></dt><dt><span class="section"><a href="#idp53888928">3. ao_usb_pollchar</a></span></dt><dt><span class="section"><a href="#idp53891072">4. ao_usb_getchar</a></span></dt><dt><span class="section"><a href="#idp53893088">5. ao_usb_disable</a></span></dt><dt><span class="section"><a href="#idp53895920">6. ao_usb_enable</a></span></dt><dt><span class="section"><a href="#idp53898032">7. ao_usb_init</a></span></dt></dl></div><p>
+      AltOS contains a full-speed USB target device driver. It can be
       programmed to offer any kind of USB target, but to simplify
       interactions with a variety of operating systems, AltOS provides
       only a single target device profile, that of a USB modem which
@@ -531,7 +724,7 @@
       interface if desired, offering control of the device over the
       USB link. Alternatively, the functions can be accessed directly
       to provide for USB-specific I/O.
-    </p><div class="section" title="1. ao_usb_flush"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp74736"></a>1. ao_usb_flush</h2></div></div></div><pre class="programlisting">
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53884608"></a>1. ao_usb_flush</h2></div></div></div><pre class="programlisting">
 	void
 	ao_usb_flush(void);
       </pre><p>
@@ -539,7 +732,7 @@
 	to be delivered to the USB host if there is pending data,
 	or if the last IN packet was full to indicate to the host
 	that there isn't any more pending data available.
-      </p></div><div class="section" title="2. ao_usb_putchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp75960"></a>2. ao_usb_putchar</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53886752"></a>2. ao_usb_putchar</h2></div></div></div><pre class="programlisting">
 	void
 	ao_usb_putchar(char c);
       </pre><p>
@@ -548,7 +741,7 @@
 	adds a byte to the pending IN packet for delivery to the
 	USB host. If the USB packet is full, this queues the 'IN'
 	packet for delivery.
-      </p></div><div class="section" title="3. ao_usb_pollchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp77216"></a>3. ao_usb_pollchar</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53888928"></a>3. ao_usb_pollchar</h2></div></div></div><pre class="programlisting">
 	char
 	ao_usb_pollchar(void);
       </pre><p>
@@ -556,13 +749,13 @@
 	packet received, this returns AO_READ_AGAIN. Otherwise, it
 	returns the next character, reporting to the host that it
 	is ready for more data when the last character is gone.
-      </p></div><div class="section" title="4. ao_usb_getchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3450240"></a>4. ao_usb_getchar</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53891072"></a>4. ao_usb_getchar</h2></div></div></div><pre class="programlisting">
 	char
 	ao_usb_getchar(void);
       </pre><p>
 	This uses ao_pollchar to receive the next character,
 	blocking while ao_pollchar returns AO_READ_AGAIN.
-      </p></div><div class="section" title="5. ao_usb_disable"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3451248"></a>5. ao_usb_disable</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53893088"></a>5. ao_usb_disable</h2></div></div></div><pre class="programlisting">
 	void
 	ao_usb_disable(void);
       </pre><p>
@@ -577,7 +770,7 @@
 	after disabling the USB device, it's likely that the cable
 	will need to be disconnected and reconnected before it
 	will work again.
-      </p></div><div class="section" title="6. ao_usb_enable"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3452920"></a>6. ao_usb_enable</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53895920"></a>6. ao_usb_enable</h2></div></div></div><pre class="programlisting">
 	void
 	ao_usb_enable(void);
       </pre><p>
@@ -585,7 +778,7 @@
 	disabled. See the note above about needing to physically
 	remove and re-insert the cable to get the host to
 	re-initialize the USB link.
-      </p></div><div class="section" title="7. ao_usb_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3454056"></a>7. ao_usb_init</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53898032"></a>7. ao_usb_init</h2></div></div></div><pre class="programlisting">
 	void
 	ao_usb_init(void);
       </pre><p>
@@ -593,7 +786,7 @@
 	the control end point and adds the usb I/O functions to
 	the stdio system. Call this from main before
 	ao_start_scheduler.
-      </p></div></div><div class="chapter" title="Chapter 10. CC1111 Serial peripheral"><div class="titlepage"><div><div><h2 class="title"><a name="idp3455248"></a>Chapter 10. CC1111 Serial peripheral</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp3456504">1. ao_serial_getchar</a></span></dt><dt><span class="section"><a href="#idp3457568">2. ao_serial_putchar</a></span></dt><dt><span class="section"><a href="#idp3458624">3. ao_serial_drain</a></span></dt><dt><span class="section"><a href="#idp3459664">4. ao_serial_set_speed</a></span></dt><dt><span class="section"><a href="#idp3460792">5. ao_serial_init</a></span></dt></dl></div><p>
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53900256"></a>Chapter 11. Serial peripherals</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53902272">1. ao_serial_getchar</a></span></dt><dt><span class="section"><a href="#idp53904304">2. ao_serial_putchar</a></span></dt><dt><span class="section"><a href="#idp53906272">3. ao_serial_drain</a></span></dt><dt><span class="section"><a href="#idp53908272">4. ao_serial_set_speed</a></span></dt><dt><span class="section"><a href="#idp53910304">5. ao_serial_init</a></span></dt></dl></div><p>
       The CC1111 provides two USART peripherals. AltOS uses one for
       asynch serial data, generally to communicate with a GPS device,
       and the other for a SPI bus. The UART is configured to operate
@@ -604,25 +797,25 @@
     </p><p>
       To prevent loss of data, AltOS provides receive and transmit
       fifos of 32 characters each.
-    </p><div class="section" title="1. ao_serial_getchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3456504"></a>1. ao_serial_getchar</h2></div></div></div><pre class="programlisting">
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53902272"></a>1. ao_serial_getchar</h2></div></div></div><pre class="programlisting">
 	char
 	ao_serial_getchar(void);
       </pre><p>
 	Returns the next character from the receive fifo, blocking
 	until a character is received if the fifo is empty.
-      </p></div><div class="section" title="2. ao_serial_putchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3457568"></a>2. ao_serial_putchar</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53904304"></a>2. ao_serial_putchar</h2></div></div></div><pre class="programlisting">
 	void
 	ao_serial_putchar(char c);
       </pre><p>
 	Adds a character to the transmit fifo, blocking if the
 	fifo is full. Starts transmitting characters.
-      </p></div><div class="section" title="3. ao_serial_drain"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3458624"></a>3. ao_serial_drain</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53906272"></a>3. ao_serial_drain</h2></div></div></div><pre class="programlisting">
 	void
 	ao_serial_drain(void);
       </pre><p>
 	Blocks until the transmit fifo is empty. Used internally
 	when changing serial speeds.
-      </p></div><div class="section" title="4. ao_serial_set_speed"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3459664"></a>4. ao_serial_set_speed</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53908272"></a>4. ao_serial_set_speed</h2></div></div></div><pre class="programlisting">
 	void
 	ao_serial_set_speed(uint8_t speed);
       </pre><p>
@@ -630,52 +823,52 @@
 	AO_SERIAL_SPEED_4800, AO_SERIAL_SPEED_9600 or
 	AO_SERIAL_SPEED_57600. This first flushes the transmit
 	fifo using ao_serial_drain.
-      </p></div><div class="section" title="5. ao_serial_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3460792"></a>5. ao_serial_init</h2></div></div></div><pre class="programlisting">
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53910304"></a>5. ao_serial_init</h2></div></div></div><pre class="programlisting">
 	void
 	ao_serial_init(void)
       </pre><p>
 	Initializes the serial peripheral. Call this from 'main'
 	before jumping to ao_start_scheduler. The default speed
 	setting is AO_SERIAL_SPEED_4800.
-      </p></div></div><div class="chapter" title="Chapter 11. CC1111 Radio peripheral"><div class="titlepage"><div><div><h2 class="title"><a name="idp3461952"></a>Chapter 11. CC1111 Radio peripheral</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#idp3466304">1. ao_radio_set_telemetry</a></span></dt><dt><span class="section"><a href="#idp3467552">2. ao_radio_set_packet</a></span></dt><dt><span class="section"><a href="#idp3468800">3. ao_radio_set_rdf</a></span></dt><dt><span class="section"><a href="#idp3470080">4. ao_radio_idle</a></span></dt><dt><span class="section"><a href="#idp3471168">5. ao_radio_get</a></span></dt><dt><span class="section"><a href="#idp3472232">6. ao_radio_put</a></span></dt><dt><span class="section"><a href="#idp3473200">7. ao_radio_abort</a></span></dt><dt><span class="section"><a href="#idp3474720">8. ao_radio_send</a></span></dt><dt><span class="section"><a href="#idp3475976">9. ao_radio_recv</a></span></dt><dt><span class="section"><a href="#idp3477624">10. ao_radio_rdf</a></span></dt><dt><span class="section"><a href="#idp3479128">11. ao_packet_putchar</a></span></dt><dt><span class="section"><a href="#idp3480400">12. ao_packet_pollchar</a></span></dt><dt><span class="section"><a href="#idp3481520">13. ao_packet_slave_start</a></span></dt><dt><span class="section"><a href="#idp3482560">14. ao_packet_slave_stop</a></span></dt><dt><span class="section"><a href="#idp3483568">15. ao_packet_slave_init</a></span></dt><dt><span class="section"><a href="#idp3484688">16. ao_packet_master_init</a></span></dt></dl></div><p>
-      The CC1111 radio transceiver sends and receives digital packets
-      with forward error correction and detection. The AltOS driver is
-      fairly specific to the needs of the TeleMetrum and TeleDongle
-      devices, using it for other tasks may require customization of
-      the driver itself. There are three basic modes of operation:
-      </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
-	    Telemetry mode. In this mode, TeleMetrum transmits telemetry
-	    frames at a fixed rate. The frames are of fixed size. This
-	    is strictly a one-way communication from TeleMetrum to
-	    TeleDongle.
-	  </p></li><li class="listitem"><p>
-	    Packet mode. In this mode, the radio is used to create a
-	    reliable duplex byte stream between TeleDongle and
-	    TeleMetrum. This is an asymmetrical protocol with
-	    TeleMetrum only transmitting in response to a packet sent
-	    from TeleDongle. Thus getting data from TeleMetrum to
-	    TeleDongle requires polling. The polling rate is adaptive,
-	    when no data has been received for a while, the rate slows
-	    down. The packets are checked at both ends and invalid
-	    data are ignored.
-	  </p><p>
-	    On the TeleMetrum side, the packet link is hooked into the
-	    stdio mechanism, providing an alternate data path for the
-	    command processor. It is enabled when the unit boots up in
-	    'idle' mode.
-	  </p><p>
-	    On the TeleDongle side, the packet link is enabled with a
-	    command; data from the stdio package is forwarded over the
-	    packet link providing a connection from the USB command
-	    stream to the remote TeleMetrum device.
-	  </p></li><li class="listitem"><p>
-	    Radio Direction Finding mode. In this mode, TeleMetrum
-	    constructs a special packet that sounds like an audio tone
-	    when received by a conventional narrow-band FM
-	    receiver. This is designed to provide a beacon to track
-	    the device when other location mechanisms fail.
-	  </p></li></ol></div><p>
-    </p><div class="section" title="1. ao_radio_set_telemetry"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3466304"></a>1. ao_radio_set_telemetry</h2></div></div></div><pre class="programlisting">
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53912496"></a>Chapter 12. CC1111 Radio peripheral</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53913168">1. Radio Introduction</a></span></dt><dt><span class="section"><a href="#idp53920288">2. ao_radio_set_telemetry</a></span></dt><dt><span class="section"><a href="#idp53922448">3. ao_radio_set_packet</a></span></dt><dt><span class="section"><a href="#idp53924608">4. ao_radio_set_rdf</a></span></dt><dt><span class="section"><a href="#idp53926848">5. ao_radio_idle</a></span></dt><dt><span class="section"><a href="#idp53928896">6. ao_radio_get</a></span></dt><dt><span class="section"><a href="#idp53930928">7. ao_radio_put</a></span></dt><dt><span class="section"><a href="#idp53932864">8. ao_radio_abort</a></span></dt><dt><span class="section"><a href="#idp53934928">9. Radio Telemetry</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53936224">9.1. ao_radio_send</a></span></dt><dt><span class="section"><a href="#idp53938448">9.2. ao_radio_recv</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53940912">10. Radio Direction Finding</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53942064">10.1. ao_radio_rdf</a></span></dt></dl></dd><dt><span class="section"><a href="#idp53944208">11. Radio Packet Mode</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53945520">11.1. ao_packet_putchar</a></span></dt><dt><span class="section"><a href="#idp53947696">11.2. ao_packet_pollchar</a></span></dt><dt><span class="section"><a href="#idp53949776">11.3. ao_packet_slave_start</a></span></dt><dt><span class="section"><a href="#idp53951728">11.4. ao_packet_slave_stop</a></span></dt><dt><span class="section"><a href="#idp53953648">11.5. ao_packet_slave_init</a></span></dt><dt><span class="section"><a href="#idp53955680">11.6. ao_packet_master_init</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53913168"></a>1. Radio Introduction</h2></div></div></div><p>
+	The CC1111 radio transceiver sends and receives digital packets
+	with forward error correction and detection. The AltOS driver is
+	fairly specific to the needs of the TeleMetrum and TeleDongle
+	devices, using it for other tasks may require customization of
+	the driver itself. There are three basic modes of operation:
+	</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+	      Telemetry mode. In this mode, TeleMetrum transmits telemetry
+	      frames at a fixed rate. The frames are of fixed size. This
+	      is strictly a one-way communication from TeleMetrum to
+	      TeleDongle.
+	    </p></li><li class="listitem"><p>
+	      Packet mode. In this mode, the radio is used to create a
+	      reliable duplex byte stream between TeleDongle and
+	      TeleMetrum. This is an asymmetrical protocol with
+	      TeleMetrum only transmitting in response to a packet sent
+	      from TeleDongle. Thus getting data from TeleMetrum to
+	      TeleDongle requires polling. The polling rate is adaptive,
+	      when no data has been received for a while, the rate slows
+	      down. The packets are checked at both ends and invalid
+	      data are ignored.
+	    </p><p>
+	      On the TeleMetrum side, the packet link is hooked into the
+	      stdio mechanism, providing an alternate data path for the
+	      command processor. It is enabled when the unit boots up in
+	      'idle' mode.
+	    </p><p>
+	      On the TeleDongle side, the packet link is enabled with a
+	      command; data from the stdio package is forwarded over the
+	      packet link providing a connection from the USB command
+	      stream to the remote TeleMetrum device.
+	    </p></li><li class="listitem"><p>
+	      Radio Direction Finding mode. In this mode, TeleMetrum
+	      constructs a special packet that sounds like an audio tone
+	      when received by a conventional narrow-band FM
+	      receiver. This is designed to provide a beacon to track
+	      the device when other location mechanisms fail.
+	    </p></li></ol></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53920288"></a>2. ao_radio_set_telemetry</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_set_telemetry(void);
 	</pre><p>
@@ -684,7 +877,7 @@
 	  other RF parameters. It does not include the base frequency
 	  or channel though. Those are set at the time of transmission
 	  or reception, in case the values are changed by the user.
-	</p></div><div class="section" title="2. ao_radio_set_packet"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3467552"></a>2. ao_radio_set_packet</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53922448"></a>3. ao_radio_set_packet</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_set_packet(void);
 	</pre><p>
@@ -693,7 +886,7 @@
 	  parameters. It does not include the base frequency or
 	  channel though. Those are set at the time of transmission or
 	  reception, in case the values are changed by the user.
-	</p></div><div class="section" title="3. ao_radio_set_rdf"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3468800"></a>3. ao_radio_set_rdf</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53924608"></a>4. ao_radio_set_rdf</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_set_rdf(void);
 	</pre><p>
@@ -703,38 +896,38 @@
 	  and data whitening logic is turned off so that the resulting
 	  modulation is received as a 1kHz tone by a conventional 70cm
 	  FM audio receiver.
-	</p></div><div class="section" title="4. ao_radio_idle"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3470080"></a>4. ao_radio_idle</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53926848"></a>5. ao_radio_idle</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_idle(void);
 	</pre><p>
 	  Sets the radio device to idle mode, waiting until it reaches
 	  that state. This will terminate any in-progress transmit or
 	  receive operation.
-	</p></div><div class="section" title="5. ao_radio_get"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3471168"></a>5. ao_radio_get</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53928896"></a>6. ao_radio_get</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_get(void);
 	</pre><p>
 	  Acquires the radio mutex and then configures the radio
 	  frequency using the global radio calibration and channel
 	  values.
-	</p></div><div class="section" title="6. ao_radio_put"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3472232"></a>6. ao_radio_put</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53930928"></a>7. ao_radio_put</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_put(void);
 	</pre><p>
 	  Releases the radio mutex.
-	</p></div><div class="section" title="7. ao_radio_abort"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3473200"></a>7. ao_radio_abort</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53932864"></a>8. ao_radio_abort</h2></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_abort(void);
 	</pre><p>
 	  Aborts any transmission or reception process by aborting the
 	  associated DMA object and calling ao_radio_idle to terminate
 	  the radio operation.
-	</p></div><p>
-      In telemetry mode, you can send or receive a telemetry
-      packet. The data from receiving a packet also includes the RSSI
-      and status values supplied by the receiver. These are added
-      after the telemetry data.
-    </p><div class="section" title="8. ao_radio_send"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3474720"></a>8. ao_radio_send</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53934928"></a>9. Radio Telemetry</h2></div></div></div><p>
+	In telemetry mode, you can send or receive a telemetry
+	packet. The data from receiving a packet also includes the RSSI
+	and status values supplied by the receiver. These are added
+	after the telemetry data.
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53936224"></a>9.1. ao_radio_send</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_send(__xdata struct ao_telemetry *telemetry);
 	</pre><p>
@@ -743,7 +936,7 @@
 	  telemetry mode. This function calls ao_radio_get() before
 	  sending, and ao_radio_put() afterwards, to correctly
 	  serialize access to the radio device.
-	</p></div><div class="section" title="9. ao_radio_recv"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3475976"></a>9. ao_radio_recv</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53938448"></a>9.2. ao_radio_recv</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_recv(__xdata struct ao_radio_recv *radio);
 	</pre><p>
@@ -754,21 +947,21 @@
 	  to the radio device. This returns non-zero if a packet was
 	  received, or zero if the operation was aborted (from some
 	  other task calling ao_radio_abort()).
-	</p></div><p>
-      In radio direction finding mode, there's just one function to
-      use
-    </p><div class="section" title="10. ao_radio_rdf"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3477624"></a>10. ao_radio_rdf</h2></div></div></div><pre class="programlisting">
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53940912"></a>10. Radio Direction Finding</h2></div></div></div><p>
+	In radio direction finding mode, there's just one function to
+	use
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53942064"></a>10.1. ao_radio_rdf</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_radio_rdf(int ms);
 	</pre><p>
 	  This sends an RDF packet lasting for the specified amount
 	  of time. The maximum length is 1020 ms.
-	</p></div><p>
-      Packet mode is asymmetrical and is configured at compile time
-      for either master or slave mode (but not both). The basic I/O
-      functions look the same at both ends, but the internals are
-      different, along with the initialization steps.
-    </p><div class="section" title="11. ao_packet_putchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3479128"></a>11. ao_packet_putchar</h2></div></div></div><pre class="programlisting">
+	</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53944208"></a>11. Radio Packet Mode</h2></div></div></div><p>
+	Packet mode is asymmetrical and is configured at compile time
+	for either master or slave mode (but not both). The basic I/O
+	functions look the same at both ends, but the internals are
+	different, along with the initialization steps.
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53945520"></a>11.1. ao_packet_putchar</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_packet_putchar(char c);
 	</pre><p>
@@ -778,34 +971,34 @@
 	  transmit a packet if the output buffer is full. On the
 	  slave side, any pending data will be sent the next time
 	  the master polls for data.
-	</p></div><div class="section" title="12. ao_packet_pollchar"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3480400"></a>12. ao_packet_pollchar</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53947696"></a>11.2. ao_packet_pollchar</h3></div></div></div><pre class="programlisting">
 	  char
 	  ao_packet_pollchar(void);
 	</pre><p>
 	  This returns a pending input character if available,
 	  otherwise returns AO_READ_AGAIN. On the master side, if
 	  this empties the buffer, it triggers a poll for more data.
-	</p></div><div class="section" title="13. ao_packet_slave_start"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3481520"></a>13. ao_packet_slave_start</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53949776"></a>11.3. ao_packet_slave_start</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_packet_slave_start(void);
 	</pre><p>
 	  This is available only on the slave side and starts a task
 	  to listen for packet data.
-	</p></div><div class="section" title="14. ao_packet_slave_stop"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3482560"></a>14. ao_packet_slave_stop</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53951728"></a>11.4. ao_packet_slave_stop</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_packet_slave_stop(void);
 	</pre><p>
 	  Disables the packet slave task, stopping the radio receiver.
-	</p></div><div class="section" title="15. ao_packet_slave_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3483568"></a>15. ao_packet_slave_init</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53953648"></a>11.5. ao_packet_slave_init</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_packet_slave_init(void);
 	</pre><p>
 	  Adds the packet stdio functions to the stdio package so
 	  that when packet slave mode is enabled, characters will
 	  get send and received through the stdio functions.
-	</p></div><div class="section" title="16. ao_packet_master_init"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp3484688"></a>16. ao_packet_master_init</h2></div></div></div><pre class="programlisting">
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53955680"></a>11.6. ao_packet_master_init</h3></div></div></div><pre class="programlisting">
 	  void
 	  ao_packet_master_init(void);
 	</pre><p>
 	  Adds the 'p' packet forward command to start packet mode.
-	</p></div></div></div></body></html>
+	</p></div></div></div></div></body></html>
