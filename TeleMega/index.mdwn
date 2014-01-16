@@ -28,7 +28,7 @@ These are photos of the current production version 1.0:
 * 70cm ham-band transceiver for telemetry downlink
 * Barometric pressure sensor good to 100k feet MSL
 * 1-axis 105-g accelerometer for motor characterization
-* 3-axis 18-g accelerometer for gyro calibration
+* 3-axis 16-g accelerometer for gyro calibration
 * 3-axis 2000 deg/sec gyros
 * 3-axis magnetic sensor
 * On-board, integrated GPS receiver
