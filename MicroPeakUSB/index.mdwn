@@ -33,7 +33,9 @@ aligning the two boards by hand quite easy.
 <a href="v2.0/MicroPeakUSB-2.0-bundle.jpg"><img src="v2.0/MicroPeakUSB-2.0-bundle-640.jpg"></a>
 
 Here's a picture of the device in operation, with
-[MicroPeak](../MicroPeak)
+[MicroPeak](../MicroPeak) positioned to transmit data. The blue LED on
+the interface board is visible through the smaller hole in the front
+of the box.
 
 <a href="v2.0/MicroPeakUSB-2.0-inuse.jpg"><img src="v2.0/MicroPeakUSB-2.0-inuse-640.jpg"></a>
 
