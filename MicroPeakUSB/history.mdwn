@@ -1,0 +1,11 @@
+# MicroPeak USB Interface History
+
+## v1.0 ##
+
+This version came without a box and required the user to hold the
+MicroPeak LED tightly against the phototransistor, shading both from
+daylight.
+
+<a href="v1.0/mpusb-dime.jpg"><img src="v1.0/mpusb-dime-640.jpg"></a>
+
+<a href="v1.0/mpbundle.jpg"><img src="v1.0/mpbundle-640.jpg"></a>
