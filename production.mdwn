@@ -373,7 +373,7 @@ TeleMini v1.1 from phoenix panel
 
 ## sn 1264-1269 ##
 
-6 more EasyMini boards to be built by keithp
+Production run of 6 EasyMini v1.0 by keithp
 
 ## sn 1270-1377 ##
 
