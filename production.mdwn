@@ -387,4 +387,8 @@ Production run of 216 pieces of TeleDongle v0.2b byy
 
 ## sn 1594-1602 ##
 
-Production run of 9 EasyMini v1.0 by keithp
+Production run of 9 EasyMini v1.0 by keithp 2014.01.30
+ 
+## sn 1603-1611 ##
+
+Production run of 9 EasyMini v1.0 by keithp. 2014.02.04
