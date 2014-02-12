@@ -12,6 +12,13 @@ have on-board charging capability.
 Production units are available from the 
 [Garbee and Garbee](https://shop.gag.com) web store.
 
+These are photos of production version 1.1:
+
+<a href="v1.1/lipocharger-v1.1-top.jpg"> <img src="v1.1/lipocharger-v1.1-top-thumb.j
+pg"></a>
+<a href="v1.1/lipocharger-v1.1-bot.jpg"> <img src="v1.1/lipocharger-v1.1-bot-thumb
+.jpg"></a>
+
 ## Features ##
 
 ### User View ###
