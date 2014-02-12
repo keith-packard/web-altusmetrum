@@ -1,5 +1,54 @@
 # TeleMetrum History
 
+The v0 and v1 series have a lot of common hardware features. The final
+version in this line, v1.2 looked like:
+
+### User View ###
+
+* Recording altimeter for model rocketry
+* Supports dual deployment (can fire 2 ejection charges)
+* 70cm ham-band transceiver for telemetry downlink
+* Barometric pressure sensor good to 45k feet MSL
+* 1-axis 70-g accelerometer for motor characterization
+* On-board, integrated GPS receiver
+* On-board non-volatile memory for flight data storage
+* USB for power, configuration, and data recovery
+* Integrated support for LiPo rechargeable batteries
+* Uses LiPo to fire e-matches, can be factory modified to support separate pyro battery
+* 2.75 x 1 inch board designed to fit inside 29mm airframe coupler tube
+
+### Developer View ###
+
+* Hardware Features
+	* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
+		* Sub-1Ghz transceiver
+		* 8051 MCU
+		* 32k Flash
+		* 4k RAM
+		* USB 2.0
+		* 6 12-bit analog inputs (11 bits with single-ended sensors)
+		* 2 channels of serial I/O
+		* digital I/O
+	* [Winbond W25Q16](http://www.winbond.com/NR/exeres/A3D21C82-A0B6-4586-A770-2F0883A805FF.htm) serial flash memory
+		* 2M x 8
+		* SPI interface
+	* [SkyTraq](http://www.skytraq.com.tw/) Venus634FLPx GPS receiver
+		* on-board [Taoglas AP.17A.01](http://www.taoglas.com/antennas/GPS_Antennas/Internal_GPS_-_Active_Patch_Modules/) 
+		  single-stage active patch antenna
+		* U.FL connector with 3.3V DC can be re-purposed for optional external amplified antennas
+		* async serial interface
+	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
+	* [Analog Devices ADXL78](http://www.analog.com/en/mems-sensors/inertial-sensors/adxl78/products/product.html) 70g accelerometer.
+* Software Features
+	* Written mostly in C with some 8051 assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
+		serial DataFlash chip
+	* USB serial emulation for "console" interface
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
+
+
 ## v0.1 ##
 
 This is a photo of our original board with serial port for off-board GPS,
@@ -170,7 +219,7 @@ of the files for Production PCB version 1.1 in more easily readable form.
 
 ## v1.2 ##
 
-This is our current production version, first made available for sale on
+This is our last production version of the 1.0 series, first made available for sale on
 Christmas day 2011.
 
 Changes from v1.1 include:
