@@ -6,11 +6,10 @@ with integrated GPS and telemetry link.
 For the latest TeleMetrum firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of the previous production version (we haven't taken good
-pictures of v2.0 yet):
+These are photos of production version 2.0:
 
-<a href="v1.1/telemetrum-v1.1-thside.jpg"> <img src="v1.1/telemetrum-v1.1-thside-thumb.jpg"></a>
-<a href="v1.1/telemetrum-v1.1-smtside.jpg"> <img src="v1.1/telemetrum-v1.1-smtside-thumb.jpg"></a>
+<a href="v2.0/telemetrum-v2.0-th.jpg"> <img src="v2.0/telemetrum-v2.0-th-thumb.jpg"></a>
+<a href="v2.0/telemetrum-v2.0-smt.jpg"> <img src="v2.0/telemetrum-v2.0-smt-thumb.jpg"></a>
 
 ## Features ##
 
