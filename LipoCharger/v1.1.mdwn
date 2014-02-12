@@ -1,0 +1,1 @@
+[[!map pages="LipoCharger/v1.1/* and ! LipoCharger/v1.1/*/*"]]
