@@ -107,6 +107,5 @@ sled with wire ties, for example.
 
 If this all seems scary or just beyond your soldering abilities, you can either
 find a friend locally to help you out, or if the battery in question came from
-us or one of our distributors, feel free to contact us by sending
-email to [fixmybattery@altusmetrum.org](<mailto:fixmybattery@altusmetrum.org)
-and we'll do what we can to help!
+us or one of our distributors, feel free to contact us, and we'll do what 
+we can to help!
