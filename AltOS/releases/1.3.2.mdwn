@@ -1,7 +1,7 @@
 [[!inline pages="./1.3.2/release-notes-1.3.2.html" rss="no" raw="yes" ]]
 
 - Available Files:
-	- [Windows Installer](/AltOS/releases/1.3.2/Altos-Windows-1.3.2.exe)
+	- [Windows Installer](/AltOS/releases/1.3.2/Altos-Windows-1-3-2.exe)
 	- [Mac OS X Package](/AltOS/releases/1.3.2/Altos-Mac-1.3.2.dmg)
 	- [Linux](/AltOS/releases/1.3.2/Altos-Linux-1.3.2.tar.bz2)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.3.2;sf=tgz)
