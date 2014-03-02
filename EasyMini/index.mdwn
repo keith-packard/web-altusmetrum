@@ -26,6 +26,7 @@ production units yet:
 * Designed to use a battery supplying 3.7V-12V.
 * 1.5 x 0.8 inch board designed to fit inside 24mm airframe coupler tube
 * 2MB on-board data logging flash
+* Weighs only 6.5g (less than 1/4 oz)
 
 ### Developer View ###
 
