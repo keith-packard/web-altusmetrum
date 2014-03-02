@@ -4,6 +4,13 @@ These are presentations we've made at various conferences.  Not everything
 is linked in here yet...  Be warned, the OpenOffice presentation files tend 
 to be HUGE, since we include lots of high-resolution photos!
 
+## Local 4H presentation in March 2014 ##
+
+Bdale was invited to give an introduction to electronics in rockets to a 
+local 4H rocketry project in Colorado Springs.
+
+* [Slides](./RocketElectronics.odp)
+  
 ## LCA 2010 ##
 
 Bdale and Keith presenting on [TeleMetrum](../TeleMetrum) v0.2 at LCA 2010 in
