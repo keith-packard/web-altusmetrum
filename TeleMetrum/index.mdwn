@@ -11,6 +11,9 @@ These are photos of production version 2.0:
 <a href="v2.0/telemetrum-v2.0-th.jpg"> <img src="v2.0/telemetrum-v2.0-th-thumb.jpg"></a>
 <a href="v2.0/telemetrum-v2.0-smt.jpg"> <img src="v2.0/telemetrum-v2.0-smt-thumb.jpg"></a>
 
+Prototypes of v2.0 were flown at Airfest 2013 and everything worked
+great. TeleMetrum v2.0 is now available for sale.
+
 ## Features ##
 
 ### User View ###
@@ -76,6 +79,9 @@ There is a single manual for TeleMetrum and all other Altus Metrum products,
 which is available in [html](../AltOS/doc/altusmetrum.html) and 
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
+An outline of the board with drill hole locations is available in
+[pdf](../Documents/telemetrum-outline.pdf) format.
+
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telemetrum](http://git.gag.com/?p=hw/telemetrum;a=summary).  
@@ -109,13 +115,6 @@ custom analysis you can envision!  More details on the software,
 including full source code and pre-built packages
 can be found on the [AltOS](../AltOS) page on this site.  Feel free to 
 download the software and try it before purchasing our hardware!
-
-## Future Plans ##
-
-Prototypes of v2.0 were flown at Airfest 2013 and everything worked
-great, except that we're not satisfied with the performance of the GPS
-antenna chosen.  We hope to resolve that issue soon and should have
-TeleMetrum v2.0 boards for sale shortly.
 
 ## [History of TeleMetrum](history) ##
 

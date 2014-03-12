@@ -14,5 +14,14 @@ think before you act!
  * [Remove the protection circuit board from a LiPo battery](./FixBattery)
  * [Use a separate pyro battery](./SeparatePyroBattery)
 
+## Product Outlines and Drill Patterns ##
+
+These are single page PDF files that show the outline of each product
+along with where to drill holes for mounting.
+
+ * [TeleMetrum Outline (both v1 and v2)](./telemetrum-outline.pdf)
+ * [TeleMega Outline](./telemega-outline.pdf)
+ * [EasyMini and TeleMini Outline](./easymini-outline.pdf)
+
 ## Collected References ##
 

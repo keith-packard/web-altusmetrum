@@ -39,6 +39,10 @@ Altus Metrum products are available directly from
 
 These products are available for purchase:
 
+* [TeleMetrum](TeleMetrum/) 
+is our flagship product, a dual-deploy rocketry altimeter with
+GPS and bidirectional RF telemetry link.
+
 * [TeleMega](TeleMega/)
 is a high-end flight computer with 6 pyro channels, more and better sensors,
 GPS, and a high performance bidirectional RF telemetry link.
@@ -64,10 +68,6 @@ provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
 The following products will be available again soon:
-
-* [TeleMetrum](TeleMetrum/) 
-is our flagship product, a dual-deploy rocketry altimeter with
-GPS and bidirectional RF telemetry link.
 
 * [TeleMini](TeleMini/)
 is a smaller dual-deploy rocketry altimeter with telemetry using only a 
