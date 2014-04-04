@@ -44,8 +44,8 @@ is our flagship product, a dual-deploy rocketry altimeter with
 GPS and bidirectional RF telemetry link.
 
 * [TeleMega](TeleMega/)
-is a high-end flight computer with 6 pyro channels, more and better sensors,
-GPS, and a high performance bidirectional RF telemetry link.
+is a high-end flight computer with 6 pyro channels, tilt limits, more and 
+better sensors, GPS, and a high performance bidirectional RF telemetry link.
 
 * [TeleDongle](TeleDongle/) 
 is a simple RF interface for use in ground stations interacting with rockets
