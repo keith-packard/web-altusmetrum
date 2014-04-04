@@ -47,6 +47,13 @@ GPS and bidirectional RF telemetry link.
 is a high-end flight computer with 6 pyro channels, more and better sensors,
 GPS, and a high performance bidirectional RF telemetry link.
 
+* [TeleDongle](TeleDongle/) 
+is a simple RF interface for use in ground stations interacting with rockets
+using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
+interface for other microcontroller systems.  Note that we don't actually 
+sell TeleDongle by itself, it is included in our 
+[Starter Pack](http://shop.gag.com/ground-stations/starter-pack.html) offering.
+
 * [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
 [Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
 useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for Android devices!
@@ -67,16 +74,15 @@ ideal altimeter for model rocket contests.
 provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
-The following products will be available again soon:
+The following products will be available soon:
+
+* [TeleGPS](TeleGPS/)
+is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
+high dynamic performance and a combination digital/APRS transmitter.
 
 * [TeleMini](TeleMini/)
 is a smaller dual-deploy rocketry altimeter with telemetry using only a 
 barometric pressure sensor
-
-* [TeleDongle](TeleDongle/) 
-is a simple RF interface for use in ground stations interacting with rockets
-using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
-interface for other microcontroller systems.
 
 # Projects #
 
@@ -92,10 +98,6 @@ is a supposedly-higher-performance alternative to [TeleDongle](TeleDongle/).
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
-
-* [TeleGPS](TeleGPS/)
-is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
-high dynamic performance and a combination digital/APRS transmitter.
 
 * [TeleNano](TeleNano/)
 is a tiny rocketry altimeter with telemetry using only a barometric 
