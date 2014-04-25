@@ -1,16 +1,15 @@
 # TeleGPS
 
-This is a GPS-based position tracker and logger.
-
-TeleGPS is currently in development, with a handful of prototype
-boards built. Production units will eventually be available from the 
-[Garbee and Garbee](https://shop.gag.com) web 
-store.
+This is a GPS-based position tracker and logger.  It uses the same GPS
+receiver and similar radio to our flight computers, but does not include
+pyro circuits.  This allows the board to be small and light, so that it will
+fit well anywhere you need a good GPS tracker.
 
 For the latest TeleGPS firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of our current prototype version: 
+These are photos of an earlier prototype version, the final boards are
+slightly wider: 
 
 <a href="v0.3/telegps-top.jpg"> <img src="v0.3/telegps-top-thumb.jpg"></a>
 <a href="v0.3/telegps-parts.jpg"> <img src="v0.3/telegps-parts-thumb.jpg"></a>
@@ -23,7 +22,7 @@ These are photos of our current prototype version:
 * Offers custom digital telemetry, APRS and direction beacons
 * High-dynamics GPS receiver for accurate tracking
 * Uses 3.7V Lithium Polymer battery.
-* 1.5 x 0.8 inch board designed to fit inside 24mm airframe coupler tube
+* 1.5 x 1.0 inch board designed to fit inside 29mm airframe coupler tube
 * 2MB on-board data logging flash
 * Built-in USB connection for configuration, data download and battery charging
 
@@ -62,7 +61,4 @@ in the project [hw/telegps](http://git.gag.com/?p=hw/telegps;a=summary).
 
 ## Future Plans ##
 
-The GPS performance of the initial prototypes was disappointing.  We're 
-evaluating different GPS antennas and board geometries to resolve that, and
-expect at least one more prototype version will be required once we choose
-the optimal combination.
+We expect to have these for sale in late May 2014.
