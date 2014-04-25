@@ -8,11 +8,10 @@ fit well anywhere you need a good GPS tracker.
 For the latest TeleGPS firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of an earlier prototype version, the final boards are
-slightly wider: 
+These are photos of the last prototype version before production:
 
-<a href="v0.3/telegps-top.jpg"> <img src="v0.3/telegps-top-thumb.jpg"></a>
-<a href="v0.3/telegps-parts.jpg"> <img src="v0.3/telegps-parts-thumb.jpg"></a>
+<a href="v0.3wide/telegps-v0.3wide-top.jpg"> <img src="v0.3wide/telegps-v0.3wide-top-thumb.jpg"></a>
+<a href="v0.3wide/telegps-v0.3wide-bottom.jpg"> <img src="v0.3wide/telegps-v0.3wide-bottom-thumb.jpg"></a>
 
 ## Features ##
 
