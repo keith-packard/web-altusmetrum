@@ -406,3 +406,8 @@ Prototype build of 3 TeleGPS v0.3 by Bdale 2014.03.11.
 
 Production run of 200 pieces of EasyMini v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2014.04.02.
+
+## sn 1865-1867 ##
+
+Prototype build of 3 USBrelay v0.1 by Bdale 2014.05.07.
+
