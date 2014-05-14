@@ -411,3 +411,11 @@ Production run of 200 pieces of EasyMini v1.0 by
 
 Prototype build of 3 USBrelay v0.1 by Bdale 2014.05.07.
 
+## sn 1868-1870 ##
+
+Prototype build of 3 FCtester v0.1 by Bdale 2014.05.11.
+
+## sn 1871-1873 ##
+
+Prototype build of 3 EasyMega v0.1 by Bdale 2014.05.14
+
