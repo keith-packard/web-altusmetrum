@@ -1,14 +1,16 @@
 # TeleMini #
 
 TeleMini version 2.0 is a small, baro-only recording dual-deploy
-altimeter for model rocketry with integrated telemetry link. It's
-currently in development, with production planned to start in the fall
-of 2013.
+altimeter for model rocketry with integrated telemetry link.  The board 
+form factor and features are identical to [EasyMini](../EasyMini/), with the
+addition of radio telemetry and direction finding.  TeleMini is an excellent
+choice for mid-power and smaller high-power rockets, and can also be a
+cost-effective solution for booster recovery in multi-stage projects, etc.
 
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of our current prototype version: 
+These are photos of an early prototype version: 
 
 <a href="v2.0/telemini-top.jpg"> <img src="v2.0/telemini-top-thumb.jpg"></a>
 <a href="v2.0/telemini-parts.jpg"> <img src="v2.0/telemini-parts-thumb.jpg"></a>
@@ -64,3 +66,9 @@ The hardware design files can be found on [git.gag.com](http://git.gag.com)
 in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
 
 ## [History of TeleMini](history) ##
+
+## Future Plans ##
+
+Our current prototypes mostly work, but there are a couple issues yet to 
+resolve.  We hope to complete this design and put TeleMini v2.0 into production
+sometime in mid-2014.
