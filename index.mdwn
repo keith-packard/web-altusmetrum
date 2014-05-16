@@ -94,6 +94,11 @@ These are projects we're working on that may become products someday:
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
 
+* [EasyMega](EasyMega/)
+is a high-end flight computer with 6 pyro channels, tilt limits, etc.  The
+design is identical to [TeleMega](TeleMega/), but without the GPS receiver 
+and radio telemetry link.
+
 * [MegaDongle](MegaDongle/)
 is a supposedly-higher-performance alternative to [TeleDongle](TeleDongle/).
 
