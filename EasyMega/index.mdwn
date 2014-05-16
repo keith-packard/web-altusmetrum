@@ -1,0 +1,82 @@
+# EasyMega
+
+This is a high-end recording dual-deploy altimeter for high power model 
+rocketry.  The feature set is identical to [TeleMega](../TeleMega), but 
+without the integrated GPS and telemetry link.  This makes EasyMega an
+ideal choice for complex projects including sustainers on multi-stage 
+projects where integrated radio functionality isn't needed.  4 of the 6
+pyro events are configurable and can be based on time and various flight 
+events and status, including angle from vertical.
+
+For the latest EasyMega firmware and related ground station software, please
+visit the [AltOS](../AltOS) page on this site.  EasyMega requires AltOS
+version 1.3.3 or later.
+
+I'll add photos of the prototypes soon.
+
+<a href="v0.1/easymega-v0.1-top.jpg"> <img src="v0.1/easymega-v0.1-top-thumb.jpg"></a>
+<a href="v0.1/easymega-v0.1-bottom.jpg"> <img src="v0.1/easymega-v0.1-bottom-thumb.jpg"></a>
+
+## Features ##
+
+### User View ###
+
+* Recording altimeter for high power model rocketry
+* Supports dual deployment and 4 additional pyro events.  
+  Pyro events are 
+  configurable and can be based on time and various flight events and status,
+  including angle from vertical (for safety in staging and air start flights).
+* Barometric pressure sensor good to 100k feet MSL
+* 1-axis 105-g accelerometer for motor characterization
+* 3-axis 16-g accelerometer for gyro calibration
+* 3-axis 2000 deg/sec gyros
+* 3-axis magnetic sensor
+* On-board non-volatile memory for flight data storage
+* USB for power, configuration, and data recovery
+* Integrated support for LiPo rechargeable batteries
+* User choice of pyro battery configuration, can use primary LiPo or any
+  customer-chosen separate pyro battery up to 12 volts nominal.
+* 2.25 x 1.25 inch board designed to fit inside 38mm airframe coupler tube
+
+### Developer View ###
+
+* Hardware Features
+	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
+	* 150mA 3.3V LDO regulator
+	* [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/ProductLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
+	* Measurement Specialties [MS5607](http://www.meas-spec.com/product/t_product.aspx?id=8499) Micro Altimeter Module
+		* Wide range — 120kPa to 1kPa (approximately -1500m to 31000m)
+		* High precision — 2.4Pa resolution (approximately 20cm at sea level)
+		* Factory calibrated.
+	* Freescale [MMA6555](http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MMA65xx&fsrch=1&sr=1) Single Axis SPI Intertial Sensor
+		* +- 105g full-scale
+		* on-chip 12-bit digitizer
+	* Invensense [MPU-6000](http://invensense.com/mems/gyro/mpu6050.html) Six-Axis MEMS Motion Tracking Device
+		* tri-axis angular rate sensor up to 2000 degrees/second
+		* tri-axis accelerometer with +- 16g range
+		* three on-chip ADCs for true simultaneous sampling of all axes
+	* Honeywell HMC5883L 3-axis magnetic (compass) sensor
+* Software Features
+	* Written mostly in C with some ARM assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores flight data to serial flash
+	* USB serial emulation for "console" interface
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+There is a single manual for EasyMega and most other Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+
+The hardware design current gEDA files are available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/easymega](http://git.gag.com/?p=hw/easymega;a=summary).  
+
+## Future Plans ##
+
+Version 0.1 prototypes are built and seem to work.  After some flight testing,
+we'll decide if and when this goes to production.
