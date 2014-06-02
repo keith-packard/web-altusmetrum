@@ -4,7 +4,7 @@
 
 Open hardware and software designs 
 for high powered model rocketry by
-[Bdale Garbee](http://gag.com/~bdale) and 
+[Bdale Garbee](http://gag.com/bdale) and 
 [Keith Packard](http://keithp.com/keithp).
 <p>
 All hardware designs on this site are licensed under the 
