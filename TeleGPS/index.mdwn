@@ -8,10 +8,10 @@ fit well anywhere you need a good GPS tracker.
 For the latest TeleGPS firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of the last prototype version before production:
+These are photos of production version 1.0:
 
-<a href="v0.3wide/telegps-v0.3wide-top.jpg"> <img src="v0.3wide/telegps-v0.3wide-top-thumb.jpg"></a>
-<a href="v0.3wide/telegps-v0.3wide-bottom.jpg"> <img src="v0.3wide/telegps-v0.3wide-bottom-thumb.jpg"></a>
+<a href="v1.0/telegps-v1.0-top.jpg"> <img src="v1.0/telegps-v1.0-top-thumb.jpg"></a>
+<a href="v1.0/telegps-v1.0-bottom.jpg"> <img src="v1.0/telegps-v1.0-bottom-thumb.jpg"></a>
 
 ## Features ##
 
@@ -58,6 +58,3 @@ which is available in [html](../AltOS/doc/altusmetrum.html) and
 The hardware design files can be found on [git.gag.com](http://git.gag.com) 
 in the project [hw/telegps](http://git.gag.com/?p=hw/telegps;a=summary).  
 
-## Future Plans ##
-
-We expect to have these for sale in late May 2014.
