@@ -78,7 +78,9 @@ to the particular model of EPCOS thermistor that we chose for
 [YikStik3](http://www.gag.com/rockets/airframes/YikStik3/).  A major revision of 
 the board led to v0.2 which is in the process of being turned on and evaluated.
 
-No firm schedule for production and sale of TeleScience has been set yet.
+Most prototypes of TeleScience were lost in the 
+[Black Forest Fire](http://www.gag.com/blackforestfire.html), 
+we hope to get back to this project someday.
 
 ## [History of TeleScience](history) ##
 

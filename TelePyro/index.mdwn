@@ -53,3 +53,7 @@ but no prototypes have been built yet.
 
 As of late September 2011, v0.1 prototype boards are loaded and under test.
 
+Most prototypes of TelePyro were lost in the 
+[Black Forest Fire](http://www.gag.com/blackforestfire.html), 
+we hope to get back to this project someday.
+
