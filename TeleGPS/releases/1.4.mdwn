@@ -7,7 +7,7 @@
 	- [Mac OS X](/TeleGPS/releases/1.4/TeleGPS-Mac-1.4.dmg)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4;sf=tgz)
 
-[AltOS 1.4](/AltOS/releases/1.4)
-[MicroPeak 1.4](/MicroPeak/releases/1.4)
+[AltOS 1.4](/AltOS/releases/1.4.html)
+[MicroPeak 1.4](/MicroPeak/releases/1.4.html)
 
 [[!inline pages="./1.4/release-notes-1.4.html" rss="no" raw="yes" ]]
