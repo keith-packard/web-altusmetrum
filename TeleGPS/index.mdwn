@@ -13,6 +13,21 @@ These are photos of production version 1.0:
 <a href="v1.0/telegps-v1.0-top.jpg"> <img src="v1.0/telegps-v1.0-top-thumb.jpg"></a>
 <a href="v1.0/telegps-v1.0-bottom.jpg"> <img src="v1.0/telegps-v1.0-bottom-thumb.jpg"></a>
 
+## Software ##
+
+The TeleGPS application runs on Linux, Mac OS X and Windows. It's written 
+in [Java](http://java.com) and offers the
+same functionality and interface on all three platforms. It uses the
+FTDI USB Serial drivers to communicate with the hardware. If you're
+running Mac OS X or Windows, a compatible version of those drivers is
+included with the software. You can also install a different from from
+the [FTDI Driver](http://www.ftdichip.com/FTDrivers.htm) page.
+
+### Available Versions ###
+
+[[!inline pages="./releases/* and !*/Discussion and !*.html and !*.bz2 and !*.zi
+p and !*.exe and !*.dmg" show="10" rss="no" raw="yes" ]]
+
 ## Features ##
 
 ### User View ###
