@@ -1,0 +1,114 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
+    Version 1.4 is a major release. It includes support for our new
+    TeleGPS product, new features and bug fixes in in the flight
+    software for all our boards and the AltosUI ground station
+  </p><p>
+    AltOS New Features
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add support for TeleGPS boards.
+	</p></li><li class="listitem"><p>
+	  Replace the 'dit dit dit' tones at startup with the current
+	  battery voltage, measured in tenths of a volt. This lets you
+	  check the battery voltage without needing telemetry, which
+	  is especially useful on EasyMini.
+	</p></li><li class="listitem"><p>
+	  Change state beeping to "Farnsworth spacing", which means
+	  they're quite a bit faster than before, and so they take
+	  less time to send.
+	</p></li><li class="listitem"><p>
+	  Make the beeper tone configurable, making it possible to
+	  distinguish between two Altus Metrum products in the same ebay.
+	</p></li><li class="listitem"><p>
+	  Make the firing time for extra pyro channels configurable,
+	  allowing longer (or shorter) than the default 50ms.  Only relevant
+	  for TeleMega at this time.
+	</p></li></ul></div><p>
+  </p><p>
+    AltOS Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Fix bug preventing the selection of the 'Flight State After'
+	  mode in pyro configuration.
+	</p></li><li class="listitem"><p>
+	  Fix bug where erasing flights would reset the flight number
+	  to 2 on TeleMega and TeleMetrum v2.
+	</p></li><li class="listitem"><p>
+	  Fix u-Blox GPS driver to mark course and speed data as being
+	  present.
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI New Features
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add zooming and new content types (terrain and road maps) to
+	  map view. Change map storage format from PNG to Jpeg, which
+	  saves a huge amount of disk space. You will need to
+	  re-download all of your pre-loaded map images.
+	</p></li><li class="listitem"><p>
+	  Add a distance measuring device to the maps view. Select
+	  this by using any button other than the left one, or by
+	  pressing shift or control on the keyboard while using the
+	  left button.
+	</p></li><li class="listitem"><p>
+	  Add new 'Ignitor' tab to the flight monitor display for
+	  TeleMega's extra ignitors.
+	</p></li><li class="listitem"><p>
+	  Increase the width of data lines in the graphs to make them
+	  easier to read.
+	</p></li><li class="listitem"><p>
+	  Add additional ignitor firing marks and voltages to the
+	  graph so you can see when the ignitors fired, along with
+	  the ignitor voltages.
+	</p></li><li class="listitem"><p>
+	  Add GPS course, ground speed and climb rate as optional
+	  graph elements.
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  When flashing new firmware, re-try opening the device as
+	  sometimes it takes a while for the underlying operating
+	  system to recognize that the device has rebooted in
+	  preparation for the flashing operation.
+	</p></li><li class="listitem"><p>
+	  Hide Tilt Angle in ascent tab for devices that don't have a gyro.
+	</p></li><li class="listitem"><p>
+	  Filter out speed and acceleration spikes caused by ejection
+	  charge firing when computing the maximum values. This
+	  provides a more accurate reading of those maximums.
+	</p></li><li class="listitem"><p>
+	  Fix EasyMini voltage displays. Early EasyMini prototypes
+	  used a 3.0V regulator, and AltosUI still used that value as
+	  the basis of the computation. Production EasyMini boards
+	  have always shipped with a 3.3V regulator. Also, purple
+	  EasyMini boards sensed the battery voltage past the blocking
+	  diode, resulting in a drop of about 150mV from the true
+	  battery voltage. Compensate for that when displaying the
+	  value.
+	</p></li><li class="listitem"><p>
+	  Display error message when trying to configure maximum
+	  flight log size while the flight computer still has flight
+	  data stored.
+	</p></li><li class="listitem"><p>
+	  Handle TeleMetrum and TeleMini eeprom files generated with
+	  pre-1.0 firmware. Those ancient versions didn't report the
+	  log format, so just use the product name instead.
+	</p></li></ul></div><p>
+  </p><p>
+    TeleGPS Application
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  New application designed for use with TeleGPS boards.
+	</p></li><li class="listitem"><p>
+	  Shares code with AltosUI, mostly just trimmed down to focus
+	  on TeleGPS-related functions.
+	</p></li></ul></div><p>
+  </p><p>
+    Documentation changes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Re-create the drill template images; they should print
+	  correctly from Firefox at least. Ship these as individual
+	  PDF files so they're easy to print.
+	</p></li><li class="listitem"><p>
+	  Add a description of the 'Apogee Lockout' setting, which
+	  prevents the apogee charge from firing for a configurable
+	  amount of time after boost.
+	</p></li></ul></div><p>
+  </p></div></body></html>
