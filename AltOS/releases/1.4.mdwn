@@ -5,8 +5,9 @@
 	- [Windows Installer](/AltOS/releases/1.4/Altos-Windows-1-4.exe)
 	- [Mac OS X Package](/AltOS/releases/1.4/Altos-Mac-1.4.dmg)
 	- [Linux](/AltOS/releases/1.4/Altos-Linux-1.4.sh)
-	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4;sf=tgz)<br><br>
-	- [MicroPeak 1.4](/MicroPeak/releases/1.4.html) dedicated application
-	- [TeleGPS 1.4](/TeleGPS/releases/1.4.html) dedicated application
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4;sf=tgz)
+- Related Programs
+	- [MicroPeak 1.4](/MicroPeak/releases/1.4.html)
+	- [TeleGPS 1.4](/TeleGPS/releases/1.4.html)
 
 [[!inline pages="./1.4/release-notes-1.4.html" rss="no" raw="yes" ]]
