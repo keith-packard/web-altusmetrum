@@ -25,8 +25,7 @@ the [FTDI Driver](http://www.ftdichip.com/FTDrivers.htm) page.
 
 ### Available Versions ###
 
-[[!inline pages="./releases/* and !*/Discussion and !*.sh and !*.html and !*.bz2 and !*.zi
-p and !*.exe and !*.dmg" show="10" rss="no" raw="yes" ]]
+[[!inline pages="./releases/* and !*/Discussion and !*.sh and !*.html and !*.bz2 and !*.zip and !*.exe and !*.dmg" show="10" rss="no" raw="yes" ]]
 
 ## Features ##
 
