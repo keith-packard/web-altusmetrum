@@ -2,7 +2,7 @@
 
 - Available Files:
 	- [Windows](/MicroPeak/releases/1.4/MicroPeak-Windows-1-4.exe)
-	- [Linux](/MicroPeak/releases/1.4/MicroPeak-Linux-1.4.tar.bz2)
+	- [Linux](/MicroPeak/releases/1.4/MicroPeak-Linux-1.4.sh)
 	- [Mac OS X](/MicroPeak/releases/1.4/MicroPeak-Mac-1.4.dmg)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4;sf=tgz)
 
