@@ -1,4 +1,5 @@
-[[!inline pages="./1.4/release-notes-1.4.html" rss="no" raw="yes" ]]
+-----------------
+### TeleGPS version 1.4 ###
 
 - Available Files:
 	- [Windows](/TeleGPS/releases/1.4/TeleGPS-Windows-1-4.exe)
@@ -6,3 +7,7 @@
 	- [Mac OS X](/TeleGPS/releases/1.4/TeleGPS-Mac-1.4.dmg)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4;sf=tgz)
 
+[AltOS 1.4](/AltOS/releases/1.4)
+[MicroPeak 1.4](/MicroPeak/releases/1.4)
+
+[[!inline pages="./1.4/release-notes-1.4.html" rss="no" raw="yes" ]]
