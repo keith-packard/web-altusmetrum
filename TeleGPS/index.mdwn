@@ -13,6 +13,11 @@ These are photos of production version 1.0:
 <a href="v1.0/telegps-v1.0-top.jpg"> <img src="v1.0/telegps-v1.0-top-thumb.jpg"></a>
 <a href="v1.0/telegps-v1.0-bottom.jpg"> <img src="v1.0/telegps-v1.0-bottom-thumb.jpg"></a>
 
+## Documentation ##
+
+The manual for TeleGPS is available in [html](../AltOS/doc/telegps.html) and 
+[pdf](../AltOS/doc/telegps.pdf) formats.
+
 ## Software ##
 
 The TeleGPS application runs on Linux, Mac OS X and Windows. It's written 
