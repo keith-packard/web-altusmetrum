@@ -41,11 +41,13 @@ includes a dedicated [MicroPeak](/MicroPeak) application.
 
 * GPS tracker and logger
 * Offers custom digital telemetry, APRS and direction beacons
+* 16mW transmit power
 * High-dynamics GPS receiver for accurate tracking
 * Uses 3.7V Lithium Polymer battery.
 * 1.5 x 1.0 inch board designed to fit inside 29mm airframe coupler tube
 * 2MB on-board data logging flash
 * Built-in USB connection for configuration, data download and battery charging
+* 12.3g flight weight (including antenna, excluding any battery)
 
 ### Developer View ###
 
@@ -59,6 +61,8 @@ includes a dedicated [MicroPeak](/MicroPeak) application.
 		* I2C, SPI, async serial
 		* digital I/O
 	* [uBlox Max 7Q](http://www.u-blox.com/en/gps-modules/pvt-modules/max-7.html) GPS receiver
+	* [TI CC115L](http://www.ti.com/product/cc115L) 70cm transmitter
+	* Built-in USB data download and battery charger connection
 	* 2MB SPI flash
 * Software Features
 	* Written mostly in C with some ARM assembler
