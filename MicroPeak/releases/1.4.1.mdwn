@@ -2,7 +2,7 @@
 ### MicroPeak version 1.4.1 ###
 
 - Available Downloads:
-	- [Windows](/MicroPeak/releases/1.4.1/MicroPeak-Windows-1.4.1.exe)
+	- [Windows](/MicroPeak/releases/1.4.1/MicroPeak-Windows-1-4-1.exe)
 	- [Linux](/MicroPeak/releases/1.4.1/MicroPeak-Linux-1.4.1.sh)
 	- [Mac OS X](/MicroPeak/releases/1.4.1/MicroPeak-Mac-1.4.1.dmg)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4.1;sf=tgz)

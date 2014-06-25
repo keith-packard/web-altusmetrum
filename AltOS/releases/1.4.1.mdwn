@@ -2,7 +2,7 @@
 ### AltOS Version 1.4.1 ###
 
 - Available Downloads:
-	- [Windows Installer](/AltOS/releases/1.4.1/Altos-Windows-1.4.1.exe)
+	- [Windows Installer](/AltOS/releases/1.4.1/Altos-Windows-1-4-1.exe)
 	- [Mac OS X Package](/AltOS/releases/1.4.1/Altos-Mac-1.4.1.dmg)
 	- [Linux](/AltOS/releases/1.4.1/Altos-Linux-1.4.1.sh)
 	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.4.1;sf=tgz)
