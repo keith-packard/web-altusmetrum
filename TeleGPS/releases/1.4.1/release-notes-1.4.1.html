@@ -1,0 +1,32 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
+    Version 1.4.1 is a minor release. It fixes install issues on
+    Windows and provides the missing TeleMetrum V2.0 firmware. There
+    aren't any changes to the firmware or host applications at
+    all. All Windows users will want to upgrade to get the signed
+    driver, but Mac and Linux users who do not need the TeleMetrum
+    V2.0 firmware image will not need to upgrade.
+  </p><p>
+    Windows Install Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Provide signed Windows driver files. This should avoid any need to
+	  disable driver signature checking on Windows 7 or 8.
+	</p></li><li class="listitem"><p>
+	  Fix Java version detection and download. Previously, the
+	  installer would only look for Java 6 or 7 and insist on
+	  downloading its own Java bits if there was something else
+	  installed. Furthermore, the 64-bit Java link provided didn't
+	  work for anyone other than Keith, making it impossible to
+	  install AltOS on any machine with Java SE 8 installed.
+	</p></li></ul></div><p>
+  </p><p>
+    Other Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Include 1.4 firmware for TeleMetrum V2.0. None of the
+	  installers shipped this file. Now it's included in the AltOS
+	  packages for Linux, Mac and Windows.
+	</p></li><li class="listitem"><p>
+	  Include Google Application Key for map downloading. The 1.4
+	  release didn't have this key in the released version of the
+	  software, making map downloading fail for most people.
+	</p></li></ul></div><p>
+  </p></div></body></html>
