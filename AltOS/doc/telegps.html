@@ -1,12 +1,14 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>TeleGPS Owner's Manual</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book"><div class="titlepage"><div><div><h1 class="title"><a name="idp46686976"></a>TeleGPS Owner's Manual</h1></div><div><h2 class="subtitle">A recording GPS tracker</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2014 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice"><a name="idp46615152"></a><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>TeleGPS Owner's Manual</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book"><div class="titlepage"><div><div><h1 class="title"><a name="idp27051008"></a>TeleGPS Owner's Manual</h1></div><div><h2 class="subtitle">A recording GPS tracker</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3></div></div><div><p class="copyright">Copyright © 2014 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice"><a name="idp54268208"></a><p>
         This document is released under the terms of the
         <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
           Creative Commons ShareAlike 3.0
         </a>
         license.
-      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 1.4</td><td align="left">13 June 2014</td></tr><tr><td align="left" colspan="2">
+      </p></div></div><div><div class="revhistory"><table style="border-style:solid; width:100%;" summary="Revision History"><tr><th align="left" valign="top" colspan="2"><b>Revision History</b></th></tr><tr><td align="left">Revision 1.4.1</td><td align="left">20 June 2014</td></tr><tr><td align="left" colspan="2">
+	  Minor release fixing some installation bugs.
+	</td></tr><tr><td align="left">Revision 1.4</td><td align="left">13 June 2014</td></tr><tr><td align="left" colspan="2">
 	  Initial release
-	</td></tr></table></div></div></div><hr></div><div class="dedication"><div class="titlepage"><div><div><h1 class="title"><a name="idp46618640"></a>Acknowledgements</h1></div></div></div><p>
+	</td></tr></table></div></div></div><hr></div><div class="dedication"><div class="titlepage"><div><div><h1 class="title"><a name="idp54273408"></a>Acknowledgements</h1></div></div></div><p>
       Have fun using these products, and we hope to meet all of you
       out on the rocket flight line somewhere.
       </p><div class="literallayout"><p><br>
@@ -16,9 +18,9 @@ NAR #87103, TRA #12201<br>
 Keith Packard, KD7SQG<br>
 NAR #88757, TRA #12200<br>
       </p></div><p>
-    </p></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="chapter"><a href="#idp46621008">1. Quick Start Guide</a></span></dt><dt><span class="chapter"><a href="#idp47548032">2. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#idp47550928">3. TeleGPS Hardware</a></span></dt><dd><dl><dt><span class="section"><a href="#idp47551600">1. Hooking Up Lithium Polymer Batteries</a></span></dt><dt><span class="section"><a href="#idp47554528">2. On-board Data Recording</a></span></dt><dt><span class="section"><a href="#idp47558736">3. Installation</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp51049792">4. System Operation</a></span></dt><dd><dl><dt><span class="section"><a href="#idp51050464">1. GFSK Telemetry</a></span></dt><dt><span class="section"><a href="#idp51053392">2. APRS</a></span></dt><dt><span class="section"><a href="#idp46630992">3. Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46632320">3.1. Radio Frequency</a></span></dt><dt><span class="section"><a href="#idp46634400">3.2. Callsign</a></span></dt><dt><span class="section"><a href="#idp46635584">3.3. Telemetry/RDF/APRS Enable</a></span></dt><dt><span class="section"><a href="#idp46636912">3.4. APRS Interval</a></span></dt><dt><span class="section"><a href="#idp46638416">3.5. Maximum Flight Log</a></span></dt><dt><span class="section"><a href="#idp46640016">3.6. Logging Trigger Motion</a></span></dt><dt><span class="section"><a href="#idp46641344">3.7. Position Reporting Interval</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp46642992">5. TeleGPS Application</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46644576">1. Telemetry Monitoring</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46653568">1.1. Map</a></span></dt><dt><span class="section"><a href="#idp52185504">1.2. Location</a></span></dt><dt><span class="section"><a href="#idp52188784">1.3. Status</a></span></dt><dt><span class="section"><a href="#idp52192208">1.4. Table</a></span></dt></dl></dd><dt><span class="section"><a href="#idp52196256">2. TeleGPS Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#idp52204352">2.1. New Window</a></span></dt><dt><span class="section"><a href="#idp52205680">2.2. Graph Data</a></span></dt><dt><span class="section"><a href="#idp52222448">2.3. Export Data</a></span></dt><dt><span class="section"><a href="#idp49177968">2.4. Load Maps</a></span></dt><dt><span class="section"><a href="#idp46577104">2.5. Preferences</a></span></dt><dt><span class="section"><a href="#idp52256288">2.6. Close</a></span></dt><dt><span class="section"><a href="#idp52257552">2.7. Exit</a></span></dt><dt><span class="section"><a href="#idp52258704">2.8. Connect Device</a></span></dt><dt><span class="section"><a href="#idp52262240">2.9. Disconnect</a></span></dt><dt><span class="section"><a href="#idp52263392">2.10. Scan Channels</a></span></dt><dt><span class="section"><a href="#idp52266944">2.11. Download Data</a></span></dt><dt><span class="section"><a href="#idp52270080">2.12. Configure Device</a></span></dt><dt><span class="section"><a href="#idp52293648">2.13. Flash Device</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp52295248">6. Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#idp52298048">1. 
+    </p></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="chapter"><a href="#idp54275776">1. Quick Start Guide</a></span></dt><dt><span class="chapter"><a href="#idp54280400">2. Handling Precautions</a></span></dt><dt><span class="chapter"><a href="#idp53558976">3. TeleGPS Hardware</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53559648">1. Hooking Up Lithium Polymer Batteries</a></span></dt><dt><span class="section"><a href="#idp53562576">2. On-board Data Recording</a></span></dt><dt><span class="section"><a href="#idp53566784">3. Installation</a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp53569904">4. System Operation</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53570576">1. GFSK Telemetry</a></span></dt><dt><span class="section"><a href="#idp53573504">2. APRS</a></span></dt><dt><span class="section"><a href="#idp53403232">3. Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53404560">3.1. Radio Frequency</a></span></dt><dt><span class="section"><a href="#idp53406688">3.2. Callsign</a></span></dt><dt><span class="section"><a href="#idp53407872">3.3. Telemetry/RDF/APRS Enable</a></span></dt><dt><span class="section"><a href="#idp53409200">3.4. APRS Interval</a></span></dt><dt><span class="section"><a href="#idp53410704">3.5. Maximum Flight Log</a></span></dt><dt><span class="section"><a href="#idp53412304">3.6. Logging Trigger Motion</a></span></dt><dt><span class="section"><a href="#idp53413632">3.7. Position Reporting Interval</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp53415280">5. TeleGPS Application</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53416864">1. Telemetry Monitoring</a></span></dt><dd><dl><dt><span class="section"><a href="#idp58905744">1.1. Map</a></span></dt><dt><span class="section"><a href="#idp58911776">1.2. Location</a></span></dt><dt><span class="section"><a href="#idp58915056">1.3. Status</a></span></dt><dt><span class="section"><a href="#idp58918480">1.4. Table</a></span></dt></dl></dd><dt><span class="section"><a href="#idp58922432">2. TeleGPS Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#idp58930528">2.1. New Window</a></span></dt><dt><span class="section"><a href="#idp58931856">2.2. Graph Data</a></span></dt><dt><span class="section"><a href="#idp55925216">2.3. Export Data</a></span></dt><dt><span class="section"><a href="#idp56070224">2.4. Load Maps</a></span></dt><dt><span class="section"><a href="#idp58955008">2.5. Preferences</a></span></dt><dt><span class="section"><a href="#idp58974944">2.6. Close</a></span></dt><dt><span class="section"><a href="#idp58976208">2.7. Exit</a></span></dt><dt><span class="section"><a href="#idp58977360">2.8. Connect Device</a></span></dt><dt><span class="section"><a href="#idp58980896">2.9. Disconnect</a></span></dt><dt><span class="section"><a href="#idp58982048">2.10. Scan Channels</a></span></dt><dt><span class="section"><a href="#idp58985600">2.11. Download Data</a></span></dt><dt><span class="section"><a href="#idp58988736">2.12. Configure Device</a></span></dt><dt><span class="section"><a href="#idp59012480">2.13. Flash Device</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#idp59014080">6. Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#idp59016528">1. 
 	Updating TeleGPS Firmware
-      </a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp52307248">7. Technical Information</a></span></dt><dd><dl><dt><span class="section"><a href="#idp52307888">1. GPS Receiver</a></span></dt><dt><span class="section"><a href="#idp52311232">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp52312560">3. Lithium Polymer Battery</a></span></dt><dt><span class="section"><a href="#idp52313824">4. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#idp52315152">5. On-board data storage</a></span></dt></dl></dd></dl></div><div class="list-of-tables"><p><b>List of Tables</b></p><dl><dt>4.1. <a href="#idp51056416">Altus Metrum APRS Comments</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp46621008"></a>Chapter 1. Quick Start Guide</h1></div></div></div><p>
+      </a></span></dt></dl></dd><dt><span class="chapter"><a href="#idp59025888">7. Technical Information</a></span></dt><dd><dl><dt><span class="section"><a href="#idp59026560">1. GPS Receiver</a></span></dt><dt><span class="section"><a href="#idp59029872">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp59031200">3. Lithium Polymer Battery</a></span></dt><dt><span class="section"><a href="#idp59032464">4. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#idp59033792">5. On-board data storage</a></span></dt></dl></dd><dt><span class="appendix"><a href="#idp59035248">A. Release Notes</a></span></dt></dl></div><div class="list-of-tables"><p><b>List of Tables</b></p><dl><dt>4.1. <a href="#idp53386560">Altus Metrum APRS Comments</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp54275776"></a>Chapter 1. Quick Start Guide</h1></div></div></div><p>
       TeleGPS is designed to be easy to use. Requiring no external
       components, flying takes just a few steps.
     </p><p>
@@ -40,7 +42,7 @@ NAR #88757, TRA #12200<br>
       Connect TeleDongle to your computer and start TeleGPS or start
       AltosDroid on your android device and connect to TeleBT. Set the
       frequency to match the TeleGPS and you should be receiving telemetry.
-    </p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp47548032"></a>Chapter 2. Handling Precautions</h1></div></div></div><p>
+    </p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp54280400"></a>Chapter 2. Handling Precautions</h1></div></div></div><p>
       All Altus Metrum products are sophisticated electronic devices.  
       When handled gently and properly installed in an air-frame, they
       will deliver impressive results.  However, as with all electronic 
@@ -57,7 +59,7 @@ NAR #88757, TRA #12200<br>
       As with all other rocketry electronics, Altus Metrum devices must 
       be protected from exposure to corrosive motor exhaust and ejection 
       charge gasses.
-    </p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp47550928"></a>Chapter 3. TeleGPS Hardware</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp47551600">1. Hooking Up Lithium Polymer Batteries</a></span></dt><dt><span class="section"><a href="#idp47554528">2. On-board Data Recording</a></span></dt><dt><span class="section"><a href="#idp47558736">3. Installation</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47551600"></a>1. Hooking Up Lithium Polymer Batteries</h2></div></div></div><p>
+    </p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53558976"></a>Chapter 3. TeleGPS Hardware</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53559648">1. Hooking Up Lithium Polymer Batteries</a></span></dt><dt><span class="section"><a href="#idp53562576">2. On-board Data Recording</a></span></dt><dt><span class="section"><a href="#idp53566784">3. Installation</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53559648"></a>1. Hooking Up Lithium Polymer Batteries</h2></div></div></div><p>
 	TeleGPS has a two pin JST PH series connector to connect up
 	a single-cell Lithium Polymer cell (3.7V nominal). You can
 	purchase matching batteries from the Altus Metrum store, or
@@ -70,7 +72,7 @@ NAR #88757, TRA #12200<br>
 	this same connector. All that we have found use the opposite
 	polarity, and if you use them that way, you will damage or
 	destroy TeleGPS.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47554528"></a>2. On-board Data Recording</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53562576"></a>2. On-board Data Recording</h2></div></div></div><p>
 	TeleGPS logs GPS data at a user-configurable rate. Data are
 	logged to a 2MB on-board flash memory part, which can be
 	partitioned into several equal-sized blocks, one for each
@@ -99,7 +101,7 @@ NAR #88757, TRA #12200<br>
 	before it fills up. TeleGPS will still report telemetry even
 	if memory is full, so the only thing you will lose is the
 	on-board data log.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp47558736"></a>3. Installation</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53566784"></a>3. Installation</h2></div></div></div><p>
 	The battery connectors are a standard 2-pin JST connector and
 	match batteries sold by Spark Fun. These batteries are
 	single-cell Lithium Polymer batteries that nominally provide 3.7
@@ -118,7 +120,7 @@ NAR #88757, TRA #12200<br>
 	transmission with the system installed and all other
 	electronics powered up to verify signal reception and make
 	sure there isn't any interference from other systems.
-      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp51049792"></a>Chapter 4. System Operation</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp51050464">1. GFSK Telemetry</a></span></dt><dt><span class="section"><a href="#idp51053392">2. APRS</a></span></dt><dt><span class="section"><a href="#idp46630992">3. Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46632320">3.1. Radio Frequency</a></span></dt><dt><span class="section"><a href="#idp46634400">3.2. Callsign</a></span></dt><dt><span class="section"><a href="#idp46635584">3.3. Telemetry/RDF/APRS Enable</a></span></dt><dt><span class="section"><a href="#idp46636912">3.4. APRS Interval</a></span></dt><dt><span class="section"><a href="#idp46638416">3.5. Maximum Flight Log</a></span></dt><dt><span class="section"><a href="#idp46640016">3.6. Logging Trigger Motion</a></span></dt><dt><span class="section"><a href="#idp46641344">3.7. Position Reporting Interval</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp51050464"></a>1. GFSK Telemetry</h2></div></div></div><p>
+      </p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53569904"></a>Chapter 4. System Operation</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53570576">1. GFSK Telemetry</a></span></dt><dt><span class="section"><a href="#idp53573504">2. APRS</a></span></dt><dt><span class="section"><a href="#idp53403232">3. Configurable Parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#idp53404560">3.1. Radio Frequency</a></span></dt><dt><span class="section"><a href="#idp53406688">3.2. Callsign</a></span></dt><dt><span class="section"><a href="#idp53407872">3.3. Telemetry/RDF/APRS Enable</a></span></dt><dt><span class="section"><a href="#idp53409200">3.4. APRS Interval</a></span></dt><dt><span class="section"><a href="#idp53410704">3.5. Maximum Flight Log</a></span></dt><dt><span class="section"><a href="#idp53412304">3.6. Logging Trigger Motion</a></span></dt><dt><span class="section"><a href="#idp53413632">3.7. Position Reporting Interval</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53570576"></a>1. GFSK Telemetry</h2></div></div></div><p>
         TeleGPS's native telemetry system doesn't use a 'normal packet
         radio' mode like APRS because it's not very efficient.  The
         GFSK modulation we use is FSK with the base-band pulses passed
@@ -132,7 +134,7 @@ NAR #88757, TRA #12200<br>
         should be good to well over 40k feet AGL with a 5-element yagi
         on the ground with our 10mW units and over 100k feet AGL with
         the 40mW devices.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp51053392"></a>2. APRS</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53573504"></a>2. APRS</h2></div></div></div><p>
 	TeleGPS can send APRS if desired, and the
 	interval between APRS packets can be configured. As each APRS
 	packet takes a full second to transmit, we recommend an
@@ -155,7 +157,7 @@ NAR #88757, TRA #12200<br>
 	arbitrary text in it. AltOS uses this to send status
 	information about the flight computer. It sends four fields as
 	shown in the following table.
-      </p><div class="table"><a name="idp51056416"></a><p class="title"><b>Table 4.1. Altus Metrum APRS Comments</b></p><div class="table-contents"><table summary="Altus Metrum APRS Comments" border="1"><colgroup><col align="center" class="Field"><col align="center" class="Example"><col align="center" class="Description"></colgroup><thead><tr><th align="center">Field</th><th align="center">Example</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">L</td><td align="center">GPS Status U for unlocked, L for locked</td></tr><tr><td align="center">2</td><td align="center">6</td><td align="center">Number of Satellites in View</td></tr><tr><td align="center">3</td><td align="center">B4.0</td><td align="center">Battery Voltage</td></tr></tbody></table></div></div><br class="table-break"><p>
+      </p><div class="table"><a name="idp53386560"></a><p class="title"><b>Table 4.1. Altus Metrum APRS Comments</b></p><div class="table-contents"><table summary="Altus Metrum APRS Comments" border="1"><colgroup><col align="center" class="Field"><col align="center" class="Example"><col align="center" class="Description"></colgroup><thead><tr><th align="center">Field</th><th align="center">Example</th><th align="center">Description</th></tr></thead><tbody><tr><td align="center">1</td><td align="center">L</td><td align="center">GPS Status U for unlocked, L for locked</td></tr><tr><td align="center">2</td><td align="center">6</td><td align="center">Number of Satellites in View</td></tr><tr><td align="center">3</td><td align="center">B4.0</td><td align="center">Battery Voltage</td></tr></tbody></table></div></div><br class="table-break"><p>
 	Here's an example of an APRS comment showing GPS lock with 6
 	satellites in view and a battery at 4.0V.
 	</p><pre class="screen">
@@ -173,13 +175,13 @@ NAR #88757, TRA #12200<br>
 	that the GPS status character switches from 'L' to 'U'. Before
 	GPS has locked, APRS will transmit zero for latitude,
 	longitude and altitude.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp46630992"></a>3. Configurable Parameters</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53403232"></a>3. Configurable Parameters</h2></div></div></div><p>
         Configuring TeleGPS is very
         simple; the few configurable parameters can all be set
         using the TeleGPS application over USB. Read
 	the Configure TeleGPS section in the TeleGPS Software chapter below
 	for more information.
-      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46632320"></a>3.1. Radio Frequency</h3></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53404560"></a>3.1. Radio Frequency</h3></div></div></div><p>
 	  Altus Metrum boards support radio frequencies in the 70cm
 	  band. By default, the configuration interface provides a
 	  list of 10 &#8220;standard&#8221; frequencies in 100kHz channels starting at
@@ -189,19 +191,19 @@ NAR #88757, TRA #12200<br>
 	  frequency will be used to avoid interference.  And of course, both
 	  TeleGPS and the receiver must be configured to the same
 	  frequency to successfully communicate with each other.
-        </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46634400"></a>3.2. Callsign</h3></div></div></div><p>
+        </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53406688"></a>3.2. Callsign</h3></div></div></div><p>
 	  This sets the callsign used for telemetry and APRS to
 	  identify the device.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46635584"></a>3.3. Telemetry/RDF/APRS Enable</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53407872"></a>3.3. Telemetry/RDF/APRS Enable</h3></div></div></div><p>
 	  You can completely disable the radio, if necessary, leaving
 	  TeleGPS only logging data to internal memory.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46636912"></a>3.4. APRS Interval</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53409200"></a>3.4. APRS Interval</h3></div></div></div><p>
 	  This selects how often APRS packets are transmitted. Set
 	  this to zero to disable APRS without also disabling the
 	  regular telemetry and RDF transmissions. As APRS takes a
 	  full second to transmit a single position report, we
 	  recommend sending packets no more than once every 5 seconds.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46638416"></a>3.5. Maximum Flight Log</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53410704"></a>3.5. Maximum Flight Log</h3></div></div></div><p>
 	  Changing this value will set the maximum amount of flight
 	  log storage that an individual flight will use. The
 	  available storage is divided into as many flights of the
@@ -209,14 +211,14 @@ NAR #88757, TRA #12200<br>
 	  download and erase individual flight logs. If you fill up
 	  the available storage, future flights will not get logged
 	  until you erase some of the stored ones.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46640016"></a>3.6. Logging Trigger Motion</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53412304"></a>3.6. Logging Trigger Motion</h3></div></div></div><p>
 	  If TeleGPS moves less than this distance over a long period
 	  of time, it will not log that location, saving storage space.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46641344"></a>3.7. Position Reporting Interval</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp53413632"></a>3.7. Position Reporting Interval</h3></div></div></div><p>
 	  This sets how often TeleGPS reports position information via
 	  telemetry and to the on-board log. Reducing this value will
 	  save power and logging memory consumption.
-	</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp46642992"></a>Chapter 5. TeleGPS Application</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp46644576">1. Telemetry Monitoring</a></span></dt><dd><dl><dt><span class="section"><a href="#idp46653568">1.1. Map</a></span></dt><dt><span class="section"><a href="#idp52185504">1.2. Location</a></span></dt><dt><span class="section"><a href="#idp52188784">1.3. Status</a></span></dt><dt><span class="section"><a href="#idp52192208">1.4. Table</a></span></dt></dl></dd><dt><span class="section"><a href="#idp52196256">2. TeleGPS Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#idp52204352">2.1. New Window</a></span></dt><dt><span class="section"><a href="#idp52205680">2.2. Graph Data</a></span></dt><dt><span class="section"><a href="#idp52222448">2.3. Export Data</a></span></dt><dt><span class="section"><a href="#idp49177968">2.4. Load Maps</a></span></dt><dt><span class="section"><a href="#idp46577104">2.5. Preferences</a></span></dt><dt><span class="section"><a href="#idp52256288">2.6. Close</a></span></dt><dt><span class="section"><a href="#idp52257552">2.7. Exit</a></span></dt><dt><span class="section"><a href="#idp52258704">2.8. Connect Device</a></span></dt><dt><span class="section"><a href="#idp52262240">2.9. Disconnect</a></span></dt><dt><span class="section"><a href="#idp52263392">2.10. Scan Channels</a></span></dt><dt><span class="section"><a href="#idp52266944">2.11. Download Data</a></span></dt><dt><span class="section"><a href="#idp52270080">2.12. Configure Device</a></span></dt><dt><span class="section"><a href="#idp52293648">2.13. Flash Device</a></span></dt></dl></dd></dl></div><p>
+	</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp53415280"></a>Chapter 5. TeleGPS Application</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp53416864">1. Telemetry Monitoring</a></span></dt><dd><dl><dt><span class="section"><a href="#idp58905744">1.1. Map</a></span></dt><dt><span class="section"><a href="#idp58911776">1.2. Location</a></span></dt><dt><span class="section"><a href="#idp58915056">1.3. Status</a></span></dt><dt><span class="section"><a href="#idp58918480">1.4. Table</a></span></dt></dl></dd><dt><span class="section"><a href="#idp58922432">2. TeleGPS Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#idp58930528">2.1. New Window</a></span></dt><dt><span class="section"><a href="#idp58931856">2.2. Graph Data</a></span></dt><dt><span class="section"><a href="#idp55925216">2.3. Export Data</a></span></dt><dt><span class="section"><a href="#idp56070224">2.4. Load Maps</a></span></dt><dt><span class="section"><a href="#idp58955008">2.5. Preferences</a></span></dt><dt><span class="section"><a href="#idp58974944">2.6. Close</a></span></dt><dt><span class="section"><a href="#idp58976208">2.7. Exit</a></span></dt><dt><span class="section"><a href="#idp58977360">2.8. Connect Device</a></span></dt><dt><span class="section"><a href="#idp58980896">2.9. Disconnect</a></span></dt><dt><span class="section"><a href="#idp58982048">2.10. Scan Channels</a></span></dt><dt><span class="section"><a href="#idp58985600">2.11. Download Data</a></span></dt><dt><span class="section"><a href="#idp58988736">2.12. Configure Device</a></span></dt><dt><span class="section"><a href="#idp59012480">2.13. Flash Device</a></span></dt></dl></dd></dl></div><p>
       The TeleGPS application provides a graphical user interface for
       interacting with the Altus Metrum product family. TeleGPS can
       monitor telemetry data, configure devices and many other
@@ -225,7 +227,7 @@ NAR #88757, TRA #12200<br>
       tasks available from the main window menu bar. This chapter
       is split into sections, each of which documents one of the tasks
       provided from the top-level toolbar.
-    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp46644576"></a>1. Telemetry Monitoring</h2></div></div></div><p>
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp53416864"></a>1. Telemetry Monitoring</h2></div></div></div><p>
 	This is the window brought up when you start the
 	application. If you have a TeleDongle device connected to the
 	computer, it will automatically be selected for telemetry monitoring
@@ -264,7 +266,7 @@ NAR #88757, TRA #12200<br>
         tabs, each of which contain some information about the TeleGPS
         board. The final 'table' tab displays many of the raw telemetry
         values in one place in a spreadsheet-like format.
-      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46653568"></a>1.1. Map</h3></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58905744"></a>1.1. Map</h3></div></div></div><p>
           The Map tab shows the TeleGPS track over time on top of map
 	  data making it easy to locate the device.
         </p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-map.png" width="495"></td></tr></table></div></div><p>
@@ -287,16 +289,16 @@ NAR #88757, TRA #12200<br>
         </p><p>
 	  You can pre-load images for your favorite launch sites
 	  before you leave home; check out the 'Preload Maps' section below.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52185504"></a>1.2. Location</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58911776"></a>1.2. Location</h3></div></div></div><p>
 	  The Location tab shows the raw GPS data received from TeleGPS.
-	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-location.png" width="495"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52188784"></a>1.3. Status</h3></div></div></div><p>
+	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-location.png" width="495"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58915056"></a>1.3. Status</h3></div></div></div><p>
 	  The Status tab shows data relative to the location of
 	  TeleGPS when the application first received telemetry from
 	  it.
-	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-status.png" width="495"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52192208"></a>1.4. Table</h3></div></div></div><p>
+	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-status.png" width="495"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58918480"></a>1.4. Table</h3></div></div></div><p>
 	  The Table tab shows detailed information about the GPS
 	  receiver
-	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-table.png" width="495"></td></tr></table></div></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52196256"></a>2. TeleGPS Menus</h2></div></div></div><p>
+	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="telegps-table.png" width="495"></td></tr></table></div></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp58922432"></a>2. TeleGPS Menus</h2></div></div></div><p>
 	TeleGPS has three or four menus at the top of the window:
 	</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">File</span></dt><dd><p>
 		New Window, Graph Data, Export Data, Load Maps, Preferences, Close and Exit
@@ -312,26 +314,26 @@ NAR #88757, TRA #12200<br>
 		only shown when the TeleGPS application is connected
 		to a TeleDongle or TeleBT device.
 	      </p></dd></dl></div><p>
-      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52204352"></a>2.1. New Window</h3></div></div></div><p>
+      </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58930528"></a>2.1. New Window</h3></div></div></div><p>
 	  This creates another telemetry monitoring window, in case
 	  you have multiple TeleDongle devices connected to the
 	  computer.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52205680"></a>2.2. Graph Data</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58931856"></a>2.2. Graph Data</h3></div></div></div><p>
 	  This brings up a file dialog to load a saved log, either
 	  a .telem file of recorded telemetry or .eeprom of saved
 	  data from on-board memory. It looks a bit like the flight
 	  monitoring window, using a selection of tabs to show
 	  different views of the saved data.
-	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52207024"></a>2.2.1. Graph</h4></div></div></div><p>
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58933200"></a>2.2.1. Graph</h4></div></div></div><p>
 	    The Graph tab shows a plot of the the GPS data
 	    collected. The X axis is time in seconds; there are a
 	    variety of Y axes available for different kinds of data.
-	  </p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-graph.png" width="540"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52210928"></a>2.2.2. Configure Graph</h4></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-configure.png" width="540"></td></tr></table></div></div><p>
+	  </p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-graph.png" width="540"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58937104"></a>2.2.2. Configure Graph</h4></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-configure.png" width="540"></td></tr></table></div></div><p>
 	    This selects which graph elements to show, and, at the
 	    bottom, lets you switch between metric and imperial units
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52214704"></a>2.2.3. Statistics</h4></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-stats.png" width="540"></td></tr></table></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58940880"></a>2.2.3. Statistics</h4></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-stats.png" width="540"></td></tr></table></div></div><p>
 	    Shows overall data computed from the flight.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52218320"></a>2.2.4. Map</h4></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-map.png" width="540"></td></tr></table></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58944496"></a>2.2.4. Map</h4></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="540"><tr><td><img src="telegps-graph-map.png" width="540"></td></tr></table></div></div><p>
 	    Shows a map of the area overlaid with the GPS track. As with
 	    the telemetry monitoring window, you can select the style
 	    of map and zoom level using buttons along the side;
@@ -339,7 +341,7 @@ NAR #88757, TRA #12200<br>
 	    the left button and you can draw a line to measure
 	    distances using either the left button with the shift key,
 	    or any other button.
-	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52222448"></a>2.3. Export Data</h3></div></div></div><p>
+	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp55925216"></a>2.3. Export Data</h3></div></div></div><p>
           This tool takes the raw data files and makes them available for
           external analysis. When you select this button, you are prompted to 
 	  select a data file, which can be either a .eeprom or .telem.
@@ -348,7 +350,7 @@ NAR #88757, TRA #12200<br>
 	  Next, a second dialog appears which is used to select
           where to write the resulting file. It has a selector to choose
           between CSV and KML file formats.
-	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp50348192"></a>2.3.1. Comma Separated Value Format</h4></div></div></div><p>
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp56823520"></a>2.3.1. Comma Separated Value Format</h4></div></div></div><p>
             This is a text file containing the data in a form suitable for
             import into a spreadsheet or other external data analysis
             tool. The first few lines of the file contain the version and
@@ -362,11 +364,11 @@ NAR #88757, TRA #12200<br>
             the sensor values are converted to standard units, with the
             barometric data reported in both pressure, altitude and
             height above pad units.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp49665296"></a>2.3.2. Keyhole Markup Language (for Google Earth)</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp56832480"></a>2.3.2. Keyhole Markup Language (for Google Earth)</h4></div></div></div><p>
             This is the format used by Google Earth to provide an overlay 
 	    within that application. With this, you can use Google Earth to 
 	    see the whole flight path in 3D.
-          </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp49177968"></a>2.4. Load Maps</h3></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="468"><tr><td><img src="load-maps.png" width="468"></td></tr></table></div></div><p>
+          </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp56070224"></a>2.4. Load Maps</h3></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="468"><tr><td><img src="load-maps.png" width="468"></td></tr></table></div></div><p>
 	  Before using TeleGPS, you can use Load Maps to load map data
 	  in case you don't have access to the internet while
 	  receiving telemetry.
@@ -411,7 +413,7 @@ NAR #88757, TRA #12200<br>
 	  once, so if you load more than one launch site, you may get
 	  some gray areas in the map which indicate that Google is tired
 	  of sending data to you. Try again later.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp46577104"></a>2.5. Preferences</h3></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="216"><tr><td><img src="telegps-preferences.png" width="216"></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp46580240"></a>2.5.1. Voice Settings</h4></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58955008"></a>2.5. Preferences</h3></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="216"><tr><td><img src="telegps-preferences.png" width="216"></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58958016"></a>2.5.1. Voice Settings</h4></div></div></div><p>
             AltosUI provides voice announcements during flight so that you
             can keep your eyes on the sky and still get information about
             the current flight status. However, sometimes you don't want
@@ -420,7 +422,7 @@ NAR #88757, TRA #12200<br>
 		  Plays a short message allowing you to verify
 		  that the audio system is working and the volume settings
 		  are reasonable
-		</p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52244720"></a>2.5.2. Log Directory</h4></div></div></div><p>
+		</p></dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58963040"></a>2.5.2. Log Directory</h4></div></div></div><p>
             AltosUI logs all telemetry data and saves all TeleMetrum flash
             data to this directory. This directory is also used as the
             staring point when selecting data files for display or export.
@@ -428,7 +430,7 @@ NAR #88757, TRA #12200<br>
             Click on the directory name to bring up a directory choosing
             dialog, select a new directory and click 'Select Directory' to
             change where AltosUI reads and writes data files.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52246752"></a>2.5.3. Callsign</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58965072"></a>2.5.3. Callsign</h4></div></div></div><p>
             This value is transmitted in each command packet sent from 
 	    TeleDongle and received from an altimeter.  It is not used in 
 	    telemetry mode, as the callsign configured in the altimeter board
@@ -441,51 +443,51 @@ NAR #88757, TRA #12200<br>
 	    the callsign configured here must exactly match the callsign
 	    configured in the flight computer.  This matching is case 
 	    sensitive.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52249024"></a>2.5.4. Imperial Units</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58967344"></a>2.5.4. Imperial Units</h4></div></div></div><p>
 	    This switches between metric units (meters) and imperial
 	    units (feet and miles). This affects the display of values
 	    use during flight monitoring, configuration, data graphing
 	    and all of the voice announcements. It does not change the
 	    units used when exporting to CSV files, those are always
 	    produced in metric units.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52250544"></a>2.5.5. Serial Debug</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58968864"></a>2.5.5. Serial Debug</h4></div></div></div><p>
             This causes all communication with a connected device to be
             dumped to the console from which AltosUI was started. If
             you've started it from an icon or menu entry, the output
             will simply be discarded. This mode can be useful to debug
             various serial communication issues.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52252048"></a>2.5.6. Font Size</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58970368"></a>2.5.6. Font Size</h4></div></div></div><p>
 	    Selects the set of fonts used in the flight monitor
 	    window. Choose between the small, medium and large sets.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52253344"></a>2.5.7. Look &amp; Feel</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58971664"></a>2.5.7. Look &amp; Feel</h4></div></div></div><p>
 	    Adjust the style of the windows. By default, the TeleGPS
 	    application attempts to blend in with the native style.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52254640"></a>2.5.8. Manage Frequencies</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp58972960"></a>2.5.8. Manage Frequencies</h4></div></div></div><p>
 	    This brings up a dialog where you can configure the set of
 	    frequencies shown in the various frequency menus. You can
 	    add as many as you like, or even reconfigure the default
 	    set. Changing this list does not affect the frequency
 	    settings of any devices, it only changes the set of
 	    frequencies shown in the menus.
-	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52256288"></a>2.6. Close</h3></div></div></div><p>
+	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58974944"></a>2.6. Close</h3></div></div></div><p>
 	  This closes the current window, leaving any other windows
 	  open and the application running.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52257552"></a>2.7. Exit</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58976208"></a>2.7. Exit</h3></div></div></div><p>
 	  This closes all TeleGPS windows and terminates the application.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52258704"></a>2.8. Connect Device</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58977360"></a>2.8. Connect Device</h3></div></div></div><p>
           Selecting this item brings up a dialog box listing all of
           the connected TeleDongle devices. When you choose one of
           these, AltosUI will display telemetry data as received by
           the selected TeleDongle device.
-	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="279"><tr><td><img src="device-selection.png" width="279"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52262240"></a>2.9. Disconnect</h3></div></div></div><p>
+	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="279"><tr><td><img src="device-selection.png" width="279"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58980896"></a>2.9. Disconnect</h3></div></div></div><p>
 	  Disconnects the currently connected TeleDongle or TeleBT
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52263392"></a>2.10. Scan Channels</h3></div></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58982048"></a>2.10. Scan Channels</h3></div></div></div><p>
 	  Scans the configured set of frequencies looking for
 	  telemetry signals. A list of all of the discovered signals
 	  is show; selecting one of those and clicking on 'Monitor'
 	  will select that frequency in the associated TeleGPS
 	  application window.
-	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="279"><tr><td><img src="telegps-scan.png" width="279"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52266944"></a>2.11. Download Data</h3></div></div></div><p>
+	</p><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="279"><tr><td><img src="telegps-scan.png" width="279"></td></tr></table></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58985600"></a>2.11. Download Data</h3></div></div></div><p>
           TeleGPS records data to its internal flash memory.
           On-board data is recorded at the same rate as telemetry
           but is not subject to radio drop-outs. As
@@ -506,7 +508,7 @@ NAR #88757, TRA #12200<br>
           The file name for each data log is computed automatically
           from the recorded date, altimeter serial number and flight
           number information.
-	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52270080"></a>2.12. Configure Device</h3></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="324"><tr><td><img src="telegps-configure.png" width="324"></td></tr></table></div></div><p>
+	</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp58988736"></a>2.12. Configure Device</h3></div></div></div><div class="informalfigure"><div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="324"><tr><td><img src="telegps-configure.png" width="324"></td></tr></table></div></div><p>
           Select this button and then select any connected TeleGPS
           device from the list provided.
 	</p><p>
@@ -532,13 +534,13 @@ NAR #88757, TRA #12200<br>
 		lost.
 	      </p></dd></dl></div><p>
           The rest of the dialog contains the parameters to be configured.
-	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52282032"></a>2.12.1. Frequency</h4></div></div></div><p>
+	</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59000864"></a>2.12.1. Frequency</h4></div></div></div><p>
             This configures which of the frequencies to use for both
             telemetry and packet command mode. Note that if you set this
             value via packet command mode, the TeleDongle frequency will
             also be automatically reconfigured to match so that
             communication will continue afterwards.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52283536"></a>2.12.2. RF Calibration</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59002368"></a>2.12.2. RF Calibration</h4></div></div></div><p>
             The radios in every Altus Metrum device are calibrated at the
             factory to ensure that they transmit and receive on the
             specified frequency.  If you need to you can adjust the calibration 
@@ -546,11 +548,11 @@ NAR #88757, TRA #12200<br>
 	    the value means, read the appendix on calibration and/or the source
 	    code for more information.  To change a TeleDongle's calibration, 
 	    you must reprogram the unit completely.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52285200"></a>2.12.3. Telemetry/RDF/APRS Enable</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59004032"></a>2.12.3. Telemetry/RDF/APRS Enable</h4></div></div></div><p>
 	    Enables the radio for transmission during flight. When
 	    disabled, the radio will not transmit anything during flight
 	    at all.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52286512"></a>2.12.4. APRS Interval</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59005344"></a>2.12.4. APRS Interval</h4></div></div></div><p>
 	    How often to transmit GPS information via APRS (in
 	    seconds). When set to zero, APRS transmission is
 	    disabled. This option is available on TeleMetrum v2 and
@@ -558,26 +560,26 @@ NAR #88757, TRA #12200<br>
 	    packets. Note that a single APRS packet takes nearly a full
 	    second to transmit, so enabling this option will prevent
 	    sending any other telemetry during that time.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52288096"></a>2.12.5. Callsign</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59006928"></a>2.12.5. Callsign</h4></div></div></div><p>
             This sets the call sign included in each telemetry packet. Set this
             as needed to conform to your local radio regulations.
-          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52289424"></a>2.12.6. Maximum Log Size</h4></div></div></div><p>
+          </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59008256"></a>2.12.6. Maximum Log Size</h4></div></div></div><p>
             This sets the space (in kilobytes) allocated for each data
             log. The available space will be divided into chunks of this
             size. A smaller value will allow more logs to be stored,
             a larger value will record data for longer times.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52290864"></a>2.12.7. Logging Trigger Motion</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59009696"></a>2.12.7. Logging Trigger Motion</h4></div></div></div><p>
 	    If TeleGPS moves less than this distance over a long period
 	    of time, it will not log that location, saving storage space.
-	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp52292176"></a>2.12.8. Position Reporting Interval</h4></div></div></div><p>
+	  </p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a name="idp59011008"></a>2.12.8. Position Reporting Interval</h4></div></div></div><p>
 	    This sets how often TeleGPS reports position information via
 	    telemetry and to the on-board log. Reducing this value will
 	    save power and logging memory consumption.
-	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp52293648"></a>2.13. Flash Device</h3></div></div></div><p>
+	  </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="idp59012480"></a>2.13. Flash Device</h3></div></div></div><p>
           This reprograms TeleGPS devices with new firmware. Please
           read the directions for flashing devices in the Updating
           Device Firmware chapter below.
-	</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp52295248"></a>Chapter 6. Updating Device Firmware</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp52298048">1. 
+	</p></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp59014080"></a>Chapter 6. Updating Device Firmware</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp59016528">1. 
 	Updating TeleGPS Firmware
       </a></span></dt></dl></div><p>
       TeleGPS is programmed directly over its USB connectors.
@@ -589,7 +591,7 @@ NAR #88757, TRA #12200<br>
       so you don't need to update your devices just to try out new
       software features.  You can always download the most recent
       version from <a class="ulink" href="http://www.altusmetrum.org/AltOS/" target="_top">http://www.altusmetrum.org/AltOS/</a>.
-    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52298048"></a>1. 
+    </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59016528"></a>1. 
 	Updating TeleGPS Firmware
       </h2></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
 	    Attach a battery and power switch to the target
@@ -616,21 +618,165 @@ NAR #88757, TRA #12200<br>
 	  </p></li><li class="listitem"><p>
 	    Verify that the device is working by using the 'Configure
 	    Altimeter' item to check over the configuration.
-	  </p></li></ol></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp52307248"></a>Chapter 7. Technical Information</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp52307888">1. GPS Receiver</a></span></dt><dt><span class="section"><a href="#idp52311232">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp52312560">3. Lithium Polymer Battery</a></span></dt><dt><span class="section"><a href="#idp52313824">4. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#idp52315152">5. On-board data storage</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52307888"></a>1. GPS Receiver</h2></div></div></div><p>
+	  </p></li></ol></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="idp59025888"></a>Chapter 7. Technical Information</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#idp59026560">1. GPS Receiver</a></span></dt><dt><span class="section"><a href="#idp59029872">2. Micro-controller</a></span></dt><dt><span class="section"><a href="#idp59031200">3. Lithium Polymer Battery</a></span></dt><dt><span class="section"><a href="#idp59032464">4. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#idp59033792">5. On-board data storage</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59026560"></a>1. GPS Receiver</h2></div></div></div><p>
 	TeleGPS uses the u-Blox Max-7Q GPS receiver.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52311232"></a>2. Micro-controller</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59029872"></a>2. Micro-controller</h2></div></div></div><p>
 	TeleGPS uses an NXP LPC11U14 micro-controller. This tiny
 	CPU contains 32kB of flash for the application and 4kB of RAM for
 	temporary data storage.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52312560"></a>3. Lithium Polymer Battery</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59031200"></a>3. Lithium Polymer Battery</h2></div></div></div><p>
 	Shipping restrictions may prevent us from including a battery
 	battery with TeleGPS.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52313824"></a>4. Mechanical Considerations</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59032464"></a>4. Mechanical Considerations</h2></div></div></div><p>
 	TeleGPS is designed to be rugged enough for typical rocketry
 	applications.  The 4 mounting holes on the board are sized for 
 	use with 4-40 or M3 screws.
-      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp52315152"></a>5. On-board data storage</h2></div></div></div><p>
+      </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59033792"></a>5. On-board data storage</h2></div></div></div><p>
 	TeleGPS has 2MB of non-volatile storage, separate from the
 	code storage memory. The TeleGPS firmware uses this to log
 	information during flight.
-      </p></div></div></div></body></html>
+      </p></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a name="idp59035248"></a>Appendix A. Release Notes</h1></div></div></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59035888"></a>Version 1.41</h2></div></div></div><p>
+    Version 1.4.1 is a minor release. It fixes install issues on
+    Windows and provides the missing TeleMetrum V2.0 firmware. There
+    aren't any changes to the firmware or host applications at
+    all. All Windows users will want to upgrade to get the signed
+    driver, but Mac and Linux users who do not need the TeleMetrum
+    V2.0 firmware image will not need to upgrade.
+  </p><p>
+    Windows Install Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Provide signed Windows driver files. This should avoid any need to
+	  disable driver signature checking on Windows 7 or 8.
+	</p></li><li class="listitem"><p>
+	  Fix Java version detection and download. Previously, the
+	  installer would only look for Java 6 or 7 and insist on
+	  downloading its own Java bits if there was something else
+	  installed. Furthermore, the 64-bit Java link provided didn't
+	  work for anyone other than Keith, making it impossible to
+	  install AltOS on any machine with Java SE 8 installed.
+	</p></li></ul></div><p>
+  </p><p>
+    Other Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Include 1.4 firmware for TeleMetrum V2.0. None of the
+	  installers shipped this file. Now it's included in the AltOS
+	  packages for Linux, Mac and Windows.
+	</p></li><li class="listitem"><p>
+	  Include Google Application Key for map downloading. The 1.4
+	  release didn't have this key in the released version of the
+	  software, making map downloading fail for most people.
+	</p></li></ul></div><p>
+  </p></div><div class="simplesect"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="idp59037488"></a>Version 1.4</h2></div></div></div><p>
+    Version 1.4 is a major release. It includes support for our new
+    TeleGPS product, new features and bug fixes in in the flight
+    software for all our boards and the AltosUI ground station
+  </p><p>
+    AltOS New Features
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add support for TeleGPS boards.
+	</p></li><li class="listitem"><p>
+	  Replace the 'dit dit dit' tones at startup with the current
+	  battery voltage, measured in tenths of a volt. This lets you
+	  check the battery voltage without needing telemetry, which
+	  is especially useful on EasyMini.
+	</p></li><li class="listitem"><p>
+	  Change state beeping to "Farnsworth spacing", which means
+	  they're quite a bit faster than before, and so they take
+	  less time to send.
+	</p></li><li class="listitem"><p>
+	  Make the beeper tone configurable, making it possible to
+	  distinguish between two Altus Metrum products in the same ebay.
+	</p></li><li class="listitem"><p>
+	  Make the firing time for extra pyro channels configurable,
+	  allowing longer (or shorter) than the default 50ms.  Only relevant
+	  for TeleMega at this time.
+	</p></li></ul></div><p>
+  </p><p>
+    AltOS Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Fix bug preventing the selection of the 'Flight State After'
+	  mode in pyro configuration.
+	</p></li><li class="listitem"><p>
+	  Fix bug where erasing flights would reset the flight number
+	  to 2 on TeleMega and TeleMetrum v2.
+	</p></li><li class="listitem"><p>
+	  Fix u-Blox GPS driver to mark course and speed data as being
+	  present.
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI New Features
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add zooming and new content types (terrain and road maps) to
+	  map view. Change map storage format from PNG to Jpeg, which
+	  saves a huge amount of disk space. You will need to
+	  re-download all of your pre-loaded map images.
+	</p></li><li class="listitem"><p>
+	  Add a distance measuring device to the maps view. Select
+	  this by using any button other than the left one, or by
+	  pressing shift or control on the keyboard while using the
+	  left button.
+	</p></li><li class="listitem"><p>
+	  Add new 'Ignitor' tab to the flight monitor display for
+	  TeleMega's extra ignitors.
+	</p></li><li class="listitem"><p>
+	  Increase the width of data lines in the graphs to make them
+	  easier to read.
+	</p></li><li class="listitem"><p>
+	  Add additional ignitor firing marks and voltages to the
+	  graph so you can see when the ignitors fired, along with
+	  the ignitor voltages.
+	</p></li><li class="listitem"><p>
+	  Add GPS course, ground speed and climb rate as optional
+	  graph elements.
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  When flashing new firmware, re-try opening the device as
+	  sometimes it takes a while for the underlying operating
+	  system to recognize that the device has rebooted in
+	  preparation for the flashing operation.
+	</p></li><li class="listitem"><p>
+	  Hide Tilt Angle in ascent tab for devices that don't have a gyro.
+	</p></li><li class="listitem"><p>
+	  Filter out speed and acceleration spikes caused by ejection
+	  charge firing when computing the maximum values. This
+	  provides a more accurate reading of those maximums.
+	</p></li><li class="listitem"><p>
+	  Fix EasyMini voltage displays. Early EasyMini prototypes
+	  used a 3.0V regulator, and AltosUI still used that value as
+	  the basis of the computation. Production EasyMini boards
+	  have always shipped with a 3.3V regulator. Also, purple
+	  EasyMini boards sensed the battery voltage past the blocking
+	  diode, resulting in a drop of about 150mV from the true
+	  battery voltage. Compensate for that when displaying the
+	  value.
+	</p></li><li class="listitem"><p>
+	  Display error message when trying to configure maximum
+	  flight log size while the flight computer still has flight
+	  data stored.
+	</p></li><li class="listitem"><p>
+	  Handle TeleMetrum and TeleMini eeprom files generated with
+	  pre-1.0 firmware. Those ancient versions didn't report the
+	  log format, so just use the product name instead.
+	</p></li></ul></div><p>
+  </p><p>
+    TeleGPS Application
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  New application designed for use with TeleGPS boards.
+	</p></li><li class="listitem"><p>
+	  Shares code with AltosUI, mostly just trimmed down to focus
+	  on TeleGPS-related functions.
+	</p></li></ul></div><p>
+  </p><p>
+    Documentation changes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Re-create the drill template images; they should print
+	  correctly from Firefox at least. Ship these as individual
+	  PDF files so they're easy to print.
+	</p></li><li class="listitem"><p>
+	  Add a description of the 'Apogee Lockout' setting, which
+	  prevents the apogee charge from firing for a configurable
+	  amount of time after boost.
+	</p></li></ul></div><p>
+  </p></div></div></div></body></html>
