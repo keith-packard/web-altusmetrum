@@ -1,0 +1,13 @@
+# MicroPeak USB Interface Future Version
+
+## v3.0 ##
+
+This version is still in development. It operates exactly like the
+v2.0 devices, having a small hole in the top into which you place the
+MicroPeak LED. The only difference is that it is enclosed in a smaller
+package that looks like a USB thumb drive. It won't need a USB cable
+and will plug directly into a computer.
+
+<a href="v3.0/MicroPeakUSB-3.0.jpg"><img src="v2.0/MicroPeakUSB-3.0-640.jpg"></a>
+
+<a href="v3.0/MicroPeakUSB-3.0-inuse.jpg"><img src="v2.0/MicroPeakUSB-3.0-640-inuse.jpg"></a>
