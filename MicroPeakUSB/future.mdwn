@@ -10,4 +10,4 @@ and will plug directly into a computer.
 
 <a href="v3.0/MicroPeakUSB-3.0.jpg"><img src="v3.0/MicroPeakUSB-3.0-640.jpg"></a>
 
-<a href="v3.0/MicroPeakUSB-3.0-inuse.jpg"><img src="v3.0/MicroPeakUSB-3.0-640-inuse.jpg"></a>
+<a href="v3.0/MicroPeakUSB-3.0-inuse.jpg"><img src="v3.0/MicroPeakUSB-3.0-inuse-640.jpg"></a>
