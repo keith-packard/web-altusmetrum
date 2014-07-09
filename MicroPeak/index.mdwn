@@ -88,7 +88,7 @@ Here's a close-up view of the hardware
 	* Written in C
 	* Samples pressure every 96ms
 	* Delay 30s after power-on to finish airframe prep
-	* Detect boost with 10m altitude change
+	* Detect boost with 30m altitude change
 	* Exponential averaging filter to minimize transient effects.
 
  * Tools Used
