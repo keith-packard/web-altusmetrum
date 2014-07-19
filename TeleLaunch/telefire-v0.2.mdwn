@@ -1,0 +1,1 @@
+[[!map pages="TeleLaunch/telefire-v0.2/* and ! TeleLaunch/telefire-v0.2/*/*"]]
