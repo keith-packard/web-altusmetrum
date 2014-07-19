@@ -106,6 +106,9 @@ is a supposedly-higher-performance alternative to [TeleDongle](TeleDongle/).
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.  This project is now indefinitely on hold.
 
+* [TeleLaunch](TeleLaunch/)
+is a wireless launch control system capable of operating up to 400 pads.
+
 * [TeleNano](TeleNano/)
 is a tiny rocketry altimeter with telemetry using only a barometric 
 pressure sensor

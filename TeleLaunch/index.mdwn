@@ -1,0 +1,62 @@
+[[!meta title="TeleLaunch"]]
+
+# TeleLaunch — Multi-channel Wireless Launch Controller System #
+
+TeleLaunch is secure radio-controlled rocket launch system capable of
+operating up to 400 pads from a single controler. TeleLaunch consists
+of two pieces, TeleLCO and TeleFire.
+
+## TeleLCO ##
+
+TeleLCO controls up to 100 TeleFire boxes and is powered by a
+rechargable lithium polymer
+
+ * USB connection to charge battery.
+
+ * Large 1.36 inch LCD display for selected pad
+
+ * Rotary knobs for pad selection
+
+ * LED indicators for remote arming, continuity and RF quality
+
+ * Arming switch and firing button
+
+Circuit diagrams and PCB layouts are provided here:
+
+[[!map pages="TeleLaunch/telelco-v0.2/* and ! TeleLaunch/telelco-v0.2/*/*"]]
+
+## TeleFire ##
+
+TeleFire has four igniter circuits, each of which uses a 70A
+automotive relay to provide a low resistance path, high-current from
+the power source to the igniter leads. TeleFire can be powered by any
+10-15V supply, from 3-cell lithium polymer packs used in RC aircraft
+to a 12V lead acid battery.
+
+ * Continuity Detection. Igniter continuity uses a low-current sensing
+   system which sends only 100µA through the igniter to prevent false
+   ignition. The circuit also detects a shorted relay.
+
+ * Local LED continuity, arming and RF quality indicators.
+
+ * Strobe and Siren. TeleFire has two 12V medium current (5A) outputs
+   to drive a siren and strobe light when the launch system is armed
+   and ready to fire.
+
+ * Local arming switch. A positive power switch shutting off the
+   igniters and relays prevents the LCO from engaging the firing
+   circuit.
+
+Circuit diagrams and PCB layouts are provided here:
+
+[[!map pages="TeleLaunch/telefire-v0.2/* and ! TeleLaunch/telefire-v0.2/*/*"]]
+
+## Radio Communications ##
+
+TeleLaunch uses a two-way digital radio communications system for
+positive indication of all operations. The communications link is
+secured with AES CBC-MAC to prevent accidental or intentional
+operation from unauthorized transmitters.
+
+TeleLaunch operates in the 70cm amateur band at 10mW to avoid
+interference with any rocketry electronics.
