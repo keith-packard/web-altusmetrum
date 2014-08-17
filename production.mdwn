@@ -424,7 +424,11 @@ Prototype build of 3 EasyMega v0.1 by Bdale 2014.05.14
 Production run of 108 pieces of TeleGPS v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2014.05.21.
 
-## sn 1982-2081 ##
+## sn 1982-1983 ##
+
+Build 2 TeleFire v0.2 by Keith 2014.07.12
+
+## sn 1984-2083 ##
 
 Production run of 100 pieces of EasyMega v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2014.08.14.

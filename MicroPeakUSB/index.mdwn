@@ -66,6 +66,8 @@ Here's a close-up view of the hardware
  * Licenses
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 
+## [Upcoming MicroPeak USB version](future) ##
+
 ## [History of the MicroPeak USB interface](history) ##
 
 <center><img src="../logos/micropeak-usb.svg" height="64"/>
