@@ -125,6 +125,8 @@ analog sensor input, and 5 general purpose I/O lines.
 * [TeleTerra](TeleTerra) is a hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
 
+* [USBtrng](USBtrng) is a USB-attached True Random Number Generator
+
 # [Documents](Documents) #
 
 # Hobby Rocketry #
