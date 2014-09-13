@@ -1,0 +1,13 @@
+---------------------------------
+### AltOS Version 1.5 ###
+
+- Available Downloads:
+	- [Windows Installer](/AltOS/releases/1.5/Altos-Windows-1-5.exe)
+	- [Mac OS X Package](/AltOS/releases/1.5/Altos-Mac-1.5.dmg)
+	- [Linux](/AltOS/releases/1.5/Altos-Linux-1.5.sh)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.5;sf=tgz)
+- Related Programs
+	- [MicroPeak 1.5](/MicroPeak/releases/1.5.html)
+	- [TeleGPS 1.5](/TeleGPS/releases/1.5.html)
+
+[[!inline pages="./1.5/release-notes-1.5.html" rss="no" raw="yes" ]]

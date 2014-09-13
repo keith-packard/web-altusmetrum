@@ -1,0 +1,10 @@
+-----------------
+### TeleGPS version 1.5 ###
+
+- Available Downloads:
+	- [Windows](/TeleGPS/releases/1.5/TeleGPS-Windows-1-5.exe)
+	- [Linux](/TeleGPS/releases/1.5/TeleGPS-Linux-1.5.sh)
+	- [Mac OS X](/TeleGPS/releases/1.5/TeleGPS-Mac-1.5.dmg)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.5;sf=tgz)
+
+[[!inline pages="./1.5/release-notes-1.5.html" rss="no" raw="yes" ]]
