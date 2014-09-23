@@ -76,7 +76,6 @@ The hardware design current gEDA files are available from
 [git.gag.com](http://git.gag.com) in the project 
 [hw/easymega](http://git.gag.com/?p=hw/easymega;a=summary).  
 
-## Future Plans ##
+## Status ##
 
-Version 0.1 prototypes are built and seem to work.  After some flight testing,
-we'll decide if and when this goes to production.
+Version 1.0 production units are now available for sale.
