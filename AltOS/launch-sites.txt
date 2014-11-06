@@ -33,7 +33,7 @@ Radical Rocketeers:40.899878:-74.867381:http://www.radrocketeers.org
 SARA Reservation Road:32.264739:-111.273861:http://sararocketry.org
 SAROS Fall Fire:53.435056:-110.299417:http://www.saskatoonrocketry.org
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net
-SEARS Sampson, AL:31.118849:-86.091031:http://www.sears572.com
+SEARS Samson, AL:31.118849:-86.091031:http://www.sears572.com
 St. Louis Rocketry Elsberry, MO:39.160217:-90.763356:http://stlouisrocketry.com/
 THOR / Tripoli Nebrask (Jansen):40.150556:-97.032222:http://www.nerocketry.org/history.html
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
