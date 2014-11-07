@@ -433,3 +433,6 @@ Build 2 TeleFire v0.2 by Keith 2014.07.12
 Production run of 100 pieces of EasyMega v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2014.08.14.
 
+## sn 2084-2086 ##
+
+Prototype build of 3 TeleDongle v1.9 by Keithp 2014.11.06
