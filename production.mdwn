@@ -436,3 +436,8 @@ Production run of 100 pieces of EasyMega v1.0 by
 ## sn 2084-2086 ##
 
 Prototype build of 3 TeleDongle v1.9 by Keithp 2014.11.06
+
+## sn 2087-2302 ##
+
+Production run of 216 pieces of TeleMetrum v2.0b by
+[Advanced Circuits](http://4pcb.com), received 2014.11.26.
