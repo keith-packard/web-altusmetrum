@@ -19,6 +19,7 @@ NCR Atlas Site:40.65:-104.38333:http://ncrocketry.org
 NCR Pawnee North Site:40.885955:-104.63793:http://ncrocketry.org
 NOVAAR Great Meadow:38.829743:-77.806898:http://novaar.org
 NSWRA Doonside Sydney:-33.78567:150.866862:http://www.nswrocketry.org.au
+NZRA Taupiri:-37.54945:175.259983333333333:http://www.nzrocketry.org.nz
 OPROC Discovery Bay:47.97808,-122.896383:http://4hrockets.blogspot.com
 OROC Brothers:43.79949786336483:-120.6485810681392:http://www.oregonrocketry.com
 OROC Sheridan:45.044176:-123.314323:http://www.oregonrocketry.com
