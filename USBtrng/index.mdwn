@@ -2,31 +2,49 @@
 
 This is a hardware True Random Number Generator that attaches via USB.
 
+## Version 2.0 ##
+
+Here's a photo of prototype version 2.0:
+
+<a href="v2.0/usbtrng-v2.0.jpg"> <img src="v2.0/usbtrng-v2.0-thumb.jpg"></a>
+
+### Version 2.0 Hardware ###
+
+ * [STM32F042](http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1823?icmp=stm32f0x2-line_pron_pr_jan2014&sc=stm32f0x2-pr) System-on-Chip
+    * ARM Cortex-M0 MCU
+    * 32k Flash
+    * 6k RAM
+    * USB 2.0
+    * Crystal-less operation
+ * ZXRE1004 zener-diode noise source
+ * 20V noise source
+    * AP3015A boost regulator
+    * back-to-back 3904 transistor noise
+
+## Version 0.1 ##
+
 These are photos of prototype version 0.1:
 
 <a href="v0.1/usbtrng-v0.1-top.jpg"> <img src="v0.1/usbtrng-v0.1-top-thumb.jpg"></a>
 <a href="v0.1/usbtrng-v0.1-bottom.jpg"> <img src="v0.1/usbtrng-v0.1-bottom-thumb.jpg"></a>
 
-## Documentation ##
+### Version 0.1 Hardware ###
 
-There is no documentation yet.
+ * [NXP LPC11U14](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/LPC11U14FHI33.html) System-on-Chip
+	* ARM Cortex-M0 MCU
+	* 32k Flash
+	* 6k RAM
+	* USB 2.0
+	* 8 12-bit analog inputs
+	* I2C, SPI, async serial
+	* digital I/O
+ * ZXRE1004 zener diode noise source
+ * MCP6L92 dual op-amp
 
-## Features ##
-
-* Hardware Features
-	* [NXP LPC11U14](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/LPC11U14FHI33.html) System-on-Chip
-		* ARM Cortex-M0 MCU
-		* 32k Flash
-		* 6k RAM
-		* USB 2.0
-		* 8 12-bit analog inputs
-		* I2C, SPI, async serial
-		* digital I/O
+## Software ##
 
 * Firmware Features
 	* [AltOS](../AltOS/) is written mostly in C with some ARM assembler
-	* Runs from on-chip flash, uses on-chip RAM, stores tracking data to
-		flash memory part
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 	* [GCC](http://gcc.gnu.org/) compiler and source debugger

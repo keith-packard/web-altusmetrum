@@ -447,3 +447,6 @@ Production run of 216 pieces of TeleMetrum v2.0b by
 Production run of 100 pieces of TeleMega v1.0b by
 [Advanced Circuits](http://4pcb.com), received 2014.12.06.
 
+## sn 2403-2406 ##
+
+Prototype build of 3 USBtrng v2.0 by Keithp 2015.01.25
