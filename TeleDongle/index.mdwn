@@ -12,9 +12,9 @@ than our previous models!
 For the latest TeleDongle firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
 
-<img src="v3.0/td-v3.0-front.jpg">
-<img src="v3.0/td-v3.0-back.jpg">
-<img src="v3.0/td-v3.0-boxed.jpg">
+<a href="v3.0/td-v3.0-front.jpg"> <img src="v3.0/td-v3.0-front-thumb.jpg"></a>
+<a href="v3.0/td-v3.0-back.jpg"> <img src="v3.0/td-v3.0-back-thumb.jpg"></a>
+<a href="v3.0/td-v3.0-boxed.jpg"> <img src="v3.0/td-v3.0-boxed-thumb.jpg"></a>
 
 ## Features ##
 
