@@ -12,7 +12,9 @@ than our previous models!
 For the latest TeleDongle firmware and related software, please
 visit the [AltOS](../AltOS) page on this site.
 
-<img src="v0.2/cimg5556-small.jpg">
+<img src="v3.0/td-v3.0-front.jpg">
+<img src="v3.0/td-v3.0-back.jpg">
+<img src="v3.0/td-v3.0-boxed.jpg">
 
 ## Features ##
 
