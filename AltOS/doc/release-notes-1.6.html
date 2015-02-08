@@ -1,0 +1,83 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
+    Version 1.6 includes support for our updated TeleDongle v3.0
+    product and bug fixes in in the flight software for all our boards
+    and ground station interfaces.
+  </p><p>
+    AltOS New Features
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Add support for TeleDongle v3.0 boards.
+	</p></li></ul></div><p>
+  </p><p>
+    AltOS Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Don't beep out the continuity twice by accident in idle mode.
+	  If the battery voltage report takes longer than the initialiation
+	  sequence, the igniter continuity would get reported twice.
+	</p></li><li class="listitem"><p>
+	  Record all 32 bits of gyro calibration data in TeleMega and
+	  EasyMega log files. This fixes computation of the gyro rates
+	  in AltosUI.
+	</p></li><li class="listitem"><p>
+	  Change TeleDongle LED usage. Green LED flashes when valid
+	  packet is received. Red LED flashes when invalid packet is
+	  received.
+	</p></li><li class="listitem"><p>
+	  Replace LPC11U14 SPI driver with non-interrupt version. The
+	  interrupt code would occasionally wedge on long transfers
+	  if interrupts were blocked for too long. This affects all
+	  released TeleGPS products; if you have a TeleGPS device,
+	  you'll want to reflash the firmware.
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI and TeleGPS New Features
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Compute tilt angle from TeleMega and EasyMega log
+	  files. This duplicates the quaternion-based angle tracking
+	  code from the flight firmware inside the ground station
+	  software so that post-flight analysis can include evaluation
+	  of the tilt angle.
+	</p></li><li class="listitem"><p>
+	  Shows the tool button window when starting with a data file
+	  specified. This means that opening a data file from the file
+	  manager will now bring up the main window to let you operate
+	  the whole application.
+	</p></li></ul></div><p>
+  </p><p>
+    AltosUI Fixes
+    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+	  Show the 'Connecting' dialog when using Monitor Idle. Lets
+	  you cancel the Monitor Idle startup when connecting over the
+	  radio link.
+	</p></li><li class="listitem"><p>
+	  Make 'Monitor Idle' work for TeleGPS devices when connected
+	  over USB. It's nice for testing without needing to broadcast
+	  over the radio.
+	</p></li><li class="listitem"><p>
+	  Use different Windows API to discover USB devices. This
+	  works better on my Windows 7 box, and will be used if the
+	  older API fails to provide the necessary information.
+	</p></li><li class="listitem"><p>
+	  Look in more places in the registry to try and identify the
+	  installed Java version on Windows. If you install the
+	  default 32-bit version of Windows on a 64-bit OS, the Java
+	  registry information is hiding \SOFTWARE\Wow6432Node for
+	  some reason.
+	</p></li><li class="listitem"><p>
+	  Fix file association on Windows by searching for the
+	  javaw.exe program instead of assuming it is in
+	  %SYSTEMROOT%. This makes double-clicking on Altus Metrum
+	  data files in the file manager work correctly.
+	</p></li><li class="listitem"><p>
+	  When replaying a file, put 'done' in the Age field when we
+	  reach the end of the file, instead of continuing to count forever.
+	</p></li><li class="listitem"><p>
+	  In the Scan Channels code, wait for five seconds if we see
+	  any packet. This is needed because AltOS now sends the
+	  callsign, serial number and flight number only once every
+	  five seconds these days.
+	</p></li><li class="listitem"><p>
+	  In the Scan Channels code, reset pending flight state
+	  information each time we change channels. This avoids having
+	  flight computers appear on multiple frequencies by accident.
+	</p></li></ul></div><p>
+  </p></div></body></html>
