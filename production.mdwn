@@ -463,3 +463,7 @@ Production run of 108 pieces of TeleDongle v3.0 by
 ## sn 2518-2529 ##
 
 Production run of 12 pieces of TeleMini v1.0 by keithp 2015.02.13
+
+## sn 2530-2541 ##
+
+Prototype built of 12 USBtrng v3.0 by keithp 2015.02.22
