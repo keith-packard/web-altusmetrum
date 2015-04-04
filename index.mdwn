@@ -60,6 +60,10 @@ sell TeleDongle by itself, it is included in our
 [Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
 useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for Android devices!
 
+* [TeleGPS](TeleGPS/)
+is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
+high dynamic performance and a combination digital/APRS transmitter.
+
 * [EasyMini](EasyMini/)
 is a small dual-deploy rocketry altimeter using the MS5607 barometry
 pressure sensor.
@@ -77,10 +81,6 @@ provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
 The following products will be available soon:
-
-* [TeleGPS](TeleGPS/)
-is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
-high dynamic performance and a combination digital/APRS transmitter.
 
 * [TeleMini](TeleMini/)
 is a smaller dual-deploy rocketry altimeter with telemetry using only a 
