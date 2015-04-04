@@ -80,7 +80,7 @@ ideal altimeter for model rocket contests.
 provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
-The following products will be available soon:
+The following product is available in limited quantity from time to time:
 
 * [TeleMini](TeleMini/)
 is a smaller dual-deploy rocketry altimeter with telemetry using only a 
