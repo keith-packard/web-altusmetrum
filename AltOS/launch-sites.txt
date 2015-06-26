@@ -39,6 +39,7 @@ St. Louis Rocketry Elsberry, MO:39.160217:-90.763356:http://stlouisrocketry.com/
 THOR / Tripoli Nebrask (Jansen):40.150556:-97.032222:http://www.nerocketry.org/history.html
 Torrey Farms of Potter, NY:42.7008967:-77.183656:http://urrg.org/
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/
+Tripoli Central California:36.532323:-120.051785:http://www.tccrockets.com/
 Tripoli Central Virginia Battle Park:38.398055:-78.065:http://www.battlepark.org
 Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org
 Tripoli Houston Hearne Airport:30.861146:-96.622149:http://www.tripolihouston002.com/
