@@ -8,70 +8,15 @@ installation and take advantage of Debian tools and processes.  From this
 platform, it is possible to build installable packages not only for Debian,
 but also for Windows, Mac OS X, and generic Linux.
 
-## Compilers
+Install [Debian](http://debian.org), then type 'apt-get build-dep altos' 
+and all of the required build dependencies should be automatically installed.
 
-We use standard gcc and OpenJDK to build all of the ground software, but the
-situation for building the firmware is a bit more complicated.  Because we
-realize many people may be only interested in working on the ground station
-software, or may only care about building firmware for a single target, we
-have crafted the Makefile contents to test for the presence of the various
-compilers... and will only build firmware for the targets we can find the
-right tools for!
+The notes we use to do a complete build for release are in the file
+Releasing in the root of the source tree.  Not all of those details are
+necessary unless you're trying to do an official release, but all the info
+necessary to rebuild from source is captured there.
 
-### cc1111
-
-The first generation of Altus Metrum products were all based on the TI cc1111,
-which has an 8051 core.  We started out using standard SDCC, but Keith made a
-number of changes to better support the cc1111, and then SDCC 3.X changed code
-generation such that 8051 executables became significantly larger and our code
-just wouldn't fit in available flash any more!  
-
-As a result, we maintain a fork of SDCC we call 'cc1111' that is based
-on the last upstream version of SDCC 2.X, plus a highly modified sdcdb with
-support for the cc1111 debugging interface.  This is avilable as a package in
-Debian, or you can find the sources on [git.gag.com](http://git.gag.com)
-in the project [debian/cc1111](http://git.gag.com/?p=debian/cc1111;a=summary).
-
-### AVR
-
-We use the standard gcc-avr tools for this target, which thanks to the 
-popularity of the [Arduino](http://arduino.cc) community are well taken care 
-of in Debian.
-
-### ARM Cortex
-
-Most of the new products we're working on now are based on system on chip
-parts using ARM Cortex M3 or ARM Cortex M0 cores.  These require a "bare metal"
-toolchain, not the standard ARM compiler and libraries used for ARM Linux.  We
-continue to discuss our needs with others in the Debian community and have
-high hopes for a suitable toolchain to eventually be part of the main 
-distribution.  But, in the meantime, here's what it takes to build a suitable
-toolchain in /opt/cortex:
-
-* mkdir /opt/cortex, and ensure it's owned by you (so no root privs are needed)
-* clone our [cortex-toolchain](http://git.gag.com/?p=fw/cortex-toolchain;a=summary) with `git clone git://git.gag.com/fw/cortex-toolchain`
-* cd into the cortex-toolchain directory, review the list of build dependencies
-  documented in the README file, then build using 
-  `./summon-arm-toolchain`.  This will download all
-  the source packages, unpack them, build everything, and install it all in
-  /opt/cortex automatically.  This takes a bunch of disk space and a lot of
-  time, so be patient!
-* clone our [pdclib](http://git.gag.com/?p=fw/pdclib;a=summary) C library
-  repository with `git clone git://git.gag.com/fw/pdclib`
-* cd into the pdclib directory, and build using `make ; make install` which
-  will build the library using the just-installed cortex tools and deliver
-  the results to the /opt/cortex tree
-
-That's it!  You should now have an ARM toolchain targetting bare metal for
-both Cortex M0 and M3 variants including a minimal C runtime library.
-
-If you're using a debug/programming interface from ST (either an STlinkV2 USB
-dongle or something like a Discovery board) then you may also want to build
-and install tools for that as follows:
-
-* clone our fork of the [stlink](http://git.gag.com/?p=fw/stlink;a=xummary) 
-  reposirtory with `git clone git://git.gag.com/fw/stlink`
-* cd into the stlink directory, and build using 
-  './configure --prefix=/opt/cortex; make ; make install'.  This will install
-  the stlink library and related utilities in /opt/cortex.
+If you really want to try and build our source tree on a development platform
+other than Debian, feel free... just don't expect us to help!  It's hard
+enough keeping everything working on one development platform...
 
