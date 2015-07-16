@@ -2,7 +2,9 @@
 
 AltosDroid is the [Android](http://www.android.com/) port of Altus Metrum's 
 ground station program, designed to work with the [TeleBT](../TeleBT)
-ground statiion hardware product.
+ground statiion hardware product.  The latest version targets Android 
+version 4.0 (ICS) or later.  An older version is still available that 
+works on Android 2.3.3 and later.
 
 ## Where to Get It ##
 
@@ -45,8 +47,8 @@ which is always available from [git.gag.com](http://git.gag.com)
 in the project [fw/altos](http://git.gag.com/?p=fw/altos;a=summary).
 
 The source is in the `altosdroid/` subdirectory, and is currently
-targetted at Android 2.3.3. You will need to have the Android SDK installed
-to build AltosDroid.
+targetted at Android 4.0 or later. You will need to have the Android SDK 
+installed to build AltosDroid.
 
 ## Future Plans ##
 
