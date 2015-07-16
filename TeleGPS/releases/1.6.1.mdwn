@@ -1,0 +1,10 @@
+-----------------
+### TeleGPS version 1.6.1 ###
+
+- Available Downloads:
+	- [Windows](/TeleGPS/releases/1.6.1/TeleGPS-Windows-1-6-1.exe)
+	- [Linux](/TeleGPS/releases/1.6.1/TeleGPS-Linux-1.6.1.sh)
+	- [Mac OS X](/TeleGPS/releases/1.6.1/TeleGPS-Mac-1.6.1.dmg)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.6.1;sf=tgz)
+
+[[!inline pages="./1.6/release-notes-1.6.1.html" rss="no" raw="yes" ]]
