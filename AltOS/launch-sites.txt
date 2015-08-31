@@ -9,6 +9,7 @@ COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org
 HARA Bragg Farms:34.895875:-86.616211:http://www.hararocketry.org/HARA/Main.html
 HARA Manchester:35.489537:-85.962438:http://www.hararocketry.org/HARA/Main.html
 KLOUDBusters Rocket Pasture:37.167833333:-97.73975:http://kloudbusters.org
+KOSMO Ellinwood Airport:38.3728403:-98.5986431:http://www.kosmo427.org
 LRA Roc Lake:49.4456194:-112.0118083:http://www.lethbridgerocketry.com/roclake
 LUNAR Snow Ranch:37.949198:-120.795944:http://www.lunar.org/
 LUNAR Moffett Field:37.412582:-122.052290:http://www.lunar.org/
