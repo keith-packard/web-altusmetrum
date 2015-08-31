@@ -99,18 +99,14 @@ a web browser.
 
 In the future, we intend to offer "companion boards" for the rocket that will
 plug in to TeleMetrum to collect additional data, provide more pyro channels,
-and so forth.  A reference design for a companion board will be documented
-soon, and will be compatible with open source Arduino programming tools.
+and so forth.  We've built and flown some prototypes including 
+[TeleScience](/TeleScience), but no companion board designs have made it to 
+production yet.  
 
-We are also working on the design of a hand-held ground terminal that will
-allow monitoring the rocket's status, collecting data during flight, and
-logging data after flight without the need for a notebook computer on the
-flight line.  Particularly since it is so difficult to read most notebook
-screens in direct sunlight, we think this will be a great thing to have.
-
-We're also contemplating other altimeter designs with either more or less
-features than TeleMetrum aimed at different needs within and beyond the rocket
-community.  
+We intended to publish a reference design 
+for a companion board, but one of our customers beat us to it!  You can find
+his work on how to use an Arduino as a companion board on 
+[GitHub](https://github.com/robderstadt/AltOSCompanion).
 
 Because all of our work is open, both the hardware designs and the software,
 if you have some great idea for an addition to the current Altus Metrum family,
