@@ -355,7 +355,8 @@ approximately sn 1050 were lost in the fire.
 ## sn 1070-1189 ##
 
 Production run of 120 pieces of TeleBT v1.1 by
-[Advanced Circuits](http://4pcb.com), received 2013.08.22.
+[Advanced Circuits](http://4pcb.com), received 2013.08.22.  This batch
+later determined to have been built with "suspect" TI cc1111 chips.
 
 ## sn 1190-1213 ##
 
@@ -383,7 +384,8 @@ Production run of 108 pieces of TeleMetrum v2.0 by
 ## sn 1378-1593 ##
 
 Production run of 216 pieces of TeleDongle v0.2b byy
-[Advanced Circuits](http://4pcb.com), received 2014.01.27.
+[Advanced Circuits](http://4pcb.com), received 2014.01.27.  This batch
+later determined to have been built with "suspect" TI cc1111 chips.
 
 ## sn 1594-1602 ##
 
@@ -472,4 +474,9 @@ Prototype built of 12 USBtrng v3.0 by keithp 2015.02.22
 
 Production run of 126 pieces of TeleBT v3.0 by
 [Advanced Circuits](http://4pcb.com), received 2015.07.16.
+
+## sn 2668-2917 ##
+
+Production run of 250 pieces of TeleDongle v3.0 by
+[Advanced Circuits](http://4pcb.com), received 2015.10.21.
 
