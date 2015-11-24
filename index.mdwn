@@ -64,6 +64,11 @@ useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for And
 is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
 high dynamic performance and a combination digital/APRS transmitter.
 
+* [EasyMega](EasyMega/)
+is a high-end flight computer with 6 pyro channels, tilt limits, etc.  The
+design is identical to [TeleMega](TeleMega/), but without the GPS receiver 
+and radio telemetry link.
+
 * [EasyMini](EasyMini/)
 is a small dual-deploy rocketry altimeter using the MS5607 barometry
 pressure sensor.
@@ -93,14 +98,6 @@ These are projects we're working on that may become products someday:
 * [AltOS](AltOS/) 
 is the name of the firmware and related utilities that Keith maintains for
 the set of hardware projects here.
-
-* [EasyMega](EasyMega/)
-is a high-end flight computer with 6 pyro channels, tilt limits, etc.  The
-design is identical to [TeleMega](TeleMega/), but without the GPS receiver 
-and radio telemetry link.
-
-* [MegaDongle](MegaDongle/)
-is a supposedly-higher-performance alternative to [TeleDongle](TeleDongle/).
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
