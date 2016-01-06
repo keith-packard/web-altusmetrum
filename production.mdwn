@@ -480,3 +480,10 @@ Production run of 126 pieces of TeleBT v3.0 by
 Production run of 250 pieces of TeleDongle v3.0 by
 [Advanced Circuits](http://4pcb.com), received 2015.10.21.
 
+## sn 2918-2920 ##
+
+Prototype run of 3 pieces of TeleFireTwo v0.1 by keithp 2015.12.16
+
+## sn 2921-2923 ##
+
+Prototype run of 3 pieces of TeleLCOTwo v0.1 by keithp 2015.12.16
