@@ -1,32 +1,31 @@
-# TeleMini #
+# TeleMini
 
-TeleMini version 2.0 is a small, baro-only recording dual-deploy
-altimeter for model rocketry with integrated telemetry link.  The board 
-form factor and features are identical to [EasyMini](../EasyMini/), with the
-addition of radio telemetry and direction finding.  TeleMini is an excellent
-choice for mid-power and smaller high-power rockets, and can also be a
-cost-effective solution for booster recovery in multi-stage projects, etc.
+This is a very small, baro-only recording dual-deploy altimeter for 
+model rocketry with integrated telemetry link.  
+
+Production units are available from the 
+[Garbee and Garbee](http://auric.gag.com) web 
+store.  TeleMini starter kits are also available from 
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_telemini.asp).
 
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of an early prototype version: 
+These are photos of our current production version: 
 
-<a href="v2.0/telemini-top.jpg"> <img src="v2.0/telemini-top-thumb.jpg"></a>
-<a href="v2.0/telemini-parts.jpg"> <img src="v2.0/telemini-parts-thumb.jpg"></a>
+<a href="v1.0/telemini_top.jpg"> <img src="v1.0/telemini_top_thumb.jpg"></a>
+<a href="v1.0/telemini_bottom.jpg"> <img src="v1.0/telemini_bottom_thumb.jpg"></a>
 
 ## Features ##
 
 ### User View ###
 
- * Recording altimeter for model rocketry
- * Supports dual deployment (can fire 2 ejection charges)
- * 70cm ham-band transceiver for telemetry downlink
- * Barometric pressure sensor good to 100k' feet MSL
- * Designed to use any battery from 3.7 - 12V
- * Screw terminals for pyro connectors, switch and external battery
- * Built-in USB connector for configuration and data download
- * 1.5 x 0.8 inch board designed to fit inside 24mm airframe coupler tube
+* Recording altimeter for model rocketry
+* Supports dual deployment (can fire 2 ejection charges)
+* 70cm ham-band transceiver for telemetry downlink
+* Barometric pressure sensor good to 45k feet MSL
+* Designed to use a single LiPo rechargeable battery
+* 1.5 x 0.5 inch board designed to fit inside 18mm airframe coupler tube
 
 ### Developer View ###
 
@@ -40,12 +39,11 @@ These are photos of an early prototype version:
 		* 6 12-bit analog inputs (11 bits with single-ended sensors)
 		* 2 channels of serial I/O
 		* digital I/O
-	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/pressure/MS5607-02BA03.aspx) pressure sensor
-	* 1MB SPI flash
+	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
 * Software Features
 	* Written mostly in C with some 8051 assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
-		on-board flash memory
+		upper blocks of on-chip flash
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
@@ -60,15 +58,15 @@ which is available in [html](../AltOS/doc/altusmetrum.html) and
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
 An outline of the board with drill hole locations is available in
-[pdf](../Documents/easymini-outline.pdf) format.
+[pdf](../Documents/telemini-outline.pdf) format.
 
 The hardware design files can be found on [git.gag.com](http://git.gag.com) 
 in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
 
-## [History of TeleMini](history) ##
+For those who don't have ready access to the gEDA suite, here are pdf snapshots
+of the files for Production PCB version 1.0 in more easily readable form.  
 
-## Future Plans ##
+* [schematic](v1.0/telemini.pdf)
+* [pcb artwork](v1.0/telemini.pcb.pdf)
+* [bill of materials](v1.0/partslist.csv)
 
-Our current prototypes mostly work, but there are a couple issues yet to 
-resolve.  We hope to complete this design and put TeleMini v2.0 into production
-sometime in mid-2014.

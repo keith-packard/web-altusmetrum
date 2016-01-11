@@ -72,6 +72,9 @@ There is a single manual for EasyMega and most other Altus Metrum products,
 which is available in [html](../AltOS/doc/altusmetrum.html) and 
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
+An outline of the board with drill hole locations is available in
+[pdf](../Documents/easymega-outline.pdf) format.
+
 The hardware design current gEDA files are available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/easymega](http://git.gag.com/?p=hw/easymega;a=summary).  
