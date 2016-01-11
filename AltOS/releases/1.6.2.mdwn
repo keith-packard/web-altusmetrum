@@ -1,0 +1,13 @@
+---------------------------------
+### AltOS Version 1.6.2 ###
+
+- Available Downloads:
+	- [Windows Installer](/AltOS/releases/1.6.2/Altos-Windows-1-6-2.exe)
+	- [Mac OS X Package](/AltOS/releases/1.6.2/Altos-Mac-1.6.2.dmg)
+	- [Linux](/AltOS/releases/1.6.2/Altos-Linux-1.6.2.sh)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.6.2;sf=tgz)
+- Related Programs
+	- [MicroPeak 1.6.2](/MicroPeak/releases/1.6.2.html)
+	- [TeleGPS 1.6.2](/TeleGPS/releases/1.6.2.html)
+
+[[!inline pages="./1.6.2/release-notes-1.6.2.html" rss="no" raw="yes" ]]
