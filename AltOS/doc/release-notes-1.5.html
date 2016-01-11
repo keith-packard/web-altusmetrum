@@ -1,68 +1,61 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
-    Version 1.5 is a major release. It includes support for our new
-    EasyMega product, new features and bug fixes in in the flight
-    software for all our boards and the AltosUI ground station
-  </p><p>
-    AltOS New Features
-    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
-	  Add support for EasyMega boards.
-	</p></li><li class="listitem"><p>
-	  Make the APRS SSID be configurable. This lets you track
-	  different rockets on the same receiver without getting
-	  things mixed up.
-	</p></li><li class="listitem"><p>
-	  Report extra pyro channel continuity state on EasyMega and
-	  TeleMega via the beeper. This lets you easily verify flight
-	  readiness on these boards after powering up the electronics
-	  on the rail.
-	</p></li><li class="listitem"><p>
-	  Add lower telemetry data rates (2400 and 9600 bps) to
-	  increase telemetry radio range. This reduces the amount of
-	  data received as well as increasing battery consumption in
-	  the transmitter.
-	</p></li><li class="listitem"><p>
-	  Change TeleGPS to have only a single log, and append new
-	  data to it rather than using seperate per-flight logs. This
-	  avoids accidentally filling up log storage by turning
-	  TeleGPS on/off several times.
-	</p></li></ul></div><p>
-  </p><p>
-    AltOS Fixes
-    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
-	  Increase the maximum range for altitude values from +/-32767m
-	  to +/-2147483647m, allowing the flight computers to function
-	  correctly above the 32km level.
-	</p></li><li class="listitem"><p>
-	  Continuously test pyro firing conditions during delay stage,
-	  inhibiting the pyro channel if the test fails. This prevents
-	  firing pyro charges where the conditions were good before
-	  the delay, but become bad before the delay expires.
-	</p></li><li class="listitem"><p>
-	  Allow negative numbers in pyro configuration values. This
-	  lets you specify things like descending speed or
-	  deceleration.
-	</p></li></ul></div><p>
-  </p><p>
-    AltosUI and TeleGPS New Features
-    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
-	  Support telemetry baud rate selection. Adds menus to
-	  the flight monitoring and configuration for baud rate
-	  selection.
-	</p></li><li class="listitem"><p>
-	  Support APRS SSID configuration.
-	</p></li><li class="listitem"><p>
-	  Integrate with file managers. This provides icons for all of
-	  our file types and associates our application with the files
-	  so that using a file manager to open a AltOS data file
-	  results in launching our application.
-	</p></li></ul></div><p>
-  </p><p>
-    AltosUI Fixes
-    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
-	  Make the 'Graph' button on the landed tab work again.
-	</p></li><li class="listitem"><p>
-	  Make tests for Java on Windows a bit smarter, and also
-	  provide the user with the option to skip installing Java for
-	  cases where we just can't figure out what version is installed.
-	</p></li></ul></div><p>
-  </p></div></body></html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Release Notes for Version 1.5</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm45039062682368"></a>Release Notes for Version 1.5</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Bdale</span> <span class="surname">Garbee</span></h3><code class="email">&lt;<a class="email" href="mailto:bdale@gag.com">bdale@gag.com</a>&gt;</code></div></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3><code class="email">&lt;<a class="email" href="mailto:keithp@keithp.com">keithp@keithp.com</a>&gt;</code></div></div><div><p class="copyright">Copyright © 2014 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice"><a id="idm45039062850176"></a><p>
+    This document is released under the terms of the
+    <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
+      Creative Commons ShareAlike 3.0
+    </a>
+    license.
+  </p></div></div></div><hr /></div><p>Version 1.5 is a major release. It includes support for our new
+EasyMega product, new features and bug fixes in in the flight
+software for all our boards and the AltosUI ground station</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altos"></a>1. AltOS</h2></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Add support for EasyMega boards.
+</li><li class="listitem">
+Make the APRS SSID be configurable. This lets you track
+different rockets on the same receiver without getting
+things mixed up.
+</li><li class="listitem">
+Report extra pyro channel continuity state on EasyMega and
+TeleMega via the beeper. This lets you easily verify flight
+readiness on these boards after powering up the electronics
+on the rail.
+</li><li class="listitem">
+Add lower telemetry data rates (2400 and 9600 bps) to
+increase telemetry radio range. This reduces the amount of
+data received as well as increasing battery consumption in
+the transmitter.
+</li><li class="listitem">
+Change TeleGPS to have only a single log, and append new
+data to it rather than using seperate per-flight logs. This
+avoids accidentally filling up log storage by turning
+TeleGPS on/off several times.
+</li></ul></div><p>AltOS Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Increase the maximum range for altitude values from +/-32767m
+to +/-2147483647m, allowing the flight computers to function
+correctly above the 32km level.
+</li><li class="listitem">
+Continuously test pyro firing conditions during delay stage,
+inhibiting the pyro channel if the test fails. This prevents
+firing pyro charges where the conditions were good before
+the delay, but become bad before the delay expires.
+</li><li class="listitem">
+Allow negative numbers in pyro configuration values. This
+lets you specify things like descending speed or
+deceleration.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altosui_and_telegps_applications"></a>2. AltosUI and TeleGPS Applications</h2></div></div></div><p>AltosUI and TeleGPS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Support telemetry baud rate selection. Adds menus to
+the flight monitoring and configuration for baud rate
+selection.
+</li><li class="listitem">
+Support APRS SSID configuration.
+</li><li class="listitem">
+Integrate with file managers. This provides icons for all of
+our file types and associates our application with the files
+so that using a file manager to open a AltOS data file
+results in launching our application.
+</li></ul></div><p>AltosUI Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Make the <span class="emphasis"><em>Graph</em></span> button on the landed tab work again.
+</li><li class="listitem">
+Make tests for Java on Windows a bit smarter, and also
+provide the user with the option to skip installing Java for
+cases where we just can’t figure out what version is installed.
+</li></ul></div></div></div></body></html>

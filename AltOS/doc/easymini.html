@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>EasyMini Owner’s Manual</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div xml:lang="en" class="book" lang="en"><div class="titlepage"><div><div><h1 class="title"><a id="idm45510340386080"></a>EasyMini Owner’s Manual</h1></div><div><h2 class="subtitle">A Dual-Deploy Rocketry Flight Computer</h2></div><div><h3 class="corpauthor">
+  <span class="inlinemediaobject"><img src="altusmetrum-oneline.svg" width="270" /></span>
+</h3></div><div><div class="author"><h3 class="author"><span class="firstname">Bdale</span> <span class="surname">Garbee</span></h3><code class="email">&lt;<a class="email" href="mailto:bdale@gag.com">bdale@gag.com</a>&gt;</code></div></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3><code class="email">&lt;<a class="email" href="mailto:keithp@keithp.com">keithp@keithp.com</a>&gt;</code></div></div><div><p class="copyright">Copyright © 2016 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice"><a id="idm45510340537456"></a><p>
+    This document is released under the terms of the
+    <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
+      Creative Commons ShareAlike 3.0
+    </a>
+    license.
+  </p></div></div><div><a href="easymini-revhistory.html">Revision History</a></div></div><hr /></div><div class="dedication"><div class="titlepage"><div><div><h1 class="title"><a id="_acknowledgments"></a>Acknowledgments</h1></div></div></div><p>Thanks to Bob Finch, W9YA, NAR 12965, TRA 12350 for writing “The
+Mere-Mortals Quick Start/Usage Guide to the Altus Metrum Starter
+Kit” which formed the basis of the original Getting Started chapter
+in this manual.  Bob was one of our first customers for a production
+TeleMetrum, and his continued enthusiasm and contributions
+are immensely gratifying and highly appreciated!</p><p>And thanks to Anthony (AJ) Towns for major contributions including
+the AltosUI graphing and site map code and associated documentation.
+Free software means that our customers and friends can become our
+collaborators, and we certainly appreciate this level of
+contribution!</p><p>Have fun using these products, and we hope to meet all of you
+out on the rocket flight line somewhere.</p><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p>Bdale Garbee, KB0G<br />
+NAR #87103, TRA #12201</p></div></blockquote></div><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p>Keith Packard, KD7SQG<br />
+NAR #88757, TRA #12200</p></div></blockquote></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#_introduction_and_overview">1. Introduction and Overview</a></span></dt><dt><span class="chapter"><a href="#_getting_started">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#_batteries">2.1. Batteries</a></span></dt><dt><span class="section"><a href="#_linux_mac_windows_ground_station_software">2.2. Linux/Mac/Windows Ground Station Software</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_using_altus_metrum_hardware">3. Using Altus Metrum Hardware</a></span></dt><dd><dl><dt><span class="section"><a href="#_wiring_and_electrical_interference">3.1. Wiring and Electrical Interference</a></span></dt><dt><span class="section"><a href="#_hooking_up_lithium_polymer_batteries">3.2. Hooking Up Lithium Polymer Batteries</a></span></dt><dt><span class="section"><a href="#_hooking_up_pyro_charges">3.3. Hooking Up Pyro Charges</a></span></dt><dt><span class="section"><a href="#_hooking_up_a_power_switch">3.4. Hooking Up a Power Switch</a></span></dt><dt><span class="section"><a href="#_understanding_beeps">3.5. Understanding Beeps</a></span></dt><dt><span class="section"><a href="#_turning_on_the_power">3.6. Turning On the Power</a></span></dt><dt><span class="section"><a href="#_using_an_external_active_switch_circuit">3.7. Using an External Active Switch Circuit</a></span></dt><dt><span class="section"><a href="#_using_a_separate_pyro_battery">3.8. Using a Separate Pyro Battery</a></span></dt><dt><span class="section"><a href="#_using_a_different_kind_of_battery">3.9. Using a Different Kind of Battery</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_easymini">4. EasyMini</a></span></dt><dd><dl><dt><span class="section"><a href="#_easymini_screw_terminals">4.1. EasyMini Screw Terminals</a></span></dt><dt><span class="section"><a href="#_connecting_a_battery_to_easymini">4.2. Connecting A Battery To EasyMini</a></span></dt><dt><span class="section"><a href="#_charging_lithium_batteries">4.3. Charging Lithium Batteries</a></span></dt><dt><span class="section"><a href="#_using_a_separate_pyro_battery_with_easymini">4.4. Using a Separate Pyro Battery with EasyMini</a></span></dt><dt><span class="section"><a href="#_using_an_active_switch_with_easymini">4.5. Using an Active Switch with EasyMini</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_installation">5. Installation</a></span></dt><dt><span class="chapter"><a href="#_using_altus_metrum_products">6. Using Altus Metrum Products</a></span></dt><dd><dl><dt><span class="section"><a href="#_in_the_rocket">6.1. In the Rocket</a></span></dt><dt><span class="section"><a href="#_on_the_ground">6.2. On the Ground</a></span></dt><dt><span class="section"><a href="#_data_analysis">6.3. Data Analysis</a></span></dt><dt><span class="section"><a href="#_future_plans">6.4. Future Plans</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_altosui">7. AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#_save_flight_data">7.1. Save Flight Data</a></span></dt><dt><span class="section"><a href="#_replay_flight">7.2. Replay Flight</a></span></dt><dt><span class="section"><a href="#_graph_data">7.3. Graph Data</a></span></dt><dd><dl><dt><span class="section"><a href="#_flight_graph">7.3.1. Flight Graph</a></span></dt><dt><span class="section"><a href="#_configure_graph">7.3.2. Configure Graph</a></span></dt><dt><span class="section"><a href="#_flight_statistics">7.3.3. Flight Statistics</a></span></dt></dl></dd><dt><span class="section"><a href="#_export_data">7.4. Export Data</a></span></dt><dd><dl><dt><span class="section"><a href="#_comma_separated_value_format">7.4.1. Comma Separated Value Format</a></span></dt></dl></dd><dt><span class="section"><a href="#_configure_altimeter">7.5. Configure Altimeter</a></span></dt><dd><dl><dt><span class="section"><a href="#_main_deploy_altitude">7.5.1. Main Deploy Altitude</a></span></dt><dt><span class="section"><a href="#_apogee_delay">7.5.2. Apogee Delay</a></span></dt><dt><span class="section"><a href="#_apogee_lockout">7.5.3. Apogee Lockout</a></span></dt><dt><span class="section"><a href="#_maximum_flight_log_size">7.5.4. Maximum Flight Log Size</a></span></dt><dt><span class="section"><a href="#_ignitor_firing_mode">7.5.5. Ignitor Firing Mode</a></span></dt><dt><span class="section"><a href="#_beeper_frequency">7.5.6. Beeper Frequency</a></span></dt></dl></dd><dt><span class="section"><a href="#_configure_altosui">7.6. Configure AltosUI</a></span></dt><dd><dl><dt><span class="section"><a href="#_log_directory">7.6.1. Log Directory</a></span></dt><dt><span class="section"><a href="#_imperial_units">7.6.2. Imperial Units</a></span></dt><dt><span class="section"><a href="#_serial_debug">7.6.3. Serial Debug</a></span></dt><dt><span class="section"><a href="#_font_size">7.6.4. Font size</a></span></dt><dt><span class="section"><a href="#_look_amp_feel">7.6.5. Look &amp; feel</a></span></dt><dt><span class="section"><a href="#_menu_position">7.6.6. Menu position</a></span></dt></dl></dd><dt><span class="section"><a href="#_flash_image">7.7. Flash Image</a></span></dt><dt><span class="section"><a href="#_fire_igniter">7.8. Fire Igniter</a></span></dt></dl></dd><dt><span class="appendix"><a href="#_system_operation">A. System Operation</a></span></dt><dd><dl><dt><span class="section"><a href="#_firmware_modes">A.1. Firmware Modes</a></span></dt><dt><span class="section"><a href="#_ground_testing">A.2. Ground Testing</a></span></dt><dt><span class="section"><a href="#_configurable_parameters">A.3. Configurable Parameters</a></span></dt></dl></dd><dt><span class="appendix"><a href="#_handling_precautions">B. Handling Precautions</a></span></dt><dt><span class="appendix"><a href="#_updating_device_firmware">C. Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#_updating_easymini_firmware">C.1. Updating EasyMini Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#_recovering_from_self_flashing_failure">C.1.1. Recovering From Self-Flashing Failure</a></span></dt></dl></dd></dl></dd><dt><span class="appendix"><a href="#_flight_data_recording">D. Flight Data Recording</a></span></dt><dt><span class="appendix"><a href="#_altus_metrum_hardware_specifications">E. Altus Metrum Hardware Specifications</a></span></dt><dt><span class="appendix"><a href="#_release_notes">F. Release Notes</a></span></dt><dd><dl><dt><span class="section"><a href="#_release_notes_for_version_1_6_2">F.1. Release Notes for Version 1.6.2</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos">F.1.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications">F.1.2. AltosUI and TeleGPS Applications</a></span></dt><dt><span class="section"><a href="#_documentation">F.1.3. Documentation</a></span></dt></dl></dd></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>4.1. <a href="#idm45510334965904">EasyMini Board</a></dt><dt>7.1. <a href="#idm45510334883664">AltosUI Main Window</a></dt><dt>7.2. <a href="#idm45510334869152">Flight Data Graph</a></dt><dt>7.3. <a href="#idm45510334863760">Flight Graph Configuration</a></dt><dt>7.4. <a href="#idm45510334859248">Flight Statistics</a></dt><dt>7.5. <a href="#idm45510334849584">Altimeter Configuration</a></dt><dt>7.6. <a href="#idm45510334815904">Configure AltosUI Dialog</a></dt><dt>7.7. <a href="#idm45510334797936">Fire Igniter Window</a></dt></dl></div><div class="list-of-tables"><p><strong>List of Tables</strong></p><dl><dt>3.1. <a href="#idm45510340510736">AltOS Modes</a></dt><dt>3.2. <a href="#idm45510335019088">Pad/Idle Indications</a></dt><dt>4.1. <a href="#idm45510334959888">EasyMini Screw Terminals</a></dt><dt>D.1. <a href="#idm45510334739984">Data Storage on Altus Metrum altimeters</a></dt><dt>E.1. <a href="#idm45510334720464">Altus Metrum Flight Computer Electronics</a></dt><dt>E.2. <a href="#idm45510334695696">Altus Metrum Flight Computer Mechanical Components</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_introduction_and_overview"></a>Chapter 1. Introduction and Overview</h1></div></div></div><p>Welcome to the Altus Metrum community!  Our circuits and software reflect
+our passion for both hobby rocketry and Free Software.  We hope their
+capabilities and performance will delight you in every way, but by
+releasing all of our hardware and software designs under open licenses,
+we also hope to empower you to take as active a role in our collective
+future as you wish!</p><p>The first device created for our community was TeleMetrum, a dual
+deploy altimeter with fully integrated GPS and radio telemetry
+as standard features, and a “companion interface” that will
+support optional capabilities in the future. The latest version
+of TeleMetrum, v2.0, has all of the same features but with
+improved sensors and radio to offer increased performance.</p><p>Our second device was TeleMini, a dual deploy altimeter with
+radio telemetry and radio direction finding. The first version
+of this device was only 13mm by 38mm (½ inch by 1½ inches) and
+could fit easily in an 18mm air-frame. The latest version, v2.0,
+includes a beeper, USB data download and extended on-board
+flight logging, along with an improved barometric sensor.</p><p>TeleMega is our most sophisticated device, including six pyro
+channels (four of which are fully programmable), integrated GPS,
+integrated gyroscopes for staging/air-start inhibit and high
+performance telemetry.</p><p>EasyMini is a dual-deploy altimeter with logging and built-in
+USB data download.</p><p>EasyMega is essentially a TeleMega board with the GPS receiver
+and telemetry transmitter removed. It offers the same 6 pyro
+channels and integrated gyroscopes for staging/air-start inhibit.</p><p>TeleDongle v0.2 was our first ground station, providing a USB to RF
+interfaces for communicating with the altimeters. Combined with
+your choice of antenna and notebook computer, TeleDongle and our
+associated user interface software form a complete ground
+station capable of logging and displaying in-flight telemetry,
+aiding rocket recovery, then processing and archiving flight
+data for analysis and review. The latest version, TeleDongle
+v3, has all new electronics with a higher performance radio
+for improved range.</p><p>For a slightly more portable ground station experience that also
+provides direct rocket recovery support, TeleBT offers flight
+monitoring and data logging using a  Bluetooth™ connection between
+the receiver and an Android device that has the AltosDroid
+application installed from the Google Play store.</p><p>More products will be added to the Altus Metrum family over time, and
+we currently envision that this will be a single, comprehensive manual
+for the entire product family.</p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_getting_started"></a>Chapter 2. Getting Started</h1></div></div></div><p>The first thing to do after you open the box is to hook up a
+battery and charge it if necessary.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_batteries"></a>2.1. Batteries</h2></div></div></div><p>The Lithium Polymer
+EasyMini battery can be charged by disconnecting it
+from the board and plugging it into a standalone
+battery charger such as <a class="ulink" href="http://altusmetrum.org/LipoCharger" target="_top">LipoCharger</a>, and
+connecting that via a USB cable to a laptop or other
+USB power source.</p><p>You can also choose to use another battery with
+EasyMini, anything supplying between 4 and 12 volts should
+work fine (like a standard 9V battery), but if you are planning
+to fire pyro charges, ground testing is required to verify that
+the battery supplies enough current to fire your chosen e-matches.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_linux_mac_windows_ground_station_software"></a>2.2. Linux/Mac/Windows Ground Station Software</h2></div></div></div><p>Next you should obtain and install the AltOS software.
+The AltOS distribution includes the AltosUI ground
+station program, current firmware images for all of
+the hardware, and a number of standalone utilities
+that are rarely needed.  Pre-built binary packages are
+available for Linux, Microsoft Windows, Mac OSX. Full
+source code and build instructions are also
+available. The latest version may always be downloaded
+from <a class="ulink" href="http://altusmetrum.org/AltOS" target="_top">http://altusmetrum.org/AltOS</a></p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_using_altus_metrum_hardware"></a>Chapter 3. Using Altus Metrum Hardware</h1></div></div></div><p>Here are general instructions for hooking up an Altus Metrum
+flight computer. Instructions specific to each model will be
+found in the section devoted to that model below.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_wiring_and_electrical_interference"></a>3.1. Wiring and Electrical Interference</h2></div></div></div><p>To prevent electrical interference from affecting the
+operation of the flight computer, it’s important to always
+twist pairs of wires connected to the board. Twist the switch
+leads, the pyro leads and the battery leads. This reduces
+interference through a mechanism called common mode rejection.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_hooking_up_lithium_polymer_batteries"></a>3.2. Hooking Up Lithium Polymer Batteries</h2></div></div></div><p>All Altus Metrum flight computers have a two pin JST PH
+series connector to connect up a single-cell Lithium Polymer
+cell (3.7V nominal). You can purchase matching batteries
+from the Altus Metrum store, or other vendors, or you can
+make your own. Pin 1 of the connector is positive, pin 2 is
+negative. Spark Fun sells a cable with the connector
+attached, which they call a
+<a class="ulink" href="https://www.sparkfun.com/products/9914" target="_top">JST Jumper 2 Wire Assembly</a></p><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>Many RC vendors also sell lithium polymer batteries with
+this same connector. All that we have found use the opposite
+polarity, and if you use them that way, you will damage or
+destroy the flight computer.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_hooking_up_pyro_charges"></a>3.3. Hooking Up Pyro Charges</h2></div></div></div><p>Altus Metrum flight computers always have two screws for
+each pyro charge. This means you shouldn’t need to put two
+wires into a screw terminal or connect leads from pyro
+charges together externally.</p><p>On the flight computer, one lead from each charge is hooked
+to the positive battery terminal through the power switch.
+The other lead is connected through the pyro circuit, which
+is connected to the negative battery terminal when the pyro
+circuit is fired.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_hooking_up_a_power_switch"></a>3.4. Hooking Up a Power Switch</h2></div></div></div><p>Altus Metrum flight computers need an external power switch
+to turn them on. This disconnects both the computer and the
+pyro charges from the battery, preventing the charges from
+firing when in the Off position. The switch is in-line with
+the positive battery terminal.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_understanding_beeps"></a>3.5. Understanding Beeps</h2></div></div></div><p>Altus Metrum flight computers include a beeper to
+provide information about the state of the system.</p><p>Here’s a short summary of all of the modes and the
+beeping
+that accompanies each mode. In the description of the
+beeping pattern, “dit” means a short beep while "dah"
+means a long beep (three times as long). “Brap” means
+a long dissonant tone.</p><div class="table"><a id="idm45510340510736"></a><p class="title"><strong>Table 3.1. AltOS Modes</strong></p><div class="table-contents"><table summary="AltOS Modes" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Mode Name</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Abbreviation</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Beeps</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Startup</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>S</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>battery voltage in decivolts</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Calibrating sensors, detecting orientation.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Idle</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>I</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Ready to accept commands over USB</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Pad</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>P</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit dah dah dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Waiting for launch. Not listening for commands.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Boost</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>B</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dah dit dit dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Accelerating upwards.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Fast</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>F</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit dit dah dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Decelerating, but moving faster than 200m/s.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Coast</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>C</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dah dit dah dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Decelerating, moving slower than 200m/s</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Drogue</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>D</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dah dit dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Descending after apogee. Above main height.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>M</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dah dah</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Descending. Below main height.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Landed</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>L</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit dah dit dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Stable altitude for at least ten seconds.</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Sensor error</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>X</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>dah dit dit dah</p></td><td style="" align="left" valign="top"><p>Error detected during sensor calibration.</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Here’s a summary of all of the Pad and Idle mode
+indications. In Idle mode, you’ll hear one of these
+just once after the two short dits indicating idle
+mode. In Pad mode, after the dit dah dah dit
+indicating Pad mode, you’ll hear these once every five
+seconds.</p><div class="table"><a id="idm45510335019088"></a><p class="title"><strong>Table 3.2. Pad/Idle Indications</strong></p><div class="table-contents"><table summary="Pad/Idle Indications" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Name           </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Beeps          </th><th style="border-bottom: 1px solid #78079a; " align="left" valign="top">Description</th></tr></thead><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Neither</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>brap</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>No continuity detected on either apogee or main igniters.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Apogee</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Continuity detected only on apogee igniter.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Continuity detected only on main igniter.</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Both</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>dit dit dit</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Continuity detected on both igniters.</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Storage Full</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>warble</p></td><td style="" align="left" valign="top"><p>On-board data logging storage is full. This will
+not prevent the flight computer from safely
+controlling the flight or transmitting telemetry
+signals, but no record of the flight will be
+stored in on-board flash.</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_turning_on_the_power"></a>3.6. Turning On the Power</h2></div></div></div><p>Connect a battery and power switch and turn the switch
+to "on". The flight computer will signal power on by
+reporting the battery voltage and then perform an internal self
+test and sensor calibration.</p><p>Once the self test and calibration are complete, there
+are two modes that an Altus Metrum flight computer can
+operate in:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+Flight/Pad
+</span></dt><dd>
+The flight computer is waiting to detect
+launch and then fly the rocket. In this mode, the USB
+link is
+disabled.
+The only way to get out of this
+mode is to power the flight computer down.
+</dd><dt><span class="term">
+Idle
+</span></dt><dd>
+The flight computer is ready to communicate over USB
+You can configure
+the flight computer, download data or display
+the current state.
+</dd></dl></div><p>For EasyMini, if the USB cable is connected to a
+computer, it will enter Idle mode. Otherwise, it will
+enter Flight/Pad mode.</p><p>You can see in <a class="xref" href="#_understanding_beeps" title="3.5. Understanding Beeps">Section 3.5, “Understanding Beeps”</a>
+how to tell which mode the flight computer is in.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_using_an_external_active_switch_circuit"></a>3.7. Using an External Active Switch Circuit</h2></div></div></div><p>You can use an active switch circuit, such as the
+Featherweight Magnetic Switch, with any Altus Metrum
+flight computer. These require three connections, one to
+the battery, one to the positive power input on the flight
+computer and one to ground. Find instructions on how to
+hook these up for each flight computer below. Then follow
+the instructions that come with your active switch to
+connect it up.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_using_a_separate_pyro_battery"></a>3.8. Using a Separate Pyro Battery</h2></div></div></div><p>As mentioned above in <a class="xref" href="#_hooking_up_pyro_charges" title="3.3. Hooking Up Pyro Charges">Section 3.3, “Hooking Up Pyro Charges”</a>, one
+lead for each of the pyro charges is connected through
+the power switch directly to the positive battery
+terminal. The other lead is connected to the pyro
+circuit, which connects it to the negative battery
+terminal when the pyro circuit is fired. The pyro
+circuit on all of the flight computers is designed to
+handle up to 16V.</p><p>To use a separate pyro battery, connect the negative pyro
+battery terminal to the flight computer ground terminal,
+the positive battery terminal to the igniter and the other
+igniter lead to the negative pyro terminal on the flight
+computer. When the pyro channel fires, it will complete the
+circuit between the negative pyro terminal and the ground
+terminal, firing the igniter. Specific instructions on how
+to hook this up for each flight computer will be found
+in the section below for that flight computer.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_using_a_different_kind_of_battery"></a>3.9. Using a Different Kind of Battery</h2></div></div></div><p>EasyMini
+is
+designed to use either a
+lithium polymer battery or any other battery producing
+between 4 and 12 volts, such as a rectangular 9V
+battery.</p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_easymini"></a>Chapter 4. EasyMini</h1></div></div></div><div class="figure"><a id="idm45510334965904"></a><p class="title"><strong>Figure 4.1. EasyMini Board</strong></p><div class="figure-contents"><div class="mediaobject"><img src="easymini-top.jpg" width="495" alt="easymini-top.jpg" /></div></div></div><br class="figure-break" /><p>EasyMini is built on a 0.8 inch by 1½ inch circuit board. It’s
+designed to fit in a 24mm coupler tube.</p><p>You usually don’t need to configure EasyMini at all; it’s set
+up to do dual-deployment with an event at apogee to separate
+the airframe and deploy a drogue and another event at 250m
+(820ft) to deploy the main. Install EasyMini in your airframe,
+hook up a battery, igniters and a power switch and you’re
+ready to fly.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_easymini_screw_terminals"></a>4.1. EasyMini Screw Terminals</h2></div></div></div><p>EasyMini has two sets of four screw terminals near one end of the
+board. Using the picture
+above, the top four have connections for the main pyro
+circuit and an external battery and the bottom four have
+connections for the apogee pyro circuit and the power
+switch. Counting from the left, the connections are as follows:</p><div class="table"><a id="idm45510334959888"></a><p class="title"><strong>Table 4.1. EasyMini Screw Terminals</strong></p><div class="table-contents"><table summary="EasyMini Screw Terminals" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Terminal #</th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Terminal Name</th><th style="border-bottom: 1px solid #78079a; " align="left" valign="top">Description</th></tr></thead><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Top 1</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main -</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main pyro channel connection to pyro circuit</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Top 2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main pyro channel common connection to battery</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Top 3</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Battery</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Positive external battery terminal</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Top 4</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Battery -</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Negative external battery terminal</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Bottom 1</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Apogee -</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Apogee pyro channel connection to pyro circuit</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Bottom 2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Apogee</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Apogee pyro channel common connection to battery</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Bottom 3</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Switch Output</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Switch connection to flight computer</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Bottom 4</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Switch Input</p></td><td style="" align="left" valign="top"><p>Switch connection to positive battery terminal</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_connecting_a_battery_to_easymini"></a>4.2. Connecting A Battery To EasyMini</h2></div></div></div><p>There are two possible battery connections on
+EasyMini. You can use either method; both feed
+through the power switch terminals.</p><p>One battery connection is the standard Altus Metrum
+white JST plug. This mates with single-cell Lithium
+Polymer batteries sold by Altus Metrum.</p><p>The other is a pair of screw terminals marked <span class="emphasis"><em>Battery
++</em></span> and <span class="emphasis"><em>Battery -</em></span>. Connect a battery from 4 to 12
+volts to these terminals, being careful to match polarity.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_charging_lithium_batteries"></a>4.3. Charging Lithium Batteries</h2></div></div></div><p>Because EasyMini allows for batteries other than the
+standard Altus Metrum Lithium Polymer cells, it cannot
+incorporate a battery charger circuit. Therefore, when
+using a Litium Polymer cell, you’ll need an external
+charger. These are available from Altus Metrum, or
+from Spark Fun.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_using_a_separate_pyro_battery_with_easymini"></a>4.4. Using a Separate Pyro Battery with EasyMini</h2></div></div></div><p>As described above, using an external pyro battery involves
+connecting the negative battery terminal to the flight
+computer ground, connecting the positive battery terminal to
+one of the igniter leads and connecting the other igniter
+lead to the per-channel pyro circuit connection.</p><p>To connect the negative pyro battery terminal to EasyMini
+ground, connect it to the negative external battery
+connection, top terminal 4.</p><p>Connecting the positive battery terminal to the pyro
+charges must be done separate from EasyMini, by soldering
+them together or using some other connector.</p><p>The other lead from each pyro charge is then inserted into
+the appropriate per-pyro channel screw terminal (top
+terminal 1 for the Main charge, bottom terminal 1 for the
+Apogee charge).</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_using_an_active_switch_with_easymini"></a>4.5. Using an Active Switch with EasyMini</h2></div></div></div><p>As explained above, an external active switch requires three
+connections, one to the positive battery terminal, one to
+the flight computer positive input and one to ground. Use
+the negative external battery connection, top terminal 4 for
+ground.</p><p>The positive battery terminal is available on bottom
+terminal 4, the positive flight computer input is on the
+bottom terminal 3.</p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_installation"></a>Chapter 5. Installation</h1></div></div></div><p>A typical installation involves attaching
+only a suitable battery, a single pole switch for
+power on/off, and two pairs of wires connecting e-matches for the
+apogee and main ejection charges.  All Altus Metrum products are
+designed for use with single-cell batteries with 3.7 volts
+nominal.
+EasyMini may also be used with other
+batteries as long as they supply between 4 and 12 volts.</p><p>The battery connectors are a standard 2-pin JST connector; you
+can purchase suitable batteries from the any vendor selling
+Altus Metrum products. These batteries are
+single-cell Lithium Polymer batteries that nominally provide 3.7
+volts.  Other vendors sell similar batteries for RC aircraft
+using mating connectors, however the polarity for those is
+generally reversed from the batteries used by Altus Metrum
+products. In particular, the Tenergy batteries supplied for use
+in Featherweight flight computers are not compatible with Altus
+Metrum flight computers or battery chargers.</p><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>Check polarity and voltage before connecting any battery not
+purchased from Altus Metrum.</p></div><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>Spark Fun sells batteries that have a matching connector with
+the correct polarity. However, these batteries include an
+integrated current limiting circuit. That circuit will cause
+the battery to shut down when firing the igniter circuit. Do
+not use these batteries unless you remove the current limiting
+circuit.</p></div><p>By default, we use the unregulated output of the battery
+directly to fire ejection charges.  This works marvelously
+with standard low-current e-matches like the J-Tek from MJG
+Technologies, and with Quest Q2G2 igniters.  However, if you
+want or need to use a separate pyro battery, check out
+<a class="xref" href="#_using_a_separate_pyro_battery" title="3.8. Using a Separate Pyro Battery">Section 3.8, “Using a Separate Pyro Battery”</a> for instructions on how to wire
+that up. The altimeters are designed to work with an external
+pyro battery of no more than 15 volts.</p><p>Ejection charges are wired directly to the screw terminal block
+at the aft end of the altimeter.  You’ll need a very small straight
+blade screwdriver for these screws, such as you might find in a
+jeweler’s screwdriver set.
+The screw terminal block is also used for the power switch leads.</p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_using_altus_metrum_products"></a>Chapter 6. Using Altus Metrum Products</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_in_the_rocket"></a>6.1. In the Rocket</h2></div></div></div><p>In the rocket itself, you just need a flight computer
+and a single-cell, 3.7 volt nominal Li-Po rechargeable
+battery.
+A 110mAh battery weighs less
+than a triple A battery and is a good choice for use
+with
+EasyMini.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_on_the_ground"></a>6.2. On the Ground</h2></div></div></div><p>The GUI tool, AltosUI, is written in Java and runs
+across Linux, Mac OS and Windows. There’s also a suite
+of C tools for Linux which can perform most of the
+same tasks.</p><p>After the flight,
+you can use a
+USB cable to plug into the flight computer board directly.
+A USB cable is also how you
+charge the Li-Po battery, so you’ll want one of those
+anyway. The same cable used by lots of digital
+cameras and other modern electronic stuff will work
+fine.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_data_analysis"></a>6.3. Data Analysis</h2></div></div></div><p>Our software makes it easy to log the data from each
+flight, both the telemetry received during the flight
+itself, and the more complete data log recorded in the
+flash memory on the altimeter board.  Once this data
+is on your computer, our post-flight tools make it
+easy to quickly get to the numbers everyone wants,
+like apogee altitude, max acceleration, and max
+velocity.  You can also generate and view a standard
+set of plots showing the altitude, acceleration, and
+velocity of the rocket during flight.  And you can
+even export a flight log in a format usable with Google
+Maps and Google Earth for visualizing the flight path
+in two or three dimensions!</p><p>Our ultimate goal is to emit a set of files for each
+flight that can be published as a web page per flight,
+or just viewed on your local disk with a web browser.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_future_plans"></a>6.4. Future Plans</h2></div></div></div><p>Because all of our work is open, both the hardware
+designs and the software, if you have some great idea
+for an addition to the current Altus Metrum family,
+feel free to dive in and help!  Or let us know what
+you’d like to see that we aren’t already working on,
+and maybe we’ll get excited about it too…</p><p>Watch our <a class="ulink" href="http://altusmetrum.org/" target="_top">web site</a> for
+more news and information as our family of products
+evolves!</p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_altosui"></a>Chapter 7. AltosUI</h1></div></div></div><div class="figure"><a id="idm45510334883664"></a><p class="title"><strong>Figure 7.1. AltosUI Main Window</strong></p><div class="figure-contents"><div class="mediaobject"><img src="altosui.png" width="414" alt="altosui.png" /></div></div></div><br class="figure-break" /><p>The AltosUI program provides a graphical user interface for
+interacting with the Altus Metrum product family. AltosUI can
+monitor telemetry data, configure devices and many other
+tasks. The primary interface window provides a selection of
+buttons, one for each major activity in the system.  This
+chapter is split into sections, each of which documents one of
+the tasks provided from the top-level toolbar.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_save_flight_data"></a>7.1. Save Flight Data</h2></div></div></div><p>The altimeter records flight data to its internal
+flash memory.
+The <span class="emphasis"><em>Save Flight Data</em></span> button allows you to
+read the flash memory and write it to disk.</p><p>Clicking on the <span class="emphasis"><em>Save Flight Data</em></span> button brings up a
+list of connected flight computers and TeleDongle
+devices. If you select a flight computer, the flight
+data will be downloaded from that device directly.</p><p>After the device has been selected, a dialog showing
+the flight data saved in the device will be shown
+allowing you to select which flights to download and
+which to delete. With version 0.9 or newer firmware,
+you must erase flights in order for the space they
+consume to be reused by another flight. This prevents
+accidentally losing flight data if you neglect to
+download data before flying again. Note that if there
+is no more space available in the device, then no data
+will be recorded during the next flight.</p><p>The file name for each flight log is computed
+automatically from the recorded flight date, altimeter
+serial number and flight number information.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_replay_flight"></a>7.2. Replay Flight</h2></div></div></div><p>Select this button and you are prompted to select a flight
+record file, either a .telem file recording telemetry data or a
+.eeprom file containing flight data saved from the altimeter
+flash memory.</p><p>Once a flight record is selected, the flight monitor interface
+is displayed and the flight is re-enacted in real
+time.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_graph_data"></a>7.3. Graph Data</h2></div></div></div><p>Select this button and you are prompted to select a flight
+record file, either a .telem file recording telemetry data or a
+.eeprom file containing flight data saved from
+flash memory.</p><p>Note that telemetry files will generally produce poor graphs
+due to the lower sampling rate and missed telemetry packets.
+Use saved flight data in .eeprom files for graphing where possible.</p><p>Once a flight record is selected, a window with multiple tabs is
+opened.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_flight_graph"></a>7.3.1. Flight Graph</h3></div></div></div><div class="figure"><a id="idm45510334869152"></a><p class="title"><strong>Figure 7.2. Flight Data Graph</strong></p><div class="figure-contents"><div class="mediaobject"><img src="graph.png" width="495" alt="graph.png" /></div></div></div><br class="figure-break" /><p>By default, the graph contains acceleration (blue),
+velocity (green) and altitude (red).</p><p>The graph can be zoomed into a particular area by
+clicking and dragging down and to the right. Once
+zoomed, the graph can be reset by clicking and
+dragging up and to the left. Holding down control and
+clicking and dragging allows the graph to be panned.
+The right mouse button causes a pop-up menu to be
+displayed, giving you the option save or print the
+plot.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_configure_graph"></a>7.3.2. Configure Graph</h3></div></div></div><div class="figure"><a id="idm45510334863760"></a><p class="title"><strong>Figure 7.3. Flight Graph Configuration</strong></p><div class="figure-contents"><div class="mediaobject"><img src="graph-configure.png" width="495" alt="graph-configure.png" /></div></div></div><br class="figure-break" /><p>This selects which graph elements to show, and, at the
+very bottom, lets you switch between metric and
+imperial units</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_flight_statistics"></a>7.3.3. Flight Statistics</h3></div></div></div><div class="figure"><a id="idm45510334859248"></a><p class="title"><strong>Figure 7.4. Flight Statistics</strong></p><div class="figure-contents"><div class="mediaobject"><img src="graph-stats.png" width="495" alt="graph-stats.png" /></div></div></div><br class="figure-break" /><p>Shows overall data computed from the flight.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_export_data"></a>7.4. Export Data</h2></div></div></div><p>This tool takes the raw data files and makes them
+available for external analysis. When you select this
+button, you are prompted to select a flight data file,
+which can be either a .eeprom or .telem.  The .eeprom
+files contain higher resolution and more continuous
+data, while .telem files contain receiver signal
+strength information.  Next, a second dialog appears
+which is used to select where to write the resulting
+file.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_comma_separated_value_format"></a>7.4.1. Comma Separated Value Format</h3></div></div></div><p>This is a text file containing the data in a form
+suitable for import into a spreadsheet or other
+external data analysis tool. The first few lines of
+the file contain the version and configuration
+information from the altimeter, then there is a single
+header line which labels all of the fields. All of
+these lines start with a <span class="emphasis"><em>#</em></span> character which many
+tools can be configured to skip over.</p><p>The remaining lines of the file contain the data, with
+each field separated by a comma and at least one
+space. All of the sensor values are converted to
+standard units, with the barometric data reported in
+both pressure, altitude and height above pad units.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configure_altimeter"></a>7.5. Configure Altimeter</h2></div></div></div><div class="figure"><a id="idm45510334849584"></a><p class="title"><strong>Figure 7.5. Altimeter Configuration</strong></p><div class="figure-contents"><div class="mediaobject"><img src="configure-altimeter.png" width="324" alt="configure-altimeter.png" /></div></div></div><br class="figure-break" /><p>Select this button and then select an altimeter.</p><p>The first few lines of the dialog provide information about the
+connected device, including the product name,
+software version and hardware serial number. Below that are the
+individual configuration entries.</p><p>At the bottom of the dialog, there are four buttons:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+Save
+</span></dt><dd>
+This writes any changes to the configuration parameter
+block in flash memory. If you don’t press this button,
+any changes you make will be lost.
+</dd><dt><span class="term">
+Reset
+</span></dt><dd>
+This resets the dialog to the most recently saved
+values, erasing any changes you have made.
+</dd><dt><span class="term">
+Reboot
+</span></dt><dd>
+This reboots the device. Use this to switch from idle
+to pad mode by rebooting once the rocket is oriented
+for flight, or to confirm changes you think you saved
+are really saved.
+</dd><dt><span class="term">
+Close
+</span></dt><dd>
+This closes the dialog. Any unsaved changes will be
+lost.
+</dd></dl></div><p>The rest of the dialog contains the parameters to be configured.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_main_deploy_altitude"></a>7.5.1. Main Deploy Altitude</h3></div></div></div><p>This sets the altitude (above the recorded pad
+altitude) at which the <span class="emphasis"><em>main</em></span> igniter will fire. The
+drop-down menu shows some common values, but you can
+edit the text directly and choose whatever you
+like. If the apogee charge fires below this altitude,
+then the main charge will fire two seconds after the
+apogee charge fires.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_apogee_delay"></a>7.5.2. Apogee Delay</h3></div></div></div><p>When flying redundant electronics, it’s often
+important to ensure that multiple apogee charges don’t
+fire at precisely the same time, as that can over
+pressurize the apogee deployment bay and cause a
+structural failure of the air-frame. The Apogee Delay
+parameter tells the flight computer to fire the apogee
+charge a certain number of seconds after apogee has
+been detected.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_apogee_lockout"></a>7.5.3. Apogee Lockout</h3></div></div></div><p>Apogee lockout is the number of seconds after boost
+where the flight computer will not fire the apogee
+charge, even if the rocket appears to be at
+apogee. This is often called <span class="emphasis"><em>Mach Delay</em></span>, as it is
+intended to prevent a flight computer from
+unintentionally firing apogee charges due to the
+pressure spike that occurrs across a mach
+transition. Altus Metrum flight computers include a
+Kalman filter which is not fooled by this sharp
+pressure increase, and so this setting should be left
+at the default value of zero to disable it.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_maximum_flight_log_size"></a>7.5.4. Maximum Flight Log Size</h3></div></div></div><p>This sets the space (in kilobytes) allocated
+for each flight log. The available space will
+be divided into chunks of this size. A smaller
+value will allow more flights to be stored, a
+larger value will record data from longer
+flights.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_ignitor_firing_mode"></a>7.5.5. Ignitor Firing Mode</h3></div></div></div><p>This configuration parameter allows the two standard ignitor
+channels (Apogee and Main) to be used in different
+configurations.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+Dual Deploy
+</span></dt><dd>
+This is the usual mode of operation; the
+<span class="emphasis"><em>apogee</em></span> channel is fired at apogee and the
+<span class="emphasis"><em>main</em></span> channel at the height above ground
+specified by the <span class="emphasis"><em>Main Deploy Altitude</em></span> during
+descent.
+</dd><dt><span class="term">
+Redundant Apogee
+</span></dt><dd>
+This fires both channels at apogee, the
+<span class="emphasis"><em>apogee</em></span> channel first followed after a two
+second delay by the <span class="emphasis"><em>main</em></span> channel.
+</dd><dt><span class="term">
+Redundant Main
+</span></dt><dd>
+This fires both channels at the height above
+ground specified by the Main Deploy Altitude
+setting during descent. The <span class="emphasis"><em>apogee</em></span> channel
+is fired first, followed after a two second
+delay by the <span class="emphasis"><em>main</em></span> channel.
+</dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_beeper_frequency"></a>7.5.6. Beeper Frequency</h3></div></div></div><p>The beeper on all Altus Metrum flight
+computers works best at 4000Hz, however if you
+have more than one flight computer in a single
+airframe, having all of them sound at the same
+frequency can be confusing. This parameter
+lets you adjust the base beeper frequency
+value.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configure_altosui"></a>7.6. Configure AltosUI</h2></div></div></div><div class="figure"><a id="idm45510334815904"></a><p class="title"><strong>Figure 7.6. Configure AltosUI Dialog</strong></p><div class="figure-contents"><div class="mediaobject"><img src="configure-altosui.png" width="216" alt="configure-altosui.png" /></div></div></div><br class="figure-break" /><p>This button presents a dialog so that you can
+configure the AltosUI global settings.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_log_directory"></a>7.6.1. Log Directory</h3></div></div></div><p>AltosUI logs all telemetry data and saves all
+flash data to this directory. This
+directory is also used as the staring point
+when selecting data files for display or
+export.</p><p>Click on the directory name to bring up a
+directory choosing dialog, select a new
+directory and click <span class="emphasis"><em>Select Directory</em></span> to
+change where AltosUI reads and writes data
+files.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_imperial_units"></a>7.6.2. Imperial Units</h3></div></div></div><p>This switches between metric units (meters)
+and imperial units (feet and miles). This
+affects the display of values use during
+flight monitoring, configuration, data
+graphing and all of the voice
+announcements. It does not change the units
+used when exporting to CSV files, those are
+always produced in metric units.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_serial_debug"></a>7.6.3. Serial Debug</h3></div></div></div><p>This causes all communication with a connected
+device to be dumped to the console from which
+AltosUI was started. If you’ve started it from
+an icon or menu entry, the output will simply
+be discarded. This mode can be useful to debug
+various serial communication issues.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_font_size"></a>7.6.4. Font size</h3></div></div></div><p>Selects the set of fonts used in the flight
+monitor window. Choose between the small,
+medium and large sets.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_look_amp_feel"></a>7.6.5. Look &amp; feel</h3></div></div></div><p>Switches between the available Java user
+interface appearances. The default selection
+is supposed to match the native window system
+appearance for the target platform.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_menu_position"></a>7.6.6. Menu position</h3></div></div></div><p>Selects the initial position for the main
+AltosUI window that includes all of the
+command buttons.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_flash_image"></a>7.7. Flash Image</h2></div></div></div><p>This reprograms Altus Metrum devices with new
+firmware.
+EasyMini is
+programmed directly
+over USB (self programming). Please read
+the directions for flashing devices in
+<a class="xref" href="#_updating_device_firmware" title="Appendix C. Updating Device Firmware">Appendix C, <em>Updating Device Firmware</em></a>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_fire_igniter"></a>7.8. Fire Igniter</h2></div></div></div><div class="figure"><a id="idm45510334797936"></a><p class="title"><strong>Figure 7.7. Fire Igniter Window</strong></p><div class="figure-contents"><div class="mediaobject"><img src="fire-igniter.png" width="108" alt="fire-igniter.png" /></div></div></div><br class="figure-break" /><p>This activates the igniter circuits in the flight
+computer to help test recovery systems
+deployment.</p><p>Selecting the <span class="emphasis"><em>Fire Igniter</em></span> button brings up the
+usual device selection dialog. Pick the desired
+device. This brings up another window which shows the
+current continuity test status for all of the pyro
+channels.</p><p>Next, select the desired igniter to fire. This will
+enable the <span class="emphasis"><em>Arm</em></span> button.</p><p>Select the <span class="emphasis"><em>Arm</em></span> button. This enables the <span class="emphasis"><em>Fire</em></span>
+button. The word <span class="emphasis"><em>Arm</em></span> is replaced by a countdown
+timer indicating that you have 10 seconds to press the
+<span class="emphasis"><em>Fire</em></span> button or the system will deactivate, at which
+point you start over again at selecting the desired
+igniter.</p></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_system_operation"></a>Appendix A. System Operation</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_firmware_modes"></a>A.1. Firmware Modes</h2></div></div></div><p>The AltOS firmware build for the altimeters has two
+fundamental modes, “idle” and “flight”.  Which of these modes
+the firmware operates in is determined at start up
+time.
+Since
+EasyMini doesn’t
+have an
+accelerometer we can use to determine orientation, “idle” mode
+is selected if the board is connected via USB to a computer,
+otherwise the board enters “flight” mode.</p><p>At power on, the altimeter will beep out the battery voltage
+to the nearest tenth of a volt.  Each digit is represented by
+a sequence of short “dit” beeps, with a pause between
+digits. A zero digit is represented with one long “dah”
+beep. Then there will be a short pause while the altimeter
+completes initialization and self test, and decides which mode
+to enter next.</p><p>In flight or “pad” mode, the altimeter engages the flight
+state machine, goes into transmit-only mode to send telemetry,
+and waits for launch to be detected.  Flight mode is indicated
+by an “di-dah-dah-dit” (“P” for pad) on the beeper or lights,
+followed by beeps or flashes indicating the state of the
+pyrotechnic igniter continuity.  One beep/flash indicates
+apogee continuity, two beeps/flashes indicate main continuity,
+three beeps/flashes indicate both apogee and main continuity,
+and one longer “brap” sound which is made by rapidly
+alternating between two tones indicates no continuity.  For a
+dual deploy flight, make sure you’re getting three beeps or
+flashes before launching!  For apogee-only or motor eject
+flights, do what makes sense.</p><p>If idle mode is entered, you will hear an audible “di-dit” or
+see two short flashes (“I” for idle), and the flight state
+machine is disengaged, thus no ejection charges will fire.
+Idle mode is useful for configuring the altimeter, for
+extracting data from the on-board storage chip after
+flight, and for ground testing pyro charges.</p><p>In “Idle” and “Pad” modes, once the mode indication
+beeps/flashes and continuity indication has been sent, if
+there is no space available to log the flight in on-board
+memory, the flight computer will emit a warbling tone (much
+slower than the “no continuity tone”)</p><p>See <a class="xref" href="#_understanding_beeps" title="3.5. Understanding Beeps">Section 3.5, “Understanding Beeps”</a> for a summary of all of
+the audio signals used.</p><p>Once landed, the flight computer will signal that by emitting
+the “Landed” sound described above, after which it will beep
+out the apogee height (in meters). Each digit is represented
+by a sequence of short “dit” beeps, with a pause between
+digits. A zero digit is represented with one long “dah”
+beep. The flight computer will continue to report landed mode
+and beep out the maximum height until turned off.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_ground_testing"></a>A.2. Ground Testing</h2></div></div></div><p>An important aspect of preparing a rocket using electronic deployment
+for flight is ground testing the recovery system.</p><p>Just prep the rocket for flight, then power up the altimeter
+in “idle”
+mode.
+You can now command the altimeter to fire the apogee
+or main charges from a safe distance using your
+computer and the Fire Igniter tab to complete ejection testing.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configurable_parameters"></a>A.3. Configurable Parameters</h2></div></div></div><p>Configuring an Altus Metrum altimeter for flight is
+very simple.  Even on our baro-only TeleMini and
+EasyMini boards, the use of a Kalman filter means
+there is no need to set a “mach delay”.  All of the
+configurable parameters can be set using AltosUI. Read
+<a class="xref" href="#_configure_altimeter" title="7.5. Configure Altimeter">Section 7.5, “Configure Altimeter”</a> for more information.</p></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_handling_precautions"></a>Appendix B. Handling Precautions</h1></div></div></div><p>All Altus Metrum products are sophisticated electronic devices.
+When handled gently and properly installed in an air-frame, they
+will deliver impressive results.  However, as with all electronic
+devices, there are some precautions you must take.</p><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>The Lithium Polymer rechargeable batteries have an
+extraordinary power density.  This is great because we can fly with
+much less battery mass than if we used alkaline batteries or previous
+generation rechargeable batteries… but if they are punctured
+or their leads are allowed to short, they can and will release their
+energy very rapidly!
+Thus we recommend that you take some care when handling our batteries
+and consider giving them some extra protection in your air-frame.  We
+often wrap them in suitable scraps of closed-cell packing foam before
+strapping them down, for example.</p></div><p>The barometric sensors used on all of our flight computers are
+sensitive to sunlight.  In normal mounting situations, the baro sensor
+and all of the other surface mount components
+are “down” towards whatever the underlying mounting surface is, so
+this is not normally a problem.  Please consider this when designing an
+installation in an air-frame with a see-through plastic payload bay.  It
+is particularly important to
+consider this with TeleMini v1.0, both because the baro sensor is on the
+“top” of the board, and because many model rockets with payload bays
+use clear plastic for the payload bay!  Replacing these with an opaque
+cardboard tube, painting them, or wrapping them with a layer of masking
+tape are all reasonable approaches to keep the sensor out of direct
+sunlight.</p><p>The barometric sensor sampling port must be able to “breathe”,
+both by not being covered by foam or tape or other materials that might
+directly block the hole on the top of the sensor, and also by having a
+suitable static vent to outside air.</p><p>As with all other rocketry electronics, Altus Metrum altimeters must
+be protected from exposure to corrosive motor exhaust and ejection
+charge gasses.</p></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_updating_device_firmware"></a>Appendix C. Updating Device Firmware</h1></div></div></div><p>EasyMini is
+programmed directly over their USB connectors (self
+programming).</p><p>You may wish to begin by ensuring you have current firmware
+images.  These are distributed as part of the AltOS software
+bundle that also includes the AltosUI ground station program.
+Newer ground station versions typically work fine with older
+firmware versions, so you don’t need to update your devices
+just to try out new software features.  You can always
+download the most recent version from
+<a class="ulink" href="http://www.altusmetrum.org/AltOS/" target="_top">http://www.altusmetrum.org/AltOS/</a></p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_updating_easymini_firmware"></a>C.1. Updating EasyMini Firmware</h2></div></div></div><p>Self-programmable devices are reprogrammed by
+connecting them to your computer over USB.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+Attach a battery if necessary and power switch to
+the target device. Power up the device.
+</li><li class="listitem">
+Using a Micro USB cable, connect the target device to your
+computer’s USB socket.
+</li><li class="listitem">
+Run AltosUI, and select <span class="emphasis"><em>Flash Image</em></span> from the File menu.
+</li><li class="listitem">
+Select the target device in the Device Selection dialog.
+</li><li class="listitem">
+Select the image you want to flash to the device,
+which should have a name in the form
+&lt;product&gt;-v&lt;product-version&gt;-&lt;software-version&gt;.ihx,
+such as EasyMini-v1.0-1.6.0.ihx.
+</li><li class="listitem">
+Make sure the configuration parameters are
+reasonable looking. If the serial number and/or RF
+configuration values aren’t right, you’ll need to
+change them.
+</li><li class="listitem">
+Hit the <span class="emphasis"><em>OK</em></span> button and the software should proceed
+to flash the device with new firmware, showing a
+progress bar.
+</li><li class="listitem">
+Verify that the device is working by using the
+<span class="emphasis"><em>Configure Altimeter</em></span> or <span class="emphasis"><em>Configure Groundstation</em></span>
+item to check over the configuration.
+</li></ol></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_recovering_from_self_flashing_failure"></a>C.1.1. Recovering From Self-Flashing Failure</h3></div></div></div><p>If the firmware loading fails, it can leave the device
+unable to boot. Not to worry, you can force the device to
+start the boot loader instead, which will let you try to
+flash the device again.</p><p>On each device, connecting two pins from one of the exposed
+connectors will force the boot loader to start, even if the
+regular operating system has been corrupted in some way.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+EasyMini
+</span></dt><dd>
+Connect pin 6 and pin 1 of the debug connector, which
+is the six holes next to the beeper. Pin 1 can be
+identified by the square pad around it, and then the
+pins could sequentially across the board, making Pin 6
+the one on the other end of the row.
+</dd></dl></div><p>Once you’ve located the right pins:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+Turn the altimeter power off.
+</li><li class="listitem">
+Connect a battery.
+</li><li class="listitem">
+Connect the indicated terminals together with a
+short piece of wire. Take care not to accidentally
+connect anything else.
+</li><li class="listitem">
+Connect USB
+</li><li class="listitem">
+Turn the board power on.
+</li></ol></div><p>The board should now be visible over USB as
+<span class="emphasis"><em>AltosFlash</em></span> and be ready to receive firmware.  Once
+the board has been powered up, you can remove the
+piece of wire.</p></div></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_flight_data_recording"></a>Appendix D. Flight Data Recording</h1></div></div></div><p>Each flight computer logs data at 100 samples per second
+during ascent and 10 samples per second during
+descent.
+Data are logged to
+an on-board flash memory part, which can be partitioned into
+several equal-sized blocks, one for each flight.</p><div class="table"><a id="idm45510334739984"></a><p class="title"><strong>Table D.1. Data Storage on Altus Metrum altimeters</strong></p><div class="table-contents"><table summary="Data Storage on Altus Metrum altimeters" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><thead><tr><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Device                 </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Bytes per Sample       </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Total Storage  </th><th style="border-bottom: 1px solid #78079a; " align="left" valign="top">Minutes at Full Rate</th></tr></thead><tbody><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>EasyMini</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>1MB</p></td><td style="" align="left" valign="top"><p>10</p></td></tr></tbody></table></div></div><br class="table-break" /><p>The on-board flash is partitioned into separate flight logs,
+each of a fixed maximum size. Increase the maximum size of
+each log and you reduce the number of flights that can be
+stored. Decrease the size and you can store more flights.</p><p>Configuration data is also stored in the flash memory on
+EasyMini.
+This consumes 64kB
+of flash space.  This configuration space is not available
+for storing flight log data.</p><p>To compute the amount of space needed for a single flight, you
+can multiply the expected ascent time (in seconds) by 100
+times bytes-per-sample, multiply the expected descent time (in
+seconds) by 10 times the bytes per sample and add the two
+together. That will slightly under-estimate the storage (in
+bytes) needed for the flight.</p><p>The default size allows for several flights on each flight
+computer.
+You can adjust the size.</p><p>Altus Metrum flight computers will not overwrite existing
+flight data, so be sure to download flight data and erase it
+from the flight computer before it fills up. The flight
+computer will still successfully control the flight even if it
+cannot log data, so the only thing you will lose is the data.</p></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_altus_metrum_hardware_specifications"></a>Appendix E. Altus Metrum Hardware Specifications</h1></div></div></div><p>Here’s the full set of Altus Metrum products, both in
+production and retired.</p><div class="table"><a id="idm45510334720464"></a><p class="title"><strong>Table E.1. Altus Metrum Flight Computer Electronics</strong></p><div class="table-contents"><table summary="Altus Metrum Flight Computer Electronics" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /><col class="col_5" /><col class="col_6" /><col class="col_7" /><col class="col_8" /></colgroup><thead><tr><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Device </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"> Barometer </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"> Z-axis accel </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"> GPS </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"> 3D sensors </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"> Storage </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"> RF Output </th><th style="border-bottom: 1px solid #78079a; " align="left" valign="top"> Battery</th></tr></thead><tbody><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>EasyMini v1.0</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>MS5607 30km (100k')</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>-</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>-</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>-</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>1MB</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>-</p></td><td style="" align="left" valign="top"><p>3.7-12V</p></td></tr></tbody></table></div></div><br class="table-break" /><p></p><div class="table"><a id="idm45510334695696"></a><p class="title"><strong>Table E.2. Altus Metrum Flight Computer Mechanical Components</strong></p><div class="table-contents"><table summary="Altus Metrum Flight Computer Mechanical Components" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /><col class="col_5" /><col class="col_6" /></colgroup><thead><tr><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Device</th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Connectors</th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Screw Terminals</th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Width</th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Length</th><th style="border-bottom: 1px solid #78079a; " align="left" valign="top">Tube Size</th></tr></thead><tbody><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>EasyMini</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Debug USB Battery</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Apogee pyro Main pyro Battery</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0.8 inch (2.03cm)</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>1½ inch (3.81cm)</p></td><td style="" align="left" valign="top"><p>24mm coupler</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_release_notes"></a>Appendix F. Release Notes</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_2"></a>F.1. Release Notes for Version 1.6.2</h2></div></div></div><p>Version 1.6.2 includes support for our updated TeleMega v2.0
+product and bug fixes in in the flight software for all our boards
+and ground station interfaces.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos"></a>F.1.1. AltOS</h3></div></div></div><p>AltOS New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Add support for TeleMega v2.0 boards.
+</li><li class="listitem">
+Add PWM servo driver. There’s no higher level code using
+this yet, but the driver allows testing of the TeleMega v2.0
+servo output connector.
+</li></ul></div><p>AltOS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Slow down telemetry packets to allow receiver to keep
+up.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications"></a>F.1.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Fix post-flight orientation computation when processing
+TeleMega and EasyMega eeprom data files.
+</li><li class="listitem">
+Capture complete eeprom data even when there are invalid
+entries in the data. This keeps reading eeprom contents and
+writing the associated .eeprom file when an error is detected.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_documentation"></a>F.1.3. Documentation</h3></div></div></div><p>We spent a bunch of time trying to improve our documentation</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+HTML versions now have a table of contents on the left side.
+</li><li class="listitem">
+EasyMini now has its own shorter manual.
+</li><li class="listitem">
+Provide links between sections in each document.
+</li><li class="listitem">
+Lots of minor rewriting and restructuring to avoid
+duplication of information
+</li></ul></div></div></div></div></div></body></html>

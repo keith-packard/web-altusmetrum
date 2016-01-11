@@ -1,81 +1,88 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title></title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><hr></div><p>
-    Version 1.0.1 is a major release, adding support for the TeleMini
-    device and lots of new AltosUI features
-  </p><p>
-    AltOS Firmware Changes
-    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
-	Add TeleMini v1.0 support. Firmware images for TeleMini are
-	included in AltOS releases.
-      </p></li><li class="listitem"><p>
-	Change telemetry to be encoded in multiple 32-byte packets. This
-	enables support for TeleMini and other devices without requiring
-	further updates to the TeleDongle firmware.
-      </p></li><li class="listitem"><p>
-	Support operation of TeleMetrum with the antenna pointing
-	aft. Previous firmware versions required the antenna to be
-	pointing upwards, now there is a configuration option allowing
-	the antenna to point aft, to aid installation in some airframes.
-      </p></li><li class="listitem"><p>
-	Ability to disable telemetry. For airframes where an antenna
-	just isn't possible, or where radio transmissions might cause
-	trouble with other electronics, there's a configuration option
-	to disable all telemetry. Note that the board will still
-	enable the radio link in idle mode.
-      </p></li><li class="listitem"><p>
-	Arbitrary frequency selection. The radios in Altus Metrum
-	devices can be programmed to a wide range of frequencies, so
-	instead of limiting devices to 10 pre-selected 'channels', the
-	new firmware allows the user to choose any frequency in the
-	70cm band. Note that the RF matching circuit on the boards is
-	tuned for around 435MHz, so frequencies far from that may
-	reduce the available range.
-      </p></li><li class="listitem"><p>
-	Kalman-filter based flight-tracking. The model based sensor
-	fusion approach of a Kalman filter means that AltOS now
-	computes apogee much more accurately than before, generally
-	within a fraction of a second. In addition, this approach
-	allows the baro-only TeleMini device to correctly identify
-	Mach transitions, avoiding the error-prone selection of a Mach
-	delay.
-      </p></li></ul></div><p>
-  </p><p>
-    AltosUI Changes
-    </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
-	Wait for altimeter when using packet mode. Instead of quicly
-	timing out when trying to initialize a packet mode
-	configuration connection, AltosUI now waits indefinitely for
-	the remote device to appear, providing a cancel button should
-	the user get bored. This is necessary as the TeleMini can only
-	be placed in "Idle" mode if AltosUI is polling it.
-      </p></li><li class="listitem"><p>
-	Add main/apogee voltage graphs to the data plot. This provides
-	a visual indication if the igniters fail before being fired.
-      </p></li><li class="listitem"><p>
-	Scan for altimeter devices by watching the defined telemetry
-	frequencies. This avoids the problem of remembering what
-	frequency a device was configured to use, which is especially
-	important with TeleMini which does not include a USB connection.
-      </p></li><li class="listitem"><p>
-	Monitor altimeter state in "Idle" mode. This provides much of
-	the information presented in the "Pad" dialog from the Monitor
-	Flight command, monitoring the igniters, battery and GPS
-	status withing requiring the flight computer to be armed and
-	ready for flight.
-      </p></li><li class="listitem"><p>
-	Pre-load map images from home. For those launch sites which
-	don't provide free Wi-Fi, this allows you to download the
-	necessary satellite images given the location of the launch
-	site. A list of known launch sites is maintained at
-	altusmetrum.org which AltosUI downloads to populate a menu; if
-	you've got a launch site not on that list, please send the
-	name of it, latitude and longitude along with a link to the
-	web site of the controlling club to the altusmetrum mailing list.
-      </p></li><li class="listitem"><p>
-	Flight statistics are now displayed in the Graph data
-	window. These include max height/speed/accel, average descent
-	rates and a few other bits of information. The Graph Data
-	window can now be reached from the 'Landed' tab in the Monitor
-	Flight window so you can immediately see the results of a
-	flight.
-      </p></li></ul></div><p>
-  </p></div></body></html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Release Notes for Version 1.0.1</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm45643182896304"></a>Release Notes for Version 1.0.1</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Bdale</span> <span class="surname">Garbee</span></h3><code class="email">&lt;<a class="email" href="mailto:bdale@gag.com">bdale@gag.com</a>&gt;</code></div></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3><code class="email">&lt;<a class="email" href="mailto:keithp@keithp.com">keithp@keithp.com</a>&gt;</code></div></div><div><p class="copyright">Copyright © 2011 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice"><a id="idm45643183043184"></a><p>
+    This document is released under the terms of the
+    <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
+      Creative Commons ShareAlike 3.0
+    </a>
+    license.
+  </p></div></div></div><hr /></div><p>Version 1.0.1 is a major release, adding support for the
+TeleMini device and lots of new AltosUI features</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altos"></a>1. AltOS</h2></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Add TeleMini v1.0 support.
+</li><li class="listitem">
+Support operation of TeleMetrum with the antenna pointing
+aft. Previous firmware versions required the antenna to be
+pointing upwards, now there is a configuration option
+allowing the antenna to point aft, to aid installation in
+some airframes.
+</li><li class="listitem">
+Ability to disable telemetry. For airframes where an antenna
+just isn’t possible, or where radio transmissions might
+cause trouble with other electronics, there’s a
+configuration option to disable all telemetry. Note that the
+board will still enable the radio link in idle mode.
+</li><li class="listitem">
+Arbitrary frequency selection. The radios in Altus Metrum
+devices can be programmed to a wide range of frequencies, so
+instead of limiting devices to 10 pre-selected <span class="emphasis"><em>channels</em></span>,
+the new firmware allows the user to choose any frequency in
+the 70cm band. Note that the RF matching circuit on the
+boards is tuned for around 435MHz, so frequencies far from
+that may reduce the available range.
+</li></ul></div><p>AltOS Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Change telemetry to be encoded in multiple 32-byte
+packets. This enables support for TeleMini and other devices
+without requiring further updates to the TeleDongle
+firmware.
+</li><li class="listitem">
+Kalman-filter based flight-tracking. The model based sensor
+fusion approach of a Kalman filter means that AltOS now
+computes apogee much more accurately than before, generally
+within a fraction of a second. In addition, this approach
+allows the baro-only TeleMini device to correctly identify
+Mach transitions, avoiding the error-prone selection of a
+Mach delay.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altosui_application"></a>2. AltosUI Application</h2></div></div></div><p>AltosUI New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Add main/apogee voltage graphs to the data
+plot. This provides a visual indication if the
+igniters fail before being fired.
+</li><li class="listitem">
+Scan for altimeter devices by watching the defined
+telemetry frequencies. This avoids the problem of
+remembering what frequency a device was configured
+to use, which is especially important with TeleMini
+which does not include a USB connection.
+</li><li class="listitem">
+Monitor altimeter state in "Idle" mode. This
+provides much of the information presented in the
+"Pad" dialog from the Monitor Flight command,
+monitoring the igniters, battery and GPS status
+withing requiring the flight computer to be armed
+and ready for flight.
+</li><li class="listitem">
+Pre-load map images from home. For those launch
+sites which don’t provide free Wi-Fi, this allows
+you to download the necessary satellite images
+given the location of the launch site. A list of
+known launch sites is maintained at altusmetrum.org
+which AltosUI downloads to populate a menu; if
+you’ve got a launch site not on that list, please
+send the name of it, latitude and longitude along
+with a link to the web site of the controlling club
+to the altusmetrum mailing list.
+</li><li class="listitem">
+Flight statistics are now displayed in the Graph
+data window. These include max height/speed/accel,
+average descent rates and a few other bits of
+information. The Graph Data window can now be
+reached from the <span class="emphasis"><em>Landed</em></span> tab in the Monitor Flight
+window so you can immediately see the results of a
+flight.
+</li></ul></div><p>AltosUI Changes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Wait for altimeter when using packet mode. Instead
+of quicly timing out when trying to initialize a
+packet mode configuration connection, AltosUI now
+waits indefinitely for the remote device to appear,
+providing a cancel button should the user get
+bored. This is necessary as the TeleMini can only be
+placed in "Idle" mode if AltosUI is polling it.
+</li></ul></div></div></div></body></html>
