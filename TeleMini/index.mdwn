@@ -1,6 +1,6 @@
 # TeleMini #
 
-TeleMini version 2.0 is a small, baro-only recording dual-deploy
+TeleMini version 1.2 is a small, baro-only recording dual-deploy
 altimeter for model rocketry with integrated telemetry link. It's
 currently in development, with production planned to start in the fall
 of 2013.
@@ -10,8 +10,8 @@ visit the [AltOS](../AltOS) page on this site.
 
 These are photos of our current prototype version: 
 
-<a href="v2.0/telemini-top.jpg"> <img src="v2.0/telemini-top-thumb.jpg"></a>
-<a href="v2.0/telemini-parts.jpg"> <img src="v2.0/telemini-parts-thumb.jpg"></a>
+<a href="v1.2/telemini-top.jpg"> <img src="v1.2/telemini-top-thumb.jpg"></a>
+<a href="v1.2/telemini-parts.jpg"> <img src="v1.2/telemini-parts-thumb.jpg"></a>
 
 ## Features ##
 
