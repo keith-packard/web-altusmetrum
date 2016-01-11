@@ -1,66 +1,7 @@
 # TeleMini #
 
-TeleMini version 1.2 is a small, baro-only recording dual-deploy
-altimeter for model rocketry with integrated telemetry link. It's
-currently in development, with production planned to start in the fall
-of 2013.
+There are two versions of TeleMini:
 
-For the latest TeleMini firmware and related ground station software, please
-visit the [AltOS](../AltOS) page on this site.
+ * [Version 1.0](v1.0) — the original TeleMini, 0.5 x 1.5 inches
+ * [Version 1.2](v1.2) — the new TeleMini, 0.8 x 1.5 inches
 
-These are photos of our current prototype version: 
-
-<a href="v1.2/telemini-top.jpg"> <img src="v1.2/telemini-top-thumb.jpg"></a>
-<a href="v1.2/telemini-parts.jpg"> <img src="v1.2/telemini-parts-thumb.jpg"></a>
-
-## Features ##
-
-### User View ###
-
- * Recording altimeter for model rocketry
- * Supports dual deployment (can fire 2 ejection charges)
- * 70cm ham-band transceiver for telemetry downlink
- * Barometric pressure sensor good to 100k' feet MSL
- * Designed to use any battery from 3.7 - 12V
- * Screw terminals for pyro connectors, switch and external battery
- * Built-in USB connector for configuration and data download
- * 1.5 x 0.8 inch board designed to fit inside 24mm airframe coupler tube
-
-### Developer View ###
-
-* Hardware Features
-	* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
-		* Sub-1Ghz transceiver
-		* 8051 MCU
-		* 32k Flash
-		* 4k RAM
-		* USB 2.0
-		* 6 12-bit analog inputs (11 bits with single-ended sensors)
-		* 2 channels of serial I/O
-		* digital I/O
-	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/pressure/MS5607-02BA03.aspx) pressure sensor
-	* 1MB SPI flash
-* Software Features
-	* Written mostly in C with some 8051 assembler
-	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
-		on-board flash memory
-* Tools Used
-	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
-	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
-* Licenses
-	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
-	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-
-## Artifacts ##
-
-There is a single manual for TeleMini and all other Altus Metrum products,
-which is available in [html](../AltOS/doc/altusmetrum.html) and 
-[pdf](../AltOS/doc/altusmetrum.pdf) formats.
-
-An outline of the board with drill hole locations is available in
-[pdf](../Documents/easymini-outline.pdf] format.
-
-The hardware design files can be found on [git.gag.com](http://git.gag.com) 
-in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
-
-## [History of TeleMini](history) ##

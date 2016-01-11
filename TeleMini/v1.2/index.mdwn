@@ -1,13 +1,22 @@
-# TeleMini History
+# TeleMini Version 1.2 #
 
-# TeleMini Version 1.0 #
+This is a small, baro-only recording dual-deploy altimeter for 
+model rocketry with integrated telemetry link. It's different from the
+original TeleMini:
 
-The very first TeleMini design became 1.0. It was a very small,
-baro-only recording dual-deploy altimeter for model rocketry with
-integrated telemetry link.
+ * Supports batteries from 3.7V - 12V
+ * Screw terminals for switch and external battery
+ * Large on-board flash for data recording
+ * Built-in USB connector for configuration and data download
+ * High precision and digital barometric sensor
 
-<a href="v1.0/telemini_top.jpg"> <img src="v1.0/telemini_top_thumb.jpg"></a>
-<a href="v1.0/telemini_bottom.jpg"> <img src="v1.0/telemini_bottom_thumb.jpg"></a>
+For the latest TeleMini firmware and related ground station software, please
+visit the [AltOS](../AltOS) page on this site.
+
+These are photos of our current prototype version: 
+
+<a href="telemini-top.jpg"> <img src="telemini-top-thumb.jpg"></a>
+<a href="telemini-parts.jpg"> <img src="telemini-parts-thumb.jpg"></a>
 
 ## Features ##
 
@@ -16,9 +25,9 @@ integrated telemetry link.
 * Recording altimeter for model rocketry
 * Supports dual deployment (can fire 2 ejection charges)
 * 70cm ham-band transceiver for telemetry downlink
-* Barometric pressure sensor good to 45k feet MSL
-* Designed to use a single LiPo rechargeable battery
-* 1.5 x 0.5 inch board designed to fit inside 18mm airframe coupler tube
+* Barometric pressure sensor good to 100k' feet MSL
+* Designed to use any battery from 3.7 - 12V
+* 1.5 x 0.8 inch board designed to fit inside 24mm airframe coupler tube
 
 ### Developer View ###
 
@@ -32,11 +41,12 @@ integrated telemetry link.
 		* 6 12-bit analog inputs (11 bits with single-ended sensors)
 		* 2 channels of serial I/O
 		* digital I/O
-	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
+	* [Measurement Specialties MS5607](http://www.meas-spec.com/product/pressure/MS5607-02BA03.aspx) pressure sensor
+	* 1MB SPI flash
 * Software Features
 	* Written mostly in C with some 8051 assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
-		upper blocks of on-chip flash
+		on-board flash memory
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
@@ -52,11 +62,4 @@ which is available in [html](../AltOS/doc/altusmetrum.html) and
 
 The hardware design files can be found on [git.gag.com](http://git.gag.com) 
 in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
-
-For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 1.0 in more easily readable form.  
-
-* [schematic](v1.0/telemini.pdf)
-* [pcb artwork](v1.0/telemini.pcb.pdf)
-* [bill of materials](v1.0/partslist.csv)
 

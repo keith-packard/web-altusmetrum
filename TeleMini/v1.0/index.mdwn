@@ -1,0 +1,69 @@
+# TeleMini Version 1.0 #
+
+This is a very small, baro-only recording dual-deploy altimeter for 
+model rocketry with integrated telemetry link.  
+
+Production units are available from the 
+[Garbee and Garbee](http://auric.gag.com) web 
+store.  TeleMini starter kits are also available from 
+[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_telemini.asp).
+
+For the latest TeleMini firmware and related ground station software, please
+visit the [AltOS](../AltOS) page on this site.
+
+These are photos of our current production version: 
+
+<a href="telemini_top.jpg"> <img src="telemini_top_thumb.jpg"></a>
+<a href="telemini_bottom.jpg"> <img src="telemini_bottom_thumb.jpg"></a>
+
+## Features ##
+
+### User View ###
+
+* Recording altimeter for model rocketry
+* Supports dual deployment (can fire 2 ejection charges)
+* 70cm ham-band transceiver for telemetry downlink
+* Barometric pressure sensor good to 45k feet MSL
+* Designed to use a single LiPo rechargeable battery
+* 1.5 x 0.5 inch board designed to fit inside 18mm airframe coupler tube
+
+### Developer View ###
+
+* Hardware Features
+	* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
+		* Sub-1Ghz transceiver
+		* 8051 MCU
+		* 32k Flash
+		* 4k RAM
+		* USB 2.0
+		* 6 12-bit analog inputs (11 bits with single-ended sensors)
+		* 2 channels of serial I/O
+		* digital I/O
+	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
+* Software Features
+	* Written mostly in C with some 8051 assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
+		upper blocks of on-chip flash
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+There is a single manual for TeleMini and all other Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+
+The hardware design files can be found on [git.gag.com](http://git.gag.com) 
+in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
+
+For those who don't have ready access to the gEDA suite, here are pdf snapshots
+of the files for Production PCB version 1.0 in more easily readable form.  
+
+* [schematic](telemini.pdf)
+* [pcb artwork](telemini.pcb.pdf)
+* [bill of materials](partslist.csv)
+
