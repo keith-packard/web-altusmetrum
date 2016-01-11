@@ -1,0 +1,1 @@
+[[!map pages="AltOS/doc/fonts/* and ! AltOS/doc/fonts/*/*"]]
