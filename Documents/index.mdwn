@@ -21,7 +21,9 @@ along with where to drill holes for mounting.
 
  * [TeleMetrum Outline (both v1 and v2)](./telemetrum-outline.pdf)
  * [TeleMega Outline](./telemega-outline.pdf)
- * [EasyMini and TeleMini Outline](./easymini-outline.pdf)
+ * [EasyMega Outline](./easymega-outline.pdf)
+ * [EasyMini Outline](./easymini-outline.pdf)
+ * [TeleMini Outline](./telemini-outline.pdf)
 
 ## Collected References ##
 
