@@ -498,3 +498,7 @@ Production run of 108 pieces of TeleGPS v1.0 by
 Production run of 100 pieces of TeleMega v2.0 by
 [Advanced Circuits](http://4pcb.com), received 2016.01.06.
 
+## sn 3132-3133 #
+
+Production run of 2 pieces of TeleMini v1.0 by
+keithp, built 2016.01.16
