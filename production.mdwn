@@ -502,3 +502,8 @@ Production run of 100 pieces of TeleMega v2.0 by
 
 Production run of 2 pieces of TeleMini v1.0 by
 keithp, built 2016.01.16
+
+## sn 3134-3393 #
+
+Production run of 260 pieces of EasyMini v1.0 by
+[Advanced Circuits](http://4pcb.com), received 2016.01.26.
