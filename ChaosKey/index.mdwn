@@ -14,7 +14,7 @@ A photo of prototype version 0.3:
 
 Here's a circuit diagram of the noise source:
 
-<img src="v.03/noise-source.svg">
+<img src="v0.3/noise-source.svg">
 
 ### Version 0.2 Hardware ###
 
