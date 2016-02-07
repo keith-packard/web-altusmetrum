@@ -16,7 +16,7 @@ Here's a circuit diagram of the noise source:
 
 <img src="v0.3/noise-source.svg">
 
-### Version 0.2 Hardware ###
+### Version 0.3 Hardware ###
 
  * [STM32F042](http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1823?icmp=stm32f0x2-line_pron_pr_jan2014&sc=stm32f0x2-pr) System-on-Chip
     * ARM Cortex-M0 MCU
