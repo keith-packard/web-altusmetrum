@@ -1,1 +1,0 @@
-[[!map pages="USBtrng/v0.1/* and ! USBtrng/v0.1/*/*"]]
