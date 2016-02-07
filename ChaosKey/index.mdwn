@@ -2,7 +2,40 @@
 
 This is a hardware True Random Number Generator that attaches via USB.
 
+## Version 0.3 ##
+
+This one uses the better noise source coupled with an op amp that
+provides 2MHz of bandwidth at a gain of 100, offering linear frequency
+response at a million samples per second.
+
+A photo of prototype version 0.3:
+
+<a href="v0.3/chaoskey-v0.3.jpg"> <img src="v0.3/chaoskey-v0.3-thumb.jpg"></a>
+
+Here's a circuit diagram of the noise source:
+
+<img src="v.03/noise-source.svg">
+
+### Version 0.2 Hardware ###
+
+ * [STM32F042](http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1823?icmp=stm32f0x2-line_pron_pr_jan2014&sc=stm32f0x2-pr) System-on-Chip
+    * ARM Cortex-M0 MCU
+    * 32k Flash
+    * 6k RAM
+    * USB 2.0 Full Speed
+    * Crystal-less operation
+ * 20V noise source
+    * AP3015A boost regulator
+    * back-to-back 3904 transistor noise
+ * [OPA356](http://www.ti.com/product/opa356) op amp
+    * 200MHz GBP
+
 ## Version 0.2 ##
+
+This version uses a better noise source, but the single transistor amp
+designed to get from the 20mV noise source to a digital value doesn't
+provide enough bandwidth, so the resulting signal seen by the CPU has
+poor frequency response.
 
 Here's a photo of prototype version 0.2:
 
@@ -16,7 +49,6 @@ Here's a photo of prototype version 0.2:
     * 6k RAM
     * USB 2.0
     * Crystal-less operation
- * ZXRE1004 zener-diode noise source
  * 20V noise source
     * AP3015A boost regulator
     * back-to-back 3904 transistor noise
