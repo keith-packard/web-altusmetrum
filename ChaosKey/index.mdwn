@@ -1,14 +1,47 @@
-# USBtrng
+# ChaosKey
 
 This is a hardware True Random Number Generator that attaches via USB.
 
-## Version 2.0 ##
+## Version 0.3 ##
 
-Here's a photo of prototype version 2.0:
+This one uses the better noise source coupled with an op amp that
+provides 2MHz of bandwidth at a gain of 100, offering linear frequency
+response at a million samples per second.
 
-<a href="v2.0/usbtrng-v2.0.jpg"> <img src="v2.0/usbtrng-v2.0-thumb.jpg"></a>
+A photo of prototype version 0.3:
 
-### Version 2.0 Hardware ###
+<a href="v0.3/chaoskey-v0.3.jpg"> <img src="v0.3/chaoskey-v0.3-thumb.jpg"></a>
+
+Here's a circuit diagram of the noise source:
+
+<img src="v0.3/noise-source.svg">
+
+### Version 0.3 Hardware ###
+
+ * [STM32F042](http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1823?icmp=stm32f0x2-line_pron_pr_jan2014&sc=stm32f0x2-pr) System-on-Chip
+    * ARM Cortex-M0 MCU
+    * 32k Flash
+    * 6k RAM
+    * USB 2.0 Full Speed
+    * Crystal-less operation
+ * 20V noise source
+    * AP3015A boost regulator
+    * back-to-back 3904 transistor noise
+ * [OPA356](http://www.ti.com/product/opa356) op amp
+    * 200MHz GBP
+
+## Version 0.2 ##
+
+This version uses a better noise source, but the single transistor amp
+designed to get from the 20mV noise source to a digital value doesn't
+provide enough bandwidth, so the resulting signal seen by the CPU has
+poor frequency response.
+
+Here's a photo of prototype version 0.2:
+
+<a href="v0.2/chaoskey-v0.2.jpg"> <img src="v0.2/chaoskey-v0.2-thumb.jpg"></a>
+
+### Version 0.2 Hardware ###
 
  * [STM32F042](http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1823?icmp=stm32f0x2-line_pron_pr_jan2014&sc=stm32f0x2-pr) System-on-Chip
     * ARM Cortex-M0 MCU
@@ -16,7 +49,6 @@ Here's a photo of prototype version 2.0:
     * 6k RAM
     * USB 2.0
     * Crystal-less operation
- * ZXRE1004 zener-diode noise source
  * 20V noise source
     * AP3015A boost regulator
     * back-to-back 3904 transistor noise
@@ -25,8 +57,8 @@ Here's a photo of prototype version 2.0:
 
 These are photos of prototype version 0.1:
 
-<a href="v0.1/usbtrng-v0.1-top.jpg"> <img src="v0.1/usbtrng-v0.1-top-thumb.jpg"></a>
-<a href="v0.1/usbtrng-v0.1-bottom.jpg"> <img src="v0.1/usbtrng-v0.1-bottom-thumb.jpg"></a>
+<a href="v0.1/chaoskey-v0.1-top.jpg"> <img src="v0.1/chaoskey-v0.1-top-thumb.jpg"></a>
+<a href="v0.1/chaoskey-v0.1-bottom.jpg"> <img src="v0.1/chaoskey-v0.1-bottom-thumb.jpg"></a>
 
 ### Version 0.1 Hardware ###
 
