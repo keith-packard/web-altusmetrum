@@ -13,7 +13,7 @@ think before you act!
 
  * [Remove the protection circuit board from a LiPo battery](./FixBattery)
  * [Use a separate pyro battery](./SeparatePyroBattery)
- * [Use a Featherweight magnetic switch](./Matts Active Switch.pdf)
+ * [Use a Featherweight magnetic switch](./MattsActiveSwitch.pdf)
 
 ## Product Outlines and Drill Patterns ##
 
