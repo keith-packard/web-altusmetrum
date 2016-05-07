@@ -6,6 +6,7 @@ AHPRA Rainbow Valley:33.25:-112.4:http://www.ahpra.org
 ARS Rio Rancho:35.33475:-106.75361:http://arsabq.org
 COSROCS Challenger:38.99624:-104.773979:http://cosrocs.org
 COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org
+GRITS Gaskins Farm:31.283055555555556:-83.349444444444444:http://www/gritslaunch.com
 HARA Bragg Farms:34.895875:-86.616211:http://www.hararocketry.org/HARA/Main.html
 HARA Manchester:35.489537:-85.962438:http://www.hararocketry.org/HARA/Main.html
 KLOUDBusters Rocket Pasture:37.167833333:-97.73975:http://kloudbusters.org
@@ -18,12 +19,14 @@ MDRA Higgs Farm:39.07854167:-75.87634583:http://www.mdrocketry.org
 METRA Pine Island:41.31939:-74.47077:http://metrarocketclub.org
 NCR Atlas Site:40.65:-104.38333:http://ncrocketry.org
 NCR Pawnee North Site:40.885955:-104.63793:http://ncrocketry.org
+NEFAR Clegg sod farm:29.331950:-81.352590:http://www.nefar.net
 NOVAAR Great Meadow:38.829743:-77.806898:http://novaar.org
 NSWRA Doonside Sydney:-33.78567:150.866862:http://www.nswrocketry.org.au
 NZRA Taupiri:-37.5492:175.261966666666667:http://www.nzrocketry.org.nz
 OPROC Discovery Bay:47.97808:-122.896383:http://4hrockets.blogspot.com
 OROC Brothers:43.79949786336483:-120.6485810681392:http://www.oregonrocketry.com
 OROC Sheridan:45.044176:-123.314323:http://www.oregonrocketry.com
+OROC Silverton:44.948666666666667:-122.6875:http://www.oregonrocketry.com
 OROC Wilsonville:45.297186:-122.759067:http://www.oregonrocketry.com
 PARS Metamora, IL:40.774052:-89.398280:http://tripolipeoria95.com/
 PMW Talladega, AL:33.3158:-86.1711:http://www.phoenixmissileworks.com
@@ -36,6 +39,7 @@ SARA Reservation Road:32.264739:-111.273861:http://sararocketry.org
 SAROS Fall Fire:53.435056:-110.299417:http://www.saskatoonrocketry.org
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net
 SEARS Samson, AL:31.118849:-86.091031:http://www.sears572.com
+SRA Rocket Ranch:27.943333333333333:-80.716666666666667:http://www.spaceportrocketry.org/
 St. Louis Rocketry Elsberry, MO:39.160217:-90.763356:http://stlouisrocketry.com/
 THOR / Tripoli Nebrask (Jansen):40.150556:-97.032222:http://www.nerocketry.org/history.html
 Torrey Farms of Potter, NY:42.7008967:-77.183656:http://urrg.org/
@@ -46,6 +50,7 @@ Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org
 Tripoli Houston Hearne Airport:30.861146:-96.622149:http://www.tripolihouston002.com/
 Tripoli Idaho Swan Falls:43.23765:-116.32373:http://www.tripoliidaho.org
 Tripoli Louisiana Goldmine Plantation:32.2073:-91.8567:http://www.tra-la.org
+TTRA Rocking V Ranch:28.091666666666667:-82.17:http://www.tripoli-tampa.com/
 UROC Frank Hunt Field:40.21879:-112.24618:http://www.uroc.org
 VAST Monterey, VA:38.376898:-79.607717:http://www.valleyaerospace.com
 WAC Sportsman Club:47.815327777777778:-119.427186111111111:http://www.washingtonaerospace.org

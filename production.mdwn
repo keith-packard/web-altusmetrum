@@ -507,3 +507,8 @@ keithp, built 2016.01.16
 
 Production run of 260 pieces of EasyMini v1.0 by
 [Advanced Circuits](http://4pcb.com), received 2016.01.26.
+
+## sn 3394-3396 #
+
+Prototype run of 3 TeleLCOTwo by
+keithp, build 2016.04.05
