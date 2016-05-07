@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Release Notes for Version 1.6.3</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm46447378311664"></a>Release Notes for Version 1.6.3</h2></div></div><hr /></div><p>Version 1.6.3 adds idle mode to AltosDroid and has bug fixes
+for our host software on desktops, laptops an android devices
+along with BlueTooth support for Windows.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altos"></a>1. AltOS</h2></div></div></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Fix hardware flow control on TeleBT v3.0. RTS/CTS is
+wired backwards on this board, switch from using the
+hardware to driving these pins with software.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altosui_and_telegps_applications"></a>2. AltosUI and TeleGPS Applications</h2></div></div></div><p>AltosUI and TeleGPS New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Add BlueTooth support for Windows operating system. This
+supports connections to TeleBT over BlueTooth rather than
+just USB.
+</li></ul></div><p>AltosUI and TeleGPS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Change Java detection and install on Windows. Detection is
+now done by looking for the <span class="emphasis"><em>javaw.exe</em></span> program, and
+installation by opening a browser on the java.com web site.
+</li><li class="listitem">
+Delay polling while the Fire Igniters is visible to allow
+for TeleMega to report back complete status over the radio.
+</li><li class="listitem">
+Disallow changing RF calibration numbers in the
+configuration UI. There’s no good reason to change this from
+the field, and recovering is really hard if you haven’t
+written down the right number.
+</li><li class="listitem">
+Fix USB device discovery on Mac OS X El Capitan. This makes
+the connected Altus Metrum USB devices appear again.
+</li><li class="listitem">
+Fix acceleration data presented in MonitorIdle mode for
+TeleMetrum v2.0 flight computers.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altosdroid"></a>3. AltosDroid</h2></div></div></div><p>AltosDroid new features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Monitor Idle mode. Check state of flight computer while in
+idle mode over the radio link
+</li><li class="listitem">
+Fire Igniters. Remotely fire ignires for recovery system
+ground tests.
+</li><li class="listitem">
+Remote reboot. Cause the flight computer to reboot over the
+radio link. This provides a method for switching the flight
+computer from idle to flight mode without needing to reach
+the power switch.
+</li><li class="listitem">
+Configurable frequency menu. Change the set of available
+frequencies and provide more descriptive names.
+</li></ul></div><p>AltosDroid bug fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Don’t set target location if GPS hasn’t locked yet.
+</li><li class="listitem">
+Fix saving target states so they can be reloaded when the
+application restarts. When the application is shut down and
+restarted, all previous target state information will be
+restored (including GPS position if available).
+</li><li class="listitem">
+Fix crash on some Android devices for offline maps when
+changing the map scale or location.
+</li><li class="listitem">
+Don’t require USB OTG support. This kept the latest
+AltosDroid from being offered on devices without USB device
+support, although it can work without that just fine using
+BlueTooth.
+</li><li class="listitem">
+Don’t require bluetooth to be enabled. This allows the
+application to operate with USB devices or just show old
+data without turning on the bluetooth radio.
+</li><li class="listitem">
+Recover old tracker positions when restarting
+application. This finally allows you to safely stop and
+restart the application without losing the last known
+location of any tracker.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_documentation"></a>4. Documentation</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Document TeleMega and EasyMega additional pyro channel
+continuity audio alert pattern.
+</li></ul></div></div></div></body></html>
