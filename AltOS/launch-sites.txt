@@ -53,5 +53,6 @@ Tripoli Louisiana Goldmine Plantation:32.2073:-91.8567:http://www.tra-la.org
 TTRA Rocking V Ranch:28.091666666666667:-82.17:http://www.tripoli-tampa.com/
 UROC Frank Hunt Field:40.21879:-112.24618:http://www.uroc.org
 VAST Monterey, VA:38.376898:-79.607717:http://www.valleyaerospace.com
-WAC Sportsman Club:47.815327777777778:-119.427186111111111:http://www.washingtonaerospace.org
+WAC Sportsman Club:47.816944:-119.656111:http://www.washingtonaerospace.org
+WAC Snell Ranch:47.793449:-119.427660:http://www.washingtonaerospace.org
 Weber Farms:41.1786878:-80.0406684:http://www.psc473.org/
