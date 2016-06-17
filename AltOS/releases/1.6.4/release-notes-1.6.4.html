@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Release Notes for Version 1.6.4</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm1"></a>Release Notes for Version 1.6.4</h2></div></div><hr /></div><p>Version 1.6.4 fixes a bluetooth communication problem with
+TeleBT v1.0 devices, along with some altosui and altosdroid
+minor nits. It also now ships firmware for some newer devices.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altos"></a>1. AltOS</h2></div></div></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Fix hardware flow control on TeleBT v1.0. Hardware RTS/CTS
+doesn’t seem to work, switch from using the hardware to
+driving these pins with software.
+</li><li class="listitem">
+Fix ARM USB drivers to deal with OS restarts. Needed to
+reset all USB-related state when the USB bus is reset. These
+fixes affect all STM32L, STM32F0 and LPC11U14 based devices.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altosui_telegps_and_altosdroid_applications"></a>2. AltosUI, TeleGPS and AltosDroid Applications</h2></div></div></div><p>AltosUI, TeleGPS and AltosDroid New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Automatically switch from meters or feet to kilometers or
+miles for distance units.
+</li><li class="listitem">
+Add Monitor Idle mode to TeleGPS application.
+</li></ul></div><p>AltosUI, TeleGPS and AltosDroid Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Abort map preloading when the preload map dialog is closed.
+</li><li class="listitem">
+In AltosDroid, Don’t reconnect to last device if the user
+had disconnected it the last time the application was
+active.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_documentation"></a>3. Documentation</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+Mention TeleMega v2.0 in hardware specs table.
+</li><li class="listitem">
+Document TeleGPS RF output in telegps manual.
+</li></ul></div></div></div></body></html>

@@ -1,0 +1,10 @@
+-------------------------------------
+### MicroPeak version 1.6.4 ###
+
+- Available Downloads:
+	- [Windows](/MicroPeak/releases/1.6.4/MicroPeak-Windows-1-6-4.exe)
+	- [Linux](/MicroPeak/releases/1.6.4/MicroPeak-Linux-1.6.4.sh)
+	- [Mac OS X](/MicroPeak/releases/1.6.4/MicroPeak-Mac-1.6.4.dmg)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.6.4;sf=tgz)
+
+[[!inline pages="./1.6.4/release-notes-1.6.4.html" rss="no" raw="yes" ]]
