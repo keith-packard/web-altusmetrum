@@ -511,4 +511,9 @@ Production run of 260 pieces of EasyMini v1.0 by
 ## sn 3394-3396 #
 
 Prototype run of 3 TeleLCOTwo by
-keithp, build 2016.04.05
+keithp, built 2016.04.05
+
+## sn 3397-3398 #
+
+Prototype run of 2 TeleFireTwo v0.2 by
+keithp, built 2016.04.06

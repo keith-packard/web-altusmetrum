@@ -54,9 +54,12 @@ production units yet:
 
 ## Artifacts ##
 
-There is a single manual for EasyMini and all other Altus Metrum products,
-which is available in [html](../AltOS/doc/altusmetrum.html) and 
-[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+There is a shorter manual for EasyMini which is available in
+[html](../AltOS/doc/easymini.html) and
+[pdf](../AltOS/doc/easymini.pdf) formats. EasyMini is also documented
+in the comprehensive Altus Metrum manual in
+[html](../AltOS/doc/altusmetrum.html) and
+[pdf](../AltOS/doc/altusmetrum.pdf) formats
 
 An outline of the board with drill hole locations is available in
 [pdf](../Documents/easymini-outline.pdf) format.
