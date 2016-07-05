@@ -33,6 +33,9 @@ If you're running Windows 8, you should take a look at [Installing AltosUI on
 Windows 8](Win8) which will help you install the operating system
 drivers needed to communicate with the USB hardware.
 
+Each available download includes AltosUI, documentation, and firmware updates
+for all current products.
+
 [[!inline pages="./releases/* and !*/Discussion and !*.sh and !*.html and !*.bz2 and !*.zip and !*.exe and !*.dmg" show="10" rss="no" raw="yes" ]]
 
 ## Source Code ##
