@@ -517,3 +517,8 @@ keithp, built 2016.04.05
 
 Prototype run of 2 TeleFireTwo v0.2 by
 keithp, built 2016.04.06
+
+## sn 3399-3402 ##
+
+Prototype run of 4 TeleFireTwo v1.1 by
+keithp, built 2016.06.12
