@@ -7,9 +7,9 @@ This is a hardware True Random Number Generator that attaches via USB.
 1.0 is the first production version of ChaosKey. The first run of 1000
 units is expected sometime around August, 2016.
 
-<a href="v1.0/chaoskey-bare.jpg"><img src="v1.0/chaoskey-bare-thumb.jpg">/a>
+<a href="v1.0/chaoskey-bare.jpg"><img src="v1.0/chaoskey-bare-thumb.jpg"></a>
 
-<a href="v1.0/chaoskey-boxed.jpg"><img src="v1.0/chaoskey-boxed-thumb.jpg">/a>
+<a href="v1.0/chaoskey-boxed.jpg"><img src="v1.0/chaoskey-boxed-thumb.jpg"></a>
 
 ### Version 1.0 Hardware ###
 
