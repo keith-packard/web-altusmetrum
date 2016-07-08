@@ -1,0 +1,1 @@
+[[!map pages="ChaosKey/v1.0/* and ! ChaosKey/v1.0/*/*"]]
