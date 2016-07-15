@@ -1,0 +1,70 @@
+# ChaosKey and Virtual Machines
+
+Using ChaosKey in a bare metal environment is really easy; you just
+plug it in and your kernel entropy pool is chock full and ready to go.
+
+Sharing random data with guests running on the same machine is pretty
+straight forward as well as kvm and qemu have a pass-through device,
+virtio-rng, which can pull data from the host entropy pool and use
+that in the guest.
+
+## Adding an rng device to the virtual machine
+
+First, you'll need to configure qemu to provide a virtual device
+inside the guest.
+
+### Adding an rng device with virt-manager
+
+Virt-manager provides a graphical interface to managing virtual
+machines.
+
+[[!img images/virt-manager.png]]
+
+Select the host you want to add the virtio-rng device to, open it up
+and click on the lightbulb (Show virtual hardware details) button:
+
+[[!img images/machine-overview.png]]
+
+Click on the +Add Hardware button to open up the Add New Virtual
+Hardware dialog:
+
+[[!img images/add-hardware.png]]
+
+Select RNG to show the Random Number Generator view:
+
+[[!img images/add-rng.png]]
+
+Click on Finish and you're all done.
+
+### Adding an rng device with virsh edit
+
+As root:
+
+	# virsh edit <name>
+
+Add the virtio-rng device inside the <devices></devices> element:
+
+	<devices>
+	  ...
+	  <rng model='virtio'>
+	    <backend model='random'>/dev/random</backend>
+	    <address type='pci' domain='0x0000' bus='0x00' slot='0x09' function='0x0'/>
+	  </rng>
+	</devices>
+
+## Adding virtio-rng to the guest OS
+
+If you're using a distribution kernel in the guest, it should already
+have the virtio-rng device built and available. Once you have the
+device available in the virtual machine, boot the guest and 
+check to make sure the virtio_rng module has been loaded.
+
+For guests running kernel version 3.17 or later, that's all you need
+to do -- the kernel will automatically create a thread to read data as
+needed from the host's random pool.
+
+For guests running kernel version 3.16 or older, the kernel doesn't
+create a thread to read data from the host, so you need to run the
+rngd daemon. On Debian, that's a simple matter of installing the
+rng-tools package. Other distributions presumably have a package that
+does something similar.
