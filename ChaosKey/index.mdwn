@@ -5,7 +5,7 @@ This is a hardware True Random Number Generator that attaches via USB.
 The Linux Kernel, starting with version 4.1, includes source for this
 driver. It should be built by default in your distribution. If your
 using Linux + KVM to host other Linux instances, read the
-VirtualMachine page to see how you can configure the guests to share
+[VirtualMachine] page to see how you can configure the guests to share
 the host entropy source.
 
 ## Version 1.0 ##
