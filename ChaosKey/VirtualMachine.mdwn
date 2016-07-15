@@ -18,21 +18,21 @@ inside the guest.
 Virt-manager provides a graphical interface to managing virtual
 machines.
 
-[[!img images/virt-manager.png]]
+<img src="images/virt-manager.png"/>
 
 Select the host you want to add the virtio-rng device to, open it up
 and click on the lightbulb (Show virtual hardware details) button:
 
-[[!img images/machine-overview.png]]
+<img src="images/machine-overview.png"/>
 
 Click on the +Add Hardware button to open up the Add New Virtual
 Hardware dialog:
 
-[[!img images/add-hardware.png]]
+<img src="images/add-hardware.png"/>
 
 Select RNG to show the Random Number Generator view:
 
-[[!img images/add-rng.png]]
+<img src="images/add-rng.png"/>
 
 Click on Finish and you're all done.
 
