@@ -10,8 +10,9 @@ the host entropy source.
 
 ## Version 1.0 ##
 
-1.0 is the first production version of ChaosKey. The first run of 1000
-units is expected sometime around August, 2016.
+1.0 is the first production version of ChaosKey, now available for sale 
+in single units and packs of 10 and 25 units in at
+[Garbee and Garbee](http://shop.gag.com/random.html).
 
 <a href="v1.0/chaoskey-bare.jpg"><img src="v1.0/chaoskey-bare-thumb.jpg"></a>
 
