@@ -14,7 +14,9 @@ and all the software is under the
 [GNU](http://www.gnu.org/)
 [General Public License, version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 or compatible licenses.
-
+<p>
+Bdale's online store has a form you can use to 
+[contact us](http://shop.gag.com/contacts/).
 # [Latest News](News) #
 
 # Download the latest [AltOS](AltOS/) software version #
