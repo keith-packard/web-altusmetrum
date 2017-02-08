@@ -64,7 +64,7 @@ The hardware design current gEDA files are available from
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of files in more easily readable form.  
 
-* [schematic](v3.0/teledongle.pdf)
+* [schematic](v3.0/teledongle-sch.pdf)
 * [pcb artwork](v3.0/teledongle.pcb.pdf)
 * [bill of materials](v3.0/partslist.csv)
 
