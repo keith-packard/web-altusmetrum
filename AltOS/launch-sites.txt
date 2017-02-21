@@ -4,6 +4,7 @@ AARC South Australia:-35.092063:140.014786:http://www.australianrocketryclub.com
 AHPRA BALLS:40.808:-119.15:http://www.ahpra.org
 AHPRA Rainbow Valley:33.25:-112.4:http://www.ahpra.org
 ARS Rio Rancho:35.33475:-106.75361:http://arsabq.org
+BARS Vista View Park:26.069436:-80.342995:http://narbars.org
 COSROCS Challenger:38.99624:-104.773979:http://cosrocs.org
 COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org
 FAR Friends of Amateur Rocketry:35.3471:-117.80905:http://friendsofamateurrocketry.org/
