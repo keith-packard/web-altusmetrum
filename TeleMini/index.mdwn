@@ -3,18 +3,18 @@
 This is a very small, baro-only recording dual-deploy altimeter for 
 model rocketry with integrated telemetry link.  
 
-Production units are available from the 
-[Garbee and Garbee](http://auric.gag.com) web 
-store.  TeleMini starter kits are also available from 
-[Apogee Components](http://www.apogeerockets.com/Altus_Metrum_telemini.asp).
+Version 3.0 is in production now and should be available after April
+1, 2017.
+
+Production units will be available from the [Garbee and
+Garbee](http://shop.gag.com) web store.
 
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-These are photos of our current production version: 
+Here's a photo of a v3.0 prototype:
 
-<a href="v1.0/telemini_top.jpg"> <img src="v1.0/telemini_top_thumb.jpg"></a>
-<a href="v1.0/telemini_bottom.jpg"> <img src="v1.0/telemini_bottom_thumb.jpg"></a>
+<a href="v3.0/telemini-v3.0.jpg"> <img src="v3.0/telemini-v3.0-640.jpg"></a>
 
 ## Features ##
 
@@ -23,33 +23,33 @@ These are photos of our current production version:
 * Recording altimeter for model rocketry
 * Supports dual deployment (can fire 2 ejection charges)
 * 70cm ham-band transceiver for telemetry downlink
-* Barometric pressure sensor good to 45k feet MSL
+* Barometric pressure sensor good to 100k feet MSL
 * Designed to use a single LiPo rechargeable battery
-* 1.5 x 0.5 inch board designed to fit inside 18mm airframe coupler tube
+* 512kB flight data storage
+* 1.7 x 0.5 inch board designed to fit inside 18mm airframe coupler tube
 
 ### Developer View ###
 
 * Hardware Features
-	* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
-		* Sub-1Ghz transceiver
-		* 8051 MCU
+	* [ST STM32F042G6](http://www.st.com/content/st_com/en/products/microcontrollers/stm32-32-bit-arm-cortex-mcus/stm32f0-series/stm32f0x2/stm32f042g6.html) system on chip
+		* ARM Cortex-M0 MCU
 		* 32k Flash
-		* 4k RAM
+		* 6k RAM
 		* USB 2.0
-		* 6 12-bit analog inputs (11 bits with single-ended sensors)
-		* 2 channels of serial I/O
 		* digital I/O
-	* [Freescale MP3H6115A](http://www.freescale.com/webapp/search.partparamdetail.framework?PART_NUMBER=MP3H6115A6U) pressure sensor
+	* [Measurement Specialties MS5607](http://www.te.com/usa-en/product-CAT-BLPS0035.html) pressure sensor
 * Software Features
-	* Written mostly in C with some 8051 assembler
-	* Runs from on-chip flash, uses on-chip RAM, stores flight data to
-		upper blocks of on-chip flash
+	* Written mostly in C with some ARM assembler
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
 * Licenses
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
-	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+	* The software is licensed [GPL version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Older Versions ##
+
+[Version 1.0](v1.0). Same size, but less capable.
 
 ## Artifacts ##
 
@@ -58,15 +58,8 @@ which is available in [html](../AltOS/doc/altusmetrum.html) and
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
 An outline of the board with drill hole locations is available in
-[pdf](../Documents/telemini-outline.pdf) format.
+[pdf](../Documents/telemini-v3-outline.pdf) format.
 
 The hardware design files can be found on [git.gag.com](http://git.gag.com) 
 in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
-
-For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 1.0 in more easily readable form.  
-
-* [schematic](v1.0/telemini.pdf)
-* [pcb artwork](v1.0/telemini.pcb.pdf)
-* [bill of materials](v1.0/partslist.csv)
 
