@@ -49,7 +49,9 @@ Here's a photo of a v3.0 prototype:
 
 ## Older Versions ##
 
-[Version 1.0](v1.0). Same size, but less capable.
+[Version 1.0](v1.0). Same width (0.5 inches), but doesn't have the
+rear two mounting holes so it's a bit shorter (1.5 inches instead of
+1.67 inches).
 
 ## Artifacts ##
 
