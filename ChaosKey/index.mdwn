@@ -43,10 +43,15 @@ bits from the noise source are available here:
 
 [AltOS Git Repository](http://git.gag.com/?p=fw/altos;a=summary)
 
+[Current ChaosKey Firmware](v1.0/chaoskey-v1.0-current.elf)
+
+[Current ChaosKey Boot Loader](v1.0/chaoskey-v1.0-altos-flash-current.elf)
+
 Hardware designs using [gEDA](http://www.geda-project.org/) are
 available here:
 
 [ChaosKey Hardware Design Files](http://git.gag.com/?p=hw/chaoskey;a=summary)
+
 
 ## Version 0.3 ##
 
