@@ -19,6 +19,7 @@ LUNAR Moffett Field:37.412582:-122.052290:http://www.lunar.org/
 MDARS Tripoli Mojave Desert:35.1044666667:-117.795666667:http://www.mdars.info/
 MDRA Higgs Farm:39.07854167:-75.87634583:http://www.mdrocketry.org
 METRA Pine Island:41.31939:-74.47077:http://metrarocketclub.org
+MMMMSC Tuckahoe Turf Farms:43.318945:-70.892135:http://mmmsclub.org/
 Mojave Desert Advanced Rocket Society:35.10472:-117.79444:http://www.mojavedesertrocketry.org/
 NCR Atlas Site:40.65:-104.38333:http://ncrocketry.org
 NCR Pawnee North Site:40.885955:-104.63793:http://ncrocketry.org
