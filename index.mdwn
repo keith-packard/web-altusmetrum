@@ -87,6 +87,8 @@ ideal altimeter for model rocket contests.
 provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
+* [ChaosKey](ChaosKey) is a USB-attached True Random Number Generator
+
 The following product is available in limited quantity from time to time:
 
 * [TeleMini](TeleMini/)
@@ -103,7 +105,7 @@ the set of hardware projects here.
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
-prototype was built, but never flown.  This project is now indefinitely on hold.
+prototype was built, but never flown.
 
 * [TeleLaunch](TeleLaunch/)
 is a wireless launch control system capable of operating up to 400 pads.
@@ -123,8 +125,6 @@ analog sensor input, and 5 general purpose I/O lines.
 
 * [TeleTerra](TeleTerra) is a hand-held ground station for use with 
 [TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
-
-* [ChaosKey](ChaosKey) is a USB-attached True Random Number Generator
 
 # [Documents](Documents) #
 
