@@ -19,6 +19,7 @@ LUNAR Moffett Field:37.412582:-122.052290:http://www.lunar.org/
 MDARS Tripoli Mojave Desert:35.1044666667:-117.795666667:http://www.mdars.info/
 MDRA Higgs Farm:39.07854167:-75.87634583:http://www.mdrocketry.org
 METRA Pine Island:41.31939:-74.47077:http://metrarocketclub.org
+MMMMSC Tuckahoe Turf Farms:43.318945:-70.892135:http://mmmsclub.org/
 Mojave Desert Advanced Rocket Society:35.10472:-117.79444:http://www.mojavedesertrocketry.org/
 NCR Atlas Site:40.65:-104.38333:http://ncrocketry.org
 NCR Pawnee North Site:40.885955:-104.63793:http://ncrocketry.org
@@ -45,6 +46,7 @@ SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net
 SEARS Samson, AL:31.118849:-86.091031:http://www.sears572.com
 SRA Rocket Ranch:27.943333333333333:-80.716666666666667:http://www.spaceportrocketry.org/
 St. Louis Rocketry Elsberry, MO:39.160217:-90.763356:http://stlouisrocketry.com/
+SystemsGO South, Houston, TX:29.562952777777778:-94.731458333333333:http://www.systemsgo.org/
 THOR / Tripoli Nebrask (Jansen):40.150556:-97.032222:http://www.nerocketry.org/history.html
 Torrey Farms of Potter, NY:42.7008967:-77.183656:http://urrg.org/
 TRAAU Serpentine:-36.4823466:144.0180150:http://traau.com/

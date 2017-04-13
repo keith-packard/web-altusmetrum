@@ -39,6 +39,10 @@ Altus Metrum products are available directly from
   * New Zealand
     * [Aerospace Education](http://www.rockets.co.nz)
 
+For ChaosKey, there is a distributor in Europe:
+
+  * [Vikings GmbH](https://store.vikings.net/libre-friendly-accessories)
+
 # Products #
 
 These products are available for purchase:
@@ -87,7 +91,8 @@ ideal altimeter for model rocket contests.
 provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
-* [ChaosKey](ChaosKey) is a USB-attached True Random Number Generator
+* [ChaosKey](ChaosKey/)
+is a true hardware random number generator that connects over USB.
 
 The following product is available in limited quantity from time to time:
 
