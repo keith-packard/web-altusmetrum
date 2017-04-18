@@ -536,3 +536,8 @@ Production run of 126 pieces of TeleMetrum v2.0b by
 ## sn 3629-3631 ##
 
 Prototype build of 3 pieces of TeleGPS v2.0 by Bdale on 2017.04.13.
+
+## sn 3632-3634 ##
+
+Prototype build of 3 pieces of TeleFireTwo v1.1 by Bdale on 2017.04.18.
+
