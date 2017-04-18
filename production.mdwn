@@ -539,5 +539,5 @@ Prototype build of 3 pieces of TeleGPS v2.0 by Bdale on 2017.04.13.
 
 ## sn 3632-3634 ##
 
-Prototype build of 3 pieces of TeleFireTwo v1.1 by Bdale on 2017.04.18.
+Prototype build of 3 pieces of TeleFireTwo v1.0 by Bdale on 2017.04.18.
 
