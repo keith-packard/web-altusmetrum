@@ -1,3 +1,4 @@
+[[!meta title="TeleMini"]]
 # TeleMini
 
 This is a very small, baro-only recording dual-deploy altimeter for 
@@ -36,7 +37,10 @@ Here's two photos of v3.0, top and bottom:
 		* 6k RAM
 		* USB 2.0
 		* digital I/O
+	* [TI CC1200](http://www.ti.com/product/cc1200) High Performance RF Transceiver for Narrowband Systems 
+	
 	* [Measurement Specialties MS5607](http://www.te.com/usa-en/product-CAT-BLPS0035.html) pressure sensor
+	* [Macronix MX25L4006E](http://www.macronix.com/Lists/Datasheet/Attachments/5087/MX25L4006E,%203V,%204Mb,%20v1.6.pdf) 512kB serial flash memory
 * Software Features
 	* Written mostly in C with some ARM assembler
 * Tools Used
