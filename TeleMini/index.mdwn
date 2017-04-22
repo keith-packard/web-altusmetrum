@@ -3,18 +3,17 @@
 This is a very small, baro-only recording dual-deploy altimeter for 
 model rocketry with integrated telemetry link.  
 
-Version 3.0 is in production now and should be available after April
-1, 2017.
-
-Production units will be available from the [Garbee and
+Version 3.0 is now ready for sale. Units are be available from the [Garbee and
 Garbee](http://shop.gag.com) web store.
 
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-Here's a photo of a v3.0 prototype:
+Here's two photos of v3.0, top and bottom:
 
-<a href="v3.0/telemini-v3.0.jpg"> <img src="v3.0/telemini-v3.0-640.jpg"></a>
+<a href="v3.0/telemini-v3.0-top.jpg"> <img src="v3.0/telemini-v3.0-top-640.jpg"></a>
+<br>
+<a href="v3.0/telemini-v3.0-bottom.jpg"> <img src="v3.0/telemini-v3.0-bottom-640.jpg"></a>
 
 ## Features ##
 
