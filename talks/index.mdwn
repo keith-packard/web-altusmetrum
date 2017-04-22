@@ -1,4 +1,4 @@
-[[!meta title talks]]
+[[!meta title="talks"]]
 # Altus Metrum Presentations
 
 These are presentations we've made at various conferences.  Not everything

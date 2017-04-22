@@ -1,4 +1,4 @@
-[[!meta title StaticMetrum]]
+[[!meta title="StaticMetrum"]]
 # StaticMetrum
 
 This is a test stand Bdale built for testing research motors.

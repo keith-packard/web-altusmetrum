@@ -1,4 +1,4 @@
-[[!meta title EasyMini]]
+[[!meta title="EasyMini"]]
 # EasyMini
 
 This is a small, baro-only recording dual-deploy altimeter for 

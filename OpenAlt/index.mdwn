@@ -1,4 +1,4 @@
-[[!meta title OpenAlt]]
+[[!meta title="OpenAlt"]]
 # OpenAlt
 
 This is the design that started it all!  Bdale got frustrated with existing

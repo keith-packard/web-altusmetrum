@@ -1,4 +1,4 @@
-[[!meta title TeleShield]]
+[[!meta title="TeleShield"]]
 # TeleShield
 
 This is an RF interface board for use with [Arduino](http://arduino.cc)

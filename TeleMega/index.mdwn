@@ -1,4 +1,4 @@
-[[!meta title TeleMega]]
+[[!meta title="TeleMega"]]
 # TeleMega
 
 This is a high-end recording dual-deploy altimeter for high power model 

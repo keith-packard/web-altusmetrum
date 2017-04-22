@@ -1,4 +1,4 @@
-[[!meta title TeleScience]]
+[[!meta title="TeleScience"]]
 # TeleScience
 
 This is an expansion board for [TeleMetrum](../TeleMetrum/) intended to 

@@ -1,4 +1,4 @@
-[[!meta title Radio]]
+[[!meta title="Radio"]]
 # Amateur Radio and Rockets
 
 ## Why Radio? ##

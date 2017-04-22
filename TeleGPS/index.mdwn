@@ -1,4 +1,4 @@
-[[!meta title TeleGPS]]
+[[!meta title="TeleGPS"]]
 # TeleGPS
 
 This is a GPS-based position tracker and logger.  It uses the same GPS

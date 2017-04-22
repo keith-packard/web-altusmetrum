@@ -1,4 +1,4 @@
-[[!meta title TeleTerra]]
+[[!meta title="TeleTerra"]]
 # TeleTerra
 
 TeleTerra is a hand-held ground station for [TeleMetrum](../TeleMetrum/).  

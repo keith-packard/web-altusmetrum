@@ -1,4 +1,4 @@
-[[!meta title LipoCharger]]
+[[!meta title="LipoCharger"]]
 # LipoCharger
 
 This is a simple but effective, dual-rate, standalone charger for Lithium

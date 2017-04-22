@@ -1,4 +1,4 @@
-[[!meta title MegaDongle]]
+[[!meta title="MegaDongle"]]
 # MegaDongle
 
 This is an RF interface designed primarily for use as a ground station
