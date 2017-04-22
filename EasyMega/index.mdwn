@@ -1,3 +1,4 @@
+[[!meta title EasyMega]]
 # EasyMega
 
 This is a high-end recording dual-deploy altimeter for high power model 

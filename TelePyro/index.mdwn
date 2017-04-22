@@ -1,3 +1,4 @@
+[[!meta title TelePyro]]
 # TelePyro
 
 This is an 8-channel pyro expansion board for [TeleMetrum](../TeleMetrum/).

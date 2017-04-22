@@ -1,3 +1,4 @@
+[[!meta title="AltosDroid"]]
 # AltosDroid
 
 AltosDroid is the [Android](http://www.android.com/) port of Altus Metrum's 

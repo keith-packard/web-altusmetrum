@@ -1,3 +1,4 @@
+[[!meta title TeleNano]]
 # TeleNano
 
 This is a tiny, baro-only recording altimeter for 
