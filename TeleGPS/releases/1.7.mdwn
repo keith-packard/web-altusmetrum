@@ -1,0 +1,10 @@
+-----------------
+### TeleGPS version 1.7 ###
+
+- Available Downloads:
+	- [Windows](/TeleGPS/releases/1.7/TeleGPS-Windows-1-7.exe)
+	- [Linux](/TeleGPS/releases/1.7/TeleGPS-Linux-1.7.sh)
+	- [Mac OS X](/TeleGPS/releases/1.7/TeleGPS-Mac-1.7.dmg)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.7;sf=tgz)
+
+[[!inline pages="./1.7/release-notes-1.7.html" rss="no" raw="yes" ]]
