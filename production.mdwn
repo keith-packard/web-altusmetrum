@@ -545,3 +545,8 @@ Prototype build of 3 pieces of TeleFireTwo v1.0 by Bdale on 2017.04.18.
 
 Production run of 50 TeleMini v3.0 by
 [Seeed Studios](https://www.seeedstudio.com/), received 2017.04.17.
+
+## sn 3686-3688 ##
+
+Prototype build of 3 pieces of TeleBT v4.0 beta 1 by Bdale on 2017.04.25.
+
