@@ -1,20 +1,20 @@
+[[!meta title="TeleMini"]]
 # TeleMini
 
 This is a very small, baro-only recording dual-deploy altimeter for 
 model rocketry with integrated telemetry link.  
 
-Version 3.0 is in production now and should be available after April
-1, 2017.
-
-Production units will be available from the [Garbee and
-Garbee](http://shop.gag.com) web store.
+Version 3.0 is back from fabrication and are ready for sale. Units are
+available from the [Garbee and Garbee](http://shop.gag.com) web store.
 
 For the latest TeleMini firmware and related ground station software, please
 visit the [AltOS](../AltOS) page on this site.
 
-Here's a photo of a v3.0 prototype:
+Here's two photos of v3.0, top and bottom:
 
-<a href="v3.0/telemini-v3.0.jpg"> <img src="v3.0/telemini-v3.0-640.jpg"></a>
+<a href="v3.0/telemini-v3.0-top.jpg"> <img src="v3.0/telemini-v3.0-top-640.jpg"></a>
+<br>
+<a href="v3.0/telemini-v3.0-bottom.jpg"> <img src="v3.0/telemini-v3.0-bottom-640.jpg"></a>
 
 ## Features ##
 
@@ -37,7 +37,10 @@ Here's a photo of a v3.0 prototype:
 		* 6k RAM
 		* USB 2.0
 		* digital I/O
+	* [TI CC1200](http://www.ti.com/product/cc1200) High Performance RF Transceiver for Narrowband Systems 
+	
 	* [Measurement Specialties MS5607](http://www.te.com/usa-en/product-CAT-BLPS0035.html) pressure sensor
+	* [Macronix MX25L4006E](http://www.macronix.com/Lists/Datasheet/Attachments/5087/MX25L4006E,%203V,%204Mb,%20v1.6.pdf) 512kB serial flash memory
 * Software Features
 	* Written mostly in C with some ARM assembler
 * Tools Used

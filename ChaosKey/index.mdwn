@@ -1,3 +1,4 @@
+[[!meta title="ChaosKey"]]
 # ChaosKey
 
 This is a hardware True Random Number Generator that attaches via USB.

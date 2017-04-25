@@ -55,6 +55,19 @@ GPS and bidirectional RF telemetry link.
 is a high-end flight computer with 6 pyro channels, tilt limits, more and 
 better sensors, GPS, and a high performance bidirectional RF telemetry link.
 
+* [TeleMini](TeleMini/)
+is a smaller dual-deploy rocketry altimeter with telemetry using only a 
+barometric pressure sensor
+
+* [EasyMega](EasyMega/)
+is a high-end flight computer with 6 pyro channels, tilt limits, etc.  The
+design is identical to [TeleMega](TeleMega/), but without the GPS receiver 
+and radio telemetry link.
+
+* [EasyMini](EasyMini/)
+is a small dual-deploy rocketry altimeter using the MS5607 barometry
+pressure sensor.
+
 * [TeleDongle](TeleDongle/) 
 is a simple RF interface for use in ground stations interacting with rockets
 using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
@@ -70,15 +83,6 @@ useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for And
 is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
 high dynamic performance and a combination digital/APRS transmitter.
 
-* [EasyMega](EasyMega/)
-is a high-end flight computer with 6 pyro channels, tilt limits, etc.  The
-design is identical to [TeleMega](TeleMega/), but without the GPS receiver 
-and radio telemetry link.
-
-* [EasyMini](EasyMini/)
-is a small dual-deploy rocketry altimeter using the MS5607 barometry
-pressure sensor.
-
 * [LipoCharger](LipoCharger/) 
 is a standalone battery charger for the Lithium Polymer batteries used in
 Altus Metrum products.
@@ -93,12 +97,6 @@ download flight log data.
 
 * [ChaosKey](ChaosKey/)
 is a true hardware random number generator that connects over USB.
-
-The following product is available in limited quantity from time to time:
-
-* [TeleMini](TeleMini/)
-is a smaller dual-deploy rocketry altimeter with telemetry using only a 
-barometric pressure sensor
 
 # Projects #
 

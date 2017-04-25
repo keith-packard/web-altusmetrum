@@ -1,3 +1,4 @@
+[[!meta title="AltOS"]]
 # AltOS
 
 AltOS is the name of Keith's firmware "operating system" for 
