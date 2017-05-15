@@ -3,8 +3,11 @@
 # TeleLaunch — Multi-channel Wireless Launch Controller System #
 
 TeleLaunch is secure radio-controlled rocket launch system capable of
-operating up to 400 pads from a single controler. TeleLaunch consists
-of two pieces, TeleLCO and TeleFire.
+operating up to 400 pads from a single controler.  A typical TeleLaunch 
+system consists of one LCO board and one or more pyro boards.  The LCO
+boards available include the full-featured TeleLCO, and the much simpler
+TeleLCOTwo.  Avaialbe pyro boards include TeleFireOne and TeleFireFour, 
+which control one or four pads, respectively. 
 
 ## TeleLCO ##
 
@@ -25,11 +28,19 @@ Circuit diagrams and PCB layouts are provided here:
 
 [[!map pages="TeleLaunch/telelco-v0.2/* and ! TeleLaunch/telelco-v0.2/*/*"]]
 
-## TeleFire ##
+## TeleLCOTwo ##
 
-TeleFire has four igniter circuits, each of which uses a 70A
+More information coming soon.
+
+## TeleFireOne ##
+
+More information coming soon.
+
+## TeleFireFour ##
+
+TeleFireFour has four igniter circuits, each of which uses a 70A
 automotive relay to provide a low resistance path, high-current from
-the power source to the igniter leads. TeleFire can be powered by any
+the power source to the igniter leads. TeleFireFour can be powered by any
 10-15V supply, from 3-cell lithium polymer packs used in RC aircraft
 to a 12V lead acid battery.
 
@@ -39,7 +50,7 @@ to a 12V lead acid battery.
 
  * Local LED continuity, arming and RF quality indicators.
 
- * Strobe and Siren. TeleFire has two 12V medium current (5A) outputs
+ * Strobe and Siren. TeleFireFour has two 12V medium current (5A) outputs
    to drive a siren and strobe light when the launch system is armed
    and ready to fire.
 
