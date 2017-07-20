@@ -56,6 +56,7 @@ Tripoli Colorado Hartsel:39.009247:-105.702338:http://tripolicolorado.org
 Tripoli Houston Hearne Airport:30.861146:-96.622149:http://www.tripolihouston002.com/
 Tripoli Idaho Swan Falls:43.23765:-116.32373:http://www.tripoliidaho.org
 Tripoli Louisiana Goldmine Plantation:32.2073:-91.8567:http://www.tra-la.org
+Tripoli MoKan Walnut Grove:37.448033:-93.6150833:http://www.teeniemunde.org/
 Tripoli Vegas Delamar:37.318910:-114.959095:http://www.tripolivegas.com/
 TTRA Rocking V Ranch:28.091666666666667:-82.17:http://www.tripoli-tampa.com/
 UROC Frank Hunt Field:40.21879:-112.24618:http://www.uroc.org
