@@ -550,3 +550,9 @@ Production run of 50 TeleMini v3.0 by
 
 Prototype build of 3 pieces of TeleBT v4.0 beta 1 by Bdale on 2017.04.25.
 
+## sn 3689-3938 ##
+
+Production run of 250 pieces of TeleBT v4.0 by
+[Advanced Circuits](http://4pcb.com), received 2017.07.21.
+
+
