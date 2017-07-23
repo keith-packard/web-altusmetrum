@@ -44,6 +44,7 @@ SARA Reservation Road:32.264739:-111.273861:http://sararocketry.org
 SAROS Fall Fire:53.435056:-110.299417:http://www.saskatoonrocketry.org
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net
 SEARS Samson, AL:31.118849:-86.091031:http://www.sears572.com
+Spaceport America, NM:32.9406:-106.91492:http://spaceportamerica.com/
 SRA Rocket Ranch:27.943333333333333:-80.716666666666667:http://www.spaceportrocketry.org/
 St. Louis Rocketry Elsberry, MO:39.160217:-90.763356:http://stlouisrocketry.com/
 SystemsGO South, Houston, TX:29.562952777777778:-94.731458333333333:http://www.systemsgo.org/
