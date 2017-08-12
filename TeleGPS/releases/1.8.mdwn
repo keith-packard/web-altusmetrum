@@ -1,0 +1,10 @@
+-----------------
+### TeleGPS version 1.8 ###
+
+- Available Downloads:
+	- [Windows](/TeleGPS/releases/1.8/TeleGPS-Windows-1-8.exe)
+	- [Linux](/TeleGPS/releases/1.8/TeleGPS-Linux-1.8.sh)
+	- [Mac OS X](/TeleGPS/releases/1.8/TeleGPS-Mac-1.8.dmg)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.8;sf=tgz)
+
+[[!inline pages="./1.8/release-notes-1.8.html" rss="no" raw="yes" ]]
