@@ -559,3 +559,8 @@ Production run of 250 pieces of TeleBT v4.0 by
 
 Errant TeleDongle v3.0 found in Bdale's collection.
 
+## sn 3940-4189 ##
+
+Production run of 250 pieces of TeleGPS v2.0 by
+[Advanced Circuits](http://4pcb.com), received 2017.09.16.
+
