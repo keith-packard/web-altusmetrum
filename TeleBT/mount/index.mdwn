@@ -20,6 +20,19 @@ printer, please feel free to print one for yourself.  They are also available
 for sale in 
 [Bdale's Store](http://shop.gag.com/parts-and-accessories/telebt-bracket.html).
 
+## Printing Hints ##
+
+All of our 3D printing is done on [Lulzbot](https://www.lulzbot.com/) 
+printers, and the brackets we sell are printed in ABS.
+
+If you look closely at the STL file, you will notice that there's a slight
+chamfer on one side of the bracket around the square hole for the antenna
+boom.  You should print the bracket with this side "down".  The point of this
+chamfer is to counteract the usual "spreading" of plastic on the first layer
+of a print.  On a Lulzbot TAZ printer, this chamfer causes the resulting
+printed part to have a nearly perfect corner, which means it's ready to use
+right off the printer without any sanding or scraping to fit required!
+
 ## Artifacts ##
 
 * [FreeCAD design file](TeleBT_Mount.fcstd)
