@@ -1,0 +1,28 @@
+[[!meta title="TeleBT Mount"]]
+# TeleBT Mount
+
+The most common way to use a TeleBT is to match it up with a short yagi and
+suitable connector adapter.  For all but the most demanding high-altitude
+flights, we like the 
+[3-element Arrow II Hand Held Portable](http://www.arrowantennas.com/arrowii/440-3ii.html)
+antenna, and a simple [SMA to BNC adapter](http://shop.gag.com/parts-and-accessories/sma-to-bnc-adapter.html)
+that we sell.
+
+The missing piece in this setup is some sort of bracket to keep the TeleBT
+from flopping around on the antenna boom and loosening up the SMA 
+connector.  Thanks to Robert Garbee, we're happy to share this excellent 
+bracket design!  
+
+## Availability ##
+
+As with all of our products, this is a fully open design. If you have a 3D 
+printer, please feel free to print one for yourself.  They are also available
+for sale in 
+[Bdale's Store](http://shop.gag.com/parts-and-accessories/telebt-bracket.html).
+
+## Artifacts ##
+
+* [FreeCAD design file](TeleBT_Mount.fcstd)
+* [STL file for 3D printing](TeleBT_Mount.stl)
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

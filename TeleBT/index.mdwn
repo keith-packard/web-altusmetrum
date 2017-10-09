@@ -19,7 +19,10 @@ And here's what it looks like packaged with battery, attached to an Arrow
 <a href="v1.0/telebt-inuse.jpg"> <img src="v1.0/telebt-inuse-thumb.jpg"></a>
 
 For the latest TeleBT firmware and related software, please
-visit the [AltOS](../AltOS) and [AltosDroid](../AltosDroid) pages on this site.  
+visit the [AltOS](../AltOS) and [AltosDroid](../AltosDroid) pages on this site.
+
+If you're using TeleBT with an [Arrow](http://www.arrowantennas.com/) yagi,
+we now have a 3D-printable [mount](mount/) design available!
 
 ## Features ##
 
