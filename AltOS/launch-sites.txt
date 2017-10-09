@@ -40,6 +40,7 @@ POTROCS Sunray, TX:36.0063:-101.7089639:http://www.potrocs.org
 QCRS Princeton, IL:41.492183333333333:-89.503033333333333:http://qcrs.us/
 QRS Cedar Grove:-27.8512283:152.9624000:http://qldrocketry.com
 Radical Rocketeers:40.899878:-74.867381:http://www.radrocketeers.org
+Rocketry South Carolina:34.109209:-80.551657:http://rocketrysouthcarolina.org
 SARA Reservation Road:32.264739:-111.273861:http://sararocketry.org
 SAROS Fall Fire:53.435056:-110.299417:http://www.saskatoonrocketry.org
 SCORE Hudson Ranch:38.155602777777778:-104.809119444444444:http://scronline.net
