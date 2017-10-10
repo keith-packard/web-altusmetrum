@@ -11,7 +11,10 @@ that we sell.
 The missing piece in this setup is some sort of bracket to keep the TeleBT
 from flopping around on the antenna boom and loosening up the SMA 
 connector.  Thanks to Robert Garbee, we're happy to share this excellent 
-bracket design!  
+bracket design!  Here's what it looks like, alone and in use:
+
+<a href="telebt_bracket.jpg"> <img src="telebt_bracket-thumb.jpg"></a>
+<a href="telebt_mounted.jpg"> <img src="telebt_mounted-thumb.jpg"></a>
 
 ## Availability ##
 
