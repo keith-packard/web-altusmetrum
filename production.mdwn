@@ -564,3 +564,8 @@ Errant TeleDongle v3.0 found in Bdale's collection.
 Production run of 250 pieces of TeleGPS v2.0 by
 [Advanced Circuits](http://4pcb.com), received 2017.09.16.
 
+## sn 4190-4439 ##
+
+Production run of 250 pieces of TeleMega v3.0 by
+[Advanced Circuits](http://4pcb.com), received 2017.11.30.
+
