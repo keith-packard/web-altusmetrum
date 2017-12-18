@@ -34,6 +34,10 @@ If you're running Windows 8, you should take a look at [Installing AltosUI on
 Windows 8](Win8) which will help you install the operating system
 drivers needed to communicate with the USB hardware.
 
+If you're running a recent version of Mac OS X, you'll probably need
+to read [Installing AltosUI on Mac OS X](MacOSX). This describes how
+to get rid of the the 'App is damaged' messages and run the program.
+
 Each available download includes AltosUI, documentation, and firmware updates
 for all current products.
 
