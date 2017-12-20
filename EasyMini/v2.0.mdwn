@@ -1,0 +1,1 @@
+[[!map pages="EasyMini/v2.0/* and ! EasyMini/v2.0/*/*"]]
