@@ -1,0 +1,18 @@
+[[!meta title="EasyMini-v1.0"]]
+# EasyMini version 1.0
+
+This is the first production version of EasyMini. The only difference
+from version 2.0 is in the processor; all other specifications are the
+same.
+
+### Developer View ###
+
+* Hardware Features
+	* [NXP LPC11U14](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/LPC11U14FHI33.html) System-on-Chip
+		* ARM Cortex-M0 MCU
+		* 32k Flash
+		* 6k RAM
+		* USB 2.0
+		* 8 12-bit analog inputs
+		* I2C, SPI, async serial
+		* digital I/O
