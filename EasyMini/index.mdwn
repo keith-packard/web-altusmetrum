@@ -13,8 +13,8 @@ version 1.3 or later.
 
 These are photos of version 2.0:
 
-<a href="v2.0/easymini-top.jpg"> <img src="v2.0/easymini-top-thumb.jpg"></a>
-<a href="v2.0/easymini-bottom.jpg"> <img src="v2.0/easymini-bottom-thumb.jpg"></a>
+<a href="v2.0/easymini-v2.0-top.jpg"> <img src="v2.0/easymini-v2.0-top-thumb.jpg"></a>
+<a href="v2.0/easymini-v2.0-bottom.jpg"> <img src="v2.0/easymini-v2.0-bottom-thumb.jpg"></a>
 
 ## Features ##
 
