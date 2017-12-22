@@ -1,0 +1,34 @@
+# Installing AltosUI on Mac OS X
+
+Mac OS X places barriers to running software from outside of the Apple
+ecosystem on Apple hardware. Whenever you download softwarae, the
+browser tags the application as 'foreign' and that prevents the
+operating system from running it.
+
+Here's how you can use xattr(1) to clear the protection setting from
+the AltosUI.app after it is installed.
+
+1. Display the application extended attributes:
+
+		$ xattr -l /Applications/AltosUI.app
+		 com.apple.quarantine:
+		 0181;5a380dfb;Google\x20Chrome.app;6B17C3F9-68D3-4C27-A5EA-7ADADE376ACD
+
+    This shows that the app was downloaded using google chrome. Other
+    users' values will be different but the com.apple.quarantine
+    prefix will be the same!). If this attribute is present
+    AltosUI.app won't be allowed to run.
+
+1. Use the following command to remove the attribute preventing MacOS
+    X from running this application:
+
+		$ sudo xattr -c /Applications/AltosUI.app
+
+    This clears the extended attribute in question.  You should now be
+    able to run our app!
+
+1. Check to make sure the attribute has been cleared:
+
+		$ xattr -l /Applications/AltosUI.app
+
+NOTE: this has to be run every time one installs a new version!
