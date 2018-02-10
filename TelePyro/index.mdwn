@@ -52,9 +52,11 @@ but no prototypes have been built yet.
 
 ## Future Plans ##
 
-As of late September 2011, v0.1 prototype boards are loaded and under test.
+In late September 2011, v0.1 prototype boards were loaded and lightly
+tested.  They were never flown.  The prototypes of TelePyro were lost in the 
+[Black Forest Fire](http://www.gag.com/blackforestfire.html), and have not
+been replaced.
 
-Most prototypes of TelePyro were lost in the 
-[Black Forest Fire](http://www.gag.com/blackforestfire.html), 
-we hope to get back to this project someday.
-
+If we ever get back to this project, the first thing we'll want to do is toss
+out the current design and start over, using an ARM Cortex SOC and our "new
+pyro circuit" that completely prevents processor brown-out.
