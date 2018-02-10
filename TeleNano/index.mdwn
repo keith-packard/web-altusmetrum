@@ -53,7 +53,11 @@ project [hw/telenano](http://git.gag.com/?p=hw/telenano;a=summary).
 
 ## Future Plans ##
 
-Two generations of hardware prototypes have been built and work, but we don't
-know if or when TeleNano will move into production.  [TeleMini](../TeleMini/) 
-is basically TeleNano plus dual deployment, and the additional cost of the
-deployment parts is low enough to make TeleMini a more compelling product.  
+Two generations of hardware prototypes were built and worked as desired, but 
+we don't plan to make any more at this time.  One problem is that the first
+version of [TeleMini](../TeleMini/) was basically TeleNano plus dual 
+deployment, and the additional cost of the deployment parts was low enough 
+to make TeleMini a more compelling product.  Despite that, sales of TeleMini
+have been slow.  We remain interested in a super-small tracking device, but
+now think we'd rather figure out how to make [TeleGPS](../TeleGPS/) smaller
+than return to a as simple a tracking device as TeleNano.
