@@ -11,7 +11,7 @@ These are photos of our first cut prototype hardware:
 ## Motivation ##
 
 While using a [TeleDongle](../TeleDongle/) board as a USB to RF interface to 
-a notebook computer works splendidly, we think it would be cool to have a 
+a notebook computer works splendidly, we thought it would be cool to have a 
 nice hand-held ground station we can use in full sunlight on the flight line.
 If it can help locate the rocket and is
 easy to carry during recovery operations, so much the better!
@@ -58,9 +58,10 @@ Schematics and PCB artwork exist at
 
 ## Future Plans ##
 
-In 2010, two v0.1 prototypes were assembled, and the hardware was tested.  
-Unfortunately, this design turned out to be too expensive to manufacture and
+In 2010, two v0.1 prototypes were assembled, and the hardware was 
+tested.  Unfortunately, this design turned out to be too expensive to
+manufacture and
 sell.  We then worked on a cost-reduced v0.2 design, which worked ok, but
 just wasn't very satisfying to use compared to a TeleBT and Android 
-device.  It's possible we'll come back to TeleTerra at some point in the
-future.
+device.  It's possible, but unlikely, that we'll come back to TeleTerra at 
+some point in the future.
