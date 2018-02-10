@@ -73,15 +73,18 @@ in the project
 
 ## Future Plans ##
 
-The thermistor conditioning circuits in the v0.1 design were too tightly coupled 
-to the particular model of EPCOS thermistor that we chose for 
+The thermistor conditioning circuits in the v0.1 design were too tightly 
+coupled to the particular model of EPCOS thermistor that we chose for 
 [2YikStik](http://www.gag.com/rockets/airframes/2YikStik/) and
-[YikStik3](http://www.gag.com/rockets/airframes/YikStik3/).  A major revision of 
-the board led to v0.2 which is in the process of being turned on and evaluated.
+[YikStik3](http://www.gag.com/rockets/airframes/YikStik3/).  A major 
+revision of the board led to v0.2 which was never fully evaluated, because
+the prototypes of TeleScience were lost in the 
+[Black Forest Fire](http://www.gag.com/blackforestfire.html).
 
-Most prototypes of TeleScience were lost in the 
-[Black Forest Fire](http://www.gag.com/blackforestfire.html), 
-we hope to get back to this project someday.
+The biggest hurdle we need to overcome before re-starting this project is
+deciding what TeleScience should actually be.  The challenge is that if the
+board is too "generic", it will be hard to use.  If it's too "specific", 
+knowing what functionality to actually include gets hard...
 
 ## [History of TeleScience](history) ##
 
