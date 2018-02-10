@@ -76,5 +76,5 @@ Arduino mini-conference at LCA 2012 resulted in elimination of the Bluetooth
 interface.  Updated boards have not been built yet, but 
 [schematic and artwork files](v0.2/) are available for review and comment.
 
-If there is sufficient interest, we will produce some.  Exactly if or
-when that will happen and what they might cost are not known yet.
+No significant interest in this design ever materialized, so we have no plans
+to make any more at this time.
