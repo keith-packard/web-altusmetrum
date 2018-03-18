@@ -1,0 +1,7 @@
+[[!inline pages="./1.8.5/release-notes-1.8.5.html" rss="no" raw="yes" ]]
+
+- Available Files:
+	- [Windows Installer](/MicroPeak/releases/1.8.5/MicroPeak-Windows-1-8-5.exe)
+	- [Mac OS X Package](/MicroPeak/releases/1.8.5/MicroPeak-Mac-1.8.5.dmg)
+	- [Linux](/MicroPeak/releases/1.8.5/MicroPeak-Linux-1.8.5.sh)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.8.5;sf=tgz)
