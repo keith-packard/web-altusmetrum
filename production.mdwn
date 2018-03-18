@@ -569,7 +569,13 @@ Production run of 250 pieces of TeleGPS v2.0 by
 Production run of 250 pieces of TeleMega v3.0 by
 [Advanced Circuits](http://4pcb.com), received 2017.11.30.
 
-## sn 4440 - 4939 ##
+## sn 4440-4939 ##
 
 Production run of 500 pieces of EasyMini v2.0 by
 [Advanced Circuits](http://4pcb.com), received 2017.12.19.
+
+## sn 4940-5137 ##
+
+Production run of 198 pieces of TeleMetrum v2.0b by
+[Advanced Circuits](http://4pcb.com), received 2018.03.10.
+
