@@ -3,71 +3,129 @@
 # TeleLaunch — Multi-channel Wireless Launch Controller System #
 
 TeleLaunch is secure radio-controlled rocket launch system capable of
-operating up to 400 pads from a single controler.  A typical TeleLaunch 
-system consists of one LCO board and one or more pyro boards.  The LCO
-boards available include the full-featured TeleLCO, and the much simpler
-TeleLCOTwo.  Avaialbe pyro boards include TeleFireOne and TeleFireFour, 
-which control one or four pads, respectively. 
-
-## TeleLCO ##
-
-TeleLCO controls up to 100 TeleFire boxes and is powered by a
-rechargable lithium polymer
-
- * USB connection to charge battery.
-
- * Large 1.36 inch LCD display for selected pad
-
- * Rotary knobs for pad selection
-
- * LED indicators for remote arming, continuity and RF quality
-
- * Arming switch and firing button
-
-Circuit diagrams and PCB layouts are provided here:
-
-[[!map pages="TeleLaunch/telelco-v0.2/* and ! TeleLaunch/telelco-v0.2/*/*"]]
-
-## TeleLCOTwo ##
-
-More information coming soon.
-
-## TeleFireOne ##
-
-More information coming soon.
-
-## TeleFireFour ##
-
-TeleFireFour has four igniter circuits, each of which uses a 70A
-automotive relay to provide a low resistance path, high-current from
-the power source to the igniter leads. TeleFireFour can be powered by any
-10-15V supply, from 3-cell lithium polymer packs used in RC aircraft
-to a 12V lead acid battery.
-
- * Continuity Detection. Igniter continuity uses a low-current sensing
-   system which sends only 100µA through the igniter to prevent false
-   ignition. The circuit also detects a shorted relay.
-
- * Local LED continuity, arming and RF quality indicators.
-
- * Strobe and Siren. TeleFireFour has two 12V medium current (5A) outputs
-   to drive a siren and strobe light when the launch system is armed
-   and ready to fire.
-
- * Local arming switch. A positive power switch shutting off the
-   igniters and relays prevents the LCO from engaging the firing
-   circuit.
-
-Circuit diagrams and PCB layouts are provided here:
-
-[[!map pages="TeleLaunch/telefire-v0.2/* and ! TeleLaunch/telefire-v0.2/*/*"]]
-
-## Radio Communications ##
+operating up to 800 pads from a single controler.  A typical TeleLaunch 
+system consists of one LCO board and one or more pyro boards.
 
 TeleLaunch uses a two-way digital radio communications system for
 positive indication of all operations. The communications link is
 secured with AES CBC-MAC to prevent accidental or intentional
 operation from unauthorized transmitters.
 
-TeleLaunch operates in the 70cm amateur band at 10mW to avoid
-interference with any rocketry electronics.
+TeleLaunch operates in the 70cm amateur band at low power using 
+Altus Metrum's proven modulation and coding schem to avoid interference 
+with any rocketry electronics or other communication devices.
+
+All boards in the TeleLaunch system are easily configured using USB for
+parameters like operating frequency, callsign, cryptographic key, and
+in the case of pyro boards the designated bank number.
+
+## Launch Control Boards ##
+
+All launch control boards in the TeleLaunch system are designed to use
+a lithium polymer battery that can be recharged over USB.  They support 
+distinct arm and fire switches, continuous indication of igniter 
+continuity, and have super-bright LED indicators for remote arming, 
+continuity, and RF link quality plus an audible indication of arming.  
+
+### TeleLCO ###
+
+TeleLCO controls up to 100 TeleFire banks, comes packaged in a rugged 
+case, and is typically placed on a table for use by the designated LCO.
+
+ * Large 1.36 inch LCD display for selected bank and pad
+
+ * Rotary knob for pad selection
+
+### TeleLCOTwo ###
+
+A small LCO board capable of handling up to two TeleFireOne pyro 
+boards, or one channel each on TeleFireEight boards.  TeleLCOTwo is ideal 
+for individuals or clubs that have an existing launch control system but 
+want to use TeleLaunch for an "away" launch cell.  
+
+TeleLCOTwo is configured in advance by USB to know which two pyro channels 
+it should interact with, and then a simple rocker switch selects between 
+the two during use.
+
+TeleLCOTwo comes packaged in a weather-sealed polycarbonate box with 
+switches on one face, and BNC antenna connector and USB connectors.  It
+can be placed on a table, but is typical hand-held during operation.
+
+## Pyro Boards ##
+
+Each pyro board in the TeleLaunch system uses FET technology for lowest 
+possible resistance paths, allowing maximum current to be reliably 
+delivered from the power source to the igniter leads. TeleFire boards can 
+be powered by any 10-15V supply.  This would typically be a 12V lead acid 
+battery, but 3-cell lithium polymer packs used in RC aircraft are also
+suitable.
+
+Each board features:
+
+ * Continuity Detection. Igniter continuity uses a low-current sensing
+   system which sends only 100µA through the igniter to prevent false
+   ignition. The circuit also detects dead shorts.
+
+ * Super-bright LEDs for continuity, arming and RF quality indicators.
+
+ * Strobe and Siren. TeleFireFour has two 12V medium current (5A) outputs
+   to drive a siren and strobe light when the launch system is armed
+   and ready to fire.
+
+ * Local arming switch. When in the safe position, power is completely
+   disconnected from the igniter circuits to prevent any possibility
+   of the LCO accidentally engaging firing circuits during rocket 
+   preparations at the pad.
+
+ * Each board is designed to fit in a standard Hammond weather-sealed
+   polycarbonate enclosure with weather-sealed rocker switches for
+   power and arming plus cable glands for DC input cable and igniter 
+   output cables.  Alternatively, boards can be configured to mount
+   in the user's choice of enclosure, such as a metal ammo box or 
+   larger NEMA enclosure with space for the user's choice of 
+   external connectors.
+
+### TeleFireOne ###
+
+TeleFireOne is a pyro board supporting a single igniter circuit.  This 
+makes TeleFireOne idea for individuals, launch trailers, or for "away 
+cells" at larger club launches.  
+
+All high-current connections are made on the board using standard 
+1/4-inch spade lugs, with screw terminals for the siren and strobe.  This 
+allows for easy packaging and quick board swaps.
+
+### TeleFireEight ###
+
+TeleFireEight has eight igniter circuits, making it ideal for use at
+club launches.  Larger clubs or launch site setups can use multiple
+boards to organize the site into multiple banks with up to 8 rockets
+each.
+
+All connections are made on the board using 1/4-in spade lugs for
+eash packaging and quick board swaps.
+
+## Documentation ##
+
+Not written yet.
+
+## Software ##
+
+TeleLaunch firmware is part of the larger [AltOS](/AltOS) suite of 
+software.
+
+## Availability ##
+
+Several prototype systems have been built and successfully 
+deployed.  Lessons learned from use of those systems are currently
+being incorporated into new board revisions, and general availability
+of the system for sale is expected in the first half of 2018.
+
+## Licenses ##
+
+TeleLaunch hardware is licensed under the [TAPR](http://www.tapr.org) 
+[Open Hardware License](http://www.tapr.org/ohl.html)
+
+TeleLaunch software is licensed 
+[GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
