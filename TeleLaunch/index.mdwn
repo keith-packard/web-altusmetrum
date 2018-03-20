@@ -36,6 +36,10 @@ case, and is typically placed on a table for use by the designated LCO.
 
  * Rotary knob for pad selection
 
+The TeleLCO hardware design is available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telelco](http://git.gag.com/?p=hw/telelco;a=summary).  
+
 ### TeleLCOTwo ###
 
 A small LCO board capable of handling up to two TeleFireOne pyro 
@@ -48,8 +52,13 @@ it should interact with, and then a simple rocker switch selects between
 the two during use.
 
 TeleLCOTwo comes packaged in a weather-sealed polycarbonate box with 
-switches on one face, and BNC antenna connector and USB connectors.  It
-can be placed on a table, but is typical hand-held during operation.
+switches on one face, and BNC antenna connector and USB connectors 
+through the box walls.  It can be placed on a table, but is typically 
+hand-held during operation.
+
+The TeleLCOTwo hardware design is available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telelcotwo](http://git.gag.com/?p=hw/telelcotwo;a=summary).  
 
 ## Pyro Boards ##
 
@@ -88,12 +97,16 @@ Each board features:
 ### TeleFireOne ###
 
 TeleFireOne is a pyro board supporting a single igniter circuit.  This 
-makes TeleFireOne idea for individuals, launch trailers, or for "away 
+makes TeleFireOne ideal for individuals, launch trailers, or for "away 
 cells" at larger club launches.  
 
 All high-current connections are made on the board using standard 
 1/4-inch spade lugs, with screw terminals for the siren and strobe.  This 
 allows for easy packaging and quick board swaps.
+
+The TeleFireOne hardware design is available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
 
 ### TeleFireEight ###
 
@@ -104,6 +117,10 @@ each.
 
 All connections are made on the board using 1/4-in spade lugs for
 eash packaging and quick board swaps.
+
+The TeleFireEight hardware design is available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telefireeight](http://git.gag.com/?p=hw/telefireeight;a=summary).  
 
 ## Documentation ##
 
