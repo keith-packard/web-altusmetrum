@@ -73,7 +73,7 @@ Each board features:
 
  * Continuity Detection. Igniter continuity uses a low-current sensing
    system which sends only 100µA through the igniter to prevent false
-   ignition. The circuit also detects dead shorts.
+   ignition. 
 
  * Super-bright LEDs for continuity, arming and RF quality indicators.
 
