@@ -78,8 +78,9 @@ sell TeleDongle by itself, it is included in our
 
 * [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
 [Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
-useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for Android devices, or a compatible iOS application available for sale in the 
-[Apple App Store](https://itunes.apple.com/us/app/altosui/id1324401029).
+useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for 
+Android devices, or a compatible iOS application available for sale from
+our friends at [Iron Sheep Productions](http://altosui.ironsheep.biz/).
 
 * [TeleGPS](TeleGPS/)
 is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for

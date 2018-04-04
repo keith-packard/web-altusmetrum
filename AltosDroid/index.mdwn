@@ -12,8 +12,8 @@ works on Android 2.3.3 and later.
 The latest released version of AltosDroid is available from
 [Google Play&trade;](https://play.google.com/store/apps/details?id=org.altusmetrum.AltosDroid).
 
-There is also a comparable iOS application available for sale in the 
-[Apple App Store](https://itunes.apple.com/us/app/altosui/id1324401029).
+There is also a comparable iOS application available for sale from our
+friends at [Iron Sheep Productions](http://altosui.ironsheep.biz/).
 
 ## What It Can Do ##
 
