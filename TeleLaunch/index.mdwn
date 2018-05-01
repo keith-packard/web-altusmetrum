@@ -42,6 +42,8 @@ The TeleLCO hardware design is available from
 
 ### TeleLCOTwo ###
 
+<img src="protos/telelcotwo.jpg">
+
 A small LCO board capable of handling up to two TeleFireOne pyro 
 boards, or one channel each on TeleFireEight boards.  TeleLCOTwo is ideal 
 for individuals or clubs that have an existing launch control system but 
@@ -95,6 +97,8 @@ Each board features:
    external connectors.
 
 ### TeleFireOne ###
+
+<img src="protos/telefireone.jpg">
 
 TeleFireOne is a pyro board supporting a single igniter circuit.  This 
 makes TeleFireOne ideal for individuals, launch trailers, or for "away 
