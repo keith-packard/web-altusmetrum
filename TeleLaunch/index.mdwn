@@ -141,6 +141,8 @@ equivalent of a TeleFireOne when not in use with a test stand.
 
 ### TeleFireEight ###
 
+<img src="protos/telefireeight.jpg">
+
 TeleFireEight has eight igniter circuits, making it ideal for use at
 club launches.  Larger clubs or launch site setups can use multiple
 boards to organize the site into multiple banks with up to 8 rockets
@@ -148,6 +150,13 @@ each.
 
 All connections are made on the board using 1/4-in spade lugs for
 eash packaging and quick board swaps.
+
+The above photo shows the unpopulated circuit board for the first version
+of this design, it will be replaced with a photo of a packaged version when
+we have a prototype completed.  In the meantime, see the photo of a packaged
+[TeleStatic](../TeleStatic) board for a rough idea of what we're planning,
+except that there will be 4 AC outlets with flip-lid covers on each long
+face of the ammo box with per-pad LED continuity indicators in the top cover.
 
 The TeleFireEight hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
