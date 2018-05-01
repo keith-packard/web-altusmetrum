@@ -146,7 +146,8 @@ software.
 Several prototype systems have been built and successfully 
 deployed.  Lessons learned from use of those systems are currently
 being incorporated into new board revisions, and general availability
-of the system for sale is expected in the first half of 2018.
+of the system for sale is expected in the first half of 2018.  Watch
+this space for updates on price and availability.
 
 ## Licenses ##
 
