@@ -29,12 +29,23 @@ continuity, and RF link quality plus an audible indication of arming.
 
 ### TeleLCO ###
 
+<img src="protos/telelco.jpg">
+
 TeleLCO controls up to 100 TeleFire banks, comes packaged in a rugged 
 case, and is typically placed on a table for use by the designated LCO.
 
  * Large 1.36 inch LCD display for selected bank and pad
 
  * Rotary knob for pad selection
+
+ * Packaged in [Pelican 1170 orange box](https://www.amazon.com/gp/product/B003HGW8SG)
+
+Note that while the photo of the prototype above gives a good feel for many
+of the system features, production units will have several changes.  We're
+moving to a bright orange Pelican box, instead of separate knobs for bank
+select and pad select there will be one knob with in-built push button, there
+will be 8 continuity LEDs instead of 4, and the choice and placement of
+switches is changing.
 
 The TeleLCO hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
