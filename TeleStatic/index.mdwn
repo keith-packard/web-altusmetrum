@@ -1,0 +1,55 @@
+[[!meta title="TeleStatic"]]
+
+# TeleStatic — Wireless Rocket Motor Static Test System #
+
+<img src="protos/telestatic.jpg">
+
+TeleStatic is a secure radio-controlled system capable of operating 
+a rocket motor static test stand.
+
+TeleStatic uses a two-way digital radio communications system for
+positive indication of all operations. The communications link is
+secured with AES CBC-MAC to prevent accidental or intentional
+operation from unauthorized transmitters.
+
+TeleStatic operates in the 70cm amateur band at low power using 
+Altus Metrum's proven modulation and coding schem to avoid interference 
+with any rocketry electronics or other communication devices.
+
+The TeleStatic board is easily configured using USB for
+parameters like operating frequency, callsign, cryptographic key, and
+the designated bank number.
+
+A TeleStatic board can also be used as a one-channel pyro board in the
+larger [TeleLaunch](../TeleLaunch) system when needed.
+
+TeleStatic is an alternate load of the TeleFireOne board, whose hardware
+design is available from [git.gag.com](http://git.gag.com) in the project 
+[hw/telelco](http://git.gag.com/?p=hw/telefireone;a=summary).  
+
+## Documentation ##
+
+Not written yet.
+
+## Software ##
+
+TeleLaunch firmware is part of the larger [AltOS](/AltOS) suite of 
+software.  A separate TeleStatic application for use on a laptop at the
+control operator's position is currently under development.
+
+## Availability ##
+
+A prototype system was operated extensively during the 2017, and based
+on that experience a revised version of the circuit board was designed
+and will be tested in the first half of 2018.  General availability of
+the TeleStatic product is expected in mid 2018.  Watch
+this space for updates on price and availability.
+
+## Licenses ##
+
+TeleStatic hardware is licensed under the [TAPR](http://www.tapr.org) 
+[Open Hardware License](http://www.tapr.org/ohl.html)
+
+TeleStatic software is licensed 
+[GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+

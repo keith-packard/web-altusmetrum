@@ -117,7 +117,10 @@ was Bdale's original project here, a dual-deploy rocketry altimeter.  One
 prototype was built, but never flown.
 
 * [TeleLaunch](TeleLaunch/)
-is a wireless launch control system capable of operating up to 800 pads.
+is a wireless launch control system capable of operating up to 792 pads.
+
+* [TeleStatic](TeleStatic/)
+is a wireless system for operating rocket motor test stands.
 
 * [TeleNano](TeleNano/)
 is a tiny rocketry altimeter with telemetry using only a barometric 

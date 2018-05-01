@@ -129,6 +129,11 @@ The TeleFireOne hardware design is available from
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
 
+An alternate load of the TeleFireOne including support for data logging
+sensors from a rocket motor test stand is available as a separate 
+[TeleStatic](../TeleStatic) product.  A TeleStatic board can be used as the 
+equivalent of a TeleFireOne when not in use with a test stand.
+
 ### TeleFireEight ###
 
 TeleFireEight has eight igniter circuits, making it ideal for use at
