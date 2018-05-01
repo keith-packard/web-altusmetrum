@@ -33,9 +33,10 @@ Not written yet.
 
 ## Software ##
 
-TeleLaunch firmware is part of the larger [AltOS](/AltOS) suite of 
+TeleStatic firmware is part of the larger [AltOS](/AltOS) suite of 
 software.  A separate TeleStatic application for use on a laptop at the
-control operator's position is currently under development.
+control operator's position is currently under development and will also
+be part of the AltOS suite.
 
 ## Availability ##
 
