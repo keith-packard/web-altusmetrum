@@ -108,6 +108,12 @@ All high-current connections are made on the board using standard
 1/4-inch spade lugs, with screw terminals for the siren and strobe.  This 
 allows for easy packaging and quick board swaps.
 
+The photo above is of an early prototype, the design has changed slightly
+since then.  It is still possible to package the board as shown in a Hammond
+polycarbonate box, but metal ammo boxes are a credible alternative.  The two 
+switches are for power on/off and safe/arm.  The two cables are for DC power 
+in and igniter leads out. 
+
 The TeleFireOne hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
