@@ -1,9 +1,6 @@
-![Altus Metrum Logo](logo.png)
 
-# Awards #
-
-<a href="Certificado_premio_Von-Braun_Altus-Metrum_2017.jpg"> 
-<img src="Certificado_premio_Von-Braun_Altus-Metrum_2017-thumb.jpg"></a>
+<a href="Certificado_premio_Von-Braun_Altus-Metrum_2017.pdf"> 
+<img src="Certificado_premio_Von-Braun_Altus-Metrum_2017.jpg"></a>
 
 Altus Metrum received the "Von Braun Model Rocket Prize" from the
 Brazilian Association of Rocketry during their 2017 Model Rocket 
