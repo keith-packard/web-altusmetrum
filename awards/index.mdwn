@@ -1,0 +1,14 @@
+![Altus Metrum Logo](logo.png)
+
+# Awards #
+
+<a href="Certificado_premio_Von-Braun_Altus-Metrum_2017.jpg"> 
+<img src="Certificado_premio_Von-Braun_Altus-Metrum_2017-thumb.jpg"></a>
+
+Altus Metrum received the "Von Braun Model Rocket Prize" from the
+Brazilian Association of Rocketry during their 2017 Model Rocket 
+Festival.  The award was in recognition of our [MicroPeak](../MicroPeak)
+product, which Prof. Carlos Henrique Marchi, Organizing Committee President
+for the event, credits with making the festival's competitions 
+possible.
+

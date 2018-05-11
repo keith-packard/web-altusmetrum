@@ -139,6 +139,7 @@ analog sensor input, and 5 general purpose I/O lines.
 [TeleMetrum](TeleMetrum/) and [TeleMini](TeleMini/).
 
 # [Documents](Documents) #
+# [Awards and Recognition](awards) #
 
 # Hobby Rocketry #
 
