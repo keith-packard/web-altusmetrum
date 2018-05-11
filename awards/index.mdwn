@@ -1,4 +1,4 @@
-![Altus Metrum Logo](logo.png)
+![Altus Metrum Logo](../logo.png)
 
 # Awards #
 
