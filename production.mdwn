@@ -579,3 +579,6 @@ Production run of 500 pieces of EasyMini v2.0 by
 Production run of 198 pieces of TeleMetrum v2.0b by
 [Advanced Circuits](http://4pcb.com), received 2018.03.10.
 
+## sn 5138-5141 ##
+
+Hand build of 4 pieces of TeleLCO v2.0 by Bdale on 2017.05.27.
