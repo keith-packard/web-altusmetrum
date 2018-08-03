@@ -14,7 +14,7 @@ the host entropy source.
 1.0 is the first production version of ChaosKey, now available for sale 
 in single units and packs of 10 and 25 units at
 [Garbee and Garbee](http://shop.gag.com/random.html) and
-[vikings](https://store.vikings.net/accessories/chaoskey).
+[vikings](https://store.vikings.net/chaoskey).
 
 <a href="v1.0/chaoskey-bare.jpg"><img src="v1.0/chaoskey-bare-thumb.jpg"></a>
 
