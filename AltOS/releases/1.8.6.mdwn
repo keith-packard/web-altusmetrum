@@ -1,0 +1,7 @@
+[[!inline pages="./1.8.6/release-notes-1.8.6.html" rss="no" raw="yes" ]]
+
+- Available Files:
+	- [Windows Installer](/AltOS/releases/1.8.6/Altos-Windows-1-8-6.exe)
+	- [Mac OS X Package](/AltOS/releases/1.8.6/Altos-Mac-1.8.6.dmg)
+	- [Linux](/AltOS/releases/1.8.6/Altos-Linux-1.8.6.sh)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.8.6;sf=tgz)
