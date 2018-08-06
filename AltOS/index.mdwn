@@ -41,7 +41,7 @@ to get rid of the the 'App is damaged' messages and run the program.
 Each available download includes AltosUI, documentation, and firmware updates
 for all current products.
 
-[[!inline pages="./releases/* and !*/Discussion and !*.sh and !*.html and !*.bz2 and !*.zip and !*.exe and !*.dmg" and !*.ihx show="10" rss="no" raw="yes" ]]
+[[!inline pages="./releases/* and !*/Discussion and !*.ihx and !*.sh and !*.html and !*.bz2 and !*.zip and !*.exe and !*.dmg" show="10" rss="no" raw="yes" ]]
 
 ## Source Code ##
 
