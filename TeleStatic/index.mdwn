@@ -25,7 +25,7 @@ larger [TeleLaunch](../TeleLaunch) system when needed.
 
 TeleStatic is an alternate load of the TeleFireOne board, whose hardware
 design is available from [git.gag.com](http://git.gag.com) in the project 
-[hw/telelco](http://git.gag.com/?p=hw/telefireone;a=summary).  
+[hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
 
 ## Documentation ##
 
@@ -42,9 +42,9 @@ be part of the AltOS suite.
 
 A prototype system was operated extensively during the 2017, and based
 on that experience a revised version of the circuit board was designed
-and will be tested in the first half of 2018.  General availability of
-the TeleStatic product is expected in mid 2018.  Watch
-this space for updates on price and availability.
+and will be tested eventually.  General availability of the TeleStatic 
+product is expected by the end of calendar 2018.  Watch this space for 
+updates on price and availability.
 
 ## Licenses ##
 
