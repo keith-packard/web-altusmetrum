@@ -20,6 +20,29 @@ in single units and packs of 10 and 25 units at
 
 <a href="v1.0/chaoskey-boxed.jpg"><img src="v1.0/chaoskey-boxed-thumb.jpg"></a>
 
+### Reflashing Firmware ###
+
+To reflash the system firmware on ChaosKey, you first need to get the
+device into 'bootloader mode'. To do this, you must power-up ChaosKey
+with a jumper between GND and the Boot Loader Select pin.
+
+Open up ChaosKey by prying the case apart. There's no glue or screws,
+so a thin tool or fingernail should suffice to split the case into two
+pieces. Once you've opened it up, you'll find the inside that looks
+much like this:
+
+<img src="chaoskey-connector.svg">
+
+Connect a wire between the two red holes in the debug connector and
+then plug it in to your computer. It will appear as a USB modem device
+called AltosFlash with USB ID fffe:000a.
+
+Use the 'ao-usbload' program, which is part of the
+[AltOS repository](https://altusmetrum.org/AltOS/)
+and is packaged for Debian in the 'altos' package:
+
+    $ ao-usbload chaoskey-v1.0-*.elf
+
 ### Version 1.0 Hardware ###
 
  * [STM32F042](http://www.st.com/web/catalog/mmc/FM141/SC1169/SS1574/LN1823?icmp=stm32f0x2-line_pron_pr_jan2014&sc=stm32f0x2-pr) System-on-Chip
