@@ -586,3 +586,9 @@ Hand build of 4 pieces of TeleLCO v2.0 by Bdale on 2017.05.27.
 ## sn 5142-5145 ##
 
 Hand build of 4 pieces of TeleFireEight v1.0 by Bdale on 2017.05.30.
+
+## sn 5146-5395 ##
+
+Production run of 250 pieces of TeleDongle v3.0 by
+[Advanced Circuits](http://4pcb.com), received 2018.09.26.
+
