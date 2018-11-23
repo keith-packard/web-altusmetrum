@@ -110,6 +110,9 @@ the set of hardware projects here.
 * [AltosDroid](AltosDroid/) 
 is the name of our Android app based on AltOS.
 
+* [EasyMotor](EasyMotor/) 
+is an in-flight data logger for research motor characterization.
+
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.

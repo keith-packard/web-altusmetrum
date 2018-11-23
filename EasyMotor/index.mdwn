@@ -1,0 +1,32 @@
+[[!meta title="EasyMotor"]]
+# EasyMotor
+
+This board is designed for in-flight characterization of research rocket
+motors.  It records chamber pressure and acceleration to an on-board flash
+memory chip, the contents of which can be downloaded after flight over USB.  
+It can also be attached to a [TeleMetrum](../TeleMetrum) or
+[TeleMega](../TeleMega) using the companion interface to allow a subset of
+the data to be included in radio telemetry during the flight.
+
+There is no EasyMotor firmware yet, but it will be part of the 
+[AltOS](../AltOS) suite eventually.
+
+Prototypes of v1 are underway.  This design is not yet for sale.
+
+## Features ##
+
+### User View ###
+
+* Data logger storing motor chamber pressure and acceleration
+* 1-axis 200-g accelerometer
+* On-board non-volatile memory for flight data storage
+* USB for configuration, and data recovery
+* Designed for use with a battery from 9-12V
+* 1.65 x 1 inch board
+
+## Artifacts ##
+
+The hardware design current gEDA files are available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/easymotor](http://git.gag.com/?p=hw/easymotor;a=summary).  
+
