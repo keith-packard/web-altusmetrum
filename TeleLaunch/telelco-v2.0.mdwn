@@ -1,0 +1,1 @@
+[[!map pages="TeleLaunch/telelco-v2.0/* and ! TeleLaunch/telelco-v2.0/*/*"]]
