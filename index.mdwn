@@ -7,13 +7,26 @@ for high powered model rocketry by
 [Bdale Garbee](http://gag.com/bdale) and 
 [Keith Packard](http://keithp.com/keithp).
 <p>
-All hardware designs on this site are licensed under the 
-[TAPR](http://www.tapr.org/)
-[Open Hardware License](http://www.tapr.org/ohl.html), 
-and all the software is under the 
-[GNU](http://www.gnu.org/)
-[General Public License, version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-or compatible licenses.
+Bdale and Keith share a strong commitment to
+[Free Software](https://en.wikipedia.org/wiki/Free_software), and as long time
+contributors to the [Debian](https://www.debian.org/) project are fully
+committed to the 
+[Debian Social Contract](https://www.debian.org/social_contract).  In the
+context of what you find here, this translates into an absolute commitment 
+to respect user freedom:
+<ul>
+<li> all of our hardware designs are licensed under the 
+     [TAPR](http://www.tapr.org/) 
+     [Open Hardware License](http://www.tapr.org/ohl.html) 
+</li>
+<li> all of our software is under the [GNU](http://www.gnu.org/)
+     [General Public License](https://www.gnu.org/licenses/#GPL) or 
+     compatible licenses. 
+</li>
+<li> all of our design tools and the software we use to run our business
+     is also Free Software
+</li>
+</ul>
 <p>
 Bdale's online store has a form you can use to 
 [contact us](http://shop.gag.com/contacts/).
