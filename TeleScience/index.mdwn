@@ -86,5 +86,12 @@ deciding what TeleScience should actually be.  The challenge is that if the
 board is too "generic", it will be hard to use.  If it's too "specific", 
 knowing what functionality to actually include gets hard...
 
+As an alternative, if you want to connect custom sensors to a 
+[TeleMetrum](../TeleMetrum/) or [TeleMega](../TeleMega/) board,
+you might want to investigate 
+[AltOSCompanion](https://github.com/bdale/AltOSCompanion), which is an
+[Arduino](https://www.arduino.cc/) sketch for implementing a custom companion
+board!
+
 ## [History of TeleScience](history) ##
 
