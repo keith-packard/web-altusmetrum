@@ -135,15 +135,15 @@ club launches.  Larger clubs or launch site setups can use multiple
 boards to organize the site into multiple banks with up to 8 rockets
 each.
 
-All connections are made on the board using 1/4-in spade lugs for
-eash packaging and quick board swaps.
+For ease of use and quick reconfiguration, a simple DIP switch on the board 
+inside the ammo box is used to select any of the first 8 banks, which is more
+than sufficient for most club needs.  If all switches are off, the bank 
+number up to 99 configured over USB will be used instead.
 
-The above photo shows the unpopulated circuit board for the first version
-of this design, it will be replaced with a photo of a packaged version when
-we have a prototype completed.  In the meantime, see the photo of a packaged
-[TeleStatic](../TeleStatic) board for a rough idea of what we're planning,
-except that there will be 4 AC outlets with flip-lid covers on each long
-face of the ammo box with per-pad LED continuity indicators in the top cover.
+The above photo shows a fully packaged early production version, with integral
+12 Ah sealed lead acid battery.  There are another four pyro outlets on the
+other side of the box, making the design ideal for placing in the middle of
+an 8-rail bank.
 
 The TeleFireEight hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
