@@ -30,11 +30,12 @@ to respect user freedom:
 <p>
 Bdale's online store has a form you can use to 
 [contact us](http://shop.gag.com/contacts/).
-# [Latest News](News) #
 
 # Download the latest [AltOS](AltOS/) software version #
 
-# Where to Buy #
+# [Latest News](News) #
+
+# Where to Buy the Hardware #
 
 Altus Metrum products are available directly from 
 [Bdale's web store](https://shop.gag.com), and from these distributors:
@@ -73,8 +74,8 @@ barometric pressure sensor
 
 * [EasyMega](EasyMega/)
 is a high-end flight computer with 6 pyro channels, tilt limits, etc.  The
-design is identical to [TeleMega](TeleMega/), but without the GPS receiver 
-and radio telemetry link.
+design is essentially identical to [TeleMega](TeleMega/), but without the 
+GPS receiver and radio telemetry link.
 
 * [EasyMini](EasyMini/)
 is a small dual-deploy rocketry altimeter using the MS5607 barometry

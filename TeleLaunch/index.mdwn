@@ -40,17 +40,9 @@ case, and is typically placed on a table for use by the designated LCO.
 
  * Packaged in [Pelican 1170 orange box](https://www.pelican.com/us/en/product/cases/protector/1170)
 
-Note that while the photo of the prototype above gives a good feel for many
-of the system features, production units will have several changes.  We're
-moving to a bright orange Pelican box, instead of separate knobs for bank
-select and pad select there will be one knob with in-built push button, there
-will be 8 continuity LEDs instead of 4, and the choice and placement of
-switches is changing.
-
-In production versions, drag races are supported with a separate normal/drag 
-mode selection switch, drag mode LED, and select pushbutton.  Channels that
-are included in the current drag race selection have blinking continuity 
-indicators.
+Drag races are supported with a separate normal/drag mode selection switch, 
+drag mode LED, and select pushbutton.  Channels that are included in the 
+current drag race selection have blinking continuity indicators.
 
 The TeleLCO hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
@@ -164,20 +156,25 @@ The TeleFireEight hardware design is available from
 
 ## Documentation ##
 
-Not written yet.
+There's a cheat-sheat inside the lid of TeleLCO that has proven to be
+completely sufficient for our prototype users to figure out and use the 
+system, but we do plan to eventually write a real manual.
 
 ## Software ##
 
 TeleLaunch firmware is part of the larger [AltOS](/AltOS) suite of 
-software.
+software.  For now, configuration of frequencies, callsigns, and crypto
+keys requires a laptop with terminal emulator and a USB cable, but we plan
+to produce an easier to use configuration program eventually.
 
 ## Availability ##
 
-Several prototype systems have been built and successfully 
-deployed.  Lessons learned from use of those systems are currently
-being incorporated into new board revisions, and general availability
-of the system for sale is expected in the first half of 2018.  Watch
-this space for updates on price and availability.
+TeleLCO and TeleFireEight are now in production.  TeleLCO is available now,
+and TeleFireEight is anticipated to be ready to ship in February 2019.
+
+Prototypes of the other products in this family have been built, deployed,
+and used successfully.  Updates to the designs are underway and we hope to
+have additional products available in 2019.
 
 ## Licenses ##
 
