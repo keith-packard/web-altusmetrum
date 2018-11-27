@@ -29,7 +29,7 @@ continuity, and RF link quality plus an audible indication of arming.
 
 ### TeleLCO ###
 
-<img src="protos/telelco.jpg">
+<img src="telelco-v2.0/telelco-v2.0-open.jpg">
 
 TeleLCO controls up to 100 TeleFire banks, comes packaged in a rugged 
 case, and is typically placed on a table for use by the designated LCO.
@@ -38,7 +38,7 @@ case, and is typically placed on a table for use by the designated LCO.
 
  * Rotary knob for pad selection
 
- * Packaged in [Pelican 1170 orange box](https://www.amazon.com/gp/product/B003HGW8SG)
+ * Packaged in [Pelican 1170 orange box](https://www.pelican.com/us/en/product/cases/protector/1170)
 
 Note that while the photo of the prototype above gives a good feel for many
 of the system features, production units will have several changes.  We're
