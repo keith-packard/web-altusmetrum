@@ -52,10 +52,9 @@ The TeleLCO hardware design is available from
 
 <img src="protos/telelcotwo.jpg">
 
-A small LCO board capable of handling up to two TeleFireOne pyro 
-boards, or one channel each on TeleFireEight boards.  TeleLCOTwo is ideal 
-for individuals or clubs that have an existing launch control system but 
-want to use TeleLaunch for an "away" launch cell.  
+A small LCO board capable of handling up to two pyro channels.  TeleLCOTwo 
+is ideal for individuals or clubs that have an existing launch control 
+system but want to use TeleLaunch for an "away" launch cell.  
 
 TeleLCOTwo is configured in advance by USB to know which two pyro channels 
 it should interact with, and then a simple rocker switch selects between 
@@ -104,36 +103,32 @@ Each board features:
    larger NEMA enclosure with space for the user's choice of 
    external connectors.
 
-### TeleFireOne ###
+### TeleFireTwo ###
 
 <img src="protos/telefireone.jpg">
 
-TeleFireOne is a pyro board supporting a single igniter circuit.  This 
-makes TeleFireOne ideal for individuals, launch trailers, or for "away 
+TeleFireTwo is a pyro board supporting two igniter circuits.  This 
+makes TeleFireTwo ideal for individuals, launch trailers, or for "away 
 cells" at larger club launches.  
 
 All high-current connections are made on the board using standard 
 1/4-inch spade lugs, with screw terminals for the siren and strobe.  This 
 allows for easy packaging and quick board swaps.
 
-The photo above is of an early prototype, the design has changed slightly
-since then.  It is still possible to package the board as shown in a Hammond
-polycarbonate box, but metal ammo boxes are a credible alternative.  The two 
-switches are for power on/off and safe/arm.  The two cables are for DC power 
-in and igniter leads out. 
+The photo above is of an early single-channel prototype, the design has 
+changed significantly since then and we'll take new photos soon.  It is 
+still possible to package the board as shown in a Hammond polycarbonate 
+box, but the plan is for all production units to be sold packaged in 
+50-cal ammo boxes.  The two switches are for power on/off and safe/arm.  The 
+two cables are for DC power in and igniter leads out. 
 
 The TeleFireOne hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
 
-An alternate load of the TeleFireOne including support for data logging
-sensors from a rocket motor test stand is available as a separate 
-[TeleStatic](../TeleStatic) product.  A TeleStatic board can be used as the 
-equivalent of a TeleFireOne when not in use with a test stand.
-
 ### TeleFireEight ###
 
-<img src="protos/telefireeight.jpg">
+<a href="telefireeight-v2/tf8-packaged.jpg"> <img src="telefireeight-v2/tf8-packaged_small.jpg"></a>
 
 TeleFireEight has eight igniter circuits, making it ideal for use at
 club launches.  Larger clubs or launch site setups can use multiple
