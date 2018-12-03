@@ -4,7 +4,7 @@
 
 TeleLaunch is secure radio-controlled rocket launch system capable of
 operating up to 792 pads from a single controler.  A typical TeleLaunch 
-system consists of one LCO board and one or more pyro boards.
+system consists of one LCO unit and one or more pyro units.
 
 TeleLaunch uses a two-way digital radio communications system for
 positive indication of all operations. The communications link is
@@ -17,11 +17,11 @@ with any rocketry electronics or other communication devices.
 
 All boards in the TeleLaunch system are easily configured using USB for
 parameters like operating frequency, callsign, cryptographic key, and
-in the case of pyro boards the designated bank number.
+in the case of pyro units the designated bank number.
 
-## Launch Control Boards ##
+## Launch Control Products ##
 
-All launch control boards in the TeleLaunch system are designed to use
+All launch control units in the TeleLaunch system are designed to use
 a lithium polymer battery that can be recharged over USB.  They support 
 distinct arm and fire switches, continuous indication of igniter 
 continuity, and have super-bright LED indicators for remote arming, 
@@ -52,8 +52,8 @@ The TeleLCO hardware design is available from
 
 <img src="protos/telelcotwo.jpg">
 
-A small LCO board capable of handling up to two pyro channels.  TeleLCOTwo 
-is ideal for individuals or clubs that have an existing launch control 
+A small LCO unit capable of handling up to two pyro channels.  TeleLCOTwo 
+is ideal for individuals, or clubs that have an existing launch control 
 system but want to use TeleLaunch for an "away" launch cell.  
 
 TeleLCOTwo is configured in advance by USB to know which two pyro channels 
@@ -124,7 +124,7 @@ two cables are for DC power in and igniter leads out.
 
 The TeleFireOne hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
-[hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
+[hw/telefiretwo](http://git.gag.com/?p=hw/telefiretwo;a=summary).  
 
 ### TeleFireEight ###
 
