@@ -1,0 +1,1 @@
+[[!map pages="TeleBT/v4.0/* and ! TeleBT/v4.0/*/*"]]
