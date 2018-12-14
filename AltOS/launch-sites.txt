@@ -7,6 +7,7 @@ ARS Rio Rancho:35.33475:-106.75361:http://arsabq.org
 BARS Vista View Park:26.069436:-80.342995:http://narbars.org
 COSROCS Challenger:38.99624:-104.773979:http://cosrocs.org
 COSROCS Peyton:39.072695:-104.430031:http://cosrocs.org
+CRMRC Macquam Shore Road:44.824644:-73.164345:http://www.crmrc.org/
 FAR Friends of Amateur Rocketry:35.3471:-117.80905:http://friendsofamateurrocketry.org/
 GRITS Gaskins Farm:31.283055555555556:-83.349444444444444:http://www/gritslaunch.com
 HARA Bragg Farms:34.895875:-86.616211:http://www.hararocketry.org/HARA/Main.html
