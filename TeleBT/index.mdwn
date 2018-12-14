@@ -2,12 +2,14 @@
 # TeleBT
 
 TeleBT provides the equivalent of a [TeleDongle](../TeleDongle), with
-the addition of [Bluetooth](http://www.bluetooth.com) as an alternative to
-USB for connection to the ground station computer. 
+both USB and [Bluetooth](http://www.bluetooth.com) for connection to the 
+ground station computer or mobile device.
 
 The RF filter components are set for use in the vicinity of 435 Mhz.
 
-These are photos of the first production version, 1.0:
+These are photos of the first production version, 1.0.  Maybe someday we'll
+get around to adding photos of the current production version 4.0, but they
+look pretty similar once they're in the blue box!
 
 <a href="v1.0/telebt-top.jpg"> <img src="v1.0/telebt-top-thumb.jpg"></a>
 <a href="v1.0/telebt-bottom.jpg"> <img src="v1.0/telebt-bottom-thumb.jpg"></a>
@@ -32,33 +34,27 @@ we now have a 3D-printable [mount](mount/) design available!
 
 * 70cm ham-band transceiver compatible with [Altus Metrum](../) products,
   programmed for 38k4 GFSK data rate with forward error correction
+* Bluetooth / Bluetooth LE radio
 * micro USB interface
 * 4 pin Tyco MicroMaTch connector for debug and flash programming
-* 8 pin Tyco MicroMaTch connector supports serial or SPI interface
 * 850mAh LiPo battery charged via USB 
 
 ### Developer View ###
 
-* [TI CC1111F32](http://focus.ti.com/docs/prod/folders/print/cc1111f32.html) Low Power RF System-on-Chip
-	* Sub-1Ghz transceiver
-	* 8051 MCU
-	* 32k Flash
-	* 4k RAM
-	* USB 2.0
-	* 6 12-bit analog inputs (11 bits with single-ended sensors)
-	* 2 channels of serial I/O
-	* digital I/O
-	* interfaced to Arduino via async serial plus two handshake pins
-* Rayson BTM-182 (Bluetooth SPP module) with async interface to CC1111
-* 150mA 3.3V LDO regulator
-	* input and output appear on 8-pin companion connector
+ * [STM32F042](https://www.st.com/content/st_com/en/products/microcontrollers/stm32-32-bit-arm-cortex-mcus/stm32-mainstream-mcus/stm32f0-series/stm32f0x2/stm32f042c6.html) System-on-Chip
+    * ARM Cortex-M0 MCU
+    * 32k Flash
+    * 6k RAM
+    * USB 2.0 Full Speed
+* [CC1200](http://www.ti.com/product/cc1200) Low Power, High Performance RF Transceiver
+* [RN4678](https://www.microchip.com/wwwproducts/en/RN4678) Bluetooth module
 * Firmware Features
-	* Written mostly in C with some 8051 assembler
+	* Written mostly in C with some ARM assembler
 	* Runs from on-chip flash, uses on-chip RAM
 	* USB serial emulation for data interface
 * Tools Used
 	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
-	* [SDCC](http://sdcc.sourceforge.net/) compiler and source debugger
+	* [GCC](http://gcc.gnu.org/) compiler and source debugger
 * Licenses
 	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
 	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
@@ -74,18 +70,11 @@ The hardware design current gEDA files are available from
 [hw/teleshield](http://git.gag.com/?p=hw/telebt;a=summary).  
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 1.0 in more easily readable form.  
+of the files for Production PCB version 4.0 in more easily readable form.  
 
-* [schematic](v1.0/telebt.pdf)
-* [pcb artwork](v1.0/telebt.pcb.pdf)
-* [bill of materials](v1.0/partslist.csv)
+* [schematic](v4.0/telebt.pdf)
+* [pcb artwork](v4.0/telebt.pcb.pdf)
+* [bill of materials](v4.0/partslist.csv)
 
-## Future Plans ##
+## [History of TeleBT](history) ##
 
-The inventory of version 1.0 boards was lost in the fire that destroyed 
-Bdale's home in June of 2013.  Version 1.1 will be available for purchase 
-we hope by the end of October 2013.
-
-TeleBT works with both AltosUI version 1.2 and later, and a new
-[Android](http://www.android.com) application 
-called [AltosDroid](../AltosDroid).
