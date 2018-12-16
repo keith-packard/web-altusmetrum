@@ -72,8 +72,8 @@ The hardware design current gEDA files are available from
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of the files for Production PCB version 4.0 in more easily readable form.  
 
-* [schematic](v4.0/telebt.pdf)
-* [pcb artwork](v4.0/telebt.pcb.pdf)
+* [schematic](v4.0/telebt-sch.pdf)
+* [pcb artwork](v4.0/telebt-big.pdf)
 * [bill of materials](v4.0/partslist.csv)
 
 ## [History of TeleBT](history) ##
