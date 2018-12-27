@@ -596,3 +596,8 @@ Production run of 250 pieces of TeleDongle v3.0 by
 
 Prototype build of 3 pieces of EasyMega v2 proto 1 by Bdale on 2018.10.12.
 
+## sn 5400-5649 ##
+
+Production run of 250 pieces of EasyMega v2 by
+[Advanced Circuits](http://4pcb.com), received 2018.12.27.
+
