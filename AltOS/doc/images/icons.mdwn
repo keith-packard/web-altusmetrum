@@ -1,0 +1,1 @@
+[[!map pages="AltOS/doc/images/icons/* and ! AltOS/doc/images/icons/*/*"]]
