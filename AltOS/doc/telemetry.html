@@ -1,38 +1,333 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AltOS Telemetry</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm1"></a>AltOS Telemetry</h2></div><div><h3 class="subtitle"><em>Packet Definitions</em></h3></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3><code class="email">&lt;<a class="email" href="mailto:keithp@keithp.com">keithp@keithp.com</a>&gt;</code></div></div><div><p class="copyright">Copyright © 2011 Keith Packard</p></div><div><div class="legalnotice"><a id="idm13"></a><p>
-    This document is released under the terms of the
-    <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
-      Creative Commons ShareAlike 3.0
-    </a>
-    license.
-  </p></div></div><div><a href="telemetry-revhistory.html">Revision History</a></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#_packet_format_design">1. Packet Format Design</a></span></dt><dt><span class="section"><a href="#_packet_formats">2. Packet Formats</a></span></dt><dd><dl><dt><span class="section"><a href="#_packet_header">2.1. Packet Header</a></span></dt><dt><span class="section"><a href="#_telemetrum_v1_x_telemini_v1_0_and_telenano_sensor_data">2.2. TeleMetrum v1.x, TeleMini v1.0 and TeleNano Sensor Data</a></span></dt><dt><span class="section"><a href="#_telemega_sensor_data">2.3. TeleMega Sensor Data</a></span></dt><dt><span class="section"><a href="#_telemetrum_v2_sensor_data">2.4. TeleMetrum v2 Sensor Data</a></span></dt><dt><span class="section"><a href="#_telemini_v3_0_sensor_data">2.5. TeleMini v3.0 Sensor Data</a></span></dt><dt><span class="section"><a href="#_configuration_data">2.6. Configuration Data</a></span></dt><dt><span class="section"><a href="#_gps_location">2.7. GPS Location</a></span></dt><dt><span class="section"><a href="#_gps_satellite_data">2.8. GPS Satellite Data</a></span></dt><dt><span class="section"><a href="#_companion_data">2.9. Companion Data</a></span></dt></dl></dd><dt><span class="section"><a href="#_data_transmission">3. Data Transmission</a></span></dt><dd><dl><dt><span class="section"><a href="#_modulation_scheme">3.1. Modulation Scheme</a></span></dt><dt><span class="section"><a href="#_error_correction">3.2. Error Correction</a></span></dt></dl></dd><dt><span class="section"><a href="#_teledongle_serial_packet_format">4. TeleDongle serial packet format</a></span></dt><dt><span class="section"><a href="#_history_and_motivation">5. History and Motivation</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_packet_format_design"></a>1. Packet Format Design</h2></div></div></div><p>AltOS telemetry data is split into multiple different packets,
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="author" content="Keith Packard, Bdale Garbee">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2018">
+<title>AltOS Telemetry</title>
+<link rel="stylesheet" href="./am.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>AltOS Telemetry</h1>
+<div class="details">
+<span id="author" class="author">Keith Packard</span><br>
+<span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
+<span id="author2" class="author">Bdale Garbee</span><br>
+<span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
+<span id="revnumber">version v1.8.7,</span>
+<span id="revdate">8 Oct 2018</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_license">License</a></li>
+<li><a href="#_packet_format_design">1. Packet Format Design</a></li>
+<li><a href="#_packet_formats">2. Packet Formats</a>
+<ul class="sectlevel2">
+<li><a href="#_packet_header">2.1. Packet Header</a></li>
+<li><a href="#_telemetrum_v1_x_telemini_v1_0_and_telenano_sensor_data">2.2. TeleMetrum v1.x, TeleMini v1.0 and TeleNano Sensor Data</a></li>
+<li><a href="#_telemega_sensor_data">2.3. TeleMega Sensor Data</a></li>
+<li><a href="#_telemetrum_v2_sensor_data">2.4. TeleMetrum v2 Sensor Data</a></li>
+<li><a href="#_telemini_v3_0_sensor_data">2.5. TeleMini v3.0 Sensor Data</a></li>
+<li><a href="#_configuration_data">2.6. Configuration Data</a></li>
+<li><a href="#_gps_location">2.7. GPS Location</a></li>
+<li><a href="#_gps_satellite_data">2.8. GPS Satellite Data</a></li>
+<li><a href="#_companion_data">2.9. Companion Data</a></li>
+</ul>
+</li>
+<li><a href="#_data_transmission">3. Data Transmission</a>
+<ul class="sectlevel2">
+<li><a href="#_modulation_scheme">3.1. Modulation Scheme</a></li>
+<li><a href="#_error_correction">3.2. Error Correction</a></li>
+</ul>
+</li>
+<li><a href="#_teledongle_serial_packet_format">4. TeleDongle serial packet format</a></li>
+<li><a href="#_history_and_motivation">5. History and Motivation</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div id="logo" class="imageblock">
+<div class="content">
+<a class="image" href="https://altusmetrum.org"><img src="altusmetrum-oneline.svg" alt="Altus Metrum"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copyright © 2018 Bdale Garbee and Keith Packard</p>
+</div>
+<div class="paragraph">
+<p>This document is released under the terms of the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons ShareAlike 3.0 License</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_packet_format_design">1. Packet Format Design</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AltOS telemetry data is split into multiple different packets,
 all the same size, but each includs an identifier so that the
 ground station can distinguish among different types. A single
 flight board will transmit multiple packet types, each type on
 a different schedule. The ground software need look for only a
 single packet size, and then decode the information within the
 packet and merge data from multiple packets to construct the
-full flight computer state.</p><p>Each AltOS packet is 32 bytes long. This size was chosen based
+full flight computer state.</p>
+</div>
+<div class="paragraph">
+<p>Each AltOS packet is 32 bytes long. This size was chosen based
 on the known telemetry data requirements. The power of two
 size allows them to be stored easily in flash memory without
-having them split across blocks or leaving gaps at the end.</p><p>All packet types start with a five byte header which encodes
+having them split across blocks or leaving gaps at the end.</p>
+</div>
+<div class="paragraph">
+<p>All packet types start with a five byte header which encodes
 the device serial number, device clock value and the packet
-type. The remaining 27 bytes encode type-specific data.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_packet_formats"></a>2. Packet Formats</h2></div></div></div><p>This section first defines the packet header common to all packets
-and then the per-packet data layout.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_packet_header"></a>2.1. Packet Header</h3></div></div></div><div class="table"><a id="idm31"></a><p class="title"><strong>Table 1. Telemetry Packet Header</strong></p><div class="table-contents"><table class="table" summary="Telemetry Packet Header" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>serial</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Device serial Number</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>tick</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Device time in 100ths of a second</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>4</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>type</p></td><td style="" align="left" valign="top"><p>Packet type</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Each packet starts with these five bytes which serve to identify
+type. The remaining 27 bytes encode type-specific data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_packet_formats">2. Packet Formats</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section first defines the packet header common to all packets
+and then the per-packet data layout.</p>
+</div>
+<div class="sect2">
+<h3 id="_packet_header">2.1. Packet Header</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Telemetry Packet Header</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">serial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device serial Number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device time in 100ths of a second</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Packet type</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Each packet starts with these five bytes which serve to identify
 which device has transmitted the packet, when it was transmitted
-and what the rest of the packet contains.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telemetrum_v1_x_telemini_v1_0_and_telenano_sensor_data"></a>2.2. TeleMetrum v1.x, TeleMini v1.0 and TeleNano Sensor Data</h3></div></div></div><div class="table"><a id="idm78"></a><p class="title"><strong>Table 2. Sensor Packet Type</strong></p><div class="table-contents"><table class="table" summary="Sensor Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0x01</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleMetrum v1.x Sensor Data</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0x02</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleMini v1.0 Sensor Data</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x03</p></td><td style="" align="left" valign="top"><p>TeleNano Sensor Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>TeleMetrum v1.x, TeleMini v1.0 and TeleNano share this same
+and what the rest of the packet contains.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_telemetrum_v1_x_telemini_v1_0_and_telenano_sensor_data">2.2. TeleMetrum v1.x, TeleMini v1.0 and TeleNano Sensor Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Sensor Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v1.x Sensor Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMini v1.0 Sensor Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleNano Sensor Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TeleMetrum v1.x, TeleMini v1.0 and TeleNano share this same
 packet format for sensor data. Each uses a distinct
 packet type so that the receiver knows which data
-values are valid and which are undefined.</p><p>Sensor Data packets are transmitted once per second on
+values are valid and which are undefined.</p>
+</div>
+<div class="paragraph">
+<p>Sensor Data packets are transmitted once per second on
 the ground, 10 times per second during ascent and once
-per second during descent and landing</p><div class="table"><a id="idm106"></a><p class="title"><strong>Table 3. Sensor Packet Contents</strong></p><div class="table-contents"><table class="table" summary="Sensor Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>state</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight state</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accelerometer (TM only)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pressure sensor</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>10</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temp</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temperature sensor</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>v_batt</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>battery voltage</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>14</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense_d</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>drogue continuity sense (TM/Tm)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense_m</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>main continuity sense (TM/Tm)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>18</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>acceleration</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s² * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>speed</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>height</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Average barometer reading on ground</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>26</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_accel</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TM</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>28</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_plus_g</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TM</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>30</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>accel_minus_g</p></td><td style="" align="left" valign="top"><p>TM</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telemega_sensor_data"></a>2.3. TeleMega Sensor Data</h3></div></div></div><div class="table"><a id="idm251"></a><p class="title"><strong>Table 4. TeleMega Packet Type</strong></p><div class="table-contents"><table class="table" summary="TeleMega Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0x08</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleMega IMU Sensor Data</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x09</p></td><td style="" align="left" valign="top"><p>TeleMega Kalman and Voltage Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>TeleMega has a lot of sensors, and so it splits the sensor
+per second during descent and landing</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Sensor Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">state</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accelerometer (TM only)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pressure sensor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temperature sensor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v_batt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">battery voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense_d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">drogue continuity sense (TM/Tm)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense_m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main continuity sense (TM/Tm)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">acceleration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s² * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average barometer reading on ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_accel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_plus_g</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_minus_g</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TM</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_telemega_sensor_data">2.3. TeleMega Sensor Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. TeleMega Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMega IMU Sensor Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMega Kalman and Voltage Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TeleMega has a lot of sensors, and so it splits the sensor
 data into two packets. The raw IMU data are sent more often;
-the voltage values don’t change very fast, and the Kalman
-values can be reconstructed from the IMU data.</p><p>IMU Sensor Data packets are transmitted once per second on the
+the voltage values don&#8217;t change very fast, and the Kalman
+values can be reconstructed from the IMU data.</p>
+</div>
+<div class="paragraph">
+<p>IMU Sensor Data packets are transmitted once per second on the
 ground, 10 times per second during ascent and once per second
-during descent and landing</p><p>Kalman and Voltage Data packets are transmitted once per second on the
+during descent and landing</p>
+</div>
+<div class="paragraph">
+<p>Kalman and Voltage Data packets are transmitted once per second on the
 ground, 5 times per second during ascent and once per second
-during descent and landing</p><p>The high-g accelerometer is reported separately from the data
+during descent and landing</p>
+</div>
+<div class="paragraph">
+<p>The high-g accelerometer is reported separately from the data
 for the 9-axis IMU (accel/gyro/mag). The 9-axis IMU is mounted
 so that the X axis is "across" the board (along the short
 axis0, the Y axis is "along" the board (along the long axis,
@@ -40,53 +335,1062 @@ with the high-g accelerometer) and the Z axis is "through" the
 board (perpendicular to the board). Rotation measurements are
 around the respective axis, so Y rotation measures the spin
 rate of the rocket while X and Z rotation measure the tilt
-rate.</p><p>The overall tilt angle of the rocket is computed by first
+rate.</p>
+</div>
+<div class="paragraph">
+<p>The overall tilt angle of the rocket is computed by first
 measuring the orientation of the rocket on the pad using the 3
 axis accelerometer, and then integrating the overall tilt rate
 from the 3 axis gyroscope to compute the total orientation
-change of the airframe since liftoff.</p><div class="table"><a id="idm277"></a><p class="title"><strong>Table 5. TeleMega IMU Sensor Packet Contents</strong></p><div class="table-contents"><table class="table" summary="TeleMega IMU Sensor Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>orient</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Angle from vertical in degrees</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>High G accelerometer</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pressure (Pa * 10)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temp</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temperature (°C * 100)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>14</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_x</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>X axis acceleration (across)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_y</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Y axis acceleration (along)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>18</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_z</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Z axis acceleration (through)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>gyro_x</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>X axis rotation (across)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>gyro_y</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Y axis rotation (along)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>gyro_z</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Z axis rotation (through)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>26</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>mag_x</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>X field strength (across)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>28</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>mag_y</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Y field strength (along)</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>30</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>mag_z</p></td><td style="" align="left" valign="top"><p>Z field strength (through)</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="table"><a id="idm411"></a><p class="title"><strong>Table 6. TeleMega Kalman and Voltage Data Packet Contents</strong></p><div class="table-contents"><table class="table" summary="TeleMega Kalman and Voltage Data Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>state</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight state</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>v_batt</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>battery voltage</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>v_pyro</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pyro battery voltage</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>10</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int8_t[6]</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pyro continuity sense</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Average barometer reading on ground</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_accel</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Average accelerometer reading on ground</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_plus_g</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Accel calibration at +1g</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_minus_g</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Accel calibration at -1g</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>26</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>acceleration</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s² * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>28</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>speed</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>30</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>height</p></td><td style="" align="left" valign="top"><p>m</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telemetrum_v2_sensor_data"></a>2.4. TeleMetrum v2 Sensor Data</h3></div></div></div><div class="table"><a id="idm529"></a><p class="title"><strong>Table 7. TeleMetrum v2 Packet Type</strong></p><div class="table-contents"><table class="table" summary="TeleMetrum v2 Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0x0A</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleMetrum v2 Sensor Data</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x0B</p></td><td style="" align="left" valign="top"><p>TeleMetrum v2 Calibration Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>TeleMetrum v2 has higher resolution barometric data than
+change of the airframe since liftoff.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. TeleMega IMU Sensor Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">orient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angle from vertical in degrees</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High G accelerometer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pressure (Pa * 10)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temperature (°C * 100)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X axis acceleration (across)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y axis acceleration (along)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z axis acceleration (through)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gyro_x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X axis rotation (across)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gyro_y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y axis rotation (along)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gyro_z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z axis rotation (through)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mag_x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X field strength (across)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mag_y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y field strength (along)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mag_z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z field strength (through)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. TeleMega Kalman and Voltage Data Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">state</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v_batt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">battery voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v_pyro</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pyro battery voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int8_t[6]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pyro continuity sense</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average barometer reading on ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_accel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average accelerometer reading on ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_plus_g</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accel calibration at +1g</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_minus_g</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accel calibration at -1g</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">acceleration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s² * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_telemetrum_v2_sensor_data">2.4. TeleMetrum v2 Sensor Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. TeleMetrum v2 Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x0A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v2 Sensor Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x0B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v2 Calibration Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TeleMetrum v2 has higher resolution barometric data than
 TeleMetrum v1, and so the constant calibration data is
-split out into a separate packet.</p><p>TeleMetrum v2 Sensor Data packets are transmitted once per second on the
+split out into a separate packet.</p>
+</div>
+<div class="paragraph">
+<p>TeleMetrum v2 Sensor Data packets are transmitted once per second on the
 ground, 10 times per second during ascent and once per second
-during descent and landing</p><p>TeleMetrum v2 Calibration Data packets are always transmitted once per second.</p><div class="table"><a id="idm553"></a><p class="title"><strong>Table 8. TeleMetrum v2 Sensor Packet Contents</strong></p><div class="table-contents"><table class="table" summary="TeleMetrum v2 Sensor Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>state</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight state</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accelerometer</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pressure sensor (Pa * 10)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temp</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temperature sensor (°C * 100)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>14</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>acceleration</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s² * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>speed</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>18</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>height</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>v_batt</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>battery voltage</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense_d</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>drogue continuity sense</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense_m</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>main continuity sense</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>26</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>pad[6]</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>pad bytes</p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /><div class="table"><a id="idm669"></a><p class="title"><strong>Table 9. TeleMetrum v2 Calibration Data Packet Contents</strong></p><div class="table-contents"><table class="table" summary="TeleMetrum v2 Calibration Data Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pad[3]</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pad bytes</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Average barometer reading on ground</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_accel</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Average accelerometer reading on ground</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>14</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_plus_g</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Accel calibration at +1g</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>accel_minus_g</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Accel calibration at -1g</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>18</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>pad[14]</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>pad bytes</p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telemini_v3_0_sensor_data"></a>2.5. TeleMini v3.0 Sensor Data</h3></div></div></div><div class="table"><a id="idm742"></a><p class="title"><strong>Table 10. Sensor Packet Type</strong></p><div class="table-contents"><table class="table" summary="Sensor Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x11</p></td><td style="" align="left" valign="top"><p>TeleMini v3.0 Sensor Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>TeleMini v3.0 uses this
-packet format for sensor data.</p><p>Sensor Data packets are transmitted once per second on
+during descent and landing</p>
+</div>
+<div class="paragraph">
+<p>TeleMetrum v2 Calibration Data packets are always transmitted once per second.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8. TeleMetrum v2 Sensor Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">state</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accelerometer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pressure sensor (Pa * 10)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temperature sensor (°C * 100)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">acceleration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s² * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v_batt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">battery voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense_d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">drogue continuity sense</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense_m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main continuity sense</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad[6]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad bytes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 9. TeleMetrum v2 Calibration Data Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad[3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad bytes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average barometer reading on ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_accel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average accelerometer reading on ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_plus_g</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accel calibration at +1g</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accel_minus_g</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accel calibration at -1g</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad[14]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad bytes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_telemini_v3_0_sensor_data">2.5. TeleMini v3.0 Sensor Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 10. Sensor Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMini v3.0 Sensor Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>TeleMini v3.0 uses this
+packet format for sensor data.</p>
+</div>
+<div class="paragraph">
+<p>Sensor Data packets are transmitted once per second on
 the ground, 10 times per second during ascent and once
-per second during descent and landing</p><div class="table"><a id="idm760"></a><p class="title"><strong>Table 11. Sensor Packet Contents</strong></p><div class="table-contents"><table class="table" summary="Sensor Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>state</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight state</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>v_batt</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>battery voltage</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense_a</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>apogee continuity sense</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>10</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sense_m</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>main continuity sense</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pressure sensor (Pa * 10)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temp</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>temperature sensor (°C * 100)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>18</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>acceleration</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s² * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>speed</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m/s * 16</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>height</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_pres</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Average barometer reading on ground</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>28</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>pad[4]</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>pad bytes</p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_configuration_data"></a>2.6. Configuration Data</h3></div></div></div><div class="table"><a id="idm878"></a><p class="title"><strong>Table 12. Configuration Packet Type</strong></p><div class="table-contents"><table class="table" summary="Configuration Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x04</p></td><td style="" align="left" valign="top"><p>Configuration Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>This provides a description of the software installed on the
-flight computer as well as any user-specified configuration data.</p><p>Configuration data packets are transmitted once per second
-during all phases of the flight</p><div class="table"><a id="idm896"></a><p class="title"><strong>Table 13. Configuration Packet Contents</strong></p><div class="table-contents"><table class="table" summary="Configuration Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Device type</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>flight</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight number</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>config_major</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Config major version</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>9</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>config_minor</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Config minor version</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>10</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>apogee_delay</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Apogee deploy delay in seconds</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>main_deploy</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Main deploy alt in meters</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>14</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>flight_log_max</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Maximum flight log size (kB)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>char</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>callsign[8]</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Radio operator identifier</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>char</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>version[8]</p></td><td style="" align="left" valign="top"><p>Software version identifier</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_gps_location"></a>2.7. GPS Location</h3></div></div></div><div class="table"><a id="idm996"></a><p class="title"><strong>Table 14. GPS Packet Type</strong></p><div class="table-contents"><table class="table" summary="GPS Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x05</p></td><td style="" align="left" valign="top"><p>GPS Location</p></td></tr></tbody></table></div></div><br class="table-break" /><p>This packet provides all of the information available from the
+per second during descent and landing</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 11. Sensor Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">state</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v_batt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">battery voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense_a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apogee continuity sense</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sense_m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main continuity sense</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pressure sensor (Pa * 10)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">temperature sensor (°C * 100)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">acceleration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s² * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m/s * 16</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_pres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Average barometer reading on ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad[4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pad bytes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_configuration_data">2.6. Configuration Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 12. Configuration Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This provides a description of the software installed on the
+flight computer as well as any user-specified configuration data.</p>
+</div>
+<div class="paragraph">
+<p>Configuration data packets are transmitted once per second
+during all phases of the flight</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 13. Configuration Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flight</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config_major</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Config major version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config_minor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Config minor version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apogee_delay</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apogee deploy delay in seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main_deploy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main deploy alt in meters</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flight_log_max</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum flight log size (kB)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">char</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">callsign[8]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radio operator identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">char</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version[8]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software version identifier</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_gps_location">2.7. GPS Location</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 14. GPS Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x05</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPS Location</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This packet provides all of the information available from the
 GPS receiver—position, time, speed and precision
-estimates.</p><p>GPS Location packets are transmitted once per second during
-all phases of the flight</p><div class="table"><a id="idm1014"></a><p class="title"><strong>Table 15. GPS Location Packet Contents</strong></p><div class="table-contents"><table class="table" summary="GPS Location Packet Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>flags</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>See GPS Flags table below</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>altitude</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>m</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>latitude</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>degrees * 107</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>12</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int32_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>longitude</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>degrees * 107</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>16</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>year</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>17</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>month</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>18</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>day</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>19</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>hour</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>minute</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>21</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>second</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p></p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>pdop</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>* 5</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>23</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>hdop</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>* 5</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>24</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>vdop</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>* 5</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>25</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>mode</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>See GPS Mode table below</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>26</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>ground_speed</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>cm/s</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>28</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>int16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>climb_rate</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>cm/s</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>30</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>course</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>/ 2</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>31</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>unused[1]</p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /><p>Packed into a one byte field are status flags and the
+estimates.</p>
+</div>
+<div class="paragraph">
+<p>GPS Location packets are transmitted once per second during
+all phases of the flight</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 15. GPS Location Packet Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See GPS Flags table below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">latitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">degrees * 107</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">longitude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">degrees * 107</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">year</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">month</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">day</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hour</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minute</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">second</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pdop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hdop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vdop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See GPS Mode table below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground_speed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cm/s</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">climb_rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cm/s</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">course</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/ 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unused[1]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Packed into a one byte field are status flags and the
 count of satellites used to compute the position
 fix. Note that this number may be lower than the
 number of satellites being tracked; the receiver will
 not use information from satellites with weak signals
 or which are close enough to the horizon to have
-significantly degraded position accuracy.</p><div class="table"><a id="idm1194"></a><p class="title"><strong>Table 16. GPS Flags</strong></p><div class="table-contents"><table class="table" summary="GPS Flags" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Bits</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0-3</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>nsats</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Number of satellites in solution</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>4</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>valid</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>GPS solution is valid</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>running</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>GPS receiver is operational</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>date_valid</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Reported date is valid</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>7</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>course_valid</p></td><td style="" align="left" valign="top"><p>ground speed, course and climb rates are valid</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Here are all of the valid GPS operational modes. Altus
-Metrum products will only ever report <span class="emphasis"><em>N</em></span> (not valid),
-<span class="emphasis"><em>A</em></span> (Autonomous) modes or <span class="emphasis"><em>E</em></span> (Estimated). The
+significantly degraded position accuracy.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 16. GPS Flags</caption>
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nsats</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of satellites in solution</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">valid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPS solution is valid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">running</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPS receiver is operational</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date_valid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reported date is valid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">course_valid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ground speed, course and climb rates are valid</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here are all of the valid GPS operational modes. Altus
+Metrum products will only ever report 'N' (not valid),
+'A' (Autonomous) modes or 'E' (Estimated). The
 remaining modes are either testing modes or require
-additional data.</p><div class="table"><a id="idm1247"></a><p class="title"><strong>Table 17. GPS Mode</strong></p><div class="table-contents"><table class="table" summary="GPS Mode" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Mode</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>N</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Not Valid</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>All data are invalid</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>A</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Autonomous mode</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data are derived from satellite data</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>D</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Differential Mode</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data are augmented with differential data from a
+additional data.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 17. GPS Mode</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 27.2727%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not Valid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All data are invalid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autonomous mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data are derived from satellite data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Differential Mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data are augmented with differential data from a
 known ground station. The SkyTraq unit in TeleMetrum
-does not support this mode</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>E</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Estimated</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data are estimated using dead reckoning from the
-last known data</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>M</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Manual</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data were entered manually</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>S</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Simulated</p></td><td style="" align="left" valign="top"><p>GPS receiver testing mode</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_gps_satellite_data"></a>2.8. GPS Satellite Data</h3></div></div></div><div class="table"><a id="idm1305"></a><p class="title"><strong>Table 18. GPS Satellite Data Packet Type</strong></p><div class="table-contents"><table class="table" summary="GPS Satellite Data Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x06</p></td><td style="" align="left" valign="top"><p>GPS Satellite Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>This packet provides space vehicle identifiers and
+does not support this mode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Estimated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data are estimated using dead reckoning from the
+last known data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Manual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data were entered manually</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simulated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPS receiver testing mode</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_gps_satellite_data">2.8. GPS Satellite Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 18. GPS Satellite Data Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPS Satellite Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This packet provides space vehicle identifiers and
 signal quality information in the form of a C/N1
 number for up to 12 satellites. The order of the svids
-is not specified.</p><p>GPS Satellite data are transmitted once per second
-during all phases of the flight.</p><div class="table"><a id="idm1323"></a><p class="title"><strong>Table 19. GPS Satellite Data Contents</strong></p><div class="table-contents"><table class="table" summary="GPS Satellite Data Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>channels</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Number of reported satellite information</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sat_info_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>sats[12]</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>See Per-Satellite data table below</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>30</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>unused[2]</p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /><div class="table"><a id="idm1367"></a><p class="title"><strong>Table 20. GPS Per-Satellite data (sat_info_t)</strong></p><div class="table-contents"><table class="table" summary="GPS Per-Satellite data (sat_info_t)" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>svid</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Space Vehicle Identifier</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>1</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>c_n_1</p></td><td style="" align="left" valign="top"><p>C/N1 signal quality indicator</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_companion_data"></a>2.9. Companion Data</h3></div></div></div><div class="table"><a id="idm1404"></a><p class="title"><strong>Table 21. Companion Data Packet Type</strong></p><div class="table-contents"><table class="table" summary="Companion Data Packet Type" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>0x07</p></td><td style="" align="left" valign="top"><p>Companion Data</p></td></tr></tbody></table></div></div><br class="table-break" /><p>When a companion board is attached to TeleMega or
+is not specified.</p>
+</div>
+<div class="paragraph">
+<p>GPS Satellite data are transmitted once per second
+during all phases of the flight.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 19. GPS Satellite Data Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of reported satellite information</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sat_info_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sats[12]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See Per-Satellite data table below</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unused[2]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 20. GPS Per-Satellite data (sat_info_t)</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">svid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Space Vehicle Identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c_n_1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C/N1 signal quality indicator</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_companion_data">2.9. Companion Data</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 21. Companion Data Packet Type</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Companion Data</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When a companion board is attached to TeleMega or
 TeleMetrum, it can provide telemetry data to be
 included in the downlink. The companion board can
-provide up to 12 16-bit data values.</p><p>The companion board itself specifies the transmission
+provide up to 12 16-bit data values.</p>
+</div>
+<div class="paragraph">
+<p>The companion board itself specifies the transmission
 rate. On the ground and during descent, that rate is
 limited to one packet per second. During ascent, that
-rate is limited to 10 packets per second.</p><div class="table"><a id="idm1422"></a><p class="title"><strong>Table 22. Companion Data Contents</strong></p><div class="table-contents"><table class="table" summary="Companion Data Contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>board_id</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Type of companion board attached</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>update_period</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>How often telemetry is sent, in 1/100ths of a second</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>7</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>channels</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Number of data channels supplied</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>uint16_t[12]</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>companion_data</p></td><td style="" align="left" valign="top"><p>Up to 12 channels of 16-bit companion data</p></td></tr></tbody></table></div></div><br class="table-break" /></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_data_transmission"></a>3. Data Transmission</h2></div></div></div><p>Altus Metrum devices use Texas Instruments sub-GHz digital
+rate is limited to 10 packets per second.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 22. Companion Data Contents</caption>
+<colgroup>
+<col style="width: 11.7647%;">
+<col style="width: 17.647%;">
+<col style="width: 17.647%;">
+<col style="width: 52.9413%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">board_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of companion board attached</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">update_period</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How often telemetry is sent, in 1/100ths of a second</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of data channels supplied</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t[12]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">companion_data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Up to 12 channels of 16-bit companion data</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_transmission">3. Data Transmission</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Altus Metrum devices use Texas Instruments sub-GHz digital
 radio products. Ground stations use parts with HW FEC while
 some flight computers perform FEC in software. TeleGPS is
-transmit-only.</p><div class="table"><a id="idm1478"></a><p class="title"><strong>Table 23. Altus Metrum Radio Parts</strong></p><div class="table-contents"><table class="table" summary="Altus Metrum Radio Parts" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Part Number</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Used in</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>CC1111</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>10mW transceiver with integrated SoC</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleDongle v0.2, TeleBT v1.0, TeleMetrum v1.x, TeleMini</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>CC1120</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>35mW transceiver with SW FEC</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleMetrum v2, TeleMega</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>CC1200</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>35mW transceiver with HW FEC</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>TeleDongle v3.0, TeleBT v3.0</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>CC115L</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>14mW transmitter with SW FEC</p></td><td style="" align="left" valign="top"><p>TeleGPS</p></td></tr></tbody></table></div></div><br class="table-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_modulation_scheme"></a>3.1. Modulation Scheme</h3></div></div></div><p>Texas Instruments provides a tool for computing
+transmit-only.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 23. Altus Metrum Radio Parts</caption>
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 44.4444%;">
+<col style="width: 44.4445%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Part Number</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Used in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CC1111</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10mW transceiver with integrated SoC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleDongle v0.2, TeleBT v1.0, TeleMetrum v1.x, TeleMini</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CC1120</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">35mW transceiver with SW FEC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v2, TeleMega</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CC1200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">35mW transceiver with HW FEC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleDongle v3.0, TeleBT v3.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CC115L</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14mW transmitter with SW FEC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleGPS</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_modulation_scheme">3.1. Modulation Scheme</h3>
+<div class="paragraph">
+<p>Texas Instruments provides a tool for computing
 modulation parameters given a desired modulation
-format and basic bit rate.</p><p>While we might like to use something with better
+format and basic bit rate.</p>
+</div>
+<div class="paragraph">
+<p>While we might like to use something with better
 low-signal performance like BPSK, the radios we use
-don’t support that, but do support Gaussian frequency
+don&#8217;t support that, but do support Gaussian frequency
 shift keying (GFSK). Regular frequency shift keying
 (FSK) encodes the signal by switching the carrier
 between two frequencies. The Gaussian version is
@@ -94,24 +1398,169 @@ essentially the same, but the shift between
 frequencies gently follows a gaussian curve, rather
 than switching immediately. This tames the bandwidth
 of the signal without affecting the ability to
-transmit data.</p><p>For AltOS, there are three available bit rates,
+transmit data.</p>
+</div>
+<div class="paragraph">
+<p>For AltOS, there are three available bit rates,
 38.4kBaud, 9.6kBaud and 2.4kBaud resulting in the
-following signal parmeters:</p><div class="table"><a id="idm1525"></a><p class="title"><strong>Table 24. Modulation Scheme</strong></p><div class="table-contents"><table class="table" summary="Modulation Scheme" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Rate</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Deviation</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Receiver Bandwidth</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>38.4kBaud</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>20.5kHz</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>100kHz</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>9.6kBaud</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5.125kHz</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>25kHz</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>2.4kBaud</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>1.5kHz</p></td><td style="" align="left" valign="top"><p>5kHz</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_error_correction"></a>3.2. Error Correction</h3></div></div></div><p>The cc1111 and cc1200 provide forward error correction
-in hardware; on the cc1120 and cc115l that’s done in
+following signal parmeters:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 24. Modulation Scheme</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deviation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Receiver Bandwidth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38.4kBaud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20.5kHz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100kHz</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9.6kBaud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.125kHz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25kHz</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4kBaud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5kHz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5kHz</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_error_correction">3.2. Error Correction</h3>
+<div class="paragraph">
+<p>The cc1111 and cc1200 provide forward error correction
+in hardware; on the cc1120 and cc115l that&#8217;s done in
 software. AltOS uses this to improve reception of weak
-signals. As it’s a rate 1/2 encoding, each bit of data
+signals. As it&#8217;s a rate 1/2 encoding, each bit of data
 takes two bits when transmitted, so the effective data
-rate is half of the raw transmitted bit rate.</p><div class="table"><a id="idm1563"></a><p class="title"><strong>Table 25. Error Correction</strong></p><div class="table-contents"><table class="table" summary="Error Correction" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Parameter</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Value</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Error Correction</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Convolutional coding</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>1/2 rate, constraint length m=4</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Interleaving</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>4 x 4</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Reduce effect of noise burst</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>Data Whitening</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>XOR with 9-bit PNR</p></td><td style="" align="left" valign="top"><p>Rotate right with bit 8 = bit 0 xor bit 5, initial value 111111111</p></td></tr></tbody></table></div></div><br class="table-break" /></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_teledongle_serial_packet_format"></a>4. TeleDongle serial packet format</h2></div></div></div><p>TeleDongle does not do any interpretation of the packet data,
+rate is half of the raw transmitted bit rate.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 25. Error Correction</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error Correction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convolutional coding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1/2 rate, constraint length m=4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interleaving</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 x 4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduce effect of noise burst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Whitening</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XOR with 9-bit PNR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rotate right with bit 8 = bit 0 xor bit 5, initial value 111111111</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_teledongle_serial_packet_format">4. TeleDongle serial packet format</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TeleDongle does not do any interpretation of the packet data,
 instead it is configured to receive packets of a specified
 length (32 bytes in this case). For each received packet,
 TeleDongle produces a single line of text. This line starts with
 the string "TELEM " and is followed by a list of hexadecimal
-encoded bytes.</p><pre class="literallayout">TELEM 224f01080b05765e00701f1a1bbeb8d7b60b070605140c000600000000000000003fa988</pre><p>The hexadecimal encoded string of bytes contains a length byte,
+encoded bytes.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>TELEM 224f01080b05765e00701f1a1bbeb8d7b60b070605140c000600000000000000003fa988</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The hexadecimal encoded string of bytes contains a length byte,
 the packet data, two bytes added by the cc1111 radio receiver
 hardware and finally a checksum so that the host software can
-validate that the line was transmitted without any errors.</p><div class="table"><a id="idm1603"></a><p class="title"><strong>Table 26. TeleDongle serial Packet Format</strong></p><div class="table-contents"><table class="table" summary="TeleDongle serial Packet Format" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Example</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>length</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>22</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Total length of data bytes in the line. Note that
-this includes the added RSSI and status bytes</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>1 ·· length-3</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>packet</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>4f ·· 00</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Bytes of actual packet data</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>length-2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>rssi</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>3f</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Received signal strength. dBm = rssi / 2 - 74</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>length-1</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>lqi</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>a9</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Link Quality Indicator and CRC status. Bit 7
-is set when the CRC is correct</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>length</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>checksum</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>88</p></td><td style="" align="left" valign="top"><p>(0x5a + sum(bytes 1 ·· length-1)) % 256</p></td></tr></tbody></table></div></div><br class="table-break" /></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_history_and_motivation"></a>5. History and Motivation</h2></div></div></div><p>The original AltoOS telemetry mechanism encoded everything
+validate that the line was transmitted without any errors.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 26. TeleDongle serial Packet Format</caption>
+<colgroup>
+<col style="width: 22.2222%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 55.5556%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Offset</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total length of data bytes in the line. Note that
+this includes the added RSSI and status bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 ·· length-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4f ·· 00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bytes of actual packet data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rssi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3f</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Received signal strength. dBm = rssi / 2 - 74</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lqi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link Quality Indicator and CRC status. Bit 7
+is set when the CRC is correct</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">length</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">checksum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">88</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(0x5a + sum(bytes 1 ·· length-1)) % 256</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_history_and_motivation">5. History and Motivation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The original AltoOS telemetry mechanism encoded everything
 available piece of information on the TeleMetrum hardware into a
 single unified packet. Initially, the packets contained very
 little data—some raw sensor readings along with the current GPS
@@ -119,15 +1568,33 @@ coordinates when a GPS receiver was connected. Over time, the
 amount of data grew to include sensor calibration data, GPS
 satellite information and a host of internal state information
 designed to help diagnose flight failures in case of a loss of
-the on-board flight data.</p><p>Because every packet contained all of the data, packets were
+the on-board flight data.</p>
+</div>
+<div class="paragraph">
+<p>Because every packet contained all of the data, packets were
 huge—95 bytes long. Much of the information was also specific to
 the TeleMetrum hardware. With the introduction of the TeleMini
 flight computer, most of the data contained in the telemetry
 packets was unavailable. Initially, a shorter, but still
 comprehensive packet was implemented. This required that the
 ground station be pre-configured as to which kind of packet to
-expect.</p><p>The development of several companion boards also made the
+expect.</p>
+</div>
+<div class="paragraph">
+<p>The development of several companion boards also made the
 shortcomings evident—each companion board would want to include
 telemetry data in the radio link; with the original design, the
 packet would have to hold the new data as well, requiring
-additional TeleMetrum and ground station changes.</p></div></div></body></html>
+additional TeleMetrum and ground station changes.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version v1.8.7<br>
+Last updated 2019-01-03 00:31:56 -0700
+</div>
+</div>
+</body>
+</html>

@@ -1,79 +1,388 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>AltOS Companion Port</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm1"></a>AltOS Companion Port</h2></div><div><h3 class="subtitle"><em>Protocol Definitions</em></h3></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3><code class="email">&lt;<a class="email" href="mailto:keithp@keithp.com">keithp@keithp.com</a>&gt;</code></div></div><div><p class="copyright">Copyright © 2012 Keith Packard</p></div><div><div class="legalnotice"><a id="idm13"></a><p>
-    This document is released under the terms of the
-    <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
-      Creative Commons ShareAlike 3.0
-    </a>
-    license.
-  </p></div></div><div><a href="companion-revhistory.html">Revision History</a></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#_companion_port">1. Companion Port</a></span></dt><dt><span class="section"><a href="#_companion_spi_protocol">2. Companion SPI Protocol</a></span></dt><dt><span class="section"><a href="#_spi_message_formats">3. SPI Message Formats</a></span></dt><dd><dl><dt><span class="section"><a href="#_setup_reply_message">3.1. SETUP reply message</a></span></dt><dt><span class="section"><a href="#_fetch_reply_message">3.2. FETCH reply message</a></span></dt></dl></dd><dt><span class="section"><a href="#_history_and_motivation">4. History and Motivation</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_companion_port"></a>1. Companion Port</h2></div></div></div><p>Many Altus Metrum products come with an eight pin Micro MaTch
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="author" content="Keith Packard, Bdale Garbee">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2018">
+<title>AltOS Companion Port</title>
+<link rel="stylesheet" href="./am.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>AltOS Companion Port</h1>
+<div class="details">
+<span id="author" class="author">Keith Packard</span><br>
+<span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
+<span id="author2" class="author">Bdale Garbee</span><br>
+<span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_license">License</a></li>
+<li><a href="#_companion_port">Companion Port</a></li>
+<li><a href="#_companion_spi_protocol">Companion SPI Protocol</a></li>
+<li><a href="#_spi_message_formats">SPI Message Formats</a>
+<ul class="sectlevel2">
+<li><a href="#_setup_reply_message">SETUP reply message</a></li>
+<li><a href="#_fetch_reply_message">FETCH reply message</a></li>
+</ul>
+</li>
+<li><a href="#_history_and_motivation">History and Motivation</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div id="logo" class="imageblock">
+<div class="content">
+<a class="image" href="https://altusmetrum.org"><img src="altusmetrum-oneline.svg" alt="Altus Metrum"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copyright © 2018 Bdale Garbee and Keith Packard</p>
+</div>
+<div class="paragraph">
+<p>This document is released under the terms of the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons ShareAlike 3.0 License</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_companion_port">Companion Port</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many Altus Metrum products come with an eight pin Micro MaTch
 connector, called the Companion Port. This is often used to
 program devices using a programming cable. However, it can
 also be used to connect TeleMetrum to external companion
-boards (hence the name).</p><p>The Companion Port provides two different functions:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Power. Both battery-level and 3.3V regulated power are
+boards (hence the name).</p>
+</div>
+<div class="paragraph">
+<p>The Companion Port provides two different functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Power. Both battery-level and 3.3V regulated power are
 available. Note that the amount of regulated power is not
 huge; TeleMetrum contains a 150mA regulator and uses, at
 peak, about 120mA or so. For applications needing more than
 a few dozen mA, placing a separate regulator on them and
-using the battery for power is probably a good idea.
-</li><li class="listitem">
-SPI. The flight computer operates as a SPI master, using
+using the battery for power is probably a good idea.</p>
+</li>
+<li>
+<p>SPI. The flight computer operates as a SPI master, using
 a protocol defined in this document. Companion boards
 provide a matching SPI slave implementation which supplies
-telemetry information for the radio downlink during flight
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_companion_spi_protocol"></a>2. Companion SPI Protocol</h2></div></div></div><p>The flight computer implements a SPI master communications
+telemetry information for the radio downlink during flight</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_companion_spi_protocol">Companion SPI Protocol</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The flight computer implements a SPI master communications
 channel over the companion port, and uses this to get
 information about a connected companion board and then to get
-telemetry data for transmission during flight.</p><p>At startup time, the flight computer sends a setup request
+telemetry data for transmission during flight.</p>
+</div>
+<div class="paragraph">
+<p>At startup time, the flight computer sends a setup request
 packet, and the companion board returns a board identifier,
 the desired telemetry update period and the number of data
-channels provided. The flight computer doesn’t interpret the
+channels provided. The flight computer doesn&#8217;t interpret the
 telemetry data at all, simply packing it up and sending it
 over the link.  Telemetry packets are 32 bytes long, and
 companion packets use 8 bytes as a header leaving room for a
-maximum of 12 16-bit data values.</p><p>Because of the limits of the AVR processors used in the first
-two companion boards, the SPI data rate is set to 187.5kbaud.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_spi_message_formats"></a>3. SPI Message Formats</h2></div></div></div><p>This section first defines the command message format sent from
+maximum of 12 16-bit data values.</p>
+</div>
+<div class="paragraph">
+<p>Because of the limits of the AVR processors used in the first
+two companion boards, the SPI data rate is set to 187.5kbaud.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spi_message_formats">SPI Message Formats</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section first defines the command message format sent from
 the flight computer to the companion board, and then the various
-reply message formats for each type of command message.</p><div class="table"><a id="idm38"></a><p class="title"><strong>Table 1. Companion Command Message</strong></p><div class="table-contents"><table class="table" summary="Companion Command Message" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>command</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Command identifier</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>1</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>flight_state</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Current flight computer state</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>tick</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight computer clock (100 ticks/second)</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>4</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>serial</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight computer serial number</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>flight</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Flight number</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>8</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p></p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p></p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /><div class="table"><a id="idm109"></a><p class="title"><strong>Table 2. Companion Command Identifiers</strong></p><div class="table-contents"><table class="table" summary="Companion Command Identifiers" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Value</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>1</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>SETUP</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Supply the flight computer with companion
-information</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>FETCH</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Return telemetry information</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>3</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>NOTIFY</p></td><td style="" align="left" valign="top"><p>Tell companion board when flight state changes</p></td></tr></tbody></table></div></div><br class="table-break" /><p>The flight computer will send a SETUP message shortly after
+reply message formats for each type of command message.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Companion Command Message</caption>
+<colgroup>
+<col style="width: 6.25%;">
+<col style="width: 18.75%;">
+<col style="width: 18.75%;">
+<col style="width: 56.25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">command</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Command identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flight_state</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current flight computer state</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight computer clock (100 ticks/second)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">serial</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight computer serial number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flight</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Companion Command Identifiers</caption>
+<colgroup>
+<col style="width: 7.6923%;">
+<col style="width: 23.0769%;">
+<col style="width: 69.2308%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SETUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supply the flight computer with companion
+information</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FETCH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return telemetry information</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NOTIFY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tell companion board when flight state changes</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The flight computer will send a SETUP message shortly after
 power-up and will then send FETCH messages no more often than
 the rate specified in the SETUP reply. NOTIFY messages will be
-sent whenever the flight state changes.</p><p><span class="emphasis"><em>flight_state</em></span> records the current state of the flight,
+sent whenever the flight state changes.</p>
+</div>
+<div class="paragraph">
+<p>'flight_state' records the current state of the flight,
 whether on the pad, under power, coasting to apogee or
-descending on the drogue or main chute.</p><p><span class="emphasis"><em>tick</em></span> provides the current flight computer clock, which
+descending on the drogue or main chute.</p>
+</div>
+<div class="paragraph">
+<p>'tick' provides the current flight computer clock, which
 be used to synchronize data recorded on the flight computer
-with that recorded on the companion board in post-flight analysis.</p><p><span class="emphasis"><em>serial</em></span> is the product serial number of the flight computer,
-<span class="emphasis"><em>flight</em></span> is the flight sequence number. Together, these two
+with that recorded on the companion board in post-flight analysis.</p>
+</div>
+<div class="paragraph">
+<p>'serial' is the product serial number of the flight computer,
+'flight' is the flight sequence number. Together, these two
 uniquely identify the flight and can be recorded with any
 companion board data logging to associate the companion data
-with the proper flight.</p><p>NOTIFY commands require no reply at all, they are used solely
+with the proper flight.</p>
+</div>
+<div class="paragraph">
+<p>NOTIFY commands require no reply at all, they are used solely
 to inform the companion board when the state of the flight, as
 computed by the flight computer, changes. Companion boards can
 use this to change data collection parameters, disabling data
 logging until the flight starts and terminating it when the
-flight ends.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_setup_reply_message"></a>3.1. SETUP reply message</h3></div></div></div><div class="table"><a id="idm155"></a><p class="title"><strong>Table 3. SETUP reply contents</strong></p><div class="table-contents"><table class="table" summary="SETUP reply contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>board_id</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Board identifier</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>board_id_inverse</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>~board_id—used to tell if a board is present</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>4</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>update_period</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Minimum time (in 100Hz ticks) between FETCH commands</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>5</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint8_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>channels</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Number of data channels to retrieve in FETCH command</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p></p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p></p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /><p>The SETUP reply contains enough information to uniquely
+flight ends.</p>
+</div>
+<div class="sect2">
+<h3 id="_setup_reply_message">SETUP reply message</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. SETUP reply contents</caption>
+<colgroup>
+<col style="width: 6.25%;">
+<col style="width: 18.75%;">
+<col style="width: 18.75%;">
+<col style="width: 56.25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">board_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Board identifier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">board_id_inverse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">~board_id—used to tell if a board is present</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">update_period</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum time (in 100Hz ticks) between FETCH commands</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">channels</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of data channels to retrieve in FETCH command</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The SETUP reply contains enough information to uniquely
 identify the companion board to the end user as well as for
 the flight computer to know how many data values to expect in
-reply to a FETCH command, and how often to fetch that data.</p><p>To detect the presence of a companion board, the flight
+reply to a FETCH command, and how often to fetch that data.</p>
+</div>
+<div class="paragraph">
+<p>To detect the presence of a companion board, the flight
 computer checks to make sure that board_id_inverse is the
 bit-wise inverse of board_id. Current companion boards use
 USB product ID as the board_id, but the flight computer does
-not interpret this data and so it can be any value.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_fetch_reply_message"></a>3.2. FETCH reply message</h3></div></div></div><div class="table"><a id="idm221"></a><p class="title"><strong>Table 4. FETCH reply contents</strong></p><div class="table-contents"><table class="table" summary="FETCH reply contents" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /><col class="col_4" /></colgroup><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Offset</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Data Type</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Name</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Description</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>data0</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>0th data item</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>uint16_t</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>data1</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>1st data item</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>…</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p></p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p></p></td><td style="" align="left" valign="top"><p></p></td></tr></tbody></table></div></div><br class="table-break" /><p>The FETCH reply contains arbitrary data to be reported
+not interpret this data and so it can be any value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fetch_reply_message">FETCH reply message</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. FETCH reply contents</caption>
+<colgroup>
+<col style="width: 6.25%;">
+<col style="width: 18.75%;">
+<col style="width: 18.75%;">
+<col style="width: 56.25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0th data item</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint16_t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1st data item</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The FETCH reply contains arbitrary data to be reported
 over the flight computer telemetry link. The number of
-16-bit data items must match the <span class="emphasis"><em>channels</em></span> value
-provided in the SETUP reply message.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_history_and_motivation"></a>4. History and Motivation</h2></div></div></div><p>To allow cross-programming, the original TeleMetrum and
+16-bit data items must match the 'channels' value
+provided in the SETUP reply message.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_history_and_motivation">History and Motivation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To allow cross-programming, the original TeleMetrum and
 TeleDongle designs needed to include some kind of
 connector. With that in place, adding the ability to connect
 external cards to TeleMetrum was fairly simple. We set the
 software piece of this puzzle aside until we had a companion
-board to use.</p><p>The first companion board was TeleScience. Designed to collect
+board to use.</p>
+</div>
+<div class="paragraph">
+<p>The first companion board was TeleScience. Designed to collect
 temperature data from the nose and fin of the airframe, the main
 requirement for the companion port was that it be able to report
 telemetry data during flight as a back-up in case the
-TeleScience on-board data was lost.</p><p>The second companion board, TelePyro, provides 8 additional
+TeleScience on-board data was lost.</p>
+</div>
+<div class="paragraph">
+<p>The second companion board, TelePyro, provides 8 additional
 channels for deployment, staging or other activities. To avoid
 re-programming the TeleMetrum to use TelePyro, we decided to
 provide enough information over the companion link for it to
-independently control those channels.</p><p>Providing a standard, constant interface between the flight
+independently control those channels.</p>
+</div>
+<div class="paragraph">
+<p>Providing a standard, constant interface between the flight
 computer and companion boards allows for the base flight
-computer firmware to include support for companion boards.</p></div></div></body></html>
+computer firmware to include support for companion boards.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-01-03 00:31:56 -0700
+</div>
+</div>
+</body>
+</html>

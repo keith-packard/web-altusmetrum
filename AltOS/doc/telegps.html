@@ -1,73 +1,265 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>TeleGPS Owner’s Manual</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div xml:lang="en" class="book" lang="en"><div class="titlepage"><div><div><h1 class="title"><a id="idm1"></a>TeleGPS Owner’s Manual</h1></div><div><h2 class="subtitle">An Owner's Manual for the TeleGPS recording GPS tracker</h2></div><div><h3 class="corpauthor">
-  <span class="inlinemediaobject"><img src="telegps-oneline.svg" width="270" /></span>
-</h3></div><div><div class="author"><h3 class="author"><span class="firstname">Bdale</span> <span class="surname">Garbee</span></h3><code class="email">&lt;<a class="email" href="mailto:bdale@gag.com">bdale@gag.com</a>&gt;</code></div></div><div><div class="author"><h3 class="author"><span class="firstname">Keith</span> <span class="surname">Packard</span></h3><code class="email">&lt;<a class="email" href="mailto:keithp@keithp.com">keithp@keithp.com</a>&gt;</code></div></div><div><p class="copyright">Copyright © 2018 Bdale Garbee and Keith Packard</p></div><div><div class="legalnotice"><a id="idm23"></a><p>
-    This document is released under the terms of the
-    <a class="ulink" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_top">
-      Creative Commons ShareAlike 3.0
-    </a>
-    license.
-  </p></div></div><div><a href="telegps-revhistory.html">Revision History</a></div></div><hr /></div><div class="dedication"><div class="titlepage"><div><div><h1 class="title"><a id="_acknowledgments"></a>Acknowledgments</h1></div></div></div><p>Thanks to Anthony (AJ) Towns for major contributions including
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="author" content="Keith Packard, Bdale Garbee">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2018">
+<title>TeleGPS Owner&#8217;s Manual</title>
+<link rel="stylesheet" href="./am.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>TeleGPS Owner&#8217;s Manual</h1>
+<div class="details">
+<span id="author" class="author">Keith Packard</span><br>
+<span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
+<span id="author2" class="author">Bdale Garbee</span><br>
+<span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
+<span id="revnumber">version v1.8.7,</span>
+<span id="revdate">8 Oct 2018</span>
+<br><span id="revremark">Fix TeleBT v4.0 RF calibration to factory value when reflashing. Fix map images. Fix Mac OS X support.</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_license">License</a></li>
+<li><a href="#_acknowledgments">Acknowledgments</a></li>
+<li><a href="#_telegps_quick_start_guide">1. TeleGPS Quick Start Guide</a></li>
+<li><a href="#_using_telegps_hardware">2. Using TeleGPS Hardware</a>
+<ul class="sectlevel2">
+<li><a href="#_hooking_up_lithium_polymer_batteries">2.1. Hooking Up Lithium Polymer Batteries</a></li>
+<li><a href="#_on_board_data_recording">2.2. On-board Data Recording</a></li>
+<li><a href="#_installation">2.3. Installation</a></li>
+</ul>
+</li>
+<li><a href="#_telegps_application">3. TeleGPS Application</a>
+<ul class="sectlevel2">
+<li><a href="#_telemetry_monitoring">3.1. Telemetry Monitoring</a></li>
+<li><a href="#_telegps_menus">3.2. TeleGPS Menus</a></li>
+<li><a href="#_graph_data">3.3. Graph Data</a></li>
+<li><a href="#_export_data">3.4. Export Data</a></li>
+<li><a href="#_load_maps">3.5. Load Maps</a></li>
+<li><a href="#_preferences">3.6. Preferences</a></li>
+<li><a href="#_close">3.7. Close</a></li>
+<li><a href="#_exit">3.8. Exit</a></li>
+<li><a href="#_connect_device">3.9. Connect Device</a></li>
+<li><a href="#_disconnect">3.10. Disconnect</a></li>
+<li><a href="#_scan_channels">3.11. Scan Channels</a></li>
+<li><a href="#_download_data">3.12. Download Data</a></li>
+<li><a href="#_configure_device">3.13. Configure Device</a></li>
+<li><a href="#_flash_device">3.14. Flash Device</a></li>
+</ul>
+</li>
+<li><a href="#_telegps_system_operation">Appendix A: TeleGPS System Operation</a>
+<ul class="sectlevel2">
+<li><a href="#_gfsk_telemetry">A.1. GFSK Telemetry</a></li>
+<li><a href="#_aprs">A.2. APRS</a></li>
+<li><a href="#_configurable_parameters">A.3. Configurable Parameters</a></li>
+</ul>
+</li>
+<li><a href="#_handling_precautions">Appendix B: Handling Precautions</a></li>
+<li><a href="#_technical_information">Appendix C: Technical Information</a>
+<ul class="sectlevel2">
+<li><a href="#_gps_receiver">C.1. GPS Receiver</a></li>
+<li><a href="#_70cm_transmitter">C.2. 70cm Transmitter</a></li>
+<li><a href="#_micro_controller">C.3. Micro-controller</a></li>
+<li><a href="#_lithium_polymer_battery">C.4. Lithium Polymer Battery</a></li>
+<li><a href="#_mechanical_considerations">C.5. Mechanical Considerations</a></li>
+<li><a href="#_on_board_data_storage">C.6. On-board data storage</a></li>
+</ul>
+</li>
+<li><a href="#_updating_device_firmware">Appendix D: Updating Device Firmware</a>
+<ul class="sectlevel2">
+<li><a href="#_updating_telegps_firmware">D.1. Updating TeleGPS Firmware</a></li>
+</ul>
+</li>
+<li><a href="#_release_notes">Appendix E: Release Notes</a>
+<ul class="sectlevel2">
+<li><a href="#_release_notes_for_version_1_8_6">E.1. Release Notes for Version 1.8.6</a></li>
+<li><a href="#_release_notes_for_version_1_8_5">E.2. Release Notes for Version 1.8.5</a></li>
+<li><a href="#_release_notes_for_version_1_8_4">E.3. Release Notes for Version 1.8.4</a></li>
+<li><a href="#_release_notes_for_version_1_8_3">E.4. Release Notes for Version 1.8.3</a></li>
+<li><a href="#_release_notes_for_version_1_8_2">E.5. Release Notes for Version 1.8.2</a></li>
+<li><a href="#_release_notes_for_version_1_8_1">E.6. Release Notes for Version 1.8.1</a></li>
+<li><a href="#_release_notes_for_version_1_8">E.7. Release Notes for Version 1.8</a></li>
+<li><a href="#_release_notes_for_version_1_7">E.8. Release Notes for Version 1.7</a></li>
+<li><a href="#_release_notes_for_version_1_6_8">E.9. Release Notes for Version 1.6.8</a></li>
+<li><a href="#_release_notes_for_version_1_6_5">E.10. Release Notes for Version 1.6.5</a></li>
+<li><a href="#_release_notes_for_version_1_6_4">E.11. Release Notes for Version 1.6.4</a></li>
+<li><a href="#_release_notes_for_version_1_6_3">E.12. Release Notes for Version 1.6.3</a></li>
+<li><a href="#_release_notes_for_version_1_6_2">E.13. Release Notes for Version 1.6.2</a></li>
+<li><a href="#_release_notes_for_version_1_6_1">E.14. Release Notes for Version 1.6.1</a></li>
+<li><a href="#_release_notes_for_version_1_6">E.15. Release Notes for Version 1.6</a></li>
+<li><a href="#_release_notes_for_version_1_5">E.16. Release Notes for Version 1.5</a></li>
+<li><a href="#_release_notes_for_version_1_4_2">E.17. Release Notes for Version 1.4.2</a></li>
+<li><a href="#_release_notes_for_version_1_4_1">E.18. Release Notes for Version 1.4.1</a></li>
+<li><a href="#_release_notes_for_version_1_4">E.19. Release Notes for Version 1.4</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div id="logo" class="imageblock">
+<div class="content">
+<a class="image" href="https://altusmetrum.org"><img src="altusmetrum-oneline.svg" alt="Altus Metrum"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copyright © 2018 Bdale Garbee and Keith Packard</p>
+</div>
+<div class="paragraph">
+<p>This document is released under the terms of the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons ShareAlike 3.0 License</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acknowledgments">Acknowledgments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Thanks to Anthony (AJ) Towns for major contributions including
 the TeleGPS graphing and site map code and associated documentation.
 Free software means that our customers and friends can become our
 collaborators, and we certainly appreciate this level of
-contribution!</p><p>Have fun using these products, and we hope to meet all of you
-out on the rocket flight line somewhere.</p><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p>Bdale Garbee, KB0G<br />
-NAR #87103, TRA #12201</p></div></blockquote></div><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p>Keith Packard, KD7SQG<br />
-NAR #88757, TRA #12200</p></div></blockquote></div></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="chapter"><a href="#_telegps_quick_start_guide">1. TeleGPS Quick Start Guide</a></span></dt><dt><span class="chapter"><a href="#_using_telegps_hardware">2. Using TeleGPS Hardware</a></span></dt><dd><dl><dt><span class="section"><a href="#_hooking_up_lithium_polymer_batteries">2.1. Hooking Up Lithium Polymer Batteries</a></span></dt><dt><span class="section"><a href="#_on_board_data_recording">2.2. On-board Data Recording</a></span></dt><dt><span class="section"><a href="#_installation">2.3. Installation</a></span></dt></dl></dd><dt><span class="chapter"><a href="#_telegps_application">3. TeleGPS Application</a></span></dt><dd><dl><dt><span class="section"><a href="#_telemetry_monitoring">3.1. Telemetry Monitoring</a></span></dt><dd><dl><dt><span class="section"><a href="#_map">3.1.1. Map</a></span></dt><dt><span class="section"><a href="#_location">3.1.2. Location</a></span></dt><dt><span class="section"><a href="#_status">3.1.3. Status</a></span></dt><dt><span class="section"><a href="#_table">3.1.4. Table</a></span></dt></dl></dd><dt><span class="section"><a href="#_telegps_menus">3.2. TeleGPS Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#_new_window">3.2.1. New Window</a></span></dt></dl></dd><dt><span class="section"><a href="#_graph_data">3.3. Graph Data</a></span></dt><dd><dl><dt><span class="section"><a href="#_data_graph">3.3.1. Data Graph</a></span></dt><dt><span class="section"><a href="#_graph_configuration">3.3.2. Graph Configuration</a></span></dt><dt><span class="section"><a href="#_statistics">3.3.3. Statistics</a></span></dt><dt><span class="section"><a href="#_map_2">3.3.4. Map</a></span></dt></dl></dd><dt><span class="section"><a href="#_export_data">3.4. Export Data</a></span></dt><dd><dl><dt><span class="section"><a href="#_comma_separated_value_format">3.4.1. Comma Separated Value Format</a></span></dt><dt><span class="section"><a href="#_keyhole_markup_language_for_google_earth">3.4.2. Keyhole Markup Language (for Google Earth)</a></span></dt></dl></dd><dt><span class="section"><a href="#_load_maps">3.5. Load Maps</a></span></dt><dt><span class="section"><a href="#_preferences">3.6. Preferences</a></span></dt><dd><dl><dt><span class="section"><a href="#_voice_settings">3.6.1. Voice Settings</a></span></dt><dt><span class="section"><a href="#_log_directory">3.6.2. Log Directory</a></span></dt><dt><span class="section"><a href="#_callsign">3.6.3. Callsign</a></span></dt><dt><span class="section"><a href="#_imperial_units">3.6.4. Imperial Units</a></span></dt><dt><span class="section"><a href="#_serial_debug">3.6.5. Serial Debug</a></span></dt><dt><span class="section"><a href="#_font_size">3.6.6. Font size</a></span></dt><dt><span class="section"><a href="#_look_amp_feel">3.6.7. Look &amp; feel</a></span></dt><dt><span class="section"><a href="#_menu_position">3.6.8. Menu position</a></span></dt><dt><span class="section"><a href="#_map_cache_size">3.6.9. Map Cache Size</a></span></dt><dt><span class="section"><a href="#_manage_frequencies">3.6.10. Manage Frequencies</a></span></dt></dl></dd><dt><span class="section"><a href="#_close">3.7. Close</a></span></dt><dt><span class="section"><a href="#_exit">3.8. Exit</a></span></dt><dt><span class="section"><a href="#_connect_device">3.9. Connect Device</a></span></dt><dt><span class="section"><a href="#_disconnect">3.10. Disconnect</a></span></dt><dt><span class="section"><a href="#_scan_channels">3.11. Scan Channels</a></span></dt><dt><span class="section"><a href="#_download_data">3.12. Download Data</a></span></dt><dt><span class="section"><a href="#_configure_device">3.13. Configure Device</a></span></dt><dd><dl><dt><span class="section"><a href="#_frequency">3.13.1. Frequency</a></span></dt><dt><span class="section"><a href="#_rf_calibration">3.13.2. RF Calibration</a></span></dt><dt><span class="section"><a href="#_telemetry_rdf_aprs_enable">3.13.3. Telemetry/RDF/APRS Enable</a></span></dt><dt><span class="section"><a href="#_telemetry_baud_rate">3.13.4. Telemetry baud rate</a></span></dt><dt><span class="section"><a href="#_aprs_interval">3.13.5. APRS Interval</a></span></dt><dt><span class="section"><a href="#_aprs_ssid">3.13.6. APRS SSID</a></span></dt><dt><span class="section"><a href="#_aprs_format">3.13.7. APRS Format</a></span></dt><dt><span class="section"><a href="#_callsign_2">3.13.8. Callsign</a></span></dt><dt><span class="section"><a href="#_logging_trigger_motion">3.13.9. Logging Trigger Motion</a></span></dt><dt><span class="section"><a href="#_position_reporting_interval">3.13.10. Position Reporting Interval</a></span></dt></dl></dd><dt><span class="section"><a href="#_flash_device">3.14. Flash Device</a></span></dt></dl></dd><dt><span class="appendix"><a href="#_telegps_system_operation">A. TeleGPS System Operation</a></span></dt><dd><dl><dt><span class="section"><a href="#_gfsk_telemetry">A.1. GFSK Telemetry</a></span></dt><dt><span class="section"><a href="#_aprs">A.2. APRS</a></span></dt><dt><span class="section"><a href="#_configurable_parameters">A.3. Configurable Parameters</a></span></dt></dl></dd><dt><span class="appendix"><a href="#_handling_precautions">B. Handling Precautions</a></span></dt><dt><span class="appendix"><a href="#_technical_information">C. Technical Information</a></span></dt><dd><dl><dt><span class="section"><a href="#_gps_receiver">C.1. GPS Receiver</a></span></dt><dt><span class="section"><a href="#_70cm_transmitter">C.2. 70cm Transmitter</a></span></dt><dt><span class="section"><a href="#_micro_controller">C.3. Micro-controller</a></span></dt><dt><span class="section"><a href="#_lithium_polymer_battery">C.4. Lithium Polymer Battery</a></span></dt><dt><span class="section"><a href="#_mechanical_considerations">C.5. Mechanical Considerations</a></span></dt><dt><span class="section"><a href="#_on_board_data_storage">C.6. On-board data storage</a></span></dt></dl></dd><dt><span class="appendix"><a href="#_updating_device_firmware">D. Updating Device Firmware</a></span></dt><dd><dl><dt><span class="section"><a href="#_updating_telegps_firmware">D.1. Updating TeleGPS Firmware</a></span></dt></dl></dd><dt><span class="appendix"><a href="#_release_notes">E. Release Notes</a></span></dt><dd><dl><dt><span class="section"><a href="#_release_notes_for_version_1_8_6">E.1. Release Notes for Version 1.8.6</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos">E.1.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_telegps">E.1.2. AltosUI, TeleGPS</a></span></dt><dt><span class="section"><a href="#_micropeak">E.1.3. MicroPeak</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_8_5">E.2. Release Notes for Version 1.8.5</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_2">E.2.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_telegps_2">E.2.2. AltosUI, TeleGPS</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_8_4">E.3. Release Notes for Version 1.8.4</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_3">E.3.1. AltOS</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_8_3">E.4. Release Notes for Version 1.8.3</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_4">E.4.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications">E.4.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_8_2">E.5. Release Notes for Version 1.8.2</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_5">E.5.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_2">E.5.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_8_1">E.6. Release Notes for Version 1.8.1</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_6">E.6.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_3">E.6.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_8">E.7. Release Notes for Version 1.8</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_7">E.7.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_4">E.7.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_7">E.8. Release Notes for Version 1.7</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_8">E.8.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_5">E.8.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6_8">E.9. Release Notes for Version 1.6.8</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_9">E.9.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_telegps_and_altosdroid_applications">E.9.2. AltosUI, TeleGPS and AltosDroid Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6_5">E.10. Release Notes for Version 1.6.5</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_10">E.10.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_telegps_and_altosdroid_applications_2">E.10.2. AltosUI, TeleGPS and AltosDroid Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6_4">E.11. Release Notes for Version 1.6.4</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_11">E.11.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_telegps_and_altosdroid_applications_3">E.11.2. AltosUI, TeleGPS and AltosDroid Applications</a></span></dt><dt><span class="section"><a href="#_documentation">E.11.3. Documentation</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6_3">E.12. Release Notes for Version 1.6.3</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_12">E.12.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_6">E.12.2. AltosUI and TeleGPS Applications</a></span></dt><dt><span class="section"><a href="#_altosdroid">E.12.3. AltosDroid</a></span></dt><dt><span class="section"><a href="#_documentation_2">E.12.4. Documentation</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6_2">E.13. Release Notes for Version 1.6.2</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_13">E.13.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_7">E.13.2. AltosUI and TeleGPS Applications</a></span></dt><dt><span class="section"><a href="#_documentation_3">E.13.3. Documentation</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6_1">E.14. Release Notes for Version 1.6.1</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_14">E.14.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_8">E.14.2. AltosUI and TeleGPS Applications</a></span></dt><dt><span class="section"><a href="#_altosdroid_2">E.14.3. AltosDroid</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_6">E.15. Release Notes for Version 1.6</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_15">E.15.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_9">E.15.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_5">E.16. Release Notes for Version 1.5</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_16">E.16.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_and_telegps_applications_10">E.16.2. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_4_2">E.17. Release Notes for Version 1.4.2</a></span></dt><dd><dl><dt><span class="section"><a href="#_altosui_and_telegps_applications_11">E.17.1. AltosUI and TeleGPS Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_4_1">E.18. Release Notes for Version 1.4.1</a></span></dt><dd><dl><dt><span class="section"><a href="#_altosui_and_telegps_applications_12">E.18.1. AltosUI and TeleGPS Applications:</a></span></dt></dl></dd><dt><span class="section"><a href="#_release_notes_for_version_1_4">E.19. Release Notes for Version 1.4</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_17">E.19.1. AltOS</a></span></dt><dt><span class="section"><a href="#_altosui_application">E.19.2. AltosUI Application</a></span></dt><dt><span class="section"><a href="#_telegps_application_2">E.19.3. TeleGPS Application</a></span></dt><dt><span class="section"><a href="#_documentation_4">E.19.4. Documentation</a></span></dt></dl></dd></dl></dd></dl></div><div class="list-of-figures"><p><strong>List of Figures</strong></p><dl><dt>3.1. <a href="#idm133">TeleGPS Map View</a></dt><dt>3.2. <a href="#idm148">TeleGPS Location View</a></dt><dt>3.3. <a href="#idm158">TeleGPS Status View</a></dt><dt>3.4. <a href="#idm168">TeleGPS Information Table</a></dt><dt>3.5. <a href="#idm203">TeleGPS Graph</a></dt><dt>3.6. <a href="#idm212">TeleGPS Graph Configuration</a></dt><dt>3.7. <a href="#idm222">TeleGPS Statistics</a></dt><dt>3.8. <a href="#idm232">TeleGPS Map</a></dt><dt>3.9. <a href="#idm253">Load Maps Window</a></dt><dt>3.10. <a href="#idm286">TeleGPS Preferences Window</a></dt><dt>3.11. <a href="#idm345">Device Selection Dialog</a></dt><dt>3.12. <a href="#idm357">Radio Scanning Dialog</a></dt><dt>3.13. <a href="#idm375">TeleGPS Configuration Dialog</a></dt></dl></div><div class="list-of-tables"><p><strong>List of Tables</strong></p><dl><dt>A.1. <a href="#idm450">Altus Metrum APRS Comments</a></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_telegps_quick_start_guide"></a>Chapter 1. TeleGPS Quick Start Guide</h1></div></div></div><p>TeleGPS is designed to be easy to use. Requiring no external
-components, flying takes just a few steps.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
-First, download and install the software from
-<a class="ulink" href="http://altusmetrum.org/AltOS" target="_top">http://altusmetrum.org/AltOS</a>. This will make sure that
-you have the right device drivers installed.
-</li><li class="listitem">
-Next, plug in the battery and USB cable and connect TeleGPS to
+contribution!</p>
+</div>
+<div class="paragraph">
+<p>Have fun using these products, and we hope to meet all of you
+out on the rocket flight line somewhere.</p>
+</div>
+<div class="verseblock">
+<pre class="content">Bdale Garbee, KB0G
+NAR #87103, TRA #12201</pre>
+</div>
+<div class="verseblock">
+<pre class="content">Keith Packard, KD7SQG
+NAR #88757, TRA #12200</pre>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_telegps_quick_start_guide">1. TeleGPS Quick Start Guide</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TeleGPS is designed to be easy to use. Requiring no external
+components, flying takes just a few steps.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, download and install the software from
+<a href="http://altusmetrum.org/AltOS" class="bare">http://altusmetrum.org/AltOS</a>. This will make sure that
+you have the right device drivers installed.</p>
+</li>
+<li>
+<p>Next, plug in the battery and USB cable and connect TeleGPS to
 your computer. This will charge the battery and allow you to
-configure the device.
-</li><li class="listitem">
-Start the TeleGPS application and set the callsign and frequency
-on your TeleGPS device; refer to <a class="xref" href="#_configure_device" title="3.13. Configure Device">Section 3.13, “Configure Device”</a> for instructions.
-</li><li class="listitem">
-Unplug TeleGPS when the battery charger light goes green. This
+configure the device.</p>
+</li>
+<li>
+<p>Start the TeleGPS application and set the callsign and frequency
+on your TeleGPS device; refer to <a href="#_configure_device">Configure Device</a> for instructions.</p>
+</li>
+<li>
+<p>Unplug TeleGPS when the battery charger light goes green. This
 will enable the radio and logging portions of the TeleGPS
-firmware.
-</li><li class="listitem">
-Connect TeleDongle to your computer and start TeleGPS or start
+firmware.</p>
+</li>
+<li>
+<p>Connect TeleDongle to your computer and start TeleGPS or start
 AltosDroid on your android device and connect to TeleBT. Set the
-frequency to match the TeleGPS and you should be receiving telemetry.
-</li></ol></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_using_telegps_hardware"></a>Chapter 2. Using TeleGPS Hardware</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_hooking_up_lithium_polymer_batteries"></a>2.1. Hooking Up Lithium Polymer Batteries</h2></div></div></div><p>TeleGPS has a two pin JST PH series connector to connect up
+frequency to match the TeleGPS and you should be receiving telemetry.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_telegps_hardware">2. Using TeleGPS Hardware</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hooking_up_lithium_polymer_batteries">2.1. Hooking Up Lithium Polymer Batteries</h3>
+<div class="paragraph">
+<p>TeleGPS has a two pin JST PH series connector to connect up
 a single-cell Lithium Polymer cell (3.7V nominal). You can
 purchase matching batteries from the Altus Metrum store, or
 other vendors, or you can make your own. Pin 1 of the
 connector is positive, pin 2 is negative. Spark Fun sells a
 cable with the connector attached, which they call a
-<a class="ulink" href="https://www.sparkfun.com/products/9914" target="_top">JST Jumper 2 Wire Assembly</a></p><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>Many RC vendors also sell lithium polymer batteries with
+<a href="https://www.sparkfun.com/products/9914">JST Jumper 2 Wire Assembly</a></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Many RC vendors also sell lithium polymer batteries with
 this same connector. All that we have found use the opposite
 polarity, and if you use them that way, you will damage or
-destroy TeleGPS.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_on_board_data_recording"></a>2.2. On-board Data Recording</h2></div></div></div><p>TeleGPS logs GPS data at a user-configurable
+destroy TeleGPS.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_on_board_data_recording">2.2. On-board Data Recording</h3>
+<div class="paragraph">
+<p>TeleGPS logs GPS data at a user-configurable
 rate. Data are logged to a 2MB on-board flash memory
 part, which can be partitioned into several
 equal-sized blocks, one for each flight. 64kB of this
 storage are reserved to hold configuration data,
-leaving 1984kB for flight data.</p><p>The on-board flash is partitioned into separate flight
+leaving 1984kB for flight data.</p>
+</div>
+<div class="paragraph">
+<p>The on-board flash is partitioned into separate flight
 logs, each of a fixed maximum size. Increase the
 maximum size of each log and you reduce the number of
 flights that can be stored. Decrease the size and you
-can store more flights.</p><p>To compute the amount of space needed for a single
+can store more flights.</p>
+</div>
+<div class="paragraph">
+<p>To compute the amount of space needed for a single
 log, you can divide the expected time (in seconds) by
 the sample period (by default, 1 second per sample)
 and then multiply the result by 32 bytes per
 sample. For instance, a sample period of 1 second and
 a flight lasting one hour will take 32 * 3600 = 115200
 bytes. TeleGPS does try to reduce log space used by
-not recording position information when it isn’t
+not recording position information when it isn&#8217;t
 moving, so actual space consumed may be less than
-this.</p><p>The default size allows for four flights of 496kB
+this.</p>
+</div>
+<div class="paragraph">
+<p>The default size allows for four flights of 496kB
 each, which provides over four hours of logging at 1
-sample per second.</p><p>TeleGPS will not overwrite existing flight data, so be
+sample per second.</p>
+</div>
+<div class="paragraph">
+<p>TeleGPS will not overwrite existing flight data, so be
 sure to download flight data and erase it from the
 onboard flash before it fills up. TeleGPS will still
 report telemetry even if memory is full, so the only
-thing you will lose is the on-board data log.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_installation"></a>2.3. Installation</h2></div></div></div><p>The battery connectors are a standard 2-pin JST
+thing you will lose is the on-board data log.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation">2.3. Installation</h3>
+<div class="paragraph">
+<p>The battery connectors are a standard 2-pin JST
 connector and match batteries sold by Spark Fun. These
 batteries are single-cell Lithium Polymer batteries
 that nominally provide 3.7 volts.  Other vendors sell
@@ -77,65 +269,132 @@ generally reversed from the batteries used by Altus
 Metrum products. In particular, the Tenergy batteries
 supplied for use in Featherweight flight computers are
 not compatible with Altus Metrum flight computers or
-battery chargers.</p><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>Check polarity and voltage before connecting any
+battery chargers.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Check polarity and voltage before connecting any
 battery not purchased from Altus Metrum or Spark
-Fun.</p></div><p>TeleGPS uses an integrate GPS patch antenna and won’t
+Fun.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>TeleGPS uses an integrate GPS patch antenna and won&#8217;t
 receive GPS signals if installed inside a metal or
 carbon fiber compartment. Test GPS reception and
 telemetry transmission with the system installed and
 all other electronics powered up to verify signal
-reception and make sure there isn’t any interference
-from other systems.</p></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_telegps_application"></a>Chapter 3. TeleGPS Application</h1></div></div></div><p>The TeleGPS application provides a graphical user interface for
+reception and make sure there isn&#8217;t any interference
+from other systems.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_telegps_application">3. TeleGPS Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The TeleGPS application provides a graphical user interface for
 interacting with the Altus Metrum product family. TeleGPS can
 monitor telemetry data, configure devices and many other
 tasks. The primary interface window is for displaying data
 received over the telemetry link. There are additional
-tasks available from the main window menu bar.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_telemetry_monitoring"></a>3.1. Telemetry Monitoring</h2></div></div></div><p>This is the window brought up when you start the
+tasks available from the main window menu bar.</p>
+</div>
+<div class="sect2">
+<h3 id="_telemetry_monitoring">3.1. Telemetry Monitoring</h3>
+<div class="paragraph">
+<p>This is the window brought up when you start the
 application. If you have a TeleDongle device connected
 to the computer, it will automatically be selected for
-telemetry monitoring</p><p>All telemetry data received are automatically recorded
+telemetry monitoring</p>
+</div>
+<div class="paragraph">
+<p>All telemetry data received are automatically recorded
 in suitable log files. The name of the files includes
 the current date and TeleGPS serial and flight
-numbers.</p><p>The radio frequency being monitored by the TeleDongle
+numbers.</p>
+</div>
+<div class="paragraph">
+<p>The radio frequency being monitored by the TeleDongle
 device is displayed at the top of the window. You can
 configure the frequency by clicking on the frequency
 box and selecting the desired frequency. The TeleGPS
 application remembers the last frequency selected for
 each TeleDongle and selects that automatically the
-next time you use that device.</p><p>Below the TeleDongle frequency selector, the window
+next time you use that device.</p>
+</div>
+<div class="paragraph">
+<p>Below the TeleDongle frequency selector, the window
 contains a few significant pieces of information about
-the altimeter providing the telemetry data stream:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-The configured call-sign
-</li><li class="listitem">
-The device serial number
-</li><li class="listitem">
-The flight number. TeleGPS remembers how many times
-it has flown.
-</li><li class="listitem">
-The Received Signal Strength Indicator value. This
+the altimeter providing the telemetry data stream:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The configured call-sign</p>
+</li>
+<li>
+<p>The device serial number</p>
+</li>
+<li>
+<p>The flight number. TeleGPS remembers how many times
+it has flown.</p>
+</li>
+<li>
+<p>The Received Signal Strength Indicator value. This
 lets you know how strong a signal TeleDongle is
 receiving. The radio inside TeleDongle operates down
 to about -100dBm; weaker signals may not be
 receivable. The packet link uses error detection and
 correction techniques which prevent incorrect data
-from being reported.
-</li><li class="listitem">
-The age of the displayed data, in seconds since the
+from being reported.</p>
+</li>
+<li>
+<p>The age of the displayed data, in seconds since the
 last successfully received telemetry packet.  In
 normal operation this will stay in the low single
 digits.  If the number starts counting up, then you
 are no longer receiving data over the radio link
-from the flight computer.
-</li></ul></div><p>Finally, the largest portion of the window contains a set of
+from the flight computer.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, the largest portion of the window contains a set of
 tabs, each of which contain some information about the TeleGPS
-board. The final <span class="emphasis"><em>table</em></span> tab displays many of the raw telemetry
-values in one place in a spreadsheet-like format.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_map"></a>3.1.1. Map</h3></div></div></div><p>The Map tab shows the TeleGPS track over time
+board. The final 'table' tab displays many of the raw telemetry
+values in one place in a spreadsheet-like format.</p>
+</div>
+<div class="sect3">
+<h4 id="_map">3.1.1. Map</h4>
+<div class="paragraph">
+<p>The Map tab shows the TeleGPS track over time
 on top of map data making it easy to locate
-the device.</p><div class="figure"><a id="idm133"></a><p class="title"><strong>Figure 3.1. TeleGPS Map View</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-map.png" width="495" alt="telegps-map.png" /></div></div></div><br class="figure-break" /><p>The map’s default scale is approximately 3m
+the device.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-map.png" alt="telegps map" width="400">
+</div>
+<div class="title">Figure 1. TeleGPS Map View</div>
+</div>
+<div class="paragraph">
+<p>The map&#8217;s default scale is approximately 3m
 (10ft) per pixel. The map can be dragged using
 the left mouse button. The map will attempt to
 keep the rocket roughly centered while data is
-being received.</p><p>You can adjust the style of map and the zoom
+being received.</p>
+</div>
+<div class="paragraph">
+<p>You can adjust the style of map and the zoom
 level with buttons on the right side of the
 map window. You can draw a line on the map by
 moving the mouse over the map with a button
@@ -143,55 +402,171 @@ other than the left one pressed, or by
 pressing the left button while also holding
 down the shift key. The length of the line in
 real-world units will be shown at the start of
-the line.</p><p>Images are fetched automatically via the
+the line.</p>
+</div>
+<div class="paragraph">
+<p>Images are fetched automatically via the
 Google Maps Static API, and cached on disk for
 reuse. If map images cannot be downloaded, the
-rocket’s path will be traced on a dark gray
-background instead.</p><p>You can pre-load images for your favorite
+rocket&#8217;s path will be traced on a dark gray
+background instead.</p>
+</div>
+<div class="paragraph">
+<p>You can pre-load images for your favorite
 launch sites before you leave home; check out
-<a class="xref" href="#_load_maps" title="3.5. Load Maps">Section 3.5, “Load Maps”</a>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_location"></a>3.1.2. Location</h3></div></div></div><p>The Location tab shows the raw GPS data
-received from TeleGPS.</p><div class="figure"><a id="idm148"></a><p class="title"><strong>Figure 3.2. TeleGPS Location View</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-location.png" width="495" alt="telegps-location.png" /></div></div></div><br class="figure-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_status"></a>3.1.3. Status</h3></div></div></div><p>The Status tab shows data relative to the
+<a href="#_load_maps">Load Maps</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_location">3.1.2. Location</h4>
+<div class="paragraph">
+<p>The Location tab shows the raw GPS data
+received from TeleGPS.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-location.png" alt="telegps location" width="400">
+</div>
+<div class="title">Figure 2. TeleGPS Location View</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_status">3.1.3. Status</h4>
+<div class="paragraph">
+<p>The Status tab shows data relative to the
 location of TeleGPS when the application first
-received telemetry from it.</p><div class="figure"><a id="idm158"></a><p class="title"><strong>Figure 3.3. TeleGPS Status View</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-status.png" width="495" alt="telegps-status.png" /></div></div></div><br class="figure-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_table"></a>3.1.4. Table</h3></div></div></div><p>The Table tab shows detailed information about
-the GPS receiver</p><div class="figure"><a id="idm168"></a><p class="title"><strong>Figure 3.4. TeleGPS Information Table</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-table.png" width="495" alt="telegps-table.png" /></div></div></div><br class="figure-break" /></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_telegps_menus"></a>3.2. TeleGPS Menus</h2></div></div></div><p>TeleGPS has three or four menus at the top of
-the window:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
-File
-</span></dt><dd>
-New Window, Graph Data, Export Data, Load Maps,
-Preferences, Close and Exit
-</dd><dt><span class="term">
-Monitor
-</span></dt><dd>
-Connect Device, Disconnect and Scan Channels
-</dd><dt><span class="term">
-Device
-</span></dt><dd>
-Download Data, Configure Device and Flash Device
-</dd><dt><span class="term">
-Frequency
-</span></dt><dd>
-This shows the current monitoring frequency with a
+received telemetry from it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-status.png" alt="telegps status" width="400">
+</div>
+<div class="title">Figure 3. TeleGPS Status View</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_table">3.1.4. Table</h4>
+<div class="paragraph">
+<p>The Table tab shows detailed information about
+the GPS receiver</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-table.png" alt="telegps table" width="400">
+</div>
+<div class="title">Figure 4. TeleGPS Information Table</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_telegps_menus">3.2. TeleGPS Menus</h3>
+<div class="paragraph">
+<p>TeleGPS has three or four menus at the top of
+the window:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">File</dt>
+<dd>
+<p>New Window, Graph Data, Export Data, Load Maps,
+Preferences, Close and Exit</p>
+</dd>
+<dt class="hdlist1">Monitor</dt>
+<dd>
+<p>Connect Device, Disconnect and Scan Channels</p>
+</dd>
+<dt class="hdlist1">Device</dt>
+<dd>
+<p>Download Data, Configure Device and Flash Device</p>
+</dd>
+<dt class="hdlist1">Frequency</dt>
+<dd>
+<p>This shows the current monitoring frequency with a
 drop-down menu listing other configured
 frequencies. You can change the set of frequencies
 shown here from the Preferences dialog. This menu is
 only shown when the TeleGPS application is connected
-to a TeleDongle or TeleBT device.
-</dd></dl></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_new_window"></a>3.2.1. New Window</h3></div></div></div><p>This creates another telemetry monitoring window, in case
+to a TeleDongle or TeleBT device.</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_new_window">3.2.1. New Window</h4>
+<div class="paragraph">
+<p>This creates another telemetry monitoring window, in case
 you have multiple TeleDongle devices connected to the
-computer.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_graph_data"></a>3.3. Graph Data</h2></div></div></div><p>The Graph tab shows a plot of the the GPS data
+computer.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_graph_data">3.3. Graph Data</h3>
+<div class="paragraph">
+<p>The Graph tab shows a plot of the the GPS data
 collected. The X axis is time in seconds; there are a
 variety of Y axes available for different kinds of
 data. This window also allows you to see some
 statistics computed from the data, and an overall map
-of the entire data record.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_data_graph"></a>3.3.1. Data Graph</h3></div></div></div><div class="figure"><a id="idm203"></a><p class="title"><strong>Figure 3.5. TeleGPS Graph</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-graph-graph.png" width="495" alt="telegps-graph-graph.png" /></div></div></div><br class="figure-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_graph_configuration"></a>3.3.2. Graph Configuration</h3></div></div></div><div class="figure"><a id="idm212"></a><p class="title"><strong>Figure 3.6. TeleGPS Graph Configuration</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-graph-configure.png" width="495" alt="telegps-graph-configure.png" /></div></div></div><br class="figure-break" /><p>This selects which graph elements to show, and, at the
+of the entire data record.</p>
+</div>
+<div class="sect3">
+<h4 id="_data_graph">3.3.1. Data Graph</h4>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-graph-graph.png" alt="telegps graph graph" width="400">
+</div>
+<div class="title">Figure 5. TeleGPS Graph</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_graph_configuration">3.3.2. Graph Configuration</h4>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-graph-configure.png" alt="telegps graph configure" width="400">
+</div>
+<div class="title">Figure 6. TeleGPS Graph Configuration</div>
+</div>
+<div class="paragraph">
+<p>This selects which graph elements to show, and, at the
 bottom, lets you switch between metric and imperial
-units</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_statistics"></a>3.3.3. Statistics</h3></div></div></div><div class="figure"><a id="idm222"></a><p class="title"><strong>Figure 3.7. TeleGPS Statistics</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-graph-stats.png" width="495" alt="telegps-graph-stats.png" /></div></div></div><br class="figure-break" /><p>Shows overall data computed from the flight.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_map_2"></a>3.3.4. Map</h3></div></div></div><div class="figure"><a id="idm232"></a><p class="title"><strong>Figure 3.8. TeleGPS Map</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-graph-map.png" width="540" alt="telegps-graph-map.png" /></div></div></div><br class="figure-break" /><p>Shows a map of the area overlaid with the GPS track. As with
+units</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_statistics">3.3.3. Statistics</h4>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-graph-stats.png" alt="telegps graph stats" width="400">
+</div>
+<div class="title">Figure 7. TeleGPS Statistics</div>
+</div>
+<div class="paragraph">
+<p>Shows overall data computed from the flight.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_map_2">3.3.4. Map</h4>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-graph-map.png" alt="telegps graph map" width="450">
+</div>
+<div class="title">Figure 8. TeleGPS Map</div>
+</div>
+<div class="paragraph">
+<p>Shows a map of the area overlaid with the GPS track. As with
 the telemetry monitoring window, you can select the style
 of map and zoom level using buttons along the side;
 you can scroll the map by dragging within the map pressing
 the left button and you can draw a line to measure
 distances using either the left button with the shift key,
-or any other button.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_export_data"></a>3.4. Export Data</h2></div></div></div><p>This tool takes the raw data files and makes them
+or any other button.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_data">3.4. Export Data</h3>
+<div class="paragraph">
+<p>This tool takes the raw data files and makes them
 available for external analysis. When you select this
 button, you are prompted to select a data file, which
 can be either a .eeprom or .telem.  The .eeprom files
@@ -200,61 +575,104 @@ while .telem files contain receiver signal strength
 information.  Next, a second dialog appears which is
 used to select where to write the resulting file. It
 has a selector to choose between CSV and KML file
-formats.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_comma_separated_value_format"></a>3.4.1. Comma Separated Value Format</h3></div></div></div><p>This is a text file containing the data in a
+formats.</p>
+</div>
+<div class="sect3">
+<h4 id="_comma_separated_value_format">3.4.1. Comma Separated Value Format</h4>
+<div class="paragraph">
+<p>This is a text file containing the data in a
 form suitable for import into a spreadsheet or
 other external data analysis tool. The first
 few lines of the file contain the version and
 configuration information from TeleGPS, then
 there is a single header line which labels all
 of the fields. All of these lines start with a
-<span class="emphasis"><em>#</em></span> character which many tools can be
-configured to skip over.</p><p>The remaining lines of the file contain the
+'#' character which many tools can be
+configured to skip over.</p>
+</div>
+<div class="paragraph">
+<p>The remaining lines of the file contain the
 data, with each field separated by a comma and
 at least one space. All of the sensor values
 are converted to standard units, with the
 barometric data reported in both pressure,
-altitude and height above pad units.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_keyhole_markup_language_for_google_earth"></a>3.4.2. Keyhole Markup Language (for Google Earth)</h3></div></div></div><p>This is the format used by Google Earth to provide an overlay
+altitude and height above pad units.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_keyhole_markup_language_for_google_earth">3.4.2. Keyhole Markup Language (for Google Earth)</h4>
+<div class="paragraph">
+<p>This is the format used by Google Earth to provide an overlay
 within that application. With this, you can use Google Earth to
-see the whole path in 3D.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_load_maps"></a>3.5. Load Maps</h2></div></div></div><div class="figure"><a id="idm253"></a><p class="title"><strong>Figure 3.9. Load Maps Window</strong></p><div class="figure-contents"><div class="mediaobject"><img src="load-maps.png" width="468" alt="load-maps.png" /></div></div></div><br class="figure-break" /><p>Before heading out to a new launch site, you can use
-this to load satellite images in case you don’t have
+see the whole path in 3D.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_load_maps">3.5. Load Maps</h3>
+<div class="imageblock">
+<div class="content">
+<img src="load-maps.png" alt="load maps" width="500">
+</div>
+<div class="title">Figure 9. Load Maps Window</div>
+</div>
+<div class="paragraph">
+<p>Before heading out to a new launch site, you can use
+this to load satellite images in case you don&#8217;t have
 internet connectivity at the site.  Try not to wait
-until the last minute, though, particularly if you’re
+until the last minute, though, particularly if you&#8217;re
 heading to a major launch.  If too many people are
 all trying to download map data at once, Google may
-limit access until the next day.</p><p>There’s a drop-down menu of launch sites we know
-about; if your favorites aren’t there, please let us
+limit access until the next day.</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s a drop-down menu of launch sites we know
+about; if your favorites aren&#8217;t there, please let us
 know the lat/lon and name of the site. The contents of
 this list are actually downloaded from our server at
-run-time, so as new sites are sent in, they’ll get
+run-time, so as new sites are sent in, they&#8217;ll get
 automatically added to this list.  If the launch site
-isn’t in the list, you can manually enter the lat/lon
-values</p><p>There are four different kinds of maps you can view;
+isn&#8217;t in the list, you can manually enter the lat/lon
+values</p>
+</div>
+<div class="paragraph">
+<p>There are four different kinds of maps you can view;
 you can select which to download by selecting as many
-as you like from the available types:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
-Hybrid
-</span></dt><dd>
-A combination of satellite imagery and road data. This
-is the default view.
-</dd><dt><span class="term">
-Satellite
-</span></dt><dd>
-Just the satellite imagery without any annotation.
-</dd><dt><span class="term">
-Roadmap
-</span></dt><dd>
-Roads, political boundaries and a few geographic
-features.
-</dd><dt><span class="term">
-Terrain
-</span></dt><dd>
-Contour intervals and shading that show hills and
-valleys.
-</dd></dl></div><p>You can specify the range of zoom levels to download;
+as you like from the available types:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Hybrid</dt>
+<dd>
+<p>A combination of satellite imagery and road data. This
+is the default view.</p>
+</dd>
+<dt class="hdlist1">Satellite</dt>
+<dd>
+<p>Just the satellite imagery without any annotation.</p>
+</dd>
+<dt class="hdlist1">Roadmap</dt>
+<dd>
+<p>Roads, political boundaries and a few geographic
+features.</p>
+</dd>
+<dt class="hdlist1">Terrain</dt>
+<dd>
+<p>Contour intervals and shading that show hills and
+valleys.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>You can specify the range of zoom levels to download;
 smaller numbers show more area with less
 resolution. The default level, 0, shows about
 3m/pixel. One zoom level change doubles or halves that
 number. Larger zoom levels show more detail, smaller
-zoom levels less.</p><p>The Map Radius value sets how large an area around the
+zoom levels less.</p>
+</div>
+<div class="paragraph">
+<p>The Map Radius value sets how large an area around the
 center point to download. Select a value large enough
 to cover any plausible flight from that site. Be aware
 that loading a large area with a high maximum zoom
@@ -262,91 +680,224 @@ level can attempt to download a lot of data. Loading
 hybrid maps with a 10km radius at a minimum zoom of -2
 and a maximum zoom of 2 consumes about 120MB of
 space. Terrain and road maps consume about 1/10 as
-much space as satellite or hybrid maps.</p><p>Clicking the <span class="emphasis"><em>Load Map</em></span> button will fetch images from
+much space as satellite or hybrid maps.</p>
+</div>
+<div class="paragraph">
+<p>Clicking the 'Load Map' button will fetch images from
 Google Maps; note that Google limits how many images
 you can fetch at once, so if you load more than one
 launch site, you may get some gray areas in the map
 which indicate that Google is tired of sending data to
-you. Try again later.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_preferences"></a>3.6. Preferences</h2></div></div></div><div class="figure"><a id="idm286"></a><p class="title"><strong>Figure 3.10. TeleGPS Preferences Window</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-preferences.png" width="216" alt="telegps-preferences.png" /></div></div></div><br class="figure-break" /><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_voice_settings"></a>3.6.1. Voice Settings</h3></div></div></div><p>TeleGPS provides voice announcements during
+you. Try again later.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_preferences">3.6. Preferences</h3>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-preferences.png" alt="telegps preferences" width="230">
+</div>
+<div class="title">Figure 10. TeleGPS Preferences Window</div>
+</div>
+<div class="sect3">
+<h4 id="_voice_settings">3.6.1. Voice Settings</h4>
+<div class="paragraph">
+<p>TeleGPS provides voice announcements during
 flight so that you can keep your eyes on the
 sky and still get information about the
 current flight status. However, sometimes you
-don’t want to hear them.</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
-Enable
-</span></dt><dd>
-Turns all voice announcements on and off
-</dd><dt><span class="term">
-Test Voice
-</span></dt><dd>
-Plays a short message allowing you to verify
+don&#8217;t want to hear them.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Enable</dt>
+<dd>
+<p>Turns all voice announcements on and off</p>
+</dd>
+<dt class="hdlist1">Test Voice</dt>
+<dd>
+<p>Plays a short message allowing you to verify
 that the audio system is working and the volume settings
-are reasonable
-</dd></dl></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_log_directory"></a>3.6.2. Log Directory</h3></div></div></div><p>TeleGPS logs all telemetry data and saves all
+are reasonable</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_log_directory">3.6.2. Log Directory</h4>
+<div class="paragraph">
+<p>TeleGPS logs all telemetry data and saves all
 flash data to this directory. This
 directory is also used as the staring point
 when selecting data files for display or
-export.</p><p>Click on the directory name to bring up a
+export.</p>
+</div>
+<div class="paragraph">
+<p>Click on the directory name to bring up a
 directory choosing dialog, select a new
-directory and click <span class="emphasis"><em>Select Directory</em></span> to
+directory and click 'Select Directory' to
 change where TeleGPS reads and writes data
-files.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_callsign"></a>3.6.3. Callsign</h3></div></div></div><p>This value is transmitted in each command
+files.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_callsign">3.6.3. Callsign</h4>
+<div class="paragraph">
+<p>This value is transmitted in each command
 packet sent from TeleDongle and received from
 an altimeter.  It is not used in telemetry
 mode, as the callsign configured in the
 altimeter board is included in all telemetry
 packets.  Configure this with the TeleGPS
 operators call sign as needed to comply with
-your local radio regulations.</p><p>Note that to successfully command a flight
+your local radio regulations.</p>
+</div>
+<div class="paragraph">
+<p>Note that to successfully command a flight
 computer over the radio (to configure the
 altimeter, monitor idle, or fire pyro
 charges), the callsign configured here must
 exactly match the callsign configured in the
 flight computer.  This matching is case
-sensitive.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_imperial_units"></a>3.6.4. Imperial Units</h3></div></div></div><p>This switches between metric units (meters)
+sensitive.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_imperial_units">3.6.4. Imperial Units</h4>
+<div class="paragraph">
+<p>This switches between metric units (meters)
 and imperial units (feet and miles). This
 affects the display of values use during
 flight monitoring, configuration, data
 graphing and all of the voice
 announcements. It does not change the units
 used when exporting to CSV files, those are
-always produced in metric units.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_serial_debug"></a>3.6.5. Serial Debug</h3></div></div></div><p>This causes all communication with a connected
+always produced in metric units.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_serial_debug">3.6.5. Serial Debug</h4>
+<div class="paragraph">
+<p>This causes all communication with a connected
 device to be dumped to the console from which
-TeleGPS was started. If you’ve started it from
+TeleGPS was started. If you&#8217;ve started it from
 an icon or menu entry, the output will simply
 be discarded. This mode can be useful to debug
-various serial communication issues.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_font_size"></a>3.6.6. Font size</h3></div></div></div><p>Selects the set of fonts used in the flight
+various serial communication issues.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_font_size">3.6.6. Font size</h4>
+<div class="paragraph">
+<p>Selects the set of fonts used in the flight
 monitor window. Choose between the small,
-medium and large sets.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_look_amp_feel"></a>3.6.7. Look &amp; feel</h3></div></div></div><p>Switches between the available Java user
+medium and large sets.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_look_feel">3.6.7. Look &amp; feel</h4>
+<div class="paragraph">
+<p>Switches between the available Java user
 interface appearances. The default selection
 is supposed to match the native window system
-appearance for the target platform.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_menu_position"></a>3.6.8. Menu position</h3></div></div></div><p>Selects the initial position for the main
+appearance for the target platform.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_menu_position">3.6.8. Menu position</h4>
+<div class="paragraph">
+<p>Selects the initial position for the main
 TeleGPS window that includes all of the
-command buttons.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_map_cache_size"></a>3.6.9. Map Cache Size</h3></div></div></div><p>Sets the number of map <span class="emphasis"><em>tiles</em></span> kept in memory
+command buttons.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_map_cache_size">3.6.9. Map Cache Size</h4>
+<div class="paragraph">
+<p>Sets the number of map 'tiles' kept in memory
 while the application is running. More tiles
 consume more memory, but will make panning
-around the map faster.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_manage_frequencies"></a>3.6.10. Manage Frequencies</h3></div></div></div><p>This brings up a dialog where you can
+around the map faster.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_manage_frequencies">3.6.10. Manage Frequencies</h4>
+<div class="paragraph">
+<p>This brings up a dialog where you can
 configure the set of frequencies shown in the
 various frequency menus. You can add as many
 as you like, or even reconfigure the default
 set. Changing this list does not affect the
 frequency settings of any devices, it only
 changes the set of frequencies shown in the
-menus.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_close"></a>3.7. Close</h2></div></div></div><p>This closes the current window, leaving any other windows
-open and the application running.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_exit"></a>3.8. Exit</h2></div></div></div><p>This closes all TeleGPS windows and terminates the
-application.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_connect_device"></a>3.9. Connect Device</h2></div></div></div><p>Selecting this item brings up a dialog box listing all
+menus.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_close">3.7. Close</h3>
+<div class="paragraph">
+<p>This closes the current window, leaving any other windows
+open and the application running.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exit">3.8. Exit</h3>
+<div class="paragraph">
+<p>This closes all TeleGPS windows and terminates the
+application.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connect_device">3.9. Connect Device</h3>
+<div class="paragraph">
+<p>Selecting this item brings up a dialog box listing all
 of the connected TeleDongle devices. When you choose
 one of these, AltosUI will display telemetry data as
-received by the selected TeleDongle device.</p><div class="figure"><a id="idm345"></a><p class="title"><strong>Figure 3.11. Device Selection Dialog</strong></p><div class="figure-contents"><div class="mediaobject"><img src="device-selection.png" width="279" alt="device-selection.png" /></div></div></div><br class="figure-break" /></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_disconnect"></a>3.10. Disconnect</h2></div></div></div><p>Disconnects the currently connected TeleDongle or
-TeleBT</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_scan_channels"></a>3.11. Scan Channels</h2></div></div></div><div class="figure"><a id="idm357"></a><p class="title"><strong>Figure 3.12. Radio Scanning Dialog</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-scan.png" width="279" alt="telegps-scan.png" /></div></div></div><br class="figure-break" /><p>Scans the configured set of frequencies looking for
+received by the selected TeleDongle device.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="device-selection.png" alt="device selection" width="300">
+</div>
+<div class="title">Figure 11. Device Selection Dialog</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_disconnect">3.10. Disconnect</h3>
+<div class="paragraph">
+<p>Disconnects the currently connected TeleDongle or
+TeleBT</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scan_channels">3.11. Scan Channels</h3>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-scan.png" alt="telegps scan" width="300">
+</div>
+<div class="title">Figure 12. Radio Scanning Dialog</div>
+</div>
+<div class="paragraph">
+<p>Scans the configured set of frequencies looking for
 telemetry signals. A list of all of the discovered
 signals is show; selecting one of those and clicking
-on <span class="emphasis"><em>Monitor</em></span> will select that frequency in the
-associated TeleGPS application window.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_download_data"></a>3.12. Download Data</h2></div></div></div><p>TeleGPS records data to its internal flash memory.
+on 'Monitor' will select that frequency in the
+associated TeleGPS application window.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_download_data">3.12. Download Data</h3>
+<div class="paragraph">
+<p>TeleGPS records data to its internal flash memory.
 On-board data is recorded at the same rate as
 telemetry but is not subject to radio drop-outs. As
 such, it generally provides a more complete and
-precise record.  The <span class="emphasis"><em>Download Data</em></span> menu entry allows
-you to read the flash memory and write it to disk.</p><p>Select the <span class="emphasis"><em>Download Data</em></span> menu entry to bring up a
+precise record.  The 'Download Data' menu entry allows
+you to read the flash memory and write it to disk.</p>
+</div>
+<div class="paragraph">
+<p>Select the 'Download Data' menu entry to bring up a
 list of connected TeleGPS devices. After the device
 has been selected, a dialog showing the data stored in
 the device will be shown allowing you to select which
@@ -356,52 +907,103 @@ be reused by another track. This prevents accidentally
 losing data if you neglect to download data before
 starting TeleGPS again. Note that if there is no more
 space available in the device, then no data will be
-recorded.</p><p>The file name for each data log is computed
+recorded.</p>
+</div>
+<div class="paragraph">
+<p>The file name for each data log is computed
 automatically from the recorded date, altimeter serial
-number and flight number information.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configure_device"></a>3.13. Configure Device</h2></div></div></div><div class="figure"><a id="idm375"></a><p class="title"><strong>Figure 3.13. TeleGPS Configuration Dialog</strong></p><div class="figure-contents"><div class="mediaobject"><img src="telegps-configure.png" width="324" alt="telegps-configure.png" /></div></div></div><br class="figure-break" /><p>Select this button and then select any connected TeleGPS
-device from the list provided.</p><p>The first few lines of the dialog provide information
+number and flight number information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configure_device">3.13. Configure Device</h3>
+<div class="imageblock">
+<div class="content">
+<img src="telegps-configure.png" alt="telegps configure" width="350">
+</div>
+<div class="title">Figure 13. TeleGPS Configuration Dialog</div>
+</div>
+<div class="paragraph">
+<p>Select this button and then select any connected TeleGPS
+device from the list provided.</p>
+</div>
+<div class="paragraph">
+<p>The first few lines of the dialog provide information
 about the connected device, including the product
 name, software version and hardware serial
 number. Below that are the individual configuration
-entries.</p><p>At the bottom of the dialog, there are four buttons:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
-Save
-</span></dt><dd>
-This writes any changes to the configuration parameter
-block in flash memory. If you don’t press this button,
-any changes you make will be lost.
-</dd><dt><span class="term">
-Reset
-</span></dt><dd>
-This resets the dialog to the most recently saved
-values, erasing any changes you have made.
-</dd><dt><span class="term">
-Reboot
-</span></dt><dd>
-This reboots the device. Use this to switch from idle
+entries.</p>
+</div>
+<div class="paragraph">
+<p>At the bottom of the dialog, there are four buttons:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Save</dt>
+<dd>
+<p>This writes any changes to the configuration parameter
+block in flash memory. If you don&#8217;t press this button,
+any changes you make will be lost.</p>
+</dd>
+<dt class="hdlist1">Reset</dt>
+<dd>
+<p>This resets the dialog to the most recently saved
+values, erasing any changes you have made.</p>
+</dd>
+<dt class="hdlist1">Reboot</dt>
+<dd>
+<p>This reboots the device. Use this to switch from idle
 to pad mode by rebooting once the rocket is oriented
 for flight, or to confirm changes you think you saved
-are really saved.
-</dd><dt><span class="term">
-Close
-</span></dt><dd>
-This closes the dialog. Any unsaved changes will be
-lost.
-</dd></dl></div><p>The rest of the dialog contains the parameters to be configured.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_frequency"></a>3.13.1. Frequency</h3></div></div></div><p>This configures which of the frequencies to use for
+are really saved.</p>
+</dd>
+<dt class="hdlist1">Close</dt>
+<dd>
+<p>This closes the dialog. Any unsaved changes will be
+lost.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The rest of the dialog contains the parameters to be configured.</p>
+</div>
+<div class="sect3">
+<h4 id="_frequency">3.13.1. Frequency</h4>
+<div class="paragraph">
+<p>This configures which of the frequencies to use for
 both telemetry and packet command mode. Note that if
 you set this value via packet command mode, the
 TeleDongle frequency will also be automatically
 reconfigured to match so that communication will
-continue afterwards.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_rf_calibration"></a>3.13.2. RF Calibration</h3></div></div></div><p>The radios in every Altus Metrum device are calibrated
+continue afterwards.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rf_calibration">3.13.2. RF Calibration</h4>
+<div class="paragraph">
+<p>The radios in every Altus Metrum device are calibrated
 at the factory to ensure that they transmit and
 receive on the specified frequency.  If you need to
 you can adjust the calibration by changing this value.
 Do not do this without understanding what the value
 means, read the appendix on calibration and/or the
 source code for more information.  To change a
-TeleDongle’s calibration, you must reprogram the unit
-completely.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telemetry_rdf_aprs_enable"></a>3.13.3. Telemetry/RDF/APRS Enable</h3></div></div></div><p>Enables the radio for transmission during
+TeleDongle&#8217;s calibration, you must reprogram the unit
+completely.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_telemetryrdfaprs_enable">3.13.3. Telemetry/RDF/APRS Enable</h4>
+<div class="paragraph">
+<p>Enables the radio for transmission during
 flight. When disabled, the radio will not
-transmit anything during flight at all.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telemetry_baud_rate"></a>3.13.4. Telemetry baud rate</h3></div></div></div><p>This sets the modulation bit rate for data
+transmit anything during flight at all.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_telemetry_baud_rate">3.13.4. Telemetry baud rate</h4>
+<div class="paragraph">
+<p>This sets the modulation bit rate for data
 transmission for both telemetry and packet
 link mode. Lower bit rates will increase range
 while reducing the amount of data that can be
@@ -409,16 +1011,34 @@ sent and increasing battery consumption. All
 telemetry is done using a rate 1/2 constraint
 4 convolution code, so the actual data
 transmission rate is 1/2 of the modulation bit
-rate specified here.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_aprs_interval"></a>3.13.5. APRS Interval</h3></div></div></div><p>How often to transmit GPS information via APRS
+rate specified here.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_aprs_interval">3.13.5. APRS Interval</h4>
+<div class="paragraph">
+<p>How often to transmit GPS information via APRS
 (in seconds). When set to zero, APRS
 transmission is disabled.
 Note that a single APRS packet
 takes nearly a full second to transmit, so
 enabling this option will prevent sending any
-other telemetry during that time.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_aprs_ssid"></a>3.13.6. APRS SSID</h3></div></div></div><p>Which SSID to report in APRS packets. By
+other telemetry during that time.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_aprs_ssid">3.13.6. APRS SSID</h4>
+<div class="paragraph">
+<p>Which SSID to report in APRS packets. By
 default, this is set to the last digit of the
 serial number, but can be configured to any
-value from 0 to 9.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_aprs_format"></a>3.13.7. APRS Format</h3></div></div></div><p>Whether to send APRS data in Compressed or
+value from 0 to 9.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_aprs_format">3.13.7. APRS Format</h4>
+<div class="paragraph">
+<p>Whether to send APRS data in Compressed or
 Uncompressed format. Compressed format is
 smaller and more precise. Uncompressed
 format is older, but may work better with your
@@ -426,19 +1046,55 @@ device. The Kenwood TH-D72 only displays
 altitude information with Uncompressed
 format, while the Yaesu FT1D only displays
 altitude with Compressed format. Test before
-you fly to see which to use.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_callsign_2"></a>3.13.8. Callsign</h3></div></div></div><p>This sets the call sign included in each
+you fly to see which to use.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_callsign_2">3.13.8. Callsign</h4>
+<div class="paragraph">
+<p>This sets the call sign included in each
 telemetry packet. Set this as needed to
-conform to your local radio regulations.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_logging_trigger_motion"></a>3.13.9. Logging Trigger Motion</h3></div></div></div><p>This sets the amount of motion that TeleGPS
+conform to your local radio regulations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_logging_trigger_motion">3.13.9. Logging Trigger Motion</h4>
+<div class="paragraph">
+<p>This sets the amount of motion that TeleGPS
 needs to see before logging the new
 position. Motions smaller than this are
-skipped, which saves storage space.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_position_reporting_interval"></a>3.13.10. Position Reporting Interval</h3></div></div></div><p>The interval between TeleGPS position reports,
+skipped, which saves storage space.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_position_reporting_interval">3.13.10. Position Reporting Interval</h4>
+<div class="paragraph">
+<p>The interval between TeleGPS position reports,
 both over the air and in the log. Increase
 this to reduce the frequency of radio
 transmissions and the length of time available
-in the log.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_flash_device"></a>3.14. Flash Device</h2></div></div></div><p>This reprograms TeleGPS devices with new
+in the log.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_flash_device">3.14. Flash Device</h3>
+<div class="paragraph">
+<p>This reprograms TeleGPS devices with new
 firmware. Please read the directions for flashing
-devices in <a class="xref" href="#_updating_device_firmware" title="Appendix D. Updating Device Firmware">Appendix D, <em>Updating Device Firmware</em></a>.</p></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_telegps_system_operation"></a>Appendix A. TeleGPS System Operation</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_gfsk_telemetry"></a>A.1. GFSK Telemetry</h2></div></div></div><p>TeleGPS’s native telemetry system doesn’t use a
-<span class="emphasis"><em>normal packet radio</em></span> mode like APRS because it’s not
+devices in <a href="#_updating_device_firmware">Updating Device Firmware</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_telegps_system_operation">Appendix A: TeleGPS System Operation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gfsk_telemetry">A.1. GFSK Telemetry</h3>
+<div class="paragraph">
+<p>TeleGPS&#8217;s native telemetry system doesn&#8217;t use a
+'normal packet radio' mode like APRS because it&#8217;s not
 very efficient.  The GFSK modulation we use is FSK
 with the base-band pulses passed through a Gaussian
 filter before they go into the modulator to limit the
@@ -446,59 +1102,155 @@ transmitted bandwidth.  When combined with forward
 error correction and interleaving, this allows us to
 have a very robust 19.2 kilobit data link with only
 10-40 milliwatts of transmit power, a whip antenna in
-the rocket, and a hand-held Yagi on the ground.  We’ve
+the rocket, and a hand-held Yagi on the ground.  We&#8217;ve
 had flights to above 21k feet AGL with great
 reception, and calculations suggest we should be good
 to well over 40k feet AGL with a 5-element yagi on the
 ground with our 10mW units and over 100k feet AGL with
-the 40mW devices.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_aprs"></a>A.2. APRS</h2></div></div></div><p>TeleGPS can send APRS if desired, and the
+the 40mW devices.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aprs">A.2. APRS</h3>
+<div class="paragraph">
+<p>TeleGPS can send APRS if desired, and the
 interval between APRS packets can be configured. As each APRS
 packet takes a full second to transmit, we recommend an
 interval of at least 5 seconds to avoid consuming too much
 battery power or radio channel bandwidth. You can configure
 the APRS interval using TeleGPS; that process is described in
-<a class="xref" href="#_configure_device" title="3.13. Configure Device">Section 3.13, “Configure Device”</a>.</p><p>AltOS supports both compressed and uncompressed APRS
+<a href="#_configure_device">Configure Device</a>.</p>
+</div>
+<div class="paragraph">
+<p>AltOS supports both compressed and uncompressed APRS
 position report data formats. The compressed format
 provides for higher position precision and shorter
-packets than the uncompressed APRS format. We’ve found
+packets than the uncompressed APRS format. We&#8217;ve found
 some older APRS receivers that do not handle the
 compressed format. The Kenwood TH-72A requires the use
 of uncompressed format to display altitude information
 correctly. The Yaesu FT1D requires the use of
-compressed format to display altitude information.</p><p>APRS packets include an SSID (Secondary Station Identifier)
+compressed format to display altitude information.</p>
+</div>
+<div class="paragraph">
+<p>APRS packets include an SSID (Secondary Station Identifier)
 field that allows one operator to have multiple
 transmitters. AltOS allows you to set this to a single digit
 from 0 to 9, allowing you to fly multiple transmitters at the
 same time while keeping the identify of each one separate in
 the receiver. By default, the SSID is set to the last digit of
-the device serial number.</p><p>The APRS packet format includes a comment field that
+the device serial number.</p>
+</div>
+<div class="paragraph">
+<p>The APRS packet format includes a comment field that
 can have arbitrary text in it. AltOS uses this to send
-status information as shown in the following table.</p><div class="table"><a id="idm450"></a><p class="title"><strong>Table A.1. Altus Metrum APRS Comments</strong></p><div class="table-contents"><table class="table" summary="Altus Metrum APRS Comments" cellpadding="4px" style="border-collapse: collapse;border-top: 1px solid #78079a; border-bottom: 1px solid #78079a; border-left: 1px solid #78079a; border-right: 1px solid #78079a; "><colgroup><col class="col_1" /><col class="col_2" /><col class="col_3" /></colgroup><thead><tr><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Field        </th><th style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top">Example        </th><th style="border-bottom: 1px solid #78079a; " align="left" valign="top">Description</th></tr></thead><tbody><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>1</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>L</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>GPS Status U for unlocked, L for locked</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>2</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>6</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Number of Satellites in View</p></td></tr><tr><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>3</p></td><td style="border-right: 1px solid #78079a; border-bottom: 1px solid #78079a; " align="left" valign="top"><p>B4.0</p></td><td style="border-bottom: 1px solid #78079a; " align="left" valign="top"><p>Altimeter Battery Voltage</p></td></tr><tr><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>4</p></td><td style="border-right: 1px solid #78079a; " align="left" valign="top"><p>1286</p></td><td style="" align="left" valign="top"><p>Device Serial Number</p></td></tr></tbody></table></div></div><br class="table-break" /><p>Here’s an example of an APRS comment showing GPS lock with 6
-satellites in view and a primary battery at 4.0V from device 1876.</p><pre class="literallayout">L6 B4.0 1876</pre><p>Make sure your primary battery is above 3.8V
+status information as shown in the following table.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Altus Metrum APRS Comments</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GPS Status U for unlocked, L for locked</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of Satellites in View</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altimeter Battery Voltage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1286</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Serial Number</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s an example of an APRS comment showing GPS lock with 6
+satellites in view and a primary battery at 4.0V from device 1876.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>L6 B4.0 1876</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure your primary battery is above 3.8V
 and GPS is locked with at least 5 or 6 satellites in
 view before flying. If GPS is switching between L and
-U regularly, then it doesn’t have a good lock and you
-should wait until it becomes stable.</p><p>If the GPS receiver loses lock, the APRS data
+U regularly, then it doesn&#8217;t have a good lock and you
+should wait until it becomes stable.</p>
+</div>
+<div class="paragraph">
+<p>If the GPS receiver loses lock, the APRS data
 transmitted will contain the last position for which
 GPS lock was available. You can tell that this has
 happened by noticing that the GPS status character
-switches from <span class="emphasis"><em>L</em></span> to <span class="emphasis"><em>U</em></span>. Before GPS has locked, APRS
+switches from 'L' to 'U'. Before GPS has locked, APRS
 will transmit zero for latitude, longitude and
-altitude.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configurable_parameters"></a>A.3. Configurable Parameters</h2></div></div></div><p>Configuring TeleGPS is very simple; the few configurable
+altitude.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configurable_parameters">A.3. Configurable Parameters</h3>
+<div class="paragraph">
+<p>Configuring TeleGPS is very simple; the few configurable
 parameters can all be set using the TeleGPS application over
-USB. Check out <a class="xref" href="#_configure_device" title="3.13. Configure Device">Section 3.13, “Configure Device”</a>.</p></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_handling_precautions"></a>Appendix B. Handling Precautions</h1></div></div></div><p>All Altus Metrum products are sophisticated electronic devices.
+USB. Check out <a href="#_configure_device">Configure Device</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_handling_precautions">Appendix B: Handling Precautions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All Altus Metrum products are sophisticated electronic devices.
 When handled gently and properly installed in an air-frame, they
 will deliver impressive results.  However, as with all electronic
-devices, there are some precautions you must take.</p><div class="warning" style="margin-left: 0; margin-right: 10%;"><h3 class="title">Warning</h3><p>The Lithium Polymer rechargeable batteries have an
+devices, there are some precautions you must take.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+The Lithium Polymer rechargeable batteries have an
 extraordinary power density.  This is great because we can fly with
 much less battery mass than if we used alkaline batteries or previous
-generation rechargeable batteries… but if they are punctured
+generation rechargeable batteries&#8230;&#8203; but if they are punctured
 or their leads are allowed to short, they can and will release their
 energy very rapidly!
 Thus we recommend that you take some care when handling our batteries
 and consider giving them some extra protection in your air-frame.  We
 often wrap them in suitable scraps of closed-cell packing foam before
-strapping them down, for example.</p></div><p>The barometric sensors used on all of our flight computers are
+strapping them down, for example.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The barometric sensors used on all of our flight computers are
 sensitive to sunlight.  In normal mounting situations, the baro sensor
 and all of the other surface mount components
 are “down” towards whatever the underlying mounting surface is, so
@@ -510,646 +1262,1562 @@ consider this with TeleMini v1.0, both because the baro sensor is on the
 use clear plastic for the payload bay!  Replacing these with an opaque
 cardboard tube, painting them, or wrapping them with a layer of masking
 tape are all reasonable approaches to keep the sensor out of direct
-sunlight.</p><p>The barometric sensor sampling port must be able to “breathe”,
+sunlight.</p>
+</div>
+<div class="paragraph">
+<p>The barometric sensor sampling port must be able to “breathe”,
 both by not being covered by foam or tape or other materials that might
 directly block the hole on the top of the sensor, and also by having a
-suitable static vent to outside air.</p><p>As with all other rocketry electronics, Altus Metrum altimeters must
+suitable static vent to outside air.</p>
+</div>
+<div class="paragraph">
+<p>As with all other rocketry electronics, Altus Metrum altimeters must
 be protected from exposure to corrosive motor exhaust and ejection
-charge gasses.</p></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_technical_information"></a>Appendix C. Technical Information</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_gps_receiver"></a>C.1. GPS Receiver</h2></div></div></div><p>TeleGPS uses the u-Blox Max-7Q GPS receiver.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_70cm_transmitter"></a>C.2. 70cm Transmitter</h2></div></div></div><p>TeleGPS uses a TI CC115L transmitter. This radio
-produces 10mW of RF output.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_micro_controller"></a>C.3. Micro-controller</h2></div></div></div><p>TeleGPS uses an NXP LPC11U14 micro-controller. This
+charge gasses.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_technical_information">Appendix C: Technical Information</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gps_receiver">C.1. GPS Receiver</h3>
+<div class="paragraph">
+<p>TeleGPS uses the u-Blox Max-7Q GPS receiver.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_70cm_transmitter">C.2. 70cm Transmitter</h3>
+<div class="paragraph">
+<p>TeleGPS uses a TI CC115L transmitter. This radio
+produces 10mW of RF output.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_micro_controller">C.3. Micro-controller</h3>
+<div class="paragraph">
+<p>TeleGPS uses an NXP LPC11U14 micro-controller. This
 tiny CPU contains 32kB of flash for the application
-and 4kB of RAM for temporary data storage.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_lithium_polymer_battery"></a>C.4. Lithium Polymer Battery</h2></div></div></div><p>Shipping restrictions may prevent us from including a
-battery battery with TeleGPS.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_mechanical_considerations"></a>C.5. Mechanical Considerations</h2></div></div></div><p>TeleGPS is designed to be rugged enough for typical
+and 4kB of RAM for temporary data storage.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lithium_polymer_battery">C.4. Lithium Polymer Battery</h3>
+<div class="paragraph">
+<p>Shipping restrictions may prevent us from including a
+battery battery with TeleGPS.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mechanical_considerations">C.5. Mechanical Considerations</h3>
+<div class="paragraph">
+<p>TeleGPS is designed to be rugged enough for typical
 rocketry applications.  The 4 mounting holes on the
-board are sized for use with 4-40 or M3 screws.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_on_board_data_storage"></a>C.6. On-board data storage</h2></div></div></div><p>TeleGPS has 2MB of non-volatile storage, separate from
+board are sized for use with 4-40 or M3 screws.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_on_board_data_storage">C.6. On-board data storage</h3>
+<div class="paragraph">
+<p>TeleGPS has 2MB of non-volatile storage, separate from
 the code storage memory. The TeleGPS firmware uses
-this to log information during flight.</p></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_updating_device_firmware"></a>Appendix D. Updating Device Firmware</h1></div></div></div><p>TeleGPS is programmed directly over its USB connectors.</p><p>You may wish to begin by ensuring you have current firmware images.
+this to log information during flight.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_updating_device_firmware">Appendix D: Updating Device Firmware</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TeleGPS is programmed directly over its USB connectors.</p>
+</div>
+<div class="paragraph">
+<p>You may wish to begin by ensuring you have current firmware images.
 These are distributed as part of the TeleGPS software bundle that
 also includes the TeleGPS ground station program.  Newer ground
 station versions typically work fine with older firmware versions,
-so you don’t need to update your devices just to try out new
+so you don&#8217;t need to update your devices just to try out new
 software features.  You can always download the most recent
-version from <a class="ulink" href="http://www.altusmetrum.org/AltOS/" target="_top">http://www.altusmetrum.org/AltOS/</a></p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_updating_telegps_firmware"></a>D.1. Updating TeleGPS Firmware</h2></div></div></div><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
-Attach a battery and power switch to the target
-device. Power up the device.
-</li><li class="listitem">
-Using a Micro USB cable, connect the target device to
-your computer’s USB socket.
-</li><li class="listitem">
-Run TeleGPS, and select <span class="emphasis"><em>Flash Device</em></span> from the
-Device menu.
-</li><li class="listitem">
-Select the target device in the Device Selection
-dialog.
-</li><li class="listitem">
-Select the image you want to flash to the device,
+version from <a href="http://www.altusmetrum.org/AltOS/" class="bare">http://www.altusmetrum.org/AltOS/</a></p>
+</div>
+<div class="sect2">
+<h3 id="_updating_telegps_firmware">D.1. Updating TeleGPS Firmware</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Attach a battery and power switch to the target
+device. Power up the device.</p>
+</li>
+<li>
+<p>Using a Micro USB cable, connect the target device to
+your computer&#8217;s USB socket.</p>
+</li>
+<li>
+<p>Run TeleGPS, and select 'Flash Device' from the
+Device menu.</p>
+</li>
+<li>
+<p>Select the target device in the Device Selection
+dialog.</p>
+</li>
+<li>
+<p>Select the image you want to flash to the device,
 which should have a name in the form
 &lt;product&gt;-v&lt;product-version&gt;-&lt;software-version&gt;.ihx,
-such as TeleGPS-v1.0-1.4.0.ihx.
-</li><li class="listitem">
-Make sure the configuration parameters are reasonable
+such as TeleGPS-v1.0-1.4.0.ihx.</p>
+</li>
+<li>
+<p>Make sure the configuration parameters are reasonable
 looking. If the serial number and/or RF configuration
-values aren’t right, you’ll need to change them.
-</li><li class="listitem">
-Hit the <span class="emphasis"><em>OK</em></span> button and the software should proceed
+values aren&#8217;t right, you&#8217;ll need to change them.</p>
+</li>
+<li>
+<p>Hit the 'OK' button and the software should proceed
 to flash the device with new firmware, showing a
-progress bar.
-</li><li class="listitem">
-Verify that the device is working by using the
+progress bar.</p>
+</li>
+<li>
+<p>Verify that the device is working by using the
 'Configure Device item to check over the
-configuration.
-</li></ol></div></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="_release_notes"></a>Appendix E. Release Notes</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8_6"></a>E.1. Release Notes for Version 1.8.6</h2></div></div></div><p>Version 1.8.6</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos"></a>E.1.1. AltOS</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Use maximum of 64 previous tilt values in pyro tilt tests
-</li><li class="listitem">
-Eliminate 100m height requirement for coast detection
-</li><li class="listitem">
-Change After Motor pyro check to be &gt;= instead of ==
-</li><li class="listitem">
-Change Time since Boost to be Time since launch.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_telegps"></a>E.1.2. AltosUI, TeleGPS</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Clarify pyro test phrasing
-</li><li class="listitem">
-Remove ascending/descending from pyro config UI
-</li><li class="listitem">
-Fix accel calibration in Antenna Down mode
-</li><li class="listitem">
-Add mag sensor reporting for TeleMega v3 idle monitoring.
-</li><li class="listitem">
-Fix radio parameter saving at 2400 bps telmetry rate.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_micropeak"></a>E.1.3. MicroPeak</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Report altimeter-recorded maximum height value
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8_5"></a>E.2. Release Notes for Version 1.8.5</h2></div></div></div><p>Version 1.8.5 includes fixes to the ground software support
-for TeleBT v4, along with a few other minor updates.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_2"></a>E.2.1. AltOS</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix startup beeps that indicate sensor failures.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_telegps_2"></a>E.2.2. AltosUI, TeleGPS</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-When updating device firmware, make sure selected firmware
-matches target device.
-</li><li class="listitem">
-Correct Bluetooth device matching when looking for TeleBT
-devices.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8_4"></a>E.3. Release Notes for Version 1.8.4</h2></div></div></div><p>Version 1.8.4 includes support for EasyMini version 2.0</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_3"></a>E.3.1. AltOS</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Support for EasyMini version 2.0 hardware.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8_3"></a>E.4. Release Notes for Version 1.8.3</h2></div></div></div><p>Version 1.8.3 includes support for TeleMega version 3.0 along
+configuration.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_release_notes">Appendix E: Release Notes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_6">E.1. Release Notes for Version 1.8.6</h3>
+<div class="paragraph">
+<p>Version 1.8.6</p>
+</div>
+<div class="sect3">
+<h4 id="_altos">E.1.1. AltOS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Use maximum of 64 previous tilt values in pyro tilt tests</p>
+</li>
+<li>
+<p>Eliminate 100m height requirement for coast detection</p>
+</li>
+<li>
+<p>Change After Motor pyro check to be &gt;= instead of ==</p>
+</li>
+<li>
+<p>Change Time since Boost to be Time since launch.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps">E.1.2. AltosUI, TeleGPS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Clarify pyro test phrasing</p>
+</li>
+<li>
+<p>Remove ascending/descending from pyro config UI</p>
+</li>
+<li>
+<p>Fix accel calibration in Antenna Down mode</p>
+</li>
+<li>
+<p>Add mag sensor reporting for TeleMega v3 idle monitoring.</p>
+</li>
+<li>
+<p>Fix radio parameter saving at 2400 bps telmetry rate.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_micropeak">E.1.3. MicroPeak</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Report altimeter-recorded maximum height value</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_5">E.2. Release Notes for Version 1.8.5</h3>
+<div class="paragraph">
+<p>Version 1.8.5 includes fixes to the ground software support
+for TeleBT v4, along with a few other minor updates.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_2">E.2.1. AltOS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix startup beeps that indicate sensor failures.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_2">E.2.2. AltosUI, TeleGPS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>When updating device firmware, make sure selected firmware
+matches target device.</p>
+</li>
+<li>
+<p>Correct Bluetooth device matching when looking for TeleBT
+devices.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_4">E.3. Release Notes for Version 1.8.4</h3>
+<div class="paragraph">
+<p>Version 1.8.4 includes support for EasyMini version 2.0</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_3">E.3.1. AltOS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for EasyMini version 2.0 hardware.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_3">E.4. Release Notes for Version 1.8.3</h3>
+<div class="paragraph">
+<p>Version 1.8.3 includes support for TeleMega version 3.0 along
 with two important flight computer fixes. This version also
 changes KML export data to make Tripoli Record reporting
 better and some updates to graph presentation and data
-downloading.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_4"></a>E.4.1. AltOS</h3></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_altos_new_features"></a>AltOS New Features</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Support for TeleMega version 3.0 hardware.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_altos_bug_fixes"></a>AltOS Bug Fixes</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Ground testing EasyMega and TeleMega additional pyro
-channels could result in a sticky <span class="emphasis"><em>fired</em></span> status which would
-prevent these channels from firing on future flights.
-</li><li class="listitem">
-Corrupted flight log records could prevent future flights
-from capturing log data.
-</li><li class="listitem">
-Fixed saving of pyro configuration that ended with
-<span class="emphasis"><em>Descending</em></span>.
-</li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications"></a>E.4.2. AltosUI and TeleGPS Applications</h3></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_altosui_new_features"></a>AltosUI New Features</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Support for TeleMega version 3.0.
-</li><li class="listitem">
-Graph lines have improved appearance to make them easier to
+downloading.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_4">E.4.1. AltOS</h4>
+<div class="sect4">
+<h5 id="_altos_new_features">AltOS New Features</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for TeleMega version 3.0 hardware.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_altos_bug_fixes">AltOS Bug Fixes</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Ground testing EasyMega and TeleMega additional pyro
+channels could result in a sticky 'fired' status which would
+prevent these channels from firing on future flights.</p>
+</li>
+<li>
+<p>Corrupted flight log records could prevent future flights
+from capturing log data.</p>
+</li>
+<li>
+<p>Fixed saving of pyro configuration that ended with
+'Descending'.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications">E.4.2. AltosUI and TeleGPS Applications</h4>
+<div class="sect4">
+<h5 id="_altosui_new_features">AltosUI New Features</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for TeleMega version 3.0.</p>
+</li>
+<li>
+<p>Graph lines have improved appearance to make them easier to
 distinguish. Markers may be placed at data points to show
-captured recorded data values.
-</li><li class="listitem">
-Graphing offers the ability to adjust the smoothing of
-computed speed and acceleration data.
-</li><li class="listitem">
-The download dialog now offers to graph new flights, checks
+captured recorded data values.</p>
+</li>
+<li>
+<p>Graphing offers the ability to adjust the smoothing of
+computed speed and acceleration data.</p>
+</li>
+<li>
+<p>The download dialog now offers to graph new flights, checks
 for existing files to avoid overwriting data and reports if
-there are checksum errors in the downloaded data.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_altosui_telegps_bug_fixes"></a>AltosUI/TeleGPS Bug Fixes</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Restore TeleGPS tracking behavior.
-</li><li class="listitem">
-Display flight computer call sign and serial number in
-Monitor Idle mode instead of ground station values.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_altosui_and_telegps_changes"></a>AltosUI and TeleGPS Changes</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-KML export now reports both barometric and GPS altitude data
-to make it more useful for Tripoli record reporting.
-</li><li class="listitem">
-CSV export now includes TeleMega/EasyMega pyro voltages and
-tilt angle.
-</li></ul></div><p></p></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8_2"></a>E.5. Release Notes for Version 1.8.2</h2></div></div></div><p>Version 1.8.2 includes support for TeleGPS version 2.0 along
-with accelerometer recalibration support in AltosUI.</p><p>1.8.2 also contains a couple of minor fixes for AltosUI when
-analyzing saved data files.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_5"></a>E.5.1. AltOS</h3></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Support for TeleGPS version 2.0 hardware.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_2"></a>E.5.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Support for TeleGPS version 2.0.
-</li><li class="listitem">
-Accelerometer re-calibration user interface.
-</li></ul></div><p>AltosUI and TeleGPS Bug Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Prevent some crashes when reading older saved flight data
-for graphing or KML export.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8_1"></a>E.6. Release Notes for Version 1.8.1</h2></div></div></div><p>Version 1.8.1 includes an important bug fix for Apogee Lockout
+there are checksum errors in the downloaded data.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_altosuitelegps_bug_fixes">AltosUI/TeleGPS Bug Fixes</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Restore TeleGPS tracking behavior.</p>
+</li>
+<li>
+<p>Display flight computer call sign and serial number in
+Monitor Idle mode instead of ground station values.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_altosui_and_telegps_changes">AltosUI and TeleGPS Changes</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>KML export now reports both barometric and GPS altitude data
+to make it more useful for Tripoli record reporting.</p>
+</li>
+<li>
+<p>CSV export now includes TeleMega/EasyMega pyro voltages and
+tilt angle.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_2">E.5. Release Notes for Version 1.8.2</h3>
+<div class="paragraph">
+<p>Version 1.8.2 includes support for TeleGPS version 2.0 along
+with accelerometer recalibration support in AltosUI.</p>
+</div>
+<div class="paragraph">
+<p>1.8.2 also contains a couple of minor fixes for AltosUI when
+analyzing saved data files.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_5">E.5.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for TeleGPS version 2.0 hardware.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_2">E.5.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI and TeleGPS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for TeleGPS version 2.0.</p>
+</li>
+<li>
+<p>Accelerometer re-calibration user interface.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI and TeleGPS Bug Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prevent some crashes when reading older saved flight data
+for graphing or KML export.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_1">E.6. Release Notes for Version 1.8.1</h3>
+<div class="paragraph">
+<p>Version 1.8.1 includes an important bug fix for Apogee Lockout
 operation in all flight computers. Anyone using this option
-must update firmware.</p><p>This release also contains a change in how flight computers
+must update firmware.</p>
+</div>
+<div class="paragraph">
+<p>This release also contains a change in how flight computers
 with accelerometers deal with speeds around and above Mach
 1. In previous versions, the flight computer would completely
 disregard the barometric sensor above 330m/s (around Mach
 1). Now, the data from the barometric sensor is reduced in
 effect without ever going away entirely. This prevents early
 drogue deployment for flights which spend considerable time
-above Mach 1.</p><p>1.8.1 also contains a couple of minor fixes for AltosUI when
-analyzing saved data files.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_6"></a>E.6.1. AltOS</h3></div></div></div><p>AltOS Bug Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Handle time value wrapping in Apogee Lockout
+above Mach 1.</p>
+</div>
+<div class="paragraph">
+<p>1.8.1 also contains a couple of minor fixes for AltosUI when
+analyzing saved data files.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_6">E.6.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS Bug Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Handle time value wrapping in Apogee Lockout
 correctly. Without this, apogee lockout would sometimes
-prevent any drogue charge from firing.
-</li><li class="listitem">
-Change Kalman filter on flight computers with accelerometer
+prevent any drogue charge from firing.</p>
+</li>
+<li>
+<p>Change Kalman filter on flight computers with accelerometer
 to continue using the barometric sensor even at high speeds
 to avoid unintentional drogue deployment during
-deceleration.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_3"></a>E.6.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add new <span class="emphasis"><em>Huge</em></span> font size to make text even bigger on high
-resolution monitors.
-</li></ul></div><p>AltosUI Bug Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Prevent some crashes when reading older saved flight data
-for graphing or KML export.
-</li><li class="listitem">
-Load frequency preference at startup. The loading code was
-broken, so you’d see only the default frequencies.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_8"></a>E.7. Release Notes for Version 1.8</h2></div></div></div><p>Version 1.8 includes support for our new TeleBT v4.0 ground
+deceleration.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_3">E.6.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add new 'Huge' font size to make text even bigger on high
+resolution monitors.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI Bug Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prevent some crashes when reading older saved flight data
+for graphing or KML export.</p>
+</li>
+<li>
+<p>Load frequency preference at startup. The loading code was
+broken, so you&#8217;d see only the default frequencies.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8">E.7. Release Notes for Version 1.8</h3>
+<div class="paragraph">
+<p>Version 1.8 includes support for our new TeleBT v4.0 ground
 station, updates for data analysis in our ground station
 software and bug fixes in in the flight software for all our
-boards and ground station interfaces.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_7"></a>E.7.1. AltOS</h3></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleBT v4.0 boards.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_4"></a>E.7.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleBT v4.0 hardware
-</li><li class="listitem">
-Rewrite graphing and export functions. This code now handles
+boards and ground station interfaces.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_7">E.7.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleBT v4.0 boards.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_4">E.7.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleBT v4.0 hardware</p>
+</li>
+<li>
+<p>Rewrite graphing and export functions. This code now handles
 each data series separately so that graphs are drawn
 correctly. Smoothing now uses a filter that looks both
 forward and backwards in time to make computed speed and
-acceleration data more accurate.
-</li></ul></div><p>AltosUI Bug Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Correct axis labeling of magnetic sensor in TeleMega and
-EasyMega. The Y and Z axes were flipped.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_7"></a>E.8. Release Notes for Version 1.7</h2></div></div></div><p>Version 1.7 includes support for our new TeleMini v3.0
+acceleration data more accurate.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI Bug Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Correct axis labeling of magnetic sensor in TeleMega and
+EasyMega. The Y and Z axes were flipped.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_7">E.8. Release Notes for Version 1.7</h3>
+<div class="paragraph">
+<p>Version 1.7 includes support for our new TeleMini v3.0
 flight computer and bug fixes in in the flight software for all our boards
-and ground station interfaces.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_8"></a>E.8.1. AltOS</h3></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleMini v3.0 boards.
-</li></ul></div><p>AltOS Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix interrupt priorities on STM32L processors. Run timer
+and ground station interfaces.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_8">E.8.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleMini v3.0 boards.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix interrupt priorities on STM32L processors. Run timer
 interrupt at lowest priority so that device interrupts get
-serviced first.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_5"></a>E.8.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleMini v3.0 hardware
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_8"></a>E.9. Release Notes for Version 1.6.8</h2></div></div></div><p>Version 1.6.8 fixes a TeleMega and TeleMetrum v2.0 bug where
+serviced first.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_5">E.8.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleMini v3.0 hardware</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6_8">E.9. Release Notes for Version 1.6.8</h3>
+<div class="paragraph">
+<p>Version 1.6.8 fixes a TeleMega and TeleMetrum v2.0 bug where
 the device could stop logging data and transmitting
 telemetry in flight. All TeleMega v1.0, v2.0 and TeleMetrum
-v2.0 users should update their flight firmware.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_9"></a>E.9.1. AltOS</h3></div></div></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix STM32L DMA driver to work around STM32L SoC DMA priority
+v2.0 users should update their flight firmware.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_9">E.9.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix STM32L DMA driver to work around STM32L SoC DMA priority
 issue t lock-up in the logging or radio code, either of
-which could stop data logging and telemetry.
-</li><li class="listitem">
-Avoid having TeleBT battery status values smash telemetry
-packet data by holding a lock during both operations.
-</li><li class="listitem">
-Don’t start reporting <span class="emphasis"><em>flight 0</em></span> when the log fills in
-flight.
-</li></ul></div><p>AltOS changes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Flash LEDS on all products briefly during power up so that
-they can be tested during production.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_telegps_and_altosdroid_applications"></a>E.9.2. AltosUI, TeleGPS and AltosDroid Applications</h3></div></div></div><p>AltosUI fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Re-enable go/no-go entries after they’ve been disabled due
+which could stop data logging and telemetry.</p>
+</li>
+<li>
+<p>Avoid having TeleBT battery status values smash telemetry
+packet data by holding a lock during both operations.</p>
+</li>
+<li>
+<p>Don&#8217;t start reporting 'flight 0' when the log fills in
+flight.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Flash LEDS on all products briefly during power up so that
+they can be tested during production.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_and_altosdroid_applications">E.9.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
+<div class="paragraph">
+<p>AltosUI fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Re-enable go/no-go entries after they&#8217;ve been disabled due
 to lack of data. If telemetry information is delayed when
 the Ui starts up, sometimes important fields would get
-disabled to never re-appear.
-</li><li class="listitem">
-Deal with ground station failure better during Configure
-Ground Station operation by cleaning up pending operations.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_5"></a>E.10. Release Notes for Version 1.6.5</h2></div></div></div><p>Version 1.6.5 fixes a TeleMega and TeleMetrum v2.0 bug where
+disabled to never re-appear.</p>
+</li>
+<li>
+<p>Deal with ground station failure better during Configure
+Ground Station operation by cleaning up pending operations.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6_5">E.10. Release Notes for Version 1.6.5</h3>
+<div class="paragraph">
+<p>Version 1.6.5 fixes a TeleMega and TeleMetrum v2.0 bug where
 the device would often stop logging data and transmitting
 telemetry in flight. All TeleMega v1.0, v2.0 and TeleMetrum
-v2.0 users should update their flight firmware.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_10"></a>E.10.1. AltOS</h3></div></div></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix STM32L SPI driver to prevent lock-up in the logging or
+v2.0 users should update their flight firmware.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_10">E.10.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix STM32L SPI driver to prevent lock-up in the logging or
 radio code, either of which could stop data logging and
 telemetry. Found and characterized by Chuck Haskin, who also
-tested the new firmware before release.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_telegps_and_altosdroid_applications_2"></a>E.10.2. AltosUI, TeleGPS and AltosDroid Applications</h3></div></div></div><p>AltosUI fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Deliver firmward for TeleMega v2.0 and TeleBT v3.0 with
-Windows package.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_4"></a>E.11. Release Notes for Version 1.6.4</h2></div></div></div><p>Version 1.6.4 fixes a bluetooth communication problem with
+tested the new firmware before release.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_and_altosdroid_applications_2">E.10.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
+<div class="paragraph">
+<p>AltosUI fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Deliver firmward for TeleMega v2.0 and TeleBT v3.0 with
+Windows package.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6_4">E.11. Release Notes for Version 1.6.4</h3>
+<div class="paragraph">
+<p>Version 1.6.4 fixes a bluetooth communication problem with
 TeleBT v1.0 devices, along with some altosui and altosdroid
-minor nits. It also now ships firmware for some newer devices.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_11"></a>E.11.1. AltOS</h3></div></div></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix hardware flow control on TeleBT v1.0. Hardware RTS/CTS
-doesn’t seem to work, switch from using the hardware to
-driving these pins with software.
-</li><li class="listitem">
-Fix ARM USB drivers to deal with OS restarts. Needed to
+minor nits. It also now ships firmware for some newer devices.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_11">E.11.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix hardware flow control on TeleBT v1.0. Hardware RTS/CTS
+doesn&#8217;t seem to work, switch from using the hardware to
+driving these pins with software.</p>
+</li>
+<li>
+<p>Fix ARM USB drivers to deal with OS restarts. Needed to
 reset all USB-related state when the USB bus is reset. These
-fixes affect all STM32L, STM32F0 and LPC11U14 based devices.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_telegps_and_altosdroid_applications_3"></a>E.11.2. AltosUI, TeleGPS and AltosDroid Applications</h3></div></div></div><p>AltosUI, TeleGPS and AltosDroid New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Automatically switch from meters or feet to kilometers or
-miles for distance units.
-</li><li class="listitem">
-Add Monitor Idle mode to TeleGPS application.
-</li></ul></div><p>AltosUI, TeleGPS and AltosDroid Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Abort map preloading when the preload map dialog is closed.
-</li><li class="listitem">
-In AltosDroid, Don’t reconnect to last device if the user
+fixes affect all STM32L, STM32F0 and LPC11U14 based devices.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_and_altosdroid_applications_3">E.11.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
+<div class="paragraph">
+<p>AltosUI, TeleGPS and AltosDroid New Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Automatically switch from meters or feet to kilometers or
+miles for distance units.</p>
+</li>
+<li>
+<p>Add Monitor Idle mode to TeleGPS application.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI, TeleGPS and AltosDroid Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Abort map preloading when the preload map dialog is closed.</p>
+</li>
+<li>
+<p>In AltosDroid, Don&#8217;t reconnect to last device if the user
 had disconnected it the last time the application was
-active.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_documentation"></a>E.11.3. Documentation</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Mention TeleMega v2.0 in hardware specs table.
-</li><li class="listitem">
-Document TeleGPS RF output in telegps manual.
-</li></ul></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_3"></a>E.12. Release Notes for Version 1.6.3</h2></div></div></div><p>Version 1.6.3 adds idle mode to AltosDroid and has bug fixes
+active.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation">E.11.3. Documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Mention TeleMega v2.0 in hardware specs table.</p>
+</li>
+<li>
+<p>Document TeleGPS RF output in telegps manual.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6_3">E.12. Release Notes for Version 1.6.3</h3>
+<div class="paragraph">
+<p>Version 1.6.3 adds idle mode to AltosDroid and has bug fixes
 for our host software on desktops, laptops an android devices
-along with BlueTooth support for Windows.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_12"></a>E.12.1. AltOS</h3></div></div></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix hardware flow control on TeleBT v3.0. RTS/CTS is
+along with BlueTooth support for Windows.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_12">E.12.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix hardware flow control on TeleBT v3.0. RTS/CTS is
 wired backwards on this board, switch from using the
-hardware to driving these pins with software.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_6"></a>E.12.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add BlueTooth support for Windows operating system. This
+hardware to driving these pins with software.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_6">E.12.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI and TeleGPS New Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add BlueTooth support for Windows operating system. This
 supports connections to TeleBT over BlueTooth rather than
-just USB.
-</li></ul></div><p>AltosUI and TeleGPS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Change Java detection and install on Windows. Detection is
-now done by looking for the <span class="emphasis"><em>javaw.exe</em></span> program, and
-installation by opening a browser on the java.com web site.
-</li><li class="listitem">
-Delay polling while the Fire Igniters is visible to allow
-for TeleMega to report back complete status over the radio.
-</li><li class="listitem">
-Disallow changing RF calibration numbers in the
-configuration UI. There’s no good reason to change this from
-the field, and recovering is really hard if you haven’t
-written down the right number.
-</li><li class="listitem">
-Fix USB device discovery on Mac OS X El Capitan. This makes
-the connected Altus Metrum USB devices appear again.
-</li><li class="listitem">
-Fix acceleration data presented in MonitorIdle mode for
-TeleMetrum v2.0 flight computers.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosdroid"></a>E.12.3. AltosDroid</h3></div></div></div><p>AltosDroid new features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Monitor Idle mode. Check state of flight computer while in
-idle mode over the radio link
-</li><li class="listitem">
-Fire Igniters. Remotely fire ignires for recovery system
-ground tests.
-</li><li class="listitem">
-Remote reboot. Cause the flight computer to reboot over the
+just USB.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI and TeleGPS Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Change Java detection and install on Windows. Detection is
+now done by looking for the 'javaw.exe' program, and
+installation by opening a browser on the java.com web site.</p>
+</li>
+<li>
+<p>Delay polling while the Fire Igniters is visible to allow
+for TeleMega to report back complete status over the radio.</p>
+</li>
+<li>
+<p>Disallow changing RF calibration numbers in the
+configuration UI. There&#8217;s no good reason to change this from
+the field, and recovering is really hard if you haven&#8217;t
+written down the right number.</p>
+</li>
+<li>
+<p>Fix USB device discovery on Mac OS X El Capitan. This makes
+the connected Altus Metrum USB devices appear again.</p>
+</li>
+<li>
+<p>Fix acceleration data presented in MonitorIdle mode for
+TeleMetrum v2.0 flight computers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosdroid">E.12.3. AltosDroid</h4>
+<div class="paragraph">
+<p>AltosDroid new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Monitor Idle mode. Check state of flight computer while in
+idle mode over the radio link</p>
+</li>
+<li>
+<p>Fire Igniters. Remotely fire ignires for recovery system
+ground tests.</p>
+</li>
+<li>
+<p>Remote reboot. Cause the flight computer to reboot over the
 radio link. This provides a method for switching the flight
 computer from idle to flight mode without needing to reach
-the power switch.
-</li><li class="listitem">
-Configurable frequency menu. Change the set of available
-frequencies and provide more descriptive names.
-</li></ul></div><p>AltosDroid bug fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Don’t set target location if GPS hasn’t locked yet.
-</li><li class="listitem">
-Fix saving target states so they can be reloaded when the
+the power switch.</p>
+</li>
+<li>
+<p>Configurable frequency menu. Change the set of available
+frequencies and provide more descriptive names.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosDroid bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Don&#8217;t set target location if GPS hasn&#8217;t locked yet.</p>
+</li>
+<li>
+<p>Fix saving target states so they can be reloaded when the
 application restarts. When the application is shut down and
 restarted, all previous target state information will be
-restored (including GPS position if available).
-</li><li class="listitem">
-Fix crash on some Android devices for offline maps when
-changing the map scale or location.
-</li><li class="listitem">
-Don’t require USB OTG support. This kept the latest
+restored (including GPS position if available).</p>
+</li>
+<li>
+<p>Fix crash on some Android devices for offline maps when
+changing the map scale or location.</p>
+</li>
+<li>
+<p>Don&#8217;t require USB OTG support. This kept the latest
 AltosDroid from being offered on devices without USB device
 support, although it can work without that just fine using
-BlueTooth.
-</li><li class="listitem">
-Don’t require bluetooth to be enabled. This allows the
+BlueTooth.</p>
+</li>
+<li>
+<p>Don&#8217;t require bluetooth to be enabled. This allows the
 application to operate with USB devices or just show old
-data without turning on the bluetooth radio.
-</li><li class="listitem">
-Recover old tracker positions when restarting
+data without turning on the bluetooth radio.</p>
+</li>
+<li>
+<p>Recover old tracker positions when restarting
 application. This finally allows you to safely stop and
 restart the application without losing the last known
-location of any tracker.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_documentation_2"></a>E.12.4. Documentation</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Document TeleMega and EasyMega additional pyro channel
-continuity audio alert pattern.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_2"></a>E.13. Release Notes for Version 1.6.2</h2></div></div></div><p>Version 1.6.2 includes support for our updated TeleMega v2.0
+location of any tracker.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation_2">E.12.4. Documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Document TeleMega and EasyMega additional pyro channel
+continuity audio alert pattern.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6_2">E.13. Release Notes for Version 1.6.2</h3>
+<div class="paragraph">
+<p>Version 1.6.2 includes support for our updated TeleMega v2.0
 product and bug fixes in in the flight software for all our boards
-and ground station interfaces.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_13"></a>E.13.1. AltOS</h3></div></div></div><p>AltOS New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleMega v2.0 boards.
-</li><li class="listitem">
-Add PWM servo driver. There’s no higher level code using
+and ground station interfaces.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_13">E.13.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleMega v2.0 boards.</p>
+</li>
+<li>
+<p>Add PWM servo driver. There&#8217;s no higher level code using
 this yet, but the driver allows testing of the TeleMega v2.0
-servo output connector.
-</li></ul></div><p>AltOS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Slow down telemetry packets to allow receiver to keep
-up.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_7"></a>E.13.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix post-flight orientation computation when processing
-TeleMega and EasyMega eeprom data files.
-</li><li class="listitem">
-Capture complete eeprom data even when there are invalid
+servo output connector.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Slow down telemetry packets to allow receiver to keep
+up.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_7">E.13.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI and TeleGPS Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix post-flight orientation computation when processing
+TeleMega and EasyMega eeprom data files.</p>
+</li>
+<li>
+<p>Capture complete eeprom data even when there are invalid
 entries in the data. This keeps reading eeprom contents and
-writing the associated .eeprom file when an error is detected.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_documentation_3"></a>E.13.3. Documentation</h3></div></div></div><p>We spent a bunch of time trying to improve our documentation</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-HTML versions now have a table of contents on the left side.
-</li><li class="listitem">
-EasyMini now has its own shorter manual.
-</li><li class="listitem">
-Provide links between sections in each document.
-</li><li class="listitem">
-Lots of minor rewriting and restructuring to avoid
-duplication of information
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6_1"></a>E.14. Release Notes for Version 1.6.1</h2></div></div></div><p>Version 1.6.1 includes support for our updated TeleBT v3.0
+writing the associated .eeprom file when an error is detected.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation_3">E.13.3. Documentation</h4>
+<div class="paragraph">
+<p>We spent a bunch of time trying to improve our documentation</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML versions now have a table of contents on the left side.</p>
+</li>
+<li>
+<p>EasyMini now has its own shorter manual.</p>
+</li>
+<li>
+<p>Provide links between sections in each document.</p>
+</li>
+<li>
+<p>Lots of minor rewriting and restructuring to avoid
+duplication of information</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6_1">E.14. Release Notes for Version 1.6.1</h3>
+<div class="paragraph">
+<p>Version 1.6.1 includes support for our updated TeleBT v3.0
 product and bug fixes in in the flight software for all our boards
-and ground station interfaces.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_14"></a>E.14.1. AltOS</h3></div></div></div><p>AltOS New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleBT v3.0 boards.
-</li><li class="listitem">
-Add support for uncompressed APRS data, providing support
+and ground station interfaces.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_14">E.14.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleBT v3.0 boards.</p>
+</li>
+<li>
+<p>Add support for uncompressed APRS data, providing support
 for older APRS receivers. Uncompressed APRS data is less
-precise, takes more bandwidth and doesn’t have integrated
-altitude data.
-</li></ul></div><p>AltOS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Make TeleDongle and TeleBT more tolerant of data rate
-variations from transmitting devices.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_8"></a>E.14.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add map to Monitor Idle display. It’s nice to be able to
+precise, takes more bandwidth and doesn&#8217;t have integrated
+altitude data.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make TeleDongle and TeleBT more tolerant of data rate
+variations from transmitting devices.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_8">E.14.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI and TeleGPS New Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add map to Monitor Idle display. It&#8217;s nice to be able to
 verify that maps are working, instead of needing to use
-Monitor Flight.
-</li></ul></div><p>AltosUI and TeleGPS Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Fix frequency configuration to round values instead of
-truncate them, avoiding a common 1kHz error in the setting.
-</li><li class="listitem">
-Turn the Windows stub into a more useful program that can
+Monitor Flight.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI and TeleGPS Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix frequency configuration to round values instead of
+truncate them, avoiding a common 1kHz error in the setting.</p>
+</li>
+<li>
+<p>Turn the Windows stub into a more useful program that can
 launch the application with parameters so that file manager
-icons work more reliably.
-</li><li class="listitem">
-Force KML export to use a C locale so that numbers are
-formatted with <span class="emphasis"><em>.</em></span> instead of <span class="emphasis"><em>,</em></span> for a decimal separator in
-non-US locales.
-</li><li class="listitem">
-Preload map tiles based on distance rather than number of
+icons work more reliably.</p>
+</li>
+<li>
+<p>Force KML export to use a C locale so that numbers are
+formatted with '.' instead of ',' for a decimal separator in
+non-US locales.</p>
+</li>
+<li>
+<p>Preload map tiles based on distance rather than number of
 tiles; this means you get the same resolution covering the
 entire area, rather than having high resolution near the
-center and low resolution further away.
-</li><li class="listitem">
-Allow configuration of frequency and callsign in Monitor
-Idle mode.
-</li><li class="listitem">
-Fix layout weirdness when resizing windows on
-Windows. Windows shouldn’t have giant blank spaces around
-the useful content anymore.
-</li><li class="listitem">
-Fix layout weirdness when resizing windows on
-Windows. Windows shouldn’t have giant blank spaces around
-the useful content anymore.
-</li><li class="listitem">
-Use a longer filter for descent speed values. This should
+center and low resolution further away.</p>
+</li>
+<li>
+<p>Allow configuration of frequency and callsign in Monitor
+Idle mode.</p>
+</li>
+<li>
+<p>Fix layout weirdness when resizing windows on
+Windows. Windows shouldn&#8217;t have giant blank spaces around
+the useful content anymore.</p>
+</li>
+<li>
+<p>Fix layout weirdness when resizing windows on
+Windows. Windows shouldn&#8217;t have giant blank spaces around
+the useful content anymore.</p>
+</li>
+<li>
+<p>Use a longer filter for descent speed values. This should
 provide something more useful on the display, although it
-will take longer to respond to changes now.
-</li><li class="listitem">
-Make Replay Flight run in realtime again. It had been set to
-run at 10x speed by mistake.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosdroid_2"></a>E.14.3. AltosDroid</h3></div></div></div><p>AltosDroid New Features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add offline map support using mapping code from AltosUI.
-</li><li class="listitem">
-Support TeleDongle (and TeleBT via USB) on devices
-supporting USB On-The-Go.
-</li><li class="listitem">
-Display additional TeleMega pyro channel status in Pad tab.
-</li><li class="listitem">
-Switch between metric and imperial units.
-</li><li class="listitem">
-Monitor TeleBT battery voltage.
-</li><li class="listitem">
-Track multiple devices at the same time, selecting between
-them with a menu or using the map.
-</li><li class="listitem">
-Add hybrid, satellite and terrain map types.
-</li></ul></div><p>AltosDroid Fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Use standard Android display conventions so that a menu
-button is available in the application title bar.
-</li><li class="listitem">
-Adjust layout to work on large and small screens; shrinking
+will take longer to respond to changes now.</p>
+</li>
+<li>
+<p>Make Replay Flight run in realtime again. It had been set to
+run at 10x speed by mistake.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosdroid_2">E.14.3. AltosDroid</h4>
+<div class="paragraph">
+<p>AltosDroid New Features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add offline map support using mapping code from AltosUI.</p>
+</li>
+<li>
+<p>Support TeleDongle (and TeleBT via USB) on devices
+supporting USB On-The-Go.</p>
+</li>
+<li>
+<p>Display additional TeleMega pyro channel status in Pad tab.</p>
+</li>
+<li>
+<p>Switch between metric and imperial units.</p>
+</li>
+<li>
+<p>Monitor TeleBT battery voltage.</p>
+</li>
+<li>
+<p>Track multiple devices at the same time, selecting between
+them with a menu or using the map.</p>
+</li>
+<li>
+<p>Add hybrid, satellite and terrain map types.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosDroid Fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use standard Android display conventions so that a menu
+button is available in the application title bar.</p>
+</li>
+<li>
+<p>Adjust layout to work on large and small screens; shrinking
 the go/no-go lights in smaller environments to try and make
-everything visible.
-</li><li class="listitem">
-Make voice announcements depend on current tab.
-</li><li class="listitem">
-Compute adjustment to current travel direction while in
-motion towards rocket.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_6"></a>E.15. Release Notes for Version 1.6</h2></div></div></div><p>Version 1.6 includes support for our updated TeleDongle v3.0
+everything visible.</p>
+</li>
+<li>
+<p>Make voice announcements depend on current tab.</p>
+</li>
+<li>
+<p>Compute adjustment to current travel direction while in
+motion towards rocket.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_6">E.15. Release Notes for Version 1.6</h3>
+<div class="paragraph">
+<p>Version 1.6 includes support for our updated TeleDongle v3.0
 product and bug fixes in in the flight software for all our boards
-and ground station interfaces.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_15"></a>E.15.1. AltOS</h3></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleDongle v3.0 boards.
-</li></ul></div><p>AltOS Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Don’t beep out the continuity twice by accident in idle mode.
+and ground station interfaces.</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_15">E.15.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleDongle v3.0 boards.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Don&#8217;t beep out the continuity twice by accident in idle mode.
 If the battery voltage report takes longer than the initialiation
-sequence, the igniter continuity would get reported twice.
-</li><li class="listitem">
-Record all 32 bits of gyro calibration data in TeleMega and
+sequence, the igniter continuity would get reported twice.</p>
+</li>
+<li>
+<p>Record all 32 bits of gyro calibration data in TeleMega and
 EasyMega log files. This fixes computation of the gyro rates
-in AltosUI.
-</li><li class="listitem">
-Change TeleDongle LED usage. Green LED flashes when valid
+in AltosUI.</p>
+</li>
+<li>
+<p>Change TeleDongle LED usage. Green LED flashes when valid
 packet is received. Red LED flashes when invalid packet is
-received.
-</li><li class="listitem">
-Replace LPC11U14 SPI driver with non-interrupt version. The
+received.</p>
+</li>
+<li>
+<p>Replace LPC11U14 SPI driver with non-interrupt version. The
 interrupt code would occasionally wedge on long transfers
 if interrupts were blocked for too long. This affects all
 released TeleGPS products; if you have a TeleGPS device,
-you’ll want to reflash the firmware.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_9"></a>E.15.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Compute tilt angle from TeleMega and EasyMega log
+you&#8217;ll want to reflash the firmware.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_9">E.15.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI and TeleGPS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Compute tilt angle from TeleMega and EasyMega log
 files. This duplicates the quaternion-based angle tracking
 code from the flight firmware inside the ground station
 software so that post-flight analysis can include evaluation
-of the tilt angle.
-</li><li class="listitem">
-Shows the tool button window when starting with a data file
+of the tilt angle.</p>
+</li>
+<li>
+<p>Shows the tool button window when starting with a data file
 specified. This means that opening a data file from the file
 manager will now bring up the main window to let you operate
-the whole application.
-</li></ul></div><p>AltosUI Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Show the <span class="emphasis"><em>Connecting</em></span> dialog when using Monitor Idle. Lets
+the whole application.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Show the 'Connecting' dialog when using Monitor Idle. Lets
 you cancel the Monitor Idle startup when connecting over the
-radio link.
-</li><li class="listitem">
-Make <span class="emphasis"><em>Monitor Idle</em></span> work for TeleGPS devices when connected
-over USB. It’s nice for testing without needing to broadcast
-over the radio.
-</li><li class="listitem">
-Use different Windows API to discover USB devices. This
+radio link.</p>
+</li>
+<li>
+<p>Make 'Monitor Idle' work for TeleGPS devices when connected
+over USB. It&#8217;s nice for testing without needing to broadcast
+over the radio.</p>
+</li>
+<li>
+<p>Use different Windows API to discover USB devices. This
 works better on my Windows 7 box, and will be used if the
-older API fails to provide the necessary information.
-</li><li class="listitem">
-Look in more places in the registry to try and identify the
+older API fails to provide the necessary information.</p>
+</li>
+<li>
+<p>Look in more places in the registry to try and identify the
 installed Java version on Windows. If you install the
 default 32-bit version of Windows on a 64-bit OS, the Java
 registry information is hiding \SOFTWARE\Wow6432Node for
-some reason.
-</li><li class="listitem">
-Fix file association on Windows by searching for the
+some reason.</p>
+</li>
+<li>
+<p>Fix file association on Windows by searching for the
 javaw.exe program instead of assuming it is in
 %SYSTEMROOT%. This makes double-clicking on Altus Metrum
-data files in the file manager work correctly.
-</li><li class="listitem">
-When replaying a file, put <span class="emphasis"><em>done</em></span> in the Age field when we
-reach the end of the file, instead of continuing to count forever.
-</li><li class="listitem">
-In the Scan Channels code, wait for five seconds if we see
+data files in the file manager work correctly.</p>
+</li>
+<li>
+<p>When replaying a file, put 'done' in the Age field when we
+reach the end of the file, instead of continuing to count forever.</p>
+</li>
+<li>
+<p>In the Scan Channels code, wait for five seconds if we see
 any packet. This is needed because AltOS now sends the
 callsign, serial number and flight number only once every
-five seconds these days.
-</li><li class="listitem">
-In the Scan Channels code, reset pending flight state
+five seconds these days.</p>
+</li>
+<li>
+<p>In the Scan Channels code, reset pending flight state
 information each time we change channels. This avoids having
-flight computers appear on multiple frequencies by accident.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_5"></a>E.16. Release Notes for Version 1.5</h2></div></div></div><p>Version 1.5 is a major release. It includes support for our new
+flight computers appear on multiple frequencies by accident.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_5">E.16. Release Notes for Version 1.5</h3>
+<div class="paragraph">
+<p>Version 1.5 is a major release. It includes support for our new
 EasyMega product, new features and bug fixes in in the flight
-software for all our boards and the AltosUI ground station</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_16"></a>E.16.1. AltOS</h3></div></div></div><p>AltOS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for EasyMega boards.
-</li><li class="listitem">
-Make the APRS SSID be configurable. This lets you track
+software for all our boards and the AltosUI ground station</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_16">E.16.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for EasyMega boards.</p>
+</li>
+<li>
+<p>Make the APRS SSID be configurable. This lets you track
 different rockets on the same receiver without getting
-things mixed up.
-</li><li class="listitem">
-Report extra pyro channel continuity state on EasyMega and
+things mixed up.</p>
+</li>
+<li>
+<p>Report extra pyro channel continuity state on EasyMega and
 TeleMega via the beeper. This lets you easily verify flight
 readiness on these boards after powering up the electronics
-on the rail.
-</li><li class="listitem">
-Add lower telemetry data rates (2400 and 9600 bps) to
+on the rail.</p>
+</li>
+<li>
+<p>Add lower telemetry data rates (2400 and 9600 bps) to
 increase telemetry radio range. This reduces the amount of
 data received as well as increasing battery consumption in
-the transmitter.
-</li><li class="listitem">
-Change TeleGPS to have only a single log, and append new
+the transmitter.</p>
+</li>
+<li>
+<p>Change TeleGPS to have only a single log, and append new
 data to it rather than using seperate per-flight logs. This
 avoids accidentally filling up log storage by turning
-TeleGPS on/off several times.
-</li></ul></div><p>AltOS Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Increase the maximum range for altitude values from +/-32767m
+TeleGPS on/off several times.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Increase the maximum range for altitude values from +/-32767m
 to +/-2147483647m, allowing the flight computers to function
-correctly above the 32km level.
-</li><li class="listitem">
-Continuously test pyro firing conditions during delay stage,
+correctly above the 32km level.</p>
+</li>
+<li>
+<p>Continuously test pyro firing conditions during delay stage,
 inhibiting the pyro channel if the test fails. This prevents
 firing pyro charges where the conditions were good before
-the delay, but become bad before the delay expires.
-</li><li class="listitem">
-Allow negative numbers in pyro configuration values. This
+the delay, but become bad before the delay expires.</p>
+</li>
+<li>
+<p>Allow negative numbers in pyro configuration values. This
 lets you specify things like descending speed or
-deceleration.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_10"></a>E.16.2. AltosUI and TeleGPS Applications</h3></div></div></div><p>AltosUI and TeleGPS New Features</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Support telemetry baud rate selection. Adds menus to
+deceleration.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_10">E.16.2. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>AltosUI and TeleGPS New Features</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Support telemetry baud rate selection. Adds menus to
 the flight monitoring and configuration for baud rate
-selection.
-</li><li class="listitem">
-Support APRS SSID configuration.
-</li><li class="listitem">
-Integrate with file managers. This provides icons for all of
+selection.</p>
+</li>
+<li>
+<p>Support APRS SSID configuration.</p>
+</li>
+<li>
+<p>Integrate with file managers. This provides icons for all of
 our file types and associates our application with the files
 so that using a file manager to open a AltOS data file
-results in launching our application.
-</li></ul></div><p>AltosUI Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Make the <span class="emphasis"><em>Graph</em></span> button on the landed tab work again.
-</li><li class="listitem">
-Make tests for Java on Windows a bit smarter, and also
+results in launching our application.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make the 'Graph' button on the landed tab work again.</p>
+</li>
+<li>
+<p>Make tests for Java on Windows a bit smarter, and also
 provide the user with the option to skip installing Java for
-cases where we just can’t figure out what version is installed.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_4_2"></a>E.17. Release Notes for Version 1.4.2</h2></div></div></div><p>Version 1.4.2 is a minor release. It fixes Java-related install issues on
-Windows</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_11"></a>E.17.1. AltosUI and TeleGPS Applications</h3></div></div></div><p>Windows Install Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Checks for Java installation data in more registry locations.
-</li><li class="listitem">
-Allows user to bypass Java installation in case the
-detection fails.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_4_1"></a>E.18. Release Notes for Version 1.4.1</h2></div></div></div><p>Version 1.4.1 is a minor release. It fixes install issues on
+cases where we just can&#8217;t figure out what version is installed.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_4_2">E.17. Release Notes for Version 1.4.2</h3>
+<div class="paragraph">
+<p>Version 1.4.2 is a minor release. It fixes Java-related install issues on
+Windows</p>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_11">E.17.1. AltosUI and TeleGPS Applications</h4>
+<div class="paragraph">
+<p>Windows Install Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Checks for Java installation data in more registry locations.</p>
+</li>
+<li>
+<p>Allows user to bypass Java installation in case the
+detection fails.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_4_1">E.18. Release Notes for Version 1.4.1</h3>
+<div class="paragraph">
+<p>Version 1.4.1 is a minor release. It fixes install issues on
 Windows and provides the missing TeleMetrum V2.0 firmware. There
-aren’t any changes to the firmware or host applications at
+aren&#8217;t any changes to the firmware or host applications at
 all. All Windows users will want to upgrade to get the signed
 driver, but Mac and Linux users who do not need the TeleMetrum
-V2.0 firmware image will not need to upgrade.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_and_telegps_applications_12"></a>E.18.1. AltosUI and TeleGPS Applications:</h3></div></div></div><p>Windows Install Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Provide signed Windows driver files. This should avoid any need to
-disable driver signature checking on Windows 7 or 8.
-</li><li class="listitem">
-Fix Java version detection and download. Previously, the
+V2.0 firmware image will not need to upgrade.</p>
+</div>
+<div class="sect3">
+<h4 id="_altosui_and_telegps_applications_12">E.18.1. AltosUI and TeleGPS Applications:</h4>
+<div class="paragraph">
+<p>Windows Install Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide signed Windows driver files. This should avoid any need to
+disable driver signature checking on Windows 7 or 8.</p>
+</li>
+<li>
+<p>Fix Java version detection and download. Previously, the
 installer would only look for Java 6 or 7 and insist on
 downloading its own Java bits if there was something else
-installed. Furthermore, the 64-bit Java link provided didn’t
+installed. Furthermore, the 64-bit Java link provided didn&#8217;t
 work for anyone other than Keith, making it impossible to
-install AltOS on any machine with Java SE 8 installed.
-</li></ul></div><p>Other Fixes</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Include 1.4 firmware for TeleMetrum V2.0. None of the
-installers shipped this file. Now it’s included in the AltOS
-packages for Linux, Mac and Windows.
-</li><li class="listitem">
-Include Google Application Key for map downloading. The 1.4
-release didn’t have this key in the released version of the
-software, making map downloading fail for most people.
-</li></ul></div><p></p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_release_notes_for_version_1_4"></a>E.19. Release Notes for Version 1.4</h2></div></div></div><p>Version 1.4 is a major release. It includes support for our new
+install AltOS on any machine with Java SE 8 installed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other Fixes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Include 1.4 firmware for TeleMetrum V2.0. None of the
+installers shipped this file. Now it&#8217;s included in the AltOS
+packages for Linux, Mac and Windows.</p>
+</li>
+<li>
+<p>Include Google Application Key for map downloading. The 1.4
+release didn&#8217;t have this key in the released version of the
+software, making map downloading fail for most people.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_4">E.19. Release Notes for Version 1.4</h3>
+<div class="paragraph">
+<p>Version 1.4 is a major release. It includes support for our new
 TeleGPS product, new features and bug fixes in in the flight
-software for all our boards and the AltosUI ground station</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_17"></a>E.19.1. AltOS</h3></div></div></div><p>AltOS new features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add support for TeleGPS boards.
-</li><li class="listitem">
-Make the beeper tone configurable, making it
+software for all our boards and the AltosUI ground station</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_17">E.19.1. AltOS</h4>
+<div class="paragraph">
+<p>AltOS new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleGPS boards.</p>
+</li>
+<li>
+<p>Make the beeper tone configurable, making it
 possible to distinguish between two Altus Metrum
-products in the same ebay.
-</li><li class="listitem">
-Make the firing time for extra pyro channels
+products in the same ebay.</p>
+</li>
+<li>
+<p>Make the firing time for extra pyro channels
 configurable, allowing longer (or shorter) than the
 default 50ms.  Only relevant for TeleMega at this
-time.
-</li></ul></div><p>AltOS fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Replace the <span class="emphasis"><em>dit dit dit</em></span> tones at startup with the
+time.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltOS fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Replace the 'dit dit dit' tones at startup with the
 current battery voltage, measured in tenths of a
 volt. This lets you check the battery voltage
 without needing telemetry, which is especially
-useful on EasyMini.
-</li><li class="listitem">
-Change state beeping to "Farnsworth spacing", which
-means they’re quite a bit faster than before, and so
-they take less time to send.
-</li><li class="listitem">
-Fix bug preventing the selection of the <span class="emphasis"><em>Flight
-State After</em></span> mode in pyro configuration.
-</li><li class="listitem">
-Fix bug where erasing flights would reset the flight
-number to 2 on TeleMega and TeleMetrum v2.
-</li><li class="listitem">
-Fix u-Blox GPS driver to mark course and speed data
-as being present.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altosui_application"></a>E.19.2. AltosUI Application</h3></div></div></div><p>AltosUI new features:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Add zooming and new content types (terrain and road
+useful on EasyMini.</p>
+</li>
+<li>
+<p>Change state beeping to "Farnsworth spacing", which
+means they&#8217;re quite a bit faster than before, and so
+they take less time to send.</p>
+</li>
+<li>
+<p>Fix bug preventing the selection of the 'Flight
+State After' mode in pyro configuration.</p>
+</li>
+<li>
+<p>Fix bug where erasing flights would reset the flight
+number to 2 on TeleMega and TeleMetrum v2.</p>
+</li>
+<li>
+<p>Fix u-Blox GPS driver to mark course and speed data
+as being present.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_application">E.19.2. AltosUI Application</h4>
+<div class="paragraph">
+<p>AltosUI new features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add zooming and new content types (terrain and road
 maps) to map view. Change map storage format from
 PNG to Jpeg, which saves a huge amount of disk
 space. You will need to re-download all of your
-pre-loaded map images.
-</li><li class="listitem">
-Add a distance measuring device to the maps
+pre-loaded map images.</p>
+</li>
+<li>
+<p>Add a distance measuring device to the maps
 view. Select this by using any button other than the
 left one, or by pressing shift or control on the
-keyboard while using the left button.
-</li><li class="listitem">
-Add new <span class="emphasis"><em>Ignitor</em></span> tab to the flight monitor display
-for TeleMega’s extra ignitors.
-</li><li class="listitem">
-Add additional ignitor firing marks and voltages to
+keyboard while using the left button.</p>
+</li>
+<li>
+<p>Add new 'Ignitor' tab to the flight monitor display
+for TeleMega&#8217;s extra ignitors.</p>
+</li>
+<li>
+<p>Add additional ignitor firing marks and voltages to
 the graph so you can see when the ignitors fired,
-along with the ignitor voltages.
-</li><li class="listitem">
-Add GPS course, ground speed and climb rate as
-optional graph elements.
-</li></ul></div><p>AltosUI fixes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-When flashing new firmware, re-try opening the
+along with the ignitor voltages.</p>
+</li>
+<li>
+<p>Add GPS course, ground speed and climb rate as
+optional graph elements.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AltosUI fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When flashing new firmware, re-try opening the
 device as sometimes it takes a while for the
 underlying operating system to recognize that the
 device has rebooted in preparation for the flashing
-operation.
-</li><li class="listitem">
-Hide Tilt Angle in ascent tab for devices that don’t
-have a gyro.
-</li><li class="listitem">
-Increase the width of data lines in the graphs to
-make them easier to read.
-</li><li class="listitem">
-Filter out speed and acceleration spikes caused by
+operation.</p>
+</li>
+<li>
+<p>Hide Tilt Angle in ascent tab for devices that don&#8217;t
+have a gyro.</p>
+</li>
+<li>
+<p>Increase the width of data lines in the graphs to
+make them easier to read.</p>
+</li>
+<li>
+<p>Filter out speed and acceleration spikes caused by
 ejection charge firing when computing the maximum
 values. This provides a more accurate reading of
-those maximums.
-</li><li class="listitem">
-Fix EasyMini voltage displays. Early EasyMini
+those maximums.</p>
+</li>
+<li>
+<p>Fix EasyMini voltage displays. Early EasyMini
 prototypes used a 3.0V regulator, and AltosUI still
 used that value as the basis of the
 computation. Production EasyMini boards have always
@@ -1157,27 +2825,65 @@ shipped with a 3.3V regulator. Also, purple EasyMini
 boards sensed the battery voltage past the blocking
 diode, resulting in a drop of about 150mV from the
 true battery voltage. Compensate for that when
-displaying the value.
-</li><li class="listitem">
-Display error message when trying to configure
+displaying the value.</p>
+</li>
+<li>
+<p>Display error message when trying to configure
 maximum flight log size while the flight computer
-still has flight data stored.
-</li><li class="listitem">
-Handle TeleMetrum and TeleMini eeprom files
+still has flight data stored.</p>
+</li>
+<li>
+<p>Handle TeleMetrum and TeleMini eeprom files
 generated with pre-1.0 firmware. Those ancient
-versions didn’t report the log format, so just use
-the product name instead.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_telegps_application_2"></a>E.19.3. TeleGPS Application</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-New application designed for use with TeleGPS boards.
-</li><li class="listitem">
-Shares code with AltosUI, mostly just trimmed down
-to focus on TeleGPS-related functions.
-</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_documentation_4"></a>E.19.4. Documentation</h3></div></div></div><p>Documentation changes:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Re-create the drill template images; they should
+versions didn&#8217;t report the log format, so just use
+the product name instead.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_telegps_application_2">E.19.3. TeleGPS Application</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>New application designed for use with TeleGPS boards.</p>
+</li>
+<li>
+<p>Shares code with AltosUI, mostly just trimmed down
+to focus on TeleGPS-related functions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation_4">E.19.4. Documentation</h4>
+<div class="paragraph">
+<p>Documentation changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Re-create the drill template images; they should
 print correctly from Firefox at least. Ship these as
-individual PDF files so they’re easy to print.
-</li><li class="listitem">
-Add a description of the <span class="emphasis"><em>Apogee Lockout</em></span> setting,
+individual PDF files so they&#8217;re easy to print.</p>
+</li>
+<li>
+<p>Add a description of the 'Apogee Lockout' setting,
 which prevents the apogee charge from firing for a
-configurable amount of time after boost.
-</li></ul></div></div></div></div></div></body></html>
+configurable amount of time after boost.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version v1.8.7<br>
+Last updated 2019-01-03 00:31:55 -0700
+</div>
+</div>
+</body>
+</html>

@@ -1,106 +1,353 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Loading Map Tiles from Google Maps</title><link rel="stylesheet" type="text/css" href="am.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /></head><body><div xml:lang="en" class="article" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idm1"></a>Loading Map Tiles from Google Maps</h2></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl class="toc"><dt><span class="section"><a href="#_the_google_maps_problem">1. The Google Maps Problem</a></span></dt><dd><dl><dt><span class="section"><a href="#_the_proposed_solution_an_intermediate_service">1.1. The Proposed Solution — An Intermediate Service</a></span></dt></dl></dd><dt><span class="section"><a href="#_altos_map_service">2. AltOS Map Service</a></span></dt><dd><dl><dt><span class="section"><a href="#_altos_map_cgi_script">2.1. AltOS Map CGI Script</a></span></dt><dt><span class="section"><a href="#_altos_map_cache_manager">2.2. AltOS Map Cache Manager</a></span></dt><dt><span class="section"><a href="#_altos_map_uri">2.3. AltOS Map URI</a></span></dt><dt><span class="section"><a href="#_altos_version_uri">2.4. AltOS Version URI</a></span></dt><dt><span class="section"><a href="#_altos_tile_request">2.5. AltOS Tile Request</a></span></dt><dt><span class="section"><a href="#_altos_tile_reply">2.6. AltOS Tile Reply</a></span></dt><dt><span class="section"><a href="#_altos_tile_filename">2.7. AltOS Tile Filename</a></span></dt></dl></dd><dt><span class="section"><a href="#_implementation">3. Implementation</a></span></dt><dd><dl><dt><span class="section"><a href="#_access_control">3.1. Access Control</a></span></dt><dt><span class="section"><a href="#_location_restrictions">3.2. Location Restrictions</a></span></dt><dt><span class="section"><a href="#_per_client_restrictions">3.3. Per-Client Restrictions</a></span></dt><dt><span class="section"><a href="#_cache_lifetime_restrictions">3.4. Cache Lifetime Restrictions.</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_the_google_maps_problem"></a>1. The Google Maps Problem</h2></div></div></div><p>Until recently, Google Maps could be used without fee to fetch map
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="author" content="Keith Packard">
+<meta name="copyright" content="Keith Packard 2018">
+<title>Loading Map Tiles from Google Maps</title>
+<link rel="stylesheet" href="./am-notoc.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Loading Map Tiles from Google Maps</h1>
+<div class="details">
+<span id="author" class="author">Keith Packard</span><br>
+<span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_the_google_maps_problem">The Google Maps Problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Until recently, Google Maps could be used without fee to fetch map
 tiles. Applications could load map tiles anonymously or using a key;
 when used anonymously, the number of tiles that could be loaded per
 day and the rate at which tiles could be loaded was throttled to make
 the API practical only for development purpose. With an application
 key, the number of tiles available per day was much higher, and there
 was no rate limiting. This was usually sufficient for Altos Metrum
-customer use.</p><p>However, this has changed and now there is no way to load map tiles
+customer use.</p>
+</div>
+<div class="paragraph">
+<p>However, this has changed and now there is no way to load map tiles
 anonymously, and any application key must be tied to a credit
 card. The tile cap for free usage is now monthly instead of
 daily. Because the key is tied to a credit card, we should not ship it
 with the application any longer. And because the cap is monthly
 instead of daily, we need some way to control usage by our
-applications.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_the_proposed_solution_an_intermediate_service"></a>1.1. The Proposed Solution — An Intermediate Service</h3></div></div></div><p>To give us some measure of control over tile loading, we will want to
+applications.</p>
+</div>
+<div class="sect2">
+<h3 id="_the_proposed_solution_an_intermediate_service">The Proposed Solution — An Intermediate Service</h3>
+<div class="paragraph">
+<p>To give us some measure of control over tile loading, we will want to
 interpose a server controlled by us between the application and Google
 Maps. This will let us store the Google Maps key in a secure location,
-and also control tile loading by each user.</p><div class="informalfigure"><div class="mediaobject" align="center"><img src="map-loading.svg" align="middle" alt="map-loading.svg" /></div></div></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_altos_map_service"></a>2. AltOS Map Service</h2></div></div></div><p>This service receives a URL request and replies with either a map tile
+and also control tile loading by each user.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="map-loading.svg" alt="map loading">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_altos_map_service">AltOS Map Service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This service receives a URL request and replies with either a map tile
 or an error. It is functionally equivalent to the Google Maps service,
-except that it can control use of the Google Maps API.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_map_cgi_script"></a>2.1. AltOS Map CGI Script</h3></div></div></div><p>The AltOS Map CGI Script is a straightforward script which connects to
+except that it can control use of the Google Maps API.</p>
+</div>
+<div class="sect2">
+<h3 id="_altos_map_cgi_script">AltOS Map CGI Script</h3>
+<div class="paragraph">
+<p>The AltOS Map CGI Script is a straightforward script which connects to
 the AltOS Map Cache Manager, transmits a URL describing the desired
 map tile and receives back a filename (or error), then sends the
 contents of that file back through Apache to the requesting
-application. The name of the script is <span class="emphasis"><em>altos-map</em></span>.</p><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_inputs"></a>Inputs</h4></div></div></div><p>The AltOS Map CGI Script will parse the provided AltOS Map URI or
-AltOS Version URI.</p></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="_outputs"></a>Outputs</h4></div></div></div><p>For AltOS Map URLs, the CGI Script will return either the contents of
-the associated Google Map tile or an error indicating what failed:</p><p><span class="emphasis"><em>200 OK</em></span>: The map tile image data or version information</p><p><span class="emphasis"><em>400 Bad Request</em></span>: The URL is malformed or not compatible with the
-version supported by the service</p><p><span class="emphasis"><em>403 Forbidden</em></span>: The map tile is outside the areas supported by the
-current AltOS Map service area</p><p><span class="emphasis"><em>408 Request Timeout</em></span>: Attempts to fetch the tile from Google Maps
-timed out.</p><p><span class="emphasis"><em>503 Service Unavailable</em></span>: The service is temporarily refusing to
-satisfy this request due to resource limitations.</p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_map_cache_manager"></a>2.2. AltOS Map Cache Manager</h3></div></div></div><p>This is a service running on the local machine and available over a
+application. The name of the script is 'altos-map'.</p>
+</div>
+<div class="sect3">
+<h4 id="_inputs">Inputs</h4>
+<div class="paragraph">
+<p>The AltOS Map CGI Script will parse the provided AltOS Map URI or
+AltOS Version URI.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_outputs">Outputs</h4>
+<div class="paragraph">
+<p>For AltOS Map URLs, the CGI Script will return either the contents of
+the associated Google Map tile or an error indicating what failed:</p>
+</div>
+<div class="paragraph">
+<p><em>200 OK</em>: The map tile image data or version information</p>
+</div>
+<div class="paragraph">
+<p><em>400 Bad Request</em>: The URL is malformed or not compatible with the
+version supported by the service</p>
+</div>
+<div class="paragraph">
+<p><em>403 Forbidden</em>: The map tile is outside the areas supported by the
+current AltOS Map service area</p>
+</div>
+<div class="paragraph">
+<p><em>408 Request Timeout</em>: Attempts to fetch the tile from Google Maps
+timed out.</p>
+</div>
+<div class="paragraph">
+<p><em>503 Service Unavailable</em>: The service is temporarily refusing to
+satisfy this request due to resource limitations.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altos_map_cache_manager">AltOS Map Cache Manager</h3>
+<div class="paragraph">
+<p>This is a service running on the local machine and available over a
 local network socket. It translates an AltOS Map URL into a local
 filename containing the contents of the associated Google Maps
-tile. The name of the cache manager is <span class="emphasis"><em>altos-mapd</em></span>. It will listen
-for requests on port 16717.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_map_uri"></a>2.3. AltOS Map URI</h3></div></div></div><p>AltOS uses a limited subset of the Google Maps, and the AltOS Map URIs
+tile. The name of the cache manager is 'altos-mapd'. It will listen
+for requests on port 16717.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altos_map_uri">AltOS Map URI</h3>
+<div class="paragraph">
+<p>AltOS uses a limited subset of the Google Maps, and the AltOS Map URIs
 only encode those elements which we currently use. This specification
 describes AltOS Map URI format version 1.0.0. The application is
 required to provide URIs compatible with the format supported by the
-server. The elements of the  elements are:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Latitude of center point
-</li><li class="listitem">
-Longitude of center point
-</li><li class="listitem">
-Zoom level (from bushes to planets)
-</li></ul></div><p>Encoding this in a URI is straightforward:</p><pre class="literallayout">altos-map?lat=&lt;lat&gt;&amp;lon=&lt;lon&gt;&amp;zoom=&lt;zoom&gt;</pre><p>Latitude and longitude are both encoded using decimal degrees with 6
-digits following the decimal point.</p><p>Zoom levels can range from 1 (world) to 20 (buildings). Higher zoom
-levels show smaller areas at greater detail.</p><p>The only Google Map type supported by version 1.0.0 of the service is
-“hybrid”, which combines road graphics on top of satellite images.</p><p>Version 1.0.0 always returns images which are 512x512 pixels.</p><p>If we need additional elements in the URL, we can add them in the
-future and bump the supported version number.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_version_uri"></a>2.4. AltOS Version URI</h3></div></div></div><p>To allow applications to discover what AltOS Map URI version is supported by the
+server. The elements of the  elements are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Latitude of center point</p>
+</li>
+<li>
+<p>Longitude of center point</p>
+</li>
+<li>
+<p>Zoom level (from bushes to planets)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Encoding this in a URI is straightforward:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>altos-map?lat=&lt;lat&gt;&amp;lon=&lt;lon&gt;&amp;zoom=&lt;zoom&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Latitude and longitude are both encoded using decimal degrees with 6
+digits following the decimal point.</p>
+</div>
+<div class="paragraph">
+<p>Zoom levels can range from 1 (world) to 20 (buildings). Higher zoom
+levels show smaller areas at greater detail.</p>
+</div>
+<div class="paragraph">
+<p>The only Google Map type supported by version 1.0.0 of the service is
+“hybrid”, which combines road graphics on top of satellite images.</p>
+</div>
+<div class="paragraph">
+<p>Version 1.0.0 always returns images which are 512x512 pixels.</p>
+</div>
+<div class="paragraph">
+<p>If we need additional elements in the URL, we can add them in the
+future and bump the supported version number.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altos_version_uri">AltOS Version URI</h3>
+<div class="paragraph">
+<p>To allow applications to discover what AltOS Map URI version is supported by the
 AltOS Map service, the application may query the version of the API
 supported using the Version URI. The application provides the version
 that it supports and the AltOS Map service returns a version not
-greater than the client version:</p><pre class="literallayout">altos-map?version=&lt;client-major&gt;.&lt;client-minor&gt;.&lt;client-revision&gt;
+greater than the client version:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>altos-map?version=&lt;client-major&gt;.&lt;client-minor&gt;.&lt;client-revision&gt;
 →
-&lt;server-major&gt;.&lt;server-minor&gt;.&lt;server.revision&gt;</pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_tile_request"></a>2.5. AltOS Tile Request</h3></div></div></div><p>The AltOS Map CGI Script parses the Map URI and passes that
+&lt;server-major&gt;.&lt;server-minor&gt;.&lt;server.revision&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altos_tile_request">AltOS Tile Request</h3>
+<div class="paragraph">
+<p>The AltOS Map CGI Script parses the Map URI and passes that
 information to the AltOS Map Cache Manager using the AltOS Tile
 Specifier syntax. This is a JSON representation of the same data
-provided by the URI:</p><pre class="literallayout">{
-        "lat": &lt;latitude&gt;,
-        "lon": &lt;longitude&gt;,
-        "zoom": &lt;zoom-level&gt;,
-        "remote_addr": "&lt;IPv4 or IPv6 address of requesting client&gt;"
-}</pre><p>Latitude and longitude are both encoded using decimal degrees with 6
-digits following the decimal point.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_tile_reply"></a>2.6. AltOS Tile Reply</h3></div></div></div><p>Sent back from the Cache Manager to the CGI Script, this encodes the
+provided by the URI:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{
+	"lat": &lt;latitude&gt;,
+	"lon": &lt;longitude&gt;,
+	"zoom": &lt;zoom-level&gt;,
+	"remote_addr": "&lt;IPv4 or IPv6 address of requesting client&gt;"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Latitude and longitude are both encoded using decimal degrees with 6
+digits following the decimal point.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altos_tile_reply">AltOS Tile Reply</h3>
+<div class="paragraph">
+<p>Sent back from the Cache Manager to the CGI Script, this encodes the
 status of the request and the filename of any tile data available. It
-is encoded in JSON format:</p><pre class="literallayout">{
-        "status": &lt;HTTP status&gt;,
-        "filename": "&lt;absolute path to image file&gt;",
-        "content_type": "&lt;HTTP content-type&gt;"
-}</pre><p>The “filename” and “content-type” elements are only included when
-the status is <span class="emphasis"><em>200 OK</em></span>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_altos_tile_filename"></a>2.7. AltOS Tile Filename</h3></div></div></div><p>While the current AltOS Map URI version only supports a limited subset
-of the Google Maps functionality, we’ll encode more of that data in
+is encoded in JSON format:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{
+	"status": &lt;HTTP status&gt;,
+	"filename": "&lt;absolute path to image file&gt;",
+	"content_type": "&lt;HTTP content-type&gt;"
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The “filename” and “content-type” elements are only included when
+the status is <em>200 OK</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altos_tile_filename">AltOS Tile Filename</h3>
+<div class="paragraph">
+<p>While the current AltOS Map URI version only supports a limited subset
+of the Google Maps functionality, we&#8217;ll encode more of that data in
 filenames to allow for easy expansion of functionality in the
-future. The elements of an AltOS Tile filename consist of :</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
-Latitude, with N/S indicator (instead of a sign)
-</li><li class="listitem">
-Longitude, with E/W indicator (instead of a sign)
-</li><li class="listitem">
-Map type.
-</li><li class="listitem">
-Zoom level
-</li><li class="listitem">
-Scale factor. Scale, and the preceding hyphen are omitted for a scale factor of 1.
-</li><li class="listitem">
-Image format suffix. <span class="emphasis"><em>.jpg</em></span> for JPEG files and <span class="emphasis"><em>.png</em></span> for PNG files.
-</li></ul></div><p>Latitude and longitude are both encoded using decimal degrees with 6
-digits following the decimal point.</p><p>Map type is one of :</p><p><span class="emphasis"><em>hybrid</em></span>: Road graphics over satellite images
-<span class="emphasis"><em>roadmap</em></span>: Symbolic road map
-<span class="emphasis"><em>satellite</em></span>: Un-annotated satellite images
-<span class="emphasis"><em>terrain</em></span>: Topographic map</p><p>Here’s what map filenames look like:</p><pre class="literallayout">map-{N,S}&lt;lat&gt;,{E,W}&lt;lon&gt;-&lt;type&gt;-&lt;zoom&gt;[-&lt;scale&gt;].&lt;format&gt;</pre><pre class="literallayout">map-N36.508532,W107.823944-hybrid-18.jpg</pre><p>To transmit this name from the AltOS Map Cache Manager back to the
-Altos Map CGI script, the filename will be wrapped in a JSON string</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_implementation"></a>3. Implementation</h2></div></div></div><p>The AltOS Map CGI Script and AltOS Map Cache Manager will both be
+future. The elements of an AltOS Tile filename consist of :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Latitude, with N/S indicator (instead of a sign)</p>
+</li>
+<li>
+<p>Longitude, with E/W indicator (instead of a sign)</p>
+</li>
+<li>
+<p>Map type.</p>
+</li>
+<li>
+<p>Zoom level</p>
+</li>
+<li>
+<p>Scale factor. Scale, and the preceding hyphen are omitted for a scale factor of 1.</p>
+</li>
+<li>
+<p>Image format suffix. '.jpg' for JPEG files and '.png' for PNG files.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Latitude and longitude are both encoded using decimal degrees with 6
+digits following the decimal point.</p>
+</div>
+<div class="paragraph">
+<p>Map type is one of :</p>
+</div>
+<div class="paragraph">
+<p><em>hybrid</em>: Road graphics over satellite images
+<em>roadmap</em>: Symbolic road map
+<em>satellite</em>: Un-annotated satellite images
+<em>terrain</em>: Topographic map</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s what map filenames look like:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>map-{N,S}&lt;lat&gt;,{E,W}&lt;lon&gt;-&lt;type&gt;-&lt;zoom&gt;[-&lt;scale&gt;].&lt;format&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>map-N36.508532,W107.823944-hybrid-18.jpg</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To transmit this name from the AltOS Map Cache Manager back to the
+Altos Map CGI script, the filename will be wrapped in a JSON string</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementation">Implementation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The AltOS Map CGI Script and AltOS Map Cache Manager will both be
 implemented in Java as much of the required Google Maps infrastructure
-is already available in that language.</p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_access_control"></a>3.1. Access Control</h3></div></div></div><p>No access control to the service is planned at this point. If
+is already available in that language.</p>
+</div>
+<div class="sect2">
+<h3 id="_access_control">Access Control</h3>
+<div class="paragraph">
+<p>No access control to the service is planned at this point. If
 necessary, we could implement username/password access control for each
-user of the service.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_location_restrictions"></a>3.2. Location Restrictions</h3></div></div></div><p>To avoid unbounded usage, and confine the utility of this service to
+user of the service.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_location_restrictions">Location Restrictions</h3>
+<div class="paragraph">
+<p>To avoid unbounded usage, and confine the utility of this service to
 AltOS users, the service will only offer map tiles whose center
 location is within 10 miles of one of the sites registered in
-our launch sites database.</p><p>To allow testing of the registered launch site database, a database of
+our launch sites database.</p>
+</div>
+<div class="paragraph">
+<p>To allow testing of the registered launch site database, a database of
 privileged clients will be supported. Privileged clients will have
-unlimited access to the service.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_per_client_restrictions"></a>3.3. Per-Client Restrictions</h3></div></div></div><p>We should implement a per-day limit on the number of tiles provided to
+unlimited access to the service.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_per_client_restrictions">Per-Client Restrictions</h3>
+<div class="paragraph">
+<p>We should implement a per-day limit on the number of tiles provided to
 a particular requesting client. We can also rate limit clients to a
 certain number of tiles per minute to reduce the bandwidth consumed
-out of our server.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="_cache_lifetime_restrictions"></a>3.4. Cache Lifetime Restrictions.</h3></div></div></div><p>The Google Maps API allows for caching of map data for no more than 30
+out of our server.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cache_lifetime_restrictions">Cache Lifetime Restrictions.</h3>
+<div class="paragraph">
+<p>The Google Maps API allows for caching of map data for no more than 30
 days. To honor this, the Cache Manager will re-fetch any requested
 tiles when the cached version is older than this. If the fetch fails,
 the cache manager will continue to serve the data from the cached
-version of the file.</p></div></div></div></body></html>
+version of the file.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-01-03 00:11:54 -0700
+</div>
+</div>
+</body>
+</html>
