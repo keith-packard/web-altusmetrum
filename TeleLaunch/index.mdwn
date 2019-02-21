@@ -153,7 +153,11 @@ The TeleFireEight hardware design is available from
 
 There's a cheat-sheat inside the lid of TeleLCO that has proven to be
 completely sufficient for our prototype users to figure out and use the 
-system, but we do plan to eventually write a real manual.
+system.
+
+A complete manual for the TeleLaunch system is available in 
+[html](../AltOS/doc/telelaunch.html) and [pdf](../AltOS/doc/telelaunch.pdf) 
+formats.
 
 ## Software ##
 
