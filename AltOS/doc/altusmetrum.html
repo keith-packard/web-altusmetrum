@@ -4733,12 +4733,31 @@ identified by the square pad around it, and then the
 pins could sequentially across the board, making Pin 6
 the one on the other end of the row.</p>
 </dd>
+<dt class="hdlist1">TeleGPS v1</dt>
+<dd>
+<p>Connect pin 32 on the CPU to ground.  Pin 32 is the
+right-most pin on the bottom edge of the CPU when the
+board is oriented with the USB and battery connectors
+to the right.</p>
+</dd>
+<dt class="hdlist1">TeleGPS v2</dt>
+<dd>
+<p>Connect together pins 1 and 5 of the Debug connector.
+Pin 1 is the pin with the square pad around the hole.</p>
+</dd>
 <dt class="hdlist1">TeleDongle v3</dt>
 <dd>
 <p>Connect pin 32 on the CPU to ground. Pin 32 is closest
 to the USB wires on the row of pins towards the center
 of the board. Ground is available on the capacitor
 next to it, on the end towards the USB wires.</p>
+</dd>
+<dt class="hdlist1">TeleBT v3</dt>
+<dd>
+<p>Connect pin 4 on the CPU to 3.3V, which can be done by
+connecting pin 1 to pin 4.  Pin 1 is the left pin on
+the lower edge of the chip when the unit is oriented
+such that the SMA is at the top.</p>
 </dd>
 <dt class="hdlist1">TeleBT v4</dt>
 <dd>
@@ -7944,7 +7963,7 @@ and distance are reported.</p>
 <div id="footer">
 <div id="footer-text">
 Version v1.9<br>
-Last updated 2019-01-03 00:56:49 -0700
+Last updated 2019-02-20 04:28:58 -0700
 </div>
 </div>
 </body>

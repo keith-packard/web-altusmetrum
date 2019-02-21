@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="author" content="Bdale Garbee">
+<meta name="copyright" content="Bdale Garbee 2019">
+<title>TeleLaunch: The Altus Metrum Wireless Launch Control System</title>
+<link rel="stylesheet" href="./am.css">
+</head>
+<body class="book">
+<div id="header">
+<h1>TeleLaunch: The Altus Metrum Wireless Launch Control System</h1>
+<div class="details">
+<span id="author" class="author">Bdale Garbee</span><br>
+<span id="email" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
+<span id="revnumber">version v0.1,</span>
+<span id="revdate">16 Feb 2019</span>
+<br><span id="revremark">initial draft</span>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_license">License</a></li>
+<li><a href="#_acknowledgments">Acknowledgments</a></li>
+<li><a href="#_introduction_and_overview">1. Introduction and Overview</a></li>
+<li><a href="#_configuration">2. Configuration</a>
+<ul class="sectlevel2">
+<li><a href="#_connecting_to_a_unit">2.1. Connecting to a Unit</a></li>
+<li><a href="#_telelco">2.2. TeleLCO</a></li>
+<li><a href="#_telefireeight">2.3. TeleFireEight</a></li>
+<li><a href="#_operating_frequency">2.4. Operating Frequency</a></li>
+<li><a href="#_callsign">2.5. Callsign</a></li>
+<li><a href="#_aes_key">2.6. AES Key</a></li>
+<li><a href="#_bank_number">2.7. Bank Number</a></li>
+</ul>
+</li>
+<li><a href="#_operation">3. Operation</a>
+<ul class="sectlevel2">
+<li><a href="#_charging_batteries">3.1. Charging Batteries</a></li>
+<li><a href="#_setting_up">3.2. Setting Up</a></li>
+<li><a href="#_turning_system_on">3.3. Turning System On</a></li>
+<li><a href="#_launch_one_rocket">3.4. Launch One Rocket</a></li>
+<li><a href="#_launch_a_multi_rocket_drag_race">3.5. Launch A Multi-Rocket "Drag Race"</a></li>
+</ul>
+</li>
+<li><a href="#_specifications">4. Specifications</a></li>
+<li><a href="#_updating_firmware">5. Updating Firmware</a></li>
+<li><a href="#_making_pad_cables">Appendix A: Making Pad Cables</a></li>
+<li><a href="#_troubleshooting">Appendix B: Troubleshooting</a>
+<ul class="sectlevel2">
+<li><a href="#_radio_signal_strength">B.1. Radio Signal Strength</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div id="logo" class="imageblock">
+<div class="content">
+<a class="image" href="https://altusmetrum.org"><img src="altusmetrum-oneline.svg" alt="Altus Metrum"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copyright © 2018 Bdale Garbee and Keith Packard</p>
+</div>
+<div class="paragraph">
+<p>This document is released under the terms of the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons ShareAlike 3.0 License</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acknowledgments">Acknowledgments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Our profound thanks to Terry Lee for major contributions to making
+the TeleLaunch system something we could actually package and sell!</p>
+</div>
+<div class="paragraph">
+<p>Tripoli Colorado, Oregon Rocketry, New River Valley Rocketry, and
+the National Association of Rocketry helped instigate this work,
+and/or were early adopters of TeleLaunch.  We learned a lot working
+with each organization.  Thank you!</p>
+</div>
+<div class="paragraph">
+<p>Thanks also to our friends in the Kloudbusters, both for helping
+us understand what it takes to run truly great large-scale launches,
+and for providing some completely deserved, scathing feedback on
+an early prototype of TeleLCO.</p>
+</div>
+<div class="paragraph">
+<p>Have fun using these products, and we hope to meet all of you
+out on a rocket flight line somewhere.</p>
+</div>
+<div class="verseblock">
+<pre class="content">Bdale Garbee, KB0G
+NAR #87103, TRA #12201</pre>
+</div>
+<div class="verseblock">
+<pre class="content">Keith Packard, KD7SQG
+NAR #88757, TRA #12200</pre>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction_and_overview">1. Introduction and Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Welcome to the Altus Metrum community!  Our circuits and software reflect
+our passion for both hobby rocketry and Free Software.  We hope their
+capabilities and performance will delight you in every way, but by
+releasing all of our hardware and software designs under open licenses,
+we also hope to empower you to take as active a role in our collective
+future as you wish!</p>
+</div>
+<div class="paragraph">
+<p>Thank you for your interest in TeleLaunch, a wireless control system for
+launching hobby rockets.  Each TeleLaunch system contains at least two units,
+a launch control box (TeleLCO) and one or more launch initiation boxes
+(TeleFire).  In this manual, we hope to provide all the information required
+to configure and successfully operate a TeleLaunch system.</p>
+</div>
+<div class="paragraph">
+<p>Unlike other Altus Metrum products, that are usually provided as circuit
+boards that the user must arrange to mount and wire up, all products in the
+TeleLaunch system are sold as fully packaged, almost-ready-to-use units.  This
+means that with only minimal one-time configuration of each unit, a TeleLaunch
+system can be made ready for use very quickly.</p>
+</div>
+<div class="paragraph">
+<p>Because documentation is just as prone as software to contain "bugs", and
+can always be improved&#8230;&#8203;  If you have questions that aren&#8217;t answered in this
+manual, or just need a little help figuring things out, we strongly suggest
+joining the Altus Metrum user email list, which you can do by visiting
+<a href="https://lists.gag.com/mailman/listinfo/altusmetrum" class="bare">https://lists.gag.com/mailman/listinfo/altusmetrum</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration">2. Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are 3 things you need to configure identically in each unit
+that is part of a TeleLaunch system for wireless communications to
+succeed.  Those are the operating frequency, the callsign, and a key
+for the AES encryption algorithm.  Additionally, each TeleFire unit
+also needs to be configured with a unique bank number.</p>
+</div>
+<div class="paragraph">
+<p>Please note that these values must match exactly, or the system will
+not operate as expected.  That means the callsign needs to have the
+same choices of upper or lower case, no trailing spaces, etc.  And
+the operating frequency and AES key must match.</p>
+</div>
+<div class="sect2">
+<h3 id="_connecting_to_a_unit">2.1. Connecting to a Unit</h3>
+<div class="paragraph">
+<p>Configuring each unit of a TeleLaunch system requires use of
+a micro USB cable, and a computer with a suitable terminal
+emulation program.  Connect a suitable cable, open your
+favoriate terminal emulation program, and power up the unit.
+By pressing &lt;enter&gt; you should see a command prompt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_telelco">2.2. TeleLCO</h3>
+<div class="paragraph">
+<p>The USB connector on TeleLCO is accessible without
+opening the lid of the Pelican box.  Look for the
+blue dust cap over the connector under the handle.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_telefireeight">2.3. TeleFireEight</h3>
+<div class="paragraph">
+<p>The USB connector on TeleFireEight is located on the
+circuit board.  To access it, open the box and flip
+the lid up.  you should be able to spot a vertical
+micro USB connector on the board near the DIP switch.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<img src="./images/icons/warning.svg" alt="Warning">
+</td>
+<td class="content">
+Please take care when closing the TeleFireEight lid
+not to pinch any wires.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_operating_frequency">2.4. Operating Frequency</h3>
+<div class="paragraph">
+<p>The TeleLaunch system supports operation over much of the
+"70cm" Amateur Radio band, with the filters optimized for a
+center frequency of 435 MHz.  For each system, a single
+operating frequency should be selected and programmed into
+each unit.</p>
+</div>
+<div class="paragraph">
+<p>The default frequency for units leaving the factory is
+435.750 MHz.  Since Altus Metrum flight computers operate
+by default on 10 100khz channels from 434.550 to 435.450 MHz,
+we chose this frequency to be far enough away from flight
+computers to avoid any interference, but still close enough
+to the radio subsystem design center frequency for great
+performance.</p>
+</div>
+<div class="paragraph">
+<p>To configure the frequency, use your terminal emulator to
+issue two commands.  First, use 'c F xxxxxx' where the xxxxxx
+is replaced with the desired operating frequency in kHz.  Then
+use the 'c w' command to save this value into non-volatile
+memory.  For example, the default 435.750 MHz would be
+configured using</p>
+</div>
+<div class="paragraph">
+<p>c f 435750<br>
+c w</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_callsign">2.5. Callsign</h3>
+<div class="paragraph">
+<p>In the US, you need an
+<a href="http://www.altusmetrum.org/Radio/">amateur radio license</a>
+or other authorization to legally operate the radio
+transmitters that are part of TeleLaunch.</p>
+</div>
+<div class="paragraph">
+<p>The default callsign shipped from the factory is "N0CALL",
+which is not a valid callsign and meant to humorously point
+out that the callsign hasn&#8217;t been configured yet.</p>
+</div>
+<div class="paragraph">
+<p>Individual owners of a TeleLaunch system should use their
+own callsign.</p>
+</div>
+<div class="paragraph">
+<p>Club owners of a TeleLaunch system should pick the callsign
+of one club member who is willing to be designated as the
+control operator of the system.  Under FCC Part 97 rules,
+being the control operator does not mean you have to be LCO
+all the time, it just means taking responsibility for ensuring
+the system is being operated in compliance with the rules.</p>
+</div>
+<div class="paragraph">
+<p>To configure the callsign, use your terminal emulator to
+issue two commands.  First, use 'c c callsign' to set the
+callsign, then use 'c w' to write to non-volatile memory.
+For example, to set the default N0CALL, the commands would
+be</p>
+</div>
+<div class="paragraph">
+<p>c c N0CALL<br>
+c w</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aes_key">2.6. AES Key</h3>
+<div class="paragraph">
+<p>For safety, TeleLaunch uses cryptographic checksums to help
+prevent interference, intentional or un-intentional.  This
+means each system must have a shared AES encryption key
+identically configured into each unit.</p>
+</div>
+<div class="paragraph">
+<p>The key size required is 128 bits, which must be expressed
+as a 32-digit hexadecimal number.</p>
+</div>
+<div class="paragraph">
+<p>To configure the AES key, use 'c a key' followed by 'c w'
+to write the key to non-volatile memory.  For example, to
+configure your system with a key that is the answer to life,
+the universe, and everything, the commands would be</p>
+</div>
+<div class="paragraph">
+<p>c a 00000000000000000000000000000042<br>
+c w</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bank_number">2.7. Bank Number</h3>
+<div class="paragraph">
+<p>Each TeleFire unit needs to be configured with a bank number,
+and bank numbers should be unique within a given system.  For
+most systems with 8 or less banks, just use the DIP switch
+on the circuit board inside the TeleFire unit to select the
+desired bank.  Only one switch should be turned on.  Switch
+one means bank one, etc.</p>
+</div>
+<div class="paragraph">
+<p>To allow systems to have more than 8 banks, if all the DIP
+switches are "off", the unit will use the bank configured in
+non-volatile memory.</p>
+</div>
+<div class="paragraph">
+<p>To configure the bank number, use 'c B bank' followed by
+'c w' to write to non-volatile memory.  For example, to
+set the bank to 42, the commands would be:</p>
+</div>
+<div class="paragraph">
+<p>c B 42<br>
+c w</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_operation">3. Operation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Operating a TeleLaunch system is pretty easy, and we hope fairly
+intuitive for anyone who has ever launched rockets before.  Basic
+instructions are printed on a decal inside the lid of each TeleLCO
+unit, which early customers (before this manual was even written)
+reported were sufficient to successfully use the system.</p>
+</div>
+<div class="paragraph">
+<p>The remainder of this section assumes the system has already been
+properly configured with callsign, AES key, and bank numbers for each
+TeleFire box.</p>
+</div>
+<div class="sect2">
+<h3 id="_charging_batteries">3.1. Charging Batteries</h3>
+<div class="paragraph">
+<p>TeleLCO has an internal Lithium Polymer battery that is
+charged over USB.  A weather-tight micro USB connector is
+installed with a blue cap under the handle.  This position
+was chosen so that TeleLCO can be charged while the lid is
+closed and standing handle-up.  Attach a micro USB cable
+to a computer or other source of USB power.  There are two
+charge indicators on the panel that will illuminate during
+charging, red for charge in progress and green for charge
+complete.</p>
+</div>
+<div class="paragraph">
+<p>TeleFire has an internal sealed lead acid 12V battery, and
+is provided with an external AC charger.  Connect this charger
+to the PowerPole connector on the back face of the box to
+charge the battery.  Other sources of charging current for
+a nominal 12V sealed battery may be used.  The charge
+connector can also be used to attach an external battery if
+needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up">3.2. Setting Up</h3>
+<div class="paragraph">
+<p>Each unit in the TeleLaunch system needs a suitable antenna
+attached.  A typical configuration would involve the provided
+omni-directional antenna or optional directional antenna aimed
+at the field mounted on a pole attached to TeleLCO at the
+launch control station, and the provided rubber whip antennas
+on each TeleFire box.</p>
+</div>
+<div class="paragraph">
+<p>If deploying the system in rough terrain, on a field with
+dense vegetation, or at great distances (some away cells), you
+may need a better antenna or at least to mount the antenna
+higher off the ground.  All units in the TeleLaunch system
+have tri-color RF signal strength indicators.  A system should
+show green on all units during normal operation.  An occasional
+dip to amber is ok, but frequent amber or any red indicates a
+need to improve the antenna situation.</p>
+</div>
+<div class="paragraph">
+<p>Antenna made for use near 435 Mhz in the ham radio "70cm band"
+should work, and there are many online sources of information
+on making inexpensive, highly effective antennas at home.</p>
+</div>
+<div class="paragraph">
+<p>The TeleLCO unit should be placed on a table at the Launch
+Control position.  It can be helpful for the LCO (the human(s)
+too, not just the electronics!) to be provided with some
+shade, but the use of transreflexive LCDs for the digit
+displays and ultri-bright LEDs make TeleLCO operation
+reasonable even in direct sunlight.</p>
+</div>
+<div class="paragraph">
+<p>Each TeleFire box should be placed in proximity to the launch
+rails it will service.  Whip clips made from AC power cords
+(not provided) should be attached to TeleFire and routed to
+each launch rail.  The pyro output on each channel is
+connected to the "line" and "neutral" pins on the outlet,
+while the ground pin is attached to chassis ground.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_turning_system_on">3.3. Turning System On</h3>
+<div class="paragraph">
+<p>Turn on all TeleFire pad boxes in the system.  At power-on,
+all LEDs will turn on briefly so you can verify they&#8217;re all
+working.  The radio signal strength indicators will show red
+until TeleLCO is turned on.</p>
+</div>
+<div class="paragraph">
+<p>Turn on TeleLCO.  All LCD segments and LEDs will turn on
+briefly so you can verify they&#8217;re all working.  An exception
+are the two battery charger LEDs, which only illuminate when
+the battery is charging.  The LCD displays will then briefly
+display the internal battery voltage, which should be at least
+3.9V for normal operation.  TeleLCO then scans to locate all
+TeleFire boxes that are in range and configured for the same
+frequency, callsign, and AES key.  During this process, the
+Bank LCD diplays will appear to be counting up from 1 to 99.
+When the search is complete, the Pad display will show the
+number of TeleFire devices found.  TeleLCO beeps when ready.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_launch_one_rocket">3.4. Launch One Rocket</h3>
+<div class="paragraph">
+<p>Switch the TeleFire to 'Safe' and confirm it is silent.</p>
+</div>
+<div class="paragraph">
+<p>Put a rocket on a launch rail / rod, and connect whip clips
+from a pad output on a TeleFire unit to the motor igniter.
+Verify igniter continuity using the LED associated with that
+output.  Green is good, red is bad.</p>
+</div>
+<div class="paragraph">
+<p>Switch the TeleFire unit from 'Safe' to 'Arm', at which point
+it will start "chirping" to indicate that it is "armed and
+dangerous".  Move to the TeleLCO at a safe distance away.</p>
+</div>
+<div class="paragraph">
+<p>Ensure the TeleLCO blue Drag Race switch is on Normal and
+the blue Drag Race LED is extinguished.</p>
+</div>
+<div class="paragraph">
+<p>Select the desired TeleFire unit by pushing the TeleLCO
+selector knob until the "Bank" LED is lit, then rotating the
+knob until the
+desired box is selected.  Then push the knob until the Pad
+LED is lit and rotate the knob until the desired pad is
+selected.  Verify the Remote Armed LED is lit, and that the
+selected pad&#8217;s Igniter Continuity LED is lit.</p>
+</div>
+<div class="paragraph">
+<p>Perform range safety checks.</p>
+</div>
+<div class="paragraph">
+<p>Move the TeleLCO SAFE/ARM switch to ARM.  This will cause
+the selected TeleFire unit&#8217;s strobe to start flashing and
+siren to become more insistent.</p>
+</div>
+<div class="paragraph">
+<p>Perform count-down.</p>
+</div>
+<div class="paragraph">
+<p>Depress the LAUNCH button and hold until the rocket launches.</p>
+</div>
+<div class="paragraph">
+<p>Move the TeleLCO SAFE/ARM switch back to SAFE.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_launch_a_multi_rocket_drag_race">3.5. Launch A Multi-Rocket "Drag Race"</h3>
+<div class="paragraph">
+<p>To enable drag race mode, move the TeleLCO blue switch to
+Drag Race.  The blue Drag Race LED should illuminate.</p>
+</div>
+<div class="paragraph">
+<p>Select pads to include in the drag race by using the same
+process as for a single rocket to select each Bank and Pad,
+then press Add/Remove to toggle the currently selected pad
+in the race.  The continuity LEDs blink ON/off for selected,
+and on/OFF for deselected (long ON means in the race).</p>
+</div>
+<div class="paragraph">
+<p>A drag race can be configured to include pads on multiple
+TeleFire boxes, but the blinking continuity indicators to
+show which pads are included can only indicate the currently
+selected bank.</p>
+</div>
+<div class="paragraph">
+<p>Verify remotes are ready and armed by using the Remote Armed
+and Igniter Continuity LEDs.</p>
+</div>
+<div class="paragraph">
+<p>Perform range safety checks.</p>
+</div>
+<div class="paragraph">
+<p>Move the TeleLCO SAFE/ARM switch to ARM.  This will cause
+the selected TeleFire units strobes to start flashing and
+sirens to become more insistent.</p>
+</div>
+<div class="paragraph">
+<p>Perform count-down.</p>
+</div>
+<div class="paragraph">
+<p>Depress the LAUNCH button and hold until rockets launch.</p>
+</div>
+<div class="paragraph">
+<p>Move the TeleLCO SAFE/ARM switch back to SAFE.</p>
+</div>
+<div class="paragraph">
+<p>Move Drag Race switch back to Normal.</p>
+</div>
+<div class="paragraph">
+<p>Note that if there is a mis-fire in a drag race and you want
+to fix igniters and try again, the current drag configuration
+is preserved as long as you stay in Drag Race mode.  So you
+can SAFE the system, fix igniters, and try again before leaving
+Drag Race mode if desired.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_specifications">4. Specifications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The TeleLaunch system can handle up to 99 banks with each bank
+having up to 8 pads, for a total of 792 pads.</p>
+</div>
+<div class="paragraph">
+<p>Each unit in the TeleLaunch system is water-resistant, but is not
+intended to be directly immersed in water.  Brief rain showers during
+a launch should pose no problem, but it&#8217;s recommended to cover units
+or bring them inside when not in use or during extended periods of
+bad weather.</p>
+</div>
+<div class="paragraph">
+<p>TeleLCO uses an internal single-cell 2Ah Lithium Polymer battery,
+which is sufficient for multiple days of typical operation.  This
+battery is charged over USB.</p>
+</div>
+<div class="paragraph">
+<p>TeleFire uses an internal sealed lead-acid 12V battery, which is
+charged by an external charger attached through the PowerPole
+connector on the rear panel.</p>
+</div>
+<div class="paragraph">
+<p>Pyro initiation uses the 12V sealed lead-acid battery.  Current
+to any pad can exceed 30A, and with typical igniters every pad on
+a TeleFire can be successfully included in a drag race.  The system
+controls current flow to prevent damage, and has a self-resetting
+circuit breaker for ultimate protection should something go badly
+wrong.</p>
+</div>
+<div class="paragraph">
+<p>TeleLaunch uses AES encryption with a shared key between each unit
+in the system to ensure the integrity of safe launch operations.</p>
+</div>
+<div class="paragraph">
+<p>The TeleLaunch system uses radio frequency communications in the
+vicinity of 435 Mhz.  A US amateur radio license or equivalent
+authorization is required to legally use the system.  The operating
+frequency should be chosen to avoid conflict with other devices, or
+put differently, nothing else should be operating on the same
+frequency while TeleLaunch is in use.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_updating_firmware">5. Updating Firmware</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The firmware for each unit can be updated over USB.  More details
+will be forthcoming if/when a firmware update is required.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_making_pad_cables">Appendix A: Making Pad Cables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pad cables can be made from standard AC extension cords and alligator
+clips&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting">Appendix B: Troubleshooting</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_radio_signal_strength">B.1. Radio Signal Strength</h3>
+<div class="paragraph">
+<p>Each unit in the TeleLaunch system has a debugging feature
+that can be used to view the actual received radio signal
+strength of each packet.  To use this feature, connect to the
+desired unit (TeleLCO is probably the most useful place to
+start) with a laptop and terminal program as explained in the
+configuration section of the manual.  Then, you can enable
+debug tracing using 'D 1' command.</p>
+</div>
+<div class="paragraph">
+<p>Debug mode is fairly chatty, but each time the TeleLCO unit
+queries the currently selected TeleFire unit for igniter
+status, the return packet will print out the RSSI value.
+RSSI is "received signal strength indicated" and is expressed
+in decibel units relative to a milliwatt, or "dBm".</p>
+</div>
+<div class="paragraph">
+<p>Observing the RSSI is a great way to compare antennas, antenna
+mounting arrangements, and so forth with more granularity than
+provided by the red/amber/green operational LED indicators.</p>
+</div>
+<div class="paragraph">
+<p>The system is good down to about -100dBm, and it takes about
+6dB to double the range.  So a reading of -84dBm means that you
+could extend the distance between the units by a factor of
+10 before losing the link.  Note, however, that real world
+range is affected by terrain, vegetation, etc.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version v0.1<br>
+Last updated 2019-02-21 16:40:43 -0700
+</div>
+</div>
+</body>
+</html>
