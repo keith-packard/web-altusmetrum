@@ -116,11 +116,9 @@ All high-current connections are made on the board using standard
 allows for easy packaging and quick board swaps.
 
 The photo above is of an early single-channel prototype, the design has 
-changed significantly since then and we'll take new photos soon.  It is 
-still possible to package the board as shown in a Hammond polycarbonate 
-box, but the plan is for all production units to be sold packaged in 
-50-cal ammo boxes.  The two switches are for power on/off and safe/arm.  The 
-two cables are for DC power in and igniter leads out. 
+changed significantly since then and we'll take new photos someday. The two 
+switches are for power on/off and safe/arm.  The two cables are for DC power 
+in and igniter leads out. 
 
 The TeleFireOne hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
@@ -163,13 +161,13 @@ formats.
 
 TeleLaunch firmware is part of the larger [AltOS](/AltOS) suite of 
 software.  For now, configuration of frequencies, callsigns, and crypto
-keys requires a laptop with terminal emulator and a USB cable, but we plan
-to produce an easier to use configuration program eventually.
+keys requires a laptop with terminal emulator and a USB cable, but we are
+likely to produce an easier to use configuration program eventually.
 
 ## Availability ##
 
-TeleLCO and TeleFireEight are now in production.  TeleLCO is available now,
-and TeleFireEight is anticipated to be ready to ship in February 2019.
+TeleLCO and TeleFireEight are now in production, and available for purchase
+directly through the [Garbee and Garbee](https://shop.gag.com) online store.
 
 Prototypes of the other products in this family have been built, deployed,
 and used successfully.  Updates to the designs are underway and we hope to
