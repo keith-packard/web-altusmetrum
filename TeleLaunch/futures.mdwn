@@ -1,0 +1,52 @@
+[[!meta title="TeleLaunch Future Products"]]
+
+# Future TeleLaunch Products #
+
+## TeleLCOTwo ##
+
+<img src="protos/telelcotwo.jpg">
+
+A small LCO unit capable of handling up to two pyro channels.  TeleLCOTwo 
+is ideal for individuals, or clubs that have an existing launch control 
+system but want to use TeleLaunch for an "away" launch cell.  
+
+TeleLCOTwo is configured in advance by USB to know which two pyro channels 
+it should interact with, and then a simple rocker switch selects between 
+the two during use.
+
+TeleLCOTwo comes packaged in a weather-sealed polycarbonate box with 
+switches on one face, and BNC antenna connector and USB connectors 
+through the box walls.  It can be placed on a table, but is typically 
+hand-held during operation.
+
+The TeleLCOTwo hardware design is available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telelcotwo](http://git.gag.com/?p=hw/telelcotwo;a=summary).  
+
+## TeleFireTwo ##
+
+<img src="protos/telefireone.jpg">
+
+TeleFireTwo is a pyro board supporting two igniter circuits.  This 
+makes TeleFireTwo ideal for individuals, launch trailers, or for "away 
+cells" at larger club launches.  
+
+All high-current connections are made on the board using standard 
+1/4-inch spade lugs, with screw terminals for the siren and strobe.  This 
+allows for easy packaging and quick board swaps.
+
+The photo above is of an early single-channel prototype, the design has 
+changed significantly since then and we'll take new photos someday. The two 
+switches are for power on/off and safe/arm.  The two cables are for DC power 
+in and igniter leads out. 
+
+The TeleFireOne hardware design is available from 
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telefiretwo](http://git.gag.com/?p=hw/telefiretwo;a=summary).  
+
+## Availability ##
+
+Prototypes of these products have been built, deployed, and used 
+successfully.  Updates to the designs are underway and we hope to
+introduce them sometime in 2019.
+
