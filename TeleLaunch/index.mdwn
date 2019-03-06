@@ -29,7 +29,7 @@ continuity, and RF link quality plus an audible indication of arming.
 
 ### TeleLCO ###
 
-<a href="telelco-v2.0/telelco-v2.0-open.jpg"> <img src="telelco-v2.0/telelco-v2.0-open_small.jpg"></a>
+<a href="telelco-v2.0/lco-open.png"> <img src="telelco-v2.0/lco-open-small.png"></a>
 
 TeleLCO controls up to 99 TeleFire banks, comes packaged in a rugged 
 case, and is typically placed on a table for use by the designated LCO.
@@ -126,7 +126,7 @@ The TeleFireOne hardware design is available from
 
 ### TeleFireEight ###
 
-<a href="telefireeight-v2/tf8-packaged.jpg"> <img src="telefireeight-v2/tf8-packaged_small.jpg"></a>
+<a href="telefireeight-v2/tf8-overview.png"> <img src="telefireeight-v2/tf8-overview-small.png"></a>
 
 TeleFireEight has eight igniter circuits, making it ideal for use at
 club launches.  Larger clubs or launch site setups can use multiple
