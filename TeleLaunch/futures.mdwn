@@ -2,6 +2,13 @@
 
 # Future TeleLaunch Products #
 
+The products on this page are shown in prototype form.  They are "not ready
+for prime time" yet, but we're including documentation about them because
+we're fairly confident they'll be added to the product line this year.  
+
+Please note that features and specifications are highly likely to change 
+before release.
+
 ## TeleLCOTwo ##
 
 <img src="protos/telelcotwo.jpg">
