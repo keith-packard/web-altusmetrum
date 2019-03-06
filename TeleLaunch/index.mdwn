@@ -4,7 +4,7 @@
 
 TeleLaunch is secure radio-controlled rocket launch system capable of
 operating up to 792 pads from a single controler.  A typical TeleLaunch 
-system consists of one LCO unit and one or more pyro units.
+system consists of one TeleLCO unit and one or more TeleFire units.
 
 TeleLaunch uses a two-way digital radio communications system for
 positive indication of all operations. The communications link is
