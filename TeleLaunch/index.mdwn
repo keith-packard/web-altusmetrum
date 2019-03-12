@@ -2,7 +2,7 @@
 
 # TeleLaunch — Multi-channel Wireless Launch Controller System #
 
-TeleLaunch is secure radio-controlled rocket launch system capable of
+TeleLaunch is a secure radio-controlled rocket launch system capable of
 operating up to 792 pads from a single controler.  A typical TeleLaunch 
 system consists of one TeleLCO unit and one or more TeleFire units.
 
