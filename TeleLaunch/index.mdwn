@@ -116,7 +116,8 @@ likely to produce an easier to use configuration program eventually.
 ## Availability ##
 
 TeleLCO and TeleFireEight are now in production, and available for purchase
-directly through the [Garbee and Garbee](https://shop.gag.com) online store.
+directly through the [Garbee and Garbee](https://shop.gag.com/telelaunch.html) 
+online store.
 
 ## Licenses ##
 
