@@ -48,6 +48,13 @@ The TeleLCO hardware design is available from
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telelco](http://git.gag.com/?p=hw/telelco;a=summary).  
 
+For those who don't have ready access to the Lepton-EDA and pcb-rnd tool suites, 
+here are pdf snapshots of the files for PCB version 2.0 in more easily 
+readable form:
+
+* [schematic](telelco-v2.0/telelco-sch.pdf)
+* [pcb artwork](telelco-v2.0/telelco-pcb.pdf)
+
 ## TeleFire Boxes ##
 
 Each TeleFire box in the TeleLaunch system uses FET technology for lowest 
@@ -95,6 +102,13 @@ an 8-rail bank.
 The TeleFireEight hardware design is available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/telefireeight](http://git.gag.com/?p=hw/telefireeight;a=summary).  
+
+For those who don't have ready access to the Lepton-EDA and pcb-rnd tool suites, 
+here are pdf snapshots of the files for PCB version 2 in more easily 
+readable form:
+
+* [schematic](telefireeight-v2/telefireeight-sch.pdf)
+* [pcb artwork](telefireeight-v2/telefireeight-pcb.pdf)
 
 ## Documentation ##
 
