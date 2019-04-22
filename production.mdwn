@@ -610,3 +610,6 @@ Production run of 50 pieces of TeleFireEight v2 by
 
 Prototype build of 2 pieces of TeleFireOne v2 by Bdale on 2019.02.16
 
+## sn 5702-5703 ##
+
+Prototype build of 2 pieces of TeleStatic v3 by Bdale on 2019.04.21
