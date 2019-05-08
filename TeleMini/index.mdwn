@@ -68,3 +68,10 @@ An outline of the board with drill hole locations is available in
 The hardware design files can be found on [git.gag.com](http://git.gag.com) 
 in the project [hw/telemini](http://git.gag.com/?p=hw/telemini;a=summary).  
 
+For those who don't have ready access to the gEDA suite, here are pdf snapshots
+of the files for Production PCB version 3.0 in more easily readable form.  
+
+* [schematic](v3.0/telemini-sch.pdf)
+* [pcb artwork](v3.0/telemini-pcb.pdf)
+* [bill of materials](v3.0/partslist.csv)
+
