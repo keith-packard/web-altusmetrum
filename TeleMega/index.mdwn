@@ -9,10 +9,11 @@ can be based on time and various flight events and status, including angle
 from vertical.
 
 For the latest TeleMega firmware and related ground station software, please
-visit the [AltOS](../AltOS) page on this site.  TeleMega v2.0 requires AltOS
-version 1.6.2 or later.
+visit the [AltOS](../AltOS) page on this site.  TeleMega v3.0 requires AltOS
+version 1.8.3 or later.
 
-These are photos of production version 1.0 .. photos of 2.0 coming soon:
+These are photos of production version 1.0 .. maybe someday we'll take photos
+of a newer version (?) .. but they look similar:
 
 <a href="v1.0/telemega-v1.0-top.jpg"> <img src="v1.0/telemega-v1.0-top-thumb.jpg"></a>
 <a href="v1.0/telemega-v1.0-bottom.jpg"> <img src="v1.0/telemega-v1.0-bottom-thumb.jpg"></a>
@@ -58,11 +59,11 @@ These are photos of production version 1.0 .. photos of 2.0 coming soon:
 	* Freescale [MMA6555](http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MMA65xx&fsrch=1&sr=1) Single Axis SPI Intertial Sensor
 		* +- 105g full-scale
 		* on-chip 12-bit digitizer
-	* Invensense [MPU-6000](http://invensense.com/mems/gyro/mpu6050.html) Six-Axis MEMS Motion Tracking Device
+	* Invensense [MPU-9250](https://www.invensense.com/products/motion-tracking/9-axis/mpu-9250/) Nine-Axis MEMS Motion Tracking Device
 		* tri-axis angular rate sensor up to 2000 degrees/second
 		* tri-axis accelerometer with +- 16g range
+		* tri-axis magnetic sensor
 		* three on-chip ADCs for true simultaneous sampling of all axes
-	* Honeywell HMC5883L 3-axis magnetic (compass) sensor
 * Software Features
 	* Written mostly in C with some ARM assembler
 	* Runs from on-chip flash, uses on-chip RAM, stores flight data to serial flash
@@ -87,15 +88,11 @@ The hardware design current gEDA files are available from
 [hw/telemega](http://git.gag.com/?p=hw/telemega;a=summary).  
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 2.0 in more easily readable form:
+of the files for Production PCB version 3.0 in more easily readable form:
 
-* [schematic](v2.0/telemega-sch.pdf)
-* [pcb artwork](v2.0/telemega-pcb.pdf)
-* [bill of materials](v2.0/partslist.csv)
-
-## Future Plans ##
-
-Version 2.0 is now available for purchase.
+* [schematic](v3.0/telemega-sch.pdf)
+* [pcb artwork](v3.0/telemega-pcb.pdf)
+* [bill of materials](v3.0/partslist.csv)
 
 ## [History of TeleMega](history) ##
 

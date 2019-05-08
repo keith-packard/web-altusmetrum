@@ -1,11 +1,5 @@
 # TeleMega History
 
-The only changes between v1 and v2 of TeleMega are that the SOC pin assignments
-for the companion port were adjusted to match improvements made during the
-design of EasyMega, the unused serial port connector was replaced with a
-connector for attaching 4 RC-style servos, and we upgraded from the CC1120
-to the CC1200 radio part from TI.
-
 ## Version 1.0 ##
 
 These are photos of version 1.0:
@@ -73,3 +67,22 @@ Here are pdf snapshots of the files for Production PCB version 1.0:
 * [schematic](v1.0/telemega-sch.pdf)
 * [pcb artwork](v1.0/telemega-pcb.pdf)
 * [bill of materials](v1.0/partslist.csv)
+
+## Version 2.0 ##
+
+The only changes between v1 and v2 of TeleMega were that the SOC pin 
+assignments for the companion port were adjusted to match improvements made 
+during the design of EasyMega, the unused serial port connector was replaced 
+with a connector for attaching 4 RC-style servos, and we upgraded from the 
+CC1120 to the CC1200 radio part from TI.
+
+TeleMega v2.0 required AltOS version 1.6.2 or later.
+
+### Artifacts ###
+
+Here are pdf snapshots of the files for Production PCB version 2.0:
+
+* [schematic](v2.0/telemega-sch.pdf)
+* [pcb artwork](v2.0/telemega-pcb.pdf)
+* [bill of materials](v2.0/partslist.csv)
+
