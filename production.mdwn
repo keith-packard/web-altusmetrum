@@ -613,3 +613,9 @@ Prototype build of 2 pieces of TeleFireOne v2 by Bdale on 2019.02.16
 ## sn 5702-5703 ##
 
 Prototype build of 2 pieces of TeleStatic v3 by Bdale on 2019.04.21
+
+## sn 5704-5728 ##
+
+Production build of 25 pieces of TeleLCO v2.1 by 
+[Advanced Circuits](http://4pcb.com)
+
