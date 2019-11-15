@@ -34,15 +34,19 @@ connections off-board.  Whether you choose to do this with a screw terminal
 strip, crimp connectors, or by soldering wires together is of course entirely
 up to you!
 
-## TeleMetrum ##
+## TeleMetrum, TeleMini, and EasyMini ##
 
-Early [TeleMetrum](http://altusmetrum.org/TeleMetrum) boards had an 
+Very early [TeleMetrum](http://altusmetrum.org/TeleMetrum) boards had an 
 unpopulated connector footprint on the board
 for a separate pyro battery, but due to a wiring error in the design of the
 board, that connector was never useful.  Just ignore it.
 
-If you look at the bottom of the board where all the surface-mounted components
-are, on the end where the pyro screw terminals are located, you can see a
+Each of these products can be used with a separate pyro battery, but unlike
+TeleMega and EasyMega, there are no extra screw terminals to make it easy.
+
+On TeleMetrum, if you look at the bottom of the board where all the 
+surface-mounted components are, on the end where the pyro screw terminals 
+are located, you can see a
 fat trace connecting three of the screw terminals together.  This is the 
 source of pyro power, which comes from the LiPo battery through the power
 switch and then to one side of each pyro channel.  The pins that trace 
@@ -54,23 +58,23 @@ to connect where:
 
 <img src="TeleMetrumSepPyro.jpg"/>
 
-## TeleMini ##
-
-Wiring a [TeleMini](http://altusmetrum.org/TeleMini) board for use with a
-separate pyro battery works the same way.
-
-If you look at the bottom of the board where all the surface-mounted components
-are, on the end where the pyro screw terminals are located, you can see a fat
-trace connecting two of the screws.  This is the 
-source of pyro power, which comes from the LiPo battery through the power
-switch and then to one side of each pyro channel.  The pins that trace 
-connects are therefore the ones you want to ignore.  The others are the 
-switches to ground.
+[TeleMini](http://altusmetrum.org/TeleMini) 
+and 
+[EasyMini](http://altusmetrum.org/EasyMini) 
+work the same way electrically, but the screw terminal physical 
+arrangements are different.  The two pyro channels have a pin each that 
+are connected together and to the pyro voltage.  Ignore those, the other
+two screws are the switches to ground.
 
 Here's a photo of the pyro end of a TeleMini board augmented to show what
 to connect where:
 
 <img src="TeleMiniSepPyro.jpg"/>
+
+And here's a photo of an EasyMini board augmented to show what
+to connect where:
+
+<img src="EasyMiniSepPyro.jpg"/>
 
 ## TeleMega and EasyMega ##
 
