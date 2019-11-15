@@ -24,7 +24,7 @@ along with where to drill holes for mounting.
  * [EasyMini Outline](../AltOS/doc/easymini-outline.pdf)
  * [TeleGPS Outline](../AltOS/doc/telegps-outline.pdf)
  * [TeleMega Outline](../AltOS/doc/telemega-outline.pdf)
- * [TeleMetrum Outline (both v1 and v2)](../AltOS/doc/telemetrum-outline.pdf)
+ * [TeleMetrum Outline](../AltOS/doc/telemetrum-outline.pdf)
  * [TeleMini v1 Outline](../AltOS/doc/telemini-v1-outline.pdf)
  * [TeleMini v3 Outline](../AltOS/doc/telemini-v3-outline.pdf)
 
