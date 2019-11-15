@@ -72,21 +72,28 @@ to connect where:
 
 <img src="TeleMiniSepPyro.jpg"/>
 
-## TeleMega ##
+## TeleMega and EasyMega ##
 
-Because [TeleMega](http://altusmetrum.org/TeleMega) was designed to 
+Because [TeleMega](http://altusmetrum.org/TeleMega) and
+[EasyMega](http://altusmetrum.org/EasyMega) were designed to 
 be especially well suited for use in large
-and complex projects, it includes extra screw terminals on board to make use
-of a separate pyro battery easy.  In fact, use of a TeleMega with only one
+and complex projects, they include extra screw terminals on board to make use
+of a separate pyro battery easy.  In fact, use of a TeleMega or EasyMega
+with only one
 battery requires putting a jumper between two adjacent screw terminals to
-connect the main LiPo battery to the pyro power rail.
+connect the main LiPo battery to the pyro power rail.  All such boards
+ship with this jumper installed from the factory.
 
-To use a separate pyro battery, just leave out the jumper and connect the
+To use a separate pyro battery, just remove the jumper and connect the
 pyro battery to the two adjacent screw terminals marked 'gnd' and 'pyro',
 using the 'gnd' terminal for the negative battery lead and the 'pyro'
 terminal for the positive side.  Connect the e-match leads to the pyro screw
 terminals as usual... no off-board connections are required.
 
-Here's a photo showing the a TeleMega board wired this way:
+Note that when using a separate pyro battery in this way, only the "main"
+battery will be charged by the on-bard LiPo charger.  You will need to make 
+arrangements to charge the pyro battery if it's a rechargeable variety.
+
+Here's a photo showing a TeleMega board wired this way:
 
 <img src="TeleMegaSepPyro.jpg"/>
