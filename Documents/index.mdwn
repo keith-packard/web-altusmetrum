@@ -20,11 +20,13 @@ think before you act!
 These are single page PDF files that show the outline of each product
 along with where to drill holes for mounting.
 
- * [TeleMetrum Outline (both v1 and v2)](./telemetrum-outline.pdf)
- * [TeleMega Outline](./telemega-outline.pdf)
- * [EasyMega Outline](./easymega-outline.pdf)
- * [EasyMini Outline](./easymini-outline.pdf)
- * [TeleMini Outline](./telemini-outline.pdf)
+ * [EasyMega Outline](../AltOS/doc/easymega-outline.pdf)
+ * [EasyMini Outline](../AltOS/doc/easymini-outline.pdf)
+ * [TeleGPS Outline](../AltOS/doc/telegps-outline.pdf)
+ * [TeleMega Outline](../AltOS/doc/telemega-outline.pdf)
+ * [TeleMetrum Outline (both v1 and v2)](../AltOS/doc/telemetrum-outline.pdf)
+ * [TeleMini v1 Outline](../AltOS/doc/telemini-v1-outline.pdf)
+ * [TeleMini v3 Outline](../AltOS/doc/telemini-v3-outline.pdf)
 
 ## Collected References ##
 
