@@ -619,3 +619,8 @@ Prototype build of 2 pieces of TeleStatic v3 by Bdale on 2019.04.21
 Production build of 25 pieces of TeleLCO v2.1 by 
 [Advanced Circuits](http://4pcb.com)
 
+## sn 5729-5980 ##
+
+Production build of 252 pieces of TeleMetrum v3.0 by 
+[Advanced Circuits](http://4pcb.com)
+
