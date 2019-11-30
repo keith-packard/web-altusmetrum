@@ -32,7 +32,7 @@ v3.0 was introduced in late 2019, and is now available for sale.
 
 ### Developer View ###
 
-* Hardware Features of v2.0
+* Hardware Features of v3.0
 	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
 	* TI [CC1200](http://www.ti.com/product/cc1200) Low Power, High Performance RF Transceiver
 	* 150mA 3.3V LDO regulator
@@ -84,15 +84,15 @@ The hardware design current gEDA files are available from
 
 Work on the next version proceeds on the master branch, with occasional
 temporary branches created when Bdale is making some major / speculative
-change.  Branched with names like 'v2.0' document what we're actually flying 
+change.  Branched with names like 'v3.0' document what we're actually flying 
 on the respective PCB revisions.  
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
 of the files for Production PCB version 2.0 in more easily readable form.  
 
-* [schematic](v2.0/telemetrum-sch.pdf)
-* [pcb artwork](v2.0/telemetrum-pcb.pdf)
-* [bill of materials](v2.0/partslist.csv)
+* [schematic](v3.0/telemetrum-sch.pdf)
+* [pcb artwork](v3.0/telemetrum-pcb.pdf)
+* [bill of materials](v3.0/partslist.csv)
 
 Rockets we know of flying with TeleMetrum boards have exceeded 50g acceleration, 
 been well above Mach 1, and reached altitudes 
