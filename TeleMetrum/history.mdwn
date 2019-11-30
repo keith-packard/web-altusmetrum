@@ -266,36 +266,27 @@ Cortex M3 instead of 8-bit 8051).
 ### Developer View ###
 
 * Hardware Features of v2.0
-        * ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.js
-p) ARM Cortex M3 based Microcontroller
-        * TI [CC1120](http://www.ti.com/product/cc1120) High Performance RF Tran
-sceiver for Narrowband Systems
+        * ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
+        * TI [CC1120](http://www.ti.com/product/cc1120) High Performance RF Transceiver for Narrowband Systems
         * 150mA 3.3V LDO regulator
-        * [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/Produ
-ctLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
+        * [Winbond W25Q64CV](http://www.winbond.com/hq/enu/ProductAndSales/ProductLines/FlashMemory/SerialFlash/W25Q64CV.htm) serial flash memory
         * [u-blox](http://www.u-blox.com/) MAX-7Q GPS receiver
                 * on-board passive patch antenna
                 * async serial interface
-        * Measurement Specialties [MS5607](http://www.meas-spec.com/product/t_pr
-oduct.aspx?id=8499) Micro Altimeter Module
+        * Measurement Specialties [MS5607](http://www.meas-spec.com/product/t_product.aspx?id=8499) Micro Altimeter Module
                 * Wide range — 120kPa to 1kPa (approximately -1500m to 31000m)
-                * High precision — 2.4Pa resolution (approximately 20cm at sea l
-evel)
+                * High precision — 2.4Pa resolution (approximately 20cm at sea level)
                 * Factory calibrated.
-        * Freescale [MMA6555](http://www.freescale.com/webapp/sps/site/prod_summ
-ary.jsp?code=MMA65xx&fsrch=1&sr=1) Single Axis SPI Intertial Sensor
+        * Freescale [MMA6555](http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=MMA65xx&fsrch=1&sr=1) Single Axis SPI Intertial Sensor
                 * +- 105g full-scale
                 * on-chip 12-bit digitizer
 * Software Features
         * Written mostly in C with some ARM assembler
-        * Runs from on-chip flash, uses on-chip RAM, stores flight data to seria
-l flash
+        * Runs from on-chip flash, uses on-chip RAM, stores flight data to serial flash
         * USB serial emulation for "console" interface
 * Tools Used
         * [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
 * Licenses
-        * The hardware is licensed under the [TAPR](http://www.tapr.org) [Open H
-ardware License](http://www.tapr.org/ohl.html)
-        * The software is licensed [GPL version 2](http://www.gnu.org/licenses/o
-ld-licenses/gpl-2.0.html)
+        * The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+        * The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
