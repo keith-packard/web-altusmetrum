@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Keith Packard, Bdale Garbee">
-<meta name="copyright" content="Bdale Garbee and Keith Packard 2018">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2019">
 <title>AltOS Telemetry</title>
 <link rel="stylesheet" href="./am.css">
 </head>
@@ -18,8 +18,8 @@
 <span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
 <span id="author2" class="author">Bdale Garbee</span><br>
 <span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
-<span id="revnumber">version v1.9,</span>
-<span id="revdate">8 Oct 2018</span>
+<span id="revnumber">version v1.9.1,</span>
+<span id="revdate">5 Dec 2019</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -31,7 +31,7 @@
 <li><a href="#_packet_header">2.1. Packet Header</a></li>
 <li><a href="#_telemetrum_v1_x_telemini_v1_0_and_telenano_sensor_data">2.2. TeleMetrum v1.x, TeleMini v1.0 and TeleNano Sensor Data</a></li>
 <li><a href="#_telemega_sensor_data">2.3. TeleMega Sensor Data</a></li>
-<li><a href="#_telemetrum_v2_sensor_data">2.4. TeleMetrum v2 Sensor Data</a></li>
+<li><a href="#_telemetrum_v2_and_newer_sensor_data">2.4. TeleMetrum v2 and newer Sensor Data</a></li>
 <li><a href="#_telemini_v3_0_sensor_data">2.5. TeleMini v3.0 Sensor Data</a></li>
 <li><a href="#_configuration_data">2.6. Configuration Data</a></li>
 <li><a href="#_gps_location">2.7. GPS Location</a></li>
@@ -524,7 +524,7 @@ change of the airframe since liftoff.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_telemetrum_v2_sensor_data">2.4. TeleMetrum v2 Sensor Data</h3>
+<h3 id="_telemetrum_v2_and_newer_sensor_data">2.4. TeleMetrum v2 and newer Sensor Data</h3>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 7. TeleMetrum v2 Packet Type</caption>
 <colgroup>
@@ -547,20 +547,20 @@ change of the airframe since liftoff.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>TeleMetrum v2 has higher resolution barometric data than
+<p>TeleMetrum v2 and newer have higher resolution barometric data than
 TeleMetrum v1, and so the constant calibration data is
 split out into a separate packet.</p>
 </div>
 <div class="paragraph">
-<p>TeleMetrum v2 Sensor Data packets are transmitted once per second on the
+<p>TeleMetrum v2 and newer Sensor Data packets are transmitted once per second on the
 ground, 10 times per second during ascent and once per second
 during descent and landing</p>
 </div>
 <div class="paragraph">
-<p>TeleMetrum v2 Calibration Data packets are always transmitted once per second.</p>
+<p>TeleMetrum v2 and newer Calibration Data packets are always transmitted once per second.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8. TeleMetrum v2 Sensor Packet Contents</caption>
+<caption class="title">Table 8. TeleMetrum v2 and newer Sensor Packet Contents</caption>
 <colgroup>
 <col style="width: 11.7647%;">
 <col style="width: 17.647%;">
@@ -643,7 +643,7 @@ during descent and landing</p>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 9. TeleMetrum v2 Calibration Data Packet Contents</caption>
+<caption class="title">Table 9. TeleMetrum v2 and newer Calibration Data Packet Contents</caption>
 <colgroup>
 <col style="width: 11.7647%;">
 <col style="width: 17.647%;">
@@ -1361,22 +1361,22 @@ transmit-only.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CC1111</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10mW transceiver with integrated SoC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TeleDongle v0.2, TeleBT v1.0, TeleMetrum v1.x, TeleMini</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleDongle v0.2, TeleBT v1.0, TeleMetrum v1.x, TeleMini v1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CC1120</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">35mW transceiver with SW FEC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v2, TeleMega</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v2, TeleMega v1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CC1200</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">35mW transceiver with HW FEC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TeleDongle v3.0, TeleBT v3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleMetrum v3, TeleMega v2, TeleDongle v3.0, TeleMini v3, TeleBT v3.0, TeleGPS v2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CC115L</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">14mW transmitter with SW FEC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TeleGPS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TeleGPS v1</p></td>
 </tr>
 </tbody>
 </table>
@@ -1592,8 +1592,8 @@ additional TeleMetrum and ground station changes.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v1.9<br>
-Last updated 2019-02-21 17:09:16 -0700
+Version v1.9.1<br>
+Last updated 2019-12-05 23:04:13 -0700
 </div>
 </div>
 </body>

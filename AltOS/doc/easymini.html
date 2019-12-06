@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Keith Packard, Bdale Garbee">
-<meta name="copyright" content="Bdale Garbee and Keith Packard 2018">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2019">
 <title>EasyMini Owner&#8217;s Manual</title>
 <link rel="stylesheet" href="./am.css">
 </head>
-<body class="article">
+<body class="book">
 <div id="header">
 <h1>EasyMini Owner&#8217;s Manual</h1>
 <div class="details">
@@ -18,8 +18,8 @@
 <span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
 <span id="author2" class="author">Bdale Garbee</span><br>
 <span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
-<span id="revnumber">version v1.9,</span>
-<span id="revdate">8 Oct 2018</span>
+<span id="revnumber">version v1.9.1,</span>
+<span id="revdate">5 Dec 2019</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -94,19 +94,22 @@
 <li><a href="#_altus_metrum_hardware_specifications">Appendix E: Altus Metrum Hardware Specifications</a></li>
 <li><a href="#_release_notes">Appendix F: Release Notes</a>
 <ul class="sectlevel2">
-<li><a href="#_release_notes_for_version_1_8_6">F.1. Release Notes for Version 1.8.6</a></li>
-<li><a href="#_release_notes_for_version_1_8_5">F.2. Release Notes for Version 1.8.5</a></li>
-<li><a href="#_release_notes_for_version_1_8_4">F.3. Release Notes for Version 1.8.4</a></li>
-<li><a href="#_release_notes_for_version_1_8_3">F.4. Release Notes for Version 1.8.3</a></li>
-<li><a href="#_release_notes_for_version_1_8_2">F.5. Release Notes for Version 1.8.2</a></li>
-<li><a href="#_release_notes_for_version_1_8_1">F.6. Release Notes for Version 1.8.1</a></li>
-<li><a href="#_release_notes_for_version_1_8">F.7. Release Notes for Version 1.8</a></li>
-<li><a href="#_release_notes_for_version_1_7">F.8. Release Notes for Version 1.7</a></li>
-<li><a href="#_release_notes_for_version_1_6_8">F.9. Release Notes for Version 1.6.8</a></li>
-<li><a href="#_release_notes_for_version_1_6_5">F.10. Release Notes for Version 1.6.5</a></li>
-<li><a href="#_release_notes_for_version_1_6_4">F.11. Release Notes for Version 1.6.4</a></li>
-<li><a href="#_release_notes_for_version_1_6_3">F.12. Release Notes for Version 1.6.3</a></li>
-<li><a href="#_release_notes_for_version_1_6_2">F.13. Release Notes for Version 1.6.2</a></li>
+<li><a href="#_release_notes_for_version_1_9_1">F.1. Release Notes for Version 1.9.1</a></li>
+<li><a href="#_release_notes_for_version_1_9">F.2. Release Notes for Version 1.9</a></li>
+<li><a href="#_release_notes_for_version_1_8_7">F.3. Release Notes for Version 1.8.7</a></li>
+<li><a href="#_release_notes_for_version_1_8_6">F.4. Release Notes for Version 1.8.6</a></li>
+<li><a href="#_release_notes_for_version_1_8_5">F.5. Release Notes for Version 1.8.5</a></li>
+<li><a href="#_release_notes_for_version_1_8_4">F.6. Release Notes for Version 1.8.4</a></li>
+<li><a href="#_release_notes_for_version_1_8_3">F.7. Release Notes for Version 1.8.3</a></li>
+<li><a href="#_release_notes_for_version_1_8_2">F.8. Release Notes for Version 1.8.2</a></li>
+<li><a href="#_release_notes_for_version_1_8_1">F.9. Release Notes for Version 1.8.1</a></li>
+<li><a href="#_release_notes_for_version_1_8">F.10. Release Notes for Version 1.8</a></li>
+<li><a href="#_release_notes_for_version_1_7">F.11. Release Notes for Version 1.7</a></li>
+<li><a href="#_release_notes_for_version_1_6_8">F.12. Release Notes for Version 1.6.8</a></li>
+<li><a href="#_release_notes_for_version_1_6_5">F.13. Release Notes for Version 1.6.5</a></li>
+<li><a href="#_release_notes_for_version_1_6_4">F.14. Release Notes for Version 1.6.4</a></li>
+<li><a href="#_release_notes_for_version_1_6_3">F.15. Release Notes for Version 1.6.3</a></li>
+<li><a href="#_release_notes_for_version_1_6_2">F.16. Release Notes for Version 1.6.2</a></li>
 </ul>
 </li>
 </ul>
@@ -191,8 +194,8 @@ of useful information in the mailing list archives!</p>
 <p>The first device created for our community was TeleMetrum, a dual
 deploy altimeter with fully integrated GPS and radio telemetry
 as standard features, and a “companion interface” that will
-support optional capabilities in the future. The latest version
-of TeleMetrum, v2.0, has all of the same features but with
+support optional capabilities in the future. The later versions
+of TeleMetrum, v2 and newer, have all of the same features but with
 improved sensors and radio to offer increased performance.</p>
 </div>
 <div class="paragraph">
@@ -1865,12 +1868,157 @@ production and retired.</p>
 <h2 id="_release_notes">Appendix F: Release Notes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8_6">F.1. Release Notes for Version 1.8.6</h3>
+<h3 id="_release_notes_for_version_1_9_1">F.1. Release Notes for Version 1.9.1</h3>
+<div class="paragraph">
+<p>Version 1.9.1</p>
+</div>
+<div class="sect3">
+<h4 id="_altos">F.1.1. AltOS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for TeleMetrum v3.0</p>
+</li>
+<li>
+<p>Fix accel cal value when changing EasyMega v2.0 pad orientation</p>
+</li>
+<li>
+<p>Correct EasyMega v2.0 magnetometer data axes</p>
+</li>
+<li>
+<p>Fix EasyMega v2.0 idle monitor display of IMU data</p>
+</li>
+<li>
+<p>Report all sensor failures at power-up time.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_micropeak">F.1.2. AltosUI, TeleGPS, MicroPeak</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Display error message when attempting to graph unknown format file.</p>
+</li>
+<li>
+<p>Make it possible to disable APRS once enabled.</p>
+</li>
+<li>
+<p>Display some data for point near cursor in map tab.</p>
+</li>
+<li>
+<p>Support upgrading devices from pre-1.8 firmware</p>
+</li>
+<li>
+<p>Wait for Windows to prepare new devices during firmware
+upgrade. This should avoid the “COMxx: open failed” message.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_9">F.2. Release Notes for Version 1.9</h3>
+<div class="paragraph">
+<p>Version 1.9</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_2">F.2.1. AltOS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for EasyMega v2.0</p>
+</li>
+<li>
+<p>Replace C library for ARM devices</p>
+</li>
+<li>
+<p>Remove support for 8051-based devices and SDCC compiler</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_micropeak_2">F.2.2. AltosUI, TeleGPS, MicroPeak</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Select ROM images based on product name when reflashing</p>
+</li>
+<li>
+<p>Fix TeleGPS v2 battery voltage display</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_7">F.3. Release Notes for Version 1.8.7</h3>
+<div class="paragraph">
+<p>Version 1.8.7</p>
+</div>
+<div class="sect3">
+<h4 id="_altos_3">F.3.1. AltOS</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Include TeleMega v3.0 firmware</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altosui_telegps_micropeak_3">F.3.2. AltosUI, TeleGPS, MicroPeak</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Poll for new devices while Device dialog is displayed</p>
+</li>
+<li>
+<p>Wait for device to re-appear when flashing new firmware</p>
+</li>
+<li>
+<p>Fetch correct TeleBT v4.0 RF calibration values from web
+site when reflashing.</p>
+</li>
+<li>
+<p>Change gyro headings in .csv files from x/y/z to
+roll/pitch/yaw</p>
+</li>
+<li>
+<p>Add documentation about Packet Link mode</p>
+</li>
+<li>
+<p>Add documentation about forcing TeleMini RF parameters to
+known values.</p>
+</li>
+<li>
+<p>Create a proxy server for Google Maps to re-enable map
+images</p>
+</li>
+<li>
+<p>Fix Java version info in all distributed jar files so that
+applications will run with standard Mac OS X Java.</p>
+</li>
+<li>
+<p>Replace JavaApplicationStub for Mac OS X so that
+applications will run with Oracle Java.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_notes_for_version_1_8_6">F.4. Release Notes for Version 1.8.6</h3>
 <div class="paragraph">
 <p>Version 1.8.6</p>
 </div>
 <div class="sect3">
-<h4 id="_altos">F.1.1. AltOS</h4>
+<h4 id="_altos_4">F.4.1. AltOS</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1889,7 +2037,7 @@ production and retired.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_telegps">F.1.2. AltosUI, TeleGPS</h4>
+<h4 id="_altosui_telegps">F.4.2. AltosUI, TeleGPS</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1911,7 +2059,7 @@ production and retired.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_micropeak">F.1.3. MicroPeak</h4>
+<h4 id="_micropeak">F.4.3. MicroPeak</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1923,13 +2071,13 @@ production and retired.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8_5">F.2. Release Notes for Version 1.8.5</h3>
+<h3 id="_release_notes_for_version_1_8_5">F.5. Release Notes for Version 1.8.5</h3>
 <div class="paragraph">
 <p>Version 1.8.5 includes fixes to the ground software support
 for TeleBT v4, along with a few other minor updates.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_2">F.2.1. AltOS</h4>
+<h4 id="_altos_5">F.5.1. AltOS</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1939,7 +2087,7 @@ for TeleBT v4, along with a few other minor updates.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_telegps_2">F.2.2. AltosUI, TeleGPS</h4>
+<h4 id="_altosui_telegps_2">F.5.2. AltosUI, TeleGPS</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1956,12 +2104,12 @@ devices.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8_4">F.3. Release Notes for Version 1.8.4</h3>
+<h3 id="_release_notes_for_version_1_8_4">F.6. Release Notes for Version 1.8.4</h3>
 <div class="paragraph">
 <p>Version 1.8.4 includes support for EasyMini version 2.0</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_3">F.3.1. AltOS</h4>
+<h4 id="_altos_6">F.6.1. AltOS</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1973,7 +2121,7 @@ devices.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8_3">F.4. Release Notes for Version 1.8.3</h3>
+<h3 id="_release_notes_for_version_1_8_3">F.7. Release Notes for Version 1.8.3</h3>
 <div class="paragraph">
 <p>Version 1.8.3 includes support for TeleMega version 3.0 along
 with two important flight computer fixes. This version also
@@ -1982,7 +2130,7 @@ better and some updates to graph presentation and data
 downloading.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_4">F.4.1. AltOS</h4>
+<h4 id="_altos_7">F.7.1. AltOS</h4>
 <div class="sect4">
 <h5 id="_altos_new_features">AltOS New Features</h5>
 <div class="ulist">
@@ -2015,7 +2163,7 @@ from capturing log data.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications">F.4.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications">F.7.2. AltosUI and TeleGPS Applications</h4>
 <div class="sect4">
 <h5 id="_altosui_new_features">AltosUI New Features</h5>
 <div class="ulist">
@@ -2073,7 +2221,7 @@ tilt angle.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8_2">F.5. Release Notes for Version 1.8.2</h3>
+<h3 id="_release_notes_for_version_1_8_2">F.8. Release Notes for Version 1.8.2</h3>
 <div class="paragraph">
 <p>Version 1.8.2 includes support for TeleGPS version 2.0 along
 with accelerometer recalibration support in AltosUI.</p>
@@ -2083,7 +2231,7 @@ with accelerometer recalibration support in AltosUI.</p>
 analyzing saved data files.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_5">F.5.1. AltOS</h4>
+<h4 id="_altos_8">F.8.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS New Features</p>
 </div>
@@ -2096,7 +2244,7 @@ analyzing saved data files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications_2">F.5.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications_2">F.8.2. AltosUI and TeleGPS Applications</h4>
 <div class="paragraph">
 <p>AltosUI and TeleGPS New Features</p>
 </div>
@@ -2125,7 +2273,7 @@ for graphing or KML export.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8_1">F.6. Release Notes for Version 1.8.1</h3>
+<h3 id="_release_notes_for_version_1_8_1">F.9. Release Notes for Version 1.8.1</h3>
 <div class="paragraph">
 <p>Version 1.8.1 includes an important bug fix for Apogee Lockout
 operation in all flight computers. Anyone using this option
@@ -2146,7 +2294,7 @@ above Mach 1.</p>
 analyzing saved data files.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_6">F.6.1. AltOS</h4>
+<h4 id="_altos_9">F.9.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS Bug Fixes</p>
 </div>
@@ -2167,7 +2315,7 @@ deceleration.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications_3">F.6.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications_3">F.9.2. AltosUI and TeleGPS Applications</h4>
 <div class="paragraph">
 <p>AltosUI New Features</p>
 </div>
@@ -2198,7 +2346,7 @@ broken, so you&#8217;d see only the default frequencies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_8">F.7. Release Notes for Version 1.8</h3>
+<h3 id="_release_notes_for_version_1_8">F.10. Release Notes for Version 1.8</h3>
 <div class="paragraph">
 <p>Version 1.8 includes support for our new TeleBT v4.0 ground
 station, updates for data analysis in our ground station
@@ -2206,7 +2354,7 @@ software and bug fixes in in the flight software for all our
 boards and ground station interfaces.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_7">F.7.1. AltOS</h4>
+<h4 id="_altos_10">F.10.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS New Features</p>
 </div>
@@ -2219,7 +2367,7 @@ boards and ground station interfaces.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications_4">F.7.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications_4">F.10.2. AltosUI and TeleGPS Applications</h4>
 <div class="paragraph">
 <p>AltosUI New Features</p>
 </div>
@@ -2252,14 +2400,14 @@ EasyMega. The Y and Z axes were flipped.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_7">F.8. Release Notes for Version 1.7</h3>
+<h3 id="_release_notes_for_version_1_7">F.11. Release Notes for Version 1.7</h3>
 <div class="paragraph">
 <p>Version 1.7 includes support for our new TeleMini v3.0
 flight computer and bug fixes in in the flight software for all our boards
 and ground station interfaces.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_8">F.8.1. AltOS</h4>
+<h4 id="_altos_11">F.11.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS New Features</p>
 </div>
@@ -2284,7 +2432,7 @@ serviced first.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications_5">F.8.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications_5">F.11.2. AltosUI and TeleGPS Applications</h4>
 <div class="paragraph">
 <p>AltosUI New Features</p>
 </div>
@@ -2299,7 +2447,7 @@ serviced first.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_6_8">F.9. Release Notes for Version 1.6.8</h3>
+<h3 id="_release_notes_for_version_1_6_8">F.12. Release Notes for Version 1.6.8</h3>
 <div class="paragraph">
 <p>Version 1.6.8 fixes a TeleMega and TeleMetrum v2.0 bug where
 the device could stop logging data and transmitting
@@ -2307,7 +2455,7 @@ telemetry in flight. All TeleMega v1.0, v2.0 and TeleMetrum
 v2.0 users should update their flight firmware.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_9">F.9.1. AltOS</h4>
+<h4 id="_altos_12">F.12.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS fixes:</p>
 </div>
@@ -2341,7 +2489,7 @@ they can be tested during production.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_telegps_and_altosdroid_applications">F.9.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
+<h4 id="_altosui_telegps_and_altosdroid_applications">F.12.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
 <div class="paragraph">
 <p>AltosUI fixes:</p>
 </div>
@@ -2363,7 +2511,7 @@ Ground Station operation by cleaning up pending operations.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_6_5">F.10. Release Notes for Version 1.6.5</h3>
+<h3 id="_release_notes_for_version_1_6_5">F.13. Release Notes for Version 1.6.5</h3>
 <div class="paragraph">
 <p>Version 1.6.5 fixes a TeleMega and TeleMetrum v2.0 bug where
 the device would often stop logging data and transmitting
@@ -2371,7 +2519,7 @@ telemetry in flight. All TeleMega v1.0, v2.0 and TeleMetrum
 v2.0 users should update their flight firmware.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_10">F.10.1. AltOS</h4>
+<h4 id="_altos_13">F.13.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS fixes:</p>
 </div>
@@ -2387,7 +2535,7 @@ tested the new firmware before release.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_telegps_and_altosdroid_applications_2">F.10.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
+<h4 id="_altosui_telegps_and_altosdroid_applications_2">F.13.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
 <div class="paragraph">
 <p>AltosUI fixes:</p>
 </div>
@@ -2403,14 +2551,14 @@ Windows package.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_6_4">F.11. Release Notes for Version 1.6.4</h3>
+<h3 id="_release_notes_for_version_1_6_4">F.14. Release Notes for Version 1.6.4</h3>
 <div class="paragraph">
 <p>Version 1.6.4 fixes a bluetooth communication problem with
 TeleBT v1.0 devices, along with some altosui and altosdroid
 minor nits. It also now ships firmware for some newer devices.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_11">F.11.1. AltOS</h4>
+<h4 id="_altos_14">F.14.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS fixes:</p>
 </div>
@@ -2430,7 +2578,7 @@ fixes affect all STM32L, STM32F0 and LPC11U14 based devices.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_telegps_and_altosdroid_applications_3">F.11.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
+<h4 id="_altosui_telegps_and_altosdroid_applications_3">F.14.2. AltosUI, TeleGPS and AltosDroid Applications</h4>
 <div class="paragraph">
 <p>AltosUI, TeleGPS and AltosDroid New Features:</p>
 </div>
@@ -2462,7 +2610,7 @@ active.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_documentation">F.11.3. Documentation</h4>
+<h4 id="_documentation">F.14.3. Documentation</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2476,14 +2624,14 @@ active.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_6_3">F.12. Release Notes for Version 1.6.3</h3>
+<h3 id="_release_notes_for_version_1_6_3">F.15. Release Notes for Version 1.6.3</h3>
 <div class="paragraph">
 <p>Version 1.6.3 adds idle mode to AltosDroid and has bug fixes
 for our host software on desktops, laptops an android devices
 along with BlueTooth support for Windows.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_12">F.12.1. AltOS</h4>
+<h4 id="_altos_15">F.15.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS fixes:</p>
 </div>
@@ -2498,7 +2646,7 @@ hardware to driving these pins with software.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications_6">F.12.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications_6">F.15.2. AltosUI and TeleGPS Applications</h4>
 <div class="paragraph">
 <p>AltosUI and TeleGPS New Features:</p>
 </div>
@@ -2543,7 +2691,7 @@ TeleMetrum v2.0 flight computers.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosdroid">F.12.3. AltosDroid</h4>
+<h4 id="_altosdroid">F.15.3. AltosDroid</h4>
 <div class="paragraph">
 <p>AltosDroid new features:</p>
 </div>
@@ -2608,7 +2756,7 @@ location of any tracker.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_documentation_2">F.12.4. Documentation</h4>
+<h4 id="_documentation_2">F.15.4. Documentation</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2621,14 +2769,14 @@ continuity audio alert pattern.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_release_notes_for_version_1_6_2">F.13. Release Notes for Version 1.6.2</h3>
+<h3 id="_release_notes_for_version_1_6_2">F.16. Release Notes for Version 1.6.2</h3>
 <div class="paragraph">
 <p>Version 1.6.2 includes support for our updated TeleMega v2.0
 product and bug fixes in in the flight software for all our boards
 and ground station interfaces.</p>
 </div>
 <div class="sect3">
-<h4 id="_altos_13">F.13.1. AltOS</h4>
+<h4 id="_altos_16">F.16.1. AltOS</h4>
 <div class="paragraph">
 <p>AltOS New Features:</p>
 </div>
@@ -2657,7 +2805,7 @@ up.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_altosui_and_telegps_applications_7">F.13.2. AltosUI and TeleGPS Applications</h4>
+<h4 id="_altosui_and_telegps_applications_7">F.16.2. AltosUI and TeleGPS Applications</h4>
 <div class="paragraph">
 <p>AltosUI and TeleGPS Fixes:</p>
 </div>
@@ -2676,7 +2824,7 @@ writing the associated .eeprom file when an error is detected.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_documentation_3">F.13.3. Documentation</h4>
+<h4 id="_documentation_3">F.16.3. Documentation</h4>
 <div class="paragraph">
 <p>We spent a bunch of time trying to improve our documentation</p>
 </div>
@@ -2704,8 +2852,8 @@ duplication of information</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v1.9<br>
-Last updated 2019-02-21 16:40:43 -0700
+Version v1.9.1<br>
+Last updated 2019-12-05 23:04:13 -0700
 </div>
 </div>
 </body>

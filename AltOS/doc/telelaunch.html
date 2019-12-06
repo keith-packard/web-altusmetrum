@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Bdale Garbee">
 <meta name="copyright" content="Bdale Garbee 2019">
 <title>TeleLaunch: The Altus Metrum Wireless Launch Control System</title>
@@ -51,7 +51,8 @@
 <li><a href="#_making_pad_cables">Appendix A: Making Pad Cables</a></li>
 <li><a href="#_troubleshooting">Appendix B: Troubleshooting</a>
 <ul class="sectlevel2">
-<li><a href="#_radio_signal_strength">B.1. Radio Signal Strength</a></li>
+<li><a href="#_telefire_fails_to_arm">B.1. TeleFire Fails to Arm</a></li>
+<li><a href="#_radio_signal_strength">B.2. Radio Signal Strength</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +150,7 @@ joining the Altus Metrum user email list, which you can do by visiting
 <h2 id="_configuration">2. Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are 3 things you need to configure identically in each unit
+<p>There are three things you need to configure identically in each unit
 that is part of a TeleLaunch system for wireless communications to
 succeed.  Those are the operating frequency, the callsign, and a key
 for the AES encryption algorithm.  Additionally, each TeleFire unit
@@ -297,7 +298,7 @@ c w</p>
 <div class="paragraph">
 <p>Each TeleFire unit needs to be configured with a bank number,
 and bank numbers should be unique within a given system.  For
-most systems with 8 or less banks, just use the DIP switch
+most systems with 8 or fewer banks, just use the DIP switch
 on the circuit board inside the TeleFire unit to select the
 desired bank.  Only one switch should be turned on.  Switch
 one means bank one, etc.</p>
@@ -386,7 +387,7 @@ on making inexpensive, highly effective antennas at home.</p>
 <p>The TeleLCO unit should be placed on a table at the Launch
 Control position.  It can be helpful for the LCO (the human(s)
 too, not just the electronics!) to be provided with some
-shade, but the use of transreflexive LCDs for the digit
+shade, but the use of reflective LCDs for the digit
 displays and ultri-bright LEDs make TeleLCO operation
 reasonable even in direct sunlight.</p>
 </div>
@@ -430,7 +431,7 @@ number of TeleFire devices found.  TeleLCO beeps when ready.</p>
 <p>Put a rocket on a launch rail / rod, and connect whip clips
 from a pad output on a TeleFire unit to the motor igniter.
 Verify igniter continuity using the LED associated with that
-output.  Green is good, red is bad.</p>
+output.  Green is good.</p>
 </div>
 <div class="paragraph">
 <p>Switch the TeleFire unit from 'Safe' to 'Arm', at which point
@@ -589,7 +590,29 @@ clips&#8230;&#8203;</p>
 <h2 id="_troubleshooting">Appendix B: Troubleshooting</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_radio_signal_strength">B.1. Radio Signal Strength</h3>
+<h3 id="_telefire_fails_to_arm">B.1. TeleFire Fails to Arm</h3>
+<div class="paragraph">
+<p>If turning the TeleLCO key switch from "SAFE" to "ARM" does
+not cause the selected TeleFire box to start flashing and
+sounding its siren, the most likely cause is that the
+TeleFire box was left with the local safe/arm switch in the
+safe position.  The Remote Arm LED on TeleLCO shows the state
+of the safe/arm switch on the currently selected TeleFire box
+and can be used to confirm this situation.</p>
+</div>
+<div class="paragraph">
+<p>Note that in a cross-bank drag race configuration, any TeleFire
+boxes involved in the drag race that are fully armed will
+launch, while any TeleFire boxes involved in the drag race
+that are not fully armed will not launch.  Pay attention to
+make sure all involved TeleFire boxes are flashing their
+strobe lights and sounding their sirens before launch to
+ensure all desired rockets will actually participate in such
+a drag race.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_radio_signal_strength">B.2. Radio Signal Strength</h3>
 <div class="paragraph">
 <p>Each unit in the TeleLaunch system has a debugging feature
 that can be used to view the actual received radio signal
@@ -612,11 +635,14 @@ mounting arrangements, and so forth with more granularity than
 provided by the red/amber/green operational LED indicators.</p>
 </div>
 <div class="paragraph">
-<p>The system is good down to about -100dBm, and it takes about
-6dB to double the range.  So a reading of -84dBm means that you
+<p>The system is good down to below -100dBm, and it takes about
+6dB to double the range.  So a reading of -80dBm means that you
 could extend the distance between the units by a factor of
 10 before losing the link.  Note, however, that real world
-range is affected by terrain, vegetation, etc.</p>
+range is affected by terrain, vegetation, etc.  And you really
+don&#8217;t ever want to be operating close to the minimum signal
+threshold!  Keep the RF signal indicators green with good
+antenna choices and installations for maximum satisfaction.</p>
 </div>
 </div>
 </div>
@@ -625,7 +651,7 @@ range is affected by terrain, vegetation, etc.</p>
 <div id="footer">
 <div id="footer-text">
 Version v0.1<br>
-Last updated 2019-02-21 17:09:16 -0700
+Last updated 2019-12-05 23:04:13 -0700
 </div>
 </div>
 </body>

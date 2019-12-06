@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Keith Packard, Bdale Garbee">
-<meta name="copyright" content="Bdale Garbee and Keith Packard 2018">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2019">
 <title>MicroPeak Owner&#8217;s Manual</title>
 <link rel="stylesheet" href="./am.css">
 </head>
@@ -18,8 +18,8 @@
 <span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
 <span id="author2" class="author">Bdale Garbee</span><br>
 <span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
-<span id="revnumber">version v1.9,</span>
-<span id="revdate">8 Oct 2018</span>
+<span id="revnumber">version v1.9.1,</span>
+<span id="revdate">5 Dec 2019</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -35,6 +35,7 @@
 <li><a href="#_setting_micropeak_preferences">2.4. Setting MicroPeak Preferences</a></li>
 </ul>
 </li>
+<li><a href="#_protecting_micropeak_from_sunlight">3. Protecting MicroPeak from Sunlight</a></li>
 <li><a href="#_handling_precautions">Appendix A: Handling Precautions</a></li>
 <li><a href="#_technical_information">Appendix B: Technical Information</a>
 <ul class="sectlevel2">
@@ -476,6 +477,60 @@ will affect the other.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_protecting_micropeak_from_sunlight">3. Protecting MicroPeak from Sunlight</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The MS5607 barometric sensor is sensitive to direct light. When light
+shines through the holes in the cover to the components inside, the
+reported pressure can vary wildly from the actual pressure. This
+causes the reported altitude to have errors of thousands of
+feet.</p>
+</div>
+<div class="paragraph">
+<p>MicroPeak should be installed in an opaque compartment in the airframe
+and not subjected to sunlight. Alternatively, a small piece of
+adhesive-backed open-cell foam can be attached to the device so that
+it covers the barometric sensor and protects it from direct light.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s what happens when MicroPeak is exposed to sunlight. At apogee,
+I exposed MicroPeak to varying amounts of sunlight and you can see the
+wild swings in altitude resulting from that:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="micropeak-flight-nofoam.png" alt="micropeak flight nofoam" width="430">
+</div>
+<div class="title">Figure 13. MicroPeak in Sunlight</div>
+</div>
+<div class="paragraph">
+<p>You can carefully cutting a piece of adhesive-backed open-cell foam
+and attach it to MicroPeak. It&#8217;s important to press the adhesive to
+the circuit board and not to the top of the barometric sensor or the
+sensor may become blocked and not operate at all. Once you&#8217;ve attached
+the foam, you should test MicroPeak on the ground to make sure it&#8217;s
+still working.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="micropeak-foam.jpg" alt="micropeak foam" width="430">
+</div>
+<div class="title">Figure 14. MicroPeak with Foam</div>
+</div>
+<div class="paragraph">
+<p>That MicroPeak was in the same barometric chamber as the one which
+generated the above results and the resulting flight data looks
+correct:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="micropeak-flight-foam.png" alt="micropeak flight foam" width="430">
+</div>
+<div class="title">Figure 15. MicroPeak in Sunlight with Foam</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_handling_precautions">Appendix A: Handling Precautions</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -514,10 +569,17 @@ sensor out of direct sunlight.</p>
 </div>
 <div class="paragraph">
 <p>The barometric sensor sampling ports must be able to
-"breathe", both by not being covered by foam or tape or other
-materials that might directly block the hole on the top of the
-sensor, and also by having a suitable static vent to outside
-air.</p>
+"breathe", both by not being covered by solid foam or tape or
+other materials that might directly block the hole on the top
+of the sensor, and also by having a suitable static vent to
+outside air.</p>
+</div>
+<div class="paragraph">
+<p>One good solution is to use a small rectangle of Poron
+50-30031-12X12P or equivalent to cover the sensor.  This is an
+open cell foam in 1/32" thickness with an adhesive backing.  It
+seems to do a good job of blocking sun while still allowing
+airflow to and from the sensor internals.</p>
 </div>
 <div class="paragraph">
 <p>As with all other rocketry electronics, Altus Metrum
@@ -766,8 +828,8 @@ limited by the accuracy of this clock.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v1.9<br>
-Last updated 2019-02-21 17:09:15 -0700
+Version v1.9.1<br>
+Last updated 2019-12-05 23:04:12 -0700
 </div>
 </div>
 </body>
