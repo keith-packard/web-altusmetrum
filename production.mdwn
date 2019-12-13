@@ -624,3 +624,9 @@ Production build of 25 pieces of TeleLCO v2.1 by
 Production build of 252 pieces of TeleMetrum v3.0 by 
 [Advanced Circuits](http://4pcb.com)
 
+## sn 5981-6480 ##
+
+Production build of 500 pieces of EasyMini v2.0a by 
+[Advanced Circuits](http://4pcb.com)
+
+
