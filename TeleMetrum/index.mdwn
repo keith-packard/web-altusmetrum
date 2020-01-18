@@ -90,7 +90,7 @@ change.  Branched with names like 'v3.0' document what we're actually flying
 on the respective PCB revisions.  
 
 For those who don't have ready access to the gEDA suite, here are pdf snapshots
-of the files for Production PCB version 2.0 in more easily readable form.  
+of the files for Production PCB version 3.0 in more easily readable form.  
 
 * [schematic](v3.0/telemetrum-sch.pdf)
 * [pcb artwork](v3.0/telemetrum-pcb.pdf)
