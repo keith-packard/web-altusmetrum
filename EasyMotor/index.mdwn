@@ -26,7 +26,9 @@ Prototypes of v1 are underway.  This design is not yet for sale.
 
 ## Artifacts ##
 
-The hardware design current gEDA files are available from 
+This board was designed using lepton-eda and pcb-rnd.
+
+The hardware design files are available from 
 [git.gag.com](http://git.gag.com) in the project 
 [hw/easymotor](http://git.gag.com/?p=hw/easymotor;a=summary).  
 
