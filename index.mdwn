@@ -99,6 +99,9 @@ our friends at [Iron Sheep Productions](http://altosui.ironsheep.biz/).
 is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
 high dynamic performance and a combination digital/APRS transmitter.
 
+* [TeleLaunch](TeleLaunch/)
+is a wireless launch control system capable of operating up to 792 pads.
+
 * [LipoCharger](LipoCharger/) 
 is a standalone battery charger for the Lithium Polymer batteries used in
 Altus Metrum products.
@@ -134,9 +137,6 @@ is a timer-based 2-channel pyro controller with tilt limits
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
 prototype was built, but never flown.
-
-* [TeleLaunch](TeleLaunch/)
-is a wireless launch control system capable of operating up to 792 pads.
 
 * [TeleStatic](TeleStatic/)
 is a wireless system for operating rocket motor test stands.
