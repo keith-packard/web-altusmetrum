@@ -630,3 +630,7 @@ Production build of 500 pieces of EasyMini v2.0a by
 [Advanced Circuits](http://4pcb.com)
 
 
+## sn 6481-6580 ##
+
+Production build of 100 pieces of TeleMini v3.0a by
+[Seeed Studios](https://www.seeedstudio.com/), received 2020.01.21.
