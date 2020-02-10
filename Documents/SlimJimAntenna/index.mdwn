@@ -47,6 +47,10 @@ pipe (you don't have to remove the plastic holder around the ferrites).  If
 you change this material, all dimensions may need to be adjusted due to a
 difference in dielectric coefficient.
 
+The 300-ohm twin-lead we use was once super-common for use with outdoor TV
+antennas.  Check with local ham radio folks or other friends to see if you
+can find someone with some still on hand.
+
 - 15" length 1/2" PVC
 - 1" length 1/2" PVC
 - 1/2 PVC tee
