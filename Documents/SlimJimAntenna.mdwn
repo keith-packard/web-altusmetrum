@@ -1,0 +1,1 @@
+[[!map pages="Documents/SlimJimAntenna/* and ! Documents/SlimJimAntenna/*/*"]]
