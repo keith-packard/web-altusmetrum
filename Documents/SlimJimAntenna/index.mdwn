@@ -1,0 +1,95 @@
+[[!meta title="Antenna"]]
+
+# The TeleLCO "Slim Jim" Antenna
+
+Several people have asked what's inside the PVC radome of the "Slim Jim" style
+antennas we deliver with the TeleLCO component of our [TeleLaunch](/TeleLaunch)
+wireless launch control system.  The kind of antenna we provide is called a
+"Slim Jim" in the amateur radio world, it's a variation on a class of antennas
+often referred to as "J-Pole" antennas. 
+
+Because there are a number of issues involved in antenna design that come into
+play with this antenna, including a significant de-tuning effect from putting
+antenna elements inside a radome made from a material with the dielectric
+coefficient seen in small-diameter PVC pile, we decided to explain exactly
+what we build in case our customers have reason to want to just make another
+antenna for use with a TeleFireEight or to replace the one shipped with their
+TeleLCO.
+
+If the materials and dimensions we use are copied exactly, the antenna should 
+"just work".  Note, however, that the real world being what it is, each 
+antenna built is likely to have slightly different performance characteristics,
+and so if you or a friend have access to suitable test equipment, feel free
+to go completely nuts optimizing an antenna using your specific materials and
+techniques based on this design!
+
+Even if you don't have access to a fully-equipped RF test bench, each of our
+TeleLaunch products has built-in [RF debug]( https://altusmetrum.org/AltOS/doc/telelaunch.html#_radio_signal_strength)
+tools that you can use to verify the performance of your system, compare the
+performance of different antennas, etc.
+
+Like many documents we provide, 
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+## Basic Design 
+
+Bdale started with [this calculator](https://m0ukd.com/calculators/slim-jim-and-j-pole-calculator/),
+adjusting dimensions to achieve a reasonable match and good operating 
+efficiency at 434.5 Mhz in a PVC radome.  The result is a relatively 
+inexpensive, reliable antenna that is robust enough to survive typical 
+launch site handling.
+
+## Required Materials
+
+For the PVC pipe, we use 1/2" thin-wall pipe rated for "315psi" found on
+the shelf at our local Lowes home improvement store, not the thicker-wall
+schedule 40 pipe.  This is because the ferrite chokes fit better in this
+pipe (you don't have to remove the plastic holder around the ferrites).  If
+you change this material, all dimensions may need to be adjusted due to a
+difference in dielectric coefficient.
+
+- 15" length 1/2" PVC
+- 1" length 1/2" PVC
+- 1/2 PVC tee
+- 2 pieces 1/2 PVC cap
+- 10'+ RG-58 coax with BNC, cut [25' BNC cable assembly](https://www.amazon.com/gp/product/B009GUN32W) in half
+- 16-1/2" 300 ohm TV twin lead
+- [ferrite choke assembly](https://www.amazon.com/gp/product/B015RDVGDE)
+- electrical tape
+- nylon zip tie
+- PVC cement
+
+## Prepare PVC Sub-Assemblies
+
+- drill 7/32" hole in the middle of one end cap
+- glue this cap to one end of 1" PVC pipe
+- glue the other cap to one end of 15" PVC pipe
+- glue one side of tee to the other end of 15" pipe
+
+## Prepare Twin-Lead Sub-Assembly
+
+- cut 420mm of twin lead
+- cut approximately 6mm insulation away from one end
+- bend conductors and solder together
+- repeat at the other end, such that end to end, the loop is 407mm
+- mark 14.5mm from one end for coax attachment point, cut away enough 
+  insulation to be able to solder to conductors
+- mark 133mm from the same end, and 263 mm from the other end,
+  leaving two marks approximately 11mm apart
+- cut one wire only at these two marks, trim insulation to get
+  the 11'ish mm piece of wire to go away
+
+## Final Assembly
+
+- slide drilled end cap + 1" PVC sub-assembly over wire
+- strip and trim coax end for attachment to twin lead
+- solder center conductor to long wire on twin lead, shield
+  to the short wire, at the marked feed point 14.5mm up from the bottom
+- put ferrite around coax close to feed point
+- put a zip tie around coax to act as a strain relief against
+  drilled PVC cap
+- insert twin lead assembly into radome via side port of tee
+- dry fit PVC assemblies
+- quick performance check, tweak if absolutely necessary
+- glue PVC assemblies together
+

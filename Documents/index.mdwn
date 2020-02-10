@@ -14,6 +14,7 @@ think before you act!
  * [Remove the protection circuit board from a LiPo battery](./FixBattery)
  * [Use a separate pyro battery](./SeparatePyroBattery)
  * [Use a Featherweight magnetic switch](./MattsActiveSwitch.pdf)
+ * [Build a TeleLCO-sytel "Slim Jim" antenna](./SlimJimAntenna)
 
 ## Product Outlines and Drill Patterns ##
 
