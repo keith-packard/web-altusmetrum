@@ -634,3 +634,9 @@ Production build of 500 pieces of EasyMini v2.0a by
 
 Production build of 100 pieces of TeleMini v3.0a by
 [Seeed Studios](https://www.seeedstudio.com/), received 2020.01.21.
+
+## sn 6581-6830 ##
+
+Production build of 250 pieces of TeleMega v4.0 by
+[Advanced Circuits](http://4pcb.com), received 2020.02.12
+
