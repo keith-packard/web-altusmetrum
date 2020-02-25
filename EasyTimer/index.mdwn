@@ -27,7 +27,7 @@ Prototypes of v1 are underway.  This design is not yet for sale.
   tilt limits
 * USB for configuration
 * Designed for use with batteries from 3.7 to 12 volts
-* 1.65 x 1 inch board
+* 1.5 x 0.8 inch board
 
 ## Artifacts ##
 
