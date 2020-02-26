@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Keith Packard, Bdale Garbee">
-<meta name="copyright" content="Bdale Garbee and Keith Packard 2019">
+<meta name="copyright" content="Bdale Garbee and Keith Packard 2020">
 <title>EasyMini Owner&#8217;s Manual</title>
 <link rel="stylesheet" href="./am.css">
 </head>
@@ -18,8 +18,8 @@
 <span id="email" class="email"><a href="mailto:keithp@keithp.com">keithp@keithp.com</a></span><br>
 <span id="author2" class="author">Bdale Garbee</span><br>
 <span id="email2" class="email"><a href="mailto:bdale@gag.com">bdale@gag.com</a></span><br>
-<span id="revnumber">version v1.9.1,</span>
-<span id="revdate">5 Dec 2019</span>
+<span id="revnumber">version v1.9.2,</span>
+<span id="revdate">26 Feb 2020</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -578,13 +578,20 @@ handle up to 16V.</p>
 <div class="paragraph">
 <p>To use a separate pyro battery, connect the negative pyro
 battery terminal to the flight computer ground terminal,
-the positive battery terminal to the igniter and the other
+the the switched positive battery terminal to the igniter
+and the other
 igniter lead to the negative pyro terminal on the flight
 computer. When the pyro channel fires, it will complete the
 circuit between the negative pyro terminal and the ground
 terminal, firing the igniter. Specific instructions on how
 to hook this up for each flight computer will be found
 in the section below for that flight computer.</p>
+</div>
+<div class="paragraph">
+<p>Note that you must include a switch in the positive lead of
+the pyro battery for safety, as the on-board power switch
+circuit on our product only controls current flow from the
+the primary or system battery!</p>
 </div>
 </div>
 <div class="sect2">
@@ -755,9 +762,11 @@ ground, connect it to the negative external battery
 connection, top terminal 4.</p>
 </div>
 <div class="paragraph">
-<p>Connecting the positive battery terminal to the pyro
+<p>Connecting the switched positive battery terminal to the pyro
 charges must be done separate from EasyMini, by soldering
-them together or using some other connector.</p>
+them together or using some other connector.  Note that for
+safety, you must put a switch between the pyro battery and
+the rest of the circuit!</p>
 </div>
 <div class="paragraph">
 <p>The other lead from each pyro charge is then inserted into
@@ -2852,8 +2861,8 @@ duplication of information</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v1.9.1<br>
-Last updated 2019-12-05 23:04:13 -0700
+Version v1.9.2<br>
+Last updated 2020-02-26 00:13:45 -0700
 </div>
 </div>
 </body>
