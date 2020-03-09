@@ -4,14 +4,10 @@
 # Introducing MicroPeak by AltusMetrum #
 
 Micropeak is a barometric logging altimeter for precision model
-rocketry altitude measurements.
+rocketry altitude measurements. 
 
 <a href="v1.0/micropeak-dime.jpg"><img
 src="v1.0/micropeak-dime-640.jpg"></a>
-
-Production units are available from the
-[Garbee and Garbee](https://shop.gag.com) 
-web store and [Apogee Components](http://www.apogeerockets.com/Electronics_Payloads/Altimeters/MicroPeak_Altimeter)
 
 Data download is available using the [MicroPeak USB adapter](../MicroPeakUSB).
 
