@@ -2,7 +2,9 @@
 # EasyTimer
 
 This board provides two programmable timer-based pyro channels with tilt
-limits.  
+limits.  It is the same size and shape with the same connector layout as
+our [EasyMini](../EasyMini) flight computer, and will sell for the same
+price.
 
 The IMU used is the same as on TeleMega and EasyMega, allowing acceleration 
 based launch detection, and gyro-based tilt limiting.  This means it's 
@@ -14,10 +16,11 @@ For projects that require staging or air starts, EasyTimer is a low-cost
 alternative to use of our more expensive products, while retaining the safety 
 aspects of tilt-limiting.
 
-There is no EasyTimer firmware yet, but it will be part of the 
-[AltOS](../AltOS) suite eventually.
+EasyTimer firmware is part of the [AltOS](../AltOS) suite.
 
-Prototypes of v1 are underway.  This design is not yet for sale.
+Prototypes of v1 work great, and our first production run is now
+underway.  If all goes well, we hope to have these for sale sometime 
+in June 2020.
 
 ## Features ##
 
