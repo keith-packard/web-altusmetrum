@@ -62,15 +62,15 @@ For ChaosKey, there is a distributor in Europe:
 These products are available for purchase:
 
 * [TeleMetrum](TeleMetrum/) 
-is our flagship product, a dual-deploy rocketry altimeter with
-GPS and bidirectional RF telemetry link.
+was our original (and still our most popular!) product, a dual-deploy rocketry 
+altimeter with GPS and RF telemetry link.
 
 * [TeleMega](TeleMega/)
 is a high-end flight computer with 6 pyro channels, tilt limits, more and 
-better sensors, GPS, and a high performance bidirectional RF telemetry link.
+better sensors, GPS, and RF telemetry link.
 
 * [TeleMini](TeleMini/)
-is a smaller dual-deploy rocketry altimeter with telemetry using only a 
+is our smallest dual-deploy rocketry altimeter with telemetry using only a 
 barometric pressure sensor
 
 * [EasyMega](EasyMega/)
@@ -79,25 +79,21 @@ design is essentially identical to [TeleMega](TeleMega/), but without the
 GPS receiver and radio telemetry link.
 
 * [EasyMini](EasyMini/)
-is a small dual-deploy rocketry altimeter using the MS5607 barometry
+is a small, low-cost, dual-deploy rocketry altimeter using just a barometry
 pressure sensor.
 
 * [TeleDongle](TeleDongle/) 
-is a simple RF interface for use in ground stations interacting with rockets
-using [TeleMetrum](TeleMetrum/).  It may also be useful as a generic RF
-interface for other microcontroller systems.  Note that we don't actually 
-sell TeleDongle by itself, it is included in our 
-[Starter Pack](http://shop.gag.com/ground-stations/starter-pack.html) offering.
+is a simple USB to RF interface for use in ground stations interacting with 
+rockets using any of our products with RF telemetry.
 
 * [TeleBT](TeleBT) is a variation on [TeleDongle](TeleDongle/) that adds
 [Bluetooth](http://www.bluetooth.com) as an alternative to USB.  Particularly
 useful with the [AltosDroid](http://www.altusmetrum.org/AltosDroid/) app for 
-Android devices, or a compatible iOS application available for sale from
+Android devices, or the compatible iOS application available for sale from
 our friends at [Iron Sheep Productions](http://altosui.ironsheep.biz/).
 
 * [TeleGPS](TeleGPS/)
-is a GPS tracker and logger using the uBlox Max 7Q GPS receiver for
-high dynamic performance and a combination digital/APRS transmitter.
+is a GPS tracker and logger.
 
 * [TeleLaunch](TeleLaunch/)
 is a wireless launch control system capable of operating up to 792 pads.

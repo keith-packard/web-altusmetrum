@@ -11,9 +11,10 @@ the host entropy source.
 
 ## Version 1.0 ##
 
-ChaosKey is now out of production, but some units may still be available through our
-European distributor
-[vikings](https://store.vikings.net/chaoskey).
+ChaosKey is now out of production.  They work great, but it took several years
+to sell our first production run, and shipping them from the US to other 
+countries one at a time ended up dominating the net cost to most users.  We might
+make more some day, but no promises!
 
 <a href="v1.0/chaoskey-bare.jpg"><img src="v1.0/chaoskey-bare-thumb.jpg"></a>
 
