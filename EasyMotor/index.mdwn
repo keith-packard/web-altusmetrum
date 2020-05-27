@@ -11,18 +11,21 @@ the data to be included in radio telemetry during the flight.
 There is no EasyMotor firmware yet, but it will be part of the 
 [AltOS](../AltOS) suite eventually.
 
-Prototypes of v1 are underway.  This design is not yet for sale.
+Prototypes of v1 were built and evaluated, prototypes of v2 are 
+underway.  This design is not yet for sale, but we hope to have it on the
+market by mid-summer 2020.
 
 ## Features ##
 
 ### User View ###
 
 * Data logger storing motor chamber pressure and acceleration
-* 1-axis 200-g accelerometer
+* supports inexpensive 5V analog output pressure sensors
+* 3-axis 200-g accelerometer
 * On-board non-volatile memory for flight data storage
 * USB for configuration, and data recovery
 * Designed for use with a battery from 9-12V
-* 1.65 x 1 inch board
+* 1.5 x 0.8 inch board
 
 ## Artifacts ##
 
