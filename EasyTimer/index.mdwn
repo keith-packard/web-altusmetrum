@@ -18,9 +18,12 @@ aspects of tilt-limiting.
 
 EasyTimer firmware is part of the [AltOS](../AltOS) suite.
 
-Prototypes of v1 work great, and our first production run is now
-underway.  If all goes well, we hope to have these for sale sometime 
-in June 2020.
+Photos of the first production unit:
+
+<a href="v1/easytimer_v1_top.jpg"> <img src="v1/easytimer-v1-top-thumb.jpg"></a>
+<a href="v1/easytimer_v1_smt.jpg"> <img src="v1/easytimer-v1-smt-thumb.jpg"></a>
+
+EasyTimer v1 should be available for sale soon!
 
 ## Features ##
 

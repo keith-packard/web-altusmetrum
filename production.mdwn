@@ -643,3 +643,9 @@ Production build of 250 pieces of TeleMega v4.0 by
 ## sn 6831-6833 ##
 
 Prototype build of 3 pieces of EasyTimer v1 by Bdale on 2020.04.06
+
+## sn 6834-7083 ##
+
+Production build of 250 pieces of EasyTimer v1 by
+[Advanced Circuits](http://4pcb.com), received 2020.05.28
+
