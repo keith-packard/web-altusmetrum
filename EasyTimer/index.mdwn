@@ -20,8 +20,8 @@ EasyTimer firmware is part of the [AltOS](../AltOS) suite.
 
 Photos of the first production unit:
 
-<a href="v1/easytimer_v1_top.jpg"> <img src="v1/easytimer-v1-top-thumb.jpg"></a>
-<a href="v1/easytimer_v1_smt.jpg"> <img src="v1/easytimer-v1-smt-thumb.jpg"></a>
+<a href="v1/easytimer_v1_top.jpg"> <img src="v1/easytimer_v1_top-thumb.jpg"></a>
+<a href="v1/easytimer_v1_smt.jpg"> <img src="v1/easytimer_v1_smt-thumb.jpg"></a>
 
 EasyTimer v1 should be available for sale soon!
 
