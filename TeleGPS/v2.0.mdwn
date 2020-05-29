@@ -1,0 +1,1 @@
+[[!map pages="TeleGPS/v2.0/* and ! TeleGPS/v2.0/*/*"]]
