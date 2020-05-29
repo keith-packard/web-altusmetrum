@@ -1,0 +1,60 @@
+[[!meta title="TeleGPS History"]]
+# TeleGPS v1.0
+
+These are photos of production version 1.0:
+
+<a href="v1.0/telegps-v1.0-top.jpg"> <img src="v1.0/telegps-v1.0-top-thumb.jpg"></a>
+<a href="v1.0/telegps-v1.0-bottom.jpg"> <img src="v1.0/telegps-v1.0-bottom-thumb.jpg"></a>
+
+These early boards used a different processor, a transmit-only radio chip,
+and had a few other minor differences from current boards.
+
+## Features ##
+
+### User View ###
+
+* GPS tracker and logger
+* Offers custom digital telemetry, APRS and direction beacons
+* 16mW transmit power
+* High-dynamics GPS receiver for accurate tracking
+* Uses 3.7V Lithium Polymer battery.
+* 1.5 x 1.0 inch board designed to fit inside 29mm airframe coupler tube
+* 2MB on-board data logging flash
+* Built-in USB connection for configuration, data download and battery charging
+* 12.3g flight weight (including antenna, excluding any battery)
+
+### Developer View ###
+
+* Hardware Features
+	* [NXP LPC11U14](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/LPC11U14FHI33.html) System-on-Chip
+		* ARM Cortex-M0 MCU
+		* 32k Flash
+		* 6k RAM
+		* USB 2.0
+		* 8 12-bit analog inputs
+		* I2C, SPI, async serial
+		* digital I/O
+	* [uBlox Max 7Q](http://www.u-blox.com/en/gps-modules/pvt-modules/max-7.html) GPS receiver
+	* [TI CC115L](http://www.ti.com/product/cc115L) 70cm transmitter
+	* Built-in USB data download and battery charger connection
+	* 2MB SPI flash
+* Software Features
+	* Written mostly in C with some ARM assembler
+	* Runs from on-chip flash, uses on-chip RAM, stores tracking data to
+		flash memory part
+* Tools Used
+	* [gEDA](http://www.gpleda.org/) for schematic capture and PCB layout
+	* [GCC](http://gcc.gnu.org/) compiler and source debugger
+* Licenses
+	* The hardware is licensed under the [TAPR](http://www.tapr.org) [Open Hardware License](http://www.tapr.org/ohl.html)
+	* The software is licensed [GPL version 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+## Artifacts ##
+
+There is a single manual for TeleGPS and all other Altus Metrum products,
+which is available in [html](../AltOS/doc/altusmetrum.html) and 
+[pdf](../AltOS/doc/altusmetrum.pdf) formats.
+
+The hardware design files can be found on [git.gag.com](http://git.gag.com) 
+in the project [hw/telegps](http://git.gag.com/?p=hw/telegps;a=summary).  
+

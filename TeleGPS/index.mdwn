@@ -2,14 +2,16 @@
 # TeleGPS
 
 This is a GPS-based position tracker and logger.  It uses the same GPS
-receiver and similar radio to our flight computers, but does not include
-pyro circuits.  This allows the board to be small and light, so that it will
+receiver and radio as our flight computers, but does not include pyro 
+circuits.  This allows the board to be small and light so that it will
 fit well anywhere you need a good GPS tracker.
 
-For the latest TeleGPS firmware and related ground station software, please
-visit the [AltOS](../AltOS) page on this site.
+TeleGPS firmware and related ground station software is part of the 
+[AltOS](../AltOS) software suite on this site.  A stripped-down ground 
+station program specifically for use with TeleGPS is documented below.
 
-These are photos of production version 1.0:
+These are photos of production version 1.0, which is substantially similar
+visually to the current production version.
 
 <a href="v1.0/telegps-v1.0-top.jpg"> <img src="v1.0/telegps-v1.0-top-thumb.jpg"></a>
 <a href="v1.0/telegps-v1.0-bottom.jpg"> <img src="v1.0/telegps-v1.0-bottom-thumb.jpg"></a>
@@ -42,7 +44,7 @@ includes a dedicated [MicroPeak](/MicroPeak) application.
 
 * GPS tracker and logger
 * Offers custom digital telemetry, APRS and direction beacons
-* 16mW transmit power
+* 70cm ham-band transceiver for telemetry downlink
 * High-dynamics GPS receiver for accurate tracking
 * Uses 3.7V Lithium Polymer battery.
 * 1.5 x 1.0 inch board designed to fit inside 29mm airframe coupler tube
@@ -53,16 +55,9 @@ includes a dedicated [MicroPeak](/MicroPeak) application.
 ### Developer View ###
 
 * Hardware Features
-	* [NXP LPC11U14](http://www.nxp.com/products/microcontrollers/cortex_m0_m0/LPC11U14FHI33.html) System-on-Chip
-		* ARM Cortex-M0 MCU
-		* 32k Flash
-		* 6k RAM
-		* USB 2.0
-		* 8 12-bit analog inputs
-		* I2C, SPI, async serial
-		* digital I/O
+	* ST Micros [STM32L151](http://www.st.com/internet/mcu/product/248821.jsp) ARM Cortex M3 based Microcontroller
+        * TI [CC1200](http://www.ti.com/product/cc1200) High Performance RF Transceiver for Narrowband Systems 
 	* [uBlox Max 7Q](http://www.u-blox.com/en/gps-modules/pvt-modules/max-7.html) GPS receiver
-	* [TI CC115L](http://www.ti.com/product/cc115L) 70cm transmitter
 	* Built-in USB data download and battery charger connection
 	* 2MB SPI flash
 * Software Features
@@ -82,6 +77,16 @@ There is a single manual for TeleGPS and all other Altus Metrum products,
 which is available in [html](../AltOS/doc/altusmetrum.html) and 
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
-The hardware design files can be found on [git.gag.com](http://git.gag.com) 
-in the project [hw/telegps](http://git.gag.com/?p=hw/telegps;a=summary).  
+The current hardware design files are available from
+[git.gag.com](http://git.gag.com) in the project 
+[hw/telegps](http://git.gag.com/?p=hw/telegps;a=summary).  
+
+For those who don't have ready access to the gEDA suite, here are pdf 
+snapshots of the design for Production PCB version 2.0:
+
+* [schematic](v2.0/telegps-sch.pdf)
+* [pcb artwork](v2.0/telegps-pcb.pdf)
+* [bill of materials](v2.0/partslist.csv)
+
+## [History of TeleGPS](history) ##
 
