@@ -16,7 +16,8 @@ For projects that require staging or air starts, EasyTimer is a low-cost
 alternative to use of our more expensive products, while retaining the safety 
 aspects of tilt-limiting.
 
-EasyTimer firmware is part of the [AltOS](../AltOS) suite.
+EasyTimer firmware and associated configuration software is part of the 
+[AltOS](../AltOS) suite.
 
 Photos of the first production unit:
 
