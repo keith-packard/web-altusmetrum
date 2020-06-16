@@ -1,0 +1,76 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Release Notes for Version 1.9.3</title>
+<link rel="stylesheet" href="./am-notoc.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Release Notes for Version 1.9.3</h1>
+<div class="details">
+<span id="revdate">15 Jun 2020</span>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Version 1.9.3</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_altos">AltOS</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Add APRS offset. Allows multiple APRS transmitters to coordinate when
+transmission occurs to allow them to share a frequency.</p>
+</li>
+<li>
+<p>Fix max log size. Flight computer storage is erased in 64kB chunks. Adjust max
+log size to be a multiple of this size.</p>
+</li>
+<li>
+<p>Check flight erasing more carefully. Handle interrupting erasing in the
+middle.</p>
+</li>
+<li>
+<p>Add EasyTimer support.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_altosui_telegps_micropeak">AltosUI, TeleGPS, MicroPeak</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Add configuration support for APRS offset.</p>
+</li>
+<li>
+<p>Adjust flight log sizes to be a multiple of the flight
+computer erase block size.</p>
+</li>
+<li>
+<p>Report barometric pad altitude in Pad tab for TeleMini.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-06-15 20:50:28 -0600
+</div>
+</div>
+</body>
+</html>
