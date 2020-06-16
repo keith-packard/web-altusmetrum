@@ -82,6 +82,9 @@ GPS receiver and radio telemetry link.
 is a small, low-cost, dual-deploy rocketry altimeter using just a barometry
 pressure sensor.
 
+* [EasyTimer](EasyTimer/) 
+is a timer-based 2-channel pyro controller with tilt limits
+
 * [TeleDongle](TeleDongle/) 
 is a simple USB to RF interface for use in ground stations interacting with 
 rockets using any of our products with RF telemetry.
@@ -126,9 +129,6 @@ is the name of our Android app based on AltOS.
 
 * [EasyMotor](EasyMotor/) 
 is an in-flight data logger for research motor characterization.
-
-* [EasyTimer](EasyTimer/) 
-is a timer-based 2-channel pyro controller with tilt limits
 
 * [OpenAlt](OpenAlt/)
 was Bdale's original project here, a dual-deploy rocketry altimeter.  One 
