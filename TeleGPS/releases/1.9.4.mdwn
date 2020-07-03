@@ -1,0 +1,7 @@
+[[!inline pages="./1.9.4/release-notes-1.9.4.html" rss="no" raw="yes" ]]
+
+- Available Files:
+	- [Windows Installer](/TeleGPS/releases/1.9.4/TeleGPS-Windows-1-9-4.exe)
+	- [Mac OS X Package](/TeleGPS/releases/1.9.4/TeleGPS-Mac-1.9.4.dmg)
+	- [Linux](/TeleGPS/releases/1.9.4/TeleGPS-Linux-1.9.4.sh)
+	- [Source Snapshot](http://git.gag.com/?p=fw/altos;a=snapshot;h=refs/tags/1.9.4;sf=tgz)
