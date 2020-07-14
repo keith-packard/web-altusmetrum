@@ -29,7 +29,7 @@ continuity, and RF link quality plus an audible indication of arming.
 
 ### TeleLCO ###
 
-<a href="telelco-v2.0/lco-open.png"> <img src="telelco-v2.0/lco-open-small.png"></a>
+<a href="telelco-v2.0/lco-open.jpg"> <img src="telelco-v2.0/lco-open-small.jpg"></a>
 
 TeleLCO controls up to 99 TeleFire banks, comes packaged in a rugged 
 case, and is typically placed on a table for use by the designated LCO.
