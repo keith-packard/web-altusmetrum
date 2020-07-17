@@ -43,6 +43,9 @@ for all current products.
 
 [[!inline pages="./releases/* and !*/Discussion and !*.ihx and !*.sh and !*.html and !*.bz2 and !*.zip and !*.exe and !*.dmg" show="10" rss="no" raw="yes" ]]
 
+Note that [older versions](releases/) are still available if you really need 
+them for some reason.
+
 ## Source Code ##
 
 The latest source, which may include unreleased work in progress, is always 
