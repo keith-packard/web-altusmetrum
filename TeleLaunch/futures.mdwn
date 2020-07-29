@@ -4,7 +4,7 @@
 
 The products on this page are shown in prototype form.  They are "not ready
 for prime time" yet, but we're including documentation about them because
-we're fairly confident they'll be added to the product line this year.  
+we're fairly confident they'll be added to the product line someday.
 
 Please note that features and specifications are highly likely to change 
 before release.
@@ -54,6 +54,6 @@ The TeleFireOne hardware design is available from
 ## Availability ##
 
 Prototypes of these products have been built, deployed, and used 
-successfully.  Updates to the designs are underway and we hope to
-introduce them sometime in 2019.
+successfully.  Updates to the designs are underway, with at least
+one more prototype round likely before we commit to production.
 
