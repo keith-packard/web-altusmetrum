@@ -52,10 +52,6 @@ Altus Metrum products are available directly from
   * New Zealand
     * [Reliable Rocketry](https://sites.google.com/view/reliable-rocketry)
 
-For ChaosKey, there is a distributor in Europe:
-
-  * [Vikings GmbH](https://store.vikings.net)
-
 # Products #
 
 These products are available for purchase:
@@ -112,9 +108,6 @@ ideal altimeter for model rocket contests.
 provides an interface between [MicroPeak](MicroPeak/) and USB to
 download flight log data.
 
-* [ChaosKey](ChaosKey/)
-is a true hardware random number generator that connects over USB.
-
 # Projects #
 
 These are projects we're working on that may become products someday:
@@ -125,6 +118,9 @@ the set of hardware projects here.
 
 * [AltosDroid](AltosDroid/) 
 is the name of our Android app based on AltOS.
+
+* [ChaosKey](ChaosKey/)
+is a true hardware random number generator that connects over USB.
 
 * [EasyMotor](EasyMotor/) 
 is an in-flight data logger for research motor characterization.
