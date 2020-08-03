@@ -3,8 +3,7 @@
 
 This board provides two programmable timer-based pyro channels with tilt
 limits.  It is the same size and shape with the same connector layout as
-our [EasyMini](../EasyMini) flight computer, and will sell for the same
-price.
+our [EasyMini](../EasyMini) flight computer.
 
 The IMU used is the same as on TeleMega and EasyMega, allowing acceleration 
 based launch detection, and gyro-based tilt limiting.  This means it's 
@@ -26,7 +25,7 @@ Photos of the first production unit:
 
 EasyTimer v1 is available for sale now at 
 [Bdale's web store](http://shop.gag.com/flight-computers/easytimer.html) 
-and soon from Altus Metrum distributors.
+and from Altus Metrum distributors.
 
 ## Features ##
 
