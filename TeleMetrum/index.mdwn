@@ -76,7 +76,7 @@ which is available in [html](../AltOS/doc/altusmetrum.html) and
 [pdf](../AltOS/doc/altusmetrum.pdf) formats.
 
 An outline of the board with drill hole locations is available in
-[pdf](../Documents/telemetrum-outline.pdf) format.
+[pdf](../AltOS/doc/telemetrum-outline.pdf) format.
 
 This board was designed using lepton-eda and pcb-rnd.
 

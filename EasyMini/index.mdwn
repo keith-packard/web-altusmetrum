@@ -63,7 +63,7 @@ in the comprehensive Altus Metrum manual in
 [pdf](../AltOS/doc/altusmetrum.pdf) formats
 
 An outline of the board with drill hole locations is available in
-[pdf](../Documents/easymini-outline.pdf) format.
+[pdf](../AltOS/doc/easymini-outline.pdf) format.
 
 Thanks to Bryan Duke, there's also a 3d model of EasyMini available on 
 [Thingiverse](http://www.thingiverse.com/thing:1946852). 
