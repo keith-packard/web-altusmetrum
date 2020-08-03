@@ -4,16 +4,12 @@
 This board is designed for in-flight characterization of research rocket
 motors.  It records chamber pressure and acceleration to an on-board flash
 memory chip, the contents of which can be downloaded after flight over USB.  
-It can also be attached to a [TeleMetrum](../TeleMetrum) or
-[TeleMega](../TeleMega) using the companion interface to allow a subset of
-the data to be included in radio telemetry during the flight.
 
-There is no EasyMotor firmware yet, but it will be part of the 
-[AltOS](../AltOS) suite eventually.
+EasyMotor firmware is under development within the [AltOS](../AltOS) suite.
 
-Prototypes of v1 were built and evaluated, prototypes of v2 are 
-underway.  This design is not yet for sale, but we hope to have it on the
-market by mid-summer 2020.
+Prototypes of v1 were built and evaluated, prototypes of v2 are built, 
+with development of firmware and evaluation underay.  This design is not 
+yet for sale, but we hope to have it on the market by the end of 2020.
 
 ## Features ##
 

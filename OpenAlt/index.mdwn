@@ -65,9 +65,12 @@ the design for now:
 * the 3-axis accelerometer has a max scale of +/- 6g.  This is insufficient
   for characterizing the kinds of motors that we're playing with now.
 
-* while using a gcc-based toolchain to cross-develop for the ARM7 core works
-  reasonably well, it's a heavy toolchain to build and maintain, and the
-  processor really is serious overkill for the task at hand.
+* while using a gcc-based toolchain to cross-develop for the ARM7 core worked
+  reasonably well, in 2008 it was a heavy toolchain to build and maintain, 
+  and the processor was serious overkill for the task at hand.  Since then,
+  ARM Cortex SOCs have become so cheap, and the required toolchain so well
+  supported in [Debian GNU/Linux](https://debian.org) and elsewhere to change
+  this from a bug to a feature.
 
 ## Artifacts ##
 
@@ -76,9 +79,10 @@ presentation about this hardware generation was given at the Ohio LinuxFest
 2008.  Note that there are many photos included, so this is a HUGE file!
 
 The version 0.1 design had enough issues that Bdale decided not to publish
-it.  Work on an 0.2 revision is mostly complete at the schematic level, and
+it.  Work on an 0.2 revision was mostly completed at the schematic level, and
 some printed circuit board artwork updates were made, but a second run of
-boards was never attempted.  This design is now mostly of historical interest.
+boards was never attempted.  This design is now entirely of historical 
+interest.
 
 ## Futures ##
 

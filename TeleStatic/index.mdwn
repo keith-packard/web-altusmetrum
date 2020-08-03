@@ -5,7 +5,9 @@
 <img src="protos/telestatic.jpg">
 
 TeleStatic is a secure radio-controlled system capable of operating 
-a rocket motor static test stand.
+a rocket motor static test stand.  Sensors supported by the base
+configuration include one pressure sensor for chamber pressure,
+and one load cell for thrust measurement.
 
 TeleStatic uses a two-way digital radio communications system for
 positive indication of all operations. The communications link is
@@ -23,8 +25,9 @@ the designated bank number.
 A TeleStatic board can also be used as a one-channel pyro board in the
 larger [TeleLaunch](../TeleLaunch) system when needed.
 
-TeleStatic is an alternate load of the TeleFireOne board, whose hardware
-design is available from [git.gag.com](http://git.gag.com) in the project 
+TeleStatic began as an alternate load of the TeleFireOne board, whose 
+hardware design is available from [git.gag.com](http://git.gag.com) 
+in the project 
 [hw/telefireone](http://git.gag.com/?p=hw/telefireone;a=summary).  
 
 ## Documentation ##
@@ -40,11 +43,12 @@ be part of the AltOS suite.
 
 ## Availability ##
 
-A prototype system was operated extensively during the 2017, and based
-on that experience a revised version of the circuit board was designed
-and will be tested eventually.  General availability of the TeleStatic 
-product is expected by the end of calendar 2018.  Watch this space for 
-updates on price and availability.
+A prototype system was developed in 2017, and has been in routine use
+ever since.  The electronics has been through at least three major 
+revisions, none of which have yet made it into production.  A "final"
+version is being worked on based on everything learned so far, and
+we hope to have it for sale by the end of calendar 2020.  Watch this 
+space for updates.
 
 ## Licenses ##
 
