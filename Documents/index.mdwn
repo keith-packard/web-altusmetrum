@@ -23,6 +23,8 @@ along with where to drill holes for mounting.
 
  * [EasyMega Outline](../AltOS/doc/easymega-outline.pdf)
  * [EasyMini Outline](../AltOS/doc/easymini-outline.pdf)
+ * [EasyMotor Outline](../AltOS/doc/easymini-outline.pdf)
+ * [EasyTimer Outline](../AltOS/doc/easymini-outline.pdf)
  * [TeleGPS Outline](../AltOS/doc/telegps-outline.pdf)
  * [TeleMega Outline](../AltOS/doc/telemega-outline.pdf)
  * [TeleMetrum Outline](../AltOS/doc/telemetrum-outline.pdf)
