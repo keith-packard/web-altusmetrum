@@ -17,8 +17,7 @@ interface on the Altus Metrum devices.
 There are also Linux-specific tools that provide lower level access to
 the devices which are useful for developing firmware for the devices.
 
-We maintain a list of [launch site GPS coordinates](launch-sites.txt).  If 
-your favorite launch site isn't included, please let us know!
+We maintain a list of [launch site GPS coordinates](https://maps.altusmetrum.org/launch-sites.txt).  If your favorite launch site isn't included, please let us know!
 
 ## Available Versions ##
 
