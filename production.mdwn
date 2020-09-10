@@ -653,3 +653,8 @@ Production build of 250 pieces of EasyTimer v1 by
 
 Prototype build of 6 pieces of EasyMotor v2 by Bdale on 2020.07.25
 
+## sn 7090-7339 ##
+
+Production build of 250 pieces of TeleBT v4.0b by
+[Advanced Circuits](http://4pcb.com), received 2020.08.17
+
