@@ -658,3 +658,7 @@ Prototype build of 6 pieces of EasyMotor v2 by Bdale on 2020.07.25
 Production build of 250 pieces of TeleBT v4.0b by
 [Advanced Circuits](http://4pcb.com), received 2020.08.17
 
+## sn 7340-7342 ##
+
+Prototype build of 3 pieces of TeleGPS v2.0b by Bdale on 2020.08.17
+
