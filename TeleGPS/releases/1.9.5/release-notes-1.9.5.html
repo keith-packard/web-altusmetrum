@@ -1,0 +1,97 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Release Notes for Version 1.9.5</title>
+<link rel="stylesheet" href="./am-notoc.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Release Notes for Version 1.9.5</h1>
+<div class="details">
+<span id="revdate">29 Sep 2020</span>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Version 1.9.5</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_altos">AltOS</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Add Booster mode for all dual-deploy altimeters. Select
+"Separation &amp; Apogee" mode in AltosUI to fire the 'main'
+channel at first motor burnout and the 'apogee' channel at
+apogee.</p>
+</li>
+<li>
+<p>Improve reliability of stm32l firmware under heavy
+load. This was found using Monitor Idle on TeleMega with all
+flash slots full of data which would occasionally lock up.</p>
+</li>
+<li>
+<p>Fix orientation label in AltosUI for devices with
+radios. This makes the orientation say 'Antenna up' and
+'Antenna Down' for TeleMetrum and TeleMega again.</p>
+</li>
+<li>
+<p>Fix log data for pyro channels which were inhibited (often
+because of a tilt limit). They used to report 'fired' as
+soon as they were inhibited, which was misleading. Now they
+never report as having been fired.</p>
+</li>
+<li>
+<p>Allow Igniter Test to fire each igniter more than once.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_altosui">AltosUI</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Improve performance of Monitor Idle mode by sending less data for each
+update.</p>
+</li>
+<li>
+<p>Improve Mac OS X install scripts so that they work on
+Catalina. This involves sending the user to get Java from
+the AdoptOpenJDK project which provides a version that works
+with Java applications.</p>
+</li>
+<li>
+<p>Make larger dialogs scrollable for use on smaller screens.</p>
+</li>
+<li>
+<p>Fix troubles re-flashing EasyMega boards running older
+firmware.</p>
+</li>
+<li>
+<p>Add TeleMetrum v3.0 firmware to the Windows
+AltosUI packages.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-09-30 00:31:18 -0600
+</div>
+</div>
+</body>
+</html>
